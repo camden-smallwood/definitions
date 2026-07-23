@@ -1,0 +1,123 @@
+{
+  "name": "camo",
+  "tag": "cmoe",
+  "version": 1,
+  "flags": 2,
+  "block": "camo_block",
+  "blocks": {
+    "camo_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "camo_struct_definition"
+    }
+  },
+  "structs": {
+    "camo_struct_definition": {
+      "guid": "574e48fd9e41a0ea4193ba95d5a321ed",
+      "size": 60,
+      "size_string": "sizeof(s_camo_effect_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Active Camo Controls",
+          "definition": null
+        },
+        {
+          "type": "word_flags",
+          "name": "Flags",
+          "definition": "camo_flags"
+        },
+        {
+          "type": "pad",
+          "name": "KKHKKHKKL",
+          "definition": 2
+        },
+        {
+          "type": "struct",
+          "name": "Active Camo Amount",
+          "definition": "camo_scalar_function_struct"
+        },
+        {
+          "type": "struct",
+          "name": "Shadow Amount",
+          "definition": "camo_scalar_function_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "camo_scalar_function_struct": {
+      "guid": "0f14e8d678426bb126a7699bac94b495",
+      "size": 28,
+      "size_string": "sizeof(s_camo_function)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Input Variable!",
+          "group_tag": "fnin"
+        },
+        {
+          "type": "string_id",
+          "name": "Range Variable!",
+          "group_tag": "fnir"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "Mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 20,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "camo_flags": {
+      "options": [
+        "also apply to object children"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  }
+}

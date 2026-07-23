@@ -1,0 +1,118 @@
+{
+  "name": "user_interface_globals_definition",
+  "tag": "wgtz",
+  "version": 3,
+  "flags": 2,
+  "block": "user_interface_globals_definition_block",
+  "blocks": {
+    "user_interface_globals_definition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "user_interface_globals_definition_struct_definition"
+    },
+    "cui_overlay_camera_block_definition": {
+      "max_count": 24,
+      "max_count_string": "k_cui_max_overlay_count",
+      "struct": "cui_overlay_camera_block_definition"
+    }
+  },
+  "structs": {
+    "user_interface_globals_definition_struct_definition": {
+      "guid": "03475eff3545cec33e41bfbbbe2cd631",
+      "size": 44,
+      "size_string": "sizeof(s_user_interface_tag_globals)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Shared Globals",
+          "definition": "This is a reference to the ui shared globals tag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "shared globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wigl"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Multiplayer Variant Settings Interface",
+          "definition": "This blob defines the ui for setting multiplayer game variant parameters"
+        },
+        {
+          "type": "tag_reference",
+          "name": "mp variant settings ui",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "goof"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "cui overlay cameras",
+          "definition": "cui_overlay_camera_block_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "cui_overlay_camera_block_definition": {
+      "guid": "d01b78838e414d0559ce9488e0265695",
+      "size": 24,
+      "size_string": "sizeof(s_cui_overlay_camera_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "resolution name"
+        },
+        {
+          "type": "char_enum",
+          "name": "pivot corner",
+          "definition": "cui_camera_pivot_corner_enum_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "real",
+          "name": "Z near#distance to near clipping plane"
+        },
+        {
+          "type": "real",
+          "name": "Z far#distance to far clipping plane"
+        },
+        {
+          "type": "real",
+          "name": "X angle degrees#camera angle around the X axis"
+        },
+        {
+          "type": "real",
+          "name": "Y angle degrees#camera angle around the Y axis"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "cui_camera_pivot_corner_enum_definition": {
+      "options": [
+        "top left",
+        "top right",
+        "bottom right",
+        "bottom left"
+      ]
+    }
+  }
+}

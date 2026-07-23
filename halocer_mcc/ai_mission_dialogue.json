@@ -1,0 +1,95 @@
+{
+  "name": "ai_mission_dialogue",
+  "tag": "mdlg",
+  "version": 1,
+  "flags": 2,
+  "block": "ai_mission_dialogue_block",
+  "blocks": {
+    "ai_mission_dialogue_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "ai_mission_dialogue_block_struct"
+    },
+    "mission_dialogue_lines_block": {
+      "max_count": 500,
+      "max_count_string": "k_max_lines_per_scenario",
+      "struct": "mission_dialogue_lines_block_struct"
+    },
+    "mission_dialogue_variants_block": {
+      "max_count": 10,
+      "max_count_string": "k_max_variants_per_line",
+      "struct": "mission_dialogue_variants_block_struct"
+    }
+  },
+  "structs": {
+    "ai_mission_dialogue_block_struct": {
+      "guid": "b4352d7a0d4553cd27b2b0aef4c14069",
+      "size": 12,
+      "size_string": "sizeof(struct ai_mission_dialogue)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "lines",
+          "definition": "mission_dialogue_lines_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "mission_dialogue_lines_block_struct": {
+      "guid": "7fd25bb9a145655b94003db837332d92",
+      "size": 20,
+      "size_string": "sizeof(struct mission_dialogue_line)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "block",
+          "name": "variants",
+          "definition": "mission_dialogue_variants_block"
+        },
+        {
+          "type": "string_id",
+          "name": "default sound effect"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "mission_dialogue_variants_block_struct": {
+      "guid": "0cb9e35de34dbbab07fc0e8780aab27b",
+      "size": 24,
+      "size_string": "sizeof(struct mission_dialogue_variant)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "variant designation#3-letter designation for the character^"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "sound effect"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  }
+}

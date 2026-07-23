@@ -1,0 +1,164 @@
+{
+  "name": "cinematic",
+  "tag": "cine",
+  "version": 1,
+  "flags": 540674,
+  "block": "cinematic_block",
+  "blocks": {
+    "cinematic_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "cinematic_block_struct"
+    },
+    "cinematic_scene_reference_block": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "cinematic_scene_reference_block"
+    }
+  },
+  "structs": {
+    "cinematic_block_struct": {
+      "guid": "c34ab3c3a946670643c81e86036b01a1",
+      "size": 108,
+      "size_string": "sizeof(s_cinematic_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "short_enum",
+          "name": "channel type",
+          "definition": "cinematic_channel_type_enum"
+        },
+        {
+          "type": "pad",
+          "name": "PADDING",
+          "definition": 2
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "cinematic_flags"
+        },
+        {
+          "type": "real",
+          "name": "easing in time#seconds!"
+        },
+        {
+          "type": "real",
+          "name": "easing out time#seconds!"
+        },
+        {
+          "type": "tag_reference",
+          "name": "transition settings",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "citr"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Header!",
+          "definition": null
+        },
+        {
+          "type": "struct",
+          "name": "header!",
+          "definition": "cinematic_custom_script_block"
+        },
+        {
+          "type": "block",
+          "name": "scenes!",
+          "definition": "cinematic_scene_reference_block"
+        },
+        {
+          "type": "explanation",
+          "name": "Footer!",
+          "definition": null
+        },
+        {
+          "type": "struct",
+          "name": "footer!",
+          "definition": "cinematic_custom_script_block"
+        },
+        {
+          "type": "explanation",
+          "name": "If The Player Skips!",
+          "definition": null
+        },
+        {
+          "type": "struct",
+          "name": "early exit!",
+          "definition": "cinematic_custom_script_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "cinematic_custom_script_block": {
+      "guid": "9ad019c1a3445f7fe0e803978769fd3e",
+      "size": 20,
+      "size_string": "sizeof(s_cinematic_custom_script)",
+      "fields": [
+        {
+          "type": "data",
+          "name": "script{ }",
+          "definition": "custom_script_data"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "cinematic_scene_reference_block": {
+      "guid": "671ec177544b5b72bf0868911d843a59",
+      "size": 16,
+      "size_string": "sizeof(s_cinematic_scene_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "scene",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cisc"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "cinematic_channel_type_enum": {
+      "options": [
+        "letterbox",
+        "briefing",
+        "perspective",
+        "vignette"
+      ]
+    },
+    "cinematic_flags": {
+      "options": [
+        "Outro"
+      ]
+    }
+  },
+  "datas": {
+    "custom_script_data": {
+      "alignment": 2,
+      "flags": 0,
+      "max_size": 4096,
+      "max_size_string": "HS_MAXIMUM_DYNAMIC_SOURCE_DATA_BYTES"
+    }
+  }
+}

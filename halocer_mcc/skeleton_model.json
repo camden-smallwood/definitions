@@ -1,0 +1,278 @@
+{
+  "name": "skeleton_model",
+  "tag": "skel",
+  "version": 1,
+  "flags": 3,
+  "block": "skeleton_model_block",
+  "blocks": {
+    "skeleton_model_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "skeleton_model_block_struct"
+    },
+    "skeleton_model_region_block": {
+      "max_count": 64,
+      "max_count_string": "MAXIMUM_REGIONS_PER_MODEL",
+      "struct": "skeleton_model_region_block_struct"
+    },
+    "skeleton_model_permutation_block": {
+      "max_count": 96,
+      "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION",
+      "struct": "skeleton_model_permutation_block_struct"
+    },
+    "skeleton_model_node_block": {
+      "max_count": 255,
+      "max_count_string": "MAXIMUM_NODES_PER_MODEL",
+      "struct": "skeleton_model_node_block_struct"
+    },
+    "skeleton_model_marker_group_block": {
+      "max_count": 4096,
+      "max_count_string": "MAXIMUM_MARKER_GROUPS_PER_RENDER_MODEL",
+      "struct": "skeleton_model_marker_group_block_struct"
+    },
+    "skeleton_model_marker_block": {
+      "max_count": 256,
+      "max_count_string": "MAXIMUM_MARKERS_PER_RENDER_MODEL_MARKER_GROUP",
+      "struct": "skeleton_model_marker_block_struct"
+    },
+    "skeleton_default_node_orientations_block": {
+      "max_count": 255,
+      "max_count_string": "MAXIMUM_NODES_PER_MODEL",
+      "struct": "skeleton_default_node_orientations_block_struct"
+    }
+  },
+  "structs": {
+    "skeleton_model_block_struct": {
+      "guid": "31c49d2cca4e26a5f59df8a7bdddfeb5",
+      "size": 48,
+      "size_string": "sizeof(struct s_skeleton_model_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "regions*",
+          "definition": "skeleton_model_region_block"
+        },
+        {
+          "type": "block",
+          "name": "nodes*",
+          "definition": "skeleton_model_node_block"
+        },
+        {
+          "type": "block",
+          "name": "marker groups*",
+          "group_tag": "slap",
+          "definition": "skeleton_model_marker_group_block"
+        },
+        {
+          "type": "block",
+          "name": "runtime node orientations!",
+          "group_tag": "slap",
+          "definition": "skeleton_default_node_orientations_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skeleton_model_region_block_struct": {
+      "guid": "94852a444341843b9765cb8d3ff6167e",
+      "size": 16,
+      "size_string": "sizeof(struct s_skeleton_model_region)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^*"
+        },
+        {
+          "type": "block",
+          "name": "permutations*",
+          "definition": "skeleton_model_permutation_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skeleton_model_permutation_block_struct": {
+      "guid": "24af10c0904bb78df6564692ace59215",
+      "size": 4,
+      "size_string": "sizeof(struct s_skeleton_model_permutation)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skeleton_model_node_block_struct": {
+      "guid": "ba6028a44c455fc57f4ab6b19408d087",
+      "size": 92,
+      "size_string": "sizeof(struct s_skeleton_model_node)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^*"
+        },
+        {
+          "type": "pad",
+          "name": "PFPPD",
+          "definition": 2
+        },
+        {
+          "type": "short_block_index",
+          "name": "parent node*",
+          "definition": "skeleton_model_node_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "next sibling node*",
+          "definition": "skeleton_model_node_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "first child node*",
+          "definition": "skeleton_model_node_block"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "default translation*"
+        },
+        {
+          "type": "real_quaternion",
+          "name": "default rotation*"
+        },
+        {
+          "type": "real",
+          "name": "inverse scale*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "inverse forward*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "inverse left*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "inverse up*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "inverse position*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skeleton_model_marker_group_block_struct": {
+      "guid": "ec00ae808842bc92362fd3b40569c6d3",
+      "size": 16,
+      "size_string": "sizeof(struct s_skeleton_model_marker_group)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^*"
+        },
+        {
+          "type": "block",
+          "name": "markers*",
+          "definition": "skeleton_model_marker_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skeleton_model_marker_block_struct": {
+      "guid": "aa5f1791584993e50ecd1aa965453497",
+      "size": 52,
+      "size_string": "sizeof(struct s_skeleton_model_marker)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "region index*",
+          "definition": "skeleton_model_region_block"
+        },
+        {
+          "type": "custom_short_block_index",
+          "name": "permutation index*"
+        },
+        {
+          "type": "short_block_index",
+          "name": "node index*",
+          "definition": "skeleton_model_node_block"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "skeleton_model_marker_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad_flags",
+          "definition": 1
+        },
+        {
+          "type": "real_point_3d",
+          "name": "translation*"
+        },
+        {
+          "type": "real_quaternion",
+          "name": "rotation*"
+        },
+        {
+          "type": "real",
+          "name": "scale"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "direction*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skeleton_default_node_orientations_block_struct": {
+      "guid": "69da56b88e4e469130d32ba3f7f2b41e",
+      "size": 32,
+      "size_string": "sizeof(real_orientation)",
+      "fields": [
+        {
+          "type": "real_quaternion",
+          "name": "rotation*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "translation*"
+        },
+        {
+          "type": "real",
+          "name": "scale*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "skeleton_model_marker_flags_definition": {
+      "options": [
+        "has node relative direction"
+      ]
+    }
+  }
+}

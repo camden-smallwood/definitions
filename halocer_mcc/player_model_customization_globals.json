@@ -1,0 +1,221 @@
+{
+  "name": "player_model_customization_globals",
+  "tag": "pmcg",
+  "version": 1,
+  "flags": 2,
+  "block": "player_model_customization_globals_block",
+  "blocks": {
+    "player_model_customization_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "player_model_customization_globals_struct_definition"
+    },
+    "customized_model_selection_block": {
+      "max_count": 96,
+      "max_count_string": "k_maximum_number_of_model_customization_selections_per_area",
+      "struct": "customized_model_selection_block"
+    },
+    "customized_model_player_bits_block": {
+      "max_count": 8,
+      "max_count_string": "k_maximum_number_of_model_customization_bits_per_selection",
+      "struct": "customized_model_player_bits_block"
+    },
+    "object_customization_definition_block": {
+      "max_count": 10,
+      "max_count_string": "s_player_object_customization_indices::k_max_customized_objects",
+      "struct": "object_customization_definition_block"
+    },
+    "object_customization_selection_block": {
+      "max_count": 32,
+      "max_count_string": "s_player_object_customization_indices::k_max_selections",
+      "struct": "object_customization_selection_block_struct"
+    }
+  },
+  "structs": {
+    "player_model_customization_globals_struct_definition": {
+      "guid": "b016813eac42427b220d79a0ac578088",
+      "size": 180,
+      "size_string": "sizeof(s_player_model_customization_globals_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "helmet selections",
+          "definition": "customized_model_selection_block"
+        },
+        {
+          "type": "block",
+          "name": "left shoulder selections",
+          "definition": "customized_model_selection_block"
+        },
+        {
+          "type": "block",
+          "name": "right shoulder selections",
+          "definition": "customized_model_selection_block"
+        },
+        {
+          "type": "block",
+          "name": "chest selections",
+          "definition": "customized_model_selection_block"
+        },
+        {
+          "type": "block",
+          "name": "wrist selections",
+          "definition": "customized_model_selection_block"
+        },
+        {
+          "type": "block",
+          "name": "utility selections",
+          "definition": "customized_model_selection_block"
+        },
+        {
+          "type": "block",
+          "name": "paint scheme selections",
+          "definition": "customized_model_selection_block"
+        },
+        {
+          "type": "block",
+          "name": "elite selections",
+          "definition": "customized_model_selection_block"
+        },
+        {
+          "type": "block",
+          "name": "spartan armor effect selections",
+          "definition": "customized_model_selection_block"
+        },
+        {
+          "type": "block",
+          "name": "elite armor effect selections",
+          "definition": "customized_model_selection_block"
+        },
+        {
+          "type": "block",
+          "name": "male spartan selections",
+          "definition": "customized_model_player_bits_block"
+        },
+        {
+          "type": "block",
+          "name": "female spartan selections",
+          "definition": "customized_model_player_bits_block"
+        },
+        {
+          "type": "block",
+          "name": "spartan model defaults",
+          "definition": "customized_model_player_bits_block"
+        },
+        {
+          "type": "block",
+          "name": "elite model defaults",
+          "definition": "customized_model_player_bits_block"
+        },
+        {
+          "type": "block",
+          "name": "object customization selections!*",
+          "definition": "object_customization_definition_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "customized_model_selection_block": {
+      "guid": "9783052c244b9b035de7a393d4c6964e",
+      "size": 16,
+      "size_string": "sizeof(s_model_customization_selection)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "selection name^"
+        },
+        {
+          "type": "block",
+          "name": "customized bits",
+          "definition": "customized_model_player_bits_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "customized_model_player_bits_block": {
+      "guid": "ec47aa3ae54cf2b89279428be223df05",
+      "size": 12,
+      "size_string": "sizeof(s_model_customization_player_region_permutation)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "region name^"
+        },
+        {
+          "type": "string_id",
+          "name": "permutation name"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "model_customization_player_permutation_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad1",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "object_customization_definition_block": {
+      "guid": "115a5e24ec4db93864400880feeb1d17",
+      "size": 28,
+      "size_string": "sizeof(s_object_customization_definition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "object reference^",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "obje"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "selections",
+          "definition": "object_customization_selection_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "object_customization_selection_block_struct": {
+      "guid": "339b3482ac4aa0afefea91b4f5ad8cb1",
+      "size": 4,
+      "size_string": "sizeof(s_object_customization_selection)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "variant name^"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "model_customization_player_permutation_flags": {
+      "options": [
+        "male_only#this permutation only applies to male players",
+        "female_only#this permutation only applies to female players",
+        "mandibles_hidden#this permutation is an elite with enclosed helmet"
+      ]
+    }
+  }
+}

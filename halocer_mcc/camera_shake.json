@@ -1,0 +1,239 @@
+{
+  "name": "camera_shake",
+  "tag": "csdt",
+  "version": 1,
+  "flags": 2,
+  "block": "camera_shake_block",
+  "blocks": {
+    "camera_shake_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "camera_shake_block_struct"
+    }
+  },
+  "structs": {
+    "camera_shake_block_struct": {
+      "guid": "321db885a549127cb2dd3c86232705a7",
+      "size": 112,
+      "size_string": "sizeof(s_camera_shake_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "camera impulse",
+          "definition": null
+        },
+        {
+          "type": "struct",
+          "name": "camera impulse",
+          "definition": "camera_impulse_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "camera shake",
+          "definition": null
+        },
+        {
+          "type": "struct",
+          "name": "camera shake",
+          "definition": "camera_shake_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "third person",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "third person scale#scales the intensity of this camera shake effect when the user subject to it is in third-person hip-fire; has no effect if set to 0"
+        },
+        {
+          "type": "real",
+          "name": "third person zoomed scale#scales the intensity of this camera shake effect when the user subject to it is in third-person and has zoomed their weapon; uses the third person hip-fire scale if set to 0, and has no effect if that is also 0"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "camera_impulse_struct": {
+      "guid": "ccd15ae5824f4822879aeeaadf4c0be6",
+      "size": 40,
+      "size_string": "sizeof(s_camera_impulse)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "impulse duration:seconds"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "angle",
+          "name": "rotation:degrees"
+        },
+        {
+          "type": "real",
+          "name": "pushback:world units"
+        },
+        {
+          "type": "real_bounds",
+          "name": "jitter:world units"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 20,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "camera_shake_struct": {
+      "guid": "49294321804b216e1bd3d28bae9fac44",
+      "size": 64,
+      "size_string": "sizeof(s_camera_shake)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "shake duration:seconds#the effect will last for this duration."
+        },
+        {
+          "type": "explanation",
+          "name": "procedural camera shake",
+          "definition": null
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "real",
+          "name": "random translation:world units#random translation in all directions"
+        },
+        {
+          "type": "angle",
+          "name": "random rotation:degrees#random rotation in all directions"
+        },
+        {
+          "type": "real",
+          "name": "wobble function period:seconds"
+        },
+        {
+          "type": "real_fraction",
+          "name": "wobble weight#a value of 0.0 signifies that the wobble function has no effect; a value of 1.0 the wobble function completely scales the translational\n and rotational magnitudes.  The less the weight, the less the effect wobble has."
+        },
+        {
+          "type": "short_enum",
+          "name": "wobble function#a function to perturb the effect's behavior over time",
+          "definition": "global_periodic_functions_enum"
+        },
+        {
+          "type": "explanation",
+          "name": "animated camera shake",
+          "definition": null
+        },
+        {
+          "type": "char_enum",
+          "name": "animated shake playback",
+          "definition": "animated_camera_shake_playback_type_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "animated shake weight",
+          "definition": "animated_camera_shake_weight_type_enum"
+        },
+        {
+          "type": "tag_reference",
+          "name": "animation graph",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jmad"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "animation name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "global_periodic_functions_enum": {
+      "options": [
+        "one",
+        "zero",
+        "cosine",
+        "cosine (variable period)",
+        "diagonal wave",
+        "diagonal wave (variable period)",
+        "slide",
+        "slide (variable period)",
+        "noise",
+        "jitter",
+        "wander",
+        "spark"
+      ]
+    },
+    "animated_camera_shake_playback_type_enum": {
+      "options": [
+        "looping",
+        "frame ratio"
+      ]
+    },
+    "animated_camera_shake_weight_type_enum": {
+      "options": [
+        "effect scale",
+        "full"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  }
+}

@@ -1,0 +1,447 @@
+{
+  "name": "sound",
+  "tag": "snd!",
+  "version": 4,
+  "flags": 2097170,
+  "block": "sound_block",
+  "blocks": {
+    "sound_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_block_struct"
+    },
+    "sound_promotion_rule_block": {
+      "max_count": 12,
+      "max_count_string": "k_maximum_promotion_rules_per_sound",
+      "struct": "sound_promotion_rule_block"
+    },
+    "sound_pitch_range_block": {
+      "max_count": 12,
+      "max_count_string": "MAXIMUM_PITCH_RANGES_PER_SOUND",
+      "struct": "sound_pitch_range_block"
+    },
+    "sound_permutations_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_PERMUTATIONS_PER_PITCH_RANGE",
+      "struct": "sound_permutations_block_struct"
+    },
+    "g_null_block": {
+      "max_count": 0,
+      "max_count_string": "0",
+      "struct": "g_null_block"
+    },
+    "sound_promotion_runtime_timer_block": {
+      "max_count": 12,
+      "max_count_string": "k_maximum_promotion_rules_per_sound",
+      "struct": "sound_promotion_runtime_timer_block"
+    }
+  },
+  "structs": {
+    "sound_block_struct": {
+      "guid": "ec3e4ffd57454fa72c89b795a191cbfc",
+      "size": 88,
+      "size_string": "sizeof(sound_definition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "sound_definition_flags"
+        },
+        {
+          "type": "char_enum",
+          "name": "class",
+          "definition": "sound_class_enum"
+        },
+        {
+          "type": "pad",
+          "name": "pad_class_index",
+          "definition": 2
+        },
+        {
+          "type": "real_fraction",
+          "name": "skip fraction{playback:skip fraction}#fraction of requests to play this sound that will be ignored (0 means always play.)"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "struct",
+          "name": "playback",
+          "definition": "sound_playback_parameters_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "struct",
+          "name": "scale",
+          "definition": "sound_scale_modifiers_struct"
+        },
+        {
+          "type": "struct",
+          "name": "promotion",
+          "definition": "sound_promotion_parameters_struct"
+        },
+        {
+          "type": "long_integer",
+          "name": "maximum play milliseconds"
+        },
+        {
+          "type": "block",
+          "name": "pitch ranges#pitch ranges allow multiple samples to represent the same sound at different pitches",
+          "definition": "sound_pitch_range_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_playback_parameters_struct": {
+      "guid": "6c1e85047b447712030c5ab1ca405c9b",
+      "size": 20,
+      "size_string": "sizeof(s_sound_definition_playback_parameters)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "internal flags!"
+        },
+        {
+          "type": "struct",
+          "name": "distance parameters{.}",
+          "definition": "sound_distance_parameters_struct"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "explanation",
+          "name": "directional sounds",
+          "definition": "these settings allow sounds to be directional, fading as they turn away from the listener"
+        },
+        {
+          "type": "angle",
+          "name": "inner cone angle:degrees#within the cone defined by this angle and the sound's direction, the sound plays with a gain of 1.0."
+        },
+        {
+          "type": "angle",
+          "name": "outer cone angle:degrees#outside the cone defined by this angle and the sound's direction, the sound plays with a gain of OUTER CONE GAIN. (0 means the sound does not attenuate with direction.)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_distance_parameters_struct": {
+      "guid": "b18f195efa469aa674d7c28faaca6df7",
+      "size": 8,
+      "size_string": "sizeof(s_sound_distance_parameters)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "attenuation distances",
+          "definition": "these settings vary how the sound fades as you move closer or further away from it."
+        },
+        {
+          "type": "real",
+          "name": "minimum distance:world units#start attenuating at this distance"
+        },
+        {
+          "type": "real",
+          "name": "maximum distance:world units#the distance beyond which this sound is no longer audible"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_scale_modifiers_struct": {
+      "guid": "7732be3a0e4f779031c894a7cfdad658",
+      "size": 8,
+      "size_string": "sizeof(s_sound_definition_scale_modifiers)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "scale modifiers",
+          "definition": "as the sound's input scale changes from zero to one, these modifiers move between the two values specified here. the sound will play using the current scale modifier multiplied by the values specified above. (0 values are ignored.)"
+        },
+        {
+          "type": "fraction_bounds",
+          "name": "skip fraction modifier"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_promotion_parameters_struct": {
+      "guid": "f27df92cdb4b01c0eaec39ae089918ba",
+      "size": 36,
+      "size_string": "sizeof(s_sound_promotion_parameters)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "promotion rules",
+          "definition": "sound_promotion_rule_block"
+        },
+        {
+          "type": "block",
+          "name": "runtime timers!",
+          "definition": "sound_promotion_runtime_timer_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime active promotion index!~"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime last promotion time!~"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime suppression timeout!~"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_promotion_rule_block": {
+      "guid": "b04399c6c844bc10cb844dbc7881cead",
+      "size": 16,
+      "size_string": "sizeof(s_sound_promotion_rule)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "pitch range^",
+          "definition": "sound_pitch_range_block"
+        },
+        {
+          "type": "short_integer",
+          "name": "maximum playing count"
+        },
+        {
+          "type": "real",
+          "name": "suppression time:seconds#time from when first permutation plays to when another sound from an equal or lower promotion can play"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime rollover time!"
+        },
+        {
+          "type": "long_integer",
+          "name": "impulse promotion time!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_pitch_range_block": {
+      "guid": "4f2af777554dd642442e07b4290c750e",
+      "size": 20,
+      "size_string": "sizeof(s_sound_pitch_range)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*#the name of the imported pitch range directory"
+        },
+        {
+          "type": "char_integer",
+          "name": "runtime usable permutation count!~"
+        },
+        {
+          "type": "pad",
+          "name": "pad_usable_permutation_count",
+          "definition": 1
+        },
+        {
+          "type": "pad",
+          "name": "KCTSDWPP~",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "permutations#permutations represent equivalent variations of this sound.",
+          "definition": "sound_permutations_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_permutations_block_struct": {
+      "guid": "a4cf26140642da00620a7cad640927da",
+      "size": 28,
+      "size_string": "sizeof(s_sound_permutation)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*^#name of the file from which this sample was imported"
+        },
+        {
+          "type": "long_integer",
+          "name": "original permutation index!#Set by the post process"
+        },
+        {
+          "type": "string_id",
+          "name": "skip fraction name"
+        },
+        {
+          "type": "real_fraction",
+          "name": "skip fraction#fraction of requests to play this permutation that are ignored (a different permutation is selected.)"
+        },
+        {
+          "type": "short_block_index",
+          "name": "play fraction type*!",
+          "definition": "g_null_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_play_fraction_type",
+          "definition": 2
+        },
+        {
+          "type": "short_bounds",
+          "name": "mission range#first and last mission ids this permutation can play in (zero values are ignored)"
+        },
+        {
+          "type": "long_integer",
+          "name": "play milliseconds*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "g_null_block": {
+      "guid": "a6487e75bc4cac9c1ca146bcf3e2f763",
+      "size": 0,
+      "size_string": "0",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_promotion_runtime_timer_block": {
+      "guid": "e0dd38771041750df0950bb2aa9a5043",
+      "size": 4,
+      "size_string": "sizeof(int32)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "timer storage~!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "sound_definition_flags": {
+      "options": [
+        "internal don't touch!",
+        "play permutations in order#picks the first permutation randomly"
+      ]
+    },
+    "sound_class_enum": {
+      "options": [
+        "projectile_impact",
+        "projectile_detonation",
+        "projectile_flyby",
+        "projectile_detonation_lod",
+        "weapon_fire",
+        "weapon_ready",
+        "weapon_reload",
+        "weapon_empty",
+        "weapon_charge",
+        "weapon_overheat",
+        "weapon_idle",
+        "weapon_melee",
+        "weapon_animation",
+        "object_impacts",
+        "particle_impacts",
+        "weapon_fire_lod",
+        "water_transitions",
+        "lowpass_effects",
+        "unit_footsteps",
+        "unit_dialog",
+        "unit_animation",
+        "unit_unused!",
+        "vehicle_collision",
+        "vehicle_engine",
+        "vehicle_animation",
+        "vehicle_engine_lod",
+        "device_door",
+        "device_unused0!",
+        "device_machinery",
+        "device_stationary",
+        "device_unused1!",
+        "device_unused2!",
+        "music",
+        "ambient_nature",
+        "ambient_machinery",
+        "ambient_stationary",
+        "huge_ass",
+        "object_looping",
+        "cinematic_music",
+        "unknown_unused0!",
+        "unknown_unused1!",
+        "ambient_flock",
+        "no_pad",
+        "no_pad_stationary",
+        "equipment_effect",
+        "mission_dialog",
+        "cinematic_dialog",
+        "scripted_cinematic_foley",
+        "game_event",
+        "ui",
+        "test",
+        "multiplayer_dialog",
+        "ambient_nature_details",
+        "ambient_machinery_details",
+        "inside_surround_tail",
+        "outside_surround_tail",
+        "vehicle_detonation",
+        "ambient_detonation",
+        "first_person_inside",
+        "first_person_outside",
+        "first_person_anywhere",
+        "space_projectile_detonation",
+        "space_projectile_flyby",
+        "space_vehicle_engine",
+        "space_weapon_fire",
+        "player_voice_team",
+        "player_voice_proxy",
+        "projectile_impact_postpone",
+        "unit_footsteps_postpone",
+        "weapon_ready_third_person",
+        "ui_music"
+      ]
+    }
+  }
+}

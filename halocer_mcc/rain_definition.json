@@ -1,0 +1,58 @@
+{
+  "name": "rain_definition",
+  "tag": "rain",
+  "version": 1,
+  "flags": 2,
+  "block": "rain_definition_block",
+  "blocks": {
+    "rain_definition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "rain_definition_struct_definition"
+    }
+  },
+  "structs": {
+    "rain_definition_struct_definition": {
+      "guid": "875d20fc934339b707bdc1927548b091",
+      "size": 16,
+      "size_string": "sizeof(s_rain_definition)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "version!#INTERNAL TAG USE ONLY DO NOT CHANGE"
+        },
+        {
+          "type": "real",
+          "name": "rain amount:[0,1]#fade control for all rain effects"
+        },
+        {
+          "type": "explanation",
+          "name": "Rain Effects",
+          "definition": "These effects are applied when this rain is active\n"
+        },
+        {
+          "type": "custom",
+          "name": "rain transition",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real",
+          "name": "wetness fade in time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "wetness fade out time:seconds"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  }
+}

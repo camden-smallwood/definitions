@@ -1,0 +1,668 @@
+{
+  "name": "effect",
+  "tag": "effe",
+  "version": 4,
+  "flags": 3,
+  "block": "effect_block",
+  "blocks": {
+    "effect_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "effect_block_struct"
+    },
+    "effect_event_block": {
+      "max_count": 32,
+      "max_count_string": "k_maximum_effect_events_count",
+      "struct": "effect_event_block"
+    },
+    "effect_part_block": {
+      "max_count": 32,
+      "max_count_string": "k_maximum_effect_parts_per_event_count",
+      "struct": "effect_part_block"
+    },
+    "effect_locations_block": {
+      "max_count": 8,
+      "max_count_string": "k_maximum_effect_locations_count",
+      "struct": "effect_locations_block"
+    },
+    "effect_accelerations_block": {
+      "max_count": 32,
+      "max_count_string": "k_maximum_effect_accelerations_per_event_count",
+      "struct": "effect_accelerations_block"
+    },
+    "effect_looping_sound_block": {
+      "max_count": 4,
+      "max_count_string": "k_maximum_effect_looping_sounds_count",
+      "struct": "effect_looping_sound_block_struct"
+    },
+    "effect_conical_distribution_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "effect_conical_distribution_block"
+    }
+  },
+  "structs": {
+    "effect_block_struct": {
+      "guid": "4aea1a6c8b4eea316d7519b033901dbd",
+      "size": 92,
+      "size_string": "sizeof(effect_definition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "effect_flags"
+        },
+        {
+          "type": "dword_integer",
+          "name": "fixed random seed#If this is non-zero, the effect will usually be exactly repeatable"
+        },
+        {
+          "type": "real",
+          "name": "restart if within{overlap threshold}:world units"
+        },
+        {
+          "type": "real",
+          "name": "continue if within:world units"
+        },
+        {
+          "type": "real",
+          "name": "death_delay"
+        },
+        {
+          "type": "short_block_index",
+          "name": "loop start event",
+          "definition": "effect_event_block"
+        },
+        {
+          "type": "short_integer",
+          "name": "local location0!"
+        },
+        {
+          "type": "short_integer",
+          "name": "local location1!"
+        },
+        {
+          "type": "char_enum",
+          "name": "priority!*",
+          "definition": "global_effect_priority_enum"
+        },
+        {
+          "type": "pad",
+          "name": "asdfsdf",
+          "definition": 1
+        },
+        {
+          "type": "real",
+          "name": "runtime danger radius!"
+        },
+        {
+          "type": "block",
+          "name": "locations",
+          "group_tag": "slap",
+          "definition": "effect_locations_block"
+        },
+        {
+          "type": "block",
+          "name": "events",
+          "definition": "effect_event_block"
+        },
+        {
+          "type": "block",
+          "name": "looping sounds",
+          "definition": "effect_looping_sound_block"
+        },
+        {
+          "type": "real",
+          "name": "always play distance"
+        },
+        {
+          "type": "real",
+          "name": "never play distance"
+        },
+        {
+          "type": "real",
+          "name": "runtime local_space_death_delay!"
+        },
+        {
+          "type": "block",
+          "name": "conical distribution",
+          "definition": "effect_conical_distribution_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "effect_event_block": {
+      "guid": "57b1ad450847ef3fbb703fb0fef2f78c",
+      "size": 52,
+      "size_string": "sizeof(struct effect_event_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "event name^"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "event_flags"
+        },
+        {
+          "type": "char_enum",
+          "name": "priority!*",
+          "definition": "global_effect_priority_enum"
+        },
+        {
+          "type": "pad",
+          "name": "EVUIQSNDS",
+          "definition": 1
+        },
+        {
+          "type": "real_fraction",
+          "name": "skip fraction#chance that this event will be skipped entirely"
+        },
+        {
+          "type": "custom",
+          "name": "delay bounds:seconds#delay before this event takes place",
+          "group_tag": "mela"
+        },
+        {
+          "type": "real_bounds",
+          "name": "delay bounds:seconds#delay before this event takes place"
+        },
+        {
+          "type": "custom",
+          "name": "duration bounds:seconds#duration of this event",
+          "group_tag": "mela"
+        },
+        {
+          "type": "real_bounds",
+          "name": "duration bounds:seconds#duration of this event"
+        },
+        {
+          "type": "block",
+          "name": "parts",
+          "definition": "effect_part_block"
+        },
+        {
+          "type": "block",
+          "name": "accelerations",
+          "definition": "effect_accelerations_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "effect_part_block": {
+      "guid": "9b4b8110d7423de624d85d94f877f26c",
+      "size": 100,
+      "size_string": "sizeof(struct effect_part_definition)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "create in",
+          "definition": "effect_environments"
+        },
+        {
+          "type": "short_enum",
+          "name": "violence mode",
+          "definition": "effect_dispositions"
+        },
+        {
+          "type": "short_block_index",
+          "name": "location",
+          "definition": "effect_locations_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "secondary location (beams)",
+          "definition": "effect_locations_block"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "effect_part_flags"
+        },
+        {
+          "type": "char_enum",
+          "name": "priority",
+          "definition": "global_effect_priority_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "camera mode#Currently, the only supported use is to turn parts off in first-person view.",
+          "definition": "effect_camera_modes"
+        },
+        {
+          "type": "tag",
+          "name": "runtime base group tag!"
+        },
+        {
+          "type": "char_enum",
+          "name": "damage reporting type",
+          "definition": "global_damage_reporting_enum_definition"
+        },
+        {
+          "type": "pad",
+          "name": "JCIOEHR",
+          "definition": 3
+        },
+        {
+          "type": "tag_reference",
+          "name": "type^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "????",
+              "???\u0001",
+              "jpt!",
+              "drdf",
+              "snd!",
+              "char",
+              "obje",
+              "shit",
+              "cmoe",
+              "????",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???p",
+              "???\u0001",
+              "???`",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\b",
+              "???\u0001",
+              "???H",
+              "???\u0001",
+              "???0",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0006"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": "velocity bounds:world units per second#initial velocity along the location's forward, for decals the distance at which decal is created (defaults to 0.5)",
+          "group_tag": "mela"
+        },
+        {
+          "type": "real_bounds",
+          "name": "velocity bounds:world units per second#initial velocity along the location's forward, for decals the distance at which decal is created (defaults to 0.5)"
+        },
+        {
+          "type": "real_euler_angles_2d",
+          "name": "velocity orientation (yaw, pitch)"
+        },
+        {
+          "type": "angle",
+          "name": "velocity cone angle:degrees#initial velocity will be inside the cone defined by this angle."
+        },
+        {
+          "type": "angle_bounds",
+          "name": "angular velocity bounds:degrees per second"
+        },
+        {
+          "type": "custom",
+          "name": "radius modifier bounds",
+          "group_tag": "mela"
+        },
+        {
+          "type": "real_bounds",
+          "name": "radius modifier bounds"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "relative offset"
+        },
+        {
+          "type": "real_euler_angles_2d",
+          "name": "relative orientation (yaw, pitch)"
+        },
+        {
+          "type": "explanation",
+          "name": "SCALE MODIFIERS",
+          "definition": null
+        },
+        {
+          "type": "long_flags",
+          "name": "A scales values:",
+          "definition": "effect_part_scaleable_values"
+        },
+        {
+          "type": "long_flags",
+          "name": "B scales values:",
+          "definition": "effect_part_scaleable_values"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "effect_locations_block": {
+      "guid": "8c2e74f28b4ea3caf96d3ebdb3bc6838",
+      "size": 8,
+      "size_string": "sizeof(struct effect_location_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "MARKER NAMES",
+          "definition": "In addition to the marker in the render model there are several special marker names:\n\nreplace\nReplace allows you to use the same effect with different markers. Damage transition effects support this for example.\n\ngravity, up\nThe direction of gravity (down) and the opposite direction (up).  Always supplied\n\nnormal\nVector pointing directly away from the surface you collided with. Supplied for effects from collision.\n\nforward\nThe 'negative incident' vector i.e. the direction the object is moving in. Most commonly used to generated decals. Supplied for effects from collision.\n\nbackward\nThe 'incident' vector i.e. the opposite of the direction the object is moving in. Supplied for effects from collision.\n\nreflection\nThe way the effect would reflect off the surface it hit. Supplied for effects from collision.\n\nroot\nThe object root (pivot). These can used for all effects which are associated with an object.\n\nimpact\nThe location of a havok impact.\n\nwater_surface\nPoint of the effect projected to the water surface above it. Otherwise it just returns the effect position.\n\nstructure_surface\nUse this for effects that might be going off underneath soft surface that you want to be on the surface\n\nchild\nThe location of the last detonated projectile, in case the parent object is a weapon (beams only)\n\n"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "marker name^"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "effect_location_flags"
+        },
+        {
+          "type": "char_enum",
+          "name": "priority!*",
+          "definition": "global_effect_priority_enum"
+        },
+        {
+          "type": "pad",
+          "name": "RGEWNQIG",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "effect_accelerations_block": {
+      "guid": "95da7d002a4d082a3a4fe48ad27d214f",
+      "size": 20,
+      "size_string": "sizeof(struct effect_acceleration_definition)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "create in",
+          "definition": "effect_environments"
+        },
+        {
+          "type": "short_enum",
+          "name": "violence mode",
+          "definition": "effect_dispositions"
+        },
+        {
+          "type": "short_block_index",
+          "name": "location",
+          "definition": "effect_locations_block"
+        },
+        {
+          "type": "pad",
+          "name": "THY",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "acceleration"
+        },
+        {
+          "type": "real",
+          "name": "inner cone angle:degrees"
+        },
+        {
+          "type": "real",
+          "name": "outer cone angle:degrees"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "effect_looping_sound_block_struct": {
+      "guid": "c9237db0e94d51ecf23575824b79cd48",
+      "size": 20,
+      "size_string": "sizeof(effect_looping_sound_definition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "looping sound^",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd"
+            ]
+          }
+        },
+        {
+          "type": "short_block_index",
+          "name": "location",
+          "definition": "effect_locations_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "bind scale to event",
+          "definition": "effect_event_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "effect_conical_distribution_block": {
+      "guid": "f168233b5d4991981c5e2fb02530935b",
+      "size": 12,
+      "size_string": "sizeof(s_effect_conical_distribution_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "conical_projection: AKA shotgun",
+          "definition": "projectile_count = yaw_count*pitch_count"
+        },
+        {
+          "type": "short_integer",
+          "name": "yaw count"
+        },
+        {
+          "type": "short_integer",
+          "name": "pitch count"
+        },
+        {
+          "type": "real",
+          "name": "distribution exponent#exp==.5 even distribution, exp>.5== tighter"
+        },
+        {
+          "type": "angle",
+          "name": "spread#degrees"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "effect_flags": {
+      "options": [
+        "deleted when attachment deactivates",
+        "run events in parallel",
+        "do not re-use parts when looping#This option will hurt performance on effects with very short duration.",
+        "age creator's weapon",
+        "use parent position but world orientation",
+        "can penetrate walls (expensive)",
+        "cannot be restarted#Will help performance for parallel events of different lengths, if the effect is unlikely to be reused"
+      ]
+    },
+    "event_flags": {
+      "options": [
+        "disabled for debugging",
+        "particles die when effect ends{particles die when event ends}"
+      ]
+    },
+    "global_effect_priority_enum": {
+      "options": [
+        "normal",
+        "high",
+        "essential"
+      ]
+    },
+    "effect_environments": {
+      "options": [
+        "any environment",
+        "air only",
+        "water only",
+        "space only",
+        "wet only",
+        "dry only"
+      ]
+    },
+    "effect_dispositions": {
+      "options": [
+        "either mode",
+        "violent mode only",
+        "nonviolent mode only"
+      ]
+    },
+    "effect_location_flags": {
+      "options": [
+        "optional (no error if not found)",
+        "destructible (no error if goes away)",
+        "track sub-frame movements#When effect moves multiple times within one frame, update location each time"
+      ]
+    },
+    "effect_part_flags": {
+      "options": [
+        "face down regardless of location (decals)",
+        "offset origin away from geometry (lights)",
+        "never attached to object",
+        "disabled for debugging",
+        "draw regardless of distance",
+        "make every tick",
+        "inherit parent variant",
+        "batch AOE damage",
+        "create even when event loops back to self",
+        "face up regardless of location (replace_up)"
+      ]
+    },
+    "effect_camera_modes": {
+      "options": [
+        "independent of camera mode",
+        "only in first person",
+        "only in third person",
+        "both first and third"
+      ]
+    },
+    "global_damage_reporting_enum_definition": {
+      "options": [
+        "unknown",
+        "teh guardians",
+        "scripting",
+        "ai suicide",
+        "magnum pistol",
+        "assault rifle",
+        "marksman rifle",
+        "shotgun",
+        "sniper rifle",
+        "rocket launcher",
+        "spartan laser",
+        "frag grenade",
+        "grenade launcher",
+        "plasma pistol",
+        "needler",
+        "plasma rifle",
+        "plasma repeater",
+        "needle rifle",
+        "spike rifle",
+        "plasma launcher",
+        "gravity hammer",
+        "energy sword",
+        "plasma grenade",
+        "plasma shot",
+        "ghost",
+        "revenant driver",
+        "revenant gunner",
+        "wraith",
+        "wraith anti-infantry",
+        "banshee",
+        "banshee bomb",
+        "seraph",
+        "mongoose",
+        "warthog driver",
+        "warthog gunner",
+        "warthog gunner gauss",
+        "warthog gunner rocket",
+        "scorpion",
+        "scorpion gunner",
+        "falcon driver",
+        "falcon gunner",
+        "falling damage",
+        "generic collision damage",
+        "generic melee damage",
+        "generic explosion",
+        "birthday party explosion",
+        "flag melee damage",
+        "bomb melee damage",
+        "bomb explosion damage",
+        "ball melee damage",
+        "teleporter",
+        "transfer damage",
+        "armor lock crush",
+        "airstrike",
+        "human turret",
+        "plasma cannon",
+        "plasma mortar",
+        "plasma turret",
+        "shade turret",
+        "excavator",
+        "smg",
+        "battle rifle",
+        "carbine",
+        "beam rifle",
+        "flak cannon",
+        "missile launcher{missle launcher}",
+        "brute shot",
+        "flame thrower",
+        "sentinal gun",
+        "claymore grenade",
+        "firebomb grenade",
+        "elephant turret",
+        "spectre driver",
+        "spectre gunner",
+        "tank",
+        "chopper",
+        "hornet",
+        "mantis",
+        "mauler",
+        "sentinel beam",
+        "sentinel rpg",
+        "prox-mine",
+        "forklift",
+        "sabre"
+      ]
+    },
+    "effect_part_scaleable_values": {
+      "options": [
+        "velocity",
+        "velocity delta",
+        "velocity cone angle",
+        "angular velocity",
+        "angular velocity delta",
+        "type-specific scale"
+      ]
+    }
+  }
+}

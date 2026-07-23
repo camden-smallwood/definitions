@@ -1,0 +1,214 @@
+{
+  "name": "scenario_cluster_data_resource",
+  "tag": "clu*",
+  "version": 1,
+  "flags": 2102,
+  "block": "scenario_cluster_data_resource_block",
+  "blocks": {
+    "scenario_cluster_data_resource_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "scenario_cluster_data_resource_struct_definition"
+    },
+    "scenario_cluster_data_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "scenario_cluster_data_block"
+    },
+    "scenario_cluster_points_block": {
+      "max_count": 255,
+      "max_count_string": "MAXIMUM_CLUSTERS_PER_STRUCTURE",
+      "struct": "scenario_cluster_points_block"
+    },
+    "scenario_acoustics_palette_block_definition": {
+      "max_count": 512,
+      "max_count_string": "k_maximum_scenario_acoustic_volumes",
+      "struct": "scenario_acoustics_palette_block_definition_struct"
+    },
+    "scenario_cluster_acoustics_block": {
+      "max_count": 255,
+      "max_count_string": "MAXIMUM_CLUSTERS_PER_STRUCTURE",
+      "struct": "scenario_cluster_acoustics_block_struct"
+    },
+    "scenario_weather_palette_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_WEATHER_PALETTE_ENTRIES_PER_STRUCTURE",
+      "struct": "scenario_weather_palette_block"
+    }
+  },
+  "structs": {
+    "scenario_cluster_data_resource_struct_definition": {
+      "guid": "d37a87b7874a908b660940bc3efe3dcb",
+      "size": 36,
+      "size_string": "sizeof(s_scenario_cluster_data_resource)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "cluster data",
+          "definition": "scenario_cluster_data_block"
+        },
+        {
+          "type": "block",
+          "name": "acoustics palette{background sound palette}",
+          "definition": "scenario_acoustics_palette_block_definition"
+        },
+        {
+          "type": "block",
+          "name": "weather palette",
+          "definition": "scenario_weather_palette_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_cluster_data_block": {
+      "guid": "fbed522c9e4cfeacedc666aac970b3d4",
+      "size": 48,
+      "size_string": "sizeof(s_scenario_cluster_data)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "bsp^*",
+          "definition": {
+            "flags": 6,
+            "allowed": [
+              "sbsp"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "bsp checksum*"
+        },
+        {
+          "type": "block",
+          "name": "cluster centroids*",
+          "definition": "scenario_cluster_points_block"
+        },
+        {
+          "type": "long_block_index",
+          "name": "default acoustic palette",
+          "definition": "scenario_acoustics_palette_block_definition"
+        },
+        {
+          "type": "block",
+          "name": "acoustics{background sounds}*",
+          "definition": "scenario_cluster_acoustics_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_cluster_points_block": {
+      "guid": "f0b62ceb6547ff6382ed378dd1b4076d",
+      "size": 12,
+      "size_string": "sizeof(real_point3d)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "centroid*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_acoustics_palette_block_definition_struct": {
+      "guid": "a2b9deca7b469b111360d38294176cde",
+      "size": 20,
+      "size_string": "sizeof(s_scenario_acoustics_palette_entry)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "explanation",
+          "name": "BACKGROUND SOUND",
+          "definition": null
+        },
+        {
+          "type": "struct",
+          "name": "ambience",
+          "definition": "scenario_acoustics_ambience_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_acoustics_ambience_definition": {
+      "guid": "997713359e4ef293614e3681abbb72e0",
+      "size": 16,
+      "size_string": "sizeof(s_scenario_acoustics_ambience)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "background sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_cluster_acoustics_block_struct": {
+      "guid": "dbde96bf61446ec564f7278ae47d1581",
+      "size": 4,
+      "size_string": "sizeof(s_scenario_cluster_property)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "type^",
+          "definition": "scenario_acoustics_palette_block_definition"
+        },
+        {
+          "type": "pad",
+          "name": "XQQ",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_weather_palette_block": {
+      "guid": "17c89f9df34fd583ef1a33a47f6788d9",
+      "size": 20,
+      "size_string": "sizeof(struct scenario_weather_palette_entry)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "tag_reference",
+          "name": "rain",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "rain"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  }
+}

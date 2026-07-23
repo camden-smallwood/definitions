@@ -1,0 +1,56 @@
+{
+  "name": "camera_track",
+  "tag": "trak",
+  "version": 2,
+  "flags": 2,
+  "block": "camera_track_block",
+  "blocks": {
+    "camera_track_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "camera_track_struct_definition"
+    },
+    "camera_track_control_point_block": {
+      "max_count": 16,
+      "max_count_string": "k_maximum_number_of_camera_track_control_points",
+      "struct": "camera_track_control_point_block"
+    }
+  },
+  "structs": {
+    "camera_track_struct_definition": {
+      "guid": "17f81532984a4e26a1bf65816f3ecaaa",
+      "size": 12,
+      "size_string": "sizeof(s_camera_track_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "control points",
+          "definition": "camera_track_control_point_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "camera_track_control_point_block": {
+      "guid": "f0ee9f543041d5ca6fab85961f7ad075",
+      "size": 28,
+      "size_string": "sizeof(s_camera_track_control_point)",
+      "fields": [
+        {
+          "type": "real_vector_3d",
+          "name": "position"
+        },
+        {
+          "type": "real_quaternion",
+          "name": "orientation"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  }
+}

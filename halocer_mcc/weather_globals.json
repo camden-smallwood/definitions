@@ -1,0 +1,37 @@
+{
+  "name": "weather_globals",
+  "tag": "wxcg",
+  "version": 1,
+  "flags": 2,
+  "block": "weather_globals_block",
+  "blocks": {
+    "weather_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weather_globals_struct_definition"
+    }
+  },
+  "structs": {
+    "weather_globals_struct_definition": {
+      "guid": "bf199b8c3f411f97efdf578b2e158efc",
+      "size": 16,
+      "size_string": "sizeof(s_weather_globals)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "default rain",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "rain"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  }
+}

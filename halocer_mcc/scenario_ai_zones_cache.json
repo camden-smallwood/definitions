@@ -1,0 +1,670 @@
+{
+  "name": "scenario_ai_zones_cache",
+  "tag": "sczc",
+  "version": 1,
+  "flags": 0,
+  "block": "scenario_ai_zones_cache_block",
+  "blocks": {
+    "scenario_ai_zones_cache_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "scenario_ai_zones_cache_block_struct"
+    },
+    "zone_block": {
+      "max_count": 128,
+      "max_count_string": "k_max_zones_per_map",
+      "struct": "zone_block"
+    },
+    "scenario_structure_bsp_reference_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "scenario_structure_bsp_reference_block"
+    },
+    "firing_positions_block": {
+      "max_count": 2048,
+      "max_count_string": "k_max_firing_positions_per_zone",
+      "struct": "firing_positions_block"
+    },
+    "ai_reference_frame_block": {
+      "max_count": 150,
+      "max_count_string": "k_maximum_reference_frames_per_map",
+      "struct": "ai_reference_frame_block"
+    },
+    "areas_block": {
+      "max_count": 128,
+      "max_count_string": "k_max_areas_per_zone",
+      "struct": "areas_block_struct"
+    },
+    "flight_reference_block": {
+      "max_count": 10,
+      "max_count_string": "k_max_flight_references_per_area",
+      "struct": "flight_reference_block"
+    },
+    "area_sector_point_block": {
+      "max_count": 32,
+      "max_count_string": "k_maximum_points_per_sector",
+      "struct": "area_sector_point_block"
+    }
+  },
+  "structs": {
+    "scenario_ai_zones_cache_block_struct": {
+      "guid": "c6346b3b766dd6eb33e7fcde2304d341",
+      "size": 12,
+      "size_string": "sizeof(s_scenario_ai_zones_cache_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "ai zones",
+          "definition": "zone_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "zone_block": {
+      "guid": "82a51c666147f4d714e000818bca7e14",
+      "size": 68,
+      "size_string": "sizeof(struct zone_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "string",
+          "name": "name^"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "zone_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "long_block_flags",
+          "name": "runtime bsp flags!",
+          "group_tag": "mbsp",
+          "definition": "scenario_structure_bsp_reference_block"
+        },
+        {
+          "type": "long_block_flags",
+          "name": "disallowed attachment bsps",
+          "group_tag": "mbsp",
+          "definition": "scenario_structure_bsp_reference_block"
+        },
+        {
+          "type": "block",
+          "name": "firing positions",
+          "definition": "firing_positions_block"
+        },
+        {
+          "type": "block",
+          "name": "areas",
+          "definition": "areas_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_structure_bsp_reference_block": {
+      "guid": "8b8ccce6104e6b3b9eb87c896228a21f",
+      "size": 96,
+      "size_string": "sizeof(struct scenario_structure_bsp_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "structure bsp^",
+          "definition": {
+            "flags": 6,
+            "allowed": [
+              "sbsp"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "local structure bsp^*!",
+          "definition": {
+            "flags": 6,
+            "allowed": [
+              "sbsp"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "structure lighting_info^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "stli"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "local structure lighting_info^!",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "stli"
+            ]
+          }
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "scenario_structure_bsp_reference_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad_flags",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "custom gravity scale#0==nogravity, 1==full, set the custom gravity scale flag to make this parameter active"
+        },
+        {
+          "type": "real_bounds",
+          "name": "world bounds x*"
+        },
+        {
+          "type": "real_bounds",
+          "name": "world bounds y*"
+        },
+        {
+          "type": "real_bounds",
+          "name": "world bounds z*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "firing_positions_block": {
+      "guid": "85feb4a8004303a93affabaff9ce83a0",
+      "size": 40,
+      "size_string": "sizeof(s_firing_position_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "CONTROLS~",
+          "definition": "Ctrl-N: Creates a new area and assigns it to the current selection of firing points."
+        },
+        {
+          "type": "real_point_3d",
+          "name": "position (local)",
+          "group_tag": "aipt"
+        },
+        {
+          "type": "short_block_index",
+          "name": "reference frame*",
+          "definition": "ai_reference_frame_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "structure bsp*",
+          "definition": "scenario_structure_bsp_reference_block"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags*",
+          "definition": "g_firing_position_flags"
+        },
+        {
+          "type": "word_flags",
+          "name": "posture flags",
+          "definition": "g_firing_position_posture_flags"
+        },
+        {
+          "type": "short_block_index",
+          "name": "area^",
+          "definition": "areas_block"
+        },
+        {
+          "type": "short_integer",
+          "name": "cluster index*"
+        },
+        {
+          "type": "short_integer",
+          "name": "bsp index"
+        },
+        {
+          "type": "short_integer",
+          "name": "sector index"
+        },
+        {
+          "type": "real_euler_angles_2d",
+          "name": "normal"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "cfpf"
+        },
+        {
+          "type": "angle",
+          "name": "facing"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "ai_reference_frame_block": {
+      "guid": "40841e52a841908305945798eb9c072b",
+      "size": 16,
+      "size_string": "sizeof(struct s_ai_reference_frame_definition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "object id",
+          "definition": "scenario_object_id_struct"
+        },
+        {
+          "type": "short_integer",
+          "name": "node index"
+        },
+        {
+          "type": "short_integer",
+          "name": "projection axis*"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags*",
+          "definition": "ai_reference_frame_flags"
+        },
+        {
+          "type": "pad",
+          "name": "QCKKWI",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_object_id_struct": {
+      "guid": "01140aa4ae454bde14477fb47b9ec399",
+      "size": 8,
+      "size_string": "sizeof(c_object_identifier)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "unique id*",
+          "group_tag": "obj#"
+        },
+        {
+          "type": "short_block_index",
+          "name": "origin bsp index*",
+          "group_tag": "obj#",
+          "definition": "scenario_structure_bsp_reference_block"
+        },
+        {
+          "type": "char_enum",
+          "name": "type*",
+          "group_tag": "obj#",
+          "definition": "object_type_enum_definition"
+        },
+        {
+          "type": "char_enum",
+          "name": "source*",
+          "group_tag": "obj#",
+          "definition": "object_source_enum_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "areas_block_struct": {
+      "guid": "16173565c74ef5eeb19663b1d7e3482f",
+      "size": 168,
+      "size_string": "sizeof(struct area_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "string",
+          "name": "name^`"
+        },
+        {
+          "type": "long_flags",
+          "name": "area flags",
+          "definition": "area_flags"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "runtime relative mean point!",
+          "group_tag": "aipt"
+        },
+        {
+          "type": "short_block_index",
+          "name": "runtime reference frame!",
+          "definition": "ai_reference_frame_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "structure index!",
+          "definition": "scenario_structure_bsp_reference_block"
+        },
+        {
+          "type": "real",
+          "name": "runtime standard deviation!~"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime starting index!~"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime count!~"
+        },
+        {
+          "type": "short_block_index",
+          "name": "manual reference frame",
+          "definition": "ai_reference_frame_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "bsp index*",
+          "definition": "scenario_structure_bsp_reference_block"
+        },
+        {
+          "type": "array",
+          "name": "cluster occupancy!",
+          "definition": "area_cluster_occupancy_bitvector_array"
+        },
+        {
+          "type": "block",
+          "name": "flight_hints",
+          "definition": "flight_reference_block"
+        },
+        {
+          "type": "block",
+          "name": "points^",
+          "definition": "area_sector_point_block"
+        },
+        {
+          "type": "explanation",
+          "name": "Generation Properties",
+          "definition": null
+        },
+        {
+          "type": "short_enum",
+          "name": "preset",
+          "group_tag": "ugpc",
+          "definition": "generate_preset_enum"
+        },
+        {
+          "type": "pad",
+          "name": "PAD1",
+          "definition": 2
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "generate_flags"
+        },
+        {
+          "type": "real",
+          "name": "extrusion"
+        },
+        {
+          "type": "real",
+          "name": "sink"
+        },
+        {
+          "type": "angle",
+          "name": "firing point orientation"
+        },
+        {
+          "type": "angle",
+          "name": "grid orientation"
+        },
+        {
+          "type": "real",
+          "name": "spacing*"
+        },
+        {
+          "type": "real",
+          "name": "airborne spacing*"
+        },
+        {
+          "type": "real",
+          "name": "min cover length*"
+        },
+        {
+          "type": "real",
+          "name": "cover spacing*"
+        },
+        {
+          "type": "real",
+          "name": "cover offset distance*"
+        },
+        {
+          "type": "real",
+          "name": "too close distance*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "area_cluster_occupancy_bitvector_array": {
+      "guid": "c30a42c8814b8796ceac078f36ded9ed",
+      "size": 4,
+      "size_string": "sizeof(int32)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "bitvector data!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "flight_reference_block": {
+      "guid": "b1eb74cbbb4112493e8c43958a57973b",
+      "size": 8,
+      "size_string": "sizeof(struct flight_hint_reference)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "flight hint index"
+        },
+        {
+          "type": "short_integer",
+          "name": "point index"
+        },
+        {
+          "type": "short_integer",
+          "name": "structure index"
+        },
+        {
+          "type": "pad",
+          "name": "post-structure-index-pad",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "area_sector_point_block": {
+      "guid": "f7b9b340354fc9f0b316d4b1268a9193",
+      "size": 24,
+      "size_string": "sizeof(s_ai_sector_point)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "point",
+          "group_tag": "aipt"
+        },
+        {
+          "type": "short_block_index",
+          "name": "reference frame*",
+          "definition": "ai_reference_frame_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "structure bsp*",
+          "definition": "scenario_structure_bsp_reference_block"
+        },
+        {
+          "type": "real_euler_angles_2d",
+          "name": "normal"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "arrays": {
+    "area_cluster_occupancy_bitvector_array": {
+      "count": 8,
+      "count_string": "((((MAXIMUM_CLUSTERS_PER_STRUCTURE)+(k_int32_bits-1))>>k_int32_bits_bits))",
+      "struct": "area_cluster_occupancy_bitvector_array"
+    }
+  },
+  "enums_flags": {
+    "zone_flags": {
+      "options": [
+        "giants zone"
+      ]
+    },
+    "scenario_structure_bsp_reference_flags_definition": {
+      "options": [
+        "no pathfinding{no AI attachment}",
+        "not a normally playable space in an MP map (check this on shared BSPs)",
+        "custom gravity scale",
+        "no default structure pathfinding"
+      ]
+    },
+    "object_type_enum_definition": {
+      "options": [
+        "biped",
+        "vehicle",
+        "weapon",
+        "equipment",
+        "terminal",
+        "projectile",
+        "scenery",
+        "machine",
+        "control",
+        "sound_scenery",
+        "crate",
+        "creature",
+        "giant",
+        "effect_scenery"
+      ]
+    },
+    "object_source_enum_definition": {
+      "options": [
+        "structure",
+        "editor",
+        "dynamic",
+        "legacy",
+        "sky",
+        "parent"
+      ]
+    },
+    "ai_reference_frame_flags": {
+      "options": [
+        "projection sign"
+      ]
+    },
+    "g_firing_position_flags": {
+      "options": [
+        "open",
+        "partial",
+        "closed",
+        "mobile",
+        "wall lean",
+        "perch",
+        "ground point",
+        "dynamic cover point",
+        "automatically generated!"
+      ]
+    },
+    "g_firing_position_posture_flags": {
+      "options": [
+        "corner_left",
+        "corner_right",
+        "bunker",
+        "bunker high",
+        "bunker low"
+      ]
+    },
+    "area_flags": {
+      "options": [
+        "vehicle area",
+        "manual reference frame",
+        "turret deployment area",
+        "invalid sector def!"
+      ]
+    },
+    "generate_preset_enum": {
+      "options": [
+        "high density{dense}",
+        "medium density",
+        "low density{loose}",
+        "high density vehicle",
+        "medium density vehicle{vehicle}",
+        "airborne",
+        "engineer",
+        "dogfight",
+        "dropship",
+        "orbital"
+      ]
+    },
+    "generate_flags": {
+      "options": [
+        "exclude cover",
+        "ignore existing",
+        "generate radial",
+        "don't stagger",
+        "airborne",
+        "airborne stagger",
+        "continue casting"
+      ]
+    }
+  }
+}

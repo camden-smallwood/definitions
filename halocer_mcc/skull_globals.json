@@ -1,0 +1,1101 @@
+{
+  "name": "skull_globals",
+  "tag": "skug",
+  "version": 0,
+  "flags": 8195,
+  "block": "skull_globals_block",
+  "blocks": {
+    "skull_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "skull_globals_block_struct"
+    },
+    "skull_birthday_party_block": {
+      "max_count": 8,
+      "max_count_string": "k_game_skull_birthday_party_count",
+      "struct": "skull_birthday_party_block_struct"
+    },
+    "skull_endurance_spec_indestructible_vehicles_block": {
+      "max_count": 8,
+      "max_count_string": "k_game_skull_endurance_spec_indestructible_vehicles_count",
+      "struct": "skull_endurance_spec_indestructible_vehicles_block_struct"
+    }
+  },
+  "structs": {
+    "skull_globals_block_struct": {
+      "guid": "c24522a0f04cd75fa97273b91d082110",
+      "size": 256,
+      "size_string": "sizeof(s_game_skull_globals_definition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "mythic",
+          "definition": "skull_mythic_struct"
+        },
+        {
+          "type": "block",
+          "name": "birthday parties",
+          "definition": "skull_birthday_party_block"
+        },
+        {
+          "type": "byte_integer",
+          "name": "runtime birthday party on unit damage flags!~"
+        },
+        {
+          "type": "byte_integer",
+          "name": "runtime birthday party on unit death flags!~"
+        },
+        {
+          "type": "byte_integer",
+          "name": "runtime birthday party on unit post-death damage flags!~"
+        },
+        {
+          "type": "byte_integer",
+          "name": "runtime birthday party on unit destruction flags!~"
+        },
+        {
+          "type": "struct",
+          "name": "angry",
+          "definition": "skull_angry_struct"
+        },
+        {
+          "type": "struct",
+          "name": "boom",
+          "definition": "skull_boom_struct"
+        },
+        {
+          "type": "struct",
+          "name": "foreign",
+          "definition": "skull_foreign_struct"
+        },
+        {
+          "type": "struct",
+          "name": "that's just wrong",
+          "definition": "skull_thats_just_wrong_struct"
+        },
+        {
+          "type": "struct",
+          "name": "recession",
+          "definition": "skull_recession_struct"
+        },
+        {
+          "type": "struct",
+          "name": "they come back",
+          "definition": "skull_they_come_back_struct"
+        },
+        {
+          "type": "struct",
+          "name": "object remap",
+          "definition": "skull_object_remap_struct"
+        },
+        {
+          "type": "struct",
+          "name": "riskrun",
+          "definition": "skull_riskrun_struct"
+        },
+        {
+          "type": "struct",
+          "name": "armistice",
+          "definition": "skull_armistice_struct"
+        },
+        {
+          "type": "struct",
+          "name": "endurance spec{fragile}",
+          "definition": "skull_endurance_spec_struct"
+        },
+        {
+          "type": "struct",
+          "name": "give and take",
+          "definition": "skull_give_and_take_struct"
+        },
+        {
+          "type": "struct",
+          "name": "temperamental",
+          "definition": "skull_temperamental_struct"
+        },
+        {
+          "type": "struct",
+          "name": "floor is lava",
+          "definition": "skull_floor_is_lava_struct"
+        },
+        {
+          "type": "struct",
+          "name": "third person",
+          "definition": "skull_third_person_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_mythic_struct": {
+      "guid": "1f84b77ee346315ed2a8ecb34a100f21",
+      "size": 8,
+      "size_string": "sizeof(s_game_skull_mythic_definition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "body vitality multiplier#modifies how much body vitality actors will have"
+        },
+        {
+          "type": "real",
+          "name": "shield vitality multiplier#modifies how much shield vitality actors will have"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_birthday_party_block_struct": {
+      "guid": "2e148c2054423f22490eadbb3971ff19",
+      "size": 96,
+      "size_string": "sizeof(s_game_skull_birthday_party_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Birthday Party",
+          "definition": "A birthday party allows you to celebrate the death of a given unit with special effects and damage consequences. One or more birthday parties can be defined for any skull and multiple birthday parties can be defined for a given unit."
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "skull_birthday_party_flags"
+        },
+        {
+          "type": "char_enum",
+          "name": "skull^#the skull which enables this birthday party",
+          "definition": "game_skull_enum_definition"
+        },
+        {
+          "type": "byte_flags",
+          "name": "special damage types{special death types}#the birthday party is only applied if the damage matches one of these special damage types. if none are set, all are valid",
+          "definition": "object_damage_aftermath_special_damage_type_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "effect damage reporting type#the damage type to use for this birthday party's effects",
+          "definition": "global_damage_reporting_enum_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 1
+        },
+        {
+          "type": "explanation",
+          "name": "Unit Filters",
+          "definition": "The following fields define filters for which unit(s) this birthday applies to. If no units are specified, all units matching the team flags are affected."
+        },
+        {
+          "type": "long_flags",
+          "name": "team flags#the team(s) this birthday party is applied to. if none are set, all are valid",
+          "definition": "global_campaign_team_enum"
+        },
+        {
+          "type": "tag_reference",
+          "name": "unit#the primary unit this birthday party is applied to",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "unit"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "secondary unit#the secondary unit this birthday party is applied to",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "unit"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Consequences",
+          "definition": "The following fields define the consequences of this birthday party if it passes the filters above"
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "dropped grenade type"
+        },
+        {
+          "type": "byte_integer",
+          "name": "dropped grenade count#0 defaults to 1 if a grenade type is specified"
+        },
+        {
+          "type": "pad",
+          "name": "pad1",
+          "definition": 3
+        },
+        {
+          "type": "string_id",
+          "name": "custom stimulus#a stimulus which can result in a custom character definition being used if defined in a character's \"stimuli responses\" block"
+        },
+        {
+          "type": "real_bounds",
+          "name": "stimulus duration:s#random duration within the bounds will be used if min<max"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_angry_struct": {
+      "guid": "d2c388769243b0da9ef1f8bdc2967756",
+      "size": 8,
+      "size_string": "sizeof(s_game_skull_angry_definition)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "enemy-of team#this skull is applied to all teams which are an enemy of this team",
+          "definition": "global_campaign_team_enum"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "real",
+          "name": "rate of fire scale#this scalar is applied to the rate of fire of the firing pattern the actor is using when firing a burst"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_boom_struct": {
+      "guid": "96532dac7147de89c3dd51bf75008e7b",
+      "size": 12,
+      "size_string": "sizeof(s_game_skull_boom_definition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "skull_boom_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "real",
+          "name": "damage falloff radius scale#scales the distance beyond which area-of-effect damage begins falling off"
+        },
+        {
+          "type": "real",
+          "name": "damage cutoff radius scale#scales the distance beyond which area-of-effect damage is not dealt"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_foreign_struct": {
+      "guid": "a068710c124ff8140343bc969a585034",
+      "size": 4,
+      "size_string": "sizeof(s_game_skull_foreign_definition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "skull_foreign_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_thats_just_wrong_struct": {
+      "guid": "af1044cea345b98bcac6bd9dca42c680",
+      "size": 8,
+      "size_string": "sizeof(s_game_skull_thats_just_wrong_definition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "skull_thats_just_wrong_flags"
+        },
+        {
+          "type": "char_enum",
+          "name": "player unit constant sound volume override#overrides the \"constant sound volume\" defined in the player's unit definition",
+          "definition": "ai_sound_volume_enum"
+        },
+        {
+          "type": "char_integer",
+          "name": "player unit noise adjustment#adjusts AI perception of noises made by the player's unit up or down by this many sound volume levels. this functions the same way the \"object noise adjustment\" in equipment definitions does"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 1
+        },
+        {
+          "type": "real",
+          "name": "hearing distance scale#scales the \"hearing distance\" in characters' \"perception properties\""
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_recession_struct": {
+      "guid": "1a5779377e47119b350689b1d54d485e",
+      "size": 24,
+      "size_string": "sizeof(s_game_skull_recession_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Recession",
+          "definition": "These scalars are applied to weapons directly owned by players (i.e. not vehicle weapons)."
+        },
+        {
+          "type": "long_integer",
+          "name": "rounds per shot scale#scales the number of rounds removed from a magazine from each shot fired, drains magazine but still fires if total rounds exceed loaded rounds"
+        },
+        {
+          "type": "real",
+          "name": "heat per shot scale#scales the amount of heat generated from each shot fired"
+        },
+        {
+          "type": "real",
+          "name": "age per shot scale#scales how much a weapon ages from each shot fired"
+        },
+        {
+          "type": "real",
+          "name": "age per kill scale#scales how much a weapon ages with each kill (if the \"weapon ages with each kill\" flag is set, e.g. for the energy sword)"
+        },
+        {
+          "type": "real",
+          "name": "age charge drain scale#scales how much a weapon ages while a trigger is charged (e.g. for the plasma pistol)"
+        },
+        {
+          "type": "real",
+          "name": "age external scale#scales how much a weapon ages from external sources (e.g. for the gravity hammer's explosive effects)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_they_come_back_struct": {
+      "guid": "7be065e8ff4c5ab1d4ebe39442dbe5db",
+      "size": 20,
+      "size_string": "sizeof(s_game_skull_they_come_back_definition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "actor types#the actor types these scalars apply to while this skull is enabled",
+          "definition": "actor_type_enum"
+        },
+        {
+          "type": "real",
+          "name": "resurrected damage scale"
+        },
+        {
+          "type": "real",
+          "name": "resurrected melee damage scale"
+        },
+        {
+          "type": "real",
+          "name": "resurrected body vitality scale"
+        },
+        {
+          "type": "real",
+          "name": "resurrected shield vitality scale"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_object_remap_struct": {
+      "guid": "050eabd1b6496072380d37b15959bcca",
+      "size": 44,
+      "size_string": "sizeof(s_game_skull_object_remap_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Object Remap",
+          "definition": "These skulls use the same object remap concepts as multiplayer. You can define weapon and vehicle sets as well as weights for the builtin random set in a multiplayer object type list tag and specify which sets to use when the skull is active. You can choose whether to load all objects referenced by the multiplayer object type list (will be loaded by all levels regardless of whether the skull is enabled) or to only resolve references to objects which are intrinsically loaded by the level.\n\nIf the \"force load objects\" flag is set, ALL objects in the 'object types' block and ALL of their dependencies will be loaded on EVERY level! Do NOT set that flag unless you've constrained your referenced objects down to a reasonable set!"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "skull_object_remap_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "tag_reference",
+          "name": "multiplayer object types",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "motl"
+            ]
+          }
+        },
+        {
+          "type": "struct",
+          "name": "scenario object placement (reload skull)",
+          "definition": "skull_object_remap_remap_table_data_struct"
+        },
+        {
+          "type": "struct",
+          "name": "runtime object placement (magnified skull)",
+          "definition": "skull_object_remap_remap_table_data_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_object_remap_remap_table_data_struct": {
+      "guid": "836e4a7e07416552affbaa955ed63c0f",
+      "size": 12,
+      "size_string": "sizeof(s_game_skull_object_remap_remap_table_data)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "weapon set name"
+        },
+        {
+          "type": "string_id",
+          "name": "vehicle set name"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime weapon set index!~"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime vehicle set index!~"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_riskrun_struct": {
+      "guid": "c4ca9478dc47167486d5de95702b8f6d",
+      "size": 8,
+      "size_string": "sizeof(s_game_skull_riskrun_definition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "disabled equipment types",
+          "definition": "global_equipment_type_flags"
+        },
+        {
+          "type": "real",
+          "name": "damage scale while sprinting#scales the damage applied to sprinting players while this skull is active"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_armistice_struct": {
+      "guid": "cea218c73746f5314a3fe9bf966a3e7a",
+      "size": 4,
+      "size_string": "sizeof(s_game_skull_armistice_definition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "allied teams#all specified teams will be allied with one another unless allied with the player",
+          "definition": "global_campaign_team_enum"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_endurance_spec_struct": {
+      "guid": "c155ebeba448ffd726794fb10192cd3f",
+      "size": 12,
+      "size_string": "sizeof(s_game_skull_endurance_spec_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "indestructible vehicles#if empty, all vehicles are indestructible",
+          "definition": "skull_endurance_spec_indestructible_vehicles_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_endurance_spec_indestructible_vehicles_block_struct": {
+      "guid": "7059e0ef11400d6191180faec8f1ee52",
+      "size": 16,
+      "size_string": "sizeof(s_game_skull_endurance_spec_indestructible_vehicle)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "vehicle^",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "vehi"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_give_and_take_struct": {
+      "guid": "ff732f0ef547527523238fb2bb0674f9",
+      "size": 48,
+      "size_string": "sizeof(s_game_skull_give_and_take_definition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "skull_give_and_take_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "custom",
+          "name": "give",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "Awarded Vitality Computation",
+          "definition": "The \"give\" portion of this skull converts realized damage to awarded vitality."
+        },
+        {
+          "type": "real",
+          "name": "damage -> awarded vitality scale#the fraction of the actual damage dealt which is converted to awarded vitality"
+        },
+        {
+          "type": "real",
+          "name": "maximum awarded shield vitality#the maximum fractional shield vitality that can be awarded"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "take",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "Damage Potential Computation",
+          "definition": "The \"take\" portion of this skull is applied when firing a weapon or throwing a grenade, before any damage has been dealt. As such, it operates on damage potential: an approximation of how much damage the fired / thrown projectile could deal. Damage potential is constant for a given projectile. If the projectile's damage effect's damage bounds are variable, the mean is used.\n\nNote that damage potential can exceed the realizable damage for a given target: a frag grenade may have a damage potential of 160, but its target may only have 30 vitality. Using that projectile against that target will be a net negative unless the awarded vitality scale significantly exceeds the self damage scale.\n\nThe damage bounds in the \"self damage effect\" are not actually used, as the damage amount is computed based on the scaled damage potential. The damage effect provides any other consequences (e.g. camera shake) rather than the damage amount, but its damage bounds must be non-zero."
+        },
+        {
+          "type": "byte_flags",
+          "name": "projectile fired damage potential type flags#for fired weapons",
+          "definition": "skull_give_and_take_damage_potential_type_flags"
+        },
+        {
+          "type": "byte_flags",
+          "name": "projectile thrown damage potential type flags#for thrown grenades",
+          "definition": "skull_give_and_take_damage_potential_type_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad1",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "damage potential -> self damage scale"
+        },
+        {
+          "type": "real",
+          "name": "projectile conical spread bias:[0, 1]#if the projectile has a \"conical spread\" block defined, self damage will be computed based on this fraction of its conical projections missing"
+        },
+        {
+          "type": "real",
+          "name": "projectile impact distance bias:[0, 1]#if the projectile has the \"damage scales based on distance\" flag set, self damage will be computed based on the damage it would deal at this fraction of its damage range"
+        },
+        {
+          "type": "real",
+          "name": "projectile detonation distance bias:[0, 1]#self damage will be computed as if the projectile detonates this fraction of its detonation damage effect's cutoff radius away from its target"
+        },
+        {
+          "type": "tag_reference",
+          "name": "self damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_temperamental_struct": {
+      "guid": "199bf29b0b4eab79b4f2cea687ff5f2e",
+      "size": 8,
+      "size_string": "sizeof(s_game_skull_temperamental_definition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "incident threshold scale#scales the number of traitorous incidents required for a friendly team to become non-friendly, note that the threshold is rounded to a whole number"
+        },
+        {
+          "type": "real",
+          "name": "incident decay timer scale#scales how long it takes for a friendly team to forget about a traitorous incident"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_floor_is_lava_struct": {
+      "guid": "0a5686d4d44c31cdad501700c0a0784e",
+      "size": 28,
+      "size_string": "sizeof(s_game_skull_floor_is_lava_definition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "skull_floor_is_lava_flags"
+        },
+        {
+          "type": "char_enum",
+          "name": "lava damage reporting type#the damage type to use for lava-induced damage",
+          "definition": "global_damage_reporting_enum_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "lava damage threshold:s#damage commences after touching lava for this long"
+        },
+        {
+          "type": "real",
+          "name": "lava damage frequency:s#damage applies at this interval after reaching the threshold"
+        },
+        {
+          "type": "tag_reference",
+          "name": "lava damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "skull_third_person_struct": {
+      "guid": "dfa33bafd44d0159ab72f1836b002e9e",
+      "size": 4,
+      "size_string": "sizeof(s_game_skull_third_person_definition)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "projectile creation location override#controls where the player's weapon projectiles are created while the third person skull is active",
+          "definition": "skull_third_person_projectile_creation_location_enum_definition"
+        },
+        {
+          "type": "char_enum",
+          "name": "throw aim origin override#controls where the player's grenades are created while the third person skull is active",
+          "definition": "skull_third_person_throw_aiming_origin_override_enum_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "skull_birthday_party_flags": {
+      "options": [
+        "celebrate on damage#this birthday party's consequences are invoked whenever the unit takes damage while alive",
+        "celebrate on death#this birthday party's consequences are invoked when the unit dies",
+        "celebrate on post-death damage#this birthday party's consequences are invoked whenever the unit takes damage while dead",
+        "celebrate on destruction#this birthday party's consequences are invoked when the unit is destroyed",
+        "only celebrate if damage owner is not self",
+        "only celebrate if damage owner is enemy",
+        "only celebrate if damage owner is player",
+        "only celebrate if damage owner is at maximum shield vitality",
+        "only celebrate if damage owner is at maximum body vitality",
+        "destroy unit after death#destroy the unit when it reaches the last frame in its death animation"
+      ]
+    },
+    "game_skull_enum_definition": {
+      "options": [
+        "skull_iron",
+        "skull_black_eye",
+        "skull_tough_luck",
+        "skull_catch",
+        "skull_fog",
+        "skull_famine",
+        "skull_thunderstorm",
+        "skull_tilt",
+        "skull_mythic",
+        "skull_assassin",
+        "skull_blind",
+        "skull_superman",
+        "skull_birthday_party",
+        "skull_daddy",
+        "skull_red",
+        "skull_yellow",
+        "skull_blue",
+        "skull_angry",
+        "skull_bandanna",
+        "skull_bonded_pair",
+        "skull_boom",
+        "skull_envy",
+        "skull_eye_patch",
+        "skull_foreign",
+        "skull_ghost",
+        "skull_grunt_funeral",
+        "skull_jacked",
+        "skull_malfunction",
+        "skull_masterblaster",
+        "skull_pinata",
+        "skull_recession",
+        "skull_scarab",
+        "skull_so_angry",
+        "skull_swarm",
+        "skull_thats_just_wrong",
+        "skull_they_come_back",
+        "skull_boots_off_the_ground",
+        "skull_adaptation",
+        "skull_reload",
+        "skull_spore_visibility",
+        "skull_night_vision",
+        "skull_lights_out",
+        "skull_riskrun",
+        "skull_pop",
+        "skull_armistice",
+        "skull_fragile",
+        "skull_give_and_take",
+        "skull_stow_and_grow",
+        "skull_hip_fire",
+        "skull_temperamental",
+        "skull_floor_is_lava",
+        "skull_magnified",
+        "skull_johnny_ammo_tree",
+        "skull_leadhead",
+        "skull_efficient",
+        "skull_third_person"
+      ]
+    },
+    "object_damage_aftermath_special_damage_type_enum": {
+      "options": [
+        "none",
+        "headshot",
+        "melee",
+        "collision",
+        "assassination"
+      ]
+    },
+    "global_damage_reporting_enum_definition": {
+      "options": [
+        "unknown",
+        "teh guardians",
+        "scripting",
+        "ai suicide",
+        "magnum pistol",
+        "assault rifle",
+        "marksman rifle",
+        "shotgun",
+        "sniper rifle",
+        "rocket launcher",
+        "spartan laser",
+        "frag grenade",
+        "grenade launcher",
+        "plasma pistol",
+        "needler",
+        "plasma rifle",
+        "plasma repeater",
+        "needle rifle",
+        "spike rifle",
+        "plasma launcher",
+        "gravity hammer",
+        "energy sword",
+        "plasma grenade",
+        "plasma shot",
+        "ghost",
+        "revenant driver",
+        "revenant gunner",
+        "wraith",
+        "wraith anti-infantry",
+        "banshee",
+        "banshee bomb",
+        "seraph",
+        "mongoose",
+        "warthog driver",
+        "warthog gunner",
+        "warthog gunner gauss",
+        "warthog gunner rocket",
+        "scorpion",
+        "scorpion gunner",
+        "falcon driver",
+        "falcon gunner",
+        "falling damage",
+        "generic collision damage",
+        "generic melee damage",
+        "generic explosion",
+        "birthday party explosion",
+        "flag melee damage",
+        "bomb melee damage",
+        "bomb explosion damage",
+        "ball melee damage",
+        "teleporter",
+        "transfer damage",
+        "armor lock crush",
+        "airstrike",
+        "human turret",
+        "plasma cannon",
+        "plasma mortar",
+        "plasma turret",
+        "shade turret",
+        "excavator",
+        "smg",
+        "battle rifle",
+        "carbine",
+        "beam rifle",
+        "flak cannon",
+        "missile launcher{missle launcher}",
+        "brute shot",
+        "flame thrower",
+        "sentinal gun",
+        "claymore grenade",
+        "firebomb grenade",
+        "elephant turret",
+        "spectre driver",
+        "spectre gunner",
+        "tank",
+        "chopper",
+        "hornet",
+        "mantis",
+        "mauler",
+        "sentinel beam",
+        "sentinel rpg",
+        "prox-mine",
+        "forklift",
+        "sabre"
+      ]
+    },
+    "global_campaign_team_enum": {
+      "options": [
+        "default",
+        "player",
+        "human",
+        "covenant",
+        "brute",
+        "mule",
+        "spare",
+        "covenant_player",
+        "flood",
+        "sentinel",
+        "heretic",
+        "prophet",
+        "guilty",
+        "berserk_hostile_to_all",
+        "unused14",
+        "unused15"
+      ]
+    },
+    "skull_boom_flags": {
+      "options": [
+        "do not scale melee damage#these scalars are applied to all area-of-effect damage (which includes ai melees) by default"
+      ]
+    },
+    "skull_foreign_flags": {
+      "options": [
+        "affects weapons#if set, weapons can only be picked up if affiliated with the same faction as the player",
+        "affects equipment#if set, equipment can only be picked up if affiliated with the same faction as the player",
+        "affects grenades#if set, grenades can only be picked up if affiliated with the same faction as the player",
+        "affects factionless objects#if set, objects not affiliated with a faction may not be picked up"
+      ]
+    },
+    "skull_thats_just_wrong_flags": {
+      "options": [
+        "disable perception positional attenuation#disables attenuation of AI perception based on the actor's position relative to the target",
+        "disable perception actor mode attenuation#disables attenuation of AI perception based on the actor's mode (alert, asleep, etc.)",
+        "disable perception line of sight attenuation#disables attenuation of AI perception based on the actor's line of sight to the target"
+      ]
+    },
+    "ai_sound_volume_enum": {
+      "options": [
+        "silent#ai will not respond to this sound",
+        "quiet",
+        "medium",
+        "shout",
+        "loud#ai can hear this sound at any range"
+      ]
+    },
+    "actor_type_enum": {
+      "options": [
+        "none",
+        "player",
+        "marine",
+        "crew",
+        "spartan",
+        "elite",
+        "jackal",
+        "grunt",
+        "brute",
+        "hunter",
+        "prophet",
+        "bugger",
+        "scarab",
+        "engineer",
+        "skirmisher",
+        "combat_form",
+        "infection_form",
+        "carrier_form",
+        "pure_form_stealth",
+        "pure_form_tank",
+        "pure_form_ranged",
+        "sentinel",
+        "mule",
+        "mounted_weapon"
+      ]
+    },
+    "skull_object_remap_flags": {
+      "options": [
+        "force load objects#if set, all object references in the multiplayer object type list will be loaded"
+      ]
+    },
+    "global_equipment_type_flags": {
+      "options": [
+        "multiplayer_powerup",
+        "spawner",
+        "proximity_mine",
+        "motion_tracker_noise",
+        "showme",
+        "invincibility_mode",
+        "treeoflife",
+        "shapeshifter",
+        "player_trait_field",
+        "ai_trait_field",
+        "repulsor_field",
+        "daddy",
+        "laser_designation",
+        "super_jump",
+        "ammo_pack",
+        "power_fist",
+        "health_pack",
+        "jet_pack",
+        "hologram",
+        "special_weapon",
+        "special_move",
+        "engineer_shields",
+        "sprint",
+        "flashlight"
+      ]
+    },
+    "skull_give_and_take_flags": {
+      "options": [
+        "suppress death from self damage#if set, self damage can reduce vitality to zero but never kill"
+      ]
+    },
+    "skull_give_and_take_damage_potential_type_flags": {
+      "options": [
+        "impact#the projectile's \"impact damage\" is incorporated into the computed damage potential",
+        "detonation#the projectile's \"detonation damage\" is incorporated into the computed damage potential"
+      ]
+    },
+    "skull_floor_is_lava_flags": {
+      "options": [
+        "stun shield on touch#if set, the unit's shield will be stunned (stop recharging) upon touching lava until damage is applied",
+        "stun body on touch#if set, the unit's body will be stunned (stop recharging) upon touching lava until damage is applied"
+      ]
+    },
+    "skull_third_person_projectile_creation_location_enum_definition": {
+      "options": [
+        "use observer aim line#weapon projectiles spawn at a position offset along the aim line starting at the observer position",
+        "use deterministic camera aim line#position offset along the aim line starting at the deterministic position (which does not take into account collisions with level geo)",
+        "use weapon origin#weapon projectiles always spawn at the weapon origin when on foot",
+        "same as first person#projectile spawning uses what the unit and weapon tags say in first person"
+      ]
+    },
+    "skull_third_person_throw_aiming_origin_override_enum_definition": {
+      "options": [
+        "use observer aim line#weapon projectiles spawn at a position offset along the aim line starting at the observer position",
+        "use deterministic camera aim line#position offset along the aim line starting at the deterministic position (which does not take into account collisions with level geo)",
+        "throw release position#use the object's position at the moment of release, which is visually consistent with what the character is doing but probably doesn't feel great",
+        "same as first person#use the head camera position (as in first-person)"
+      ]
+    }
+  }
+}

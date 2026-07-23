@@ -1,0 +1,37 @@
+{
+  "name": "shader",
+  "tag": "rmsh",
+  "version": 1,
+  "flags": 4198402,
+  "parent_tag": "rm  ",
+  "block": "shader_block",
+  "blocks": {
+    "shader_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "shader_struct_definition"
+    }
+  },
+  "structs": {
+    "shader_struct_definition": {
+      "guid": "4d66ac03d540e4ef3b75bb9032861cdd",
+      "size": 76,
+      "size_string": "sizeof(c_render_method_shader)-sizeof(c_render_method)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "render_method",
+          "definition": "render_method_struct_definition"
+        },
+        {
+          "type": "string_id",
+          "name": "material name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  }
+}

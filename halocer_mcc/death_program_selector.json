@@ -1,0 +1,234 @@
+{
+  "name": "death_program_selector",
+  "tag": "bdpd",
+  "version": 0,
+  "flags": 2,
+  "block": "death_program_selector_block",
+  "blocks": {
+    "death_program_selector_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "death_program_selector_struct_definition"
+    },
+    "death_program_special_block": {
+      "max_count": 5,
+      "max_count_string": "k_maximum_death_program_special_types",
+      "struct": "death_program_special_block"
+    },
+    "death_program_damage_reporting_block": {
+      "max_count": 12,
+      "max_count_string": "k_maximum_death_program_damage_types",
+      "struct": "death_program_damage_reporting_block"
+    },
+    "death_program_velocity_gate_block": {
+      "max_count": 2,
+      "max_count_string": "k_maximum_death_program_velocity_gates",
+      "struct": "death_program_velocity_gate_block"
+    }
+  },
+  "structs": {
+    "death_program_selector_struct_definition": {
+      "guid": "f3d71740e848a8789f7bb3905b0aae63",
+      "size": 28,
+      "size_string": "sizeof(s_death_program_selector)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "parent",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bdpd"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "special type",
+          "definition": "death_program_special_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "death_program_special_block": {
+      "guid": "8098a70724475113e5a95dbfa7aa258c",
+      "size": 16,
+      "size_string": "sizeof(s_death_program_selector_special)",
+      "fields": [
+        {
+          "type": "long_enum",
+          "name": "special type^",
+          "definition": "object_damage_aftermath_special_damage_type_enum"
+        },
+        {
+          "type": "block",
+          "name": "damage type",
+          "definition": "death_program_damage_reporting_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "death_program_damage_reporting_block": {
+      "guid": "09ca1124f64a036faf79669082942d01",
+      "size": 16,
+      "size_string": "sizeof(s_death_program_selector_damage_type)",
+      "fields": [
+        {
+          "type": "long_enum",
+          "name": "damage type^",
+          "definition": "global_damage_reporting_enum_definition"
+        },
+        {
+          "type": "block",
+          "name": "velocity",
+          "definition": "death_program_velocity_gate_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "death_program_velocity_gate_block": {
+      "guid": "0d180a50bb4e040079aa40b918fdba9e",
+      "size": 16,
+      "size_string": "sizeof(s_death_program_selector_velocity_gate)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "minimum velocity:wu/s#this death program will be selected if the biped's velocity is above this number^"
+        },
+        {
+          "type": "long_enum",
+          "name": "death program",
+          "definition": "death_program_result_enum"
+        },
+        {
+          "type": "real",
+          "name": "death program scale#input to the death program to scale the result (only affects ragdolls)"
+        },
+        {
+          "type": "string_id",
+          "name": "death animation stance#Override stance that contains the death animations for this gait speed when using animate then ragdoll option."
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "object_damage_aftermath_special_damage_type_enum": {
+      "options": [
+        "none",
+        "headshot",
+        "melee",
+        "collision",
+        "assassination"
+      ]
+    },
+    "global_damage_reporting_enum_definition": {
+      "options": [
+        "unknown",
+        "teh guardians",
+        "scripting",
+        "ai suicide",
+        "magnum pistol",
+        "assault rifle",
+        "marksman rifle",
+        "shotgun",
+        "sniper rifle",
+        "rocket launcher",
+        "spartan laser",
+        "frag grenade",
+        "grenade launcher",
+        "plasma pistol",
+        "needler",
+        "plasma rifle",
+        "plasma repeater",
+        "needle rifle",
+        "spike rifle",
+        "plasma launcher",
+        "gravity hammer",
+        "energy sword",
+        "plasma grenade",
+        "plasma shot",
+        "ghost",
+        "revenant driver",
+        "revenant gunner",
+        "wraith",
+        "wraith anti-infantry",
+        "banshee",
+        "banshee bomb",
+        "seraph",
+        "mongoose",
+        "warthog driver",
+        "warthog gunner",
+        "warthog gunner gauss",
+        "warthog gunner rocket",
+        "scorpion",
+        "scorpion gunner",
+        "falcon driver",
+        "falcon gunner",
+        "falling damage",
+        "generic collision damage",
+        "generic melee damage",
+        "generic explosion",
+        "birthday party explosion",
+        "flag melee damage",
+        "bomb melee damage",
+        "bomb explosion damage",
+        "ball melee damage",
+        "teleporter",
+        "transfer damage",
+        "armor lock crush",
+        "airstrike",
+        "human turret",
+        "plasma cannon",
+        "plasma mortar",
+        "plasma turret",
+        "shade turret",
+        "excavator",
+        "smg",
+        "battle rifle",
+        "carbine",
+        "beam rifle",
+        "flak cannon",
+        "missile launcher{missle launcher}",
+        "brute shot",
+        "flame thrower",
+        "sentinal gun",
+        "claymore grenade",
+        "firebomb grenade",
+        "elephant turret",
+        "spectre driver",
+        "spectre gunner",
+        "tank",
+        "chopper",
+        "hornet",
+        "mantis",
+        "mauler",
+        "sentinel beam",
+        "sentinel rpg",
+        "prox-mine",
+        "forklift",
+        "sabre"
+      ]
+    },
+    "death_program_result_enum": {
+      "options": [
+        "animate then ragdoll",
+        "default ragdoll program",
+        "headshot ragdoll program",
+        "melee ragdoll program"
+      ]
+    }
+  }
+}

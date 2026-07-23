@@ -1,0 +1,851 @@
+{
+  "name": "scenario_pathfinding",
+  "tag": "scpf",
+  "version": 1,
+  "flags": 0,
+  "block": "scenario_pathfinding_block",
+  "blocks": {
+    "scenario_pathfinding_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "scenario_pathfinding_struct_definition"
+    },
+    "structure_bsp_pathfinding_data_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "structure_bsp_pathfinding_data_block"
+    },
+    "sector_block": {
+      "max_count": 65534,
+      "max_count_string": "UNSIGNED_SHORT_MAX-1",
+      "struct": "sector_block"
+    },
+    "sector_link_block": {
+      "max_count": 2621440,
+      "max_count_string": "((true) ? 2621440 : UNSIGNED_SHORT_MAX)",
+      "struct": "sector_link_block"
+    },
+    "ref_block": {
+      "max_count": 262136,
+      "max_count_string": "((true) ? SHORT_MAX<<3 : SHORT_MAX)",
+      "struct": "ref_block"
+    },
+    "sector_bsp2d_nodes_block": {
+      "max_count": 536870911,
+      "max_count_string": "((true) ? 2147483647>>2 : SHORT_MAX)",
+      "struct": "sector_bsp2d_nodes_block"
+    },
+    "sector_vertex_block": {
+      "max_count": 65535,
+      "max_count_string": "UNSIGNED_SHORT_MAX",
+      "struct": "sector_vertex_block"
+    },
+    "environment_object_refs": {
+      "max_count": 8192,
+      "max_count_string": "k_maximum_environment_objects_per_scenario",
+      "struct": "environment_object_refs"
+    },
+    "environment_object_bsp_refs": {
+      "max_count": 4096,
+      "max_count_string": "MAXIMUM_BSPS_PER_COLLISION_REGION*MAXIMUM_REGIONS_PER_MODEL",
+      "struct": "environment_object_bsp_refs"
+    },
+    "scenario_structure_bsp_reference_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "scenario_structure_bsp_reference_block"
+    },
+    "pathfinding_hints_block": {
+      "max_count": 32767,
+      "max_count_string": "SHORT_MAX",
+      "struct": "pathfinding_hints_block"
+    },
+    "instanced_geometry_reference_block": {
+      "max_count": 16384,
+      "max_count_string": "k_maximum_instance_geometry_instances_per_structure_bsp",
+      "struct": "instanced_geometry_reference_block"
+    },
+    "giant_pathfinding_data_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "giant_pathfinding_data_block"
+    },
+    "pf_seam_block": {
+      "max_count": 128,
+      "max_count_string": "k_structure_seam_maximum_seam_count",
+      "struct": "pf_seam_block"
+    },
+    "pf_seam_link_block": {
+      "max_count": 32767,
+      "max_count_string": "k_structure_seam_maximum_edges_count",
+      "struct": "pf_seam_link_block"
+    },
+    "structure_bsp_pathfinding_jump_seam_block": {
+      "max_count": 100,
+      "max_count_string": "MAXIMUM_SCENARIO_PATHFINDING_JUMP_SEAMS_PER_BSP",
+      "struct": "structure_bsp_pathfinding_jump_seam_block"
+    },
+    "pf_jump_index_block": {
+      "max_count": 12,
+      "max_count_string": "12",
+      "struct": "pf_jump_index_block"
+    },
+    "structure_bsp_pathfinding_door_block": {
+      "max_count": 400,
+      "max_count_string": "MAXIMUM_SCENARIO_PATHFINDING_DOORS_PER_BSP",
+      "struct": "structure_bsp_pathfinding_door_block"
+    },
+    "ai_reference_frame_block": {
+      "max_count": 150,
+      "max_count_string": "k_maximum_reference_frames_per_map",
+      "struct": "ai_reference_frame_block"
+    }
+  },
+  "structs": {
+    "scenario_pathfinding_struct_definition": {
+      "guid": "47191bf88e4fd22e32248fa3e1d2260f",
+      "size": 12,
+      "size_string": "sizeof(struct s_scenario_pathfinding)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "bsp_pathfinding_data",
+          "definition": "structure_bsp_pathfinding_data_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_bsp_pathfinding_data_block": {
+      "guid": "88880cd965455c6058aba2965f6e4307",
+      "size": 176,
+      "size_string": "sizeof(s_structure_bsp_pathfinding_data)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "structure bsp^",
+          "definition": {
+            "flags": 6,
+            "allowed": [
+              "sbsp"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "sectors",
+          "definition": "sector_block"
+        },
+        {
+          "type": "block",
+          "name": "links",
+          "definition": "sector_link_block"
+        },
+        {
+          "type": "block",
+          "name": "bsp2d refs",
+          "definition": "ref_block"
+        },
+        {
+          "type": "block",
+          "name": "bsp2d nodes",
+          "definition": "sector_bsp2d_nodes_block"
+        },
+        {
+          "type": "block",
+          "name": "vertices",
+          "definition": "sector_vertex_block"
+        },
+        {
+          "type": "block",
+          "name": "object refs",
+          "definition": "environment_object_refs"
+        },
+        {
+          "type": "block",
+          "name": "pathfinding hints",
+          "definition": "pathfinding_hints_block"
+        },
+        {
+          "type": "block",
+          "name": "instanced geometry refs",
+          "definition": "instanced_geometry_reference_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "structure checksum*"
+        },
+        {
+          "type": "block",
+          "name": "giant pathfinding data",
+          "definition": "giant_pathfinding_data_block"
+        },
+        {
+          "type": "block",
+          "name": "seams",
+          "definition": "pf_seam_block"
+        },
+        {
+          "type": "block",
+          "name": "jump seams",
+          "definition": "structure_bsp_pathfinding_jump_seam_block"
+        },
+        {
+          "type": "block",
+          "name": "doors",
+          "definition": "structure_bsp_pathfinding_door_block"
+        },
+        {
+          "type": "block",
+          "name": "reference frames*",
+          "definition": "ai_reference_frame_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sector_block": {
+      "guid": "eca406c6d04cd97cc05204a1882f0735",
+      "size": 8,
+      "size_string": "sizeof(struct sector)",
+      "fields": [
+        {
+          "type": "word_flags",
+          "name": "Path-finding sector flags",
+          "definition": "sector_flags"
+        },
+        {
+          "type": "short_integer",
+          "name": "hint index"
+        },
+        {
+          "type": "long_integer",
+          "name": "first link (do not set manually)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sector_link_block": {
+      "guid": "9a855f49b74398d427c386a301fff010",
+      "size": 16,
+      "size_string": "sizeof(struct sector_link)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "vertex 1"
+        },
+        {
+          "type": "short_integer",
+          "name": "vertex 2"
+        },
+        {
+          "type": "word_flags",
+          "name": "link flags",
+          "definition": "sector_link_flags"
+        },
+        {
+          "type": "short_integer",
+          "name": "hint index"
+        },
+        {
+          "type": "short_integer",
+          "name": "forward link"
+        },
+        {
+          "type": "short_integer",
+          "name": "reverse link"
+        },
+        {
+          "type": "short_integer",
+          "name": "left sector"
+        },
+        {
+          "type": "short_integer",
+          "name": "right sector"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "ref_block": {
+      "guid": "7b3b3a86a64b156745232095d70bdca6",
+      "size": 4,
+      "size_string": "sizeof(struct bsp2d_ref)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "node ref or sector ref"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sector_bsp2d_nodes_block": {
+      "guid": "a2541ab6f848d29a4f437dbef7c7e85a",
+      "size": 20,
+      "size_string": "sizeof(struct large_bsp2d_node)",
+      "fields": [
+        {
+          "type": "real_plane_2d",
+          "name": "plane*"
+        },
+        {
+          "type": "long_integer",
+          "name": "left child*"
+        },
+        {
+          "type": "long_integer",
+          "name": "right child*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sector_vertex_block": {
+      "guid": "076dbed022438fa7ec36319919f4791c",
+      "size": 12,
+      "size_string": "sizeof(struct sector_vertex)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "point*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "environment_object_refs": {
+      "guid": "17400e344e4b1fa7042f0a993ecfb526",
+      "size": 24,
+      "size_string": "sizeof(c_pathfinding_object_reference)",
+      "fields": [
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "environment_object_flags"
+        },
+        {
+          "type": "pad",
+          "name": "OGJM",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "bsps*",
+          "definition": "environment_object_bsp_refs"
+        },
+        {
+          "type": "struct",
+          "name": "object id",
+          "definition": "scenario_object_id_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "environment_object_bsp_refs": {
+      "guid": "8d1d20097842154df4f112a22387bcab",
+      "size": 24,
+      "size_string": "sizeof(struct environment_object_bsp_reference)",
+      "fields": [
+        {
+          "type": "dword_integer",
+          "name": "bsp reference*"
+        },
+        {
+          "type": "short_integer",
+          "name": "node_index*"
+        },
+        {
+          "type": "pad",
+          "name": "NWLLGJU",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "bsp2d refs*",
+          "definition": "ref_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "vertex offset*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_object_id_struct": {
+      "guid": "01140aa4ae454bde14477fb47b9ec399",
+      "size": 8,
+      "size_string": "sizeof(c_object_identifier)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "unique id*",
+          "group_tag": "obj#"
+        },
+        {
+          "type": "short_block_index",
+          "name": "origin bsp index*",
+          "group_tag": "obj#",
+          "definition": "scenario_structure_bsp_reference_block"
+        },
+        {
+          "type": "char_enum",
+          "name": "type*",
+          "group_tag": "obj#",
+          "definition": "object_type_enum_definition"
+        },
+        {
+          "type": "char_enum",
+          "name": "source*",
+          "group_tag": "obj#",
+          "definition": "object_source_enum_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_structure_bsp_reference_block": {
+      "guid": "8b8ccce6104e6b3b9eb87c896228a21f",
+      "size": 96,
+      "size_string": "sizeof(struct scenario_structure_bsp_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "structure bsp^",
+          "definition": {
+            "flags": 6,
+            "allowed": [
+              "sbsp"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "local structure bsp^*!",
+          "definition": {
+            "flags": 6,
+            "allowed": [
+              "sbsp"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "structure lighting_info^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "stli"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "local structure lighting_info^!",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "stli"
+            ]
+          }
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "scenario_structure_bsp_reference_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad_flags",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "custom gravity scale#0==nogravity, 1==full, set the custom gravity scale flag to make this parameter active"
+        },
+        {
+          "type": "real_bounds",
+          "name": "world bounds x*"
+        },
+        {
+          "type": "real_bounds",
+          "name": "world bounds y*"
+        },
+        {
+          "type": "real_bounds",
+          "name": "world bounds z*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "pathfinding_hints_block": {
+      "guid": "6cfa6dc98d49e9ccb42fb1b5c24b4efc",
+      "size": 20,
+      "size_string": "sizeof(struct pathfinding_hint_data)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "hint type",
+          "definition": "hint_type_enum"
+        },
+        {
+          "type": "short_integer",
+          "name": "Next hint index"
+        },
+        {
+          "type": "long_integer",
+          "name": "hint data 0*"
+        },
+        {
+          "type": "long_integer",
+          "name": "hint data 1*"
+        },
+        {
+          "type": "long_integer",
+          "name": "hint data 2*"
+        },
+        {
+          "type": "long_integer",
+          "name": "hint data 3*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "instanced_geometry_reference_block": {
+      "guid": "8dc5f2243449b2a3bc741db4f92b0a07",
+      "size": 4,
+      "size_string": "sizeof(struct instanced_geometry_reference)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "pathfinding object_index"
+        },
+        {
+          "type": "pad",
+          "name": "RWU",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "giant_pathfinding_data_block": {
+      "guid": "a03f2ce72f4d545a9c91c5a44ad2f538",
+      "size": 4,
+      "size_string": "sizeof(s_giant_pathfinding_data)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "bsp2d root"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "pf_seam_block": {
+      "guid": "c35c668d564c4da0e4eecda338cdf7c7",
+      "size": 12,
+      "size_string": "sizeof(s_pf_seam)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "link mappings*",
+          "definition": "pf_seam_link_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "pf_seam_link_block": {
+      "guid": "cf41dfe9f9421e692f90b8accdd27f4c",
+      "size": 4,
+      "size_string": "sizeof(s_pf_seam_link)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "link index*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_bsp_pathfinding_jump_seam_block": {
+      "guid": "243bee1c7047c659132ca2aedf23544c",
+      "size": 36,
+      "size_string": "sizeof(s_structure_bsp_pathfinding_jump_seam)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "guid",
+          "definition": "tag_persistent_identifier_struct"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "pf_jump_seam_flags"
+        },
+        {
+          "type": "real",
+          "name": "rail length"
+        },
+        {
+          "type": "pad",
+          "name": "Pad0",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "jump hints",
+          "definition": "pf_jump_index_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "tag_persistent_identifier_struct": {
+      "guid": "550770349f4b341cdbb13a937e4e82a4",
+      "size": 16,
+      "size_string": "sizeof(s_tag_persistent_identifier)",
+      "fields": [
+        {
+          "type": "dword_integer",
+          "name": "data0"
+        },
+        {
+          "type": "dword_integer",
+          "name": "data1"
+        },
+        {
+          "type": "dword_integer",
+          "name": "data2"
+        },
+        {
+          "type": "dword_integer",
+          "name": "data3"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "pf_jump_index_block": {
+      "guid": "226a82012d4d4c34c6d56a96417e1a52",
+      "size": 4,
+      "size_string": "sizeof(s_jump_index)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "jump index"
+        },
+        {
+          "type": "pad",
+          "name": "post jump index",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_bsp_pathfinding_door_block": {
+      "guid": "91d93af71846453bdab5d1a2a0719417",
+      "size": 8,
+      "size_string": "sizeof(s_structure_bsp_pathfinding_door)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "object id",
+          "definition": "scenario_object_id_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "ai_reference_frame_block": {
+      "guid": "40841e52a841908305945798eb9c072b",
+      "size": 16,
+      "size_string": "sizeof(struct s_ai_reference_frame_definition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "object id",
+          "definition": "scenario_object_id_struct"
+        },
+        {
+          "type": "short_integer",
+          "name": "node index"
+        },
+        {
+          "type": "short_integer",
+          "name": "projection axis*"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags*",
+          "definition": "ai_reference_frame_flags"
+        },
+        {
+          "type": "pad",
+          "name": "QCKKWI",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "sector_flags": {
+      "options": [
+        "sector walkable",
+        "sector breakable",
+        "sector mobile",
+        "sector bsp source",
+        "floor",
+        "ceiling",
+        "wall north",
+        "wall south",
+        "wall east",
+        "wall west",
+        "crouchable",
+        "aligned",
+        "sector step",
+        "sector interior",
+        "sector rail",
+        "sector user"
+      ]
+    },
+    "sector_link_flags": {
+      "options": [
+        "sector link from collision edge",
+        "sector intersection link",
+        "sector link bsp2d creation error",
+        "sector link topology error",
+        "sector link chain error",
+        "sector link threshold",
+        "sector link wall base",
+        "sector link ledge",
+        "sector link leanable",
+        "sector link leanable low",
+        "sector link leanable high",
+        "sector link start corner",
+        "sector link end corner",
+        "sector link seam"
+      ]
+    },
+    "environment_object_flags": {
+      "options": [
+        "mobile"
+      ]
+    },
+    "scenario_structure_bsp_reference_flags_definition": {
+      "options": [
+        "no pathfinding{no AI attachment}",
+        "not a normally playable space in an MP map (check this on shared BSPs)",
+        "custom gravity scale",
+        "no default structure pathfinding"
+      ]
+    },
+    "object_type_enum_definition": {
+      "options": [
+        "biped",
+        "vehicle",
+        "weapon",
+        "equipment",
+        "terminal",
+        "projectile",
+        "scenery",
+        "machine",
+        "control",
+        "sound_scenery",
+        "crate",
+        "creature",
+        "giant",
+        "effect_scenery"
+      ]
+    },
+    "object_source_enum_definition": {
+      "options": [
+        "structure",
+        "editor",
+        "dynamic",
+        "legacy",
+        "sky",
+        "parent"
+      ]
+    },
+    "hint_type_enum": {
+      "options": [
+        "intersection link",
+        "jump link",
+        "climb link",
+        "vault link",
+        "mount link",
+        "hoist link",
+        "wall jump link",
+        "breakable floor",
+        "rail link",
+        "seam link",
+        "seam sector",
+        "door link",
+        "anticipation link",
+        "takeoff link"
+      ]
+    },
+    "pf_jump_seam_flags": {
+      "options": [
+        "destination only"
+      ]
+    },
+    "ai_reference_frame_flags": {
+      "options": [
+        "projection sign"
+      ]
+    }
+  }
+}

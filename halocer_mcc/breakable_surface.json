@@ -1,0 +1,74 @@
+{
+  "name": "breakable_surface",
+  "tag": "bsdt",
+  "version": 0,
+  "flags": 2,
+  "block": "breakable_surface_block",
+  "blocks": {
+    "breakable_surface_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "breakable_surface_struct_definition"
+    }
+  },
+  "structs": {
+    "breakable_surface_struct_definition": {
+      "guid": "3091c17cab4453bd75cba28b730ca6da",
+      "size": 56,
+      "size_string": "sizeof(s_breakable_surface_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "VITALITY",
+          "definition": "If the damage is below the lower bound, the surface won't break.\r\nIf the damage is above the upper bound, the surface always breaks.\r\nIn the middle, the surface will break with a weighted random chance.\r\nNegative values mean that the surface will never break from that kind of damage."
+        },
+        {
+          "type": "real_bounds",
+          "name": "direct damage vitality#this is damage from bullets hitting the surface"
+        },
+        {
+          "type": "real_bounds",
+          "name": "collision damage impulse thresholds#not really vitality - this is mass * velocity into the surface.  Running player bipeds cap out around 255\r\nrun 'event_display_category physics:breakable_surfaces verbose' to get verbose information about damage to breakable surfaces"
+        },
+        {
+          "type": "real_bounds",
+          "name": "AoE damage vitality"
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  }
+}

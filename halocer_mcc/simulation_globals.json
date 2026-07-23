@@ -1,0 +1,266 @@
+{
+  "name": "simulation_globals",
+  "tag": "simg",
+  "version": 0,
+  "flags": 3,
+  "block": "simulation_globals_block",
+  "blocks": {
+    "simulation_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "simulation_globals_struct_definition"
+    },
+    "simulation_universal_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "simulation_universal_block"
+    },
+    "simulation_runtime_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "simulation_runtime_block"
+    }
+  },
+  "structs": {
+    "simulation_globals_struct_definition": {
+      "guid": "d21936778240321d7e3bafbc58a9b15d",
+      "size": 24,
+      "size_string": "sizeof(s_simulation_globals_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "universal",
+          "definition": "simulation_universal_block"
+        },
+        {
+          "type": "block",
+          "name": "runtime",
+          "definition": "simulation_runtime_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "simulation_universal_block": {
+      "guid": "f1252f3ff54cff2546c1c9969a27f6ae",
+      "size": 10,
+      "size_string": "sizeof(s_simulation_universal_globals_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "SIMULATION DEPENDENCIES",
+          "definition": "Each game engine enables various game systems which have associated entities for stateful replication in the distributed simulation. Some dependencies (like players and game engine globals) are foundational and the game is unlikely to function without them. Others are more bespoke: if your engine supports AI actors, you'll have a depdency on ai globals so allegience state is replicated to clients."
+        },
+        {
+          "type": "custom",
+          "name": "shared dependencies",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "shared dependencies",
+          "definition": "simulation_dependencies_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "sandbox dependencies",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "sandbox engine dependencies",
+          "definition": "simulation_dependencies_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "megalo dependencies",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "megalo engine dependencies",
+          "definition": "simulation_dependencies_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "campaign dependencies",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "campaign engine dependencies",
+          "definition": "simulation_dependencies_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "survival dependencies",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "survival engine dependencies",
+          "definition": "simulation_dependencies_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "simulation_dependencies_struct": {
+      "guid": "cd8c95f0134e95ae380333a6f2619871",
+      "size": 2,
+      "size_string": "sizeof(s_simulation_dependencies_definition)",
+      "fields": [
+        {
+          "type": "word_flags",
+          "name": "dependency flags",
+          "definition": "game_engine_simulation_dependency_flags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "simulation_runtime_block": {
+      "guid": "7c7d364fb6483088a9a4008ea5faa82d",
+      "size": 128,
+      "size_string": "sizeof(s_simulation_runtime_globals_definition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "SIMULATION INTERPOLATION DEFAULTS",
+          "definition": "Each simulated object type can specify a default interpolation configuration. A given object tag can override its type's default configuration by specifying its own simulation_interpolation reference."
+        },
+        {
+          "type": "tag_reference",
+          "name": "default biped simulation interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default vehicle simulation interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default creature simulation interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default crate simulation interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default item simulation interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default projectile simulation interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default object simulation interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default ragdoll simulation interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "game_engine_simulation_dependency_flags": {
+      "options": [
+        "game engine globals",
+        "ai globals",
+        "campaign metagame",
+        "chud scripting globals",
+        "cinematic",
+        "objective globals",
+        "debug globals",
+        "player",
+        "chud scripting player",
+        "statborg"
+      ]
+    }
+  }
+}

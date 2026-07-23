@@ -1,0 +1,448 @@
+{
+  "name": "structure_design",
+  "tag": "sddt",
+  "version": 1,
+  "flags": 32770,
+  "block": "structure_design_block",
+  "blocks": {
+    "structure_design_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "structure_design_block_struct"
+    },
+    "mopp_code_definition_block": {
+      "max_count": 32767,
+      "max_count_string": "SHORT_MAX",
+      "struct": "mopp_code_definition_block"
+    },
+    "mopp_code_data_definition_block": {
+      "max_count": 16777216,
+      "max_count_string": "16*(1024*1024)",
+      "struct": "mopp_code_data_definition_block"
+    },
+    "structure_soft_ceiling_block": {
+      "max_count": 128,
+      "max_count_string": "k_maximum_structure_soft_ceilings_count",
+      "struct": "structure_soft_ceiling_block"
+    },
+    "structure_soft_ceiling_triangle_block": {
+      "max_count": 32767,
+      "max_count_string": "k_maximum_structure_soft_ceiling_triangles",
+      "struct": "structure_soft_ceiling_triangle_block"
+    },
+    "structure_water_groups_block": {
+      "max_count": 1024,
+      "max_count_string": "k_maximum_structure_water_groups",
+      "struct": "structure_water_groups_block"
+    },
+    "structure_water_instances_block": {
+      "max_count": 1024,
+      "max_count_string": "k_maximum_structure_water_instances",
+      "struct": "structure_water_instances_block"
+    },
+    "structure_water_instance_planes_block": {
+      "max_count": 1024,
+      "max_count_string": "k_maximum_structure_water_instance_planes",
+      "struct": "structure_water_instance_planes_block"
+    },
+    "structure_water_instance_debug_triangles_block": {
+      "max_count": 8192,
+      "max_count_string": "k_maximum_structure_water_instance_debug_triangles",
+      "struct": "structure_water_instance_debug_triangles_block"
+    }
+  },
+  "structs": {
+    "structure_design_block_struct": {
+      "guid": "e0d973a0cb47943dffb4e01bb1c3bd3a",
+      "size": 112,
+      "size_string": "sizeof(struct s_structure_design)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "build identifier*",
+          "definition": "structure_manifest_build_identifier_struct"
+        },
+        {
+          "type": "struct",
+          "name": "parent build identifier*",
+          "definition": "structure_manifest_build_identifier_struct"
+        },
+        {
+          "type": "struct",
+          "name": "physics",
+          "definition": "global_structure_physics_design_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_manifest_build_identifier_struct": {
+      "guid": "7133fbddbf4246da043089cdec69b9bc",
+      "size": 24,
+      "size_string": "sizeof(s_structure_manifest_build_identifier_definition)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "manifest_id0*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "manifest_id1*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "manifest_id2*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "manifest_id3*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "build_index*"
+        },
+        {
+          "type": "long_integer",
+          "name": "structure importer version*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "global_structure_physics_design_struct": {
+      "guid": "450aae85a64fd313fa53b18e942216a7",
+      "size": 64,
+      "size_string": "sizeof(s_structure_design_physics)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "importer version*!"
+        },
+        {
+          "type": "block",
+          "name": "soft ceiling mopp code block!*",
+          "definition": "mopp_code_definition_block"
+        },
+        {
+          "type": "block",
+          "name": "soft ceilings block!*",
+          "definition": "structure_soft_ceiling_block"
+        },
+        {
+          "type": "block",
+          "name": "water mopp code!*",
+          "definition": "mopp_code_definition_block"
+        },
+        {
+          "type": "block",
+          "name": "water groups block!*",
+          "definition": "structure_water_groups_block"
+        },
+        {
+          "type": "block",
+          "name": "water instances block!*",
+          "definition": "structure_water_instances_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "mopp_code_definition_block": {
+      "guid": "98c82bee984ed18ae55143b676f65c63",
+      "size": 96,
+      "size_string": "sizeof(s_havok_mopp_code_definition)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "field pointer skip!~\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "short_integer",
+          "name": "size*!"
+        },
+        {
+          "type": "short_integer",
+          "name": "count~*!"
+        },
+        {
+          "type": "pad",
+          "name": "pad64_00",
+          "definition": 4
+        },
+        {
+          "type": "pad",
+          "name": "total bad pad1",
+          "definition": 8
+        },
+        {
+          "type": "pad",
+          "name": "pad64_01",
+          "definition": 8
+        },
+        {
+          "type": "real",
+          "name": "v.i*!"
+        },
+        {
+          "type": "real",
+          "name": "v.j*!"
+        },
+        {
+          "type": "real",
+          "name": "v.k*!"
+        },
+        {
+          "type": "real",
+          "name": "v.w*!"
+        },
+        {
+          "type": "int64_integer",
+          "name": "m_data pointer!~\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "long_integer",
+          "name": "int m_size*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "int m_capacityAndFlags*!"
+        },
+        {
+          "type": "char_integer",
+          "name": "m_buildType"
+        },
+        {
+          "type": "pad",
+          "name": "total bad pad2",
+          "definition": 3
+        },
+        {
+          "type": "pad",
+          "name": "align_pad",
+          "definition": 12
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "block",
+          "name": "mopp data block *!",
+          "definition": "mopp_code_data_definition_block"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "pad",
+          "name": "s_havok_mopp_code_definition::pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "mopp_code_data_definition_block": {
+      "guid": "1f74ab0e0844d7f5e1325a9d6dfdd412",
+      "size": 1,
+      "size_string": "sizeof(byte)",
+      "fields": [
+        {
+          "type": "byte_integer",
+          "name": "mopp data*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_soft_ceiling_block": {
+      "guid": "81fcfd512049efc7ca3c358c5dff232a",
+      "size": 20,
+      "size_string": "sizeof(struct s_structure_soft_ceiling)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*!"
+        },
+        {
+          "type": "short_enum",
+          "name": "type!*",
+          "definition": "soft_ceiling_type_enum"
+        },
+        {
+          "type": "pad",
+          "name": "fresh",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "soft ceiling triangles!*",
+          "definition": "structure_soft_ceiling_triangle_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_soft_ceiling_triangle_block": {
+      "guid": "84e75bf702477441e958f2a1e4b9d52c",
+      "size": 68,
+      "size_string": "sizeof(struct s_structure_soft_ceiling_triangle)",
+      "fields": [
+        {
+          "type": "real_plane_3d",
+          "name": "plane!*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "bounding sphere center!*"
+        },
+        {
+          "type": "real",
+          "name": "bounding sphere radius!*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "vertex0!*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "vertex1!*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "vertex2!*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_water_groups_block": {
+      "guid": "81fcfda12049ef07ca3c35bc5dff231a",
+      "size": 4,
+      "size_string": "sizeof(struct s_structure_physics_water_group)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_water_instances_block": {
+      "guid": "80fcfda12149ef07c23c35bc53ff231a",
+      "size": 64,
+      "size_string": "sizeof(struct s_structure_physics_water_instance)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "group*!",
+          "definition": "structure_water_groups_block"
+        },
+        {
+          "type": "pad",
+          "name": "PAD0",
+          "definition": 2
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "flow velocity*!"
+        },
+        {
+          "type": "block",
+          "name": "water planes block!*",
+          "definition": "structure_water_instance_planes_block"
+        },
+        {
+          "type": "block",
+          "name": "water debug triangles block!*",
+          "definition": "structure_water_instance_debug_triangles_block"
+        },
+        {
+          "type": "real_bounds",
+          "name": "bounds x*"
+        },
+        {
+          "type": "real_bounds",
+          "name": "bounds y*"
+        },
+        {
+          "type": "real_bounds",
+          "name": "bounds z*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_water_instance_planes_block": {
+      "guid": "81fcfdaa2049ef0bca3c35bc5dff231d",
+      "size": 16,
+      "size_string": "sizeof(real_plane3d)",
+      "fields": [
+        {
+          "type": "real_plane_3d",
+          "name": "plane*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_water_instance_debug_triangles_block": {
+      "guid": "81fafdaa204bef0bca3035bc5dfd231d",
+      "size": 36,
+      "size_string": "sizeof(s_structure_physics_water_instance_debug_triangle)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "point0*!"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "point1*!"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "point2*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "soft_ceiling_type_enum": {
+      "options": [
+        "acceleration",
+        "soft kill",
+        "slip surface"
+      ]
+    }
+  }
+}

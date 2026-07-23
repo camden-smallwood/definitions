@@ -1,0 +1,504 @@
+{
+  "name": "scenario_zone_sets_pvs",
+  "tag": "spvs",
+  "version": 1,
+  "flags": 0,
+  "block": "scenario_zone_sets_pvs_block",
+  "blocks": {
+    "scenario_zone_sets_pvs_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "scenario_zone_sets_pvs_struct_definition"
+    },
+    "scenario_zone_set_pvs_block": {
+      "max_count": 65,
+      "max_count_string": "k_maximum_scenario_zone_set_count+1",
+      "struct": "scenario_zone_set_pvs_block"
+    },
+    "scenario_structure_bsp_reference_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "scenario_structure_bsp_reference_block"
+    },
+    "scenario_zone_set_bsp_checksum_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "scenario_zone_set_bsp_checksum_block"
+    },
+    "scenario_zone_set_bsp_pvs_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "scenario_zone_set_bsp_pvs_block"
+    },
+    "scenario_zone_set_cluster_pvs_block": {
+      "max_count": 255,
+      "max_count_string": "MAXIMUM_CLUSTERS_PER_STRUCTURE",
+      "struct": "scenario_zone_set_cluster_pvs_block"
+    },
+    "scenario_zone_set_bsp_bits_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "scenario_zone_set_bsp_bits_block"
+    },
+    "scenario_zone_set_cluster_pvs_bit_vector_block": {
+      "max_count": 8,
+      "max_count_string": "((((MAXIMUM_CLUSTERS_PER_STRUCTURE)+(k_int32_bits-1))>>k_int32_bits_bits))",
+      "struct": "scenario_zone_set_cluster_pvs_bit_vector_block"
+    },
+    "scenario_zone_set_bsp_seam_cluster_mappings_block": {
+      "max_count": 255,
+      "max_count_string": "MAXIMUM_CLUSTERS_PER_STRUCTURE",
+      "struct": "scenario_zone_set_bsp_seam_cluster_mappings_block"
+    },
+    "scenario_zone_set_cluster_reference_block": {
+      "max_count": 8160,
+      "max_count_string": "MAXIMUM_CLUSTERS_PER_STRUCTURE*MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "scenario_zone_set_cluster_reference_block"
+    },
+    "structure_portal_device_mapping_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "structure_portal_device_mapping_block"
+    },
+    "structure_device_portal_association_block": {
+      "max_count": 128,
+      "max_count_string": "k_maximum_machine_door_portal_associations",
+      "struct": "structure_device_portal_association_block"
+    },
+    "game_portal_to_portal_mapping_block": {
+      "max_count": 128,
+      "max_count_string": "k_maximum_machine_door_portal_associations",
+      "struct": "game_portal_to_portal_mapping_block"
+    },
+    "occluding_portal_to_portal_mapping_block": {
+      "max_count": 128,
+      "max_count_string": "k_maximum_occluding_portal_associations",
+      "struct": "occluding_portal_to_portal_mapping_block"
+    }
+  },
+  "structs": {
+    "scenario_zone_sets_pvs_struct_definition": {
+      "guid": "1e685b3d2e4890b0d05d5c8444a03e40",
+      "size": 12,
+      "size_string": "sizeof(struct s_scenario_zone_sets_pvs)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "zone set pvs*!",
+          "definition": "scenario_zone_set_pvs_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_zone_set_pvs_block": {
+      "guid": "992c4a1b384bca8e36244a8a8e158858",
+      "size": 44,
+      "size_string": "sizeof(s_scenario_zone_set_pvs)",
+      "fields": [
+        {
+          "type": "long_block_flags",
+          "name": "structure bsp mask*",
+          "definition": "scenario_structure_bsp_reference_block"
+        },
+        {
+          "type": "short_integer",
+          "name": "version*!"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags*!",
+          "definition": "scenario_zone_set_pvs_flags"
+        },
+        {
+          "type": "block",
+          "name": "bsp checksums*!",
+          "definition": "scenario_zone_set_bsp_checksum_block"
+        },
+        {
+          "type": "block",
+          "name": "structure bsp pvs*!",
+          "definition": "scenario_zone_set_bsp_pvs_block"
+        },
+        {
+          "type": "block",
+          "name": "portal=>device mapping*!",
+          "definition": "structure_portal_device_mapping_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_structure_bsp_reference_block": {
+      "guid": "8b8ccce6104e6b3b9eb87c896228a21f",
+      "size": 96,
+      "size_string": "sizeof(struct scenario_structure_bsp_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "structure bsp^",
+          "definition": {
+            "flags": 6,
+            "allowed": [
+              "sbsp"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "local structure bsp^*!",
+          "definition": {
+            "flags": 6,
+            "allowed": [
+              "sbsp"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "structure lighting_info^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "stli"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "local structure lighting_info^!",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "stli"
+            ]
+          }
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "scenario_structure_bsp_reference_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad_flags",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "custom gravity scale#0==nogravity, 1==full, set the custom gravity scale flag to make this parameter active"
+        },
+        {
+          "type": "real_bounds",
+          "name": "world bounds x*"
+        },
+        {
+          "type": "real_bounds",
+          "name": "world bounds y*"
+        },
+        {
+          "type": "real_bounds",
+          "name": "world bounds z*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_zone_set_bsp_checksum_block": {
+      "guid": "a1c395a0374fa336013e4cbcc7a7e417",
+      "size": 4,
+      "size_string": "sizeof(int32)",
+      "fields": [
+        {
+          "type": "dword_integer",
+          "name": "bsp checksum*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_zone_set_bsp_pvs_block": {
+      "guid": "5c8783ff2942f0a9b0e369a7a8b16ae3",
+      "size": 36,
+      "size_string": "sizeof(s_scenario_zone_set_structure_bsp_pvs)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "cluster pvs*!",
+          "definition": "scenario_zone_set_cluster_pvs_block"
+        },
+        {
+          "type": "block",
+          "name": "cluster pvs doors closed*!",
+          "definition": "scenario_zone_set_cluster_pvs_block"
+        },
+        {
+          "type": "block",
+          "name": "bsp cluster mapings*!",
+          "definition": "scenario_zone_set_bsp_seam_cluster_mappings_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_zone_set_cluster_pvs_block": {
+      "guid": "d470cd6ae04a482bcba7a1a1c4487659",
+      "size": 12,
+      "size_string": "sizeof(s_scenario_zone_set_cluster_pvs)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "cluster pvs bit vectors*!",
+          "definition": "scenario_zone_set_bsp_bits_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_zone_set_bsp_bits_block": {
+      "guid": "ba4fa910ce431ea7e6e6c78adb6c1978",
+      "size": 12,
+      "size_string": "sizeof(s_scenario_zone_set_bsp_bits)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "bits*!",
+          "definition": "scenario_zone_set_cluster_pvs_bit_vector_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_zone_set_cluster_pvs_bit_vector_block": {
+      "guid": "a95e45911047c1290ba75399167b6726",
+      "size": 4,
+      "size_string": "sizeof(int32)",
+      "fields": [
+        {
+          "type": "dword_integer",
+          "name": "dword*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_zone_set_bsp_seam_cluster_mappings_block": {
+      "guid": "5c87a3aba9c2f0a9b053a4a7a8b11aa3",
+      "size": 36,
+      "size_string": "sizeof(s_scenario_zone_set_cluster_seam_cluster_mappings)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "root clusters*!",
+          "definition": "scenario_zone_set_cluster_reference_block"
+        },
+        {
+          "type": "block",
+          "name": "attached clusters*!",
+          "definition": "scenario_zone_set_cluster_reference_block"
+        },
+        {
+          "type": "block",
+          "name": "connected clusters*!",
+          "definition": "scenario_zone_set_cluster_reference_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_zone_set_cluster_reference_block": {
+      "guid": "5c87bcab19caf0a9b034a4a776b11aa3",
+      "size": 2,
+      "size_string": "sizeof(s_cluster_reference)",
+      "fields": [
+        {
+          "type": "char_integer",
+          "name": "bsp index*!"
+        },
+        {
+          "type": "byte_integer",
+          "name": "cluster index*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_portal_device_mapping_block": {
+      "guid": "286abaf9394596bf21a62bbb6c2d1611",
+      "size": 36,
+      "size_string": "sizeof(s_structure_portal_device_map)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "device portal associations",
+          "definition": "structure_device_portal_association_block"
+        },
+        {
+          "type": "block",
+          "name": "game portal to portal map",
+          "definition": "game_portal_to_portal_mapping_block"
+        },
+        {
+          "type": "block",
+          "name": "occluding portal to portal map",
+          "definition": "occluding_portal_to_portal_mapping_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "structure_device_portal_association_block": {
+      "guid": "af5490b37e45b32c19fa4c84b30fb764",
+      "size": 12,
+      "size_string": "sizeof(s_structure_portal_device_machine_association)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "device id",
+          "definition": "scenario_object_id_struct"
+        },
+        {
+          "type": "short_integer",
+          "name": "first game portal index"
+        },
+        {
+          "type": "word_integer",
+          "name": "game portal count"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scenario_object_id_struct": {
+      "guid": "01140aa4ae454bde14477fb47b9ec399",
+      "size": 8,
+      "size_string": "sizeof(c_object_identifier)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "unique id*",
+          "group_tag": "obj#"
+        },
+        {
+          "type": "short_block_index",
+          "name": "origin bsp index*",
+          "group_tag": "obj#",
+          "definition": "scenario_structure_bsp_reference_block"
+        },
+        {
+          "type": "char_enum",
+          "name": "type*",
+          "group_tag": "obj#",
+          "definition": "object_type_enum_definition"
+        },
+        {
+          "type": "char_enum",
+          "name": "source*",
+          "group_tag": "obj#",
+          "definition": "object_source_enum_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "game_portal_to_portal_mapping_block": {
+      "guid": "c7eabfb0e14f27257b08c1bab79c5116",
+      "size": 2,
+      "size_string": "sizeof(short)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "portal index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "occluding_portal_to_portal_mapping_block": {
+      "guid": "e1b10d2cd244bfb486895da29f8e691e",
+      "size": 2,
+      "size_string": "sizeof(short)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "portal index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "scenario_structure_bsp_reference_flags_definition": {
+      "options": [
+        "no pathfinding{no AI attachment}",
+        "not a normally playable space in an MP map (check this on shared BSPs)",
+        "custom gravity scale",
+        "no default structure pathfinding"
+      ]
+    },
+    "scenario_zone_set_pvs_flags": {
+      "options": [
+        "empty debug pvs*!"
+      ]
+    },
+    "object_type_enum_definition": {
+      "options": [
+        "biped",
+        "vehicle",
+        "weapon",
+        "equipment",
+        "terminal",
+        "projectile",
+        "scenery",
+        "machine",
+        "control",
+        "sound_scenery",
+        "crate",
+        "creature",
+        "giant",
+        "effect_scenery"
+      ]
+    },
+    "object_source_enum_definition": {
+      "options": [
+        "structure",
+        "editor",
+        "dynamic",
+        "legacy",
+        "sky",
+        "parent"
+      ]
+    }
+  }
+}

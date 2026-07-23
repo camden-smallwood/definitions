@@ -1,0 +1,123 @@
+{
+  "name": "sound_classes",
+  "tag": "sncl",
+  "version": 1,
+  "flags": 2,
+  "block": "sound_classes_block",
+  "blocks": {
+    "sound_classes_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_classes_block_struct"
+    },
+    "sound_class_block": {
+      "max_count": 71,
+      "max_count_string": "NUMBER_OF_SOUND_CLASSES",
+      "struct": "sound_class_block_struct"
+    }
+  },
+  "structs": {
+    "sound_classes_block_struct": {
+      "guid": "a60dfd75ac40ed09f7fce989970b3a52",
+      "size": 12,
+      "size_string": "sizeof(s_sound_classes_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "sound classes",
+          "definition": "sound_class_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_class_block_struct": {
+      "guid": "4015cede9c496f80bcd3fc8804062596",
+      "size": 20,
+      "size_string": "sizeof(sound_class_definition)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "max sounds per tag [1,16]#maximum number of sounds playing per individual sound tag"
+        },
+        {
+          "type": "short_integer",
+          "name": "max sounds per object per tag [1,16]{max sounds per object [1,16]}#maximum number of sounds per individual sound tag playing on an object"
+        },
+        {
+          "type": "short_integer",
+          "name": "max sounds per class [0,16]#maximum number of sounds playing of this class. zero means ignore."
+        },
+        {
+          "type": "short_integer",
+          "name": "max sounds per object per class [0,16]#maximum number of sounds of this class playing on an object. zero means ignore."
+        },
+        {
+          "type": "byte_flags",
+          "name": "internal flags!*",
+          "definition": "sound_class_internal_flags_definition"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "sound_class_external_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "sadf",
+          "definition": 2
+        },
+        {
+          "type": "struct",
+          "name": "distance parameters",
+          "definition": "sound_distance_parameters_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_distance_parameters_struct": {
+      "guid": "b18f195efa469aa674d7c28faaca6df7",
+      "size": 8,
+      "size_string": "sizeof(s_sound_distance_parameters)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "attenuation distances",
+          "definition": "these settings vary how the sound fades as you move closer or further away from it."
+        },
+        {
+          "type": "real",
+          "name": "minimum distance:world units#start attenuating at this distance"
+        },
+        {
+          "type": "real",
+          "name": "maximum distance:world units#the distance beyond which this sound is no longer audible"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "sound_class_internal_flags_definition": {
+      "options": [
+        "valid",
+        "is speech",
+        "multilingual"
+      ]
+    },
+    "sound_class_external_flags_definition": {
+      "options": [
+        "deterministic",
+        "stop when object dies"
+      ]
+    }
+  }
+}

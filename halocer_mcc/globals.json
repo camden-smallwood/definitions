@@ -1,0 +1,4327 @@
+{
+  "name": "globals",
+  "tag": "matg",
+  "version": 3,
+  "flags": 2359300,
+  "block": "globals_block",
+  "blocks": {
+    "globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "globals_block_struct"
+    },
+    "havok_cleanup_resources_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "havok_cleanup_resources_block"
+    },
+    "sound_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_globals_block"
+    },
+    "campaign_unspatialized_sounds_block": {
+      "max_count": 64,
+      "max_count_string": "k_maximum_campaign_unspatialized_sounds",
+      "struct": "campaign_unspatialized_sounds_block"
+    },
+    "game_globals_damage_block": {
+      "max_count": 2,
+      "max_count_string": "2",
+      "struct": "game_globals_damage_block"
+    },
+    "damage_group_block": {
+      "max_count": 512,
+      "max_count_string": "k_maximum_material_types",
+      "struct": "damage_group_block"
+    },
+    "armor_modifier_block": {
+      "max_count": 512,
+      "max_count_string": "k_maximum_material_types",
+      "struct": "armor_modifier_block"
+    },
+    "camera_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "camera_block"
+    },
+    "controller_input_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "controller_input_block"
+    },
+    "player_control_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "player_control_block"
+    },
+    "gamepad_stick_info_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "gamepad_stick_info_block"
+    },
+    "input_mapping_function_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "input_mapping_function_block"
+    },
+    "game_engine_player_traits_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_engine_player_traits_block"
+    },
+    "player_trait_shield_vitality_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "player_trait_shield_vitality_block"
+    },
+    "player_trait_weapons_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "player_trait_weapons_block"
+    },
+    "player_trait_movement_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "player_trait_movement_block"
+    },
+    "player_trait_appearance_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "player_trait_appearance_block"
+    },
+    "player_trait_sensors_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "player_trait_sensors_block"
+    },
+    "difficulty_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "difficulty_block"
+    },
+    "coop_difficulty_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "coop_difficulty_block_struct"
+    },
+    "character_major_upgrade_allowance_block": {
+      "max_count": 10,
+      "max_count_string": "10",
+      "struct": "character_major_upgrade_allowance_block_struct"
+    },
+    "factions_block": {
+      "max_count": 8,
+      "max_count_string": "k_game_global_factions_maximum_count",
+      "struct": "factions_block_struct"
+    },
+    "grenades_block": {
+      "max_count": 4,
+      "max_count_string": "4",
+      "struct": "grenades_block"
+    },
+    "soft_ceiling_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "soft_ceiling_globals_block"
+    },
+    "interface_tag_references": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "interface_tag_references"
+    },
+    "player_information_block": {
+      "max_count": 3,
+      "max_count_string": "k_player_character_type_count",
+      "struct": "player_information_block"
+    },
+    "player_representation_block": {
+      "max_count": 3,
+      "max_count_string": "k_player_character_type_count",
+      "struct": "player_representation_block"
+    },
+    "damage_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "damage_globals_block"
+    },
+    "materials_block": {
+      "max_count": 256,
+      "max_count_string": "k_maximum_editable_material_types",
+      "struct": "materials_block"
+    },
+    "object_type_drag_properties_block": {
+      "max_count": 14,
+      "max_count_string": "NUMBER_OF_OBJECT_TYPES",
+      "struct": "object_type_drag_properties_block"
+    },
+    "underwater_proxies_block": {
+      "max_count": 512,
+      "max_count_string": "k_maximum_material_types",
+      "struct": "underwater_proxies_block"
+    },
+    "player_color_index_block": {
+      "max_count": 32,
+      "max_count_string": "k_player_color_index_count",
+      "struct": "player_color_index_block"
+    },
+    "named_rgb_color_block": {
+      "max_count": 8,
+      "max_count_string": "k_forge_named_color_count",
+      "struct": "named_rgb_color_block"
+    },
+    "cinematics_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "cinematics_globals_block"
+    },
+    "cinematic_characters_block": {
+      "max_count": 16,
+      "max_count_string": "16",
+      "struct": "cinematic_characters_block"
+    },
+    "campaign_metagame_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "campaign_metagame_globals_block"
+    },
+    "campaign_metagame_style_type_block": {
+      "max_count": 100,
+      "max_count_string": "100",
+      "struct": "campaign_metagame_style_type_block"
+    },
+    "campaign_metagame_difficulty_scale_block": {
+      "max_count": 4,
+      "max_count_string": "k_campaign_difficulty_levels_count",
+      "struct": "campaign_metagame_difficulty_scale_block"
+    },
+    "campaign_metagame_skull_block": {
+      "max_count": 56,
+      "max_count_string": "k_game_skull_count",
+      "struct": "campaign_metagame_skull_block"
+    },
+    "active_camo_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "active_camo_globals_block"
+    },
+    "active_camo_level_definition_block": {
+      "max_count": 5,
+      "max_count_string": "k_number_of_active_camo_levels",
+      "struct": "active_camo_level_definition_block"
+    },
+    "garbage_collection_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "garbage_collection_block"
+    },
+    "global_camera_impulse_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "global_camera_impulse_block"
+    },
+    "runtime_materials_block": {
+      "max_count": 512,
+      "max_count_string": "k_maximum_material_types",
+      "struct": "runtime_materials_block"
+    }
+  },
+  "structs": {
+    "globals_block_struct": {
+      "guid": "cb77de084541cfa2307a80bbb366a8b2",
+      "size": 632,
+      "size_string": "sizeof(s_game_globals)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "havok cleanup resources",
+          "definition": "havok_cleanup_resources_block"
+        },
+        {
+          "type": "block",
+          "name": "sound globals",
+          "definition": "sound_globals_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "ai globals ref",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "aigl"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "damage table*",
+          "definition": "game_globals_damage_block"
+        },
+        {
+          "type": "block",
+          "name": "camera",
+          "definition": "camera_block"
+        },
+        {
+          "type": "block",
+          "name": "controller input",
+          "definition": "controller_input_block"
+        },
+        {
+          "type": "block",
+          "name": "player control",
+          "definition": "player_control_block"
+        },
+        {
+          "type": "block",
+          "name": "default player traits",
+          "definition": "game_engine_player_traits_block"
+        },
+        {
+          "type": "block",
+          "name": "difficulty",
+          "definition": "difficulty_block"
+        },
+        {
+          "type": "block",
+          "name": "co-op difficulty",
+          "definition": "coop_difficulty_block"
+        },
+        {
+          "type": "block",
+          "name": "factions",
+          "definition": "factions_block"
+        },
+        {
+          "type": "block",
+          "name": "grenades",
+          "definition": "grenades_block"
+        },
+        {
+          "type": "block",
+          "name": "soft ceilings",
+          "definition": "soft_ceiling_globals_block"
+        },
+        {
+          "type": "block",
+          "name": "interface tags",
+          "definition": "interface_tag_references"
+        },
+        {
+          "type": "block",
+          "name": "@player information",
+          "definition": "player_information_block"
+        },
+        {
+          "type": "block",
+          "name": "@player representation",
+          "definition": "player_representation_block"
+        },
+        {
+          "type": "block",
+          "name": "damage{falling damage}",
+          "definition": "damage_globals_block"
+        },
+        {
+          "type": "block",
+          "name": "materials",
+          "group_tag": "sort",
+          "definition": "materials_block"
+        },
+        {
+          "type": "block",
+          "name": "profile colors",
+          "definition": "player_color_index_block"
+        },
+        {
+          "type": "block",
+          "name": "forge colors",
+          "definition": "named_rgb_color_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "game engine globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "gegl"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "multiplayer globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mulg"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "survival_mode globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "smdt"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "global multiplayer object type list",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "motl"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "simulation globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "simg"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "skull globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "skug"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "cinematics globals",
+          "definition": "cinematics_globals_block"
+        },
+        {
+          "type": "block",
+          "name": "campaign metagame globals",
+          "definition": "campaign_metagame_globals_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "game medal globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "gmeg"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Rasterizer globals",
+          "definition": null
+        },
+        {
+          "type": "explanation",
+          "name": "Default camera fx settings",
+          "definition": null
+        },
+        {
+          "type": "tag_reference",
+          "name": "default camera fx settings",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cfxs"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Weather globals",
+          "definition": null
+        },
+        {
+          "type": "tag_reference",
+          "name": "weather globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wxcg"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Default collision damage",
+          "definition": null
+        },
+        {
+          "type": "tag_reference",
+          "name": "collision damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "collision damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cddf"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "global material types",
+          "definition": null
+        },
+        {
+          "type": "string_id",
+          "name": "global water material#the default value for what material type water is"
+        },
+        {
+          "type": "string_id",
+          "name": "global air material#the default value for what material type air is"
+        },
+        {
+          "type": "short_integer",
+          "name": "global water material type!"
+        },
+        {
+          "type": "short_integer",
+          "name": "global air material type!"
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effg"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "havok collision filter",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hcfd"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default item grounded friction",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "grfr"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "active camo",
+          "definition": "active_camo_globals_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "incident global properties",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "igpd"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player model customization globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "pmcg"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "loadout globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "lgtd"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "game achievements",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "achi"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "game performance thortles default",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "gptd"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "garbage collection",
+          "group_tag": "slap",
+          "definition": "garbage_collection_block"
+        },
+        {
+          "type": "block",
+          "name": "camera impulse",
+          "definition": "global_camera_impulse_block"
+        },
+        {
+          "type": "block",
+          "name": "runtime materials*!",
+          "definition": "runtime_materials_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "havok_cleanup_resources_block": {
+      "guid": "b8b558115a4dfcfb592286b47beb91cb",
+      "size": 16,
+      "size_string": "sizeof(s_game_globals_havok_cleanup_resources)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "object cleanup effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "sound_globals_block": {
+      "guid": "2886b7491f4a02c8a4e6599fc5b1b77a",
+      "size": 92,
+      "size_string": "sizeof(s_sound_globals_definition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "sound classes",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sncl"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound effects",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sfx+"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound mix",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snmx"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound combat dialogue constants",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "spk!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound propagation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sgp!"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "un-spatialized campaign sounds",
+          "definition": "campaign_unspatialized_sounds_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "campaign_unspatialized_sounds_block": {
+      "guid": "735840569c46065ecdc3cc865cb83a24",
+      "size": 16,
+      "size_string": "sizeof(s_tag_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "sound^",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "game_globals_damage_block": {
+      "guid": "9887605edc4f9658b562d0bc00d30273",
+      "size": 12,
+      "size_string": "sizeof(s_damage_globals_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "damage groups",
+          "definition": "damage_group_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "damage_group_block": {
+      "guid": "aa5d94349d4010310d33f3a404fd1b4b",
+      "size": 16,
+      "size_string": "sizeof(s_damage_group_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "block",
+          "name": "armor modifiers",
+          "definition": "armor_modifier_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "armor_modifier_block": {
+      "guid": "2b480d1dc045b10a80efb6868a83de3f",
+      "size": 8,
+      "size_string": "sizeof(s_armor_modifier_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "real",
+          "name": "damage multiplier"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "camera_block": {
+      "guid": "06fb44557644d0f357621fa5e234a66b",
+      "size": 216,
+      "size_string": "sizeof(s_game_globals_camera)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "default unit camera track",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "trak"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "SANDBOX",
+          "definition": null
+        },
+        {
+          "type": "struct",
+          "name": "pitch to vertical offset",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "CAMERA UNIVERSALS",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "field of view:degrees"
+        },
+        {
+          "type": "real",
+          "name": "yaw scale"
+        },
+        {
+          "type": "real",
+          "name": "pitch scale"
+        },
+        {
+          "type": "real",
+          "name": "forward scale"
+        },
+        {
+          "type": "real",
+          "name": "side scale"
+        },
+        {
+          "type": "real",
+          "name": "up scale"
+        },
+        {
+          "type": "explanation",
+          "name": "DEAD CAMERA",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "transition time:seconds#time it takes for the camera to move from the initial distance to the final distance"
+        },
+        {
+          "type": "real",
+          "name": "falling death transition time:seconds#time it takes for the camera to move to its final position during a falling death"
+        },
+        {
+          "type": "real",
+          "name": "initial distance:wu#on the first frame after death, this is how far out of the body the camera will be"
+        },
+        {
+          "type": "real",
+          "name": "final distance:wu#how far from the body the camera will settle"
+        },
+        {
+          "type": "real",
+          "name": "dead cam z offset:wu#how far above the body the camera focuses on"
+        },
+        {
+          "type": "real",
+          "name": "dead cam maximum elevation:radians#the highest angle the camera can raise to (prevents it from flipping over the vertical axis)"
+        },
+        {
+          "type": "real",
+          "name": "dead cam movement delay:seconds#delay in tracking the killer"
+        },
+        {
+          "type": "real",
+          "name": "time_to_auto_switch_to_orbiting:seconds#how long the death camera lasts before auto-switching to orbiting camera"
+        },
+        {
+          "type": "real",
+          "name": "ignore_stick_time:seconds#how long the death camera ignores stick inputs and keeps turning towards the killer (should be non-zero because user could have died while running or looking around)"
+        },
+        {
+          "type": "real",
+          "name": "ignore_button_time:seconds#how long the death camera ignores shoulder button inputs and keeps turning towards the killer"
+        },
+        {
+          "type": "real",
+          "name": "dead camera minimum falling velocity#minimum velocity to switch to fell to death behavior (when biped is not actually falling to death)"
+        },
+        {
+          "type": "explanation",
+          "name": "FLYING CAMERA",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "maximum boost speed#the scaling factor for the left stick when the left trigger is fully depressed"
+        },
+        {
+          "type": "real",
+          "name": "time to maximum_boost#seconds. while pegging boost, time to reach maximum speed"
+        },
+        {
+          "type": "short_enum",
+          "name": "boost function",
+          "definition": "global_transition_functions_enum"
+        },
+        {
+          "type": "pad",
+          "name": "hoist",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "zoomed field of view:degrees#field of view when zoomed"
+        },
+        {
+          "type": "real",
+          "name": "zoomed look speed#scaling factor for look speed when zoomed"
+        },
+        {
+          "type": "real",
+          "name": "bounding sphere radius:wu#radius of sphere for collision"
+        },
+        {
+          "type": "real",
+          "name": "flying cam movement delay:seconds#how quickly the camera responds to the user's input"
+        },
+        {
+          "type": "real",
+          "name": "zoom transition time:seconds#how long it takes to zoom in or out"
+        },
+        {
+          "type": "real",
+          "name": "vertical movement time to max speed"
+        },
+        {
+          "type": "short_enum",
+          "name": "vertical movement function",
+          "definition": "global_transition_functions_enum"
+        },
+        {
+          "type": "pad",
+          "name": "moist",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "survival switch time:seconds#how long it takes in survival mode before switching to flying camera"
+        },
+        {
+          "type": "explanation",
+          "name": "ORBITING CAMERA",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "minimum distance:wu"
+        },
+        {
+          "type": "real",
+          "name": "maximum distance:wu"
+        },
+        {
+          "type": "real",
+          "name": "orbit cam movement delay:seconds#how quickly the camera responds to the user's input"
+        },
+        {
+          "type": "real",
+          "name": "orbit cam z offset:wu#how far above the object's root node to position the camera's focus point"
+        },
+        {
+          "type": "real",
+          "name": "orbit cam minimum elevation:radians#lowest angle the camera can be moved to"
+        },
+        {
+          "type": "real",
+          "name": "orbit cam maximum elevation:radians#highest angle the camera can be moved to"
+        },
+        {
+          "type": "explanation",
+          "name": "SAVED FILMS",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "max playback speed#how fast the film plays when the trigger is fully depressed"
+        },
+        {
+          "type": "real",
+          "name": "fade out time:seconds#how long it takes for the screen to fade out when rewinding"
+        },
+        {
+          "type": "real",
+          "name": "fade in time:seconds#see above"
+        },
+        {
+          "type": "explanation",
+          "name": "IN GAME",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "enter vehicle transition time:seconds#how long it takes the camera to move from first to third person when entering a vehicle"
+        },
+        {
+          "type": "real",
+          "name": "exit vehicle transition time:seconds#see above"
+        },
+        {
+          "type": "explanation",
+          "name": "CAMERA OBSTRUCTION",
+          "definition": null
+        },
+        {
+          "type": "struct",
+          "name": "obstruction",
+          "definition": "camera_obstruction_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "scalar_function_named_struct": {
+      "guid": "8992cb721e48760251a36794187c6df5",
+      "size": 20,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 20,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "camera_obstruction_struct": {
+      "guid": "0f379d3a3b4b74572fae3c86cca8f293",
+      "size": 24,
+      "size_string": "sizeof(s_camera_obstruction_parameters)",
+      "fields": [
+        {
+          "type": "real_fraction",
+          "name": "cylinder fraction#controls how far from the focus point the outer raycasts start.  0 == cone, 1 == cylinder"
+        },
+        {
+          "type": "angle",
+          "name": "obstruction test angle:degrees#how wide of a cone to test"
+        },
+        {
+          "type": "real",
+          "name": "obstruction max inward accel:1.0/s/s#how quickly the camera moves inward when it anticipates a collision"
+        },
+        {
+          "type": "real",
+          "name": "obstruction max outward accel:1.0/s/s#how quickly the camera returns to a normal position when its anticipated distance is further than its current"
+        },
+        {
+          "type": "real",
+          "name": "obstruction max velocity:1.0/s#maximum speed the camera can move"
+        },
+        {
+          "type": "real",
+          "name": "obstruction return delay:s#when the camera wants to start moving back out, wait this long before doing so"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "controller_input_block": {
+      "guid": "c57960051c4d19bd824154b7add2a4d8",
+      "size": 8,
+      "size_string": "sizeof(s_game_globals_input_abstraction)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "axial dead zone"
+        },
+        {
+          "type": "real",
+          "name": "radial dead zone"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "player_control_block": {
+      "guid": "1474adaf964afe08f6bce494fceec239",
+      "size": 144,
+      "size_string": "sizeof(s_game_globals_player_control)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "move stick info",
+          "definition": "gamepad_stick_info_block"
+        },
+        {
+          "type": "block",
+          "name": "look stick info",
+          "definition": "gamepad_stick_info_block"
+        },
+        {
+          "type": "real_fraction",
+          "name": "magnetism friction#how much the crosshair slows over enemies"
+        },
+        {
+          "type": "real_fraction",
+          "name": "magnetism adhesion#how much the crosshair sticks to enemies"
+        },
+        {
+          "type": "real_fraction",
+          "name": "inconsequential target scale#scales magnetism level for inconsequential targets like infection forms"
+        },
+        {
+          "type": "explanation",
+          "name": "crosshair",
+          "definition": null
+        },
+        {
+          "type": "real_point_2d",
+          "name": "crosshair location#-1..1, 0 is middle of the screen"
+        },
+        {
+          "type": "explanation",
+          "name": "sprinting",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "pegged magnitude#how far the stick needs to be pressed before being considered pegged"
+        },
+        {
+          "type": "real",
+          "name": "pegged angular threshold#how far off straight up (in degrees) we consider pegged"
+        },
+        {
+          "type": "explanation",
+          "name": "fireteam",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "fireteam command mode duration:seconds#How long is command mode on after you initially attempt to issue an order"
+        },
+        {
+          "type": "explanation",
+          "name": "looking",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "look autoleveling scale#1 is fast, 0 is none, >1 will probably be really fast"
+        },
+        {
+          "type": "real",
+          "name": "gravity_scale"
+        },
+        {
+          "type": "real",
+          "name": "minimum autoleveling time#amount of time player needs to move and not look up or down for autoleveling to kick in:s"
+        },
+        {
+          "type": "angle",
+          "name": "minimum angle for vehicle flipping#0 means the vehicle's up vector is along the ground, 90 means the up vector is pointing straight up:degrees"
+        },
+        {
+          "type": "real",
+          "name": "minimum action hold time:seconds#time that player needs to press ACTION to register as a HOLD"
+        },
+        {
+          "type": "real",
+          "name": "pegged zoom suppression threshold#for spinny-shotgun goodness"
+        },
+        {
+          "type": "real",
+          "name": "auto unzoom threshold#defaults to 0.5, if you hold zoom down for this long we will auto-unzoom when you release:s"
+        },
+        {
+          "type": "real",
+          "name": "analog zoom descope cooldown#when using analog zoom, how long after being descoped until zooming back in if the button is held:s"
+        },
+        {
+          "type": "explanation",
+          "name": "double/triple jump",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "minimum vertical velocity:wu/s"
+        },
+        {
+          "type": "real",
+          "name": "cooldown time:seconds"
+        },
+        {
+          "type": "real_vector_2d",
+          "name": "double jump velocity:horizontal, vertical"
+        },
+        {
+          "type": "real_vector_2d",
+          "name": "triple jump velocity:aiming, vertical"
+        },
+        {
+          "type": "explanation",
+          "name": "stick throws",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "throw channel width#how close to an axis you have to be"
+        },
+        {
+          "type": "real",
+          "name": "throw peg threshold#how far from the center you have to be"
+        },
+        {
+          "type": "real",
+          "name": "throw centered min time:s#how long the stick must be centered to start a throw"
+        },
+        {
+          "type": "real",
+          "name": "throw drawing max time:s#how long you can take to become pegged at the start of a throw"
+        },
+        {
+          "type": "real",
+          "name": "throw drawn max time:s#how long you can stay pegged at the start of a throw"
+        },
+        {
+          "type": "real",
+          "name": "throw throwing max time:s#how long you can take to throw the stick to pegged on the other side"
+        },
+        {
+          "type": "real",
+          "name": "flick peg jump max time:s#max time you can be pegged and then press jump to activate"
+        },
+        {
+          "type": "real",
+          "name": "double tap interval time:s#to engage double-tap, user must press jump twice in this much time"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "gamepad_stick_info_block": {
+      "guid": "067441d35f4b7ef4157c3c95abbe64d3",
+      "size": 40,
+      "size_string": "sizeof(s_gamepad_stick_settings)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "input shape",
+          "definition": "input_mapping_shape_enum"
+        },
+        {
+          "type": "pad",
+          "name": "F",
+          "definition": 3
+        },
+        {
+          "type": "real_fraction",
+          "name": "peg threshold [0,1]#magnitude of analog input for pegged acceleration to kick in"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "pegged time#time for a pegged look to reach maximum effect"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "pegged scale#the maximum effect achieved over the duration of the pegged time."
+        },
+        {
+          "type": "angle",
+          "name": "peg max angular velocity:degrees per sec#the maximum turning speed during peg"
+        },
+        {
+          "type": "block",
+          "name": "input mapping function",
+          "definition": "input_mapping_function_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "input_mapping_function_block": {
+      "guid": "63bfeeaa5345a06a1ba3daa517373760",
+      "size": 20,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "game_engine_player_traits_block": {
+      "guid": "4efacdaefd47417581e799aa907f53f6",
+      "size": 60,
+      "size_string": "sizeof(s_game_engine_player_traits)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "shield traits",
+          "definition": "player_trait_shield_vitality_block"
+        },
+        {
+          "type": "block",
+          "name": "weapon traits",
+          "definition": "player_trait_weapons_block"
+        },
+        {
+          "type": "block",
+          "name": "movement traits",
+          "definition": "player_trait_movement_block"
+        },
+        {
+          "type": "block",
+          "name": "appearance traits",
+          "definition": "player_trait_appearance_block"
+        },
+        {
+          "type": "block",
+          "name": "sensor traits",
+          "definition": "player_trait_sensors_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "player_trait_shield_vitality_block": {
+      "guid": "869daac7314377d4391e79857c4dddb0",
+      "size": 12,
+      "size_string": "sizeof(s_player_trait_shield_vitality)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "damage resistance",
+          "definition": "player_trait_damage_resistance"
+        },
+        {
+          "type": "char_enum",
+          "name": "body multiplier",
+          "definition": "player_trait_shield_multiplier"
+        },
+        {
+          "type": "char_enum",
+          "name": "body recharge rate",
+          "definition": "player_trait_shield_recharge_rate"
+        },
+        {
+          "type": "char_enum",
+          "name": "shield multiplier",
+          "definition": "player_trait_shield_multiplier"
+        },
+        {
+          "type": "char_enum",
+          "name": "shield recharge rate",
+          "definition": "player_trait_shield_recharge_rate"
+        },
+        {
+          "type": "char_enum",
+          "name": "overshield recharge rate",
+          "definition": "player_trait_shield_recharge_rate"
+        },
+        {
+          "type": "char_enum",
+          "name": "headshot immunity",
+          "definition": "player_trait_boolean"
+        },
+        {
+          "type": "char_enum",
+          "name": "vampirism",
+          "definition": "player_trait_vampirism"
+        },
+        {
+          "type": "char_enum",
+          "name": "assassination immunity",
+          "definition": "player_trait_boolean"
+        },
+        {
+          "type": "pad",
+          "name": "elephant",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "player_trait_weapons_block": {
+      "guid": "f37b37ad774ca46c1cf4b9a28ce28190",
+      "size": 24,
+      "size_string": "sizeof(s_player_trait_weapons)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "damage modifier",
+          "definition": "player_trait_damage_modifier"
+        },
+        {
+          "type": "char_enum",
+          "name": "melee damage modifier",
+          "definition": "player_trait_damage_modifier"
+        },
+        {
+          "type": "char_enum",
+          "name": "recharging grenades",
+          "definition": "player_trait_boolean"
+        },
+        {
+          "type": "char_enum",
+          "name": "weapon pickup",
+          "definition": "player_trait_boolean"
+        },
+        {
+          "type": "char_enum",
+          "name": "initial grenade count",
+          "definition": "player_trait_grenade_count_setting"
+        },
+        {
+          "type": "char_enum",
+          "name": "infinite ammo",
+          "definition": "player_trait_infinite_ammo_setting"
+        },
+        {
+          "type": "char_enum",
+          "name": "equipment usage available",
+          "definition": "player_trait_equipment_usage_setting"
+        },
+        {
+          "type": "char_enum",
+          "name": "drop equipment on death",
+          "definition": "player_trait_boolean"
+        },
+        {
+          "type": "char_enum",
+          "name": "infinite equipment energy",
+          "definition": "player_trait_boolean"
+        },
+        {
+          "type": "pad",
+          "name": "SKJNKER",
+          "definition": 3
+        },
+        {
+          "type": "string_id",
+          "name": "initial primary weapon#name of an element from global starting weapons block. Other values:\r\n(empty) - unchanged\r\nunchanged - unchanged\r\ndefault - take from starting profiles in scenario\r\nnone - no weapon\r\nrandom - use random item from valid starting weapons"
+        },
+        {
+          "type": "string_id",
+          "name": "initial secondary weapon#see above"
+        },
+        {
+          "type": "string_id",
+          "name": "initial equipment#see above"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "player_trait_movement_block": {
+      "guid": "fa35ac74384702cae9c2ed9d4c601785",
+      "size": 8,
+      "size_string": "sizeof(s_player_trait_movement)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "speed multiplier",
+          "definition": "player_trait_speed"
+        },
+        {
+          "type": "char_enum",
+          "name": "gravity multiplier",
+          "definition": "player_trait_gravity"
+        },
+        {
+          "type": "char_enum",
+          "name": "vehicle usage",
+          "definition": "player_trait_movement_vehicle_usage"
+        },
+        {
+          "type": "char_enum",
+          "name": "double jump",
+          "definition": "player_trait_movement_double_jump"
+        },
+        {
+          "type": "long_integer",
+          "name": "jump multiplier#use -1 for 'unchanged.'  0 will make the player unable to jump. 100 is default."
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "player_trait_appearance_block": {
+      "guid": "141be9cc994292723e1742a4fd5f911a",
+      "size": 8,
+      "size_string": "sizeof(s_player_trait_appearance)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Appearance Traits",
+          "definition": "Traits that affect the player's appearance"
+        },
+        {
+          "type": "char_enum",
+          "name": "active camo setting",
+          "definition": "player_trait_appearance_active_camo_settings"
+        },
+        {
+          "type": "char_enum",
+          "name": "waypoint setting",
+          "definition": "player_trait_appearance_waypoint_settings"
+        },
+        {
+          "type": "char_enum",
+          "name": "gamertag setting",
+          "definition": "player_trait_appearance_waypoint_settings"
+        },
+        {
+          "type": "char_enum",
+          "name": "aura setting",
+          "definition": "player_trait_appearance_aura_settings"
+        },
+        {
+          "type": "char_enum",
+          "name": "forced change color setting",
+          "definition": "player_trait_appearance_forced_change_color_settings"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "player_trait_sensors_block": {
+      "guid": "4c99b7499b4cde38a4b134918b93e5aa",
+      "size": 4,
+      "size_string": "sizeof(s_player_trait_sensors)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Motion Sensor Traits",
+          "definition": "Traits that affect the HUD motion sensor behavior"
+        },
+        {
+          "type": "char_enum",
+          "name": "motion tracker settings",
+          "definition": "player_trait_sensors_motion_tracker_settings"
+        },
+        {
+          "type": "char_enum",
+          "name": "motion tracker range",
+          "definition": "player_trait_sensors_motion_tracker_range"
+        },
+        {
+          "type": "char_enum",
+          "name": "directional damage settings",
+          "definition": "player_trait_boolean"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "difficulty_block": {
+      "guid": "8c69849cb540cfa3696073b46b01d1ab",
+      "size": 416,
+      "size_string": "sizeof(s_game_globals_difficulty_information)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "health",
+          "definition": "scale values for enemy health and damage settings"
+        },
+        {
+          "type": "real",
+          "name": "easy enemy damage#enemy damage multiplier on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal enemy damage#enemy damage multiplier on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard enemy damage#enemy damage multiplier on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. enemy damage#enemy damage multiplier on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy enemy vitality#enemy maximum body vitality scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal enemy vitality#enemy maximum body vitality scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard enemy vitality#enemy maximum body vitality scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. enemy vitality#enemy maximum body vitality scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy enemy shield#enemy maximum shield vitality scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal enemy shield#enemy maximum shield vitality scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard enemy shield#enemy maximum shield vitality scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. enemy shield#enemy maximum shield vitality scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy enemy recharge#enemy shield recharge scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal enemy recharge#enemy shield recharge scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard enemy recharge#enemy shield recharge scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. enemy recharge#enemy shield recharge scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy friend damage#friend damage multiplier on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal friend damage#friend damage multiplier on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard friend damage#friend damage multiplier on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. friend damage#friend damage multiplier on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy friend vitality#friend maximum body vitality scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal friend vitality#friend maximum body vitality scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard friend vitality#friend maximum body vitality scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. friend vitality#friend maximum body vitality scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy friend shield#friend maximum shield vitality scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal friend shield#friend maximum shield vitality scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard friend shield#friend maximum shield vitality scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. friend shield#friend maximum shield vitality scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy friend recharge#friend shield recharge scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal friend recharge#friend shield recharge scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard friend recharge#friend shield recharge scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. friend recharge#friend shield recharge scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy infection forms#toughness of infection forms (may be negative) on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal infection forms#toughness of infection forms (may be negative) on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard infection forms#toughness of infection forms (may be negative) on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. infection forms#toughness of infection forms (may be negative) on impossible difficulty"
+        },
+        {
+          "type": "explanation",
+          "name": "ranged fire",
+          "definition": "difficulty-affecting values for enemy ranged combat settings"
+        },
+        {
+          "type": "real",
+          "name": "easy rate of fire#enemy rate of fire scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal rate of fire#enemy rate of fire scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard rate of fire#enemy rate of fire scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. rate of fire#enemy rate of fire scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy projectile error#enemy projectile error scale, as a fraction of their base firing error. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal projectile error#enemy projectile error scale, as a fraction of their base firing error. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard projectile error#enemy projectile error scale, as a fraction of their base firing error. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. projectile error#enemy projectile error scale, as a fraction of their base firing error. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy burst error#enemy burst error scale; reduces intra-burst shot distance. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal burst error#enemy burst error scale; reduces intra-burst shot distance. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard burst error#enemy burst error scale; reduces intra-burst shot distance. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. burst error#enemy burst error scale; reduces intra-burst shot distance. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy new target delay#enemy new-target delay scale factor. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal new target delay#enemy new-target delay scale factor. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard new target delay#enemy new-target delay scale factor. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. new target delay#enemy new-target delay scale factor. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy burst separation#delay time between bursts scale factor for enemies. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal burst separation#delay time between bursts scale factor for enemies. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard burst separation#delay time between bursts scale factor for enemies. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. burst separation#delay time between bursts scale factor for enemies. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy target tracking#additional target tracking fraction for enemies. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal target tracking#additional target tracking fraction for enemies. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard target tracking#additional target tracking fraction for enemies. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. target tracking#additional target tracking fraction for enemies. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy target leading#additional target leading fraction for enemies. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal target leading#additional target leading fraction for enemies. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard target leading#additional target leading fraction for enemies. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. target leading#additional target leading fraction for enemies. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy overcharge chance#overcharge chance scale factor for enemies. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal overcharge chance#overcharge chance scale factor for enemies. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard overcharge chance#overcharge chance scale factor for enemies. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. overcharge chance#overcharge chance scale factor for enemies. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy melee delay base#delay period added to all melee attacks, even when berserk. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal melee delay base#delay period added to all melee attacks, even when berserk. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard melee delay base#delay period added to all melee attacks, even when berserk. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. melee delay base#delay period added to all melee attacks, even when berserk. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy melee delay scale#multiplier for all existing non-berserk melee delay times. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal melee delay scale#multiplier for all existing non-berserk melee delay times. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard melee delay scale#multiplier for all existing non-berserk melee delay times. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. melee delay scale#multiplier for all existing non-berserk melee delay times. on impossible difficulty"
+        },
+        {
+          "type": "explanation",
+          "name": "grenades",
+          "definition": "difficulty-affecting values for enemy grenade behavior"
+        },
+        {
+          "type": "real",
+          "name": "easy grenade chance scale#scale factor affecting the desicions to throw a grenade. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal grenade chance scale#scale factor affecting the desicions to throw a grenade. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard grenade chance scale#scale factor affecting the desicions to throw a grenade. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. grenade chance scale#scale factor affecting the desicions to throw a grenade. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on impossible difficulty"
+        },
+        {
+          "type": "explanation",
+          "name": "vehicles",
+          "definition": "difficulty-affecting values for vehicle driving/combat"
+        },
+        {
+          "type": "real",
+          "name": "easy player vehicle ram chance#Chance of deciding to ram the player in a vehicle on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal player vehicle ram chance#Chance of deciding to ram the player in a vehicle on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard player vehicle ram chance#Chance of deciding to ram the player in a vehicle on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. player vehicle ram chance#Chance of deciding to ram the player in a vehicle on impossible difficulty"
+        },
+        {
+          "type": "explanation",
+          "name": "allegiance",
+          "definition": "difficulty-affecting values for ai allegiance"
+        },
+        {
+          "type": "real",
+          "name": "easy incident threshold#a friendly team will become non-friendly after this many traitorous incidents (whole numbers only) on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal incident threshold#a friendly team will become non-friendly after this many traitorous incidents (whole numbers only) on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard incident threshold#a friendly team will become non-friendly after this many traitorous incidents (whole numbers only) on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. incident threshold#a friendly team will become non-friendly after this many traitorous incidents (whole numbers only) on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy incident decay timer:s#a friendly team will forget about a traitorous incident after this long on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal incident decay timer:s#a friendly team will forget about a traitorous incident after this long on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard incident decay timer:s#a friendly team will forget about a traitorous incident after this long on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. incident decay timer:s#a friendly team will forget about a traitorous incident after this long on impossible difficulty"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "coop_difficulty_block_struct": {
+      "guid": "0544c2777c4f61cabdd3929145809188",
+      "size": 220,
+      "size_string": "sizeof(s_game_globals_coop_difficulty_information)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "vitality",
+          "definition": "scale values for enemy health and shield settings"
+        },
+        {
+          "type": "real",
+          "name": "two-player shield recharge delay#multiplier on enemy shield recharge delay with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player shield recharge delay#multiplier on enemy shield recharge delay with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player shield recharge delay#multiplier on enemy shield recharge delay with six coop players or more"
+        },
+        {
+          "type": "real",
+          "name": "two-player shield recharge timer#multiplier on enemy shield recharge timer with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player shield recharge timer#multiplier on enemy shield recharge timer with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player shield recharge timer#multiplier on enemy shield recharge timer with six coop players or more"
+        },
+        {
+          "type": "explanation",
+          "name": "movement",
+          "definition": "scale values for enemy movement properties"
+        },
+        {
+          "type": "real",
+          "name": "two-player grenade dive chance#multiplier on enemy grenade dive chance with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player grenade dive chance#multiplier on enemy grenade dive chance with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player grenade dive chance#multiplier on enemy grenade dive chance with six coop players or more"
+        },
+        {
+          "type": "real",
+          "name": "two-player armor lock chance#multiplier on enemy armor lock chance with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player armor lock chance#multiplier on enemy armor lock chance with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player armor lock chance#multiplier on enemy armor lock chance with six coop players or more"
+        },
+        {
+          "type": "explanation",
+          "name": "evasion",
+          "definition": "scale values for enemy evasion settings"
+        },
+        {
+          "type": "real",
+          "name": "two-player evasion danger threshold#multiplier on enemy evasion danger threshold with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player evasion danger threshold#multiplier on enemy evasion danger threshold with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player evasion danger threshold#multiplier on enemy evasion danger threshold with six coop players or more"
+        },
+        {
+          "type": "real",
+          "name": "two-player evasion delay timer#multiplier on enemy evasion delay timer with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player evasion delay timer#multiplier on enemy evasion delay timer with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player evasion delay timer#multiplier on enemy evasion delay timer with six coop players or more"
+        },
+        {
+          "type": "real",
+          "name": "two-player evasion chance#multiplier on enemy evasion chance with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player evasion chance#multiplier on enemy evasion chance with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player evasion chance#multiplier on enemy evasion chance with six coop players or more"
+        },
+        {
+          "type": "explanation",
+          "name": "shooting",
+          "definition": "scale values for enemy shooting settings"
+        },
+        {
+          "type": "real",
+          "name": "two-player burst duration#multiplier on the enemy shooting burst duration with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player burst duration#multiplier on the enemy shooting burst duration with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player burst duration#multiplier on the enemy shooting burst duration with six coop players or more"
+        },
+        {
+          "type": "real",
+          "name": "two-player burst separation#multipler on the enemy shooting burst separation with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player burst separation#multipler on the enemy shooting burst separation with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player burst separation#multipler on the enemy shooting burst separation with six coop players or more"
+        },
+        {
+          "type": "real",
+          "name": "two-player damage modifier#multipler on the enemy shooting damage multiplier with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player damage modifier#multipler on the enemy shooting damage multiplier with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player damage modifier#multipler on the enemy shooting damage multiplier with six coop players or more"
+        },
+        {
+          "type": "explanation",
+          "name": "projectile",
+          "definition": "scale values for enemy projectile settings"
+        },
+        {
+          "type": "real",
+          "name": "two-player projectile speed#multiplier on the speed of projectiles fired by enemies with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player projectile speed#multiplier on the speed of projectiles fired by enemies with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player projectile speed#multiplier on the speed of projectiles fired by enemies with six coop players or more"
+        },
+        {
+          "type": "explanation",
+          "name": "ai placement",
+          "definition": "scale values for enemy placement"
+        },
+        {
+          "type": "real",
+          "name": "two-player major upgrade#multiplier on the major upgrade chance (configured in character placement properties) with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player major upgrade#multiplier on the major upgrade chance (configured in character placement properties) with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "six-player major upgrade#multiplier on the major upgrade chance (configured in character placement properties) with six coop players or more"
+        },
+        {
+          "type": "explanation",
+          "name": "Major Upgrades",
+          "definition": "Characters' major upgrades are determined by a combination of factors:\na. Whether a character has a major upgrade option set on them.\nb. The character's 'character major upgrade allowances setting'.\nc. The character's 'placement properties' block.d. The squad cell's upgrade frequency setting.e. Current game difficulty.\nf. Current player count.\ng. The global ai placement major upgrade multipler (above).\nh. The global repeat major upgrade scalar (below).\n\n0. For setup we will clear the upgrade and randomize flags, set the random chance to 0, and set the current repeat major upgrade scalar to 1.\n1. First we calculate the coop difficulty multiplier by indexing into the 'major upgrade' field above based on player count and difficulty setting.  For player counts not directly represented there we average the two values bracketing the desired count at that difficulty, or just take the last value for that difficulty if the player count is greater than our listed options.\n2. Next we get the base upgrade chance from character's placement properties for the current difficulty and squad cell upgrade frequency\n  Special case 1:  If cell upgrade frequency is 'all' and the placement properties for 'many' is set to zero then the base chance will be set to zero and we will set the randomize flag, otherwise the base chance will be set to 1, the randomize flag will be cleared, and the upgrade flag will be set.\n  Special case 2:  If cell upgrade frequency is 'none' the base upgrade chance is unchanged (0) and the randomize and upgrade flags will be cleared.\n  Special case 3:  If a character has no placement properties for some reason, both the randomize and upgrade flags will be cleared and the upgrade chance will remain unchanged (0).\n3. The upgrade chance for a character is then calculated as the base upgrade chance multiplied by the coop difficulty multiplier.\n4. If the Thunderstorm skull is enabled then we will set the upgrade flag and clear the randomizing flag.\n5. We will then check to see if the character has a major upgrade allowance setting, and if so get that table of flags and check the one for the current player count and game difficulty setting.  If the flag is clear, we will clear the randomize and upgrade flags to stop any chance of an upgrade.\n6. At this point if this is an initial upgrade we have our final values to use.  If, however, we have already upgraded the character once during this process we have an additional step:\n  6.1. If the upgrade flag is set we clear it and set the random upgrade flag.\n7. If the random upgrade flag is set, we will now randomize using our upgrade chance multiplied by our current repeat major upgrade scalar to decide if we should upgrade and set our upgrade flag based on this roll.\n8. If the upgrade flag is set we will set our planned character to spawn as the major upgrade from our current character, and then update our current repeat major upgrade scalar by multiplying in the value from the table below."
+        },
+        {
+          "type": "explanation",
+          "name": "repeat major upgrade scalars",
+          "definition": "scale values for characters' major upgrade chances beyond the first."
+        },
+        {
+          "type": "real",
+          "name": "single-player easy#easy difficulty repeat major upgrade scalars for single player"
+        },
+        {
+          "type": "real",
+          "name": "two-player easy#easy difficulty repeat major upgrade scalars with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "three-player easy#easy difficulty repeat major upgrade scalars with three coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player easy#easy difficulty repeat major upgrade scalars with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "single-player normal#normal difficulty repeat major upgrade scalars for single player"
+        },
+        {
+          "type": "real",
+          "name": "two-player normal#normal difficulty repeat major upgrade scalars with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "three-player normal#normal difficulty repeat major upgrade scalars with three coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player normal#normal difficulty repeat major upgrade scalars with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "single-player heroic#heroic difficulty repeat major upgrade scalars for single player"
+        },
+        {
+          "type": "real",
+          "name": "two-player heroic#heroic difficulty repeat major upgrade scalars with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "three-player heroic#heroic difficulty repeat major upgrade scalars with three coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player heroic#heroic difficulty repeat major upgrade scalars with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "single-player legendary#legendary difficulty repeat major upgrade scalars for single player"
+        },
+        {
+          "type": "real",
+          "name": "two-player legendary#legendary difficulty repeat major upgrade scalars with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "three-player legendary#legendary difficulty repeat major upgrade scalars with three coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player legendary#legendary difficulty repeat major upgrade scalars with four coop players"
+        },
+        {
+          "type": "block",
+          "name": "character major upgrade allowances",
+          "definition": "character_major_upgrade_allowance_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "character_major_upgrade_allowance_block_struct": {
+      "guid": "c9c025d8fe430acc5434cda4f6ac26aa",
+      "size": 8,
+      "size_string": "sizeof(struct s_character_major_upgrade_allowance)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_flags",
+          "name": "major upgrade allowance",
+          "definition": "major_upgrade_allowance_flags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "factions_block_struct": {
+      "guid": "99b6ec75c541d1a6c47807bd3350b0ae",
+      "size": 4,
+      "size_string": "sizeof(s_game_globals_faction)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "grenades_block": {
+      "guid": "10d45ffb074bb743f5a4cd94563af419",
+      "size": 76,
+      "size_string": "sizeof(s_game_globals_grenade)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "short_integer",
+          "name": "maximum count#campaign, survival, etc."
+        },
+        {
+          "type": "short_integer",
+          "name": "maximum count (multiplayer)#falls back to \"maximum count\" if 0"
+        },
+        {
+          "type": "real",
+          "name": "drop percentage"
+        },
+        {
+          "type": "tag_reference",
+          "name": "throwing effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "equipment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "projectile",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "proj"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "switch sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??d?",
+              "???\u0001",
+              "???\b",
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "soft_ceiling_globals_block": {
+      "guid": "5679e564a74b733677cfb683edea4fda",
+      "size": 28,
+      "size_string": "sizeof(s_game_globals_soft_ceiling)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "biped spring constant"
+        },
+        {
+          "type": "real",
+          "name": "biped normal damping"
+        },
+        {
+          "type": "real",
+          "name": "biped tangent damping"
+        },
+        {
+          "type": "real",
+          "name": "biped min tangent damp velocity"
+        },
+        {
+          "type": "real",
+          "name": "vehicle spring constant"
+        },
+        {
+          "type": "real",
+          "name": "vehicle normal damping"
+        },
+        {
+          "type": "real",
+          "name": "vehicle tangent damping"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "interface_tag_references": {
+      "guid": "42bdfceafb4d2627c124269c3c0d8b92",
+      "size": 80,
+      "size_string": "sizeof(s_game_globals_interface_tag_references)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "dialog color table",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "colo"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "mainmenu ui globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wgtz"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "singleplayer ui globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wgtz"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "multiplayer ui globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wgtz"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "chud globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "chgd"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "player_information_block": {
+      "guid": "4547af457d47244d2c7005a2e7ebcae5",
+      "size": 232,
+      "size_string": "sizeof(s_game_globals_player_information)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "player_information_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "real",
+          "name": "walking speed:world units per second"
+        },
+        {
+          "type": "real",
+          "name": "run forward:world units per second"
+        },
+        {
+          "type": "real",
+          "name": "run backward:world units per second"
+        },
+        {
+          "type": "real",
+          "name": "run sideways:world units per second"
+        },
+        {
+          "type": "real",
+          "name": "run acceleration:world units per second squared"
+        },
+        {
+          "type": "real",
+          "name": "sneak forward:world units per second"
+        },
+        {
+          "type": "real",
+          "name": "sneak backward:world units per second"
+        },
+        {
+          "type": "real",
+          "name": "sneak sideways:world units per second"
+        },
+        {
+          "type": "real",
+          "name": "sneak acceleration:world units per second squared"
+        },
+        {
+          "type": "real",
+          "name": "disable crouch move threshold:[0,1] or > 1 to always allow crouching#throttle must be below this threshold for the player to crouch"
+        },
+        {
+          "type": "real",
+          "name": "airborne acceleration:world units per second squared"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "grenade origin"
+        },
+        {
+          "type": "struct",
+          "name": "grenade aiming#determines the distance along the aiming vector to orient the grenade based on the camera pitch",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "real_bounds",
+          "name": "first person idle time:seconds"
+        },
+        {
+          "type": "real_fraction",
+          "name": "first person skip fraction:[0,1]"
+        },
+        {
+          "type": "tag_reference",
+          "name": "coop countdown sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "coop respawn sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "coop respawn effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "hologram death effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "binoculars zoom count"
+        },
+        {
+          "type": "real_bounds",
+          "name": "binoculars zoom range"
+        },
+        {
+          "type": "real",
+          "name": "fire team objective range"
+        },
+        {
+          "type": "real",
+          "name": "fire team sandbox range"
+        },
+        {
+          "type": "real",
+          "name": "fire team cone angle: in degrees"
+        },
+        {
+          "type": "explanation",
+          "name": "sprinting",
+          "definition": null
+        },
+        {
+          "type": "real",
+          "name": "seconds to start#how long you must be pegged before you start sprinting"
+        },
+        {
+          "type": "real",
+          "name": "seconds to full speed#how long you must sprint before you reach top speed"
+        },
+        {
+          "type": "real",
+          "name": "decay rate#how fast being unpegged decays the timer (seconds per second)"
+        },
+        {
+          "type": "real",
+          "name": "full speed multiplier#how much faster we actually go when at full sprint"
+        },
+        {
+          "type": "real",
+          "name": "sprint turn multiplier#how much faster to turn when sprinting"
+        },
+        {
+          "type": "angle",
+          "name": "sprint max look yaw velocity:degress per second"
+        },
+        {
+          "type": "angle",
+          "name": "sprint max look pitch velocity:degress per second"
+        },
+        {
+          "type": "real",
+          "name": "minimum player velocity to be considered in a sprinting state:world units per second"
+        },
+        {
+          "type": "real",
+          "name": "sprint window length:seconds#period of time over which we record the biped's look angle for deciding if we should drop him out of sprint"
+        },
+        {
+          "type": "string_id",
+          "name": "sprint animation stance"
+        },
+        {
+          "type": "explanation",
+          "name": "melee",
+          "definition": null
+        },
+        {
+          "type": "angle",
+          "name": "maximum melee yaw deviation:degrees#maximum yaw is allowed to deviate from the initial aiming vector"
+        },
+        {
+          "type": "angle",
+          "name": "maximum melee pitch up deviation:degrees#maximum pitch is allowed to deviate up from the initial aiming vector"
+        },
+        {
+          "type": "angle",
+          "name": "maximum melee pitch down deviation:degrees#maximum pitch is allowed to deviate down from the initial aiming vector"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "player_representation_block": {
+      "guid": "3ae2354fd143cbfa26d7c690b796c449",
+      "size": 144,
+      "size_string": "sizeof(s_game_globals_player_representation)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "player_representation_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 3
+        },
+        {
+          "type": "tag_reference",
+          "name": "chud reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "chdt"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "first person hands",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hlmt"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "first person body",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hlmt"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "third person unit",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unit"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "third person variant"
+        },
+        {
+          "type": "tag_reference",
+          "name": "intrinsic primary equipment{intrinsic equipment}",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "intrinsic secondary equipment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "binoculars zoom in sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "binoculars zoom out sounds",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "faction#the faction players using this representation are aligned with (for the foreign skull)"
+        },
+        {
+          "type": "long_block_index",
+          "name": "player information",
+          "definition": "player_information_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "damage_globals_block": {
+      "guid": "2ae17c2b8441fdc911c9b5a50a5d516d",
+      "size": 200,
+      "size_string": "sizeof(s_game_globals_damage)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "damage_global_flags"
+        },
+        {
+          "type": "tag_reference",
+          "name": "falling damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "jumping damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "soft landing damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "hard landing damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "hs damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "terminal velocity:wu/s#you die if you fall faster than this (non-multiplayer only)"
+        },
+        {
+          "type": "tag_reference",
+          "name": "terminal velocity damage{distance damage}",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default damage response{damage response}#fall back if none is specified in damage effect tags",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "friendly fire damage response#anytime your teammate shoots you",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "player shield spillover#the minimum amount of shield vitality needed to prevent spillover from damage types that do not spillover."
+        },
+        {
+          "type": "custom",
+          "name": "damage decay",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "damage decay props*!",
+          "definition": "damage_decay_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "AI damage decay",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "ai damage decay props*!",
+          "definition": "damage_decay_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "shield impact decay",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "shield impact decay props",
+          "definition": "damage_decay_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "damage_decay_struct": {
+      "guid": "43231e1c3549642e351ccea20539142b",
+      "size": 20,
+      "size_string": "sizeof(s_damage_decay)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "current damage decay delay:seconds#current damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)"
+        },
+        {
+          "type": "real",
+          "name": "current damage decay time:seconds#amount of time it would take for 100% current damage to decay to 0"
+        },
+        {
+          "type": "real",
+          "name": "current damage decay rate:damage/second#amount of damage that decays from our current damage every second"
+        },
+        {
+          "type": "real",
+          "name": "recent damage decay delay:seconds#recent damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)"
+        },
+        {
+          "type": "real",
+          "name": "recent damage decay time:seconds#amount of time it would take for 100% recent damage to decay to 0"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "materials_block": {
+      "guid": "53915f4da347b9006f40afbc5c066fc5",
+      "size": 376,
+      "size_string": "sizeof(s_global_material_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "string_id",
+          "name": "parent name"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime material index!"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "global_material_flags_definition"
+        },
+        {
+          "type": "string_id",
+          "name": "general armor"
+        },
+        {
+          "type": "string_id",
+          "name": "specific armor"
+        },
+        {
+          "type": "struct",
+          "name": "wet proxies",
+          "definition": "wet_proxies_struct"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime dry base material index!"
+        },
+        {
+          "type": "pad",
+          "name": "RMBP1",
+          "definition": 2
+        },
+        {
+          "type": "struct",
+          "name": "physics properties",
+          "definition": "material_physics_properties_struct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "breakable surface",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bsdt"
+            ]
+          }
+        },
+        {
+          "type": "struct",
+          "name": "sweeteners",
+          "definition": "materials_sweeteners_struct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "material effects",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "foot"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "underwater proxies",
+          "definition": "underwater_proxies_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "wet_proxies_struct": {
+      "guid": "556346e58043af333db0f08334cc20fc",
+      "size": 8,
+      "size_string": "sizeof(s_global_material_wet_proxy)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "when rained on, we report this material",
+          "definition": null
+        },
+        {
+          "type": "string_id",
+          "name": "wet material"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime proxy material index*!"
+        },
+        {
+          "type": "pad",
+          "name": "wpb1",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "material_physics_properties_struct": {
+      "guid": "d8d6b88d50413d8361387da497dd3f5c",
+      "size": 72,
+      "size_string": "sizeof(s_material_physics_properties)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "flags!"
+        },
+        {
+          "type": "real",
+          "name": "friction"
+        },
+        {
+          "type": "real_fraction",
+          "name": "restitution"
+        },
+        {
+          "type": "real",
+          "name": "density:kg/m^3"
+        },
+        {
+          "type": "explanation",
+          "name": "Drag",
+          "definition": null
+        },
+        {
+          "type": "tag_reference",
+          "name": "water physics drag properties",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpdp"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "drag overrides",
+          "definition": "object_type_drag_properties_block"
+        },
+        {
+          "type": "explanation",
+          "name": "Floatation",
+          "definition": "objects of this flotation category have this density relative to being in this material (1.0f==neutral)"
+        },
+        {
+          "type": "pad",
+          "name": "default",
+          "definition": 4
+        },
+        {
+          "type": "real",
+          "name": "super floater"
+        },
+        {
+          "type": "real",
+          "name": "floater"
+        },
+        {
+          "type": "real",
+          "name": "neutral"
+        },
+        {
+          "type": "real",
+          "name": "sinker"
+        },
+        {
+          "type": "real",
+          "name": "super sinker"
+        },
+        {
+          "type": "pad",
+          "name": "none",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "object_type_drag_properties_block": {
+      "guid": "b02bb21206499eafbae6ccb065e3c4b6",
+      "size": 16,
+      "size_string": "sizeof(s_global_material_object_drag_properties)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "drag properties",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpdp"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "materials_sweeteners_struct": {
+      "guid": "b9ba749f884266c34ffc2eb84b4c9259",
+      "size": 228,
+      "size_string": "sizeof(s_global_material_sweeteners_definition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "sound sweetener (small)",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound sweetener (medium)",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound sweetener (large)",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound sweetener rolling",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound sweetener grinding",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound sweetener (melee small)",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound sweetener (melee)#this is a medium sweetener and was the old default",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound sweetener (melee large)",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "??f?",
+              "???\u0001",
+              "????",
+              "???\u0001",
+              "???\u0002",
+              "sgp!",
+              "???\u0001",
+              "??d?",
+              "???\u0001",
+              "??d?",
+              "???\u0001"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect sweetener (small)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect sweetener (medium)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect sweetener (large)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect sweetener rolling",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect sweetener grinding",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect sweetener (melee)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "sweetener inheritance flags",
+          "definition": "when a sweetener inheritance flag is set the sound\\effect is not inherited from the parent material.  If you leave the sweetener blank and set the flag than no effect\\sound will play"
+        },
+        {
+          "type": "long_flags",
+          "name": "sweetener inheritance flags",
+          "definition": "materials_sweeteners_inheritance_flags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "underwater_proxies_block": {
+      "guid": "53935fada3c7b9a06f40a0ba53266fc1",
+      "size": 12,
+      "size_string": "sizeof(s_global_material_underwater_proxy)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "when this material is encounted under a material of this type ...",
+          "definition": null
+        },
+        {
+          "type": "string_id",
+          "name": "underwater material"
+        },
+        {
+          "type": "explanation",
+          "name": "... we report it as this material",
+          "definition": null
+        },
+        {
+          "type": "string_id",
+          "name": "proxy material"
+        },
+        {
+          "type": "short_integer",
+          "name": "underwater material type*!"
+        },
+        {
+          "type": "short_integer",
+          "name": "proxy material type*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "player_color_index_block": {
+      "guid": "56976c0a6648e2f0e9f308a76219c4c9",
+      "size": 12,
+      "size_string": "sizeof(real_rgb_color)",
+      "fields": [
+        {
+          "type": "real_rgb_color",
+          "name": "color"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "named_rgb_color_block": {
+      "guid": "d8a9e9869c496ba148e6a3a919bee38f",
+      "size": 16,
+      "size_string": "sizeof(s_named_rgb_color)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "color"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "cinematics_globals_block": {
+      "guid": "5b2a2f3bb04fdf528bff8fa6d769d030",
+      "size": 76,
+      "size_string": "sizeof(s_cinematics_globals_definition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "cinematic anchor reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "scen"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "cinematic film aperture"
+        },
+        {
+          "type": "real",
+          "name": "cinematic skip ui up time"
+        },
+        {
+          "type": "fraction_bounds",
+          "name": "subtitle rect width#percentage towards the center - 0=default, 0.5=center of the screen"
+        },
+        {
+          "type": "fraction_bounds",
+          "name": "subtitle rect height#0=default, 0.5=center of the screen"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "default subtitle color"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "default subtitle shadow color"
+        },
+        {
+          "type": "block",
+          "name": "cinematic characters",
+          "definition": "cinematic_characters_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "cinematic_characters_block": {
+      "guid": "743d6e4a8d4707c55fff2b8677a11f1f",
+      "size": 28,
+      "size_string": "sizeof(s_cinematic_character)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "character name^"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "subtitle color"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "shadow color"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "campaign_metagame_globals_block": {
+      "guid": "38cbd684ba47719f008847805c6d0200",
+      "size": 56,
+      "size_string": "sizeof(s_campaign_metagame_globals)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "styles",
+          "definition": "campaign_metagame_style_type_block"
+        },
+        {
+          "type": "block",
+          "name": "difficulty",
+          "definition": "campaign_metagame_difficulty_scale_block"
+        },
+        {
+          "type": "block",
+          "name": "skulls{Primary Skulls}",
+          "definition": "campaign_metagame_skull_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "friendly_death_point_count"
+        },
+        {
+          "type": "long_integer",
+          "name": "player_death_point_count"
+        },
+        {
+          "type": "long_integer",
+          "name": "player_betrayal_point_count"
+        },
+        {
+          "type": "real",
+          "name": "transient score time{multi kill window}:s#how long does transient score stay onscreen"
+        },
+        {
+          "type": "real",
+          "name": "EMP kill window#time after taking a guys shields down with emp damage you have to get the emp kill bonus (seconds)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "campaign_metagame_style_type_block": {
+      "guid": "3012fa5d53463d8a75d8939e4248d3af",
+      "size": 8,
+      "size_string": "sizeof(s_campaign_metagame_style_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "incident name^"
+        },
+        {
+          "type": "real",
+          "name": "style multiplier"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "campaign_metagame_difficulty_scale_block": {
+      "guid": "8ffa1d4caa4e1e201b858bad95e2677d",
+      "size": 4,
+      "size_string": "sizeof(s_campaign_metagame_difficulty)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "difficulty multiplier"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "campaign_metagame_skull_block": {
+      "guid": "d930158f934cccc5139373a6aebac8d5",
+      "size": 4,
+      "size_string": "sizeof(s_campaign_metagame_skull_data)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "difficulty multiplier"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "active_camo_globals_block": {
+      "guid": "5eff34402d4cd839fba46c91bc83790c",
+      "size": 84,
+      "size_string": "sizeof(s_active_camo_globals)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "biped speed reference:wu/s#for bipeds, the speed at which you are on the far right of the 'speed to max camo' graph"
+        },
+        {
+          "type": "real",
+          "name": "vehicle speed reference:wu/s#for vehicles, the speed at which you are on the far right of the 'speed to max camo' graph"
+        },
+        {
+          "type": "real_fraction",
+          "name": "camo value for game name#minimum active camo percentage at which a player's game name will start becoming visible"
+        },
+        {
+          "type": "struct",
+          "name": "camo value to distortion",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "camo value to transparency#maps active-camo percentage to alpha for THIRD PERSON rendering",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "camo value to fp transparency#maps active-camo percentage to alpha for FIRST PERSON rendering",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "block",
+          "name": "camo levels",
+          "definition": "active_camo_level_definition_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "active_camo_level_definition_block": {
+      "guid": "aade83e2ff467bd169f6028077e386f1",
+      "size": 36,
+      "size_string": "sizeof(s_active_camo_level_definition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "grenade throw penalty:0..1#reduces camo value by this much when throwing a grenade"
+        },
+        {
+          "type": "real",
+          "name": "melee penalty:0..1#reduces camo by this much when meleeing"
+        },
+        {
+          "type": "real",
+          "name": "minimum dinged value#when taking damage or doing other actions that reduce camo, we will never drop below this value"
+        },
+        {
+          "type": "real",
+          "name": "interpolation time:s#time it takes to interpolate from 0.0 to 1.0"
+        },
+        {
+          "type": "struct",
+          "name": "speed to maximum camo",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "garbage_collection_block": {
+      "guid": "e047b14947483c86aa4813be7e2dc96b",
+      "size": 24,
+      "size_string": "sizeof(s_garbage_collection_globals)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Garbage Times",
+          "definition": "time before the game considers that following entities as garbage"
+        },
+        {
+          "type": "real",
+          "name": "Dropped item:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Dropped item by player:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Dropped item in multiplayer:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Broken constraints:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Dead unit:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Dead player:seconds"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "global_camera_impulse_block": {
+      "guid": "4593f3576545820bb0c443a3479aadfd",
+      "size": 20,
+      "size_string": "sizeof(s_camera_impulse_globals)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "runtime_materials_block": {
+      "guid": "fbd6b983b845f8e0963f5a94ee8af3d4",
+      "size": 376,
+      "size_string": "sizeof(s_global_material_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "string_id",
+          "name": "parent name"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime material index!"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "global_material_flags_definition"
+        },
+        {
+          "type": "string_id",
+          "name": "general armor"
+        },
+        {
+          "type": "string_id",
+          "name": "specific armor"
+        },
+        {
+          "type": "struct",
+          "name": "wet proxies",
+          "definition": "wet_proxies_struct"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime dry base material index!"
+        },
+        {
+          "type": "pad",
+          "name": "RMBP1",
+          "definition": 2
+        },
+        {
+          "type": "struct",
+          "name": "physics properties",
+          "definition": "material_physics_properties_struct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "breakable surface",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bsdt"
+            ]
+          }
+        },
+        {
+          "type": "struct",
+          "name": "sweeteners",
+          "definition": "materials_sweeteners_struct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "material effects",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "foot"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "underwater proxies",
+          "definition": "underwater_proxies_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "global_transition_functions_enum": {
+      "options": [
+        "linear",
+        "early",
+        "very early",
+        "late",
+        "very late",
+        "cosine",
+        "one",
+        "zero"
+      ]
+    },
+    "input_mapping_shape_enum": {
+      "options": [
+        "none",
+        "unit_circle",
+        "unit_square"
+      ]
+    },
+    "player_trait_damage_resistance": {
+      "options": [
+        "unchanged",
+        "10 percent",
+        "50 percent",
+        "90 percent",
+        "100 percent",
+        "110 percent",
+        "150 percent",
+        "200 percent",
+        "300 percent",
+        "500 percent",
+        "1000 percent",
+        "2000 percent",
+        "invulnerable"
+      ]
+    },
+    "player_trait_shield_multiplier": {
+      "options": [
+        "unchanged",
+        "0x",
+        "1x (normal)",
+        "1.5x",
+        "2x",
+        "3x",
+        "4x"
+      ]
+    },
+    "player_trait_shield_recharge_rate": {
+      "options": [
+        "unchanged",
+        "-25 percent",
+        "-10 percent",
+        "-5 percent",
+        "0 percent",
+        "10 percent",
+        "25 percent",
+        "50 percent",
+        "75 percent",
+        "90 percent",
+        "100 percent",
+        "110 percent",
+        "125 percent",
+        "150 percent",
+        "200 percent"
+      ]
+    },
+    "player_trait_boolean": {
+      "options": [
+        "unchanged",
+        "off",
+        "on"
+      ]
+    },
+    "player_trait_vampirism": {
+      "options": [
+        "unchanged",
+        "0 percent",
+        "10 percent",
+        "25 percent",
+        "50 percent",
+        "100 percent"
+      ]
+    },
+    "player_trait_damage_modifier": {
+      "options": [
+        "unchanged",
+        "0 percent",
+        "25 percent",
+        "50 percent",
+        "75 percent",
+        "90 percent",
+        "100 percent",
+        "110 percent",
+        "125 percent",
+        "150 percent",
+        "200 percent",
+        "300 percent",
+        "fatality"
+      ]
+    },
+    "player_trait_grenade_count_setting": {
+      "options": [
+        "unchanged",
+        "map default",
+        "0",
+        "1 frag",
+        "2 frag",
+        "3 frag",
+        "4 frag",
+        "1 plasma",
+        "2 plasma",
+        "3 plasma",
+        "4 plasma",
+        "1 each",
+        "2 each",
+        "3 each",
+        "4 each"
+      ]
+    },
+    "player_trait_infinite_ammo_setting": {
+      "options": [
+        "unchanged",
+        "disabled",
+        "enabled",
+        "bottomless clip"
+      ]
+    },
+    "player_trait_equipment_usage_setting": {
+      "options": [
+        "unchanged",
+        "off",
+        "not with objectives",
+        "on"
+      ]
+    },
+    "player_trait_speed": {
+      "options": [
+        "unchanged",
+        "0 percent",
+        "25 percent",
+        "50 percent",
+        "75 percent",
+        "90 percent",
+        "100 percent",
+        "110 percent",
+        "120 percent",
+        "130 percent",
+        "140 percent",
+        "150 percent",
+        "160 percent",
+        "170 percent",
+        "180 percent",
+        "190 percent",
+        "200 percent",
+        "300 percent"
+      ]
+    },
+    "player_trait_gravity": {
+      "options": [
+        "unchanged",
+        "50 percent",
+        "75 percent",
+        "100 percent",
+        "110 percent",
+        "120 percent",
+        "130 percent",
+        "140 percent",
+        "150 percent",
+        "160 percent",
+        "170 percent",
+        "180 percent",
+        "190 percent",
+        "200 percent"
+      ]
+    },
+    "player_trait_movement_vehicle_usage": {
+      "options": [
+        "unchanged",
+        "none",
+        "passenger only",
+        "driver only",
+        "gunner only",
+        "not passenger",
+        "not driver",
+        "not gunner",
+        "full"
+      ]
+    },
+    "player_trait_movement_double_jump": {
+      "options": [
+        "unchanged",
+        "off",
+        "on",
+        "on plus lunge"
+      ]
+    },
+    "player_trait_appearance_active_camo_settings": {
+      "options": [
+        "unchanged",
+        "off",
+        "poor",
+        "good",
+        "excellent",
+        "invisible"
+      ]
+    },
+    "player_trait_appearance_waypoint_settings": {
+      "options": [
+        "unchanged",
+        "off",
+        "allies",
+        "all"
+      ]
+    },
+    "player_trait_appearance_aura_settings": {
+      "options": [
+        "unchanged",
+        "off",
+        "team color",
+        "black",
+        "white"
+      ]
+    },
+    "player_trait_appearance_forced_change_color_settings": {
+      "options": [
+        "unchanged",
+        "off",
+        "mp team red",
+        "mp team blue",
+        "mp team green",
+        "mp team yellow",
+        "mp team purple",
+        "mp team orange",
+        "mp team brown",
+        "mp team grey",
+        "extra1",
+        "extra2",
+        "extra3",
+        "extra4"
+      ]
+    },
+    "player_trait_sensors_motion_tracker_settings": {
+      "options": [
+        "unchanged",
+        "off",
+        "moving friendly bipeds moving neutral vehicles",
+        "moving bipeds moving vehicles",
+        "all bipeds moving vehicles"
+      ]
+    },
+    "player_trait_sensors_motion_tracker_range": {
+      "options": [
+        "unchanged",
+        "10 meters",
+        "15 meters",
+        "25 meters",
+        "50 meters",
+        "75 meters",
+        "100 meters",
+        "150 meters"
+      ]
+    },
+    "major_upgrade_allowance_flags": {
+      "options": [
+        "easy 1 player",
+        "easy 2 players",
+        "easy 3 players",
+        "easy 4 players",
+        "normal 1 player",
+        "normal 2 players",
+        "normal 3 players",
+        "normal 4 players",
+        "heroic 1 player",
+        "heroic 2 players",
+        "heroic 3 players",
+        "heroic 4 players",
+        "legendary 1 player",
+        "legendary 2 players",
+        "legendary 3 players",
+        "legendary 4 players"
+      ]
+    },
+    "player_information_flags": {
+      "options": [
+        "disable crouch while soft pinging",
+        "disable crouch while hard pinging"
+      ]
+    },
+    "player_representation_flags": {
+      "options": [
+        "can use health packs"
+      ]
+    },
+    "damage_global_flags": {
+      "options": [
+        "disable fancy assassinations#disallows players from initiating assassination sync actions, insta-kill melees are unaffected"
+      ]
+    },
+    "global_material_flags_definition": {
+      "options": [
+        "flammable",
+        "biomass",
+        "rad xfer interior",
+        "used directly!",
+        "used by children!"
+      ]
+    },
+    "materials_sweeteners_inheritance_flags": {
+      "options": [
+        "sound_small",
+        "sound_medium",
+        "sound_large",
+        "sound_rolling",
+        "sound_grinding",
+        "sound_melee_small",
+        "sound_melee",
+        "sound_melee_large",
+        "effect_small",
+        "effect_medium",
+        "effect_large",
+        "effect_rolling",
+        "effect_grinding",
+        "effect_melee"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  }
+}

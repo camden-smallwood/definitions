@@ -1,0 +1,243 @@
+{
+  "name": "scenario_zone_sets_audibility",
+  "tag": "saud",
+  "version": 1,
+  "flags": 0,
+  "block": "scenario_zone_sets_audibility_block",
+  "blocks": {
+    "scenario_zone_sets_audibility_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "scenario_zone_sets_audibility_struct_definition"
+    },
+    "game_audibility_block": {
+      "max_count": 64,
+      "max_count_string": "k_maximum_scenario_zone_set_count",
+      "struct": "game_audibility_block"
+    },
+    "door_encoded_pas_block": {
+      "max_count": 8192,
+      "max_count_string": "k_maximum_audibility_door_count*2*((((k_maximum_rooms_per_game)+(k_int32_bits-1))>>k_int32_bits_bits))",
+      "struct": "door_encoded_pas_block"
+    },
+    "room_door_portal_encoded_pas_block": {
+      "max_count": 4096,
+      "max_count_string": "k_maximum_rooms_per_game*((((k_maximum_audibility_door_count)+(k_int32_bits-1))>>k_int32_bits_bits))",
+      "struct": "room_door_portal_encoded_pas_block"
+    },
+    "ai_deafening_encoded_pas_block": {
+      "max_count": 16368,
+      "max_count_string": "(((((k_maximum_rooms_per_game*(k_maximum_rooms_per_game-1))/2)+(k_int32_bits-1))>>k_int32_bits_bits))",
+      "struct": "ai_deafening_encoded_pas_block"
+    },
+    "encoded_room_distances_block": {
+      "max_count": 523776,
+      "max_count_string": "(k_maximum_rooms_per_game*(k_maximum_rooms_per_game-1))/2",
+      "struct": "encoded_room_distances_block"
+    },
+    "game_portal_to_door_occluder_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "game_portal_to_door_occluder_block"
+    },
+    "bsp_cluster_to_room_bounds": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO",
+      "struct": "bsp_cluster_to_room_bounds"
+    },
+    "bsp_cluster_to_room_indices": {
+      "max_count": 1024,
+      "max_count_string": "k_maximum_audibility_room_count",
+      "struct": "bsp_cluster_to_room_indices"
+    }
+  },
+  "structs": {
+    "scenario_zone_sets_audibility_struct_definition": {
+      "guid": "6d0b9a5365410702f21f7da94aa71428",
+      "size": 12,
+      "size_string": "sizeof(struct s_scenario_zone_sets_audibility)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "zone set audibility*!",
+          "definition": "game_audibility_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "game_audibility_block": {
+      "guid": "a6a6fd733e482a4eb1c308a3652924ad",
+      "size": 100,
+      "size_string": "sizeof(s_game_audibility)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "door portal count"
+        },
+        {
+          "type": "long_integer",
+          "name": "room count"
+        },
+        {
+          "type": "real_bounds",
+          "name": "room distance bounds"
+        },
+        {
+          "type": "block",
+          "name": "encoded door pas",
+          "definition": "door_encoded_pas_block"
+        },
+        {
+          "type": "block",
+          "name": "room door portal encoded pas",
+          "definition": "room_door_portal_encoded_pas_block"
+        },
+        {
+          "type": "block",
+          "name": "ai deafening pas",
+          "definition": "ai_deafening_encoded_pas_block"
+        },
+        {
+          "type": "block",
+          "name": "room distances",
+          "definition": "encoded_room_distances_block"
+        },
+        {
+          "type": "block",
+          "name": "game portal to door occluder mapping",
+          "definition": "game_portal_to_door_occluder_block"
+        },
+        {
+          "type": "block",
+          "name": "bsp cluster to room bounds",
+          "definition": "bsp_cluster_to_room_bounds"
+        },
+        {
+          "type": "block",
+          "name": "bsp cluster to room indices",
+          "definition": "bsp_cluster_to_room_indices"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "door_encoded_pas_block": {
+      "guid": "0340e11f44425b35681d619c91d15c02",
+      "size": 4,
+      "size_string": "sizeof(dword)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "encoded data"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "room_door_portal_encoded_pas_block": {
+      "guid": "0701c479fe4f4fc3bae0b0a9217a6240",
+      "size": 4,
+      "size_string": "sizeof(dword)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "encoded data"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "ai_deafening_encoded_pas_block": {
+      "guid": "1aaf2982f94a480792f527b957e328e9",
+      "size": 4,
+      "size_string": "sizeof(dword)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "encoded data"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "encoded_room_distances_block": {
+      "guid": "5de99e071d44a071e4d847999bee6568",
+      "size": 1,
+      "size_string": "sizeof(byte)",
+      "fields": [
+        {
+          "type": "char_integer",
+          "name": "encoded data"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "game_portal_to_door_occluder_block": {
+      "guid": "29e869d945454e57b4a8ea9ab9885a75",
+      "size": 8,
+      "size_string": "sizeof(s_game_audibility_bsp_game_portal_mapping)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "first door occluder index"
+        },
+        {
+          "type": "long_integer",
+          "name": "door occluder count"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "bsp_cluster_to_room_bounds": {
+      "guid": "59e0ddab354c8ebf939ab7b3d61eb97a",
+      "size": 8,
+      "size_string": "sizeof(s_game_audibility_bsp_mapping)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "first room index"
+        },
+        {
+          "type": "long_integer",
+          "name": "room index count"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "bsp_cluster_to_room_indices": {
+      "guid": "1ccba9061b45eade6c29e089b64e2f36",
+      "size": 2,
+      "size_string": "sizeof(short)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "room index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "name": "encounter_remix",
+  "tag": "remx",
+  "version": 1,
+  "flags": 7,
+  "block": "encounter_remix_block",
+  "blocks": {
+    "encounter_remix_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "encounter_remix_block_struct"
+    },
+    "encounter_remix_squad_specifications_block": {
+      "max_count": 256,
+      "max_count_string": "k_maximum_squad_specifications_per_encounter_remix",
+      "struct": "encounter_remix_squad_specifications_block_struct"
+    }
+  },
+  "structs": {
+    "encounter_remix_block_struct": {
+      "guid": "7f54d630ac4e0c24c800d3bc693e377a",
+      "size": 12,
+      "size_string": "sizeof(s_encounter_remix_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "squad specifications",
+          "definition": "encounter_remix_squad_specifications_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "encounter_remix_squad_specifications_block_struct": {
+      "guid": "0185a08ca640a48212003b86e7ec5534",
+      "size": 32,
+      "size_string": "sizeof(s_encounter_remix_squad_specification_definition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "base specification",
+          "definition": "squad_specification_struct"
+        },
+        {
+          "type": "real",
+          "name": "random weight#arbitrary weight used in random selection relative to all other squad specifications"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "squad_specification_struct": {
+      "guid": "e7beace16047dfac0000f983722433a6",
+      "size": 28,
+      "size_string": "sizeof(s_squad_specification_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "squad template name^"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime squad template index!~"
+        },
+        {
+          "type": "struct",
+          "name": "spawn conditions",
+          "definition": "ai_spawn_conditions_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "Placement Filtering",
+          "definition": "Arbitrary description of what kind of character(s) the squad contains which determines where it may be placed. If the squad contains multiple cells (say infantry and a vehicle), this should refer to the most constrained one (the vehicle)."
+        },
+        {
+          "type": "char_enum",
+          "name": "placement filter",
+          "definition": "global_squad_placement_filter_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "campaign team#used to match this squad specification to a placed squad depending on the configured team matching rule",
+          "definition": "global_campaign_team_enum"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    },
+    "ai_spawn_conditions_struct": {
+      "guid": "6af65bf915447646112fc5b6cf15deef",
+      "size": 16,
+      "size_string": "sizeof(s_ai_spawn_conditions)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "spawn_condition_flags"
+        },
+        {
+          "type": "byte_flags",
+          "name": "difficulty flags",
+          "definition": "global_campaign_difficulty_flags"
+        },
+        {
+          "type": "pad",
+          "name": "post-difficulty-flags-padding",
+          "definition": 2
+        },
+        {
+          "type": "short_bounds",
+          "name": "player count range#the player counts for which we will consider this"
+        },
+        {
+          "type": "short_bounds",
+          "name": "survival round range{round range}#the rounds for which we will consider this"
+        },
+        {
+          "type": "short_bounds",
+          "name": "survival set range{set range}#the sets for which we will consider this"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  },
+  "enums_flags": {
+    "spawn_condition_flags": {
+      "options": [
+        "unused"
+      ]
+    },
+    "global_campaign_difficulty_flags": {
+      "options": [
+        "easy",
+        "normal",
+        "heroic",
+        "legendary"
+      ]
+    },
+    "global_squad_placement_filter_enum": {
+      "options": [
+        "none",
+        "light infantry",
+        "heavy infantry",
+        "boss infantry",
+        "light vehicle",
+        "heavy vehicle",
+        "flying infantry",
+        "flying vehicle"
+      ]
+    },
+    "global_campaign_team_enum": {
+      "options": [
+        "default",
+        "player",
+        "human",
+        "covenant",
+        "brute",
+        "mule",
+        "spare",
+        "covenant_player",
+        "flood",
+        "sentinel",
+        "heretic",
+        "prophet",
+        "guilty",
+        "berserk_hostile_to_all",
+        "unused14",
+        "unused15"
+      ]
+    }
+  }
+}

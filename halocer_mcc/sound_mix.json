@@ -1,0 +1,32 @@
+{
+  "name": "sound_mix",
+  "tag": "snmx",
+  "version": 1,
+  "flags": 2,
+  "block": "sound_mix_block",
+  "blocks": {
+    "sound_mix_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_mix_block_struct"
+    }
+  },
+  "structs": {
+    "sound_mix_block_struct": {
+      "guid": "f1ff0ce8f04826a41c9672b0de79f374",
+      "size": 4,
+      "size_string": "sizeof(s_sound_mix_configuration_definition)",
+      "fields": [
+        {
+          "type": "pad",
+          "name": "unused",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ]
+    }
+  }
+}

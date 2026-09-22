@@ -2,43 +2,49 @@
  "name": "scenario_equipment_resource",
  "tag": "*qip",
  "version": 1,
- "flags": 0,
+ "flags": 56,
+ "parent_tag": null,
  "block": "scenario_equipment_resource_block",
  "blocks": {
-  "scenario_object_names_block_2": {
+  "scenario_object_names_block": {
    "max_count": 640,
-   "max_count_string": "640",
-   "struct": "scenario_object_names_block"
+   "struct": "scenario_object_names_block_struct",
+   "max_count_string": "MAXIMUM_OBJECT_NAMES_PER_SCENARIO"
   },
-  "dont_use_me_scenario_environment_object_block_2": {
-   "max_count": 4096,
-   "max_count_string": "4096",
-   "struct": "dont_use_me_scenario_environment_object_block"
+  "scenario_sky_reference_block": {
+   "max_count": 32,
+   "struct": "scenario_sky_reference_block_struct",
+   "max_count_string": "MAXIMUM_SKIES_PER_SCENARIO"
   },
-  "scenario_structure_bsp_reference_block_2": {
+  "scenario_structure_bsp_reference_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "scenario_structure_bsp_reference_block"
+   "struct": "scenario_structure_bsp_reference_block_struct",
+   "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO"
   },
-  "scenario_equipment_palette_block_2": {
+  "dont_use_me_scenario_environment_object_block": {
+   "max_count": 4096,
+   "struct": "dont_use_me_scenario_environment_object_block_struct",
+   "max_count_string": "MAXIMUM_ENVIRONMENT_OBJECTS_PER_SCENARIO"
+  },
+  "scenario_equipment_palette_block": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "scenario_equipment_palette_block"
+   "struct": "scenario_equipment_palette_block_struct",
+   "max_count_string": "MAXIMUM_SCENARIO_OBJECT_PALETTE_ENTRIES_PER_BLOCK"
   },
-  "scenario_equipment_block_2": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "scenario_equipment_block"
-  },
-  "g_scenario_editor_folder_block_2": {
+  "g_scenario_editor_folder_block": {
    "max_count": 32767,
-   "max_count_string": "32767",
-   "struct": "g_scenario_editor_folder_block"
+   "struct": "g_scenario_editor_folder_block_struct",
+   "max_count_string": "k_maximum_scenario_editor_folders"
+  },
+  "scenario_equipment_block": {
+   "max_count": 256,
+   "struct": "scenario_equipment_block_struct",
+   "max_count_string": "MAXIMUM_EQUIPMENT_DATUMS_PER_SCENARIO"
   },
   "scenario_equipment_resource_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "scenario_equipment_resource_block_struct"
+   "struct": "scenario_equipment_resource_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -49,27 +55,27 @@
     {
      "type": "block",
      "name": "names",
-     "definition": "scenario_object_names_block_2"
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "block",
      "name": "going away",
-     "definition": "dont_use_me_scenario_environment_object_block_2"
+     "definition": "dont_use_me_scenario_environment_object_block"
     },
     {
      "type": "block",
      "name": "structure references",
-     "definition": "scenario_structure_bsp_reference_block_2"
+     "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "block",
      "name": "equipment palette",
-     "definition": "scenario_equipment_palette_block_2"
+     "definition": "scenario_equipment_palette_block"
     },
     {
      "type": "block",
      "name": "equipments",
-     "definition": "scenario_equipment_block_2"
+     "definition": "scenario_equipment_block"
     },
     {
      "type": "long_integer",
@@ -78,7 +84,7 @@
     {
      "type": "block",
      "name": "editor folders",
-     "definition": "g_scenario_editor_folder_block_2"
+     "definition": "g_scenario_editor_folder_block"
     },
     {
      "type": "terminator",
@@ -86,7 +92,7 @@
     }
    ]
   },
-  "scenario_object_names_block": {
+  "scenario_object_names_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
@@ -95,11 +101,11 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": null
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": null
     },
     {
@@ -108,7 +114,7 @@
     }
    ]
   },
-  "dont_use_me_scenario_environment_object_block": {
+  "dont_use_me_scenario_environment_object_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
@@ -117,8 +123,9 @@
      "name": "SCENARIO_ENVIRONMENT_OBJECT_EDITOR_FLAGS_ID"
     },
     {
-     "type": "short_integer",
-     "name": "bsp"
+     "type": "short_block_index",
+     "name": "bsp",
+     "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "short_integer",
@@ -130,7 +137,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(unsigned long)",
      "definition": 4
     },
     {
@@ -143,7 +150,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*11",
      "definition": 44
     },
     {
@@ -152,13 +159,13 @@
     }
    ]
   },
-  "scenario_structure_bsp_reference_block__v0": {
+  "scenario_structure_bsp_reference_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -171,13 +178,13 @@
     }
    ]
   },
-  "scenario_structure_bsp_reference_block": {
+  "scenario_structure_bsp_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -190,7 +197,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -199,7 +206,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -212,26 +219,27 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "default sky"
+     "type": "short_block_index",
+     "name": "default sky",
+     "definition": "scenario_sky_reference_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -240,7 +248,21 @@
     }
    ]
   },
-  "scenario_equipment_palette_block": {
+  "scenario_sky_reference_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "sky"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "scenario_equipment_palette_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
@@ -250,7 +272,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -259,22 +281,24 @@
     }
    ]
   },
-  "scenario_equipment_block__v0": {
+  "scenario_equipment_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_equipment_palette_block"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "word_flags",
      "name": "not placed",
-     "definition": "not_placed_flags"
+     "definition": "not placed"
     },
     {
      "type": "short_integer",
@@ -290,12 +314,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
-     "type": "long_integer",
-     "name": "environment object reference"
+     "type": "long_block_index",
+     "name": "environment object reference",
+     "definition": "dont_use_me_scenario_environment_object_block"
     },
     {
      "type": "terminator",
@@ -303,7 +328,7 @@
     }
    ]
   },
-  "scenario_equipment_block__v1": {
+  "scenario_equipment_block_struct__v1": {
    "guid": "00000000000000000000000000000000",
    "size": 56,
    "fields": [
@@ -312,26 +337,28 @@
      "name": "FILTER_ON_NEXT_FIELD_ID,-1"
     },
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_equipment_palette_block"
     },
     {
      "type": "custom",
      "name": "FILTER_ON_NEXT_FIELD_ID,-2"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "struct",
      "name": "object data",
-     "definition": "scenario_object_datum_struct"
+     "definition": "scenario_object_datum_struct_2"
     },
     {
      "type": "struct",
      "name": "equipment data",
-     "definition": "scenario_equipment_datum_struct"
+     "definition": "scenario_equipment_datum_struct_2"
     },
     {
      "type": "terminator",
@@ -350,7 +377,7 @@
     {
      "type": "long_flags",
      "name": "placement flags",
-     "definition": "not_placed_flags"
+     "definition": "not placed"
     },
     {
      "type": "real_point_3d",
@@ -367,30 +394,32 @@
     {
      "type": "word_flags",
      "name": null,
-     "definition": "unnamed_flags"
+     "definition": "enum_0x100fdec"
     },
     {
-     "type": "short_integer",
-     "name": "manual bsp flags"
+     "type": "word_block_flags",
+     "name": "manual bsp flags",
+     "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "struct",
      "name": "object id",
-     "definition": "scenario_object_id_struct"
+     "definition": "scenario_object_id_struct_2"
     },
     {
      "type": "char_enum",
      "name": "bsp policy",
-     "definition": "bsp_policy_enum"
+     "definition": "bsp policy"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(char)",
      "definition": 1
     },
     {
-     "type": "short_integer",
-     "name": null
+     "type": "short_block_index",
+     "name": null,
+     "definition": "g_scenario_editor_folder_block"
     },
     {
      "type": "terminator",
@@ -399,7 +428,7 @@
    ],
    "tag": "sobj"
   },
-  "scenario_object_id_struct": {
+  "scenario_object_id_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -408,18 +437,19 @@
      "name": "unique id"
     },
     {
-     "type": "short_integer",
-     "name": "origin bsp index"
+     "type": "short_block_index",
+     "name": "origin bsp index",
+     "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "char_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "char_enum",
      "name": "source",
-     "definition": "source_enum"
+     "definition": "source"
     },
     {
      "type": "terminator",
@@ -428,125 +458,14 @@
    ],
    "tag": "obj#"
   },
-  "scenario_object_datum_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 48,
-   "fields": [
-    {
-     "type": "custom",
-     "name": "SCENARIO_OBJECT_EDIT_ID"
-    },
-    {
-     "type": "long_flags",
-     "name": "placement flags",
-     "definition": "not_placed_flags"
-    },
-    {
-     "type": "real_point_3d",
-     "name": "position"
-    },
-    {
-     "type": "real_euler_angles_3d",
-     "name": "rotation"
-    },
-    {
-     "type": "real",
-     "name": "scale"
-    },
-    {
-     "type": "word_flags",
-     "name": null,
-     "definition": "unnamed_flags"
-    },
-    {
-     "type": "short_integer",
-     "name": "manual bsp flags"
-    },
-    {
-     "type": "struct",
-     "name": "object id",
-     "definition": "scenario_object_id_struct"
-    },
-    {
-     "type": "char_enum",
-     "name": "bsp policy",
-     "definition": "bsp_policy_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 1
-    },
-    {
-     "type": "short_integer",
-     "name": null
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "sobj"
-  },
-  "scenario_equipment_datum_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 4,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "equipment flags",
-     "definition": "equipment_flags_flags"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "seqt"
-  },
-  "scenario_equipment_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 56,
-   "fields": [
-    {
-     "type": "custom",
-     "name": "FILTER_ON_NEXT_FIELD_ID,-1"
-    },
-    {
-     "type": "short_integer",
-     "name": "type"
-    },
-    {
-     "type": "custom",
-     "name": "FILTER_ON_NEXT_FIELD_ID,-2"
-    },
-    {
-     "type": "short_integer",
-     "name": "name"
-    },
-    {
-     "type": "struct",
-     "name": "object data",
-     "definition": "scenario_object_datum_struct"
-    },
-    {
-     "type": "struct",
-     "name": "equipment data",
-     "definition": "scenario_equipment_datum_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "g_scenario_editor_folder_block": {
+  "g_scenario_editor_folder_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 260,
    "fields": [
     {
-     "type": "long_integer",
-     "name": "parent folder"
+     "type": "long_block_index",
+     "name": "parent folder",
+     "definition": "g_scenario_editor_folder_block"
     },
     {
      "type": "long_string",
@@ -557,16 +476,131 @@
      "name": null
     }
    ]
+  },
+  "scenario_object_datum_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 48,
+   "fields": [
+    {
+     "type": "custom",
+     "name": "SCENARIO_OBJECT_EDIT_ID"
+    },
+    {
+     "type": "long_flags",
+     "name": "placement flags",
+     "definition": "not placed"
+    },
+    {
+     "type": "real_point_3d",
+     "name": "position"
+    },
+    {
+     "type": "real_euler_angles_3d",
+     "name": "rotation"
+    },
+    {
+     "type": "real",
+     "name": "scale"
+    },
+    {
+     "type": "word_flags",
+     "name": null,
+     "definition": "enum_0x100fdec"
+    },
+    {
+     "type": "word_block_flags",
+     "name": "manual bsp flags",
+     "definition": "scenario_structure_bsp_reference_block"
+    },
+    {
+     "type": "struct",
+     "name": "object id",
+     "definition": "scenario_object_id_struct_2"
+    },
+    {
+     "type": "char_enum",
+     "name": "bsp policy",
+     "definition": "bsp policy"
+    },
+    {
+     "type": "pad",
+     "name": "1*sizeof(char)",
+     "definition": 1
+    },
+    {
+     "type": "short_block_index",
+     "name": null,
+     "definition": "g_scenario_editor_folder_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "sobj"
+  },
+  "scenario_equipment_datum_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 4,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "equipment flags",
+     "definition": "equipment flags"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "seqt"
+  },
+  "scenario_equipment_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 56,
+   "fields": [
+    {
+     "type": "custom",
+     "name": "FILTER_ON_NEXT_FIELD_ID,-1"
+    },
+    {
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_equipment_palette_block"
+    },
+    {
+     "type": "custom",
+     "name": "FILTER_ON_NEXT_FIELD_ID,-2"
+    },
+    {
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
+    },
+    {
+     "type": "struct",
+     "name": "object data",
+     "definition": "scenario_object_datum_struct_2"
+    },
+    {
+     "type": "struct",
+     "name": "equipment data",
+     "definition": "scenario_equipment_datum_struct_2"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "default sky enabled"
    ]
   },
-  "not_placed_flags": {
+  "not placed": {
    "options": [
     "not automatically",
     "unused",
@@ -579,12 +613,12 @@
     "create at rest"
    ]
   },
-  "unnamed_flags": {
+  "enum_0x100fdec": {
    "options": [
     "mirrored"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "biped",
     "vehicle",
@@ -601,7 +635,7 @@
     "creature"
    ]
   },
-  "source_enum": {
+  "source": {
    "options": [
     "structure",
     "editor",
@@ -609,14 +643,14 @@
     "legacy"
    ]
   },
-  "bsp_policy_enum": {
+  "bsp policy": {
    "options": [
     "default",
     "always placed",
     "manual bsp placement"
    ]
   },
-  "equipment_flags_flags": {
+  "equipment flags": {
    "options": [
     "initially at rest (doesn't fall)",
     "obsolete",
@@ -624,22 +658,19 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "scenario_structure_bsp_reference_block": {
-   "0": "scenario_structure_bsp_reference_block__v0",
-   "1": "scenario_structure_bsp_reference_block"
+  "scenario_structure_bsp_reference_block_struct": {
+   "0": "scenario_structure_bsp_reference_block_struct__v0",
+   "1": "scenario_structure_bsp_reference_block_struct"
   },
-  "scenario_object_datum_struct": {
+  "scenario_object_datum_struct_2": {
    "0": "scenario_object_datum_struct__v0",
-   "1": "scenario_object_datum_struct"
+   "1": "scenario_object_datum_struct_2"
   },
-  "scenario_equipment_block": {
-   "0": "scenario_equipment_block__v0",
-   "1": "scenario_equipment_block__v1",
-   "2": "scenario_equipment_block"
+  "scenario_equipment_block_struct": {
+   "0": "scenario_equipment_block_struct__v0",
+   "1": "scenario_equipment_block_struct__v1",
+   "2": "scenario_equipment_block_struct"
   }
  }
 }

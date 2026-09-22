@@ -2,13 +2,14 @@
  "name": "wind",
  "tag": "wind",
  "version": 1,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "wind_block",
  "blocks": {
   "wind_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "wind_block_struct"
+   "struct": "wind_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -38,7 +39,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "9*sizeof(long)",
      "definition": 36
     },
     {
@@ -47,11 +48,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

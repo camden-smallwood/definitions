@@ -2,33 +2,34 @@
  "name": "liquid",
  "tag": "tdtl",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "liquid_block",
  "blocks": {
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "liquid_core_block_2": {
+  "liquid_core_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "liquid_core_block"
+   "struct": "liquid_core_block_struct",
+   "max_count_string": "k_maximum_cores_per_liquid_arc"
   },
-  "liquid_arc_block_2": {
+  "liquid_arc_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "liquid_arc_block"
+   "struct": "liquid_arc_block_struct",
+   "max_count_string": "k_maximum_arcs_per_liquid_definition"
   },
   "liquid_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "liquid_block_struct"
+   "struct": "liquid_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -38,13 +39,13 @@
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "string_id",
@@ -52,7 +53,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "14*sizeof(long)",
      "definition": 56
     },
     {
@@ -65,13 +66,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
      "type": "block",
      "name": "arcs",
-     "definition": "liquid_arc_block_2"
+     "definition": "liquid_arc_block"
     },
     {
      "type": "terminator",
@@ -79,19 +80,19 @@
     }
    ]
   },
-  "liquid_arc_block": {
+  "liquid_arc_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 276,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_enum",
      "name": "sprite count",
-     "definition": "sprite_count_enum"
+     "definition": "sprite count"
     },
     {
      "type": "real",
@@ -103,7 +104,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -116,7 +117,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -129,18 +130,18 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
      "type": "struct",
      "name": "horizontal range",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "struct",
      "name": "vertical range",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "real_fraction",
@@ -149,11 +150,11 @@
     {
      "type": "struct",
      "name": "roughness",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "16*sizeof(long)",
      "definition": 64
     },
     {
@@ -194,33 +195,33 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
      "type": "word_flags",
      "name": "octave flags",
-     "definition": "octave_flags_flags"
+     "definition": "octave flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "cores",
-     "definition": "liquid_core_block_2"
+     "definition": "liquid_core_block"
     },
     {
      "type": "struct",
      "name": "range-scale",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "struct",
      "name": "brightness-scale",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "terminator",
@@ -228,7 +229,7 @@
     }
    ]
   },
-  "scalar_function_struct": {
+  "scalar_function_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -239,7 +240,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -263,7 +264,7 @@
     {
      "type": "byte_flags",
      "name": "Flags",
-     "definition": "flags_flags_2"
+     "definition": "Flags"
     },
     {
      "type": "char_integer",
@@ -292,7 +293,7 @@
     {
      "type": "block",
      "name": "Values",
-     "definition": "real_block_2"
+     "definition": "real_block"
     },
     {
      "type": "custom",
@@ -305,7 +306,7 @@
    ],
    "tag": "MAPP"
   },
-  "real_block": {
+  "real_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -319,7 +320,7 @@
     }
    ]
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -330,7 +331,7 @@
     {
      "type": "block",
      "name": "data",
-     "definition": "byte_block_2"
+     "definition": "byte_block"
     },
     {
      "type": "custom",
@@ -343,7 +344,7 @@
    ],
    "tag": "MAPP"
   },
-  "byte_block": {
+  "byte_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -357,13 +358,13 @@
     }
    ]
   },
-  "liquid_core_block": {
+  "liquid_core_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 76,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -372,33 +373,33 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "struct",
      "name": "thickness",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "struct",
      "name": "color",
-     "definition": "color_function_struct"
+     "definition": "color_function_struct_2"
     },
     {
      "type": "struct",
      "name": "brightness-time",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "struct",
      "name": "brightness-facing",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "struct",
      "name": "along-axis scale",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "terminator",
@@ -406,7 +407,7 @@
     }
    ]
   },
-  "color_function_struct": {
+  "color_function_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -417,7 +418,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -427,16 +428,15 @@
    "tag": "CLFN"
   }
  },
- "arrays": {},
  "enums_flags": {
-  "type_enum": {
+  "type": {
    "options": [
     "standard",
     "weapon to projectile",
     "projectile from weapon"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "basis marker-relative",
     "spread by external input",
@@ -444,7 +444,7 @@
     "no perspective midpoints"
    ]
   },
-  "sprite_count_enum": {
+  "sprite count": {
    "options": [
     "4 sprites",
     "8 sprites",
@@ -455,7 +455,7 @@
     "256 sprites"
    ]
   },
-  "flags_flags_2": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -467,7 +467,7 @@
     "Color Bit 3"
    ]
   },
-  "octave_flags_flags": {
+  "octave flags": {
    "options": [
     "octave 1",
     "octave 2",
@@ -481,13 +481,10 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   }
  }
 }

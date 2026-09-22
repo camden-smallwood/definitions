@@ -2,153 +2,109 @@
  "name": "model",
  "tag": "hlmt",
  "version": 1,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "model_block",
  "blocks": {
-  "model_variant_state_block_2": {
+  "model_variant_state_block": {
    "max_count": 10,
-   "max_count_string": "10",
-   "struct": "model_variant_state_block"
+   "struct": "model_variant_state_block_struct",
+   "max_count_string": "MAXIMUM_STATES_PER_MODEL_PERMUTATION"
   },
-  "model_variant_permutation_block_2": {
+  "model_variant_permutation_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "model_variant_permutation_block"
+   "struct": "model_variant_permutation_block_struct",
+   "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION"
   },
-  "model_variant_region_block_2": {
+  "model_variant_region_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "model_variant_region_block"
+   "struct": "model_variant_region_block_struct",
+   "max_count_string": "MAXIMUM_REGIONS_PER_MODEL"
   },
-  "model_variant_object_block_2": {
+  "model_variant_object_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "model_variant_object_block"
+   "struct": "model_variant_object_block_struct",
+   "max_count_string": "k_maximum_objects_per_model_variant"
   },
-  "model_variant_block_2": {
+  "model_variant_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "model_variant_block"
+   "struct": "model_variant_block_struct",
+   "max_count_string": "k_maximum_variants_per_model"
   },
-  "model_material_block_2": {
+  "model_material_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "model_material_block"
+   "struct": "model_material_block_struct",
+   "max_count_string": "MAXIMUM_MATERIALS_PER_MODEL"
   },
-  "instantaneous_damage_repsonse_block_2": {
+  "instantaneous_damage_repsonse_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "instantaneous_damage_repsonse_block"
+   "struct": "instantaneous_damage_repsonse_block_struct",
+   "max_count_string": "MAXIMUM_RESPONSES_PER_DAMAGE_SECTION"
   },
-  "g_null_block_2": {
+  "g_null_block": {
    "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
+   "struct": "g_null_block_struct",
+   "max_count_string": "0"
   },
-  "g_null_block_3": {
-   "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
-  },
-  "global_damage_section_block_2": {
+  "global_damage_section_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "global_damage_section_block"
+   "struct": "global_damage_section_block_struct",
+   "max_count_string": "MAXIMUM_DAMAGE_SECTIONS_PER_MODEL"
   },
-  "global_damage_nodes_block_2": {
+  "global_damage_nodes_block": {
    "max_count": 255,
-   "max_count_string": "255",
-   "struct": "global_damage_nodes_block"
+   "struct": "global_damage_nodes_block_struct",
+   "max_count_string": "MAXIMUM_NODES_PER_MODEL"
   },
-  "global_damage_section_block_3": {
+  "damage_seat_info_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "global_damage_section_block"
+   "struct": "damage_seat_info_block_struct",
+   "max_count_string": "MAXIMUM_DAMAGE_SEAT_INFOS_PER_MODEL"
   },
-  "global_damage_nodes_block_3": {
+  "damage_constraint_info_block": {
+   "max_count": 16,
+   "struct": "damage_constraint_info_block_struct",
+   "max_count_string": "MAXIMUM_DAMAGE_CONSTRAINT_INFOS_PER_MODEL"
+  },
+  "global_damage_info_block": {
+   "max_count": 1,
+   "struct": "global_damage_info_block_struct",
+   "max_count_string": "1"
+  },
+  "model_permutation_block": {
+   "max_count": 32,
+   "struct": "model_permutation_block_struct",
+   "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION"
+  },
+  "model_region_block": {
+   "max_count": 16,
+   "struct": "model_region_block_struct",
+   "max_count_string": "MAXIMUM_REGIONS_PER_MODEL"
+  },
+  "model_node_block": {
    "max_count": 255,
-   "max_count_string": "255",
-   "struct": "global_damage_nodes_block"
+   "struct": "model_node_block_struct",
+   "max_count_string": "MAXIMUM_NODES_PER_MODEL"
   },
-  "damage_seat_info_block_2": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "damage_seat_info_block"
-  },
-  "damage_constraint_info_block_2": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "damage_constraint_info_block"
-  },
-  "global_damage_info_block_2": {
+  "model_object_data_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "global_damage_info_block"
+   "struct": "model_object_data_block_struct",
+   "max_count_string": "1"
   },
-  "model_permutation_block_2": {
+  "model_target_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "model_permutation_block"
+   "struct": "model_target_block_struct",
+   "max_count_string": "MAXIMUM_MODEL_TARGETS_PER_MODEL"
   },
-  "model_region_block_2": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "model_region_block"
-  },
-  "model_node_block_2": {
-   "max_count": 255,
-   "max_count_string": "255",
-   "struct": "model_node_block"
-  },
-  "model_object_data_block_2": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "model_object_data_block"
-  },
-  "model_variant_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "model_variant_block"
-  },
-  "model_material_block_3": {
+  "global_scenario_load_parameters_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "model_material_block"
-  },
-  "global_damage_info_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "global_damage_info_block"
-  },
-  "model_target_block_2": {
-   "max_count": 32,
-   "max_count_string": "32",
-   "struct": "model_target_block"
-  },
-  "model_region_block_3": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "model_region_block"
-  },
-  "model_node_block_3": {
-   "max_count": 255,
-   "max_count_string": "255",
-   "struct": "model_node_block"
-  },
-  "model_object_data_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "model_object_data_block"
-  },
-  "global_scenario_load_parameters_block_2": {
-   "max_count": 32,
-   "max_count_string": "32",
-   "struct": "global_scenario_load_parameters_block"
+   "struct": "global_scenario_load_parameters_block_struct",
+   "max_count_string": "k_scenario_load_maximum_parameter_blocks"
   },
   "model_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "model_block_struct"
+   "struct": "model_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -202,58 +158,58 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "short_enum",
      "name": "shadow fade distance",
-     "definition": "shadow_fade_distance_enum"
+     "definition": "shadow fade distance"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "variants",
-     "definition": "model_variant_block_2"
+     "definition": "model_variant_block"
     },
     {
      "type": "block",
      "name": "materials",
-     "definition": "model_material_block_2"
+     "definition": "model_material_block"
     },
     {
      "type": "block",
      "name": "new damage info",
-     "definition": "global_damage_info_block_2"
+     "definition": "global_damage_info_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(struct tag_block)",
      "definition": 12
     },
     {
      "type": "block",
      "name": "runtime regions",
-     "definition": "model_region_block_2"
+     "definition": "model_region_block"
     },
     {
      "type": "block",
      "name": "runtime nodes",
-     "definition": "model_node_block_2"
+     "definition": "model_node_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(dword)",
      "definition": 4
     },
     {
      "type": "block",
      "name": "model object data",
-     "definition": "model_object_data_block_2"
+     "definition": "model_object_data_block"
     },
     {
      "type": "terminator",
@@ -261,7 +217,7 @@
     }
    ]
   },
-  "model_variant_block": {
+  "model_variant_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 72,
    "fields": [
@@ -271,22 +227,22 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "MAXIMUM_REGIONS_PER_MODEL*sizeof(char)",
      "definition": 16
     },
     {
      "type": "block",
      "name": "regions",
-     "definition": "model_variant_region_block_2"
+     "definition": "model_variant_region_block"
     },
     {
      "type": "block",
      "name": "objects",
-     "definition": "model_variant_object_block_2"
+     "definition": "model_variant_object_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -303,7 +259,7 @@
     }
    ]
   },
-  "model_variant_region_block": {
+  "model_variant_region_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -313,31 +269,32 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(char)",
      "definition": 1
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(byte)",
      "definition": 1
     },
     {
-     "type": "short_integer",
-     "name": "parent variant"
+     "type": "short_block_index",
+     "name": "parent variant",
+     "definition": "model_variant_block"
     },
     {
      "type": "block",
      "name": "permutations",
-     "definition": "model_variant_permutation_block_2"
+     "definition": "model_variant_permutation_block"
     },
     {
      "type": "short_enum",
      "name": "sort order",
-     "definition": "sort_order_enum"
+     "definition": "sort order"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2",
      "definition": 2
     },
     {
@@ -346,7 +303,7 @@
     }
    ]
   },
-  "model_variant_permutation_block": {
+  "model_variant_permutation_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
@@ -356,17 +313,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(char)",
      "definition": 1
     },
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(byte)",
      "definition": 2
     },
     {
@@ -376,16 +333,16 @@
     {
      "type": "block",
      "name": "states",
-     "definition": "model_variant_state_block_2"
+     "definition": "model_variant_state_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_number_of_model_states*sizeof(char)",
      "definition": 5
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "(k_maximum_number_of_model_states - k_number_of_model_states)*sizeof(byte)",
      "definition": 7
     },
     {
@@ -394,7 +351,7 @@
     }
    ]
   },
-  "model_variant_state_block__v0": {
+  "model_variant_state_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -404,13 +361,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "state",
-     "definition": "state_enum"
+     "definition": "state"
     },
     {
      "type": "terminator",
@@ -418,7 +375,7 @@
     }
    ]
   },
-  "model_variant_state_block": {
+  "model_variant_state_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -428,18 +385,18 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(char)",
      "definition": 1
     },
     {
      "type": "byte_flags",
      "name": "property flags",
-     "definition": "property_flags_flags"
+     "definition": "property flags"
     },
     {
      "type": "short_enum",
      "name": "state",
-     "definition": "state_enum_2"
+     "definition": "state_2"
     },
     {
      "type": "tag_reference",
@@ -459,7 +416,7 @@
     }
    ]
   },
-  "model_variant_object_block": {
+  "model_variant_object_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -481,7 +438,7 @@
     }
    ]
   },
-  "model_material_block": {
+  "model_material_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -492,20 +449,20 @@
     {
      "type": "short_enum",
      "name": "material type",
-     "definition": "material_type_enum"
+     "definition": "material type"
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": "damage section"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -514,7 +471,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -523,14 +480,14 @@
     }
    ]
   },
-  "global_damage_info_block__v0": {
+  "global_damage_info_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 216,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "string_id",
@@ -619,26 +576,26 @@
     {
      "type": "block",
      "name": "damage sections",
-     "definition": "global_damage_section_block_2"
+     "definition": "global_damage_section_block"
     },
     {
      "type": "block",
      "name": "nodes",
-     "definition": "global_damage_nodes_block_2"
+     "definition": "global_damage_nodes_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(c_global_material_type)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(c_global_material_type)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -647,7 +604,7 @@
     }
    ]
   },
-  "global_damage_section_block": {
+  "global_damage_section_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
@@ -658,7 +615,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "real_fraction",
@@ -667,17 +624,17 @@
     {
      "type": "block",
      "name": "instant responses",
-     "definition": "instantaneous_damage_repsonse_block_2"
+     "definition": "instantaneous_damage_repsonse_block"
     },
     {
      "type": "block",
      "name": null,
-     "definition": "g_null_block_2"
+     "definition": "g_null_block"
     },
     {
      "type": "block",
      "name": null,
-     "definition": "g_null_block_3"
+     "definition": "g_null_block"
     },
     {
      "type": "real",
@@ -689,7 +646,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -698,7 +655,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)*2",
      "definition": 4
     },
     {
@@ -707,24 +664,24 @@
     }
    ]
   },
-  "instantaneous_damage_repsonse_block": {
+  "instantaneous_damage_repsonse_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 104,
    "fields": [
     {
      "type": "short_enum",
      "name": "response type",
-     "definition": "response_type_enum"
+     "definition": "response type"
     },
     {
      "type": "short_enum",
      "name": "constraint damage type",
-     "definition": "constraint_damage_type_enum"
+     "definition": "constraint damage type"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_4"
     },
     {
      "type": "real",
@@ -737,7 +694,7 @@
     {
      "type": "struct",
      "name": "damage effect",
-     "definition": "instantaneous_response_damage_effect_struct"
+     "definition": "instantaneous_response_damage_effect_struct_2"
     },
     {
      "type": "string_id",
@@ -746,7 +703,7 @@
     {
      "type": "short_enum",
      "name": "new state",
-     "definition": "state_enum_2"
+     "definition": "state_2"
     },
     {
      "type": "short_integer",
@@ -759,7 +716,7 @@
     {
      "type": "struct",
      "name": "damage effect marker",
-     "definition": "instantaneous_response_damage_effect_marker_struct"
+     "definition": "instantaneous_response_damage_effect_marker_struct_2"
     },
     {
      "type": "real",
@@ -810,7 +767,7 @@
    ],
    "tag": "ires"
   },
-  "instantaneous_response_damage_effect_struct": {
+  "instantaneous_response_damage_effect_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -836,7 +793,7 @@
    ],
    "tag": "irem"
   },
-  "instantaneous_response_damage_effect_marker_struct": {
+  "instantaneous_response_damage_effect_marker_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -851,7 +808,7 @@
    ],
    "tag": "irem"
   },
-  "g_null_block": {
+  "g_null_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 0,
    "fields": [
@@ -865,23 +822,23 @@
     }
    ]
   },
-  "global_damage_nodes_block": {
+  "global_damage_nodes_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -890,51 +847,51 @@
     }
    ]
   },
-  "global_damage_info_block": {
+  "global_damage_info_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 320,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "string_id",
      "name": "global indirect material name"
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": "indirect damage section"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "char_enum",
      "name": "collision damage reporting type",
-     "definition": "collision_damage_reporting_type_enum"
+     "definition": "collision damage reporting type"
     },
     {
      "type": "char_enum",
      "name": "response damage reporting type",
-     "definition": "collision_damage_reporting_type_enum"
+     "definition": "collision damage reporting type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(byte)*2",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -959,7 +916,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*16",
      "definition": 64
     },
     {
@@ -1009,42 +966,42 @@
     {
      "type": "block",
      "name": "damage sections",
-     "definition": "global_damage_section_block_3"
+     "definition": "global_damage_section_block"
     },
     {
      "type": "block",
      "name": "nodes",
-     "definition": "global_damage_nodes_block_3"
+     "definition": "global_damage_nodes_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "block",
      "name": "damage seats",
-     "definition": "damage_seat_info_block_2"
+     "definition": "damage_seat_info_block"
     },
     {
      "type": "block",
      "name": "damage constraints",
-     "definition": "damage_constraint_info_block_2"
+     "definition": "damage_constraint_info_block"
     },
     {
      "type": "tag_reference",
@@ -1060,7 +1017,7 @@
     }
    ]
   },
-  "damage_seat_info_block": {
+  "damage_seat_info_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -1090,7 +1047,7 @@
     }
    ]
   },
-  "damage_constraint_info_block": {
+  "damage_constraint_info_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -1112,7 +1069,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)*2",
      "definition": 4
     },
     {
@@ -1121,7 +1078,7 @@
     }
    ]
   },
-  "model_region_block": {
+  "model_region_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -1139,13 +1096,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(byte)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "permutations",
-     "definition": "model_permutation_block_2"
+     "definition": "model_permutation_block"
     },
     {
      "type": "terminator",
@@ -1153,7 +1110,7 @@
     }
    ]
   },
-  "model_permutation_block": {
+  "model_permutation_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -1164,7 +1121,7 @@
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags_5"
+     "definition": "flags_5"
     },
     {
      "type": "char_integer",
@@ -1172,7 +1129,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(byte)",
      "definition": 2
     },
     {
@@ -1181,7 +1138,7 @@
     }
    ]
   },
-  "model_node_block": {
+  "model_node_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 92,
    "fields": [
@@ -1190,20 +1147,23 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
-     "name": "parent node"
+     "type": "short_block_index",
+     "name": "parent node",
+     "definition": "model_node_block"
     },
     {
-     "type": "short_integer",
-     "name": "first child node"
+     "type": "short_block_index",
+     "name": "first child node",
+     "definition": "model_node_block"
     },
     {
-     "type": "short_integer",
-     "name": "next sibling node"
+     "type": "short_block_index",
+     "name": "next sibling node",
+     "definition": "model_node_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -1240,18 +1200,18 @@
     }
    ]
   },
-  "model_object_data_block": {
+  "model_object_data_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2",
      "definition": 2
     },
     {
@@ -1306,7 +1266,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -1331,58 +1291,58 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "short_enum",
      "name": "shadow fade distance",
-     "definition": "shadow_fade_distance_enum"
+     "definition": "shadow fade distance"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "variants",
-     "definition": "model_variant_block_3"
+     "definition": "model_variant_block"
     },
     {
      "type": "block",
      "name": "materials",
-     "definition": "model_material_block_3"
+     "definition": "model_material_block"
     },
     {
      "type": "block",
      "name": "new damage info",
-     "definition": "global_damage_info_block_3"
+     "definition": "global_damage_info_block"
     },
     {
      "type": "block",
      "name": "targets",
-     "definition": "model_target_block_2"
+     "definition": "model_target_block"
     },
     {
      "type": "block",
      "name": "runtime regions",
-     "definition": "model_region_block_3"
+     "definition": "model_region_block"
     },
     {
      "type": "block",
      "name": "runtime nodes",
-     "definition": "model_node_block_3"
+     "definition": "model_node_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(dword)",
      "definition": 4
     },
     {
      "type": "block",
      "name": "model object data",
-     "definition": "model_object_data_block_3"
+     "definition": "model_object_data_block"
     },
     {
      "type": "tag_reference",
@@ -1395,7 +1355,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_7"
+     "definition": "flags_7"
     },
     {
      "type": "string_id",
@@ -1404,22 +1364,22 @@
     {
      "type": "array",
      "name": "render-only node flags",
-     "definition": "render_only_node_flags_array"
+     "definition": "render-only node flags_array"
     },
     {
      "type": "array",
      "name": "render-only section flags",
-     "definition": "render_only_section_flags_array"
+     "definition": "render-only section flags_array"
     },
     {
      "type": "long_flags",
      "name": "runtime flags",
-     "definition": "runtime_flags_flags"
+     "definition": "runtime flags"
     },
     {
      "type": "block",
      "name": "scenario load parameters",
-     "definition": "global_scenario_load_parameters_block_2"
+     "definition": "global_scenario_load_parameters_block"
     },
     {
      "type": "tag_reference",
@@ -1435,7 +1395,7 @@
     }
    ]
   },
-  "model_target_block": {
+  "model_target_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
@@ -1452,12 +1412,13 @@
      "name": "cone angle"
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": "damage section"
     },
     {
-     "type": "short_integer",
-     "name": "variant"
+     "type": "short_block_index",
+     "name": "variant",
+     "definition": "model_variant_block"
     },
     {
      "type": "real_fraction",
@@ -1466,7 +1427,7 @@
     {
      "type": "struct",
      "name": "lock-on data",
-     "definition": "model_target_lock_on_data_struct"
+     "definition": "model_target_lock_on_data_struct_2"
     },
     {
      "type": "terminator",
@@ -1474,14 +1435,14 @@
     }
    ]
   },
-  "model_target_lock_on_data_struct": {
+  "model_target_lock_on_data_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_6"
+     "definition": "flags_6"
     },
     {
      "type": "real",
@@ -1494,7 +1455,7 @@
    ],
    "tag": "MTLO"
   },
-  "render_only_node_flags_struct": {
+  "render-only node flags_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -1508,7 +1469,7 @@
     }
    ]
   },
-  "render_only_section_flags_struct": {
+  "render-only section flags_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -1522,7 +1483,7 @@
     }
    ]
   },
-  "global_scenario_load_parameters_block": {
+  "global_scenario_load_parameters_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
@@ -1533,11 +1494,11 @@
     {
      "type": "data",
      "name": "parameters",
-     "definition": "parameters_data"
+     "definition": "parameters_text_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -1548,17 +1509,17 @@
   }
  },
  "arrays": {
-  "render_only_node_flags_array": {
+  "render-only node flags_array": {
    "count": 32,
-   "struct": "render_only_node_flags_struct"
+   "struct": "render-only node flags_struct"
   },
-  "render_only_section_flags_array": {
+  "render-only section flags_array": {
    "count": 32,
-   "struct": "render_only_section_flags_struct"
+   "struct": "render-only section flags_struct"
   }
  },
  "enums_flags": {
-  "shadow_fade_distance_enum": {
+  "shadow fade distance": {
    "options": [
     "fade at super high detail level",
     "fade at high detail level",
@@ -1568,12 +1529,12 @@
     "fade never"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "copy states to all permutations"
    ]
   },
-  "state_enum": {
+  "state": {
    "options": [
     "default",
     "minor damage",
@@ -1586,14 +1547,14 @@
     "shield inactive (DEPRECIATED)"
    ]
   },
-  "property_flags_flags": {
+  "property flags": {
    "options": [
     "blurred",
     "hella blurred",
     "shielded"
    ]
   },
-  "state_enum_2": {
+  "state_2": {
    "options": [
     "default",
     "minor damage",
@@ -1602,7 +1563,7 @@
     "destroyed"
    ]
   },
-  "sort_order_enum": {
+  "sort order": {
    "options": [
     "no sorting",
     "-5 (closest)",
@@ -1618,7 +1579,7 @@
     "5 (farthest)"
    ]
   },
-  "material_type_enum": {
+  "material type": {
    "options": [
     "dirt",
     "sand",
@@ -1655,7 +1616,7 @@
     "hunter shield"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "takes shield damage for children",
     "takes body damage for children",
@@ -1668,7 +1629,7 @@
     "passes attached damage to riders"
    ]
   },
-  "flags_flags_3": {
+  "flags_3": {
    "options": [
     "absorbs body damage",
     "takes full dmg when object dies",
@@ -1681,14 +1642,14 @@
     "ignores shields"
    ]
   },
-  "response_type_enum": {
+  "response type": {
    "options": [
     "receives all damage",
     "receives area effect damage",
     "receives local damage"
    ]
   },
-  "constraint_damage_type_enum": {
+  "constraint damage type": {
    "options": [
     "none",
     "destroy one of group",
@@ -1697,7 +1658,7 @@
     "loosen entire group"
    ]
   },
-  "flags_flags_4": {
+  "flags_4": {
    "options": [
     "kills object",
     "inhibits melee attack",
@@ -1727,9 +1688,9 @@
     "forces object to loose vitality"
    ]
   },
-  "collision_damage_reporting_type_enum": {
+  "collision damage reporting type": {
    "options": [
-    "teh guardians11",
+    "teh guardians!!1!!1!",
     "falling damage",
     "generic collision damage",
     "generic melee damage",
@@ -1775,19 +1736,19 @@
     "warthog gunner rocket"
    ]
   },
-  "flags_flags_5": {
+  "flags_5": {
    "options": [
     "cannot be chosen randomly"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "not set",
     "user defined",
     "auto generated"
    ]
   },
-  "flags_flags_6": {
+  "flags_6": {
    "options": [
     "locked by human tracking",
     "locked by plasma tracking",
@@ -1796,45 +1757,38 @@
     "alwas locked by plasma tracking"
    ]
   },
-  "flags_flags_7": {
+  "flags_7": {
    "options": [
     "active camo always on",
     "active camo always merge",
     "active camo never merge"
    ]
   },
-  "runtime_flags_flags": {
+  "runtime flags": {
    "options": [
     "contains run-time nodes"
    ]
   }
  },
  "datas": {
-  "parameters_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  }
+  "parameters_text_definition": {}
  },
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "model_variant_state_block": {
-   "0": "model_variant_state_block__v0",
-   "1": "model_variant_state_block"
+  "model_variant_state_block_struct": {
+   "0": "model_variant_state_block_struct__v0",
+   "1": "model_variant_state_block_struct"
   },
-  "instantaneous_response_damage_effect_struct": {
+  "instantaneous_response_damage_effect_struct_2": {
    "0": "instantaneous_response_damage_effect_struct__v0",
-   "1": "instantaneous_response_damage_effect_struct"
+   "1": "instantaneous_response_damage_effect_struct_2"
   },
-  "instantaneous_response_damage_effect_marker_struct": {
+  "instantaneous_response_damage_effect_marker_struct_2": {
    "0": "instantaneous_response_damage_effect_marker_struct__v0",
-   "1": "instantaneous_response_damage_effect_marker_struct"
+   "1": "instantaneous_response_damage_effect_marker_struct_2"
   },
-  "global_damage_info_block": {
-   "0": "global_damage_info_block__v0",
-   "1": "global_damage_info_block"
+  "global_damage_info_block_struct": {
+   "0": "global_damage_info_block_struct__v0",
+   "1": "global_damage_info_block_struct"
   },
   "model_block_struct": {
    "0": "model_block_struct__v0",

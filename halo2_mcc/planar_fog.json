@@ -2,18 +2,19 @@
  "name": "planar_fog",
  "tag": "fog ",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "planar_fog_block",
  "blocks": {
-  "planar_fog_patchy_fog_block_2": {
+  "planar_fog_patchy_fog_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "planar_fog_patchy_fog_block"
+   "struct": "planar_fog_patchy_fog_block_struct",
+   "max_count_string": "1"
   },
   "planar_fog_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "planar_fog_block_struct"
+   "struct": "planar_fog_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,7 +25,7 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_integer",
@@ -36,12 +37,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(c_global_material_type)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -101,7 +102,7 @@
     {
      "type": "block",
      "name": "patchy fog",
-     "definition": "planar_fog_patchy_fog_block_2"
+     "definition": "planar_fog_patchy_fog_block"
     },
     {
      "type": "tag_reference",
@@ -138,7 +139,7 @@
     }
    ]
   },
-  "planar_fog_patchy_fog_block": {
+  "planar_fog_patchy_fog_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 60,
    "fields": [
@@ -148,7 +149,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_rgb_color)",
      "definition": 12
     },
     {
@@ -184,9 +185,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "render only submerged geometry",
     "extend infinitely while visible",
@@ -196,9 +196,5 @@
     "do not render unless submerged"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

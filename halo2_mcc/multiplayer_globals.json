@@ -2,243 +2,139 @@
  "name": "multiplayer_globals",
  "tag": "mulg",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "multiplayer_globals_block",
  "blocks": {
-  "multiplayer_color_block_2": {
+  "multiplayer_color_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "multiplayer_color_block"
+   "struct": "multiplayer_color_block_struct",
+   "max_count_string": "32"
   },
-  "multiplayer_universal_block_2": {
+  "multiplayer_universal_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "multiplayer_universal_block"
+   "struct": "multiplayer_universal_block_struct",
+   "max_count_string": "1"
   },
-  "weapons_block_2": {
+  "weapons_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "weapons_block"
+   "struct": "weapons_block_struct",
+   "max_count_string": "((k_weapon_list_count)>(64)?(k_weapon_list_count):(64))"
   },
-  "vehicles_block_2": {
+  "vehicles_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "vehicles_block"
+   "struct": "vehicles_block_struct",
+   "max_count_string": "((k_vehicle_list_count)>(64)?(k_vehicle_list_count):(64))"
   },
-  "sounds_block_2": {
+  "sounds_block": {
    "max_count": 60,
-   "max_count_string": "60",
-   "struct": "sounds_block"
+   "struct": "sounds_block_struct",
+   "max_count_string": "60"
   },
-  "sound_response_definition_block_2": {
+  "sound_response_definition_block": {
    "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
+   "struct": "sound_response_definition_block_struct",
+   "max_count_string": "10"
   },
-  "game_engine_general_event_block_2": {
+  "game_engine_general_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_general_event_block"
+   "struct": "game_engine_general_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_3": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_slayer_event_block_2": {
+  "game_engine_slayer_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_slayer_event_block"
+   "struct": "game_engine_slayer_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_4": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_ctf_event_block_2": {
+  "game_engine_ctf_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_ctf_event_block"
+   "struct": "game_engine_ctf_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_5": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_oddball_event_block_2": {
+  "game_engine_oddball_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_oddball_event_block"
+   "struct": "game_engine_oddball_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_6": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_king_event_block_2": {
+  "game_engine_king_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_king_event_block"
+   "struct": "game_engine_king_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "weapons_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "weapons_block"
-  },
-  "vehicles_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "vehicles_block"
-  },
-  "grenade_block_2": {
+  "grenade_block": {
    "max_count": 20,
-   "max_count_string": "20",
-   "struct": "grenade_block"
+   "struct": "grenade_block_struct",
+   "max_count_string": "((k_grenade_list_count)>(20)?(k_grenade_list_count):(20))"
   },
-  "powerup_block_2": {
+  "powerup_block": {
    "max_count": 20,
-   "max_count_string": "20",
-   "struct": "powerup_block"
+   "struct": "powerup_block_struct",
+   "max_count_string": "((k_powerup_list_count)>(20)?(k_powerup_list_count):(20))"
   },
-  "sounds_block_3": {
-   "max_count": 60,
-   "max_count_string": "60",
-   "struct": "sounds_block"
-  },
-  "game_engine_general_event_block_3": {
+  "game_engine_flavor_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_general_event_block"
+   "struct": "game_engine_flavor_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_7": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_flavor_event_block_2": {
+  "game_engine_medic_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_flavor_event_block"
+   "struct": "game_engine_medic_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "game_engine_slayer_event_block_3": {
+  "game_engine_vip_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_slayer_event_block"
+   "struct": "game_engine_vip_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "game_engine_ctf_event_block_3": {
+  "game_engine_juggernaut_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_ctf_event_block"
+   "struct": "game_engine_juggernaut_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "game_engine_oddball_event_block_3": {
+  "game_engine_territories_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_oddball_event_block"
+   "struct": "game_engine_territories_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_8": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_medic_event_block_2": {
+  "game_engine_assault_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_medic_event_block"
+   "struct": "game_engine_assault_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "game_engine_king_event_block_3": {
+  "game_engine_infection_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_king_event_block"
+   "struct": "game_engine_infection_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_9": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_vip_event_block_2": {
+  "game_engine_headhunter_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_vip_event_block"
+   "struct": "game_engine_headhunter_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_10": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_juggernaut_event_block_2": {
-   "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_juggernaut_event_block"
-  },
-  "sound_response_definition_block_11": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_territories_event_block_2": {
-   "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_territories_event_block"
-  },
-  "sound_response_definition_block_12": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_assault_event_block_2": {
-   "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_assault_event_block"
-  },
-  "sound_response_definition_block_13": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_infection_event_block_2": {
-   "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_infection_event_block"
-  },
-  "sound_response_definition_block_14": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_headhunter_event_block_2": {
-   "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_headhunter_event_block"
-  },
-  "g_null_block_2": {
+  "g_null_block": {
    "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
+   "struct": "g_null_block_struct",
+   "max_count_string": "0"
   },
-  "g_null_block_3": {
-   "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
-  },
-  "multiplayer_constants_block_2": {
+  "multiplayer_constants_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "multiplayer_constants_block"
+   "struct": "multiplayer_constants_block_struct",
+   "max_count_string": "1"
   },
-  "game_engine_status_response_block_2": {
+  "game_engine_status_response_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "game_engine_status_response_block"
+   "struct": "game_engine_status_response_block_struct",
+   "max_count_string": "k_maximum_status_response_count"
   },
-  "multiplayer_runtime_block_2": {
+  "multiplayer_runtime_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "multiplayer_runtime_block"
+   "struct": "multiplayer_runtime_block_struct",
+   "max_count_string": "1"
   },
   "multiplayer_globals_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "multiplayer_globals_block_struct"
+   "struct": "multiplayer_globals_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -249,12 +145,12 @@
     {
      "type": "block",
      "name": "universal",
-     "definition": "multiplayer_universal_block_2"
+     "definition": "multiplayer_universal_block"
     },
     {
      "type": "block",
      "name": "runtime",
-     "definition": "multiplayer_runtime_block_2"
+     "definition": "multiplayer_runtime_block"
     },
     {
      "type": "terminator",
@@ -262,7 +158,7 @@
     }
    ]
   },
-  "multiplayer_universal_block": {
+  "multiplayer_universal_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 60,
    "fields": [
@@ -277,7 +173,7 @@
     {
      "type": "block",
      "name": "team colors",
-     "definition": "multiplayer_color_block_2"
+     "definition": "multiplayer_color_block"
     },
     {
      "type": "tag_reference",
@@ -289,7 +185,7 @@
     }
    ]
   },
-  "multiplayer_color_block": {
+  "multiplayer_color_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -303,7 +199,7 @@
     }
    ]
   },
-  "multiplayer_runtime_block__v0": {
+  "multiplayer_runtime_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 1236,
    "fields": [
@@ -330,12 +226,12 @@
     {
      "type": "block",
      "name": "weapons",
-     "definition": "weapons_block_2"
+     "definition": "weapons_block"
     },
     {
      "type": "block",
      "name": "vehicles",
-     "definition": "vehicles_block_2"
+     "definition": "vehicles_block"
     },
     {
      "type": "tag_reference",
@@ -344,37 +240,37 @@
     {
      "type": "block",
      "name": "sounds",
-     "definition": "sounds_block_2"
+     "definition": "sounds_block"
     },
     {
      "type": "block",
      "name": "general events",
-     "definition": "game_engine_general_event_block_2"
+     "definition": "game_engine_general_event_block"
     },
     {
      "type": "block",
      "name": "slayer events",
-     "definition": "game_engine_slayer_event_block_2"
+     "definition": "game_engine_slayer_event_block"
     },
     {
      "type": "block",
      "name": "ctf events",
-     "definition": "game_engine_ctf_event_block_2"
+     "definition": "game_engine_ctf_event_block"
     },
     {
      "type": "block",
      "name": "oddball events",
-     "definition": "game_engine_oddball_event_block_2"
+     "definition": "game_engine_oddball_event_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(struct tag_block)",
      "definition": 12
     },
     {
      "type": "block",
      "name": "king events",
-     "definition": "game_engine_king_event_block_2"
+     "definition": "game_engine_king_event_block"
     },
     {
      "type": "tag_reference",
@@ -402,7 +298,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*10",
      "definition": 40
     },
     {
@@ -419,7 +315,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -436,7 +332,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -453,7 +349,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -470,7 +366,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -487,7 +383,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -504,7 +400,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -521,7 +417,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -538,7 +434,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -555,7 +451,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -572,7 +468,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -589,17 +485,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(s_dynamic_spawn_zone_definition)*(k_maximum_number_of_dynamic_spawn_zones - k_number_of_dynamic_spawn_zones + 2)",
      "definition": 588
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*12",
      "definition": 48
     },
     {
@@ -608,7 +504,7 @@
     }
    ]
   },
-  "weapons_block": {
+  "weapons_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -622,7 +518,7 @@
     }
    ]
   },
-  "vehicles_block": {
+  "vehicles_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -636,7 +532,7 @@
     }
    ]
   },
-  "sounds_block": {
+  "sounds_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -650,38 +546,38 @@
     }
    ]
   },
-  "game_engine_general_event_block": {
+  "game_engine_general_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum"
+     "definition": "event"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -691,12 +587,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -712,7 +608,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -722,11 +618,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -736,22 +632,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_2"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -770,7 +666,7 @@
    ],
    "tag": "masd"
   },
-  "sound_response_extra_sounds_struct": {
+  "sound_response_extra_sounds_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
@@ -813,18 +709,18 @@
    ],
    "tag": "masd"
   },
-  "sound_response_definition_block": {
+  "sound_response_definition_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 152,
    "fields": [
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -834,7 +730,7 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "real",
@@ -846,38 +742,38 @@
     }
    ]
   },
-  "game_engine_slayer_event_block": {
+  "game_engine_slayer_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_2"
+     "definition": "event_2"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -887,12 +783,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -908,7 +804,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -918,11 +814,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -932,22 +828,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_3"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -955,38 +851,38 @@
     }
    ]
   },
-  "game_engine_ctf_event_block": {
+  "game_engine_ctf_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_3"
+     "definition": "event_3"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -996,12 +892,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -1017,7 +913,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -1027,11 +923,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -1041,22 +937,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_4"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -1064,38 +960,38 @@
     }
    ]
   },
-  "game_engine_oddball_event_block": {
+  "game_engine_oddball_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_4"
+     "definition": "event_4"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -1105,12 +1001,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -1126,7 +1022,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -1136,11 +1032,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -1150,22 +1046,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_5"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -1173,38 +1069,38 @@
     }
    ]
   },
-  "game_engine_king_event_block": {
+  "game_engine_king_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_5"
+     "definition": "event_5"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -1214,12 +1110,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -1235,7 +1131,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -1245,11 +1141,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -1259,22 +1155,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_6"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -1282,7 +1178,7 @@
     }
    ]
   },
-  "multiplayer_runtime_block": {
+  "multiplayer_runtime_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1640,
    "fields": [
@@ -1341,17 +1237,17 @@
     {
      "type": "block",
      "name": "weapons",
-     "definition": "weapons_block_3"
+     "definition": "weapons_block"
     },
     {
      "type": "block",
      "name": "vehicles",
-     "definition": "vehicles_block_3"
+     "definition": "vehicles_block"
     },
     {
      "type": "struct",
      "name": "arr",
-     "definition": "grenade_and_powerup_struct"
+     "definition": "grenade_and_powerup_struct_2"
     },
     {
      "type": "tag_reference",
@@ -1360,82 +1256,82 @@
     {
      "type": "block",
      "name": "sounds",
-     "definition": "sounds_block_3"
+     "definition": "sounds_block"
     },
     {
      "type": "block",
      "name": "general events",
-     "definition": "game_engine_general_event_block_3"
+     "definition": "game_engine_general_event_block"
     },
     {
      "type": "block",
      "name": "flavor events",
-     "definition": "game_engine_flavor_event_block_2"
+     "definition": "game_engine_flavor_event_block"
     },
     {
      "type": "block",
      "name": "slayer events",
-     "definition": "game_engine_slayer_event_block_3"
+     "definition": "game_engine_slayer_event_block"
     },
     {
      "type": "block",
      "name": "ctf events",
-     "definition": "game_engine_ctf_event_block_3"
+     "definition": "game_engine_ctf_event_block"
     },
     {
      "type": "block",
      "name": "oddball events",
-     "definition": "game_engine_oddball_event_block_3"
+     "definition": "game_engine_oddball_event_block"
     },
     {
      "type": "block",
      "name": "medic events",
-     "definition": "game_engine_medic_event_block_2"
+     "definition": "game_engine_medic_event_block"
     },
     {
      "type": "block",
      "name": "king events",
-     "definition": "game_engine_king_event_block_3"
+     "definition": "game_engine_king_event_block"
     },
     {
      "type": "block",
      "name": "vip events",
-     "definition": "game_engine_vip_event_block_2"
+     "definition": "game_engine_vip_event_block"
     },
     {
      "type": "block",
      "name": "juggernaut events",
-     "definition": "game_engine_juggernaut_event_block_2"
+     "definition": "game_engine_juggernaut_event_block"
     },
     {
      "type": "block",
      "name": "territories events",
-     "definition": "game_engine_territories_event_block_2"
+     "definition": "game_engine_territories_event_block"
     },
     {
      "type": "block",
      "name": "invasion events",
-     "definition": "game_engine_assault_event_block_2"
+     "definition": "game_engine_assault_event_block"
     },
     {
      "type": "block",
      "name": "infection events",
-     "definition": "game_engine_infection_event_block_2"
+     "definition": "game_engine_infection_event_block"
     },
     {
      "type": "block",
      "name": "headhunter events",
-     "definition": "game_engine_headhunter_event_block_2"
+     "definition": "game_engine_headhunter_event_block"
     },
     {
      "type": "block",
      "name": "race events",
-     "definition": "g_null_block_2"
+     "definition": "g_null_block"
     },
     {
      "type": "block",
      "name": null,
-     "definition": "g_null_block_3"
+     "definition": "g_null_block"
     },
     {
      "type": "tag_reference",
@@ -1455,7 +1351,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*10",
      "definition": 40
     },
     {
@@ -1468,7 +1364,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*10",
      "definition": 40
     },
     {
@@ -1485,7 +1381,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1502,7 +1398,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1519,7 +1415,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1536,7 +1432,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1553,7 +1449,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1570,7 +1466,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1587,7 +1483,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1604,7 +1500,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1621,7 +1517,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1638,7 +1534,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1655,7 +1551,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1672,7 +1568,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1689,28 +1585,28 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(s_dynamic_spawn_zone_definition)*(k_maximum_number_of_dynamic_spawn_zones - k_number_of_dynamic_spawn_zones)",
      "definition": 532
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*12",
      "definition": 48
     },
     {
      "type": "block",
      "name": "multiplayer constants",
-     "definition": "multiplayer_constants_block_2"
+     "definition": "multiplayer_constants_block"
     },
     {
      "type": "block",
      "name": "state responses",
-     "definition": "game_engine_status_response_block_2"
+     "definition": "game_engine_status_response_block"
     },
     {
      "type": "tag_reference",
@@ -1749,19 +1645,19 @@
    ],
    "tag": "gapu"
   },
-  "grenade_and_powerup_struct": {
+  "grenade_and_powerup_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
     {
      "type": "block",
      "name": "grenades",
-     "definition": "grenade_block_2"
+     "definition": "grenade_block"
     },
     {
      "type": "block",
      "name": "powerups",
-     "definition": "powerup_block_2"
+     "definition": "powerup_block"
     },
     {
      "type": "terminator",
@@ -1770,7 +1666,7 @@
    ],
    "tag": "gapu"
   },
-  "grenade_block": {
+  "grenade_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1784,7 +1680,7 @@
     }
    ]
   },
-  "powerup_block": {
+  "powerup_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1798,38 +1694,38 @@
     }
    ]
   },
-  "game_engine_flavor_event_block": {
+  "game_engine_flavor_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_6"
+     "definition": "event_6"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -1839,12 +1735,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -1860,7 +1756,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -1870,11 +1766,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -1884,22 +1780,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_7"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -1907,38 +1803,38 @@
     }
    ]
   },
-  "game_engine_medic_event_block": {
+  "game_engine_medic_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_7"
+     "definition": "event_7"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -1948,12 +1844,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -1969,7 +1865,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -1979,11 +1875,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -1993,22 +1889,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_8"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2016,38 +1912,38 @@
     }
    ]
   },
-  "game_engine_vip_event_block": {
+  "game_engine_vip_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_8"
+     "definition": "event_8"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2057,12 +1953,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2078,7 +1974,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2088,11 +1984,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2102,22 +1998,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_9"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2125,38 +2021,38 @@
     }
    ]
   },
-  "game_engine_juggernaut_event_block": {
+  "game_engine_juggernaut_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_9"
+     "definition": "event_9"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2166,12 +2062,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2187,7 +2083,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2197,11 +2093,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2211,22 +2107,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_10"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2234,38 +2130,38 @@
     }
    ]
   },
-  "game_engine_territories_event_block": {
+  "game_engine_territories_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_10"
+     "definition": "event_10"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2275,12 +2171,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2296,7 +2192,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2306,11 +2202,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2320,22 +2216,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_11"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2343,38 +2239,38 @@
     }
    ]
   },
-  "game_engine_assault_event_block": {
+  "game_engine_assault_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_11"
+     "definition": "event_11"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2384,12 +2280,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2405,7 +2301,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2415,11 +2311,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2429,22 +2325,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_12"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2452,38 +2348,38 @@
     }
    ]
   },
-  "game_engine_infection_event_block": {
+  "game_engine_infection_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_12"
+     "definition": "event_12"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2493,12 +2389,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2514,7 +2410,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2524,11 +2420,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2538,22 +2434,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_13"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2561,38 +2457,38 @@
     }
    ]
   },
-  "game_engine_headhunter_event_block": {
+  "game_engine_headhunter_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_13"
+     "definition": "event_13"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2602,12 +2498,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2623,7 +2519,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2633,11 +2529,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2647,22 +2543,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_14"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2670,7 +2566,7 @@
     }
    ]
   },
-  "g_null_block": {
+  "g_null_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 0,
    "fields": [
@@ -2684,7 +2580,7 @@
     }
    ]
   },
-  "multiplayer_constants_block": {
+  "multiplayer_constants_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 384,
    "fields": [
@@ -2734,17 +2630,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*21",
      "definition": 84
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*8",
      "definition": 32
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*8",
      "definition": 32
     },
     {
@@ -2753,7 +2649,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -2782,22 +2678,22 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*8",
      "definition": 32
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*8",
      "definition": 32
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*8",
      "definition": 32
     },
     {
@@ -2806,28 +2702,28 @@
     }
    ]
   },
-  "game_engine_status_response_block": {
+  "game_engine_status_response_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "state",
-     "definition": "state_enum"
+     "definition": "state"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2844,7 +2740,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -2854,14 +2750,13 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "quantity message"
    ]
   },
-  "event_enum": {
+  "event": {
    "options": [
     "kill",
     "suicide",
@@ -2915,7 +2810,7 @@
     "pre game over"
    ]
   },
-  "audience_enum": {
+  "audience": {
    "options": [
     "cause player",
     "cause team",
@@ -2924,7 +2819,7 @@
     "all"
    ]
   },
-  "required_field_enum": {
+  "required field": {
    "options": [
     "NONE",
     "cause player",
@@ -2933,18 +2828,18 @@
     "effect team"
    ]
   },
-  "sound_flags_flags": {
+  "sound flags": {
    "options": [
     "announcer sound"
    ]
   },
-  "event_enum_2": {
+  "event_2": {
    "options": [
     "game start",
     "new target"
    ]
   },
-  "event_enum_3": {
+  "event_3": {
    "options": [
     "game start",
     "flag taken",
@@ -2962,7 +2857,7 @@
     "flag capture faliure"
    ]
   },
-  "event_enum_4": {
+  "event_4": {
    "options": [
     "game start",
     "ball spawned",
@@ -2972,7 +2867,7 @@
     "ball tick"
    ]
   },
-  "event_enum_5": {
+  "event_5": {
    "options": [
     "game start",
     "hill controlled",
@@ -2983,7 +2878,7 @@
     "hill contested team"
    ]
   },
-  "event_enum_6": {
+  "event_6": {
    "options": [
     "double kill",
     "triple kill",
@@ -3000,28 +2895,28 @@
     "25 in a row"
    ]
   },
-  "event_enum_7": {
+  "event_7": {
    "options": [
     "game start",
     "medic killed",
     "new medic"
    ]
   },
-  "event_enum_8": {
+  "event_8": {
    "options": [
     "game start",
     "vip killed",
     "new vip"
    ]
   },
-  "event_enum_9": {
+  "event_9": {
    "options": [
     "game start",
     "new juggernaut",
     "juggernaut killed"
    ]
   },
-  "event_enum_10": {
+  "event_10": {
    "options": [
     "game start",
     "territory control gained",
@@ -3032,7 +2927,7 @@
     "team all territories cntrld"
    ]
   },
-  "event_enum_11": {
+  "event_11": {
    "options": [
     "game start",
     "bomb taken",
@@ -3053,24 +2948,24 @@
     "bomb contested"
    ]
   },
-  "event_enum_12": {
+  "event_12": {
    "options": [
     "game start",
     "player infected"
    ]
   },
-  "event_enum_13": {
+  "event_13": {
    "options": [
     "game start",
     "head pickup"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "unused"
    ]
   },
-  "state_enum": {
+  "state": {
    "options": [
     "waiting for space to clear",
     "observing",
@@ -3108,21 +3003,18 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "sound_response_extra_sounds_struct": {
+  "sound_response_extra_sounds_struct_2": {
    "0": "sound_response_extra_sounds_struct__v0",
-   "1": "sound_response_extra_sounds_struct"
+   "1": "sound_response_extra_sounds_struct_2"
   },
-  "grenade_and_powerup_struct": {
+  "grenade_and_powerup_struct_2": {
    "0": "grenade_and_powerup_struct__v0",
-   "1": "grenade_and_powerup_struct"
+   "1": "grenade_and_powerup_struct_2"
   },
-  "multiplayer_runtime_block": {
-   "0": "multiplayer_runtime_block__v0",
-   "1": "multiplayer_runtime_block"
+  "multiplayer_runtime_block_struct": {
+   "0": "multiplayer_runtime_block_struct__v0",
+   "1": "multiplayer_runtime_block_struct"
   }
  }
 }

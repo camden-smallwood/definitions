@@ -2,23 +2,24 @@
  "name": "cellular_automata2d",
  "tag": "whip",
  "version": 1,
- "flags": 0,
+ "flags": 32,
+ "parent_tag": null,
  "block": "cellular_automata2d_block",
  "blocks": {
-  "states_block_2": {
+  "states_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "states_block"
+   "struct": "states_block_struct",
+   "max_count_string": "MAXIMUM_STATES_PER_RULE"
   },
-  "rules_block_2": {
+  "rules_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "rules_block"
+   "struct": "rules_block_struct",
+   "max_count_string": "MAXIMUM_RULES_PER_CA"
   },
   "cellular_automata2d_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "cellular_automata2d_block_struct"
+   "struct": "cellular_automata2d_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -32,7 +33,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -45,7 +46,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "20*sizeof(long)",
      "definition": 80
     },
     {
@@ -70,7 +71,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
@@ -80,7 +81,7 @@
     {
      "type": "long_flags",
      "name": "interpolation flags",
-     "definition": "interpolation_flags_flags"
+     "definition": "interpolation flags"
     },
     {
      "type": "real_rgb_color",
@@ -92,7 +93,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "19*sizeof(long)",
      "definition": 76
     },
     {
@@ -113,7 +114,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "12*sizeof(long)",
      "definition": 48
     },
     {
@@ -126,12 +127,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "12*sizeof(long)",
      "definition": 48
     },
     {
@@ -140,13 +141,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "40*sizeof(long)",
      "definition": 160
     },
     {
      "type": "block",
      "name": "rules",
-     "definition": "rules_block_2"
+     "definition": "rules_block"
     },
     {
      "type": "terminator",
@@ -154,7 +155,7 @@
     }
    ]
   },
-  "rules_block": {
+  "rules_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 88,
    "fields": [
@@ -168,13 +169,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
      "type": "block",
      "name": "states",
-     "definition": "states_block_2"
+     "definition": "states_block"
     },
     {
      "type": "terminator",
@@ -182,7 +183,7 @@
     }
    ]
   },
-  "states_block": {
+  "states_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 96,
    "fields": [
@@ -200,7 +201,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -209,48 +210,57 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
-     "type": "short_integer",
-     "name": "zero"
+     "type": "short_block_index",
+     "name": "zero",
+     "definition": "states_block"
     },
     {
-     "type": "short_integer",
-     "name": "one"
+     "type": "short_block_index",
+     "name": "one",
+     "definition": "states_block"
     },
     {
-     "type": "short_integer",
-     "name": "two"
+     "type": "short_block_index",
+     "name": "two",
+     "definition": "states_block"
     },
     {
-     "type": "short_integer",
-     "name": "three"
+     "type": "short_block_index",
+     "name": "three",
+     "definition": "states_block"
     },
     {
-     "type": "short_integer",
-     "name": "four"
+     "type": "short_block_index",
+     "name": "four",
+     "definition": "states_block"
     },
     {
-     "type": "short_integer",
-     "name": "five"
+     "type": "short_block_index",
+     "name": "five",
+     "definition": "states_block"
     },
     {
-     "type": "short_integer",
-     "name": "six"
+     "type": "short_block_index",
+     "name": "six",
+     "definition": "states_block"
     },
     {
-     "type": "short_integer",
-     "name": "seven"
+     "type": "short_block_index",
+     "name": "seven",
+     "definition": "states_block"
     },
     {
-     "type": "short_integer",
-     "name": "eight"
+     "type": "short_block_index",
+     "name": "eight",
+     "definition": "states_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -260,17 +270,12 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "interpolation_flags_flags": {
+  "interpolation flags": {
    "options": [
-    "blend in hsv",
-    "...more colors"
+    "blend in hsv#blends colors in hsv rather than rgb space",
+    "...more colors#blends colors through more hues (goes the long way around the color wheel)"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

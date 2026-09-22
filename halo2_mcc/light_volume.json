@@ -2,38 +2,39 @@
  "name": "light_volume",
  "tag": "MGS2",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "light_volume_block",
  "blocks": {
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "light_volume_aspect_block_2": {
+  "light_volume_aspect_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "light_volume_aspect_block"
+   "struct": "light_volume_aspect_block_struct",
+   "max_count_string": "1"
   },
-  "light_volume_runtime_offset_block_2": {
+  "light_volume_runtime_offset_block": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "light_volume_runtime_offset_block"
+   "struct": "light_volume_runtime_offset_block_struct",
+   "max_count_string": "k_maximum_sprites_per_light_volume"
   },
-  "light_volume_volume_block_2": {
+  "light_volume_volume_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "light_volume_volume_block"
+   "struct": "light_volume_volume_block_struct",
+   "max_count_string": "k_maximum_volumes_per_light_volume_definition"
   },
   "light_volume_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "light_volume_block_struct"
+   "struct": "light_volume_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -62,7 +63,7 @@
     {
      "type": "block",
      "name": "volumes",
-     "definition": "light_volume_volume_block_2"
+     "definition": "light_volume_volume_block"
     },
     {
      "type": "terminator",
@@ -70,14 +71,14 @@
     }
    ]
   },
-  "light_volume_volume_block": {
+  "light_volume_volume_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 188,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "useless_pad",
@@ -100,22 +101,22 @@
     {
      "type": "struct",
      "name": "offset function",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "struct",
      "name": "radius function",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "struct",
      "name": "brightness function",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "struct",
      "name": "color function",
-     "definition": "color_function_struct"
+     "definition": "color_function_struct_2"
     },
     {
      "type": "useless_pad",
@@ -125,7 +126,7 @@
     {
      "type": "struct",
      "name": "facing function",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "useless_pad",
@@ -135,7 +136,7 @@
     {
      "type": "block",
      "name": "aspect",
-     "definition": "light_volume_aspect_block_2"
+     "definition": "light_volume_aspect_block"
     },
     {
      "type": "useless_pad",
@@ -148,11 +149,11 @@
     },
     {
      "type": "real_fraction",
-     "name": "DEPRECATED x-step exponent"
+     "name": "DEPRECATED!! x-step exponent"
     },
     {
      "type": "long_integer",
-     "name": "DEPRECATED x-buffer length"
+     "name": "DEPRECATED!! x-buffer length"
     },
     {
      "type": "long_integer",
@@ -177,17 +178,17 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(dword)",
      "definition": 4
     },
     {
      "type": "block",
      "name": null,
-     "definition": "light_volume_runtime_offset_block_2"
+     "definition": "light_volume_runtime_offset_block"
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "2*sizeof(s_light_volume_runtime_offset_results)",
      "definition": 48
     },
     {
@@ -196,7 +197,7 @@
     }
    ]
   },
-  "scalar_function_struct": {
+  "scalar_function_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -207,7 +208,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -231,7 +232,7 @@
     {
      "type": "byte_flags",
      "name": "Flags",
-     "definition": "flags_flags_2"
+     "definition": "Flags"
     },
     {
      "type": "char_integer",
@@ -260,7 +261,7 @@
     {
      "type": "block",
      "name": "Values",
-     "definition": "real_block_2"
+     "definition": "real_block"
     },
     {
      "type": "custom",
@@ -273,7 +274,7 @@
    ],
    "tag": "MAPP"
   },
-  "real_block": {
+  "real_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -287,7 +288,7 @@
     }
    ]
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -298,7 +299,7 @@
     {
      "type": "block",
      "name": "data",
-     "definition": "byte_block_2"
+     "definition": "byte_block"
     },
     {
      "type": "custom",
@@ -311,7 +312,7 @@
    ],
    "tag": "MAPP"
   },
-  "byte_block": {
+  "byte_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -325,7 +326,7 @@
     }
    ]
   },
-  "color_function_struct": {
+  "color_function_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -336,7 +337,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -345,19 +346,19 @@
    ],
    "tag": "CLFN"
   },
-  "light_volume_aspect_block": {
+  "light_volume_aspect_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
      "type": "struct",
      "name": "along axis",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "struct",
      "name": "away from axis",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "real",
@@ -377,7 +378,7 @@
     }
    ]
   },
-  "light_volume_runtime_offset_block": {
+  "light_volume_runtime_offset_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -392,9 +393,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "force linear radius function",
     "force linear offset",
@@ -404,7 +404,7 @@
     "scaled by marker"
    ]
   },
-  "flags_flags_2": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -417,13 +417,10 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   }
  }
 }

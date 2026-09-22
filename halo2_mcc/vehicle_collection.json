@@ -2,18 +2,19 @@
  "name": "vehicle_collection",
  "tag": "vehc",
  "version": 0,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "vehicle_collection_block",
  "blocks": {
-  "vehicle_permutation_2": {
+  "vehicle_permutation": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "vehicle_permutation"
+   "struct": "vehicle_permutation_struct",
+   "max_count_string": "32"
   },
   "vehicle_collection_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "vehicle_collection_block_struct"
+   "struct": "vehicle_collection_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,7 +25,7 @@
     {
      "type": "block",
      "name": "vehicle permutations",
-     "definition": "vehicle_permutation_2"
+     "definition": "vehicle_permutation"
     },
     {
      "type": "short_integer",
@@ -32,7 +33,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1 * sizeof(short)",
      "definition": 2
     },
     {
@@ -41,7 +42,7 @@
     }
    ]
   },
-  "vehicle_permutation": {
+  "vehicle_permutation_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -63,11 +64,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

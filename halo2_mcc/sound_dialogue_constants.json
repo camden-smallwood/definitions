@@ -2,13 +2,14 @@
  "name": "sound_dialogue_constants",
  "tag": "spk!",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "sound_dialogue_constants_block",
  "blocks": {
   "sound_dialogue_constants_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sound_dialogue_constants_block_struct"
+   "struct": "sound_dialogue_constants_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -34,7 +35,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(real)",
      "definition": 24
     },
     {
@@ -43,11 +44,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

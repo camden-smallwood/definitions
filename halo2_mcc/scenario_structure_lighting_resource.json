@@ -2,23 +2,24 @@
  "name": "scenario_structure_lighting_resource",
  "tag": "sslt",
  "version": 1,
- "flags": 0,
+ "flags": 56,
+ "parent_tag": null,
  "block": "scenario_structure_lighting_resource_block",
  "blocks": {
-  "scenario_spherical_harmonic_lighting_point_2": {
+  "scenario_spherical_harmonic_lighting_point": {
    "max_count": 32768,
-   "max_count_string": "32768",
-   "struct": "scenario_spherical_harmonic_lighting_point"
+   "struct": "scenario_spherical_harmonic_lighting_point_struct",
+   "max_count_string": "k_maximum_structure_bsp_spherical_harmonic_lighting_points"
   },
-  "scenario_structure_bsp_spherical_harmonic_lighting_block_2": {
+  "scenario_structure_bsp_spherical_harmonic_lighting_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "scenario_structure_bsp_spherical_harmonic_lighting_block"
+   "struct": "scenario_structure_bsp_spherical_harmonic_lighting_block_struct",
+   "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO"
   },
   "scenario_structure_lighting_resource_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "scenario_structure_lighting_resource_block_struct"
+   "struct": "scenario_structure_lighting_resource_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -29,7 +30,7 @@
     {
      "type": "block",
      "name": "structure lighting",
-     "definition": "scenario_structure_bsp_spherical_harmonic_lighting_block_2"
+     "definition": "scenario_structure_bsp_spherical_harmonic_lighting_block"
     },
     {
      "type": "terminator",
@@ -37,7 +38,7 @@
     }
    ]
   },
-  "scenario_structure_bsp_spherical_harmonic_lighting_block": {
+  "scenario_structure_bsp_spherical_harmonic_lighting_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
@@ -48,7 +49,7 @@
     {
      "type": "block",
      "name": "lighting points",
-     "definition": "scenario_spherical_harmonic_lighting_point_2"
+     "definition": "scenario_spherical_harmonic_lighting_point"
     },
     {
      "type": "terminator",
@@ -56,7 +57,7 @@
     }
    ]
   },
-  "scenario_spherical_harmonic_lighting_point": {
+  "scenario_spherical_harmonic_lighting_point_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -70,11 +71,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

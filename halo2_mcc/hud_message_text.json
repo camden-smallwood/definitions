@@ -2,23 +2,24 @@
  "name": "hud_message_text",
  "tag": "hmt ",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "hud_message_text_block",
  "blocks": {
-  "hud_message_elements_block_2": {
+  "hud_message_elements_block": {
    "max_count": 8192,
-   "max_count_string": "8192",
-   "struct": "hud_message_elements_block"
+   "struct": "hud_message_elements_block_struct",
+   "max_count_string": "MAX_STATE_MESSAGES*MAX_STATE_TEXT_PANELS"
   },
-  "hud_messages_block_2": {
+  "hud_messages_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "hud_messages_block"
+   "struct": "hud_messages_block_struct",
+   "max_count_string": "MAX_STATE_MESSAGES"
   },
   "hud_message_text_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "hud_message_text_block_struct"
+   "struct": "hud_message_text_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -29,21 +30,21 @@
     {
      "type": "data",
      "name": "text data",
-     "definition": "text_data_data"
+     "definition": "string_data_definition"
     },
     {
      "type": "block",
      "name": "message elements",
-     "definition": "hud_message_elements_block_2"
+     "definition": "hud_message_elements_block"
     },
     {
      "type": "block",
      "name": "messages",
-     "definition": "hud_messages_block_2"
+     "definition": "hud_messages_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "21*sizeof(long)",
      "definition": 84
     },
     {
@@ -52,7 +53,7 @@
     }
    ]
   },
-  "hud_message_elements_block": {
+  "hud_message_elements_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
@@ -70,7 +71,7 @@
     }
    ]
   },
-  "hud_messages_block": {
+  "hud_messages_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
@@ -92,12 +93,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3",
      "definition": 3
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*6",
      "definition": 24
     },
     {
@@ -107,17 +108,7 @@
    ]
   }
  },
- "arrays": {},
- "enums_flags": {},
  "datas": {
-  "text_data_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  }
- },
- "resources": {},
- "interops": {},
- "struct_versions": {}
+  "string_data_definition": {}
+ }
 }

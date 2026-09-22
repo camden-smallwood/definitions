@@ -2,98 +2,89 @@
  "name": "user_interface_shared_globals_definition",
  "tag": "wigl",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "user_interface_shared_globals_definition_block",
  "blocks": {
-  "ui_error_block_2": {
+  "ui_error_block": {
    "max_count": 100,
-   "max_count_string": "100",
-   "struct": "ui_error_block"
+   "struct": "ui_error_block_struct",
+   "max_count_string": "k_ui_maximum_error_per_category_count"
   },
-  "ui_error_category_block_2": {
+  "ui_error_category_block": {
    "max_count": 100,
-   "max_count_string": "100",
-   "struct": "ui_error_category_block"
+   "struct": "ui_error_category_block_struct",
+   "max_count_string": "k_maximum_error_category_count"
   },
-  "screen_animation_keyframe_reference_block_2": {
+  "screen_animation_keyframe_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "screen_animation_keyframe_reference_block"
+   "struct": "screen_animation_keyframe_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_animation_keyframe_blocks"
   },
-  "screen_animation_keyframe_reference_block_3": {
+  "animation_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "screen_animation_keyframe_reference_block"
+   "struct": "animation_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_widget_animations_per_screen"
   },
-  "screen_animation_keyframe_reference_block_4": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "screen_animation_keyframe_reference_block"
-  },
-  "animation_reference_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "animation_reference_block"
-  },
-  "point_block_reference_block_2": {
+  "point_block_reference_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "point_block_reference_block"
+   "struct": "point_block_reference_block_struct",
+   "max_count_string": "k_maximum_points_per_shape"
   },
-  "shape_block_reference_block_2": {
+  "shape_block_reference_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "shape_block_reference_block"
+   "struct": "shape_block_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_shape_blocks"
   },
-  "ui_object_reference_block_2": {
+  "ui_object_reference_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "ui_object_reference_block"
+   "struct": "ui_object_reference_block_struct",
+   "max_count_string": "k_maximum_objects_per_ui_scene"
   },
-  "ui_light_reference_block_2": {
+  "ui_light_reference_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "ui_light_reference_block"
+   "struct": "ui_light_reference_block_struct",
+   "max_count_string": "k_maximum_lights_per_ui_scene"
   },
-  "ui_model_scene_reference_block_2": {
+  "ui_model_scene_reference_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "ui_model_scene_reference_block"
+   "struct": "ui_model_scene_reference_block_struct",
+   "max_count_string": "k_maximum_object_scenes_per_screen"
   },
-  "bitmap_block_reference_block_2": {
+  "bitmap_block_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "bitmap_block_reference_block"
+   "struct": "bitmap_block_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_bitmap_blocks"
   },
-  "shape_group_reference_block_2": {
+  "shape_group_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "shape_group_reference_block"
+   "struct": "shape_group_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_shapes_per_group"
   },
-  "background_animation_keyframe_reference_block_2": {
+  "background_animation_keyframe_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "background_animation_keyframe_reference_block"
+   "struct": "background_animation_keyframe_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_animation_keyframe_blocks"
   },
-  "persistent_background_animation_block_2": {
+  "persistent_background_animation_block": {
    "max_count": 100,
-   "max_count_string": "100",
-   "struct": "persistent_background_animation_block"
+   "struct": "persistent_background_animation_block_struct",
+   "max_count_string": "k_maximum_number_of_persisant_animations"
   },
-  "list_skin_reference_block_2": {
+  "list_skin_reference_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "list_skin_reference_block"
+   "struct": "list_skin_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_list_item_skins"
   },
-  "skill_to_rank_mapping_block_2": {
+  "skill_to_rank_mapping_block": {
    "max_count": 65535,
-   "max_count_string": "65535",
-   "struct": "skill_to_rank_mapping_block"
+   "struct": "skill_to_rank_mapping_block_struct",
+   "max_count_string": "UNSIGNED_SHORT_MAX"
   },
   "user_interface_shared_globals_definition_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "user_interface_shared_globals_definition_block_struct"
+   "struct": "user_interface_shared_globals_definition_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -103,42 +94,42 @@
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_argb_color)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(rectangle2d)",
      "definition": 8
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(rectangle2d)",
      "definition": 8
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(rectangle2d)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(rectangle2d)",
      "definition": 8
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(rectangle2d)",
      "definition": 8
     },
     {
@@ -179,13 +170,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
      "type": "block",
      "name": "errors",
-     "definition": "ui_error_category_block_2"
+     "definition": "ui_error_category_block"
     },
     {
      "type": "tag_reference",
@@ -262,22 +253,22 @@
     {
      "type": "block",
      "name": "screen animations",
-     "definition": "animation_reference_block_2"
+     "definition": "animation_reference_block"
     },
     {
      "type": "block",
      "name": "shape groups",
-     "definition": "shape_group_reference_block_2"
+     "definition": "shape_group_reference_block"
     },
     {
      "type": "block",
      "name": "animations",
-     "definition": "persistent_background_animation_block_2"
+     "definition": "persistent_background_animation_block"
     },
     {
      "type": "block",
      "name": "list item skins",
-     "definition": "list_skin_reference_block_2"
+     "definition": "list_skin_reference_block"
     },
     {
      "type": "tag_reference",
@@ -294,27 +285,27 @@
     {
      "type": "block",
      "name": "skill mappings",
-     "definition": "skill_to_rank_mapping_block_2"
+     "definition": "skill_to_rank_mapping_block"
     },
     {
      "type": "short_enum",
      "name": "full screen header text font",
-     "definition": "full_screen_header_text_font_enum"
+     "definition": "full screen header text font"
     },
     {
      "type": "short_enum",
      "name": "large dialog header text font",
-     "definition": "full_screen_header_text_font_enum"
+     "definition": "full screen header text font"
     },
     {
      "type": "short_enum",
      "name": "half dialog header text font",
-     "definition": "full_screen_header_text_font_enum"
+     "definition": "full screen header text font"
     },
     {
      "type": "short_enum",
      "name": "qtr dialog header text font",
-     "definition": "full_screen_header_text_font_enum"
+     "definition": "full screen header text font"
     },
     {
      "type": "real_argb_color",
@@ -366,7 +357,7 @@
     }
    ]
   },
-  "ui_error_category_block": {
+  "ui_error_category_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
@@ -377,16 +368,16 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "char_enum",
      "name": "default button",
-     "definition": "default_button_enum"
+     "definition": "default button"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(byte)",
      "definition": 1
     },
     {
@@ -412,7 +403,7 @@
     {
      "type": "block",
      "name": "error block",
-     "definition": "ui_error_block_2"
+     "definition": "ui_error_block"
     },
     {
      "type": "terminator",
@@ -420,28 +411,28 @@
     }
    ]
   },
-  "ui_error_block": {
+  "ui_error_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
     {
      "type": "long_enum",
      "name": "error",
-     "definition": "error_enum"
+     "definition": "error"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "char_enum",
      "name": "default button",
-     "definition": "default_button_enum"
+     "definition": "default button"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(byte)",
      "definition": 1
     },
     {
@@ -466,14 +457,14 @@
     }
    ]
   },
-  "animation_reference_block": {
+  "animation_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 56,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "long_integer",
@@ -482,7 +473,7 @@
     {
      "type": "block",
      "name": "keyframes",
-     "definition": "screen_animation_keyframe_reference_block_2"
+     "definition": "screen_animation_keyframe_reference_block"
     },
     {
      "type": "useless_pad",
@@ -501,7 +492,7 @@
     {
      "type": "block",
      "name": "keyframes",
-     "definition": "screen_animation_keyframe_reference_block_3"
+     "definition": "screen_animation_keyframe_reference_block"
     },
     {
      "type": "useless_pad",
@@ -520,17 +511,17 @@
     {
      "type": "short_enum",
      "name": "ambient animation looping style",
-     "definition": "ambient_animation_looping_style_enum"
+     "definition": "ambient animation looping style"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "keyframes",
-     "definition": "screen_animation_keyframe_reference_block_4"
+     "definition": "screen_animation_keyframe_reference_block"
     },
     {
      "type": "useless_pad",
@@ -543,13 +534,13 @@
     }
    ]
   },
-  "screen_animation_keyframe_reference_block": {
+  "screen_animation_keyframe_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -566,24 +557,24 @@
     }
    ]
   },
-  "shape_group_reference_block": {
+  "shape_group_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
      "type": "block",
      "name": "shapes",
-     "definition": "shape_block_reference_block_2"
+     "definition": "shape_block_reference_block"
     },
     {
      "type": "block",
      "name": "model scene blocks",
-     "definition": "ui_model_scene_reference_block_2"
+     "definition": "ui_model_scene_reference_block"
     },
     {
      "type": "block",
      "name": "bitmap blocks",
-     "definition": "bitmap_block_reference_block_2"
+     "definition": "bitmap_block_reference_block"
     },
     {
      "type": "terminator",
@@ -591,19 +582,19 @@
     }
    ]
   },
-  "shape_block_reference_block": {
+  "shape_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_3"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -616,7 +607,7 @@
     {
      "type": "block",
      "name": "points",
-     "definition": "point_block_reference_block_2"
+     "definition": "point_block_reference_block"
     },
     {
      "type": "short_integer",
@@ -624,7 +615,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)+3*sizeof(long)",
      "definition": 14
     },
     {
@@ -633,7 +624,7 @@
     }
    ]
   },
-  "point_block_reference_block": {
+  "point_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -647,19 +638,19 @@
     }
    ]
   },
-  "ui_model_scene_reference_block": {
+  "ui_model_scene_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_4"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -671,18 +662,18 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "objects",
-     "definition": "ui_object_reference_block_2"
+     "definition": "ui_object_reference_block"
     },
     {
      "type": "block",
      "name": "lights",
-     "definition": "ui_light_reference_block_2"
+     "definition": "ui_light_reference_block"
     },
     {
      "type": "real_vector_3d",
@@ -723,7 +714,7 @@
     }
    ]
   },
-  "ui_object_reference_block": {
+  "ui_object_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -737,7 +728,7 @@
     }
    ]
   },
-  "ui_light_reference_block": {
+  "ui_light_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -751,19 +742,19 @@
     }
    ]
   },
-  "bitmap_block_reference_block": {
+  "bitmap_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_5"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -772,7 +763,7 @@
     {
      "type": "short_enum",
      "name": "bitmap blend method",
-     "definition": "bitmap_blend_method_enum"
+     "definition": "bitmap blend method"
     },
     {
      "type": "short_integer",
@@ -800,7 +791,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -845,13 +836,13 @@
     }
    ]
   },
-  "persistent_background_animation_block": {
+  "persistent_background_animation_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -861,7 +852,7 @@
     {
      "type": "block",
      "name": "interpolated keyframes",
-     "definition": "background_animation_keyframe_reference_block_2"
+     "definition": "background_animation_keyframe_reference_block"
     },
     {
      "type": "terminator",
@@ -869,7 +860,7 @@
     }
    ]
   },
-  "background_animation_keyframe_reference_block": {
+  "background_animation_keyframe_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -891,7 +882,7 @@
     }
    ]
   },
-  "list_skin_reference_block": {
+  "list_skin_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -905,7 +896,7 @@
     }
    ]
   },
-  "skill_to_rank_mapping_block": {
+  "skill_to_rank_mapping_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -920,21 +911,20 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "use large dialog"
    ]
   },
-  "default_button_enum": {
+  "default button": {
    "options": [
     "no default",
     "default ok",
     "default cancel"
    ]
   },
-  "error_enum": {
+  "error": {
    "options": [
     "error_unknown",
     "error_generic",
@@ -1226,12 +1216,12 @@
     "error_map_download_profane_name"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "unused"
    ]
   },
-  "ambient_animation_looping_style_enum": {
+  "ambient animation looping style": {
    "options": [
     "NONE",
     "reverse loop",
@@ -1239,7 +1229,12 @@
     "don't loop"
    ]
   },
-  "animation_index_enum": {
+  "flags_3": {
+   "options": [
+    "unused"
+   ]
+  },
+  "animation index": {
    "options": [
     "NONE",
     "00",
@@ -1308,21 +1303,26 @@
     "63"
    ]
   },
-  "flags_flags_3": {
+  "flags_4": {
+   "options": [
+    "unused"
+   ]
+  },
+  "flags_5": {
    "options": [
     "ignore for list skin size calculation",
     "swap on relative list position",
     "render as progress bar"
    ]
   },
-  "bitmap_blend_method_enum": {
+  "bitmap blend method": {
    "options": [
     "standard",
     "multiply",
-    "UNUSED"
+    "UNUSED!"
    ]
   },
-  "full_screen_header_text_font_enum": {
+  "full screen header text font": {
    "options": [
     "terminal",
     "body text",
@@ -1338,9 +1338,5 @@
     "text chat font"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

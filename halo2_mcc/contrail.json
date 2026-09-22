@@ -2,18 +2,19 @@
  "name": "contrail",
  "tag": "cont",
  "version": 3,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "contrail_block",
  "blocks": {
-  "contrail_point_states_block_2": {
+  "contrail_point_states_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "contrail_point_states_block"
+   "struct": "contrail_point_states_block_struct",
+   "max_count_string": "MAXIMUM_CONTRAIL_POINT_STATES_PER_CONTRAIL"
   },
   "contrail_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "contrail_block_struct"
+   "struct": "contrail_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,12 +25,12 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "word_flags",
      "name": "scale flags",
-     "definition": "scale_flags_flags"
+     "definition": "scale flags"
     },
     {
      "type": "real",
@@ -50,11 +51,11 @@
     {
      "type": "short_enum",
      "name": "render type",
-     "definition": "render_type_enum"
+     "definition": "render type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -96,32 +97,32 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(struct _shader)",
      "definition": 40
     },
     {
      "type": "word_flags",
      "name": "shader flags",
-     "definition": "shader_flags_flags"
+     "definition": "shader flags"
     },
     {
      "type": "short_enum",
      "name": "framebuffer blend function",
-     "definition": "framebuffer_blend_function_enum"
+     "definition": "framebuffer blend function"
     },
     {
      "type": "short_enum",
      "name": "framebuffer fade mode",
-     "definition": "framebuffer_fade_mode_enum"
+     "definition": "framebuffer fade mode"
     },
     {
      "type": "word_flags",
      "name": "map flags",
-     "definition": "map_flags_flags"
+     "definition": "map flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
@@ -131,22 +132,22 @@
     {
      "type": "short_enum",
      "name": "anchor",
-     "definition": "anchor_enum"
+     "definition": "anchor"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "map_flags_flags"
+     "definition": "map flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "u-animation function",
-     "definition": "u_animation_function_enum"
+     "definition": "u-animation function"
     },
     {
      "type": "real",
@@ -162,13 +163,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "v-animation function",
-     "definition": "u_animation_function_enum"
+     "definition": "u-animation function"
     },
     {
      "type": "real",
@@ -184,13 +185,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "rotation-animation function",
-     "definition": "u_animation_function_enum"
+     "definition": "u-animation function"
     },
     {
      "type": "real",
@@ -210,7 +211,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -219,13 +220,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
      "type": "block",
      "name": "point states",
-     "definition": "contrail_point_states_block_2"
+     "definition": "contrail_point_states_block"
     },
     {
      "type": "terminator",
@@ -233,7 +234,7 @@
     }
    ]
   },
-  "contrail_point_states_block": {
+  "contrail_point_states_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 72,
    "fields": [
@@ -269,7 +270,7 @@
     {
      "type": "long_flags",
      "name": "scale flags",
-     "definition": "scale_flags_flags_2"
+     "definition": "scale flags_2"
     },
     {
      "type": "terminator",
@@ -278,9 +279,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "first point unfaded",
     "last point unfaded",
@@ -292,7 +292,7 @@
     "dont't inherit object change color"
    ]
   },
-  "scale_flags_flags": {
+  "scale flags": {
    "options": [
     "point generation rate",
     "point velocity",
@@ -306,7 +306,7 @@
     "texture animation v"
    ]
   },
-  "render_type_enum": {
+  "render type": {
    "options": [
     "vertical orientation",
     "horizontal orientation",
@@ -316,14 +316,14 @@
     "double-marker linked"
    ]
   },
-  "shader_flags_flags": {
+  "shader flags": {
    "options": [
     "sort bias",
     "nonlinear tint",
     "don't overdraw fp weapon"
    ]
   },
-  "framebuffer_blend_function_enum": {
+  "framebuffer blend function": {
    "options": [
     "alpha blend",
     "multiply",
@@ -338,26 +338,26 @@
     "none"
    ]
   },
-  "framebuffer_fade_mode_enum": {
+  "framebuffer fade mode": {
    "options": [
     "none",
     "fade when perpendicular",
     "fade when parallel"
    ]
   },
-  "map_flags_flags": {
+  "map flags": {
    "options": [
     "unfiltered"
    ]
   },
-  "anchor_enum": {
+  "anchor": {
    "options": [
     "with primary",
     "with screen space",
     "zsprite"
    ]
   },
-  "u_animation_function_enum": {
+  "u-animation function": {
    "options": [
     "one",
     "zero",
@@ -373,7 +373,7 @@
     "spark"
    ]
   },
-  "scale_flags_flags_2": {
+  "scale flags_2": {
    "options": [
     "duration",
     "duration delta",
@@ -383,9 +383,5 @@
     "color"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

@@ -2,48 +2,49 @@
  "name": "weather_system",
  "tag": "weat",
  "version": 1,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "weather_system_block",
  "blocks": {
-  "global_geometry_block_resource_block_2": {
+  "global_geometry_block_resource_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "global_geometry_block_resource_block"
+   "struct": "global_geometry_block_resource_block_struct",
+   "max_count_string": "MAXIMUM_RESOURCES_PER_GEOMETRY_BLOCK"
   },
-  "particles_render_data_block_2": {
+  "particles_render_data_block": {
    "max_count": 4096,
-   "max_count_string": "4096",
-   "struct": "particles_render_data_block"
+   "struct": "particles_render_data_block_struct",
+   "max_count_string": "MAX_PARTICLES_LITE"
   },
-  "particles_update_data_block_2": {
+  "particles_update_data_block": {
    "max_count": 4096,
-   "max_count_string": "4096",
-   "struct": "particles_update_data_block"
+   "struct": "particles_update_data_block_struct",
+   "max_count_string": "MAX_PARTICLES_LITE"
   },
-  "particle_system_lite_data_block_2": {
+  "particle_system_lite_data_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "particle_system_lite_data_block"
+   "struct": "particle_system_lite_data_block_struct",
+   "max_count_string": "1"
   },
-  "global_particle_system_lite_block_2": {
+  "global_particle_system_lite_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "global_particle_system_lite_block"
+   "struct": "global_particle_system_lite_block_struct",
+   "max_count_string": "1"
   },
-  "global_weather_background_plate_block_2": {
+  "global_weather_background_plate_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "global_weather_background_plate_block"
+   "struct": "global_weather_background_plate_block_struct",
+   "max_count_string": "3"
   },
-  "gloal_wind_primitives_block_2": {
+  "gloal_wind_primitives_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "gloal_wind_primitives_block"
+   "struct": "gloal_wind_primitives_block_struct",
+   "max_count_string": "MAX_WIND_PRIMITIVES"
   },
   "weather_system_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "weather_system_block_struct"
+   "struct": "weather_system_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -54,17 +55,17 @@
     {
      "type": "block",
      "name": "particle system",
-     "definition": "global_particle_system_lite_block_2"
+     "definition": "global_particle_system_lite_block"
     },
     {
      "type": "block",
      "name": "background plates",
-     "definition": "global_weather_background_plate_block_2"
+     "definition": "global_weather_background_plate_block"
     },
     {
      "type": "struct",
      "name": "wind model",
-     "definition": "global_wind_model_struct"
+     "definition": "global_wind_model_struct_2"
     },
     {
      "type": "real",
@@ -76,7 +77,7 @@
     }
    ]
   },
-  "global_particle_system_lite_block": {
+  "global_particle_system_lite_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 156,
    "fields": [
@@ -135,21 +136,21 @@
     {
      "type": "struct",
      "name": "geometry block info",
-     "definition": "global_geometry_block_info_struct"
+     "definition": "global_geometry_block_info_struct_2"
     },
     {
      "type": "block",
      "name": "particle system data",
-     "definition": "particle_system_lite_data_block_2"
+     "definition": "particle_system_lite_data_block"
     },
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum_2"
+     "definition": "type_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -170,17 +171,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -189,7 +190,7 @@
     }
    ]
   },
-  "global_geometry_block_info_struct": {
+  "global_geometry_block_info_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -212,11 +213,11 @@
     {
      "type": "block",
      "name": "resources",
-     "definition": "global_geometry_block_resource_block_2"
+     "definition": "global_geometry_block_resource_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -225,12 +226,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -240,18 +241,18 @@
    ],
    "tag": "BLOK"
   },
-  "global_geometry_block_resource_block": {
+  "global_geometry_block_resource_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "char_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(byte)",
      "definition": 3
     },
     {
@@ -276,23 +277,23 @@
     }
    ]
   },
-  "particle_system_lite_data_block": {
+  "particle_system_lite_data_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 56,
    "fields": [
     {
      "type": "block",
      "name": "particles render data",
-     "definition": "particles_render_data_block_2"
+     "definition": "particles_render_data_block"
     },
     {
      "type": "block",
      "name": "particles other data",
-     "definition": "particles_update_data_block_2"
+     "definition": "particles_update_data_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "32",
      "definition": 32
     },
     {
@@ -301,7 +302,7 @@
     }
    ]
   },
-  "particles_render_data_block": {
+  "particles_render_data_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -331,7 +332,7 @@
     }
    ]
   },
-  "particles_update_data_block": {
+  "particles_update_data_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -349,7 +350,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_vector3d)",
      "definition": 12
     },
     {
@@ -366,7 +367,7 @@
     }
    ]
   },
-  "global_weather_background_plate_block": {
+  "global_weather_background_plate_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 960,
    "fields": [
@@ -461,7 +462,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real_rgb_color",
@@ -489,7 +490,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "UNEXPOSED_DATA_SIZE",
      "definition": 736
     },
     {
@@ -498,7 +499,7 @@
     }
    ]
   },
-  "global_wind_model_struct": {
+  "global_wind_model_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 160,
    "fields": [
@@ -520,17 +521,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_vector3d)",
      "definition": 12
     },
     {
@@ -551,32 +552,32 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_vector3d)",
      "definition": 12
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_vector3d)",
      "definition": 12
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_vector3d)",
      "definition": 12
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_vector3d)",
      "definition": 12
     },
     {
@@ -594,11 +595,11 @@
     {
      "type": "block",
      "name": "wind_pirmitives",
-     "definition": "gloal_wind_primitives_block_2"
+     "definition": "gloal_wind_primitives_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -608,7 +609,7 @@
    ],
    "tag": "WNDM"
   },
-  "gloal_wind_primitives_block": {
+  "gloal_wind_primitives_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -627,11 +628,11 @@
     {
      "type": "short_enum",
      "name": "wind primitive type",
-     "definition": "wind_primitive_type_enum"
+     "definition": "wind primitive type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -641,16 +642,15 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "type_enum": {
+  "type": {
    "options": [
     "tag block",
     "tag data",
     "vertex buffer"
    ]
   },
-  "type_enum_2": {
+  "type_2": {
    "options": [
     "generic",
     "snow",
@@ -662,14 +662,14 @@
     "bubbles"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "forward motion",
     "auto position planes",
     "auto scale planesauto update speed"
    ]
   },
-  "wind_primitive_type_enum": {
+  "wind primitive type": {
    "options": [
     "vortex",
     "gust",
@@ -677,9 +677,5 @@
     "explosion"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

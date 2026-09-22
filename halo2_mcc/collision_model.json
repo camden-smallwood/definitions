@@ -2,253 +2,179 @@
  "name": "collision_model",
  "tag": "coll",
  "version": 10,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "collision_model_block",
  "blocks": {
-  "error_report_vertices_block_2": {
+  "error_report_vertices_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_vertices_block"
+   "struct": "error_report_vertices_block_struct",
+   "max_count_string": "MAXIMUM_VERTICES_PER_ERROR_REPORT"
   },
-  "error_report_vectors_block_2": {
+  "error_report_vectors_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_vectors_block"
+   "struct": "error_report_vectors_block_struct",
+   "max_count_string": "MAXIMUM_VECTORS_PER_ERROR_REPORT"
   },
-  "error_report_lines_block_2": {
+  "error_report_lines_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_lines_block"
+   "struct": "error_report_lines_block_struct",
+   "max_count_string": "MAXIMUM_LINES_PER_ERROR_REPORT"
   },
-  "error_report_triangles_block_2": {
+  "error_report_triangles_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_triangles_block"
+   "struct": "error_report_triangles_block_struct",
+   "max_count_string": "MAXIMUM_TRIANGLES_PER_ERROR_REPORT"
   },
-  "error_report_quads_block_2": {
+  "error_report_quads_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_quads_block"
+   "struct": "error_report_quads_block_struct",
+   "max_count_string": "MAXIMUM_QUADS_PER_ERROR_REPORT"
   },
-  "error_report_comments_block_2": {
+  "error_report_comments_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_comments_block"
+   "struct": "error_report_comments_block_struct",
+   "max_count_string": "MAXIMUM_COMMENTS_PER_ERROR_REPORT"
   },
-  "error_reports_block_2": {
+  "error_reports_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_reports_block"
+   "struct": "error_reports_block_struct",
+   "max_count_string": "MAXIMUM_REPORTS_PER_ERROR_REPORT_CATEGORY"
   },
-  "global_error_report_categories_block_2": {
+  "global_error_report_categories_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "global_error_report_categories_block"
+   "struct": "global_error_report_categories_block_struct",
+   "max_count_string": "MAXIMUM_ERROR_REPORT_CATEGORIES"
   },
-  "collision_model_material_block_2": {
+  "collision_model_material_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "collision_model_material_block"
+   "struct": "collision_model_material_block_struct",
+   "max_count_string": "MAXIMUM_MATERIALS_PER_MODEL"
   },
-  "large_bsp3d_nodes_block_2": {
+  "large_bsp3d_nodes_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "large_bsp3d_nodes_block"
+   "struct": "large_bsp3d_nodes_block_struct",
+   "max_count_string": "MAXIMUM_NODES_PER_BSP3D"
   },
-  "planes_block_2": {
+  "planes_block": {
    "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "planes_block"
+   "struct": "planes_block_struct",
+   "max_count_string": "MAXIMUM_PLANES_PER_BSP3D"
   },
-  "large_leaves_block_2": {
+  "large_leaves_block": {
    "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "large_leaves_block"
+   "struct": "large_leaves_block_struct",
+   "max_count_string": "MAXIMUM_LEAVES_PER_BSP3D"
   },
-  "large_bsp2d_references_block_2": {
+  "large_bsp2d_references_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "large_bsp2d_references_block"
+   "struct": "large_bsp2d_references_block_struct",
+   "max_count_string": "MAXIMUM_BSP2D_REFERENCES_PER_COLLISION_BSP"
   },
-  "large_bsp2d_nodes_block_2": {
+  "large_bsp2d_nodes_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "large_bsp2d_nodes_block"
+   "struct": "large_bsp2d_nodes_block_struct",
+   "max_count_string": "MAXIMUM_NODES_PER_BSP2D"
   },
-  "large_surfaces_block_2": {
+  "large_surfaces_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "large_surfaces_block"
+   "struct": "large_surfaces_block_struct",
+   "max_count_string": "MAXIMUM_SURFACES_PER_COLLISION_BSP"
   },
-  "large_edges_block_2": {
+  "large_edges_block": {
    "max_count": 262144,
-   "max_count_string": "262144",
-   "struct": "large_edges_block"
+   "struct": "large_edges_block_struct",
+   "max_count_string": "MAXIMUM_EDGES_PER_COLLISION_BSP"
   },
-  "large_vertices_block_2": {
+  "large_vertices_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "large_vertices_block"
+   "struct": "large_vertices_block_struct",
+   "max_count_string": "MAXIMUM_VERTICES_PER_COLLISION_BSP"
   },
-  "small_bsp3d_nodes_block_2": {
+  "small_bsp3d_nodes_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "small_bsp3d_nodes_block"
+   "struct": "small_bsp3d_nodes_block_struct",
+   "max_count_string": "MAXIMUM_NODES_PER_BSP3D"
   },
-  "planes_block_3": {
+  "leaves_block": {
    "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "planes_block"
+   "struct": "leaves_block_struct",
+   "max_count_string": "MAXIMUM_LEAVES_PER_BSP3D"
   },
-  "leaves_block_2": {
-   "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "leaves_block"
-  },
-  "bsp2d_references_block_2": {
+  "bsp2d_references_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "bsp2d_references_block"
+   "struct": "bsp2d_references_block_struct",
+   "max_count_string": "MAXIMUM_BSP2D_REFERENCES_PER_COLLISION_BSP"
   },
-  "bsp2d_nodes_block_2": {
+  "bsp2d_nodes_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "bsp2d_nodes_block"
+   "struct": "bsp2d_nodes_block_struct",
+   "max_count_string": "MAXIMUM_NODES_PER_BSP2D"
   },
-  "surfaces_block_2": {
+  "surfaces_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "surfaces_block"
+   "struct": "surfaces_block_struct",
+   "max_count_string": "MAXIMUM_SURFACES_PER_COLLISION_BSP"
   },
-  "edges_block_2": {
+  "edges_block": {
    "max_count": 262144,
-   "max_count_string": "262144",
-   "struct": "edges_block"
+   "struct": "edges_block_struct",
+   "max_count_string": "MAXIMUM_EDGES_PER_COLLISION_BSP"
   },
-  "vertices_block_2": {
+  "vertices_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "vertices_block"
+   "struct": "vertices_block_struct",
+   "max_count_string": "MAXIMUM_VERTICES_PER_COLLISION_BSP"
   },
-  "bsp3d_nodes_block_2": {
+  "bsp3d_nodes_block": {
    "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "bsp3d_nodes_block"
+   "struct": "bsp3d_nodes_block_struct",
+   "max_count_string": "MAXIMUM_NODES_PER_BSP3D"
   },
-  "planes_block_4": {
-   "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "planes_block"
-  },
-  "leaves_block_3": {
-   "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "leaves_block"
-  },
-  "bsp2d_references_block_3": {
-   "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "bsp2d_references_block"
-  },
-  "bsp2d_nodes_block_3": {
-   "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "bsp2d_nodes_block"
-  },
-  "surfaces_block_3": {
-   "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "surfaces_block"
-  },
-  "edges_block_3": {
-   "max_count": 262144,
-   "max_count_string": "262144",
-   "struct": "edges_block"
-  },
-  "vertices_block_3": {
-   "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "vertices_block"
-  },
-  "collision_model_bsp_block_2": {
+  "collision_model_bsp_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "collision_model_bsp_block"
+   "struct": "collision_model_bsp_block_struct",
+   "max_count_string": "MAXIMUM_BSPS_PER_COLLISION_REGION"
   },
-  "collision_bsp_physics_block_2": {
+  "collision_bsp_physics_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "collision_bsp_physics_block"
+   "struct": "collision_bsp_physics_block_struct",
+   "max_count_string": "(1024)"
   },
-  "collision_model_bsp_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "collision_model_bsp_block"
-  },
-  "collision_bsp_physics_block_3": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "collision_bsp_physics_block"
-  },
-  "collision_model_permutation_block_2": {
+  "collision_model_permutation_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "collision_model_permutation_block"
+   "struct": "collision_model_permutation_block_struct",
+   "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION"
   },
-  "collision_model_region_block_2": {
+  "collision_model_region_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "collision_model_region_block"
+   "struct": "collision_model_region_block_struct",
+   "max_count_string": "MAXIMUM_REGIONS_PER_MODEL"
   },
-  "collision_model_pathfinding_sphere_block_2": {
-   "max_count": 32,
-   "max_count_string": "32",
-   "struct": "collision_model_pathfinding_sphere_block"
-  },
-  "collision_model_node_block_2": {
+  "collision_model_node_block": {
    "max_count": 255,
-   "max_count_string": "255",
-   "struct": "collision_model_node_block"
+   "struct": "collision_model_node_block_struct",
+   "max_count_string": "MAXIMUM_NODES_PER_MODEL"
   },
-  "tag_import_file_block_2": {
+  "collision_model_pathfinding_sphere_block": {
+   "max_count": 32,
+   "struct": "collision_model_pathfinding_sphere_block_struct",
+   "max_count_string": "MAXIMUM_PATHFINDING_SPHERES_PER_COLLISION_MODEL"
+  },
+  "tag_import_file_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "tag_import_file_block"
+   "struct": "tag_import_file_block_struct",
+   "max_count_string": "MAXIMUM_FILES_PER_TAG_IMPORT_INFO"
   },
-  "global_tag_import_info_block_2": {
+  "global_tag_import_info_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "global_tag_import_info_block"
-  },
-  "global_error_report_categories_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "global_error_report_categories_block"
-  },
-  "collision_model_material_block_3": {
-   "max_count": 32,
-   "max_count_string": "32",
-   "struct": "collision_model_material_block"
-  },
-  "collision_model_region_block_3": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "collision_model_region_block"
-  },
-  "collision_model_pathfinding_sphere_block_3": {
-   "max_count": 32,
-   "max_count_string": "32",
-   "struct": "collision_model_pathfinding_sphere_block"
-  },
-  "collision_model_node_block_3": {
-   "max_count": 255,
-   "max_count_string": "255",
-   "struct": "collision_model_node_block"
+   "struct": "global_tag_import_info_block_struct",
+   "max_count_string": "1"
   },
   "collision_model_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "collision_model_block_struct"
+   "struct": "collision_model_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -259,37 +185,37 @@
     {
      "type": "struct",
      "name": "OLD damage resistance",
-     "definition": "old_global_damage_resistance_struct"
+     "definition": "OLD_global_damage_resistance_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "block",
      "name": "errors",
-     "definition": "global_error_report_categories_block_2"
+     "definition": "global_error_report_categories_block"
     },
     {
      "type": "block",
      "name": "materials",
-     "definition": "collision_model_material_block_2"
+     "definition": "collision_model_material_block"
     },
     {
      "type": "block",
      "name": "regions",
-     "definition": "collision_model_region_block_2"
+     "definition": "collision_model_region_block"
     },
     {
      "type": "block",
      "name": "pathfinding spheres",
-     "definition": "collision_model_pathfinding_sphere_block_2"
+     "definition": "collision_model_pathfinding_sphere_block"
     },
     {
      "type": "block",
      "name": "nodes",
-     "definition": "collision_model_node_block_2"
+     "definition": "collision_model_node_block"
     },
     {
      "type": "terminator",
@@ -297,13 +223,13 @@
     }
    ]
   },
-  "old_global_damage_resistance_struct": {
+  "OLD_global_damage_resistance_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 600,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "150*sizeof(long)",
      "definition": 600
     },
     {
@@ -313,7 +239,7 @@
    ],
    "tag": "DREZ"
   },
-  "global_error_report_categories_block": {
+  "global_error_report_categories_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 680,
    "fields": [
@@ -324,32 +250,32 @@
     {
      "type": "short_enum",
      "name": "report type",
-     "definition": "report_type_enum"
+     "definition": "report type"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "101*sizeof(long)",
      "definition": 404
     },
     {
      "type": "block",
      "name": "reports",
-     "definition": "error_reports_block_2"
+     "definition": "error_reports_block"
     },
     {
      "type": "terminator",
@@ -357,24 +283,24 @@
     }
    ]
   },
-  "error_reports_block": {
+  "error_reports_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 644,
    "fields": [
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "report_type_enum"
+     "definition": "report type"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "data",
      "name": "text",
-     "definition": "text_data"
+     "definition": "error_report_string_data"
     },
     {
      "type": "string",
@@ -387,36 +313,36 @@
     {
      "type": "block",
      "name": "vertices",
-     "definition": "error_report_vertices_block_2"
+     "definition": "error_report_vertices_block"
     },
     {
      "type": "block",
      "name": "vectors",
-     "definition": "error_report_vectors_block_2"
+     "definition": "error_report_vectors_block"
     },
     {
      "type": "block",
      "name": "lines",
-     "definition": "error_report_lines_block_2"
+     "definition": "error_report_lines_block"
     },
     {
      "type": "block",
      "name": "triangles",
-     "definition": "error_report_triangles_block_2"
+     "definition": "error_report_triangles_block"
     },
     {
      "type": "block",
      "name": "quads",
-     "definition": "error_report_quads_block_2"
+     "definition": "error_report_quads_block"
     },
     {
      "type": "block",
      "name": "comments",
-     "definition": "error_report_comments_block_2"
+     "definition": "error_report_comments_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "95*sizeof(long)",
      "definition": 380
     },
     {
@@ -445,7 +371,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "21*sizeof(long)",
      "definition": 84
     },
     {
@@ -454,7 +380,7 @@
     }
    ]
   },
-  "error_report_vertices_block": {
+  "error_report_vertices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
@@ -465,12 +391,12 @@
     {
      "type": "array",
      "name": "node indices",
-     "definition": "node_indices_array"
+     "definition": "node indices_array"
     },
     {
      "type": "array",
      "name": "node weights",
-     "definition": "node_weights_array"
+     "definition": "node weights_array"
     },
     {
      "type": "real_argb_color",
@@ -486,7 +412,7 @@
     }
    ]
   },
-  "node_indices_struct": {
+  "node indices_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -500,7 +426,7 @@
     }
    ]
   },
-  "node_weights_struct": {
+  "node weights_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -514,7 +440,7 @@
     }
    ]
   },
-  "error_report_vectors_block": {
+  "error_report_vectors_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
@@ -525,12 +451,12 @@
     {
      "type": "array",
      "name": "node indices",
-     "definition": "node_indices_array_2"
+     "definition": "node indices_array_2"
     },
     {
      "type": "array",
      "name": "node weights",
-     "definition": "node_weights_array_2"
+     "definition": "node weights_array_2"
     },
     {
      "type": "real_argb_color",
@@ -550,7 +476,7 @@
     }
    ]
   },
-  "node_indices_struct_2": {
+  "node indices_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -564,7 +490,7 @@
     }
    ]
   },
-  "node_weights_struct_2": {
+  "node weights_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -578,7 +504,7 @@
     }
    ]
   },
-  "error_report_lines_block": {
+  "error_report_lines_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 80,
    "fields": [
@@ -597,31 +523,7 @@
     }
    ]
   },
-  "points_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "real_point_3d",
-     "name": "position"
-    },
-    {
-     "type": "array",
-     "name": "node indices",
-     "definition": "node_indices_array_3"
-    },
-    {
-     "type": "array",
-     "name": "node weights",
-     "definition": "node_weights_array_3"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "node_indices_struct_3": {
+  "node indices_struct_3": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -635,7 +537,7 @@
     }
    ]
   },
-  "node_weights_struct_3": {
+  "node weights_struct_3": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -649,7 +551,31 @@
     }
    ]
   },
-  "error_report_triangles_block": {
+  "points_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "real_point_3d",
+     "name": "position"
+    },
+    {
+     "type": "array",
+     "name": "node indices",
+     "definition": "node indices_array_3"
+    },
+    {
+     "type": "array",
+     "name": "node weights",
+     "definition": "node weights_array_3"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "error_report_triangles_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 112,
    "fields": [
@@ -668,31 +594,7 @@
     }
    ]
   },
-  "points_struct_2": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "real_point_3d",
-     "name": "position"
-    },
-    {
-     "type": "array",
-     "name": "node indices",
-     "definition": "node_indices_array_4"
-    },
-    {
-     "type": "array",
-     "name": "node weights",
-     "definition": "node_weights_array_4"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "node_indices_struct_4": {
+  "node indices_struct_4": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -706,7 +608,7 @@
     }
    ]
   },
-  "node_weights_struct_4": {
+  "node weights_struct_4": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -720,7 +622,31 @@
     }
    ]
   },
-  "error_report_quads_block": {
+  "points_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "real_point_3d",
+     "name": "position"
+    },
+    {
+     "type": "array",
+     "name": "node indices",
+     "definition": "node indices_array_4"
+    },
+    {
+     "type": "array",
+     "name": "node weights",
+     "definition": "node weights_array_4"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "error_report_quads_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 144,
    "fields": [
@@ -739,6 +665,34 @@
     }
    ]
   },
+  "node indices_struct_5": {
+   "guid": "00000000000000000000000000000000",
+   "size": 1,
+   "fields": [
+    {
+     "type": "char_integer",
+     "name": "node index"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "node weights_struct_5": {
+   "guid": "00000000000000000000000000000000",
+   "size": 4,
+   "fields": [
+    {
+     "type": "real",
+     "name": "node weight"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
   "points_struct_3": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
@@ -750,12 +704,12 @@
     {
      "type": "array",
      "name": "node indices",
-     "definition": "node_indices_array_5"
+     "definition": "node indices_array_5"
     },
     {
      "type": "array",
      "name": "node weights",
-     "definition": "node_weights_array_5"
+     "definition": "node weights_array_5"
     },
     {
      "type": "terminator",
@@ -763,42 +717,14 @@
     }
    ]
   },
-  "node_indices_struct_5": {
-   "guid": "00000000000000000000000000000000",
-   "size": 1,
-   "fields": [
-    {
-     "type": "char_integer",
-     "name": "node index"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "node_weights_struct_5": {
-   "guid": "00000000000000000000000000000000",
-   "size": 4,
-   "fields": [
-    {
-     "type": "real",
-     "name": "node weight"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "error_report_comments_block": {
+  "error_report_comments_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
     {
      "type": "data",
      "name": "text",
-     "definition": "text_data_2"
+     "definition": "error_report_string_data"
     },
     {
      "type": "real_point_3d",
@@ -807,12 +733,12 @@
     {
      "type": "array",
      "name": "node indices",
-     "definition": "node_indices_array_6"
+     "definition": "node indices_array_6"
     },
     {
      "type": "array",
      "name": "node weights",
-     "definition": "node_weights_array_6"
+     "definition": "node weights_array_6"
     },
     {
      "type": "real_argb_color",
@@ -824,7 +750,7 @@
     }
    ]
   },
-  "node_indices_struct_6": {
+  "node indices_struct_6": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -838,7 +764,7 @@
     }
    ]
   },
-  "node_weights_struct_6": {
+  "node weights_struct_6": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -852,7 +778,7 @@
     }
    ]
   },
-  "collision_model_material_block": {
+  "collision_model_material_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -866,7 +792,7 @@
     }
    ]
   },
-  "collision_model_region_block": {
+  "collision_model_region_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -877,7 +803,7 @@
     {
      "type": "block",
      "name": "permutations",
-     "definition": "collision_model_permutation_block_2"
+     "definition": "collision_model_permutation_block"
     },
     {
      "type": "terminator",
@@ -885,7 +811,7 @@
     }
    ]
   },
-  "collision_model_permutation_block__v0": {
+  "collision_model_permutation_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 96,
    "fields": [
@@ -895,22 +821,22 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
      "type": "block",
      "name": "bsps",
-     "definition": "collision_model_bsp_block_2"
+     "definition": "collision_model_bsp_block"
     },
     {
      "type": "block",
      "name": "bsp_physics",
-     "definition": "collision_bsp_physics_block_2"
+     "definition": "collision_bsp_physics_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "11*sizeof(long)",
      "definition": 44
     },
     {
@@ -919,7 +845,7 @@
     }
    ]
   },
-  "collision_model_bsp_block": {
+  "collision_model_bsp_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 100,
    "fields": [
@@ -929,7 +855,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -940,7 +866,7 @@
     {
      "type": "struct",
      "name": "bsp",
-     "definition": "global_collision_bsp_struct"
+     "definition": "global_collision_bsp_struct_2"
     },
     {
      "type": "terminator",
@@ -955,42 +881,42 @@
     {
      "type": "block",
      "name": "bsp3d nodes",
-     "definition": "large_bsp3d_nodes_block_2"
+     "definition": "large_bsp3d_nodes_block"
     },
     {
      "type": "block",
      "name": "planes",
-     "definition": "planes_block_2"
+     "definition": "planes_block"
     },
     {
      "type": "block",
      "name": "leaves",
-     "definition": "large_leaves_block_2"
+     "definition": "large_leaves_block"
     },
     {
      "type": "block",
      "name": "bsp2d references",
-     "definition": "large_bsp2d_references_block_2"
+     "definition": "large_bsp2d_references_block"
     },
     {
      "type": "block",
      "name": "bsp2d nodes",
-     "definition": "large_bsp2d_nodes_block_2"
+     "definition": "large_bsp2d_nodes_block"
     },
     {
      "type": "block",
      "name": "surfaces",
-     "definition": "large_surfaces_block_2"
+     "definition": "large_surfaces_block"
     },
     {
      "type": "block",
      "name": "edges",
-     "definition": "large_edges_block_2"
+     "definition": "large_edges_block"
     },
     {
      "type": "block",
      "name": "vertices",
-     "definition": "large_vertices_block_2"
+     "definition": "large_vertices_block"
     },
     {
      "type": "terminator",
@@ -999,7 +925,7 @@
    ],
    "tag": "cbsp"
   },
-  "large_bsp3d_nodes_block": {
+  "large_bsp3d_nodes_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -1021,7 +947,7 @@
     }
    ]
   },
-  "planes_block": {
+  "planes_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1035,14 +961,14 @@
     }
    ]
   },
-  "large_leaves_block": {
+  "large_leaves_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "short_integer",
@@ -1058,7 +984,7 @@
     }
    ]
   },
-  "large_bsp2d_references_block": {
+  "large_bsp2d_references_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -1076,7 +1002,7 @@
     }
    ]
   },
-  "large_bsp2d_nodes_block": {
+  "large_bsp2d_nodes_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -1098,7 +1024,7 @@
     }
    ]
   },
-  "large_surfaces_block": {
+  "large_surfaces_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -1113,7 +1039,7 @@
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "char_integer",
@@ -1129,7 +1055,7 @@
     }
    ]
   },
-  "large_edges_block": {
+  "large_edges_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -1163,7 +1089,7 @@
     }
    ]
   },
-  "large_vertices_block": {
+  "large_vertices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1188,42 +1114,42 @@
     {
      "type": "block",
      "name": "bsp3d nodes",
-     "definition": "small_bsp3d_nodes_block_2"
+     "definition": "small_bsp3d_nodes_block"
     },
     {
      "type": "block",
      "name": "planes",
-     "definition": "planes_block_3"
+     "definition": "planes_block"
     },
     {
      "type": "block",
      "name": "leaves",
-     "definition": "leaves_block_2"
+     "definition": "leaves_block"
     },
     {
      "type": "block",
      "name": "bsp2d references",
-     "definition": "bsp2d_references_block_2"
+     "definition": "bsp2d_references_block"
     },
     {
      "type": "block",
      "name": "bsp2d nodes",
-     "definition": "bsp2d_nodes_block_2"
+     "definition": "bsp2d_nodes_block"
     },
     {
      "type": "block",
      "name": "surfaces",
-     "definition": "surfaces_block_2"
+     "definition": "surfaces_block"
     },
     {
      "type": "block",
      "name": "edges",
-     "definition": "edges_block_2"
+     "definition": "edges_block"
     },
     {
      "type": "block",
      "name": "vertices",
-     "definition": "vertices_block_2"
+     "definition": "vertices_block"
     },
     {
      "type": "terminator",
@@ -1232,7 +1158,7 @@
    ],
    "tag": "cbsp"
   },
-  "small_bsp3d_nodes_block": {
+  "small_bsp3d_nodes_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -1242,7 +1168,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -1259,14 +1185,14 @@
     }
    ]
   },
-  "leaves_block": {
+  "leaves_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "char_integer",
@@ -1282,7 +1208,7 @@
     }
    ]
   },
-  "bsp2d_references_block": {
+  "bsp2d_references_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -1300,7 +1226,7 @@
     }
    ]
   },
-  "bsp2d_nodes_block": {
+  "bsp2d_nodes_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1322,7 +1248,7 @@
     }
    ]
   },
-  "surfaces_block": {
+  "surfaces_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -1337,7 +1263,7 @@
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "char_integer",
@@ -1353,7 +1279,7 @@
     }
    ]
   },
-  "edges_block__v0": {
+  "edges_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1383,7 +1309,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -1392,7 +1318,7 @@
     }
    ]
   },
-  "edges_block": {
+  "edges_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -1426,7 +1352,7 @@
     }
    ]
   },
-  "vertices_block": {
+  "vertices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1440,7 +1366,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -1449,49 +1375,49 @@
     }
    ]
   },
-  "global_collision_bsp_struct": {
+  "global_collision_bsp_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 96,
    "fields": [
     {
      "type": "block",
      "name": "bsp3d nodes",
-     "definition": "bsp3d_nodes_block_2"
+     "definition": "bsp3d_nodes_block"
     },
     {
      "type": "block",
      "name": "planes",
-     "definition": "planes_block_4"
+     "definition": "planes_block"
     },
     {
      "type": "block",
      "name": "leaves",
-     "definition": "leaves_block_3"
+     "definition": "leaves_block"
     },
     {
      "type": "block",
      "name": "bsp2d references",
-     "definition": "bsp2d_references_block_3"
+     "definition": "bsp2d_references_block"
     },
     {
      "type": "block",
      "name": "bsp2d nodes",
-     "definition": "bsp2d_nodes_block_3"
+     "definition": "bsp2d_nodes_block"
     },
     {
      "type": "block",
      "name": "surfaces",
-     "definition": "surfaces_block_3"
+     "definition": "surfaces_block"
     },
     {
      "type": "block",
      "name": "edges",
-     "definition": "edges_block_3"
+     "definition": "edges_block"
     },
     {
      "type": "block",
      "name": "vertices",
-     "definition": "vertices_block_3"
+     "definition": "vertices_block"
     },
     {
      "type": "terminator",
@@ -1500,13 +1426,13 @@
    ],
    "tag": "cbsp"
   },
-  "bsp3d_nodes_block": {
+  "bsp3d_nodes_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(struct bsp3d_node)",
      "definition": 8
     },
     {
@@ -1515,7 +1441,7 @@
     }
    ]
   },
-  "collision_bsp_physics_block": {
+  "collision_bsp_physics_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
@@ -1538,7 +1464,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1552,12 +1478,12 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "2*sizeof(hkVector4)",
      "definition": 32
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "16",
      "definition": 16
     },
     {
@@ -1579,7 +1505,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1610,7 +1536,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1629,7 +1555,7 @@
     {
      "type": "data",
      "name": "mopp code data",
-     "definition": "mopp_code_data_data"
+     "definition": "mopp_codes_data"
     },
     {
      "type": "pad",
@@ -1642,7 +1568,7 @@
     }
    ]
   },
-  "collision_model_permutation_block": {
+  "collision_model_permutation_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
@@ -1653,12 +1579,12 @@
     {
      "type": "block",
      "name": "bsps",
-     "definition": "collision_model_bsp_block_3"
+     "definition": "collision_model_bsp_block"
     },
     {
      "type": "block",
      "name": "bsp_physics",
-     "definition": "collision_bsp_physics_block_3"
+     "definition": "collision_bsp_physics_block"
     },
     {
      "type": "terminator",
@@ -1666,18 +1592,19 @@
     }
    ]
   },
-  "collision_model_pathfinding_sphere_block": {
+  "collision_model_pathfinding_sphere_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "node"
+     "type": "short_block_index",
+     "name": "node",
+     "definition": "collision_model_node_block"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_4"
     },
     {
      "type": "useless_pad",
@@ -1698,7 +1625,7 @@
     }
    ]
   },
-  "collision_model_node_block__v0": {
+  "collision_model_node_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
@@ -1708,24 +1635,27 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "parent node"
+     "type": "short_block_index",
+     "name": "parent node",
+     "definition": "collision_model_node_block"
     },
     {
-     "type": "short_integer",
-     "name": "next sibling node"
+     "type": "short_block_index",
+     "name": "next sibling node",
+     "definition": "collision_model_node_block"
     },
     {
-     "type": "short_integer",
-     "name": "first child node"
+     "type": "short_block_index",
+     "name": "first child node",
+     "definition": "collision_model_node_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
@@ -1734,7 +1664,7 @@
     }
    ]
   },
-  "collision_model_node_block": {
+  "collision_model_node_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -1744,20 +1674,23 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "parent node"
+     "type": "short_block_index",
+     "name": "parent node",
+     "definition": "collision_model_node_block"
     },
     {
-     "type": "short_integer",
-     "name": "next sibling node"
+     "type": "short_block_index",
+     "name": "next sibling node",
+     "definition": "collision_model_node_block"
     },
     {
-     "type": "short_integer",
-     "name": "first child node"
+     "type": "short_block_index",
+     "name": "first child node",
+     "definition": "collision_model_node_block"
     },
     {
      "type": "terminator",
@@ -1772,17 +1705,17 @@
     {
      "type": "block",
      "name": "import info",
-     "definition": "global_tag_import_info_block_2"
+     "definition": "global_tag_import_info_block"
     },
     {
      "type": "block",
      "name": "errors",
-     "definition": "global_error_report_categories_block_3"
+     "definition": "global_error_report_categories_block"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_5"
+     "definition": "flags_5"
     },
     {
      "type": "useless_pad",
@@ -1792,22 +1725,22 @@
     {
      "type": "block",
      "name": "materials",
-     "definition": "collision_model_material_block_3"
+     "definition": "collision_model_material_block"
     },
     {
      "type": "block",
      "name": "regions",
-     "definition": "collision_model_region_block_3"
+     "definition": "collision_model_region_block"
     },
     {
      "type": "block",
      "name": "pathfinding spheres",
-     "definition": "collision_model_pathfinding_sphere_block_3"
+     "definition": "collision_model_pathfinding_sphere_block"
     },
     {
      "type": "block",
      "name": "nodes",
-     "definition": "collision_model_node_block_3"
+     "definition": "collision_model_node_block"
     },
     {
      "type": "terminator",
@@ -1815,7 +1748,7 @@
     }
    ]
   },
-  "global_tag_import_info_block": {
+  "global_tag_import_info_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 596,
    "fields": [
@@ -1837,7 +1770,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "24*sizeof(long)",
      "definition": 96
     },
     {
@@ -1846,17 +1779,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "block",
      "name": "files",
-     "definition": "tag_import_file_block_2"
+     "definition": "tag_import_file_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "32*sizeof(long)",
      "definition": 128
     },
     {
@@ -1865,7 +1798,7 @@
     }
    ]
   },
-  "tag_import_file_block": {
+  "tag_import_file_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 540,
    "fields": [
@@ -1879,12 +1812,12 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(file_last_modification_date)",
      "definition": 8
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "22*sizeof(long)",
      "definition": 88
     },
     {
@@ -1898,11 +1831,11 @@
     {
      "type": "data",
      "name": "zipped data",
-     "definition": "zipped_data_data"
+     "definition": "tag_import_file_zipped_data_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "32*sizeof(long)",
      "definition": 128
     },
     {
@@ -1913,69 +1846,69 @@
   }
  },
  "arrays": {
-  "node_indices_array": {
+  "node indices_array": {
    "count": 4,
-   "struct": "node_indices_struct"
+   "struct": "node indices_struct"
   },
-  "node_weights_array": {
+  "node weights_array": {
    "count": 4,
-   "struct": "node_weights_struct"
+   "struct": "node weights_struct"
   },
-  "node_indices_array_2": {
+  "node indices_array_2": {
    "count": 4,
-   "struct": "node_indices_struct_2"
+   "struct": "node indices_struct_2"
   },
-  "node_weights_array_2": {
+  "node weights_array_2": {
    "count": 4,
-   "struct": "node_weights_struct_2"
+   "struct": "node weights_struct_2"
   },
-  "node_indices_array_3": {
+  "node indices_array_3": {
    "count": 4,
-   "struct": "node_indices_struct_3"
+   "struct": "node indices_struct_3"
   },
-  "node_weights_array_3": {
+  "node weights_array_3": {
    "count": 4,
-   "struct": "node_weights_struct_3"
+   "struct": "node weights_struct_3"
   },
   "points_array": {
    "count": 2,
    "struct": "points_struct"
   },
-  "node_indices_array_4": {
+  "node indices_array_4": {
    "count": 4,
-   "struct": "node_indices_struct_4"
+   "struct": "node indices_struct_4"
   },
-  "node_weights_array_4": {
+  "node weights_array_4": {
    "count": 4,
-   "struct": "node_weights_struct_4"
+   "struct": "node weights_struct_4"
   },
   "points_array_2": {
    "count": 3,
    "struct": "points_struct_2"
   },
-  "node_indices_array_5": {
+  "node indices_array_5": {
    "count": 4,
-   "struct": "node_indices_struct_5"
+   "struct": "node indices_struct_5"
   },
-  "node_weights_array_5": {
+  "node weights_array_5": {
    "count": 4,
-   "struct": "node_weights_struct_5"
+   "struct": "node weights_struct_5"
   },
   "points_array_3": {
    "count": 4,
    "struct": "points_struct_3"
   },
-  "node_indices_array_6": {
+  "node indices_array_6": {
    "count": 4,
-   "struct": "node_indices_struct_6"
+   "struct": "node indices_struct_6"
   },
-  "node_weights_array_6": {
+  "node weights_array_6": {
    "count": 4,
-   "struct": "node_weights_struct_6"
+   "struct": "node weights_struct_6"
   }
  },
  "enums_flags": {
-  "report_type_enum": {
+  "report type": {
    "options": [
     "silent",
     "comment",
@@ -1983,7 +1916,7 @@
     "error"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "rendered",
     "tangent-space",
@@ -1992,12 +1925,12 @@
     "report key is valid"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "contains double-sided surfaces"
    ]
   },
-  "flags_flags_3": {
+  "flags_3": {
    "options": [
     "two sided",
     "invisible",
@@ -2007,64 +1940,41 @@
     "conveyor"
    ]
   },
-  "flags_flags_4": {
+  "flags_4": {
    "options": [
     "remains when open",
     "vehicle only",
     "with sectors"
    ]
   },
-  "flags_flags_5": {
+  "flags_5": {
    "options": [
     "contains open edges"
    ]
   }
  },
  "datas": {
-  "text_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  },
-  "text_data_2": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  },
-  "mopp_code_data_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  },
-  "zipped_data_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  }
+  "error_report_string_data": {},
+  "mopp_codes_data": {},
+  "tag_import_file_zipped_data_definition": {}
  },
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "edges_block": {
-   "0": "edges_block__v0",
-   "1": "edges_block"
+  "edges_block_struct": {
+   "0": "edges_block_struct__v0",
+   "1": "edges_block_struct"
   },
-  "global_collision_bsp_struct": {
+  "global_collision_bsp_struct_2": {
    "0": "global_collision_bsp_struct__v0",
    "1": "global_collision_bsp_struct__v1",
-   "2": "global_collision_bsp_struct"
+   "2": "global_collision_bsp_struct_2"
   },
-  "collision_model_permutation_block": {
-   "0": "collision_model_permutation_block__v0",
-   "1": "collision_model_permutation_block"
+  "collision_model_permutation_block_struct": {
+   "0": "collision_model_permutation_block_struct__v0",
+   "1": "collision_model_permutation_block_struct"
   },
-  "collision_model_node_block": {
-   "0": "collision_model_node_block__v0",
-   "1": "collision_model_node_block"
+  "collision_model_node_block_struct": {
+   "0": "collision_model_node_block_struct__v0",
+   "1": "collision_model_node_block_struct"
   },
   "collision_model_block_struct": {
    "0": "collision_model_block_struct__v0",

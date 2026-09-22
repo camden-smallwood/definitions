@@ -2,38 +2,39 @@
  "name": "breakable_surface",
  "tag": "bsdt",
  "version": 0,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "breakable_surface_block",
  "blocks": {
-  "real_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
-  },
-  "byte_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
-  },
-  "particle_system_emitter_definition_block_2": {
-   "max_count": 8,
-   "max_count_string": "8",
-   "struct": "particle_system_emitter_definition_block"
-  },
-  "particle_system_emitter_definition_block_3": {
-   "max_count": 8,
-   "max_count_string": "8",
-   "struct": "particle_system_emitter_definition_block"
-  },
-  "particle_system_definition_block_new_2": {
+  "effect_locations_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "particle_system_definition_block_new"
+   "struct": "effect_locations_block_struct",
+   "max_count_string": "k_maximum_effect_locations_count"
+  },
+  "real_block": {
+   "max_count": 64,
+   "struct": "real_block_struct",
+   "max_count_string": "64"
+  },
+  "byte_block": {
+   "max_count": 1024,
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
+  },
+  "particle_system_emitter_definition_block": {
+   "max_count": 8,
+   "struct": "particle_system_emitter_definition_block_struct",
+   "max_count_string": "c_particle_system_definition::k_maximum_emitters_per_definition"
+  },
+  "particle_system_definition_block_new": {
+   "max_count": 32,
+   "struct": "particle_system_definition_block_new_struct",
+   "max_count_string": "c_particle_system_definition::k_maximum_particle_systems_per_block"
   },
   "breakable_surface_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "breakable_surface_block_struct"
+   "struct": "breakable_surface_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -56,7 +57,7 @@
     {
      "type": "block",
      "name": "particle effects",
-     "definition": "particle_system_definition_block_new_2"
+     "definition": "particle_system_definition_block_new"
     },
     {
      "type": "real",
@@ -68,7 +69,7 @@
     }
    ]
   },
-  "particle_system_definition_block_new__v0": {
+  "particle_system_definition_block_new_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
@@ -77,28 +78,29 @@
      "name": "particle"
     },
     {
-     "type": "long_integer",
-     "name": "location"
+     "type": "long_block_index",
+     "name": "location",
+     "definition": "effect_locations_block"
     },
     {
      "type": "short_enum",
      "name": "coordinate system",
-     "definition": "coordinate_system_enum"
+     "definition": "coordinate system"
     },
     {
      "type": "short_enum",
      "name": "environment",
-     "definition": "environment_enum"
+     "definition": "environment"
     },
     {
      "type": "short_enum",
      "name": "disposition",
-     "definition": "disposition_enum"
+     "definition": "disposition"
     },
     {
      "type": "short_enum",
      "name": "camera mode",
-     "definition": "camera_mode_enum"
+     "definition": "camera mode"
     },
     {
      "type": "short_integer",
@@ -107,12 +109,12 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "block",
      "name": "emitters",
-     "definition": "particle_system_emitter_definition_block_2"
+     "definition": "particle_system_emitter_definition_block"
     },
     {
      "type": "terminator",
@@ -120,7 +122,21 @@
     }
    ]
   },
-  "particle_system_emitter_definition_block": {
+  "effect_locations_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 4,
+   "fields": [
+    {
+     "type": "old_string_id",
+     "name": "marker name"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "particle_system_emitter_definition_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 228,
    "fields": [
@@ -131,52 +147,52 @@
     {
      "type": "struct",
      "name": "particle emission rate",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle lifespan",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle velocity",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle angular velocity",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle size",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle tint",
-     "definition": "particle_property_color_struct_new"
+     "definition": "particle_property_color_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle alpha",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "long_enum",
      "name": "emission shape",
-     "definition": "emission_shape_enum"
+     "definition": "emission shape"
     },
     {
      "type": "struct",
      "name": "emission radius",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "emission angle",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "real_point_3d",
@@ -188,7 +204,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(dword)*2",
      "definition": 8
     },
     {
@@ -197,29 +213,29 @@
     }
    ]
   },
-  "particle_property_scalar_struct_new": {
+  "particle_property_scalar_struct_new_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "short_enum",
      "name": "Input Variable",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "short_enum",
      "name": "Range Variable",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "short_enum",
      "name": "Output Modifier",
-     "definition": "output_modifier_enum"
+     "definition": "Output Modifier"
     },
     {
      "type": "short_enum",
      "name": "Output Modifier Input",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "custom",
@@ -228,7 +244,7 @@
     {
      "type": "struct",
      "name": "Mapping",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -252,7 +268,7 @@
     {
      "type": "byte_flags",
      "name": "Flags",
-     "definition": "flags_flags_2"
+     "definition": "Flags"
     },
     {
      "type": "char_integer",
@@ -281,7 +297,7 @@
     {
      "type": "block",
      "name": "Values",
-     "definition": "real_block_2"
+     "definition": "real_block"
     },
     {
      "type": "custom",
@@ -294,7 +310,7 @@
    ],
    "tag": "MAPP"
   },
-  "real_block": {
+  "real_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -308,7 +324,7 @@
     }
    ]
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -319,7 +335,7 @@
     {
      "type": "block",
      "name": "data",
-     "definition": "byte_block_2"
+     "definition": "byte_block"
     },
     {
      "type": "custom",
@@ -332,7 +348,7 @@
    ],
    "tag": "MAPP"
   },
-  "byte_block": {
+  "byte_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -346,29 +362,29 @@
     }
    ]
   },
-  "particle_property_color_struct_new": {
+  "particle_property_color_struct_new_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "short_enum",
      "name": "Input Variable",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "short_enum",
      "name": "Range Variable",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "short_enum",
      "name": "Output Modifier",
-     "definition": "output_modifier_enum"
+     "definition": "Output Modifier"
     },
     {
      "type": "short_enum",
      "name": "Output Modifier Input",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "custom",
@@ -377,7 +393,7 @@
     {
      "type": "struct",
      "name": "Mapping",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -386,7 +402,7 @@
    ],
    "tag": "PRPC"
   },
-  "particle_system_definition_block_new": {
+  "particle_system_definition_block_new_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
@@ -395,28 +411,29 @@
      "name": "particle"
     },
     {
-     "type": "long_integer",
-     "name": "location"
+     "type": "long_block_index",
+     "name": "location",
+     "definition": "effect_locations_block"
     },
     {
      "type": "short_enum",
      "name": "coordinate system",
-     "definition": "coordinate_system_enum"
+     "definition": "coordinate system"
     },
     {
      "type": "short_enum",
      "name": "environment",
-     "definition": "environment_enum"
+     "definition": "environment"
     },
     {
      "type": "short_enum",
      "name": "disposition",
-     "definition": "disposition_enum"
+     "definition": "disposition"
     },
     {
      "type": "short_enum",
      "name": "camera mode",
-     "definition": "camera_mode_enum"
+     "definition": "camera mode"
     },
     {
      "type": "short_integer",
@@ -425,7 +442,7 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -437,7 +454,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -450,13 +467,13 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "block",
      "name": "emitters",
-     "definition": "particle_system_emitter_definition_block_3"
+     "definition": "particle_system_emitter_definition_block"
     },
     {
      "type": "terminator",
@@ -465,16 +482,15 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "coordinate_system_enum": {
+  "coordinate system": {
    "options": [
     "world",
     "local",
     "parent"
    ]
   },
-  "environment_enum": {
+  "environment": {
    "options": [
     "any environment",
     "air only",
@@ -482,14 +498,14 @@
     "space only"
    ]
   },
-  "disposition_enum": {
+  "disposition": {
    "options": [
     "either mode",
     "violent mode only",
     "nonviolent mode only"
    ]
   },
-  "camera_mode_enum": {
+  "camera mode": {
    "options": [
     "independent of camera mode",
     "only in first person",
@@ -497,7 +513,7 @@
     "both first and third"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "glow",
     "cinematics",
@@ -511,7 +527,7 @@
     "expensive visibility"
    ]
   },
-  "input_variable_enum": {
+  "Input Variable": {
    "options": [
     "particle age",
     "particle emit time",
@@ -532,14 +548,14 @@
     "location random"
    ]
   },
-  "output_modifier_enum": {
+  "Output Modifier": {
    "options": [
-    null,
+    " ",
     "Plus",
     "Times"
    ]
   },
-  "flags_flags_2": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -551,7 +567,7 @@
     "Color Bit 3"
    ]
   },
-  "emission_shape_enum": {
+  "emission shape": {
    "options": [
     "sprayer",
     "disc",
@@ -566,17 +582,14 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   },
-  "particle_system_definition_block_new": {
-   "0": "particle_system_definition_block_new__v0",
-   "1": "particle_system_definition_block_new"
+  "particle_system_definition_block_new_struct": {
+   "0": "particle_system_definition_block_new_struct__v0",
+   "1": "particle_system_definition_block_new_struct"
   }
  }
 }

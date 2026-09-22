@@ -2,13 +2,14 @@
  "name": "pixel_shader",
  "tag": "pixl",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "pixel_shader_block",
  "blocks": {
   "pixel_shader_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "pixel_shader_block_struct"
+   "struct": "pixel_shader_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -23,7 +24,7 @@
     {
      "type": "data",
      "name": "compiled_shader",
-     "definition": "compiled_shader_data"
+     "definition": "compiled_pixel_shader_block"
     },
     {
      "type": "terminator",
@@ -32,17 +33,7 @@
    ]
   }
  },
- "arrays": {},
- "enums_flags": {},
  "datas": {
-  "compiled_shader_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  }
- },
- "resources": {},
- "interops": {},
- "struct_versions": {}
+  "compiled_pixel_shader_block": {}
+ }
 }

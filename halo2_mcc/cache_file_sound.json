@@ -3,12 +3,13 @@
  "tag": "$#!+",
  "version": 2,
  "flags": 0,
+ "parent_tag": null,
  "block": "cache_file_sound_block",
  "blocks": {
   "cache_file_sound_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "cache_file_sound_block_struct"
+   "struct": "cache_file_sound_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -19,12 +20,12 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "char_enum",
      "name": "sound class",
-     "definition": "sound_class_enum"
+     "definition": "sound class"
     },
     {
      "type": "char_integer",
@@ -89,14 +90,13 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "fit to adpcm blocksize",
     "split long sound into permutations",
-    "always spatialize",
-    "never obstruct",
+    "always spatialize#always play as 3d sound, even in first person",
+    "never obstruct#disable occlusion/obstruction for this sound",
     "internal don't touch",
     "use huge sound transmission",
     "link count to owner unit",
@@ -107,12 +107,12 @@
     "play only in remastered mode"
    ]
   },
-  "sound_class_enum": {
+  "sound class": {
    "options": [
     "projectile_impact",
     "projectile_detonation",
     "projectile_flyby",
-    null,
+    "",
     "weapon_fire",
     "weapon_ready",
     "weapon_reload",
@@ -130,30 +130,30 @@
     "unit_footsteps",
     "unit_dialog",
     "unit_animation",
-    null,
+    "",
     "vehicle_collision",
     "vehicle_engine",
     "vehicle_animation",
-    null,
+    "",
     "device_door",
-    null,
+    "",
     "device_machinery",
     "device_stationary",
-    null,
-    null,
+    "",
+    "",
     "music",
     "ambient_nature",
     "ambient_machinery",
-    null,
+    "",
     "huge_ass",
     "object_looping",
     "cinematic_music",
     "reflection",
     "reflection_lod",
     "reflection_lod_far",
-    null,
-    null,
-    null,
+    "",
+    "",
+    "",
     "cortana_mission",
     "cortana_cinematic",
     "mission_dialog",
@@ -165,9 +165,5 @@
     "multilingual_test"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

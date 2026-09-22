@@ -2,13 +2,14 @@
  "name": "colony",
  "tag": "coln",
  "version": 4,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "colony_block",
  "blocks": {
   "colony_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "colony_block_struct"
+   "struct": "colony_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -19,16 +20,16 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -37,7 +38,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -59,16 +60,11 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "unused"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

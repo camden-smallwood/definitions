@@ -2,28 +2,29 @@
  "name": "screen_effect",
  "tag": "egor",
  "version": 4,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "screen_effect_block",
  "blocks": {
-  "rasterizer_screen_effect_texcoord_generation_advanced_control_block_2": {
+  "rasterizer_screen_effect_texcoord_generation_advanced_control_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "rasterizer_screen_effect_texcoord_generation_advanced_control_block"
+   "struct": "rasterizer_screen_effect_texcoord_generation_advanced_control_block_struct",
+   "max_count_string": "1"
   },
-  "rasterizer_screen_effect_convolution_block_2": {
+  "rasterizer_screen_effect_convolution_block": {
    "max_count": 2,
-   "max_count_string": "2",
-   "struct": "rasterizer_screen_effect_convolution_block"
+   "struct": "rasterizer_screen_effect_convolution_block_struct",
+   "max_count_string": "k_maximum_convolutions_per_rasterizer_screen_effect_pass_reference"
   },
-  "rasterizer_screen_effect_pass_reference_block_2": {
+  "rasterizer_screen_effect_pass_reference_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "rasterizer_screen_effect_pass_reference_block"
+   "struct": "rasterizer_screen_effect_pass_reference_block_struct",
+   "max_count_string": "k_maximum_pass_references_per_rasterizer_screen_effect"
   },
   "screen_effect_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "screen_effect_block_struct"
+   "struct": "screen_effect_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -33,7 +34,7 @@
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "16*sizeof(long)",
      "definition": 64
     },
     {
@@ -42,13 +43,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "16*sizeof(long)",
      "definition": 64
     },
     {
      "type": "block",
      "name": "pass references",
-     "definition": "rasterizer_screen_effect_pass_reference_block_2"
+     "definition": "rasterizer_screen_effect_pass_reference_block"
     },
     {
      "type": "terminator",
@@ -56,14 +57,14 @@
     }
    ]
   },
-  "rasterizer_screen_effect_pass_reference_block": {
+  "rasterizer_screen_effect_pass_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 192,
    "fields": [
     {
      "type": "data",
      "name": "explanation",
-     "definition": "explanation_data"
+     "definition": "rasterizer_screen_effect_text_definition"
     },
     {
      "type": "short_integer",
@@ -71,7 +72,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -92,53 +93,53 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "16*sizeof(long)",
      "definition": 64
     },
     {
      "type": "short_enum",
      "name": "stage 0 mode",
-     "definition": "stage_0_mode_enum"
+     "definition": "stage 0 mode"
     },
     {
      "type": "short_enum",
      "name": "stage 1 mode",
-     "definition": "stage_0_mode_enum"
+     "definition": "stage 0 mode"
     },
     {
      "type": "short_enum",
      "name": "stage 2 mode",
-     "definition": "stage_0_mode_enum"
+     "definition": "stage 0 mode"
     },
     {
      "type": "short_enum",
      "name": "stage 3 mode",
-     "definition": "stage_0_mode_enum"
+     "definition": "stage 0 mode"
     },
     {
      "type": "block",
      "name": "advanced control",
-     "definition": "rasterizer_screen_effect_texcoord_generation_advanced_control_block_2"
+     "definition": "rasterizer_screen_effect_texcoord_generation_advanced_control_block"
     },
     {
      "type": "short_enum",
      "name": "target",
-     "definition": "target_enum"
+     "definition": "target"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "16*sizeof(long)",
      "definition": 64
     },
     {
      "type": "block",
      "name": "convolution",
-     "definition": "rasterizer_screen_effect_convolution_block_2"
+     "definition": "rasterizer_screen_effect_convolution_block"
     },
     {
      "type": "terminator",
@@ -146,29 +147,29 @@
     }
    ]
   },
-  "rasterizer_screen_effect_texcoord_generation_advanced_control_block": {
+  "rasterizer_screen_effect_texcoord_generation_advanced_control_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 72,
    "fields": [
     {
      "type": "word_flags",
      "name": "stage 0 flags",
-     "definition": "stage_0_flags_flags"
+     "definition": "stage 0 flags"
     },
     {
      "type": "word_flags",
      "name": "stage 1 flags",
-     "definition": "stage_0_flags_flags"
+     "definition": "stage 0 flags"
     },
     {
      "type": "word_flags",
      "name": "stage 2 flags",
-     "definition": "stage_0_flags_flags"
+     "definition": "stage 0 flags"
     },
     {
      "type": "word_flags",
      "name": "stage 3 flags",
-     "definition": "stage_0_flags_flags"
+     "definition": "stage 0 flags"
     },
     {
      "type": "real_plane_3d",
@@ -192,23 +193,23 @@
     }
    ]
   },
-  "rasterizer_screen_effect_convolution_block": {
+  "rasterizer_screen_effect_convolution_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 92,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "16*sizeof(long)",
      "definition": 64
     },
     {
@@ -242,9 +243,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "stage_0_mode_enum": {
+  "stage 0 mode": {
    "options": [
     "default",
     "viewport normalized",
@@ -253,12 +253,12 @@
     "zero"
    ]
   },
-  "stage_0_flags_flags": {
+  "stage 0 flags": {
    "options": [
     "xy scaled by z_far"
    ]
   },
-  "target_enum": {
+  "target": {
    "options": [
     "framebuffer",
     "texaccum",
@@ -267,7 +267,7 @@
     "copy fb to texaccum"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "only when primary is active",
     "only when secondary is active",
@@ -276,14 +276,6 @@
   }
  },
  "datas": {
-  "explanation_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  }
- },
- "resources": {},
- "interops": {},
- "struct_versions": {}
+  "rasterizer_screen_effect_text_definition": {}
+ }
 }

@@ -2,71 +2,647 @@
  "name": "device",
  "tag": "devi",
  "version": 1,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "device_block",
  "blocks": {
-  "object_ai_properties_block_2": {
+  "object_ai_properties_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "object_ai_properties_block"
+   "struct": "object_ai_properties_block_struct",
+   "max_count_string": "1"
   },
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "object_function_block_2": {
+  "object_function_block": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "object_function_block"
+   "struct": "object_function_block_struct",
+   "max_count_string": "k_maximum_object_functions"
   },
-  "object_attachment_block_2": {
+  "object_attachment_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "object_attachment_block"
+   "struct": "object_attachment_block_struct",
+   "max_count_string": "k_maximum_number_of_attachments_per_object"
   },
-  "object_widget_block_2": {
+  "object_widget_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "object_widget_block"
+   "struct": "object_widget_block_struct",
+   "max_count_string": "MAXIMUM_WIDGETS_PER_OBJECT"
   },
-  "old_object_function_block_2": {
+  "old_object_function_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "old_object_function_block"
+   "struct": "old_object_function_block_struct",
+   "max_count_string": "4"
   },
-  "object_change_color_initial_permutation_2": {
+  "object_change_color_initial_permutation": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "object_change_color_initial_permutation"
+   "struct": "object_change_color_initial_permutation_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_OBJECT_CHANGE_COLOR_INITIAL_PERMUTATIONS"
   },
-  "object_change_color_function_2": {
+  "object_change_color_function": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "object_change_color_function"
+   "struct": "object_change_color_function_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_OBJECT_CHANGE_COLOR_FUNCTIONS"
   },
-  "object_change_colors_2": {
+  "object_change_colors": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "object_change_colors"
+   "struct": "object_change_colors_struct",
+   "max_count_string": "k_object_change_color_count"
   },
-  "predicted_resource_block_2": {
+  "predicted_resource_block": {
    "max_count": 2048,
-   "max_count_string": "2048",
-   "struct": "predicted_resource_block"
+   "struct": "predicted_resource_block_struct",
+   "max_count_string": "2048"
   },
   "device_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "device_block_struct"
+   "struct": "device_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
+  "object_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 256,
+   "fields": [
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "word_flags",
+     "name": "flags",
+     "definition": "flags"
+    },
+    {
+     "type": "real",
+     "name": "bounding radius"
+    },
+    {
+     "type": "real_point_3d",
+     "name": "bounding offset"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 12
+    },
+    {
+     "type": "real",
+     "name": "acceleration scale"
+    },
+    {
+     "type": "short_enum",
+     "name": "lightmap shadow mode",
+     "definition": "lightmap shadow mode"
+    },
+    {
+     "type": "char_enum",
+     "name": "sweetener size",
+     "definition": "sweetener size"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(byte)",
+     "definition": 1
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 32
+    },
+    {
+     "type": "real",
+     "name": "dynamic light sphere radius"
+    },
+    {
+     "type": "real_point_3d",
+     "name": "dynamic light sphere offset"
+    },
+    {
+     "type": "string_id",
+     "name": "default model variant"
+    },
+    {
+     "type": "tag_reference",
+     "name": "model"
+    },
+    {
+     "type": "tag_reference",
+     "name": "crate object"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 16
+    },
+    {
+     "type": "tag_reference",
+     "name": "modifier shader"
+    },
+    {
+     "type": "tag_reference",
+     "name": "creation effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "material effects"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 24
+    },
+    {
+     "type": "block",
+     "name": "ai properties",
+     "definition": "object_ai_properties_block"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 24
+    },
+    {
+     "type": "block",
+     "name": "functions",
+     "definition": "object_function_block"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 16
+    },
+    {
+     "type": "real",
+     "name": "Apply collision damage scale"
+    },
+    {
+     "type": "real",
+     "name": "min game acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "max game acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "min game scale (default)"
+    },
+    {
+     "type": "real",
+     "name": "max game scale (default)"
+    },
+    {
+     "type": "real",
+     "name": "min abs acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "max abs acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "min abs scale (default)"
+    },
+    {
+     "type": "real",
+     "name": "max abs scale (default)"
+    },
+    {
+     "type": "short_integer",
+     "name": "hud text message index"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "block",
+     "name": "attachments",
+     "definition": "object_attachment_block"
+    },
+    {
+     "type": "block",
+     "name": "widgets",
+     "definition": "object_widget_block"
+    },
+    {
+     "type": "block",
+     "name": "old functions",
+     "definition": "old_object_function_block"
+    },
+    {
+     "type": "block",
+     "name": "change colors",
+     "definition": "object_change_colors"
+    },
+    {
+     "type": "block",
+     "name": "predicted resources",
+     "definition": "predicted_resource_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_ai_properties_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "ai flags",
+     "definition": "ai flags"
+    },
+    {
+     "type": "string_id",
+     "name": "ai type name"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "short_enum",
+     "name": "ai size",
+     "definition": "ai size"
+    },
+    {
+     "type": "short_enum",
+     "name": "leap jump speed",
+     "definition": "leap jump speed"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_function_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 36,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_2"
+    },
+    {
+     "type": "string_id",
+     "name": "import name"
+    },
+    {
+     "type": "string_id",
+     "name": "export name"
+    },
+    {
+     "type": "string_id",
+     "name": "turn off with"
+    },
+    {
+     "type": "real",
+     "name": "min value"
+    },
+    {
+     "type": "custom",
+     "name": "default function"
+    },
+    {
+     "type": "struct",
+     "name": "default function",
+     "definition": "mapping_function_2"
+    },
+    {
+     "type": "string_id",
+     "name": "scale by"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "mapping_function__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "custom",
+     "name": "HIDE_GROUP_ID"
+    },
+    {
+     "type": "char_integer",
+     "name": "Function Type"
+    },
+    {
+     "type": "byte_flags",
+     "name": "Flags",
+     "definition": "Flags"
+    },
+    {
+     "type": "char_integer",
+     "name": "Function 1"
+    },
+    {
+     "type": "char_integer",
+     "name": "Function 2"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 0"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 1"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 2"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 3"
+    },
+    {
+     "type": "block",
+     "name": "Values",
+     "definition": "real_block"
+    },
+    {
+     "type": "custom",
+     "name": "END_HIDE_GROUP_ID"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "MAPP"
+  },
+  "real_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 4,
+   "fields": [
+    {
+     "type": "real",
+     "name": "Value"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "mapping_function_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 12,
+   "fields": [
+    {
+     "type": "custom",
+     "name": "HIDE_GROUP_ID"
+    },
+    {
+     "type": "block",
+     "name": "data",
+     "definition": "byte_block"
+    },
+    {
+     "type": "custom",
+     "name": "END_HIDE_GROUP_ID"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "MAPP"
+  },
+  "byte_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 1,
+   "fields": [
+    {
+     "type": "char_integer",
+     "name": "Value"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_attachment_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "type"
+    },
+    {
+     "type": "old_string_id",
+     "name": "marker"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 4
+    },
+    {
+     "type": "short_enum",
+     "name": "change color",
+     "definition": "change color"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "string_id",
+     "name": "primary scale"
+    },
+    {
+     "type": "string_id",
+     "name": "secondary scale"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 8
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_widget_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "type"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 16
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "old_object_function_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 80,
+   "fields": [
+    {
+     "type": "pad",
+     "name": "sizeof(s_old_object_function_definition)-sizeof(c_old_string_id)",
+     "definition": 76
+    },
+    {
+     "type": "old_string_id",
+     "name": null
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_change_colors_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 24,
+   "fields": [
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 32
+    },
+    {
+     "type": "block",
+     "name": "initial permutations",
+     "definition": "object_change_color_initial_permutation"
+    },
+    {
+     "type": "block",
+     "name": "functions",
+     "definition": "object_change_color_function"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_change_color_initial_permutation_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "real",
+     "name": "weight"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color lower bound"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color upper bound"
+    },
+    {
+     "type": "string_id",
+     "name": "variant name"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_change_color_function_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 40,
+   "fields": [
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "long_flags",
+     "name": "scale flags",
+     "definition": "scale flags"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color lower bound"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color upper bound"
+    },
+    {
+     "type": "string_id",
+     "name": "darken by"
+    },
+    {
+     "type": "string_id",
+     "name": "scale by"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "predicted_resource_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 8,
+   "fields": [
+    {
+     "type": "short_enum",
+     "name": "type",
+     "definition": "type"
+    },
+    {
+     "type": "short_integer",
+     "name": "resource index"
+    },
+    {
+     "type": "long_integer",
+     "name": "tag index"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
   "device_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 408,
@@ -79,7 +655,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "device_flags_flags"
+     "definition": "flags_3"
     },
     {
      "type": "real",
@@ -108,11 +684,11 @@
     {
      "type": "word_flags",
      "name": "lightmap flags",
-     "definition": "lightmap_flags_flags"
+     "definition": "lightmap flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -171,639 +747,50 @@
      "name": null
     }
    ]
-  },
-  "object_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 256,
-   "fields": [
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags"
-    },
-    {
-     "type": "real",
-     "name": "bounding radius"
-    },
-    {
-     "type": "real_point_3d",
-     "name": "bounding offset"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "real",
-     "name": "acceleration scale"
-    },
-    {
-     "type": "short_enum",
-     "name": "lightmap shadow mode",
-     "definition": "lightmap_shadow_mode_enum"
-    },
-    {
-     "type": "char_enum",
-     "name": "sweetener size",
-     "definition": "sweetener_size_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 1
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "real",
-     "name": "dynamic light sphere radius"
-    },
-    {
-     "type": "real_point_3d",
-     "name": "dynamic light sphere offset"
-    },
-    {
-     "type": "string_id",
-     "name": "default model variant"
-    },
-    {
-     "type": "tag_reference",
-     "name": "model"
-    },
-    {
-     "type": "tag_reference",
-     "name": "crate object"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "modifier shader"
-    },
-    {
-     "type": "tag_reference",
-     "name": "creation effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "material effects"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 24
-    },
-    {
-     "type": "block",
-     "name": "ai properties",
-     "definition": "object_ai_properties_block_2"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 24
-    },
-    {
-     "type": "block",
-     "name": "functions",
-     "definition": "object_function_block_2"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "real",
-     "name": "Apply collision damage scale"
-    },
-    {
-     "type": "real",
-     "name": "min game acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "max game acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "min game scale (default)"
-    },
-    {
-     "type": "real",
-     "name": "max game scale (default)"
-    },
-    {
-     "type": "real",
-     "name": "min abs acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "max abs acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "min abs scale (default)"
-    },
-    {
-     "type": "real",
-     "name": "max abs scale (default)"
-    },
-    {
-     "type": "short_integer",
-     "name": "hud text message index"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "block",
-     "name": "attachments",
-     "definition": "object_attachment_block_2"
-    },
-    {
-     "type": "block",
-     "name": "widgets",
-     "definition": "object_widget_block_2"
-    },
-    {
-     "type": "block",
-     "name": "old functions",
-     "definition": "old_object_function_block_2"
-    },
-    {
-     "type": "block",
-     "name": "change colors",
-     "definition": "object_change_colors_2"
-    },
-    {
-     "type": "block",
-     "name": "predicted resources",
-     "definition": "predicted_resource_block_2"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_ai_properties_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 16,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "ai flags",
-     "definition": "ai_flags_flags"
-    },
-    {
-     "type": "string_id",
-     "name": "ai type name"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "short_enum",
-     "name": "ai size",
-     "definition": "ai_size_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "leap jump speed",
-     "definition": "leap_jump_speed_enum"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_function_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 36,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_2"
-    },
-    {
-     "type": "string_id",
-     "name": "import name"
-    },
-    {
-     "type": "string_id",
-     "name": "export name"
-    },
-    {
-     "type": "string_id",
-     "name": "turn off with"
-    },
-    {
-     "type": "real",
-     "name": "min value"
-    },
-    {
-     "type": "custom",
-     "name": "default function"
-    },
-    {
-     "type": "struct",
-     "name": "default function",
-     "definition": "mapping_function"
-    },
-    {
-     "type": "string_id",
-     "name": "scale by"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "mapping_function__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "custom",
-     "name": "HIDE_GROUP_ID"
-    },
-    {
-     "type": "char_integer",
-     "name": "Function Type"
-    },
-    {
-     "type": "byte_flags",
-     "name": "Flags",
-     "definition": "flags_flags_3"
-    },
-    {
-     "type": "char_integer",
-     "name": "Function 1"
-    },
-    {
-     "type": "char_integer",
-     "name": "Function 2"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 0"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 1"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 2"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 3"
-    },
-    {
-     "type": "block",
-     "name": "Values",
-     "definition": "real_block_2"
-    },
-    {
-     "type": "custom",
-     "name": "END_HIDE_GROUP_ID"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "MAPP"
-  },
-  "real_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 4,
-   "fields": [
-    {
-     "type": "real",
-     "name": "Value"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "mapping_function": {
-   "guid": "00000000000000000000000000000000",
-   "size": 12,
-   "fields": [
-    {
-     "type": "custom",
-     "name": "HIDE_GROUP_ID"
-    },
-    {
-     "type": "block",
-     "name": "data",
-     "definition": "byte_block_2"
-    },
-    {
-     "type": "custom",
-     "name": "END_HIDE_GROUP_ID"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "MAPP"
-  },
-  "byte_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 1,
-   "fields": [
-    {
-     "type": "char_integer",
-     "name": "Value"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_attachment_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "type"
-    },
-    {
-     "type": "old_string_id",
-     "name": "marker"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "short_enum",
-     "name": "change color",
-     "definition": "change_color_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "string_id",
-     "name": "primary scale"
-    },
-    {
-     "type": "string_id",
-     "name": "secondary scale"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_widget_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 16,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "type"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "old_object_function_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 80,
-   "fields": [
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 76
-    },
-    {
-     "type": "old_string_id",
-     "name": null
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_change_colors": {
-   "guid": "00000000000000000000000000000000",
-   "size": 24,
-   "fields": [
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "block",
-     "name": "initial permutations",
-     "definition": "object_change_color_initial_permutation_2"
-    },
-    {
-     "type": "block",
-     "name": "functions",
-     "definition": "object_change_color_function_2"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_change_color_initial_permutation": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "real",
-     "name": "weight"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color lower bound"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color upper bound"
-    },
-    {
-     "type": "string_id",
-     "name": "variant name"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_change_color_function": {
-   "guid": "00000000000000000000000000000000",
-   "size": 40,
-   "fields": [
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "long_flags",
-     "name": "scale flags",
-     "definition": "scale_flags_flags"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color lower bound"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color upper bound"
-    },
-    {
-     "type": "string_id",
-     "name": "darken by"
-    },
-    {
-     "type": "string_id",
-     "name": "scale by"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "predicted_resource_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
-    {
-     "type": "short_enum",
-     "name": "type",
-     "definition": "type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "resource index"
-    },
-    {
-     "type": "long_integer",
-     "name": "tag index"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "device_flags_flags": {
-   "options": [
-    "position loops",
-    "(unused)",
-    "allow interpolation"
-   ]
-  },
-  "lightmap_flags_flags": {
-   "options": [
-    "don't use in lightmap",
-    "don't use in lightprobe"
-   ]
-  },
-  "flags_flags": {
+  "flags": {
    "options": [
     "does not cast shadow",
     "search cardinal direction lightmaps on failure",
-    "unused",
+    "unused!",
     "not a pathfinding obstacle",
-    "extension of parent",
+    "extension of parent#object passes all function values to parent and uses parent's markers",
     "does not cause collision damage",
     "early mover",
     "early mover localized physics",
-    "use static massive lightmap sample",
+    "use static massive lightmap sample#cast A LOT of rays once and store the results for lighting",
     "object scales attachments",
     "inherits player's appearance",
     "dead bipeds can't localize",
-    "attach to clusters by dynamic sphere",
+    "attach to clusters by dynamic sphere#use this for the mac gun on spacestation",
     "effects created by this object do not spawn objects in multiplayer",
-    "prophet is not displayed in pegasus builds"
+    "prophet is not displayed in pegasus builds!"
    ]
   },
-  "lightmap_shadow_mode_enum": {
+  "lightmap shadow mode": {
    "options": [
     "default",
     "never",
     "always"
    ]
   },
-  "sweetener_size_enum": {
+  "sweetener size": {
    "options": [
     "small",
     "medium",
     "large"
    ]
   },
-  "ai_flags_flags": {
+  "ai flags": {
    "options": [
     "detroyable cover",
     "pathfinding ignore when dead",
     "dynamic cover"
    ]
   },
-  "ai_size_enum": {
+  "ai size": {
    "options": [
     "default",
     "tiny",
@@ -814,7 +801,7 @@
     "immobile"
    ]
   },
-  "leap_jump_speed_enum": {
+  "leap jump speed": {
    "options": [
     "NONE",
     "down",
@@ -826,15 +813,15 @@
     "infinite"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
-    "invert",
-    "mapping does not controls active",
-    "always active",
-    "random time offset"
+    "invert#result of function is one minus actual result",
+    "mapping does not controls active#the curve mapping can make the function active/inactive",
+    "always active#function does not deactivate when at or below lower bound",
+    "random time offset#function offsets periodic function input by random value between 0 and 1"
    ]
   },
-  "flags_flags_3": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -846,7 +833,7 @@
     "Color Bit 3"
    ]
   },
-  "change_color_enum": {
+  "change color": {
    "options": [
     "none",
     "primary",
@@ -855,13 +842,13 @@
     "quaternary"
    ]
   },
-  "scale_flags_flags": {
+  "scale flags": {
    "options": [
-    "blend in hsv",
-    "...more colors"
+    "blend in hsv#blends colors in hsv rather than rgb space",
+    "...more colors#blends colors through more hues (goes the long way around the color wheel)"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "bitmap",
     "sound",
@@ -873,15 +860,25 @@
     "lightmap cluster bitmaps",
     "lightmap instance bitmaps"
    ]
+  },
+  "flags_3": {
+   "options": [
+    "position loops",
+    "(unused)",
+    "allow interpolation"
+   ]
+  },
+  "lightmap flags": {
+   "options": [
+    "don't use in lightmap",
+    "don't use in lightprobe"
+   ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   }
  }
 }

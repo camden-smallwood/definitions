@@ -2,13 +2,14 @@
  "name": "hud_number",
  "tag": "hud#",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "hud_number_block",
  "blocks": {
   "hud_number_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "hud_number_block_struct"
+   "struct": "hud_number_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -46,12 +47,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "19*sizeof(long)",
      "definition": 76
     },
     {
@@ -60,11 +61,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

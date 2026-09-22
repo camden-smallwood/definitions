@@ -2,33 +2,34 @@
  "name": "particle_physics",
  "tag": "pmov",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "particle_physics_block",
  "blocks": {
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "particle_controller_parameters_2": {
+  "particle_controller_parameters": {
    "max_count": 9,
-   "max_count_string": "9",
-   "struct": "particle_controller_parameters"
+   "struct": "particle_controller_parameters_struct",
+   "max_count_string": "c_particle_movement_definition::k_flocking_parameter_count"
   },
-  "particle_controller_2": {
+  "particle_controller": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "particle_controller"
+   "struct": "particle_controller_struct",
+   "max_count_string": "c_particle_movement_definition::k_type_count"
   },
   "particle_physics_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "particle_physics_block_struct"
+   "struct": "particle_physics_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -43,12 +44,12 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "block",
      "name": "movements",
-     "definition": "particle_controller_2"
+     "definition": "particle_controller"
     },
     {
      "type": "terminator",
@@ -56,28 +57,28 @@
     }
    ]
   },
-  "particle_controller": {
+  "particle_controller_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "parameters",
-     "definition": "particle_controller_parameters_2"
+     "definition": "particle_controller_parameters"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(dword)",
      "definition": 8
     },
     {
@@ -86,7 +87,7 @@
     }
    ]
   },
-  "particle_controller_parameters": {
+  "particle_controller_parameters_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -97,7 +98,7 @@
     {
      "type": "struct",
      "name": "property",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "terminator",
@@ -105,29 +106,29 @@
     }
    ]
   },
-  "particle_property_scalar_struct_new": {
+  "particle_property_scalar_struct_new_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "short_enum",
      "name": "Input Variable",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "short_enum",
      "name": "Range Variable",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "short_enum",
      "name": "Output Modifier",
-     "definition": "output_modifier_enum"
+     "definition": "Output Modifier"
     },
     {
      "type": "short_enum",
      "name": "Output Modifier Input",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "custom",
@@ -136,7 +137,7 @@
     {
      "type": "struct",
      "name": "Mapping",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -160,7 +161,7 @@
     {
      "type": "byte_flags",
      "name": "Flags",
-     "definition": "flags_flags_2"
+     "definition": "Flags"
     },
     {
      "type": "char_integer",
@@ -189,7 +190,7 @@
     {
      "type": "block",
      "name": "Values",
-     "definition": "real_block_2"
+     "definition": "real_block"
     },
     {
      "type": "custom",
@@ -202,7 +203,7 @@
    ],
    "tag": "MAPP"
   },
-  "real_block": {
+  "real_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -216,7 +217,7 @@
     }
    ]
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -227,7 +228,7 @@
     {
      "type": "block",
      "name": "data",
-     "definition": "byte_block_2"
+     "definition": "byte_block"
     },
     {
      "type": "custom",
@@ -240,7 +241,7 @@
    ],
    "tag": "MAPP"
   },
-  "byte_block": {
+  "byte_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -255,9 +256,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "physics",
     "collide with structure",
@@ -269,7 +269,7 @@
     "wind"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "physics",
     "collider",
@@ -277,7 +277,7 @@
     "wind"
    ]
   },
-  "input_variable_enum": {
+  "Input Variable": {
    "options": [
     "particle age",
     "particle emit time",
@@ -298,14 +298,14 @@
     "location random"
    ]
   },
-  "output_modifier_enum": {
+  "Output Modifier": {
    "options": [
-    null,
+    " ",
     "Plus",
     "Times"
    ]
   },
-  "flags_flags_2": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -318,13 +318,10 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   }
  }
 }

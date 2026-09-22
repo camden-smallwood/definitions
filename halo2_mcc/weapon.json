@@ -2,482 +2,595 @@
  "name": "weapon",
  "tag": "weap",
  "version": 2,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "weapon_block",
  "blocks": {
-  "g_null_block_2": {
-   "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
-  },
-  "predicted_resource_block_2": {
-   "max_count": 2048,
-   "max_count_string": "2048",
-   "struct": "predicted_resource_block"
-  },
-  "magazine_objects_2": {
-   "max_count": 8,
-   "max_count_string": "8",
-   "struct": "magazine_objects"
-  },
-  "magazine_objects_3": {
-   "max_count": 8,
-   "max_count_string": "8",
-   "struct": "magazine_objects"
-  },
-  "magazines_2": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "magazines"
-  },
-  "predicted_resource_block_3": {
-   "max_count": 2048,
-   "max_count_string": "2048",
-   "struct": "predicted_resource_block"
-  },
-  "magazines_3": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "magazines"
-  },
-  "weapon_triggers_2": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "weapon_triggers"
-  },
-  "barrel_firing_effect_block_2": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "barrel_firing_effect_block"
-  },
-  "barrel_firing_effect_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "barrel_firing_effect_block"
-  },
-  "barrel_firing_effect_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "barrel_firing_effect_block"
-  },
-  "weapon_barrels_2": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "weapon_barrels"
-  },
-  "weapon_first_person_interface_block_2": {
-   "max_count": 4,
-   "max_count_string": "4",
-   "struct": "weapon_first_person_interface_block"
-  },
-  "predicted_resource_block_4": {
-   "max_count": 2048,
-   "max_count_string": "2048",
-   "struct": "predicted_resource_block"
-  },
-  "magazines_4": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "magazines"
-  },
-  "weapon_triggers_3": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "weapon_triggers"
-  },
-  "weapon_barrels_3": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "weapon_barrels"
-  },
-  "predicted_resource_block_5": {
-   "max_count": 2048,
-   "max_count_string": "2048",
-   "struct": "predicted_resource_block"
-  },
-  "magazines_5": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "magazines"
-  },
-  "weapon_triggers_4": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "weapon_triggers"
-  },
-  "weapon_barrels_4": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "weapon_barrels"
-  },
-  "predicted_bitmaps_block_2": {
-   "max_count": 8,
-   "max_count_string": "8",
-   "struct": "predicted_bitmaps_block"
-  },
-  "object_ai_properties_block_2": {
+  "object_ai_properties_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "object_ai_properties_block"
+   "struct": "object_ai_properties_block_struct",
+   "max_count_string": "1"
   },
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "object_function_block_2": {
+  "object_function_block": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "object_function_block"
+   "struct": "object_function_block_struct",
+   "max_count_string": "k_maximum_object_functions"
   },
-  "object_attachment_block_2": {
+  "object_attachment_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "object_attachment_block"
+   "struct": "object_attachment_block_struct",
+   "max_count_string": "k_maximum_number_of_attachments_per_object"
   },
-  "object_widget_block_2": {
+  "object_widget_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "object_widget_block"
+   "struct": "object_widget_block_struct",
+   "max_count_string": "MAXIMUM_WIDGETS_PER_OBJECT"
   },
-  "old_object_function_block_2": {
+  "old_object_function_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "old_object_function_block"
+   "struct": "old_object_function_block_struct",
+   "max_count_string": "4"
   },
-  "object_change_color_initial_permutation_2": {
+  "object_change_color_initial_permutation": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "object_change_color_initial_permutation"
+   "struct": "object_change_color_initial_permutation_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_OBJECT_CHANGE_COLOR_INITIAL_PERMUTATIONS"
   },
-  "object_change_color_function_2": {
+  "object_change_color_function": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "object_change_color_function"
+   "struct": "object_change_color_function_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_OBJECT_CHANGE_COLOR_FUNCTIONS"
   },
-  "object_change_colors_2": {
+  "object_change_colors": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "object_change_colors"
+   "struct": "object_change_colors_struct",
+   "max_count_string": "k_object_change_color_count"
   },
-  "predicted_resource_block_6": {
+  "predicted_resource_block": {
    "max_count": 2048,
-   "max_count_string": "2048",
-   "struct": "predicted_resource_block"
+   "struct": "predicted_resource_block_struct",
+   "max_count_string": "2048"
+  },
+  "predicted_bitmaps_block": {
+   "max_count": 8,
+   "struct": "predicted_bitmaps_block_struct",
+   "max_count_string": "8"
+  },
+  "g_null_block": {
+   "max_count": 0,
+   "struct": "g_null_block_struct",
+   "max_count_string": "0"
+  },
+  "magazine_objects": {
+   "max_count": 8,
+   "struct": "magazine_objects_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINE_OBJECTS_PER_MAGAZINE"
+  },
+  "magazines": {
+   "max_count": 2,
+   "struct": "magazines_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINES_PER_WEAPON"
+  },
+  "barrel_firing_effect_block": {
+   "max_count": 3,
+   "struct": "barrel_firing_effect_block_struct",
+   "max_count_string": "k_weapon_barrel_effect_count"
+  },
+  "weapon_barrels": {
+   "max_count": 2,
+   "struct": "weapon_barrels_struct",
+   "max_count_string": "k_weapon_barrel_count"
+  },
+  "weapon_triggers": {
+   "max_count": 2,
+   "struct": "weapon_triggers_struct",
+   "max_count_string": "k_weapon_trigger_count"
+  },
+  "weapon_first_person_interface_block": {
+   "max_count": 4,
+   "struct": "weapon_first_person_interface_block_struct",
+   "max_count_string": "k_player_character_type_count"
   },
   "weapon_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "weapon_block_struct"
+   "struct": "weapon_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
-  "weapon_block_struct__v0": {
+  "object_block_struct": {
    "guid": "00000000000000000000000000000000",
-   "size": 1068,
+   "size": 256,
    "fields": [
     {
-     "type": "struct",
-     "name": "item",
-     "definition": "item_block_struct"
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
     },
+    {
+     "type": "word_flags",
+     "name": "flags",
+     "definition": "flags"
+    },
+    {
+     "type": "real",
+     "name": "bounding radius"
+    },
+    {
+     "type": "real_point_3d",
+     "name": "bounding offset"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 12
+    },
+    {
+     "type": "real",
+     "name": "acceleration scale"
+    },
+    {
+     "type": "short_enum",
+     "name": "lightmap shadow mode",
+     "definition": "lightmap shadow mode"
+    },
+    {
+     "type": "char_enum",
+     "name": "sweetener size",
+     "definition": "sweetener size"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(byte)",
+     "definition": 1
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 32
+    },
+    {
+     "type": "real",
+     "name": "dynamic light sphere radius"
+    },
+    {
+     "type": "real_point_3d",
+     "name": "dynamic light sphere offset"
+    },
+    {
+     "type": "string_id",
+     "name": "default model variant"
+    },
+    {
+     "type": "tag_reference",
+     "name": "model"
+    },
+    {
+     "type": "tag_reference",
+     "name": "crate object"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 16
+    },
+    {
+     "type": "tag_reference",
+     "name": "modifier shader"
+    },
+    {
+     "type": "tag_reference",
+     "name": "creation effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "material effects"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 24
+    },
+    {
+     "type": "block",
+     "name": "ai properties",
+     "definition": "object_ai_properties_block"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 24
+    },
+    {
+     "type": "block",
+     "name": "functions",
+     "definition": "object_function_block"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 16
+    },
+    {
+     "type": "real",
+     "name": "Apply collision damage scale"
+    },
+    {
+     "type": "real",
+     "name": "min game acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "max game acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "min game scale (default)"
+    },
+    {
+     "type": "real",
+     "name": "max game scale (default)"
+    },
+    {
+     "type": "real",
+     "name": "min abs acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "max abs acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "min abs scale (default)"
+    },
+    {
+     "type": "real",
+     "name": "max abs scale (default)"
+    },
+    {
+     "type": "short_integer",
+     "name": "hud text message index"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "block",
+     "name": "attachments",
+     "definition": "object_attachment_block"
+    },
+    {
+     "type": "block",
+     "name": "widgets",
+     "definition": "object_widget_block"
+    },
+    {
+     "type": "block",
+     "name": "old functions",
+     "definition": "old_object_function_block"
+    },
+    {
+     "type": "block",
+     "name": "change colors",
+     "definition": "object_change_colors"
+    },
+    {
+     "type": "block",
+     "name": "predicted resources",
+     "definition": "predicted_resource_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_ai_properties_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "ai flags",
+     "definition": "ai flags"
+    },
+    {
+     "type": "string_id",
+     "name": "ai type name"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "short_enum",
+     "name": "ai size",
+     "definition": "ai size"
+    },
+    {
+     "type": "short_enum",
+     "name": "leap jump speed",
+     "definition": "leap jump speed"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_function_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 36,
+   "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "weapon_flags_flags"
+     "definition": "flags_2"
+    },
+    {
+     "type": "string_id",
+     "name": "import name"
+    },
+    {
+     "type": "string_id",
+     "name": "export name"
+    },
+    {
+     "type": "string_id",
+     "name": "turn off with"
+    },
+    {
+     "type": "real",
+     "name": "min value"
+    },
+    {
+     "type": "custom",
+     "name": "default function"
+    },
+    {
+     "type": "struct",
+     "name": "default function",
+     "definition": "mapping_function_2"
+    },
+    {
+     "type": "string_id",
+     "name": "scale by"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "mapping_function__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "custom",
+     "name": "HIDE_GROUP_ID"
+    },
+    {
+     "type": "char_integer",
+     "name": "Function Type"
+    },
+    {
+     "type": "byte_flags",
+     "name": "Flags",
+     "definition": "Flags"
+    },
+    {
+     "type": "char_integer",
+     "name": "Function 1"
+    },
+    {
+     "type": "char_integer",
+     "name": "Function 2"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 0"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 1"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 2"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 3"
+    },
+    {
+     "type": "block",
+     "name": "Values",
+     "definition": "real_block"
+    },
+    {
+     "type": "custom",
+     "name": "END_HIDE_GROUP_ID"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "MAPP"
+  },
+  "real_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 4,
+   "fields": [
+    {
+     "type": "real",
+     "name": "Value"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "mapping_function_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 12,
+   "fields": [
+    {
+     "type": "custom",
+     "name": "HIDE_GROUP_ID"
+    },
+    {
+     "type": "block",
+     "name": "data",
+     "definition": "byte_block"
+    },
+    {
+     "type": "custom",
+     "name": "END_HIDE_GROUP_ID"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "MAPP"
+  },
+  "byte_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 1,
+   "fields": [
+    {
+     "type": "char_integer",
+     "name": "Value"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_attachment_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "type"
+    },
+    {
+     "type": "old_string_id",
+     "name": "marker"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 4
+    },
+    {
+     "type": "short_enum",
+     "name": "change color",
+     "definition": "change color"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "string_id",
+     "name": "primary scale"
+    },
+    {
+     "type": "string_id",
+     "name": "secondary scale"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 8
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_widget_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "type"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 16
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "old_object_function_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 80,
+   "fields": [
+    {
+     "type": "pad",
+     "name": "sizeof(s_old_object_function_definition)-sizeof(c_old_string_id)",
+     "definition": 76
     },
     {
      "type": "old_string_id",
      "name": null
     },
     {
-     "type": "short_enum",
-     "name": "secondary trigger mode",
-     "definition": "secondary_trigger_mode_enum"
-    },
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_change_colors_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 24,
+   "fields": [
     {
-     "type": "short_integer",
-     "name": "maximum alternate shots loaded"
-    },
-    {
-     "type": "pad",
+     "type": "useless_pad",
      "name": null,
-     "definition": 8
-    },
-    {
-     "type": "real",
-     "name": "ready time"
-    },
-    {
-     "type": "tag_reference",
-     "name": "ready effect"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat recovery threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "overheated threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat detonation threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat detonation fraction"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat loss per second"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat illumination"
-    },
-    {
-     "type": "real_fraction",
-     "name": "overheated heat loss per second"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "tag_reference",
-     "name": "overheated"
-    },
-    {
-     "type": "tag_reference",
-     "name": "detonation"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player melee damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player melee response"
-    },
-    {
-     "type": "struct",
-     "name": "melee aim assist",
-     "definition": "melee_aim_assist_struct"
-    },
-    {
-     "type": "struct",
-     "name": "melee damage parameters",
-     "definition": "melee_damage_parameters_struct"
-    },
-    {
-     "type": "char_enum",
-     "name": "melee damage reporting type",
-     "definition": "melee_damage_reporting_type_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 3
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "tag_reference",
-     "name": "actor firing parameters"
-    },
-    {
-     "type": "real",
-     "name": "near reticle range"
-    },
-    {
-     "type": "real",
-     "name": "far reticle range"
-    },
-    {
-     "type": "real",
-     "name": "intersection reticle range"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "short_integer",
-     "name": "magnification levels"
-    },
-    {
-     "type": "real_bounds",
-     "name": "magnification range"
-    },
-    {
-     "type": "struct",
-     "name": "weapon aim assist",
-     "definition": "aim_assist_struct"
-    },
-    {
-     "type": "short_enum",
-     "name": "movement penalized",
-     "definition": "movement_penalized_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "real",
-     "name": "forward movement penalty"
-    },
-    {
-     "type": "real",
-     "name": "sideways movement penalty"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "real",
-     "name": "AI scariness"
-    },
-    {
-     "type": "real",
-     "name": "light power-on time"
-    },
-    {
-     "type": "real",
-     "name": "light power-off time"
-    },
-    {
-     "type": "tag_reference",
-     "name": "light power-on effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "light power-off effect"
-    },
-    {
-     "type": "real",
-     "name": "age heat recovery penalty"
-    },
-    {
-     "type": "real",
-     "name": "age rate of fire penalty"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age misfire start"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age misfire chance"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "tag_reference",
-     "name": "first person model"
-    },
-    {
-     "type": "tag_reference",
-     "name": "first person animations"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "pickup sound"
-    },
-    {
-     "type": "tag_reference",
-     "name": "zoom-in sound"
-    },
-    {
-     "type": "tag_reference",
-     "name": "zoom-out sound"
+     "definition": 32
     },
     {
      "type": "block",
-     "name": null,
-     "definition": "g_null_block_2"
-    },
-    {
-     "type": "real",
-     "name": "active camo ding"
-    },
-    {
-     "type": "real",
-     "name": "active camo regrowth rate"
-    },
-    {
-     "type": "string_id",
-     "name": "handle node"
-    },
-    {
-     "type": "string_id",
-     "name": "weapon class"
-    },
-    {
-     "type": "string_id",
-     "name": "weapon name"
-    },
-    {
-     "type": "short_enum",
-     "name": "multiplayer weapon type",
-     "definition": "multiplayer_weapon_type_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "weapon type",
-     "definition": "weapon_type_enum"
+     "name": "initial permutations",
+     "definition": "object_change_color_initial_permutation"
     },
     {
      "type": "block",
-     "name": "predicted resources",
-     "definition": "predicted_resource_block_2"
-    },
-    {
-     "type": "block",
-     "name": "magazines",
-     "definition": "magazines_2"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
+     "name": "functions",
+     "definition": "object_change_color_function"
     },
     {
      "type": "terminator",
@@ -485,168 +598,25 @@
     }
    ]
   },
-  "melee_aim_assist_struct__v0": {
+  "object_change_color_initial_permutation_struct": {
    "guid": "00000000000000000000000000000000",
-   "size": 0,
+   "size": 32,
    "fields": [
     {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "masd"
-  },
-  "melee_aim_assist_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 20,
-   "fields": [
-    {
-     "type": "angle",
-     "name": "magnetism angle"
-    },
-    {
      "type": "real",
-     "name": "magnetism range"
+     "name": "weight"
     },
     {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 8
+     "type": "real_rgb_color",
+     "name": "color lower bound"
     },
     {
-     "type": "real",
-     "name": "throttle magnitude"
+     "type": "real_rgb_color",
+     "name": "color upper bound"
     },
     {
-     "type": "real",
-     "name": "throttle minimum distance"
-    },
-    {
-     "type": "angle",
-     "name": "throttle maximum adjustment angle"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "masd"
-  },
-  "melee_damage_parameters_struct__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 0,
-   "fields": [
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "mdps"
-  },
-  "melee_damage_parameters_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 140,
-   "fields": [
-    {
-     "type": "real_euler_angles_2d",
-     "name": "damage pyramid angles"
-    },
-    {
-     "type": "real",
-     "name": "damage pyramid depth"
-    },
-    {
-     "type": "tag_reference",
-     "name": "1st hit melee damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "1st hit melee response"
-    },
-    {
-     "type": "tag_reference",
-     "name": "2nd hit melee damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "2nd hit melee response"
-    },
-    {
-     "type": "tag_reference",
-     "name": "3rd hit melee damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "3rd hit melee response"
-    },
-    {
-     "type": "tag_reference",
-     "name": "lunge melee damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "lunge melee response"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "mdps"
-  },
-  "aim_assist_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 36,
-   "fields": [
-    {
-     "type": "angle",
-     "name": "autoaim angle"
-    },
-    {
-     "type": "real",
-     "name": "autoaim range"
-    },
-    {
-     "type": "angle",
-     "name": "magnetism angle"
-    },
-    {
-     "type": "real",
-     "name": "magnetism range"
-    },
-    {
-     "type": "angle",
-     "name": "deviation angle"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "easd"
-  },
-  "g_null_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 0,
-   "fields": [
-    {
-     "type": "custom",
-     "name": "-1"
+     "type": "string_id",
+     "name": "variant name"
     },
     {
      "type": "terminator",
@@ -654,14 +624,50 @@
     }
    ]
   },
-  "predicted_resource_block": {
+  "object_change_color_function_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 40,
+   "fields": [
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "long_flags",
+     "name": "scale flags",
+     "definition": "scale flags"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color lower bound"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color upper bound"
+    },
+    {
+     "type": "string_id",
+     "name": "darken by"
+    },
+    {
+     "type": "string_id",
+     "name": "scale by"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "predicted_resource_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "short_integer",
@@ -670,2222 +676,6 @@
     {
      "type": "long_integer",
      "name": "tag index"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "magazines__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 112,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds recharged"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds total initial"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds total maximum"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds loaded maximum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "real",
-     "name": "reload time"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds reloaded"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "real",
-     "name": "chamber time"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "reloading effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "chambering effect"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "block",
-     "name": "magazines",
-     "definition": "magazine_objects_2"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "magazine_objects__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 28,
-   "fields": [
-    {
-     "type": "short_integer",
-     "name": "rounds"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 10
-    },
-    {
-     "type": "tag_reference",
-     "name": "equipment"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "magazine_objects": {
-   "guid": "00000000000000000000000000000000",
-   "size": 20,
-   "fields": [
-    {
-     "type": "short_integer",
-     "name": "rounds"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "tag_reference",
-     "name": "equipment"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "magazines": {
-   "guid": "00000000000000000000000000000000",
-   "size": 128,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds recharged"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds total initial"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds total maximum"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds loaded maximum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "real",
-     "name": "reload time"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds reloaded"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "real",
-     "name": "chamber time"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "reloading effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "reloading damage effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "chambering effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "chambering damage effect"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "block",
-     "name": "magazines",
-     "definition": "magazine_objects_3"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "weapon_block_struct__v1": {
-   "guid": "00000000000000000000000000000000",
-   "size": 1156,
-   "fields": [
-    {
-     "type": "struct",
-     "name": "item",
-     "definition": "item_block_struct"
-    },
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "weapon_flags_flags"
-    },
-    {
-     "type": "old_string_id",
-     "name": null
-    },
-    {
-     "type": "short_enum",
-     "name": "secondary trigger mode",
-     "definition": "secondary_trigger_mode_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "maximum alternate shots loaded"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "real",
-     "name": "ready time"
-    },
-    {
-     "type": "tag_reference",
-     "name": "ready effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "ready damage effect"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat recovery threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "overheated threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat detonation threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat detonation fraction"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat loss per second"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat illumination"
-    },
-    {
-     "type": "real_fraction",
-     "name": "overheated heat loss per second"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "tag_reference",
-     "name": "overheated"
-    },
-    {
-     "type": "tag_reference",
-     "name": "overheated damage effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "detonation"
-    },
-    {
-     "type": "tag_reference",
-     "name": "detonation damage effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player melee damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player melee response"
-    },
-    {
-     "type": "struct",
-     "name": "melee aim assist",
-     "definition": "melee_aim_assist_struct"
-    },
-    {
-     "type": "struct",
-     "name": "melee damage parameters",
-     "definition": "melee_damage_parameters_struct"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "short_integer",
-     "name": "magnification levels"
-    },
-    {
-     "type": "real_bounds",
-     "name": "magnification range"
-    },
-    {
-     "type": "struct",
-     "name": "weapon aim assist",
-     "definition": "aim_assist_struct"
-    },
-    {
-     "type": "short_enum",
-     "name": "movement penalized",
-     "definition": "movement_penalized_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "real_fraction",
-     "name": "forward movement penalty"
-    },
-    {
-     "type": "real_fraction",
-     "name": "sideways movement penalty"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "real",
-     "name": "AI scariness"
-    },
-    {
-     "type": "real",
-     "name": "weapon power-on time"
-    },
-    {
-     "type": "real",
-     "name": "weapon power-off time"
-    },
-    {
-     "type": "tag_reference",
-     "name": "weapon power-on effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "weapon power-off effect"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "real",
-     "name": "age heat recovery penalty"
-    },
-    {
-     "type": "real",
-     "name": "age rate of fire penalty"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age misfire start"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age misfire chance"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "tag_reference",
-     "name": "first person model"
-    },
-    {
-     "type": "tag_reference",
-     "name": "first person animations"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "pickup sound"
-    },
-    {
-     "type": "tag_reference",
-     "name": "zoom-in sound"
-    },
-    {
-     "type": "tag_reference",
-     "name": "zoom-out sound"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "real",
-     "name": "active camo ding"
-    },
-    {
-     "type": "real",
-     "name": "active camo regrowth rate"
-    },
-    {
-     "type": "string_id",
-     "name": "handle node"
-    },
-    {
-     "type": "string_id",
-     "name": "weapon class"
-    },
-    {
-     "type": "string_id",
-     "name": "weapon name"
-    },
-    {
-     "type": "short_enum",
-     "name": "multiplayer weapon type",
-     "definition": "multiplayer_weapon_type_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "weapon type",
-     "definition": "weapon_type_enum"
-    },
-    {
-     "type": "struct",
-     "name": "tracking",
-     "definition": "weapon_tracking_struct"
-    },
-    {
-     "type": "block",
-     "name": "predicted resources",
-     "definition": "predicted_resource_block_3"
-    },
-    {
-     "type": "block",
-     "name": "magazines",
-     "definition": "magazines_3"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "block",
-     "name": "new triggers",
-     "definition": "weapon_triggers_2"
-    },
-    {
-     "type": "block",
-     "name": "barrels",
-     "definition": "weapon_barrels_2"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "weapon_tracking_struct__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 0,
-   "fields": [
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "wtsf"
-  },
-  "weapon_tracking_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 4,
-   "fields": [
-    {
-     "type": "short_enum",
-     "name": "tracking type",
-     "definition": "tracking_type_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "wtsf"
-  },
-  "weapon_triggers": {
-   "guid": "00000000000000000000000000000000",
-   "size": 80,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_2"
-    },
-    {
-     "type": "short_enum",
-     "name": "input",
-     "definition": "input_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "behavior",
-     "definition": "behavior_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "primary barrel"
-    },
-    {
-     "type": "short_integer",
-     "name": "secondary barrel"
-    },
-    {
-     "type": "short_enum",
-     "name": "prediction",
-     "definition": "prediction_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 28
-    },
-    {
-     "type": "struct",
-     "name": "autofire",
-     "definition": "weapon_trigger_autofire_struct"
-    },
-    {
-     "type": "struct",
-     "name": "charging",
-     "definition": "weapon_trigger_charging_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "weapon_trigger_autofire_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 12,
-   "fields": [
-    {
-     "type": "real",
-     "name": "autofire time"
-    },
-    {
-     "type": "real",
-     "name": "autofire throw"
-    },
-    {
-     "type": "short_enum",
-     "name": "secondary action",
-     "definition": "secondary_action_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "primary action",
-     "definition": "secondary_action_enum"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "wtas"
-  },
-  "weapon_trigger_charging_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 52,
-   "fields": [
-    {
-     "type": "real",
-     "name": "charging time"
-    },
-    {
-     "type": "real",
-     "name": "charged time"
-    },
-    {
-     "type": "short_enum",
-     "name": "overcharged action",
-     "definition": "overcharged_action_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "real",
-     "name": "charged illumination"
-    },
-    {
-     "type": "real",
-     "name": "spew time"
-    },
-    {
-     "type": "tag_reference",
-     "name": "charging effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "charging damage effect"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "wtcs"
-  },
-  "weapon_barrels__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 312,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_3"
-    },
-    {
-     "type": "real_bounds",
-     "name": "rounds per second"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "real_fraction",
-     "name": "blurred rate of fire"
-    },
-    {
-     "type": "short_bounds",
-     "name": "shots per fire"
-    },
-    {
-     "type": "real",
-     "name": "fire recovery time"
-    },
-    {
-     "type": "real_fraction",
-     "name": "soft recovery fraction"
-    },
-    {
-     "type": "short_integer",
-     "name": "magazine"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds per shot"
-    },
-    {
-     "type": "short_integer",
-     "name": "minimum rounds loaded"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds between tracers"
-    },
-    {
-     "type": "string_id",
-     "name": "optional barrel marker name"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "short_enum",
-     "name": "firing noise",
-     "definition": "firing_noise_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "real_bounds",
-     "name": "damage error"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "angle",
-     "name": "minimum error"
-    },
-    {
-     "type": "angle_bounds",
-     "name": "error angle"
-    },
-    {
-     "type": "real_fraction",
-     "name": "dual wield damage scale"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 20
-    },
-    {
-     "type": "short_enum",
-     "name": "distribution function",
-     "definition": "distribution_function_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "projectiles per shot"
-    },
-    {
-     "type": "real",
-     "name": "distribution angle"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "angle",
-     "name": "minimum error"
-    },
-    {
-     "type": "angle_bounds",
-     "name": "error angle"
-    },
-    {
-     "type": "real_point_3d",
-     "name": "first person offset"
-    },
-    {
-     "type": "char_enum",
-     "name": "damage effect reporting type",
-     "definition": "melee_damage_reporting_type_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 3
-    },
-    {
-     "type": "tag_reference",
-     "name": "projectile"
-    },
-    {
-     "type": "struct",
-     "name": "eh",
-     "definition": "weapon_barrel_damage_effect_struct"
-    },
-    {
-     "type": "real",
-     "name": "ejection port recovery time"
-    },
-    {
-     "type": "real",
-     "name": "illumination recovery time"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat generated per round"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age generated per round"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "real",
-     "name": "overload time"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "angle_bounds",
-     "name": "angle change per shot"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "short_enum",
-     "name": "angle change function",
-     "definition": "angle_change_function_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "short_enum",
-     "name": "prediction type",
-     "definition": "prediction_type_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 24
-    },
-    {
-     "type": "block",
-     "name": "firing effects",
-     "definition": "barrel_firing_effect_block_2"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "weapon_barrel_damage_effect_struct__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 0,
-   "fields": [
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "wbde"
-  },
-  "weapon_barrel_damage_effect_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 16,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "damage effect"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "wbde"
-  },
-  "barrel_firing_effect_block__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 132,
-   "fields": [
-    {
-     "type": "short_integer",
-     "name": "shot count lower bound"
-    },
-    {
-     "type": "short_integer",
-     "name": "shot count upper bound"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "tag_reference",
-     "name": "firing effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "misfire effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "empty effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "firing damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "misfire damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "empty damage"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "barrel_firing_effect_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 100,
-   "fields": [
-    {
-     "type": "short_integer",
-     "name": "shot count lower bound"
-    },
-    {
-     "type": "short_integer",
-     "name": "shot count upper bound"
-    },
-    {
-     "type": "tag_reference",
-     "name": "firing effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "misfire effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "empty effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "firing damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "misfire damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "empty damage"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "weapon_barrels__v1": {
-   "guid": "00000000000000000000000000000000",
-   "size": 252,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_3"
-    },
-    {
-     "type": "real_bounds",
-     "name": "rounds per second"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "real_fraction",
-     "name": "blurred rate of fire"
-    },
-    {
-     "type": "short_bounds",
-     "name": "shots per fire"
-    },
-    {
-     "type": "real",
-     "name": "fire recovery time"
-    },
-    {
-     "type": "real_fraction",
-     "name": "soft recovery fraction"
-    },
-    {
-     "type": "short_integer",
-     "name": "magazine"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds per shot"
-    },
-    {
-     "type": "short_integer",
-     "name": "minimum rounds loaded"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds between tracers"
-    },
-    {
-     "type": "string_id",
-     "name": "optional barrel marker name"
-    },
-    {
-     "type": "short_enum",
-     "name": "prediction type",
-     "definition": "prediction_type_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "firing noise",
-     "definition": "firing_noise_enum"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "real_bounds",
-     "name": "damage error"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "angle",
-     "name": "minimum error"
-    },
-    {
-     "type": "angle_bounds",
-     "name": "error angle"
-    },
-    {
-     "type": "real_fraction",
-     "name": "dual wield damage scale"
-    },
-    {
-     "type": "short_enum",
-     "name": "distribution function",
-     "definition": "distribution_function_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "projectiles per shot"
-    },
-    {
-     "type": "real",
-     "name": "distribution angle"
-    },
-    {
-     "type": "angle",
-     "name": "minimum error"
-    },
-    {
-     "type": "angle_bounds",
-     "name": "error angle"
-    },
-    {
-     "type": "real_point_3d",
-     "name": "first person offset"
-    },
-    {
-     "type": "char_enum",
-     "name": "damage effect reporting type",
-     "definition": "melee_damage_reporting_type_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 3
-    },
-    {
-     "type": "tag_reference",
-     "name": "projectile"
-    },
-    {
-     "type": "struct",
-     "name": "eh",
-     "definition": "weapon_barrel_damage_effect_struct"
-    },
-    {
-     "type": "real",
-     "name": "ejection port recovery time"
-    },
-    {
-     "type": "real",
-     "name": "illumination recovery time"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat generated per round"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age generated per round"
-    },
-    {
-     "type": "real",
-     "name": "overload time"
-    },
-    {
-     "type": "angle_bounds",
-     "name": "angle change per shot"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "short_enum",
-     "name": "angle change function",
-     "definition": "angle_change_function_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 24
-    },
-    {
-     "type": "block",
-     "name": "firing effects",
-     "definition": "barrel_firing_effect_block_3"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "weapon_barrels": {
-   "guid": "00000000000000000000000000000000",
-   "size": 256,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_3"
-    },
-    {
-     "type": "real_bounds",
-     "name": "rounds per second"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "real_fraction",
-     "name": "barrel spin scale"
-    },
-    {
-     "type": "real_fraction",
-     "name": "blurred rate of fire"
-    },
-    {
-     "type": "short_bounds",
-     "name": "shots per fire"
-    },
-    {
-     "type": "real",
-     "name": "fire recovery time"
-    },
-    {
-     "type": "real_fraction",
-     "name": "soft recovery fraction"
-    },
-    {
-     "type": "short_integer",
-     "name": "magazine"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds per shot"
-    },
-    {
-     "type": "short_integer",
-     "name": "minimum rounds loaded"
-    },
-    {
-     "type": "short_integer",
-     "name": "rounds between tracers"
-    },
-    {
-     "type": "string_id",
-     "name": "optional barrel marker name"
-    },
-    {
-     "type": "short_enum",
-     "name": "prediction type",
-     "definition": "prediction_type_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "firing noise",
-     "definition": "firing_noise_enum"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "real_bounds",
-     "name": "damage error"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "angle",
-     "name": "minimum error"
-    },
-    {
-     "type": "angle_bounds",
-     "name": "error angle"
-    },
-    {
-     "type": "real_fraction",
-     "name": "dual wield damage scale"
-    },
-    {
-     "type": "short_enum",
-     "name": "distribution function",
-     "definition": "distribution_function_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "projectiles per shot"
-    },
-    {
-     "type": "real",
-     "name": "distribution angle"
-    },
-    {
-     "type": "angle",
-     "name": "minimum error"
-    },
-    {
-     "type": "angle_bounds",
-     "name": "error angle"
-    },
-    {
-     "type": "real_point_3d",
-     "name": "first person offset"
-    },
-    {
-     "type": "char_enum",
-     "name": "damage effect reporting type",
-     "definition": "melee_damage_reporting_type_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 3
-    },
-    {
-     "type": "tag_reference",
-     "name": "projectile"
-    },
-    {
-     "type": "struct",
-     "name": "eh",
-     "definition": "weapon_barrel_damage_effect_struct"
-    },
-    {
-     "type": "real",
-     "name": "ejection port recovery time"
-    },
-    {
-     "type": "real",
-     "name": "illumination recovery time"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat generated per round"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age generated per round"
-    },
-    {
-     "type": "real",
-     "name": "overload time"
-    },
-    {
-     "type": "angle_bounds",
-     "name": "angle change per shot"
-    },
-    {
-     "type": "real",
-     "name": "acceleration time"
-    },
-    {
-     "type": "real",
-     "name": "deceleration time"
-    },
-    {
-     "type": "short_enum",
-     "name": "angle change function",
-     "definition": "angle_change_function_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 24
-    },
-    {
-     "type": "block",
-     "name": "firing effects",
-     "definition": "barrel_firing_effect_block_4"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "weapon_block_struct__v2": {
-   "guid": "00000000000000000000000000000000",
-   "size": 1200,
-   "fields": [
-    {
-     "type": "struct",
-     "name": "item",
-     "definition": "item_block_struct"
-    },
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "weapon_flags_flags"
-    },
-    {
-     "type": "old_string_id",
-     "name": null
-    },
-    {
-     "type": "short_enum",
-     "name": "secondary trigger mode",
-     "definition": "secondary_trigger_mode_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "maximum alternate shots loaded"
-    },
-    {
-     "type": "real",
-     "name": "turn on time"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "real",
-     "name": "ready time"
-    },
-    {
-     "type": "tag_reference",
-     "name": "ready effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "ready damage effect"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat recovery threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "overheated threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat detonation threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat detonation fraction"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat loss per second"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat illumination"
-    },
-    {
-     "type": "real_fraction",
-     "name": "overheated heat loss per second"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "tag_reference",
-     "name": "overheated"
-    },
-    {
-     "type": "tag_reference",
-     "name": "overheated damage effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "detonation"
-    },
-    {
-     "type": "tag_reference",
-     "name": "detonation damage effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player melee damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player melee response"
-    },
-    {
-     "type": "struct",
-     "name": "melee aim assist",
-     "definition": "melee_aim_assist_struct"
-    },
-    {
-     "type": "struct",
-     "name": "melee damage parameters",
-     "definition": "melee_damage_parameters_struct"
-    },
-    {
-     "type": "char_enum",
-     "name": "melee damage reporting type",
-     "definition": "melee_damage_reporting_type_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 3
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "short_integer",
-     "name": "magnification levels"
-    },
-    {
-     "type": "real_bounds",
-     "name": "magnification range"
-    },
-    {
-     "type": "struct",
-     "name": "weapon aim assist",
-     "definition": "aim_assist_struct"
-    },
-    {
-     "type": "short_enum",
-     "name": "movement penalized",
-     "definition": "movement_penalized_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "real_fraction",
-     "name": "forward movement penalty"
-    },
-    {
-     "type": "real_fraction",
-     "name": "sideways movement penalty"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "real",
-     "name": "AI scariness"
-    },
-    {
-     "type": "real",
-     "name": "weapon power-on time"
-    },
-    {
-     "type": "real",
-     "name": "weapon power-off time"
-    },
-    {
-     "type": "tag_reference",
-     "name": "weapon power-on effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "weapon power-off effect"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "real",
-     "name": "age heat recovery penalty"
-    },
-    {
-     "type": "real",
-     "name": "age rate of fire penalty"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age misfire start"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age misfire chance"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "tag_reference",
-     "name": "pickup sound"
-    },
-    {
-     "type": "tag_reference",
-     "name": "zoom-in sound"
-    },
-    {
-     "type": "tag_reference",
-     "name": "zoom-out sound"
-    },
-    {
-     "type": "real",
-     "name": "active camo ding"
-    },
-    {
-     "type": "real",
-     "name": "active camo regrowth rate"
-    },
-    {
-     "type": "string_id",
-     "name": "handle node"
-    },
-    {
-     "type": "string_id",
-     "name": "weapon class"
-    },
-    {
-     "type": "string_id",
-     "name": "weapon name"
-    },
-    {
-     "type": "short_enum",
-     "name": "multiplayer weapon type",
-     "definition": "multiplayer_weapon_type_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "weapon type",
-     "definition": "weapon_type_enum"
-    },
-    {
-     "type": "struct",
-     "name": "tracking",
-     "definition": "weapon_tracking_struct"
-    },
-    {
-     "type": "struct",
-     "name": "player interface",
-     "definition": "weapon_interface_struct"
-    },
-    {
-     "type": "block",
-     "name": "predicted resources",
-     "definition": "predicted_resource_block_4"
-    },
-    {
-     "type": "block",
-     "name": "magazines",
-     "definition": "magazines_4"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "block",
-     "name": "new triggers",
-     "definition": "weapon_triggers_3"
-    },
-    {
-     "type": "block",
-     "name": "barrels",
-     "definition": "weapon_barrels_3"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "real",
-     "name": "max movement acceleration"
-    },
-    {
-     "type": "real",
-     "name": "max movement velocity"
-    },
-    {
-     "type": "real",
-     "name": "max turning acceleration"
-    },
-    {
-     "type": "real",
-     "name": "max turning velocity"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "deployed vehicle"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "weapon_interface_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 44,
-   "fields": [
-    {
-     "type": "struct",
-     "name": "shared interface",
-     "definition": "weapon_shared_interface_struct"
-    },
-    {
-     "type": "block",
-     "name": "first person",
-     "definition": "weapon_first_person_interface_block_2"
-    },
-    {
-     "type": "tag_reference",
-     "name": "new hud interface"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "wItS"
-  },
-  "weapon_shared_interface_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 16,
-   "fields": [
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "wSiS"
-  },
-  "weapon_first_person_interface_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "first person model"
-    },
-    {
-     "type": "tag_reference",
-     "name": "first person animations"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "weapon_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 1128,
-   "fields": [
-    {
-     "type": "struct",
-     "name": "item",
-     "definition": "item_block_struct"
-    },
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "weapon_flags_flags"
-    },
-    {
-     "type": "old_string_id",
-     "name": null
-    },
-    {
-     "type": "short_enum",
-     "name": "secondary trigger mode",
-     "definition": "secondary_trigger_mode_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "maximum alternate shots loaded"
-    },
-    {
-     "type": "real",
-     "name": "turn on time"
-    },
-    {
-     "type": "real",
-     "name": "ready time"
-    },
-    {
-     "type": "tag_reference",
-     "name": "ready effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "ready damage effect"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat recovery threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "overheated threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat detonation threshold"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat detonation fraction"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat loss per second"
-    },
-    {
-     "type": "real_fraction",
-     "name": "heat illumination"
-    },
-    {
-     "type": "real_fraction",
-     "name": "overheated heat loss per second"
-    },
-    {
-     "type": "tag_reference",
-     "name": "overheated"
-    },
-    {
-     "type": "tag_reference",
-     "name": "overheated damage effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "detonation"
-    },
-    {
-     "type": "tag_reference",
-     "name": "detonation damage effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player melee damage"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player melee response"
-    },
-    {
-     "type": "struct",
-     "name": "melee aim assist",
-     "definition": "melee_aim_assist_struct"
-    },
-    {
-     "type": "struct",
-     "name": "melee damage parameters",
-     "definition": "melee_damage_parameters_struct"
-    },
-    {
-     "type": "char_enum",
-     "name": "melee damage reporting type",
-     "definition": "melee_damage_reporting_type_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 1
-    },
-    {
-     "type": "short_integer",
-     "name": "magnification levels"
-    },
-    {
-     "type": "real_bounds",
-     "name": "magnification range"
-    },
-    {
-     "type": "struct",
-     "name": "weapon aim assist",
-     "definition": "aim_assist_struct"
-    },
-    {
-     "type": "short_enum",
-     "name": "movement penalized",
-     "definition": "movement_penalized_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "real_fraction",
-     "name": "forward movement penalty"
-    },
-    {
-     "type": "real_fraction",
-     "name": "sideways movement penalty"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "real",
-     "name": "AI scariness"
-    },
-    {
-     "type": "real",
-     "name": "weapon power-on time"
-    },
-    {
-     "type": "real",
-     "name": "weapon power-off time"
-    },
-    {
-     "type": "tag_reference",
-     "name": "weapon power-on effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "weapon power-off effect"
-    },
-    {
-     "type": "real",
-     "name": "age heat recovery penalty"
-    },
-    {
-     "type": "real",
-     "name": "age rate of fire penalty"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age misfire start"
-    },
-    {
-     "type": "real_fraction",
-     "name": "age misfire chance"
-    },
-    {
-     "type": "tag_reference",
-     "name": "pickup sound"
-    },
-    {
-     "type": "tag_reference",
-     "name": "zoom-in sound"
-    },
-    {
-     "type": "tag_reference",
-     "name": "zoom-out sound"
-    },
-    {
-     "type": "real",
-     "name": "active camo ding"
-    },
-    {
-     "type": "real",
-     "name": "active camo regrowth rate"
-    },
-    {
-     "type": "string_id",
-     "name": "handle node"
-    },
-    {
-     "type": "string_id",
-     "name": "weapon class"
-    },
-    {
-     "type": "string_id",
-     "name": "weapon name"
-    },
-    {
-     "type": "short_enum",
-     "name": "multiplayer weapon type",
-     "definition": "multiplayer_weapon_type_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "weapon type",
-     "definition": "weapon_type_enum"
-    },
-    {
-     "type": "struct",
-     "name": "tracking",
-     "definition": "weapon_tracking_struct"
-    },
-    {
-     "type": "struct",
-     "name": "player interface",
-     "definition": "weapon_interface_struct"
-    },
-    {
-     "type": "block",
-     "name": "predicted resources",
-     "definition": "predicted_resource_block_5"
-    },
-    {
-     "type": "block",
-     "name": "magazines",
-     "definition": "magazines_5"
-    },
-    {
-     "type": "block",
-     "name": "new triggers",
-     "definition": "weapon_triggers_4"
-    },
-    {
-     "type": "block",
-     "name": "barrels",
-     "definition": "weapon_barrels_4"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "real",
-     "name": "max movement acceleration"
-    },
-    {
-     "type": "real",
-     "name": "max movement velocity"
-    },
-    {
-     "type": "real",
-     "name": "max turning acceleration"
-    },
-    {
-     "type": "real",
-     "name": "max turning velocity"
-    },
-    {
-     "type": "tag_reference",
-     "name": "deployed vehicle"
-    },
-    {
-     "type": "tag_reference",
-     "name": "age effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "aged weapon"
-    },
-    {
-     "type": "real_vector_3d",
-     "name": "first person weapon offset"
-    },
-    {
-     "type": "real_vector_2d",
-     "name": "first person scope size"
     },
     {
      "type": "terminator",
@@ -2905,7 +695,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "item_flags_flags"
+     "definition": "flags_3"
     },
     {
      "type": "short_integer",
@@ -2979,7 +769,7 @@
     {
      "type": "block",
      "name": "predicted bitmaps",
-     "definition": "predicted_bitmaps_block_2"
+     "definition": "predicted_bitmaps_block"
     },
     {
      "type": "useless_pad",
@@ -3008,7 +798,7 @@
     }
    ]
   },
-  "predicted_bitmaps_block": {
+  "predicted_bitmaps_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -3022,27 +812,687 @@
     }
    ]
   },
-  "object_block_struct": {
+  "weapon_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
-   "size": 256,
+   "size": 1068,
    "fields": [
     {
-     "type": "pad",
-     "name": null,
-     "definition": 2
+     "type": "struct",
+     "name": "item",
+     "definition": "item_block_struct"
     },
     {
-     "type": "word_flags",
+     "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_4"
+    },
+    {
+     "type": "old_string_id",
+     "name": null
+    },
+    {
+     "type": "short_enum",
+     "name": "secondary trigger mode",
+     "definition": "secondary trigger mode"
+    },
+    {
+     "type": "short_integer",
+     "name": "maximum alternate shots loaded"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long) * 2",
+     "definition": 8
     },
     {
      "type": "real",
-     "name": "bounding radius"
+     "name": "ready time"
     },
     {
-     "type": "real_point_3d",
-     "name": "bounding offset"
+     "type": "tag_reference",
+     "name": "ready effect"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat recovery threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat detonation threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat detonation fraction"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat loss per second"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat illumination"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated heat loss per second"
+    },
+    {
+     "type": "pad",
+     "name": "3*sizeof(long)",
+     "definition": 12
+    },
+    {
+     "type": "tag_reference",
+     "name": "overheated"
+    },
+    {
+     "type": "tag_reference",
+     "name": "detonation"
+    },
+    {
+     "type": "tag_reference",
+     "name": "player melee damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "player melee response"
+    },
+    {
+     "type": "struct",
+     "name": "melee aim assist",
+     "definition": "melee_aim_assist_struct_2"
+    },
+    {
+     "type": "struct",
+     "name": "melee damage parameters",
+     "definition": "melee_damage_parameters_struct_2"
+    },
+    {
+     "type": "char_enum",
+     "name": "melee damage reporting type",
+     "definition": "melee damage reporting type"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(byte)*3",
+     "definition": 3
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "tag_reference",
+     "name": "actor firing parameters"
+    },
+    {
+     "type": "real",
+     "name": "near reticle range"
+    },
+    {
+     "type": "real",
+     "name": "far reticle range"
+    },
+    {
+     "type": "real",
+     "name": "intersection reticle range"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "short_integer",
+     "name": "magnification levels"
+    },
+    {
+     "type": "real_bounds",
+     "name": "magnification range"
+    },
+    {
+     "type": "struct",
+     "name": "weapon aim assist",
+     "definition": "aim_assist_struct_2"
+    },
+    {
+     "type": "short_enum",
+     "name": "movement penalized",
+     "definition": "movement penalized"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "real",
+     "name": "forward movement penalty"
+    },
+    {
+     "type": "real",
+     "name": "sideways movement penalty"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)",
+     "definition": 4
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(real)",
+     "definition": 8
+    },
+    {
+     "type": "real",
+     "name": "AI scariness"
+    },
+    {
+     "type": "real",
+     "name": "light power-on time"
+    },
+    {
+     "type": "real",
+     "name": "light power-off time"
+    },
+    {
+     "type": "tag_reference",
+     "name": "light power-on effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "light power-off effect"
+    },
+    {
+     "type": "real",
+     "name": "age heat recovery penalty"
+    },
+    {
+     "type": "real",
+     "name": "age rate of fire penalty"
+    },
+    {
+     "type": "real_fraction",
+     "name": "age misfire start"
+    },
+    {
+     "type": "real_fraction",
+     "name": "age misfire chance"
+    },
+    {
+     "type": "pad",
+     "name": "3*sizeof(long)",
+     "definition": 12
+    },
+    {
+     "type": "tag_reference",
+     "name": "first person model"
+    },
+    {
+     "type": "tag_reference",
+     "name": "first person animations"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)*4",
+     "definition": 16
+    },
+    {
+     "type": "tag_reference",
+     "name": "pickup sound"
+    },
+    {
+     "type": "tag_reference",
+     "name": "zoom-in sound"
+    },
+    {
+     "type": "tag_reference",
+     "name": "zoom-out sound"
+    },
+    {
+     "type": "block",
+     "name": null,
+     "definition": "g_null_block"
+    },
+    {
+     "type": "real",
+     "name": "active camo ding"
+    },
+    {
+     "type": "real",
+     "name": "active camo regrowth rate"
+    },
+    {
+     "type": "string_id",
+     "name": "handle node"
+    },
+    {
+     "type": "string_id",
+     "name": "weapon class"
+    },
+    {
+     "type": "string_id",
+     "name": "weapon name"
+    },
+    {
+     "type": "short_enum",
+     "name": "multiplayer weapon type",
+     "definition": "multiplayer weapon type"
+    },
+    {
+     "type": "short_enum",
+     "name": "weapon type",
+     "definition": "weapon type"
+    },
+    {
+     "type": "block",
+     "name": "predicted resources",
+     "definition": "predicted_resource_block"
+    },
+    {
+     "type": "block",
+     "name": "magazines",
+     "definition": "magazines"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof_member(_weapon_definition_v1, triggers)",
+     "definition": 12
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "melee_aim_assist_struct__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 0,
+   "fields": [
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "masd"
+  },
+  "melee_aim_assist_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 20,
+   "fields": [
+    {
+     "type": "angle",
+     "name": "magnetism angle"
+    },
+    {
+     "type": "real",
+     "name": "magnetism range"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 8
+    },
+    {
+     "type": "real",
+     "name": "throttle magnitude"
+    },
+    {
+     "type": "real",
+     "name": "throttle minimum distance"
+    },
+    {
+     "type": "angle",
+     "name": "throttle maximum adjustment angle"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 4
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "masd"
+  },
+  "melee_damage_parameters_struct__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 0,
+   "fields": [
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "mdps"
+  },
+  "melee_damage_parameters_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 140,
+   "fields": [
+    {
+     "type": "real_euler_angles_2d",
+     "name": "damage pyramid angles"
+    },
+    {
+     "type": "real",
+     "name": "damage pyramid depth"
+    },
+    {
+     "type": "tag_reference",
+     "name": "1st hit melee damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "1st hit melee response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "2nd hit melee damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "2nd hit melee response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "3rd hit melee damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "3rd hit melee response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "lunge melee damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "lunge melee response"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "mdps"
+  },
+  "aim_assist_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 36,
+   "fields": [
+    {
+     "type": "angle",
+     "name": "autoaim angle"
+    },
+    {
+     "type": "real",
+     "name": "autoaim range"
+    },
+    {
+     "type": "angle",
+     "name": "magnetism angle"
+    },
+    {
+     "type": "real",
+     "name": "magnetism range"
+    },
+    {
+     "type": "angle",
+     "name": "deviation angle"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(dword)",
+     "definition": 4
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)*3",
+     "definition": 12
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "easd"
+  },
+  "g_null_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 0,
+   "fields": [
+    {
+     "type": "custom",
+     "name": "-1"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "magazines_struct__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 112,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_5"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds recharged"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds total initial"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds total maximum"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds loaded maximum"
+    },
+    {
+     "type": "pad",
+     "name": "4*sizeof(short)",
+     "definition": 8
+    },
+    {
+     "type": "real",
+     "name": "reload time"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds reloaded"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "real",
+     "name": "chamber time"
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(long)",
+     "definition": 8
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(rectangle2d)",
+     "definition": 16
+    },
+    {
+     "type": "tag_reference",
+     "name": "reloading effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "chambering effect"
+    },
+    {
+     "type": "pad",
+     "name": "3*sizeof(long)",
+     "definition": 12
+    },
+    {
+     "type": "block",
+     "name": "magazines",
+     "definition": "magazine_objects"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "magazine_objects_struct__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 28,
+   "fields": [
+    {
+     "type": "short_integer",
+     "name": "rounds"
+    },
+    {
+     "type": "pad",
+     "name": "5*sizeof(word)",
+     "definition": 10
+    },
+    {
+     "type": "tag_reference",
+     "name": "equipment"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "magazine_objects_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 20,
+   "fields": [
+    {
+     "type": "short_integer",
+     "name": "rounds"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "tag_reference",
+     "name": "equipment"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "magazines_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 128,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_5"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds recharged"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds total initial"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds total maximum"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds loaded maximum"
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(short)",
+     "definition": 4
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 4
+    },
+    {
+     "type": "real",
+     "name": "reload time"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds reloaded"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "real",
+     "name": "chamber time"
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(long)",
+     "definition": 8
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(rectangle2d)",
+     "definition": 16
+    },
+    {
+     "type": "tag_reference",
+     "name": "reloading effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "reloading damage effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "chambering effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "chambering damage effect"
     },
     {
      "type": "useless_pad",
@@ -3050,397 +1500,332 @@
      "definition": 12
     },
     {
-     "type": "real",
-     "name": "acceleration scale"
+     "type": "block",
+     "name": "magazines",
+     "definition": "magazine_objects"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "weapon_block_struct__v1": {
+   "guid": "00000000000000000000000000000000",
+   "size": 1156,
+   "fields": [
+    {
+     "type": "struct",
+     "name": "item",
+     "definition": "item_block_struct"
+    },
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_4"
+    },
+    {
+     "type": "old_string_id",
+     "name": null
     },
     {
      "type": "short_enum",
-     "name": "lightmap shadow mode",
-     "definition": "lightmap_shadow_mode_enum"
+     "name": "secondary trigger mode",
+     "definition": "secondary trigger mode"
     },
     {
-     "type": "char_enum",
-     "name": "sweetener size",
-     "definition": "sweetener_size_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 1
+     "type": "short_integer",
+     "name": "maximum alternate shots loaded"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long) * 2",
+     "definition": 8
+    },
+    {
+     "type": "real",
+     "name": "ready time"
+    },
+    {
+     "type": "tag_reference",
+     "name": "ready effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "ready damage effect"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat recovery threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat detonation threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat detonation fraction"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat loss per second"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat illumination"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated heat loss per second"
+    },
+    {
+     "type": "pad",
+     "name": "3*sizeof(long)",
+     "definition": 12
+    },
+    {
+     "type": "tag_reference",
+     "name": "overheated"
+    },
+    {
+     "type": "tag_reference",
+     "name": "overheated damage effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "detonation"
+    },
+    {
+     "type": "tag_reference",
+     "name": "detonation damage effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "player melee damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "player melee response"
+    },
+    {
+     "type": "struct",
+     "name": "melee aim assist",
+     "definition": "melee_aim_assist_struct_2"
+    },
+    {
+     "type": "struct",
+     "name": "melee damage parameters",
+     "definition": "melee_damage_parameters_struct_2"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
-     "type": "useless_pad",
-     "name": null,
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "short_integer",
+     "name": "magnification levels"
+    },
+    {
+     "type": "real_bounds",
+     "name": "magnification range"
+    },
+    {
+     "type": "struct",
+     "name": "weapon aim assist",
+     "definition": "aim_assist_struct_2"
+    },
+    {
+     "type": "short_enum",
+     "name": "movement penalized",
+     "definition": "movement penalized"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "real_fraction",
+     "name": "forward movement penalty"
+    },
+    {
+     "type": "real_fraction",
+     "name": "sideways movement penalty"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)",
+     "definition": 4
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(real)",
+     "definition": 8
+    },
+    {
+     "type": "real",
+     "name": "AI scariness"
+    },
+    {
+     "type": "real",
+     "name": "weapon power-on time"
+    },
+    {
+     "type": "real",
+     "name": "weapon power-off time"
+    },
+    {
+     "type": "tag_reference",
+     "name": "weapon power-on effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "weapon power-off effect"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)*8",
      "definition": 32
     },
     {
      "type": "real",
-     "name": "dynamic light sphere radius"
-    },
-    {
-     "type": "real_point_3d",
-     "name": "dynamic light sphere offset"
-    },
-    {
-     "type": "string_id",
-     "name": "default model variant"
-    },
-    {
-     "type": "tag_reference",
-     "name": "model"
-    },
-    {
-     "type": "tag_reference",
-     "name": "crate object"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "modifier shader"
-    },
-    {
-     "type": "tag_reference",
-     "name": "creation effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "material effects"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 24
-    },
-    {
-     "type": "block",
-     "name": "ai properties",
-     "definition": "object_ai_properties_block_2"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 24
-    },
-    {
-     "type": "block",
-     "name": "functions",
-     "definition": "object_function_block_2"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 16
+     "name": "age heat recovery penalty"
     },
     {
      "type": "real",
-     "name": "Apply collision damage scale"
+     "name": "age rate of fire penalty"
     },
     {
-     "type": "real",
-     "name": "min game acc (default)"
+     "type": "real_fraction",
+     "name": "age misfire start"
     },
     {
-     "type": "real",
-     "name": "max game acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "min game scale (default)"
-    },
-    {
-     "type": "real",
-     "name": "max game scale (default)"
-    },
-    {
-     "type": "real",
-     "name": "min abs acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "max abs acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "min abs scale (default)"
-    },
-    {
-     "type": "real",
-     "name": "max abs scale (default)"
-    },
-    {
-     "type": "short_integer",
-     "name": "hud text message index"
+     "type": "real_fraction",
+     "name": "age misfire chance"
     },
     {
      "type": "pad",
-     "name": null,
-     "definition": 2
+     "name": "3*sizeof(long)",
+     "definition": 12
     },
     {
-     "type": "block",
-     "name": "attachments",
-     "definition": "object_attachment_block_2"
+     "type": "tag_reference",
+     "name": "first person model"
     },
     {
-     "type": "block",
-     "name": "widgets",
-     "definition": "object_widget_block_2"
+     "type": "tag_reference",
+     "name": "first person animations"
     },
     {
-     "type": "block",
-     "name": "old functions",
-     "definition": "old_object_function_block_2"
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
     },
     {
-     "type": "block",
-     "name": "change colors",
-     "definition": "object_change_colors_2"
+     "type": "pad",
+     "name": "sizeof(long)*4",
+     "definition": 16
+    },
+    {
+     "type": "tag_reference",
+     "name": "pickup sound"
+    },
+    {
+     "type": "tag_reference",
+     "name": "zoom-in sound"
+    },
+    {
+     "type": "tag_reference",
+     "name": "zoom-out sound"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_block)",
+     "definition": 12
+    },
+    {
+     "type": "real",
+     "name": "active camo ding"
+    },
+    {
+     "type": "real",
+     "name": "active camo regrowth rate"
+    },
+    {
+     "type": "string_id",
+     "name": "handle node"
+    },
+    {
+     "type": "string_id",
+     "name": "weapon class"
+    },
+    {
+     "type": "string_id",
+     "name": "weapon name"
+    },
+    {
+     "type": "short_enum",
+     "name": "multiplayer weapon type",
+     "definition": "multiplayer weapon type"
+    },
+    {
+     "type": "short_enum",
+     "name": "weapon type",
+     "definition": "weapon type"
+    },
+    {
+     "type": "struct",
+     "name": "tracking",
+     "definition": "weapon_tracking_struct_2"
     },
     {
      "type": "block",
      "name": "predicted resources",
-     "definition": "predicted_resource_block_6"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_ai_properties_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 16,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "ai flags",
-     "definition": "ai_flags_flags"
-    },
-    {
-     "type": "string_id",
-     "name": "ai type name"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "short_enum",
-     "name": "ai size",
-     "definition": "ai_size_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "leap jump speed",
-     "definition": "leap_jump_speed_enum"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_function_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 36,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_5"
-    },
-    {
-     "type": "string_id",
-     "name": "import name"
-    },
-    {
-     "type": "string_id",
-     "name": "export name"
-    },
-    {
-     "type": "string_id",
-     "name": "turn off with"
-    },
-    {
-     "type": "real",
-     "name": "min value"
-    },
-    {
-     "type": "custom",
-     "name": "default function"
-    },
-    {
-     "type": "struct",
-     "name": "default function",
-     "definition": "mapping_function"
-    },
-    {
-     "type": "string_id",
-     "name": "scale by"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "mapping_function__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "custom",
-     "name": "HIDE_GROUP_ID"
-    },
-    {
-     "type": "char_integer",
-     "name": "Function Type"
-    },
-    {
-     "type": "byte_flags",
-     "name": "Flags",
-     "definition": "flags_flags_6"
-    },
-    {
-     "type": "char_integer",
-     "name": "Function 1"
-    },
-    {
-     "type": "char_integer",
-     "name": "Function 2"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 0"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 1"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 2"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 3"
+     "definition": "predicted_resource_block"
     },
     {
      "type": "block",
-     "name": "Values",
-     "definition": "real_block_2"
-    },
-    {
-     "type": "custom",
-     "name": "END_HIDE_GROUP_ID"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "MAPP"
-  },
-  "real_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 4,
-   "fields": [
-    {
-     "type": "real",
-     "name": "Value"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "mapping_function": {
-   "guid": "00000000000000000000000000000000",
-   "size": 12,
-   "fields": [
-    {
-     "type": "custom",
-     "name": "HIDE_GROUP_ID"
-    },
-    {
-     "type": "block",
-     "name": "data",
-     "definition": "byte_block_2"
-    },
-    {
-     "type": "custom",
-     "name": "END_HIDE_GROUP_ID"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "MAPP"
-  },
-  "byte_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 1,
-   "fields": [
-    {
-     "type": "char_integer",
-     "name": "Value"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_attachment_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "type"
-    },
-    {
-     "type": "old_string_id",
-     "name": "marker"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "short_enum",
-     "name": "change color",
-     "definition": "change_color_enum"
+     "name": "magazines",
+     "definition": "magazines"
     },
     {
      "type": "pad",
-     "name": null,
-     "definition": 2
+     "name": "sizeof(long)*3",
+     "definition": 12
     },
     {
-     "type": "string_id",
-     "name": "primary scale"
+     "type": "block",
+     "name": "new triggers",
+     "definition": "weapon_triggers"
     },
     {
-     "type": "string_id",
-     "name": "secondary scale"
+     "type": "block",
+     "name": "barrels",
+     "definition": "weapon_barrels"
     },
     {
-     "type": "useless_pad",
-     "name": null,
+     "type": "pad",
+     "name": "sizeof(real)*2",
      "definition": 8
     },
     {
@@ -3449,13 +1834,1634 @@
     }
    ]
   },
-  "object_widget_block": {
+  "weapon_tracking_struct__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 0,
+   "fields": [
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "wtsf"
+  },
+  "weapon_tracking_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 4,
+   "fields": [
+    {
+     "type": "short_enum",
+     "name": "tracking type",
+     "definition": "tracking type"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "wtsf"
+  },
+  "weapon_triggers_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 80,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_6"
+    },
+    {
+     "type": "short_enum",
+     "name": "input",
+     "definition": "input"
+    },
+    {
+     "type": "short_enum",
+     "name": "behavior",
+     "definition": "behavior"
+    },
+    {
+     "type": "short_block_index",
+     "name": "primary barrel",
+     "definition": "weapon_barrels"
+    },
+    {
+     "type": "short_block_index",
+     "name": "secondary barrel",
+     "definition": "weapon_barrels"
+    },
+    {
+     "type": "short_enum",
+     "name": "prediction",
+     "definition": "prediction"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 28
+    },
+    {
+     "type": "struct",
+     "name": "autofire",
+     "definition": "weapon_trigger_autofire_struct_2"
+    },
+    {
+     "type": "struct",
+     "name": "charging",
+     "definition": "weapon_trigger_charging_struct_2"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "weapon_barrels_struct__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 312,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_7"
+    },
+    {
+     "type": "real_bounds",
+     "name": "rounds per second"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "real_fraction",
+     "name": "blurred rate of fire"
+    },
+    {
+     "type": "short_bounds",
+     "name": "shots per fire"
+    },
+    {
+     "type": "real",
+     "name": "fire recovery time"
+    },
+    {
+     "type": "real_fraction",
+     "name": "soft recovery fraction"
+    },
+    {
+     "type": "short_block_index",
+     "name": "magazine",
+     "definition": "magazines"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds per shot"
+    },
+    {
+     "type": "short_integer",
+     "name": "minimum rounds loaded"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds between tracers"
+    },
+    {
+     "type": "string_id",
+     "name": "optional barrel marker name"
+    },
+    {
+     "type": "pad",
+     "name": "1*sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "short_enum",
+     "name": "firing noise",
+     "definition": "firing noise"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)*2",
+     "definition": 8
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "real_bounds",
+     "name": "damage error"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)*2",
+     "definition": 8
+    },
+    {
+     "type": "angle",
+     "name": "minimum error"
+    },
+    {
+     "type": "angle_bounds",
+     "name": "error angle"
+    },
+    {
+     "type": "real_fraction",
+     "name": "dual wield damage scale"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)*5",
+     "definition": 20
+    },
+    {
+     "type": "short_enum",
+     "name": "distribution function",
+     "definition": "distribution function"
+    },
+    {
+     "type": "short_integer",
+     "name": "projectiles per shot"
+    },
+    {
+     "type": "real",
+     "name": "distribution angle"
+    },
+    {
+     "type": "pad",
+     "name": "1*sizeof(real)",
+     "definition": 4
+    },
+    {
+     "type": "angle",
+     "name": "minimum error"
+    },
+    {
+     "type": "angle_bounds",
+     "name": "error angle"
+    },
+    {
+     "type": "real_point_3d",
+     "name": "first person offset"
+    },
+    {
+     "type": "char_enum",
+     "name": "damage effect reporting type",
+     "definition": "melee damage reporting type"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(byte)*3",
+     "definition": 3
+    },
+    {
+     "type": "tag_reference",
+     "name": "projectile"
+    },
+    {
+     "type": "struct",
+     "name": "eh",
+     "definition": "weapon_barrel_damage_effect_struct_2"
+    },
+    {
+     "type": "real",
+     "name": "ejection port recovery time"
+    },
+    {
+     "type": "real",
+     "name": "illumination recovery time"
+    },
+    {
+     "type": "pad",
+     "name": "3*sizeof(long)",
+     "definition": 12
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat generated per round"
+    },
+    {
+     "type": "real_fraction",
+     "name": "age generated per round"
+    },
+    {
+     "type": "pad",
+     "name": "1*sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "real",
+     "name": "overload time"
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(real)",
+     "definition": 8
+    },
+    {
+     "type": "angle_bounds",
+     "name": "angle change per shot"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "short_enum",
+     "name": "angle change function",
+     "definition": "angle change function"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(real)",
+     "definition": 8
+    },
+    {
+     "type": "short_enum",
+     "name": "prediction type",
+     "definition": "prediction type"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "6*sizeof(real)",
+     "definition": 24
+    },
+    {
+     "type": "block",
+     "name": "firing effects",
+     "definition": "barrel_firing_effect_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "weapon_barrel_damage_effect_struct__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 0,
+   "fields": [
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "wbde"
+  },
+  "weapon_barrel_damage_effect_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "damage effect"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "wbde"
+  },
+  "barrel_firing_effect_block_struct__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 132,
+   "fields": [
+    {
+     "type": "short_integer",
+     "name": "shot count lower bound"
+    },
+    {
+     "type": "short_integer",
+     "name": "shot count upper bound"
+    },
+    {
+     "type": "pad",
+     "name": "8*sizeof(long)",
+     "definition": 32
+    },
+    {
+     "type": "tag_reference",
+     "name": "firing effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "misfire effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "empty effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "firing damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "misfire damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "empty damage"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "barrel_firing_effect_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 100,
+   "fields": [
+    {
+     "type": "short_integer",
+     "name": "shot count lower bound"
+    },
+    {
+     "type": "short_integer",
+     "name": "shot count upper bound"
+    },
+    {
+     "type": "tag_reference",
+     "name": "firing effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "misfire effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "empty effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "firing damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "misfire damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "empty damage"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "weapon_barrels_struct__v1": {
+   "guid": "00000000000000000000000000000000",
+   "size": 252,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_7"
+    },
+    {
+     "type": "real_bounds",
+     "name": "rounds per second"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "real_fraction",
+     "name": "blurred rate of fire"
+    },
+    {
+     "type": "short_bounds",
+     "name": "shots per fire"
+    },
+    {
+     "type": "real",
+     "name": "fire recovery time"
+    },
+    {
+     "type": "real_fraction",
+     "name": "soft recovery fraction"
+    },
+    {
+     "type": "short_block_index",
+     "name": "magazine",
+     "definition": "magazines"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds per shot"
+    },
+    {
+     "type": "short_integer",
+     "name": "minimum rounds loaded"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds between tracers"
+    },
+    {
+     "type": "string_id",
+     "name": "optional barrel marker name"
+    },
+    {
+     "type": "short_enum",
+     "name": "prediction type",
+     "definition": "prediction type"
+    },
+    {
+     "type": "short_enum",
+     "name": "firing noise",
+     "definition": "firing noise"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "real_bounds",
+     "name": "damage error"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)*2",
+     "definition": 8
+    },
+    {
+     "type": "angle",
+     "name": "minimum error"
+    },
+    {
+     "type": "angle_bounds",
+     "name": "error angle"
+    },
+    {
+     "type": "real_fraction",
+     "name": "dual wield damage scale"
+    },
+    {
+     "type": "short_enum",
+     "name": "distribution function",
+     "definition": "distribution function"
+    },
+    {
+     "type": "short_integer",
+     "name": "projectiles per shot"
+    },
+    {
+     "type": "real",
+     "name": "distribution angle"
+    },
+    {
+     "type": "angle",
+     "name": "minimum error"
+    },
+    {
+     "type": "angle_bounds",
+     "name": "error angle"
+    },
+    {
+     "type": "real_point_3d",
+     "name": "first person offset"
+    },
+    {
+     "type": "char_enum",
+     "name": "damage effect reporting type",
+     "definition": "melee damage reporting type"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(byte)*3",
+     "definition": 3
+    },
+    {
+     "type": "tag_reference",
+     "name": "projectile"
+    },
+    {
+     "type": "struct",
+     "name": "eh",
+     "definition": "weapon_barrel_damage_effect_struct_2"
+    },
+    {
+     "type": "real",
+     "name": "ejection port recovery time"
+    },
+    {
+     "type": "real",
+     "name": "illumination recovery time"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat generated per round"
+    },
+    {
+     "type": "real_fraction",
+     "name": "age generated per round"
+    },
+    {
+     "type": "real",
+     "name": "overload time"
+    },
+    {
+     "type": "angle_bounds",
+     "name": "angle change per shot"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "short_enum",
+     "name": "angle change function",
+     "definition": "angle change function"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(real)",
+     "definition": 8
+    },
+    {
+     "type": "pad",
+     "name": "6*sizeof(real)",
+     "definition": 24
+    },
+    {
+     "type": "block",
+     "name": "firing effects",
+     "definition": "barrel_firing_effect_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "weapon_barrels_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 256,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_7"
+    },
+    {
+     "type": "real_bounds",
+     "name": "rounds per second"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "real_fraction",
+     "name": "barrel spin scale"
+    },
+    {
+     "type": "real_fraction",
+     "name": "blurred rate of fire"
+    },
+    {
+     "type": "short_bounds",
+     "name": "shots per fire"
+    },
+    {
+     "type": "real",
+     "name": "fire recovery time"
+    },
+    {
+     "type": "real_fraction",
+     "name": "soft recovery fraction"
+    },
+    {
+     "type": "short_block_index",
+     "name": "magazine",
+     "definition": "magazines"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds per shot"
+    },
+    {
+     "type": "short_integer",
+     "name": "minimum rounds loaded"
+    },
+    {
+     "type": "short_integer",
+     "name": "rounds between tracers"
+    },
+    {
+     "type": "string_id",
+     "name": "optional barrel marker name"
+    },
+    {
+     "type": "short_enum",
+     "name": "prediction type",
+     "definition": "prediction type"
+    },
+    {
+     "type": "short_enum",
+     "name": "firing noise",
+     "definition": "firing noise"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "real_bounds",
+     "name": "damage error"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)*2",
+     "definition": 8
+    },
+    {
+     "type": "angle",
+     "name": "minimum error"
+    },
+    {
+     "type": "angle_bounds",
+     "name": "error angle"
+    },
+    {
+     "type": "real_fraction",
+     "name": "dual wield damage scale"
+    },
+    {
+     "type": "short_enum",
+     "name": "distribution function",
+     "definition": "distribution function"
+    },
+    {
+     "type": "short_integer",
+     "name": "projectiles per shot"
+    },
+    {
+     "type": "real",
+     "name": "distribution angle"
+    },
+    {
+     "type": "angle",
+     "name": "minimum error"
+    },
+    {
+     "type": "angle_bounds",
+     "name": "error angle"
+    },
+    {
+     "type": "real_point_3d",
+     "name": "first person offset"
+    },
+    {
+     "type": "char_enum",
+     "name": "damage effect reporting type",
+     "definition": "melee damage reporting type"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(byte)*3",
+     "definition": 3
+    },
+    {
+     "type": "tag_reference",
+     "name": "projectile"
+    },
+    {
+     "type": "struct",
+     "name": "eh",
+     "definition": "weapon_barrel_damage_effect_struct_2"
+    },
+    {
+     "type": "real",
+     "name": "ejection port recovery time"
+    },
+    {
+     "type": "real",
+     "name": "illumination recovery time"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat generated per round"
+    },
+    {
+     "type": "real_fraction",
+     "name": "age generated per round"
+    },
+    {
+     "type": "real",
+     "name": "overload time"
+    },
+    {
+     "type": "angle_bounds",
+     "name": "angle change per shot"
+    },
+    {
+     "type": "real",
+     "name": "acceleration time"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time"
+    },
+    {
+     "type": "short_enum",
+     "name": "angle change function",
+     "definition": "angle change function"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(real)",
+     "definition": 8
+    },
+    {
+     "type": "pad",
+     "name": "6*sizeof(real)",
+     "definition": 24
+    },
+    {
+     "type": "block",
+     "name": "firing effects",
+     "definition": "barrel_firing_effect_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "weapon_trigger_autofire_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 12,
+   "fields": [
+    {
+     "type": "real",
+     "name": "autofire time"
+    },
+    {
+     "type": "real",
+     "name": "autofire throw"
+    },
+    {
+     "type": "short_enum",
+     "name": "secondary action",
+     "definition": "secondary action"
+    },
+    {
+     "type": "short_enum",
+     "name": "primary action",
+     "definition": "secondary action"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "wtas"
+  },
+  "weapon_trigger_charging_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 52,
+   "fields": [
+    {
+     "type": "real",
+     "name": "charging time"
+    },
+    {
+     "type": "real",
+     "name": "charged time"
+    },
+    {
+     "type": "short_enum",
+     "name": "overcharged action",
+     "definition": "overcharged action"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "real",
+     "name": "charged illumination"
+    },
+    {
+     "type": "real",
+     "name": "spew time"
+    },
+    {
+     "type": "tag_reference",
+     "name": "charging effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "charging damage effect"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "wtcs"
+  },
+  "weapon_block_struct__v2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 1200,
+   "fields": [
+    {
+     "type": "struct",
+     "name": "item",
+     "definition": "item_block_struct"
+    },
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_4"
+    },
+    {
+     "type": "old_string_id",
+     "name": null
+    },
+    {
+     "type": "short_enum",
+     "name": "secondary trigger mode",
+     "definition": "secondary trigger mode"
+    },
+    {
+     "type": "short_integer",
+     "name": "maximum alternate shots loaded"
+    },
+    {
+     "type": "real",
+     "name": "turn on time"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long) * 1",
+     "definition": 4
+    },
+    {
+     "type": "real",
+     "name": "ready time"
+    },
+    {
+     "type": "tag_reference",
+     "name": "ready effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "ready damage effect"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat recovery threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat detonation threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat detonation fraction"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat loss per second"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat illumination"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated heat loss per second"
+    },
+    {
+     "type": "pad",
+     "name": "3*sizeof(long)",
+     "definition": 12
+    },
+    {
+     "type": "tag_reference",
+     "name": "overheated"
+    },
+    {
+     "type": "tag_reference",
+     "name": "overheated damage effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "detonation"
+    },
+    {
+     "type": "tag_reference",
+     "name": "detonation damage effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "player melee damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "player melee response"
+    },
+    {
+     "type": "struct",
+     "name": "melee aim assist",
+     "definition": "melee_aim_assist_struct_2"
+    },
+    {
+     "type": "struct",
+     "name": "melee damage parameters",
+     "definition": "melee_damage_parameters_struct_2"
+    },
+    {
+     "type": "char_enum",
+     "name": "melee damage reporting type",
+     "definition": "melee damage reporting type"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(byte)*3",
+     "definition": 3
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "short_integer",
+     "name": "magnification levels"
+    },
+    {
+     "type": "real_bounds",
+     "name": "magnification range"
+    },
+    {
+     "type": "struct",
+     "name": "weapon aim assist",
+     "definition": "aim_assist_struct_2"
+    },
+    {
+     "type": "short_enum",
+     "name": "movement penalized",
+     "definition": "movement penalized"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "real_fraction",
+     "name": "forward movement penalty"
+    },
+    {
+     "type": "real_fraction",
+     "name": "sideways movement penalty"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)",
+     "definition": 4
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(real)",
+     "definition": 8
+    },
+    {
+     "type": "real",
+     "name": "AI scariness"
+    },
+    {
+     "type": "real",
+     "name": "weapon power-on time"
+    },
+    {
+     "type": "real",
+     "name": "weapon power-off time"
+    },
+    {
+     "type": "tag_reference",
+     "name": "weapon power-on effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "weapon power-off effect"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)*8",
+     "definition": 32
+    },
+    {
+     "type": "real",
+     "name": "age heat recovery penalty"
+    },
+    {
+     "type": "real",
+     "name": "age rate of fire penalty"
+    },
+    {
+     "type": "real_fraction",
+     "name": "age misfire start"
+    },
+    {
+     "type": "real_fraction",
+     "name": "age misfire chance"
+    },
+    {
+     "type": "pad",
+     "name": "3*sizeof(long)",
+     "definition": 12
+    },
+    {
+     "type": "tag_reference",
+     "name": "pickup sound"
+    },
+    {
+     "type": "tag_reference",
+     "name": "zoom-in sound"
+    },
+    {
+     "type": "tag_reference",
+     "name": "zoom-out sound"
+    },
+    {
+     "type": "real",
+     "name": "active camo ding"
+    },
+    {
+     "type": "real",
+     "name": "active camo regrowth rate"
+    },
+    {
+     "type": "string_id",
+     "name": "handle node"
+    },
+    {
+     "type": "string_id",
+     "name": "weapon class"
+    },
+    {
+     "type": "string_id",
+     "name": "weapon name"
+    },
+    {
+     "type": "short_enum",
+     "name": "multiplayer weapon type",
+     "definition": "multiplayer weapon type"
+    },
+    {
+     "type": "short_enum",
+     "name": "weapon type",
+     "definition": "weapon type"
+    },
+    {
+     "type": "struct",
+     "name": "tracking",
+     "definition": "weapon_tracking_struct_2"
+    },
+    {
+     "type": "struct",
+     "name": "player interface",
+     "definition": "weapon_interface_struct_2"
+    },
+    {
+     "type": "block",
+     "name": "predicted resources",
+     "definition": "predicted_resource_block"
+    },
+    {
+     "type": "block",
+     "name": "magazines",
+     "definition": "magazines"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)*3",
+     "definition": 12
+    },
+    {
+     "type": "block",
+     "name": "new triggers",
+     "definition": "weapon_triggers"
+    },
+    {
+     "type": "block",
+     "name": "barrels",
+     "definition": "weapon_barrels"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)*2",
+     "definition": 8
+    },
+    {
+     "type": "pad",
+     "name": "4*sizeof(long)",
+     "definition": 16
+    },
+    {
+     "type": "real",
+     "name": "max movement acceleration"
+    },
+    {
+     "type": "real",
+     "name": "max movement velocity"
+    },
+    {
+     "type": "real",
+     "name": "max turning acceleration"
+    },
+    {
+     "type": "real",
+     "name": "max turning velocity"
+    },
+    {
+     "type": "pad",
+     "name": "4*sizeof(long)",
+     "definition": 16
+    },
+    {
+     "type": "tag_reference",
+     "name": "deployed vehicle"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "weapon_interface_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 44,
+   "fields": [
+    {
+     "type": "struct",
+     "name": "shared interface",
+     "definition": "weapon_shared_interface_struct_2"
+    },
+    {
+     "type": "block",
+     "name": "first person",
+     "definition": "weapon_first_person_interface_block"
+    },
+    {
+     "type": "tag_reference",
+     "name": "new hud interface"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "wItS"
+  },
+  "weapon_shared_interface_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "pad",
+     "name": "sizeof(long)*4",
+     "definition": 16
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "wSiS"
+  },
+  "weapon_first_person_interface_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "first person model"
+    },
+    {
+     "type": "tag_reference",
+     "name": "first person animations"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "weapon_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 1128,
+   "fields": [
+    {
+     "type": "struct",
+     "name": "item",
+     "definition": "item_block_struct"
+    },
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_4"
+    },
+    {
+     "type": "old_string_id",
+     "name": null
+    },
+    {
+     "type": "short_enum",
+     "name": "secondary trigger mode",
+     "definition": "secondary trigger mode"
+    },
+    {
+     "type": "short_integer",
+     "name": "maximum alternate shots loaded"
+    },
+    {
+     "type": "real",
+     "name": "turn on time"
+    },
+    {
+     "type": "real",
+     "name": "ready time"
+    },
+    {
+     "type": "tag_reference",
+     "name": "ready effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "ready damage effect"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat recovery threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat detonation threshold"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat detonation fraction"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat loss per second"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat illumination"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated heat loss per second"
+    },
+    {
+     "type": "tag_reference",
+     "name": "overheated"
+    },
+    {
+     "type": "tag_reference",
+     "name": "overheated damage effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "detonation"
+    },
+    {
+     "type": "tag_reference",
+     "name": "detonation damage effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "player melee damage"
+    },
+    {
+     "type": "tag_reference",
+     "name": "player melee response"
+    },
+    {
+     "type": "struct",
+     "name": "melee aim assist",
+     "definition": "melee_aim_assist_struct_2"
+    },
+    {
+     "type": "struct",
+     "name": "melee damage parameters",
+     "definition": "melee_damage_parameters_struct_2"
+    },
+    {
+     "type": "char_enum",
+     "name": "melee damage reporting type",
+     "definition": "melee damage reporting type"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(byte)*1",
+     "definition": 1
+    },
+    {
+     "type": "short_integer",
+     "name": "magnification levels"
+    },
+    {
+     "type": "real_bounds",
+     "name": "magnification range"
+    },
+    {
+     "type": "struct",
+     "name": "weapon aim assist",
+     "definition": "aim_assist_struct_2"
+    },
+    {
+     "type": "short_enum",
+     "name": "movement penalized",
+     "definition": "movement penalized"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "real_fraction",
+     "name": "forward movement penalty"
+    },
+    {
+     "type": "real_fraction",
+     "name": "sideways movement penalty"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 4
+    },
+    {
+     "type": "real",
+     "name": "AI scariness"
+    },
+    {
+     "type": "real",
+     "name": "weapon power-on time"
+    },
+    {
+     "type": "real",
+     "name": "weapon power-off time"
+    },
+    {
+     "type": "tag_reference",
+     "name": "weapon power-on effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "weapon power-off effect"
+    },
+    {
+     "type": "real",
+     "name": "age heat recovery penalty"
+    },
+    {
+     "type": "real",
+     "name": "age rate of fire penalty"
+    },
+    {
+     "type": "real_fraction",
+     "name": "age misfire start"
+    },
+    {
+     "type": "real_fraction",
+     "name": "age misfire chance"
+    },
+    {
+     "type": "tag_reference",
+     "name": "pickup sound"
+    },
+    {
+     "type": "tag_reference",
+     "name": "zoom-in sound"
+    },
+    {
+     "type": "tag_reference",
+     "name": "zoom-out sound"
+    },
+    {
+     "type": "real",
+     "name": "active camo ding"
+    },
+    {
+     "type": "real",
+     "name": "active camo regrowth rate"
+    },
+    {
+     "type": "string_id",
+     "name": "handle node"
+    },
+    {
+     "type": "string_id",
+     "name": "weapon class"
+    },
+    {
+     "type": "string_id",
+     "name": "weapon name"
+    },
+    {
+     "type": "short_enum",
+     "name": "multiplayer weapon type",
+     "definition": "multiplayer weapon type"
+    },
+    {
+     "type": "short_enum",
+     "name": "weapon type",
+     "definition": "weapon type"
+    },
+    {
+     "type": "struct",
+     "name": "tracking",
+     "definition": "weapon_tracking_struct_2"
+    },
+    {
+     "type": "struct",
+     "name": "player interface",
+     "definition": "weapon_interface_struct_2"
+    },
+    {
+     "type": "block",
+     "name": "predicted resources",
+     "definition": "predicted_resource_block"
+    },
+    {
+     "type": "block",
+     "name": "magazines",
+     "definition": "magazines"
+    },
+    {
+     "type": "block",
+     "name": "new triggers",
+     "definition": "weapon_triggers"
+    },
+    {
+     "type": "block",
+     "name": "barrels",
+     "definition": "weapon_barrels"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)*2",
+     "definition": 8
     },
     {
      "type": "useless_pad",
@@ -3463,110 +3469,40 @@
      "definition": 16
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "old_object_function_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 80,
-   "fields": [
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 76
+     "type": "real",
+     "name": "max movement acceleration"
     },
-    {
-     "type": "old_string_id",
-     "name": null
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_change_colors": {
-   "guid": "00000000000000000000000000000000",
-   "size": 24,
-   "fields": [
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "block",
-     "name": "initial permutations",
-     "definition": "object_change_color_initial_permutation_2"
-    },
-    {
-     "type": "block",
-     "name": "functions",
-     "definition": "object_change_color_function_2"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_change_color_initial_permutation": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
     {
      "type": "real",
-     "name": "weight"
+     "name": "max movement velocity"
     },
     {
-     "type": "real_rgb_color",
-     "name": "color lower bound"
+     "type": "real",
+     "name": "max turning acceleration"
     },
     {
-     "type": "real_rgb_color",
-     "name": "color upper bound"
+     "type": "real",
+     "name": "max turning velocity"
     },
     {
-     "type": "string_id",
-     "name": "variant name"
+     "type": "tag_reference",
+     "name": "deployed vehicle"
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_change_color_function": {
-   "guid": "00000000000000000000000000000000",
-   "size": 40,
-   "fields": [
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
+     "type": "tag_reference",
+     "name": "age effect"
     },
     {
-     "type": "long_flags",
-     "name": "scale flags",
-     "definition": "scale_flags_flags"
+     "type": "tag_reference",
+     "name": "aged weapon"
     },
     {
-     "type": "real_rgb_color",
-     "name": "color lower bound"
+     "type": "real_vector_3d",
+     "name": "first person weapon offset"
     },
     {
-     "type": "real_rgb_color",
-     "name": "color upper bound"
-    },
-    {
-     "type": "string_id",
-     "name": "darken by"
-    },
-    {
-     "type": "string_id",
-     "name": "scale by"
+     "type": "real_vector_2d",
+     "name": "first person scope size"
     },
     {
      "type": "terminator",
@@ -3575,25 +3511,142 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "weapon_flags_flags": {
+  "flags": {
    "options": [
-    "unused0",
-    "unused1",
-    "unused2",
+    "does not cast shadow",
+    "search cardinal direction lightmaps on failure",
+    "unused!",
+    "not a pathfinding obstacle",
+    "extension of parent#object passes all function values to parent and uses parent's markers",
+    "does not cause collision damage",
+    "early mover",
+    "early mover localized physics",
+    "use static massive lightmap sample#cast A LOT of rays once and store the results for lighting",
+    "object scales attachments",
+    "inherits player's appearance",
+    "dead bipeds can't localize",
+    "attach to clusters by dynamic sphere#use this for the mac gun on spacestation",
+    "effects created by this object do not spawn objects in multiplayer",
+    "prophet is not displayed in pegasus builds!"
+   ]
+  },
+  "lightmap shadow mode": {
+   "options": [
+    "default",
+    "never",
+    "always"
+   ]
+  },
+  "sweetener size": {
+   "options": [
+    "small",
+    "medium",
+    "large"
+   ]
+  },
+  "ai flags": {
+   "options": [
+    "detroyable cover",
+    "pathfinding ignore when dead",
+    "dynamic cover"
+   ]
+  },
+  "ai size": {
+   "options": [
+    "default",
+    "tiny",
+    "small",
+    "medium",
+    "large",
+    "huge",
+    "immobile"
+   ]
+  },
+  "leap jump speed": {
+   "options": [
+    "NONE",
+    "down",
+    "step",
+    "crouch",
+    "stand",
+    "storey",
+    "tower",
+    "infinite"
+   ]
+  },
+  "flags_2": {
+   "options": [
+    "invert#result of function is one minus actual result",
+    "mapping does not controls active#the curve mapping can make the function active/inactive",
+    "always active#function does not deactivate when at or below lower bound",
+    "random time offset#function offsets periodic function input by random value between 0 and 1"
+   ]
+  },
+  "Flags": {
+   "options": [
+    "Range",
+    "Unused 0",
+    "Unused 1",
+    "Unused 2",
+    "Color Bit 0",
+    "Color Bit 1",
+    "Color Bit 2",
+    "Color Bit 3"
+   ]
+  },
+  "change color": {
+   "options": [
+    "none",
+    "primary",
+    "secondary",
+    "tertiary",
+    "quaternary"
+   ]
+  },
+  "scale flags": {
+   "options": [
+    "blend in hsv#blends colors in hsv rather than rgb space",
+    "...more colors#blends colors through more hues (goes the long way around the color wheel)"
+   ]
+  },
+  "type": {
+   "options": [
+    "bitmap",
+    "sound",
+    "render model geometry",
+    "cluster geometry",
+    "cluster instanced geometry",
+    "lightmap geometry object buckets",
+    "lightmap geometry instance buckets",
+    "lightmap cluster bitmaps",
+    "lightmap instance bitmaps"
+   ]
+  },
+  "flags_3": {
+   "options": [
+    "always maintains z up",
+    "destroyed by explosions",
+    "unaffected by gravity"
+   ]
+  },
+  "flags_4": {
+   "options": [
+    "unused0!",
+    "unused1!",
+    "unused2!",
     "must be readied",
     "doesn't count toward maximum",
     "aim assists only when zoomed",
     "prevents grenade throwing",
-    "unused7",
-    "unused8",
+    "unused7!",
+    "unused8!",
     "prevents melee attack",
     "detonates when dropped",
     "cannot fire at maximum age",
     "secondary trigger overrides grenades",
-    "unused13",
-    "unused14",
+    "unused13!",
+    "unused14!",
     "AIs use weapon melee damage",
     "forces no binoculars",
     "loop fp firing animation",
@@ -3613,7 +3666,7 @@
     "uses 3rd person camera"
    ]
   },
-  "secondary_trigger_mode_enum": {
+  "secondary trigger mode": {
    "options": [
     "normal",
     "slaved to primary",
@@ -3622,9 +3675,9 @@
     "loads multiple primary ammunition"
    ]
   },
-  "melee_damage_reporting_type_enum": {
+  "melee damage reporting type": {
    "options": [
-    "teh guardians11",
+    "teh guardians!!1!!1!",
     "falling damage",
     "generic collision damage",
     "generic melee damage",
@@ -3670,14 +3723,14 @@
     "warthog gunner rocket"
    ]
   },
-  "movement_penalized_enum": {
+  "movement penalized": {
    "options": [
     "always",
     "when zoomed",
     "when zoomed or reloading"
    ]
   },
-  "multiplayer_weapon_type_enum": {
+  "multiplayer weapon type": {
    "options": [
     "none",
     "ctf flag",
@@ -3686,7 +3739,7 @@
     "juggernaut powerup"
    ]
   },
-  "weapon_type_enum": {
+  "weapon type": {
    "options": [
     "undefined",
     "shotgun",
@@ -3696,45 +3749,32 @@
     "rocket launcher"
    ]
   },
-  "type_enum": {
-   "options": [
-    "bitmap",
-    "sound",
-    "render model geometry",
-    "cluster geometry",
-    "cluster instanced geometry",
-    "lightmap geometry object buckets",
-    "lightmap geometry instance buckets",
-    "lightmap cluster bitmaps",
-    "lightmap instance bitmaps"
-   ]
-  },
-  "flags_flags": {
+  "flags_5": {
    "options": [
     "wastes rounds when reloaded",
     "every round must be chambered"
    ]
   },
-  "tracking_type_enum": {
+  "tracking type": {
    "options": [
     "no tracking",
     "human tracking",
     "plasma tracking"
    ]
   },
-  "flags_flags_2": {
+  "flags_6": {
    "options": [
     "autofire single action only"
    ]
   },
-  "input_enum": {
+  "input": {
    "options": [
     "right trigger",
     "left trigger",
     "melee attack"
    ]
   },
-  "behavior_enum": {
+  "behavior": {
    "options": [
     "spew",
     "latch",
@@ -3744,39 +3784,17 @@
     "latch-rocketlauncher"
    ]
   },
-  "prediction_enum": {
+  "flags_7": {
    "options": [
-    "none",
-    "spew",
-    "charge"
-   ]
-  },
-  "secondary_action_enum": {
-   "options": [
-    "fire",
-    "charge",
-    "track",
-    "fire other"
-   ]
-  },
-  "overcharged_action_enum": {
-   "options": [
-    "none",
-    "explode",
-    "discharge"
-   ]
-  },
-  "flags_flags_3": {
-   "options": [
-    "tracks fired projectile",
-    "random firing effects",
-    "can fire with partial ammo",
-    "projectiles use weapon origin",
-    "ejects during chamber",
+    "tracks fired projectile#poo poo ca ca pee pee",
+    "random firing effects#rather than being chosen sequentially, firing effects are picked randomly",
+    "can fire with partial ammo#allows a weapon to be fired as long as there is a non-zero amount of ammunition loaded",
+    "projectiles use weapon origin#instead of coming out of the magic first person camera origin, the projectiles for this weapon actually come out of the gun",
+    "ejects during chamber#this trigger's ejection port is started during the key frame of its chamber animation",
     "use error when unzoomed",
-    "projectile vector cannot be adjusted",
+    "projectile vector cannot be adjusted#projectiles fired by this weapon cannot have their direction adjusted by the AI to hit the target",
     "projectiles have identical error",
-    "projectiles fire parallel",
+    "projectiles fire parallel#If there are multiple guns for this trigger, the projectiles emerge in parallel beams (rather than independant aiming)",
     "cant fire when others firing",
     "cant fire when others recovering",
     "don't clear fire bit after recovering",
@@ -3785,7 +3803,7 @@
     "can fire at maximum age"
    ]
   },
-  "firing_noise_enum": {
+  "firing noise": {
    "options": [
     "silent",
     "medium",
@@ -3794,13 +3812,13 @@
     "quiet"
    ]
   },
-  "distribution_function_enum": {
+  "distribution function": {
    "options": [
     "point",
     "horizontal fan"
    ]
   },
-  "angle_change_function_enum": {
+  "angle change function": {
    "options": [
     "linear",
     "early",
@@ -3812,165 +3830,79 @@
     "zero"
    ]
   },
-  "prediction_type_enum": {
+  "prediction type": {
    "options": [
     "none",
     "continuous",
     "instant"
    ]
   },
-  "item_flags_flags": {
-   "options": [
-    "always maintains z up",
-    "destroyed by explosions",
-    "unaffected by gravity"
-   ]
-  },
-  "flags_flags_4": {
-   "options": [
-    "does not cast shadow",
-    "search cardinal direction lightmaps on failure",
-    "unused",
-    "not a pathfinding obstacle",
-    "extension of parent",
-    "does not cause collision damage",
-    "early mover",
-    "early mover localized physics",
-    "use static massive lightmap sample",
-    "object scales attachments",
-    "inherits player's appearance",
-    "dead bipeds can't localize",
-    "attach to clusters by dynamic sphere",
-    "effects created by this object do not spawn objects in multiplayer",
-    "prophet is not displayed in pegasus builds"
-   ]
-  },
-  "lightmap_shadow_mode_enum": {
-   "options": [
-    "default",
-    "never",
-    "always"
-   ]
-  },
-  "sweetener_size_enum": {
-   "options": [
-    "small",
-    "medium",
-    "large"
-   ]
-  },
-  "ai_flags_flags": {
-   "options": [
-    "detroyable cover",
-    "pathfinding ignore when dead",
-    "dynamic cover"
-   ]
-  },
-  "ai_size_enum": {
-   "options": [
-    "default",
-    "tiny",
-    "small",
-    "medium",
-    "large",
-    "huge",
-    "immobile"
-   ]
-  },
-  "leap_jump_speed_enum": {
-   "options": [
-    "NONE",
-    "down",
-    "step",
-    "crouch",
-    "stand",
-    "storey",
-    "tower",
-    "infinite"
-   ]
-  },
-  "flags_flags_5": {
-   "options": [
-    "invert",
-    "mapping does not controls active",
-    "always active",
-    "random time offset"
-   ]
-  },
-  "flags_flags_6": {
-   "options": [
-    "Range",
-    "Unused 0",
-    "Unused 1",
-    "Unused 2",
-    "Color Bit 0",
-    "Color Bit 1",
-    "Color Bit 2",
-    "Color Bit 3"
-   ]
-  },
-  "change_color_enum": {
+  "prediction": {
    "options": [
     "none",
-    "primary",
-    "secondary",
-    "tertiary",
-    "quaternary"
+    "spew",
+    "charge"
    ]
   },
-  "scale_flags_flags": {
+  "secondary action": {
    "options": [
-    "blend in hsv",
-    "...more colors"
+    "fire",
+    "charge",
+    "track",
+    "fire other"
+   ]
+  },
+  "overcharged action": {
+   "options": [
+    "none",
+    "explode",
+    "discharge"
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "melee_aim_assist_struct": {
+  "mapping_function_2": {
+   "0": "mapping_function__v0",
+   "1": "mapping_function_2"
+  },
+  "melee_aim_assist_struct_2": {
    "0": "melee_aim_assist_struct__v0",
-   "1": "melee_aim_assist_struct"
+   "1": "melee_aim_assist_struct_2"
   },
-  "melee_damage_parameters_struct": {
+  "melee_damage_parameters_struct_2": {
    "0": "melee_damage_parameters_struct__v0",
-   "1": "melee_damage_parameters_struct"
+   "1": "melee_damage_parameters_struct_2"
   },
-  "magazine_objects": {
-   "0": "magazine_objects__v0",
-   "1": "magazine_objects"
+  "magazine_objects_struct": {
+   "0": "magazine_objects_struct__v0",
+   "1": "magazine_objects_struct"
   },
-  "magazines": {
-   "0": "magazines__v0",
-   "1": "magazines"
+  "magazines_struct": {
+   "0": "magazines_struct__v0",
+   "1": "magazines_struct"
   },
-  "weapon_tracking_struct": {
+  "weapon_tracking_struct_2": {
    "0": "weapon_tracking_struct__v0",
-   "1": "weapon_tracking_struct"
+   "1": "weapon_tracking_struct_2"
   },
-  "weapon_barrel_damage_effect_struct": {
+  "weapon_barrel_damage_effect_struct_2": {
    "0": "weapon_barrel_damage_effect_struct__v0",
-   "1": "weapon_barrel_damage_effect_struct"
+   "1": "weapon_barrel_damage_effect_struct_2"
   },
-  "barrel_firing_effect_block": {
-   "0": "barrel_firing_effect_block__v0",
-   "1": "barrel_firing_effect_block"
+  "barrel_firing_effect_block_struct": {
+   "0": "barrel_firing_effect_block_struct__v0",
+   "1": "barrel_firing_effect_block_struct"
   },
-  "weapon_barrels": {
-   "0": "weapon_barrels__v0",
-   "1": "weapon_barrels__v1",
-   "2": "weapon_barrels"
+  "weapon_barrels_struct": {
+   "0": "weapon_barrels_struct__v0",
+   "1": "weapon_barrels_struct__v1",
+   "2": "weapon_barrels_struct"
   },
   "weapon_block_struct": {
    "0": "weapon_block_struct__v0",
    "1": "weapon_block_struct__v1",
    "2": "weapon_block_struct__v2",
    "3": "weapon_block_struct"
-  },
-  "mapping_function": {
-   "0": "mapping_function__v0",
-   "1": "mapping_function"
   }
  }
 }

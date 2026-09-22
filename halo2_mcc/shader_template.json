@@ -2,78 +2,74 @@
  "name": "shader_template",
  "tag": "stem",
  "version": 1,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "shader_template_block",
  "blocks": {
-  "shader_template_property_block_2": {
+  "shader_template_property_block": {
    "max_count": 14,
-   "max_count_string": "14",
-   "struct": "shader_template_property_block"
+   "struct": "shader_template_property_block_struct",
+   "max_count_string": "k_number_of_shader_template_properties"
   },
-  "shader_template_parameter_block_2": {
+  "shader_template_parameter_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "shader_template_parameter_block"
+   "struct": "shader_template_parameter_block_struct",
+   "max_count_string": "k_maximum_parameters_per_shader_template_category"
   },
-  "shader_template_category_block_2": {
+  "shader_template_category_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "shader_template_category_block"
+   "struct": "shader_template_category_block_struct",
+   "max_count_string": "k_maximum_categories_per_shader_template"
   },
-  "shader_template_pass_reference_block_2": {
+  "shader_template_pass_reference_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "shader_template_pass_reference_block"
+   "struct": "shader_template_pass_reference_block_struct",
+   "max_count_string": "k_maximum_pass_references_per_shader_template"
   },
-  "shader_template_level_of_detail_block_2": {
+  "shader_template_level_of_detail_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "shader_template_level_of_detail_block"
+   "struct": "shader_template_level_of_detail_block_struct",
+   "max_count_string": "k_shader_level_of_detail_count"
   },
-  "shader_template_runtime_external_light_response_index_block_2": {
+  "shader_template_runtime_external_light_response_index_block": {
    "max_count": 65535,
-   "max_count_string": "65535",
-   "struct": "shader_template_runtime_external_light_response_index_block"
+   "struct": "shader_template_runtime_external_light_response_index_block_struct",
+   "max_count_string": "UNSIGNED_SHORT_MAX"
   },
-  "shader_template_runtime_external_light_response_index_block_3": {
-   "max_count": 65535,
-   "max_count_string": "65535",
-   "struct": "shader_template_runtime_external_light_response_index_block"
-  },
-  "shader_template_postprocess_level_of_detail_new_block_2": {
+  "shader_template_postprocess_level_of_detail_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_template_postprocess_level_of_detail_new_block"
+   "struct": "shader_template_postprocess_level_of_detail_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "tag_block_index_block_2": {
+  "tag_block_index_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "tag_block_index_block"
+   "struct": "tag_block_index_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_template_postprocess_pass_new_block_2": {
+  "shader_template_postprocess_pass_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_template_postprocess_pass_new_block"
+   "struct": "shader_template_postprocess_pass_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_template_postprocess_implementation_new_block_2": {
+  "shader_template_postprocess_implementation_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_template_postprocess_implementation_new_block"
+   "struct": "shader_template_postprocess_implementation_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_template_postprocess_remapping_new_block_2": {
+  "shader_template_postprocess_remapping_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_template_postprocess_remapping_new_block"
+   "struct": "shader_template_postprocess_remapping_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_template_postprocess_definition_new_block_2": {
+  "shader_template_postprocess_definition_new_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "shader_template_postprocess_definition_new_block"
+   "struct": "shader_template_postprocess_definition_new_block_struct",
+   "max_count_string": "k_render_shader_platform_count"
   },
   "shader_template_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "shader_template_block_struct"
+   "struct": "shader_template_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -84,7 +80,7 @@
     {
      "type": "data",
      "name": "documentation",
-     "definition": "documentation_data"
+     "definition": "shader_text_definition"
     },
     {
      "type": "string_id",
@@ -92,23 +88,23 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "block",
      "name": "properties",
-     "definition": "shader_template_property_block_2"
+     "definition": "shader_template_property_block"
     },
     {
      "type": "block",
      "name": "categories",
-     "definition": "shader_template_category_block_2"
+     "definition": "shader_template_category_block"
     },
     {
      "type": "tag_reference",
@@ -117,17 +113,17 @@
     {
      "type": "block",
      "name": "LODs",
-     "definition": "shader_template_level_of_detail_block_2"
+     "definition": "shader_template_level_of_detail_block"
     },
     {
      "type": "block",
      "name": null,
-     "definition": "shader_template_runtime_external_light_response_index_block_2"
+     "definition": "shader_template_runtime_external_light_response_index_block"
     },
     {
      "type": "block",
      "name": null,
-     "definition": "shader_template_runtime_external_light_response_index_block_3"
+     "definition": "shader_template_runtime_external_light_response_index_block"
     },
     {
      "type": "tag_reference",
@@ -136,11 +132,11 @@
     {
      "type": "short_enum",
      "name": "aux-1 layer",
-     "definition": "layer_enum"
+     "definition": "layer"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -150,17 +146,17 @@
     {
      "type": "short_enum",
      "name": "aux-2 layer",
-     "definition": "layer_enum"
+     "definition": "layer"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "postprocess definition",
-     "definition": "shader_template_postprocess_definition_new_block_2"
+     "definition": "shader_template_postprocess_definition_new_block"
     },
     {
      "type": "terminator",
@@ -168,18 +164,18 @@
     }
    ]
   },
-  "shader_template_property_block": {
+  "shader_template_property_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
     {
      "type": "short_enum",
      "name": "property",
-     "definition": "property_enum"
+     "definition": "property"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -192,7 +188,7 @@
     }
    ]
   },
-  "shader_template_category_block": {
+  "shader_template_category_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -203,7 +199,7 @@
     {
      "type": "block",
      "name": "parameters",
-     "definition": "shader_template_parameter_block_2"
+     "definition": "shader_template_parameter_block"
     },
     {
      "type": "terminator",
@@ -211,7 +207,7 @@
     }
    ]
   },
-  "shader_template_parameter_block": {
+  "shader_template_parameter_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 72,
    "fields": [
@@ -222,17 +218,17 @@
     {
      "type": "data",
      "name": "explanation",
-     "definition": "explanation_data"
+     "definition": "shader_text_definition"
     },
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "tag_reference",
@@ -249,21 +245,21 @@
     {
      "type": "short_enum",
      "name": "bitmap type",
-     "definition": "bitmap_type_enum"
+     "definition": "bitmap type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "word_flags",
      "name": "bitmap animation flags",
-     "definition": "bitmap_animation_flags_flags"
+     "definition": "bitmap animation flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -276,7 +272,7 @@
     }
    ]
   },
-  "shader_template_level_of_detail_block": {
+  "shader_template_level_of_detail_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -287,7 +283,7 @@
     {
      "type": "block",
      "name": "pass",
-     "definition": "shader_template_pass_reference_block_2"
+     "definition": "shader_template_pass_reference_block"
     },
     {
      "type": "terminator",
@@ -295,18 +291,18 @@
     }
    ]
   },
-  "shader_template_pass_reference_block": {
+  "shader_template_pass_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
     {
      "type": "short_enum",
      "name": "layer",
-     "definition": "layer_enum"
+     "definition": "layer"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -315,7 +311,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -324,7 +320,7 @@
     }
    ]
   },
-  "shader_template_runtime_external_light_response_index_block": {
+  "shader_template_runtime_external_light_response_index_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -338,34 +334,34 @@
     }
    ]
   },
-  "shader_template_postprocess_definition_new_block": {
+  "shader_template_postprocess_definition_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 60,
    "fields": [
     {
      "type": "block",
      "name": "levels of detail",
-     "definition": "shader_template_postprocess_level_of_detail_new_block_2"
+     "definition": "shader_template_postprocess_level_of_detail_new_block"
     },
     {
      "type": "block",
      "name": "layers",
-     "definition": "tag_block_index_block_2"
+     "definition": "tag_block_index_block"
     },
     {
      "type": "block",
      "name": "passes",
-     "definition": "shader_template_postprocess_pass_new_block_2"
+     "definition": "shader_template_postprocess_pass_new_block"
     },
     {
      "type": "block",
      "name": "implementations",
-     "definition": "shader_template_postprocess_implementation_new_block_2"
+     "definition": "shader_template_postprocess_implementation_new_block"
     },
     {
      "type": "block",
      "name": "remappings",
-     "definition": "shader_template_postprocess_remapping_new_block_2"
+     "definition": "shader_template_postprocess_remapping_new_block"
     },
     {
      "type": "terminator",
@@ -373,14 +369,14 @@
     }
    ]
   },
-  "shader_template_postprocess_level_of_detail_new_block": {
+  "shader_template_postprocess_level_of_detail_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 10,
    "fields": [
     {
      "type": "struct",
      "name": "layers",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "long_integer",
@@ -396,7 +392,7 @@
     }
    ]
   },
-  "tag_block_index_struct": {
+  "tag_block_index_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
@@ -411,14 +407,14 @@
    ],
    "tag": "shtb"
   },
-  "tag_block_index_block": {
+  "tag_block_index_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
     {
      "type": "struct",
      "name": "indices",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -426,7 +422,7 @@
     }
    ]
   },
-  "shader_template_postprocess_pass_new_block": {
+  "shader_template_postprocess_pass_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 18,
    "fields": [
@@ -437,7 +433,7 @@
     {
      "type": "struct",
      "name": "implementations",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -445,24 +441,24 @@
     }
    ]
   },
-  "shader_template_postprocess_implementation_new_block": {
+  "shader_template_postprocess_implementation_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 6,
    "fields": [
     {
      "type": "struct",
      "name": "bitmaps",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "pixel constants",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "vertex constants",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -470,13 +466,13 @@
     }
    ]
   },
-  "shader_template_postprocess_remapping_new_block": {
+  "shader_template_postprocess_remapping_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(byte)*3",
      "definition": 3
     },
     {
@@ -490,9 +486,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "force active-camo",
     "water",
@@ -500,7 +495,7 @@
     "hide standard parameters"
    ]
   },
-  "property_enum": {
+  "property": {
    "options": [
     "unused",
     "diffuse map",
@@ -518,7 +513,7 @@
     "lightmap foliage scale"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "bitmap",
     "value",
@@ -526,20 +521,20 @@
     "switch"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "animated",
     "hide bitmap reference"
    ]
   },
-  "bitmap_type_enum": {
+  "bitmap type": {
    "options": [
     "2D",
     "3D",
     "cube map"
    ]
   },
-  "bitmap_animation_flags_flags": {
+  "bitmap animation flags": {
    "options": [
     "scale uniform",
     "scale",
@@ -548,7 +543,7 @@
     "index"
    ]
   },
-  "layer_enum": {
+  "layer": {
    "options": [
     "texaccum",
     "environment map",
@@ -573,20 +568,6 @@
   }
  },
  "datas": {
-  "documentation_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  },
-  "explanation_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  }
- },
- "resources": {},
- "interops": {},
- "struct_versions": {}
+  "shader_text_definition": {}
+ }
 }

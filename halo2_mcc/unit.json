@@ -2,126 +2,682 @@
  "name": "unit",
  "tag": "unit",
  "version": 3,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "unit_block",
  "blocks": {
-  "unit_camera_track_block_2": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "unit_camera_track_block"
-  },
-  "unit_postures_block_2": {
-   "max_count": 20,
-   "max_count_string": "20",
-   "struct": "unit_postures_block"
-  },
-  "unit_hud_reference_block_2": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "unit_hud_reference_block"
-  },
-  "dialogue_variant_block_2": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "dialogue_variant_block"
-  },
-  "powered_seat_block_2": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "powered_seat_block"
-  },
-  "unit_weapon_block_2": {
-   "max_count": 4,
-   "max_count_string": "4",
-   "struct": "unit_weapon_block"
-  },
-  "unit_hud_reference_block_3": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "unit_hud_reference_block"
-  },
-  "unit_hud_reference_block_4": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "unit_hud_reference_block"
-  },
-  "unit_hud_reference_block_5": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "unit_hud_reference_block"
-  },
-  "unit_hud_reference_block_6": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "unit_hud_reference_block"
-  },
-  "unit_seat_block_2": {
-   "max_count": 32,
-   "max_count_string": "32",
-   "struct": "unit_seat_block"
-  },
-  "object_ai_properties_block_2": {
+  "object_ai_properties_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "object_ai_properties_block"
+   "struct": "object_ai_properties_block_struct",
+   "max_count_string": "1"
   },
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "object_function_block_2": {
+  "object_function_block": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "object_function_block"
+   "struct": "object_function_block_struct",
+   "max_count_string": "k_maximum_object_functions"
   },
-  "object_attachment_block_2": {
+  "object_attachment_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "object_attachment_block"
+   "struct": "object_attachment_block_struct",
+   "max_count_string": "k_maximum_number_of_attachments_per_object"
   },
-  "object_widget_block_2": {
+  "object_widget_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "object_widget_block"
+   "struct": "object_widget_block_struct",
+   "max_count_string": "MAXIMUM_WIDGETS_PER_OBJECT"
   },
-  "old_object_function_block_2": {
+  "old_object_function_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "old_object_function_block"
+   "struct": "old_object_function_block_struct",
+   "max_count_string": "4"
   },
-  "object_change_color_initial_permutation_2": {
+  "object_change_color_initial_permutation": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "object_change_color_initial_permutation"
+   "struct": "object_change_color_initial_permutation_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_OBJECT_CHANGE_COLOR_INITIAL_PERMUTATIONS"
   },
-  "object_change_color_function_2": {
+  "object_change_color_function": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "object_change_color_function"
+   "struct": "object_change_color_function_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_OBJECT_CHANGE_COLOR_FUNCTIONS"
   },
-  "object_change_colors_2": {
+  "object_change_colors": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "object_change_colors"
+   "struct": "object_change_colors_struct",
+   "max_count_string": "k_object_change_color_count"
   },
-  "predicted_resource_block_2": {
+  "predicted_resource_block": {
    "max_count": 2048,
-   "max_count_string": "2048",
-   "struct": "predicted_resource_block"
+   "struct": "predicted_resource_block_struct",
+   "max_count_string": "2048"
+  },
+  "unit_camera_track_block": {
+   "max_count": 2,
+   "struct": "unit_camera_track_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_UNIT_CAMERA_TRACKS"
+  },
+  "unit_postures_block": {
+   "max_count": 20,
+   "struct": "unit_postures_block_struct",
+   "max_count_string": "MAXIMUM_POSTURES_PER_UNIT"
+  },
+  "unit_hud_reference_block": {
+   "max_count": 2,
+   "struct": "unit_hud_reference_block_struct",
+   "max_count_string": "NUMBER_OF_UNIT_HUD_TYPES"
+  },
+  "dialogue_variant_block": {
+   "max_count": 16,
+   "struct": "dialogue_variant_block_struct",
+   "max_count_string": "MAXIMUM_DIALOGUE_VARIANTS_PER_UNIT"
+  },
+  "powered_seat_block": {
+   "max_count": 2,
+   "struct": "powered_seat_block_struct",
+   "max_count_string": "k_powered_seats_count"
+  },
+  "unit_weapon_block": {
+   "max_count": 4,
+   "struct": "unit_weapon_block_struct",
+   "max_count_string": "MAXIMUM_INITIAL_WEAPONS_PER_UNIT"
+  },
+  "unit_seat_block": {
+   "max_count": 32,
+   "struct": "unit_seat_block_struct",
+   "max_count_string": "MAXIMUM_SEATS_PER_UNIT_DEFINITION"
   },
   "unit_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "unit_block_struct"
+   "struct": "unit_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
+  "object_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 256,
+   "fields": [
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "word_flags",
+     "name": "flags",
+     "definition": "flags"
+    },
+    {
+     "type": "real",
+     "name": "bounding radius"
+    },
+    {
+     "type": "real_point_3d",
+     "name": "bounding offset"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 12
+    },
+    {
+     "type": "real",
+     "name": "acceleration scale"
+    },
+    {
+     "type": "short_enum",
+     "name": "lightmap shadow mode",
+     "definition": "lightmap shadow mode"
+    },
+    {
+     "type": "char_enum",
+     "name": "sweetener size",
+     "definition": "sweetener size"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(byte)",
+     "definition": 1
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 32
+    },
+    {
+     "type": "real",
+     "name": "dynamic light sphere radius"
+    },
+    {
+     "type": "real_point_3d",
+     "name": "dynamic light sphere offset"
+    },
+    {
+     "type": "string_id",
+     "name": "default model variant"
+    },
+    {
+     "type": "tag_reference",
+     "name": "model"
+    },
+    {
+     "type": "tag_reference",
+     "name": "crate object"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 16
+    },
+    {
+     "type": "tag_reference",
+     "name": "modifier shader"
+    },
+    {
+     "type": "tag_reference",
+     "name": "creation effect"
+    },
+    {
+     "type": "tag_reference",
+     "name": "material effects"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 24
+    },
+    {
+     "type": "block",
+     "name": "ai properties",
+     "definition": "object_ai_properties_block"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 24
+    },
+    {
+     "type": "block",
+     "name": "functions",
+     "definition": "object_function_block"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 16
+    },
+    {
+     "type": "real",
+     "name": "Apply collision damage scale"
+    },
+    {
+     "type": "real",
+     "name": "min game acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "max game acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "min game scale (default)"
+    },
+    {
+     "type": "real",
+     "name": "max game scale (default)"
+    },
+    {
+     "type": "real",
+     "name": "min abs acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "max abs acc (default)"
+    },
+    {
+     "type": "real",
+     "name": "min abs scale (default)"
+    },
+    {
+     "type": "real",
+     "name": "max abs scale (default)"
+    },
+    {
+     "type": "short_integer",
+     "name": "hud text message index"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "block",
+     "name": "attachments",
+     "definition": "object_attachment_block"
+    },
+    {
+     "type": "block",
+     "name": "widgets",
+     "definition": "object_widget_block"
+    },
+    {
+     "type": "block",
+     "name": "old functions",
+     "definition": "old_object_function_block"
+    },
+    {
+     "type": "block",
+     "name": "change colors",
+     "definition": "object_change_colors"
+    },
+    {
+     "type": "block",
+     "name": "predicted resources",
+     "definition": "predicted_resource_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_ai_properties_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "ai flags",
+     "definition": "ai flags"
+    },
+    {
+     "type": "string_id",
+     "name": "ai type name"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "short_enum",
+     "name": "ai size",
+     "definition": "ai size"
+    },
+    {
+     "type": "short_enum",
+     "name": "leap jump speed",
+     "definition": "leap jump speed"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_function_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 36,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_2"
+    },
+    {
+     "type": "string_id",
+     "name": "import name"
+    },
+    {
+     "type": "string_id",
+     "name": "export name"
+    },
+    {
+     "type": "string_id",
+     "name": "turn off with"
+    },
+    {
+     "type": "real",
+     "name": "min value"
+    },
+    {
+     "type": "custom",
+     "name": "default function"
+    },
+    {
+     "type": "struct",
+     "name": "default function",
+     "definition": "mapping_function_2"
+    },
+    {
+     "type": "string_id",
+     "name": "scale by"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "mapping_function__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "custom",
+     "name": "HIDE_GROUP_ID"
+    },
+    {
+     "type": "char_integer",
+     "name": "Function Type"
+    },
+    {
+     "type": "byte_flags",
+     "name": "Flags",
+     "definition": "Flags"
+    },
+    {
+     "type": "char_integer",
+     "name": "Function 1"
+    },
+    {
+     "type": "char_integer",
+     "name": "Function 2"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 0"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 1"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 2"
+    },
+    {
+     "type": "rgb_color",
+     "name": "Color 3"
+    },
+    {
+     "type": "block",
+     "name": "Values",
+     "definition": "real_block"
+    },
+    {
+     "type": "custom",
+     "name": "END_HIDE_GROUP_ID"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "MAPP"
+  },
+  "real_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 4,
+   "fields": [
+    {
+     "type": "real",
+     "name": "Value"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "mapping_function_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 12,
+   "fields": [
+    {
+     "type": "custom",
+     "name": "HIDE_GROUP_ID"
+    },
+    {
+     "type": "block",
+     "name": "data",
+     "definition": "byte_block"
+    },
+    {
+     "type": "custom",
+     "name": "END_HIDE_GROUP_ID"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ],
+   "tag": "MAPP"
+  },
+  "byte_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 1,
+   "fields": [
+    {
+     "type": "char_integer",
+     "name": "Value"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_attachment_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "type"
+    },
+    {
+     "type": "old_string_id",
+     "name": "marker"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 4
+    },
+    {
+     "type": "short_enum",
+     "name": "change color",
+     "definition": "change color"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "string_id",
+     "name": "primary scale"
+    },
+    {
+     "type": "string_id",
+     "name": "secondary scale"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 8
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_widget_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "type"
+    },
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 16
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "old_object_function_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 80,
+   "fields": [
+    {
+     "type": "pad",
+     "name": "sizeof(s_old_object_function_definition)-sizeof(c_old_string_id)",
+     "definition": 76
+    },
+    {
+     "type": "old_string_id",
+     "name": null
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_change_colors_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 24,
+   "fields": [
+    {
+     "type": "useless_pad",
+     "name": null,
+     "definition": 32
+    },
+    {
+     "type": "block",
+     "name": "initial permutations",
+     "definition": "object_change_color_initial_permutation"
+    },
+    {
+     "type": "block",
+     "name": "functions",
+     "definition": "object_change_color_function"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_change_color_initial_permutation_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "real",
+     "name": "weight"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color lower bound"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color upper bound"
+    },
+    {
+     "type": "string_id",
+     "name": "variant name"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "object_change_color_function_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 40,
+   "fields": [
+    {
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "long_flags",
+     "name": "scale flags",
+     "definition": "scale flags"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color lower bound"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color upper bound"
+    },
+    {
+     "type": "string_id",
+     "name": "darken by"
+    },
+    {
+     "type": "string_id",
+     "name": "scale by"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "predicted_resource_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 8,
+   "fields": [
+    {
+     "type": "short_enum",
+     "name": "type",
+     "definition": "type"
+    },
+    {
+     "type": "short_integer",
+     "name": "resource index"
+    },
+    {
+     "type": "long_integer",
+     "name": "tag index"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
   "unit_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 652,
@@ -134,17 +690,17 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "unit_flags_flags"
+     "definition": "flags_3"
     },
     {
      "type": "short_enum",
      "name": "default team",
-     "definition": "default_team_enum"
+     "definition": "default team"
     },
     {
      "type": "short_enum",
      "name": "constant sound volume",
-     "definition": "constant_sound_volume_enum"
+     "definition": "constant sound volume"
     },
     {
      "type": "useless_pad",
@@ -171,12 +727,12 @@
     {
      "type": "struct",
      "name": "unit camera",
-     "definition": "unit_camera_struct"
+     "definition": "unit_camera_struct_2"
     },
     {
      "type": "struct",
      "name": "acceleration",
-     "definition": "unit_seat_acceleration_struct"
+     "definition": "unit_seat_acceleration_struct_2"
     },
     {
      "type": "useless_pad",
@@ -279,7 +835,7 @@
     {
      "type": "struct",
      "name": "more damn nodes",
-     "definition": "unit_additional_node_names_struct"
+     "definition": "unit_additional_node_names_struct_2"
     },
     {
      "type": "useless_pad",
@@ -293,32 +849,32 @@
     {
      "type": "struct",
      "name": "your momma",
-     "definition": "unit_boarding_melee_struct"
+     "definition": "unit_boarding_melee_struct_2"
     },
     {
      "type": "short_enum",
      "name": "motion sensor blip size",
-     "definition": "motion_sensor_blip_size_enum"
+     "definition": "motion sensor blip size"
     },
     {
      "type": "struct",
      "name": "campaign metagame bucket",
-     "definition": "campaign_metagame_bucket_struct"
+     "definition": "campaign_metagame_bucket_struct_2"
     },
     {
      "type": "block",
      "name": "postures",
-     "definition": "unit_postures_block_2"
+     "definition": "unit_postures_block"
     },
     {
      "type": "block",
      "name": "NEW HUD INTERFACES",
-     "definition": "unit_hud_reference_block_2"
+     "definition": "unit_hud_reference_block"
     },
     {
      "type": "block",
      "name": "dialogue variants",
-     "definition": "dialogue_variant_block_2"
+     "definition": "dialogue_variant_block"
     },
     {
      "type": "real",
@@ -327,7 +883,7 @@
     {
      "type": "short_enum",
      "name": "grenade type",
-     "definition": "grenade_type_enum"
+     "definition": "grenade type"
     },
     {
      "type": "short_integer",
@@ -341,27 +897,27 @@
     {
      "type": "block",
      "name": "powered seats",
-     "definition": "powered_seat_block_2"
+     "definition": "powered_seat_block"
     },
     {
      "type": "block",
      "name": "weapons",
-     "definition": "unit_weapon_block_2"
+     "definition": "unit_weapon_block"
     },
     {
      "type": "block",
      "name": "seats",
-     "definition": "unit_seat_block_2"
+     "definition": "unit_seat_block"
     },
     {
      "type": "struct",
      "name": "boost",
-     "definition": "unit_boost_struct"
+     "definition": "unit_boost_struct_2"
     },
     {
      "type": "struct",
      "name": "lipsync",
-     "definition": "unit_lipsync_scales_struct"
+     "definition": "unit_lipsync_scales_struct_2"
     },
     {
      "type": "terminator",
@@ -369,7 +925,7 @@
     }
    ]
   },
-  "unit_camera_struct": {
+  "unit_camera_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -392,7 +948,7 @@
     {
      "type": "block",
      "name": "camera tracks",
-     "definition": "unit_camera_track_block_2"
+     "definition": "unit_camera_track_block"
     },
     {
      "type": "terminator",
@@ -401,7 +957,7 @@
    ],
    "tag": "uncs"
   },
-  "unit_camera_track_block": {
+  "unit_camera_track_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -420,7 +976,7 @@
     }
    ]
   },
-  "unit_seat_acceleration_struct": {
+  "unit_seat_acceleration_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -454,7 +1010,7 @@
    ],
    "tag": "uHnd"
   },
-  "unit_additional_node_names_struct": {
+  "unit_additional_node_names_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -480,7 +1036,7 @@
    ],
    "tag": "ubms"
   },
-  "unit_boarding_melee_struct": {
+  "unit_boarding_melee_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 80,
    "fields": [
@@ -511,19 +1067,19 @@
    ],
    "tag": "ubms"
   },
-  "campaign_metagame_bucket_struct": {
+  "campaign_metagame_bucket_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
     {
      "type": "char_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type_2"
     },
     {
      "type": "char_enum",
      "name": "class",
-     "definition": "class_enum"
+     "definition": "class"
     },
     {
      "type": "terminator",
@@ -532,7 +1088,7 @@
    ],
    "tag": "cmtb"
   },
-  "unit_postures_block": {
+  "unit_postures_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -555,7 +1111,7 @@
     }
    ]
   },
-  "unit_hud_reference_block": {
+  "unit_hud_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -579,7 +1135,7 @@
     }
    ]
   },
-  "dialogue_variant_block": {
+  "dialogue_variant_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -589,7 +1145,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -607,7 +1163,7 @@
     }
    ]
   },
-  "powered_seat_block": {
+  "powered_seat_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -635,7 +1191,7 @@
     }
    ]
   },
-  "unit_weapon_block": {
+  "unit_weapon_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -654,14 +1210,14 @@
     }
    ]
   },
-  "unit_seat_block__v0": {
+  "unit_seat_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 172,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_4"
     },
     {
      "type": "old_string_id",
@@ -673,7 +1229,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -687,11 +1243,12 @@
     {
      "type": "short_enum",
      "name": "ai seat type",
-     "definition": "ai_seat_type_enum"
+     "definition": "ai seat type"
     },
     {
-     "type": "short_integer",
-     "name": "boarding seat"
+     "type": "short_block_index",
+     "name": "boarding seat",
+     "definition": "unit_seat_block"
     },
     {
      "type": "real_fraction",
@@ -708,16 +1265,16 @@
     {
      "type": "struct",
      "name": "unit camera",
-     "definition": "unit_camera_struct"
+     "definition": "unit_camera_struct_2"
     },
     {
      "type": "block",
      "name": "unit hud interface",
-     "definition": "unit_hud_reference_block_3"
+     "definition": "unit_hud_reference_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -726,7 +1283,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
@@ -743,7 +1300,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
@@ -752,14 +1309,14 @@
     }
    ]
   },
-  "unit_seat_block__v1": {
+  "unit_seat_block_struct__v1": {
    "guid": "00000000000000000000000000000000",
    "size": 188,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_4"
     },
     {
      "type": "old_string_id",
@@ -771,7 +1328,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -785,11 +1342,12 @@
     {
      "type": "short_enum",
      "name": "ai seat type",
-     "definition": "ai_seat_type_enum"
+     "definition": "ai seat type"
     },
     {
-     "type": "short_integer",
-     "name": "boarding seat"
+     "type": "short_block_index",
+     "name": "boarding seat",
+     "definition": "unit_seat_block"
     },
     {
      "type": "real_fraction",
@@ -814,16 +1372,16 @@
     {
      "type": "struct",
      "name": "unit camera",
-     "definition": "unit_camera_struct"
+     "definition": "unit_camera_struct_2"
     },
     {
      "type": "block",
      "name": "unit hud interface",
-     "definition": "unit_hud_reference_block_4"
+     "definition": "unit_hud_reference_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -832,7 +1390,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
@@ -849,7 +1407,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
@@ -858,14 +1416,14 @@
     }
    ]
   },
-  "unit_seat_block__v2": {
+  "unit_seat_block_struct__v2": {
    "guid": "00000000000000000000000000000000",
    "size": 240,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_4"
     },
     {
      "type": "old_string_id",
@@ -885,7 +1443,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
@@ -903,11 +1461,12 @@
     {
      "type": "short_enum",
      "name": "ai seat type",
-     "definition": "ai_seat_type_enum"
+     "definition": "ai seat type"
     },
     {
-     "type": "short_integer",
-     "name": "boarding seat"
+     "type": "short_block_index",
+     "name": "boarding seat",
+     "definition": "unit_seat_block"
     },
     {
      "type": "real_fraction",
@@ -935,22 +1494,22 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*3",
      "definition": 12
     },
     {
      "type": "struct",
      "name": "unit camera",
-     "definition": "unit_camera_struct"
+     "definition": "unit_camera_struct_2"
     },
     {
      "type": "block",
      "name": "unit hud interface",
-     "definition": "unit_hud_reference_block_5"
+     "definition": "unit_hud_reference_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -959,7 +1518,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
@@ -976,7 +1535,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
@@ -997,7 +1556,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
@@ -1006,14 +1565,14 @@
     }
    ]
   },
-  "unit_seat_block": {
+  "unit_seat_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 192,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_4"
     },
     {
      "type": "old_string_id",
@@ -1055,7 +1614,7 @@
     {
      "type": "struct",
      "name": "acceleration",
-     "definition": "unit_seat_acceleration_struct"
+     "definition": "unit_seat_acceleration_struct_2"
     },
     {
      "type": "real",
@@ -1064,11 +1623,12 @@
     {
      "type": "short_enum",
      "name": "ai seat type",
-     "definition": "ai_seat_type_enum"
+     "definition": "ai seat type"
     },
     {
-     "type": "short_integer",
-     "name": "boarding seat"
+     "type": "short_block_index",
+     "name": "boarding seat",
+     "definition": "unit_seat_block"
     },
     {
      "type": "real_fraction",
@@ -1102,12 +1662,12 @@
     {
      "type": "struct",
      "name": "unit camera",
-     "definition": "unit_camera_struct"
+     "definition": "unit_camera_struct_2"
     },
     {
      "type": "block",
      "name": "unit hud interface",
-     "definition": "unit_hud_reference_block_6"
+     "definition": "unit_hud_reference_block"
     },
     {
      "type": "string_id",
@@ -1170,7 +1730,7 @@
     }
    ]
   },
-  "unit_boost_struct": {
+  "unit_boost_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -1212,7 +1772,7 @@
    ],
    "tag": "ulYc"
   },
-  "unit_lipsync_scales_struct": {
+  "unit_lipsync_scales_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -1230,586 +1790,121 @@
     }
    ],
    "tag": "ulYc"
-  },
-  "object_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 256,
-   "fields": [
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags_2"
-    },
-    {
-     "type": "real",
-     "name": "bounding radius"
-    },
-    {
-     "type": "real_point_3d",
-     "name": "bounding offset"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 12
-    },
-    {
-     "type": "real",
-     "name": "acceleration scale"
-    },
-    {
-     "type": "short_enum",
-     "name": "lightmap shadow mode",
-     "definition": "lightmap_shadow_mode_enum"
-    },
-    {
-     "type": "char_enum",
-     "name": "sweetener size",
-     "definition": "sweetener_size_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 1
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "real",
-     "name": "dynamic light sphere radius"
-    },
-    {
-     "type": "real_point_3d",
-     "name": "dynamic light sphere offset"
-    },
-    {
-     "type": "string_id",
-     "name": "default model variant"
-    },
-    {
-     "type": "tag_reference",
-     "name": "model"
-    },
-    {
-     "type": "tag_reference",
-     "name": "crate object"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "modifier shader"
-    },
-    {
-     "type": "tag_reference",
-     "name": "creation effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "material effects"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 24
-    },
-    {
-     "type": "block",
-     "name": "ai properties",
-     "definition": "object_ai_properties_block_2"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 24
-    },
-    {
-     "type": "block",
-     "name": "functions",
-     "definition": "object_function_block_2"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "real",
-     "name": "Apply collision damage scale"
-    },
-    {
-     "type": "real",
-     "name": "min game acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "max game acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "min game scale (default)"
-    },
-    {
-     "type": "real",
-     "name": "max game scale (default)"
-    },
-    {
-     "type": "real",
-     "name": "min abs acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "max abs acc (default)"
-    },
-    {
-     "type": "real",
-     "name": "min abs scale (default)"
-    },
-    {
-     "type": "real",
-     "name": "max abs scale (default)"
-    },
-    {
-     "type": "short_integer",
-     "name": "hud text message index"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "block",
-     "name": "attachments",
-     "definition": "object_attachment_block_2"
-    },
-    {
-     "type": "block",
-     "name": "widgets",
-     "definition": "object_widget_block_2"
-    },
-    {
-     "type": "block",
-     "name": "old functions",
-     "definition": "old_object_function_block_2"
-    },
-    {
-     "type": "block",
-     "name": "change colors",
-     "definition": "object_change_colors_2"
-    },
-    {
-     "type": "block",
-     "name": "predicted resources",
-     "definition": "predicted_resource_block_2"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_ai_properties_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 16,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "ai flags",
-     "definition": "ai_flags_flags"
-    },
-    {
-     "type": "string_id",
-     "name": "ai type name"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "short_enum",
-     "name": "ai size",
-     "definition": "ai_size_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "leap jump speed",
-     "definition": "leap_jump_speed_enum"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_function_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 36,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_3"
-    },
-    {
-     "type": "string_id",
-     "name": "import name"
-    },
-    {
-     "type": "string_id",
-     "name": "export name"
-    },
-    {
-     "type": "string_id",
-     "name": "turn off with"
-    },
-    {
-     "type": "real",
-     "name": "min value"
-    },
-    {
-     "type": "custom",
-     "name": "default function"
-    },
-    {
-     "type": "struct",
-     "name": "default function",
-     "definition": "mapping_function"
-    },
-    {
-     "type": "string_id",
-     "name": "scale by"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "mapping_function__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "custom",
-     "name": "HIDE_GROUP_ID"
-    },
-    {
-     "type": "char_integer",
-     "name": "Function Type"
-    },
-    {
-     "type": "byte_flags",
-     "name": "Flags",
-     "definition": "flags_flags_4"
-    },
-    {
-     "type": "char_integer",
-     "name": "Function 1"
-    },
-    {
-     "type": "char_integer",
-     "name": "Function 2"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 0"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 1"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 2"
-    },
-    {
-     "type": "rgb_color",
-     "name": "Color 3"
-    },
-    {
-     "type": "block",
-     "name": "Values",
-     "definition": "real_block_2"
-    },
-    {
-     "type": "custom",
-     "name": "END_HIDE_GROUP_ID"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "MAPP"
-  },
-  "real_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 4,
-   "fields": [
-    {
-     "type": "real",
-     "name": "Value"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "mapping_function": {
-   "guid": "00000000000000000000000000000000",
-   "size": 12,
-   "fields": [
-    {
-     "type": "custom",
-     "name": "HIDE_GROUP_ID"
-    },
-    {
-     "type": "block",
-     "name": "data",
-     "definition": "byte_block_2"
-    },
-    {
-     "type": "custom",
-     "name": "END_HIDE_GROUP_ID"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ],
-   "tag": "MAPP"
-  },
-  "byte_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 1,
-   "fields": [
-    {
-     "type": "char_integer",
-     "name": "Value"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_attachment_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "type"
-    },
-    {
-     "type": "old_string_id",
-     "name": "marker"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "short_enum",
-     "name": "change color",
-     "definition": "change_color_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "string_id",
-     "name": "primary scale"
-    },
-    {
-     "type": "string_id",
-     "name": "secondary scale"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_widget_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 16,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "type"
-    },
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "old_object_function_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 80,
-   "fields": [
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 76
-    },
-    {
-     "type": "old_string_id",
-     "name": null
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_change_colors": {
-   "guid": "00000000000000000000000000000000",
-   "size": 24,
-   "fields": [
-    {
-     "type": "useless_pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "block",
-     "name": "initial permutations",
-     "definition": "object_change_color_initial_permutation_2"
-    },
-    {
-     "type": "block",
-     "name": "functions",
-     "definition": "object_change_color_function_2"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_change_color_initial_permutation": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "real",
-     "name": "weight"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color lower bound"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color upper bound"
-    },
-    {
-     "type": "string_id",
-     "name": "variant name"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "object_change_color_function": {
-   "guid": "00000000000000000000000000000000",
-   "size": 40,
-   "fields": [
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "long_flags",
-     "name": "scale flags",
-     "definition": "scale_flags_flags"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color lower bound"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color upper bound"
-    },
-    {
-     "type": "string_id",
-     "name": "darken by"
-    },
-    {
-     "type": "string_id",
-     "name": "scale by"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "predicted_resource_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
-    {
-     "type": "short_enum",
-     "name": "type",
-     "definition": "type_enum_2"
-    },
-    {
-     "type": "short_integer",
-     "name": "resource index"
-    },
-    {
-     "type": "long_integer",
-     "name": "tag index"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "unit_flags_flags": {
+  "flags": {
+   "options": [
+    "does not cast shadow",
+    "search cardinal direction lightmaps on failure",
+    "unused!",
+    "not a pathfinding obstacle",
+    "extension of parent#object passes all function values to parent and uses parent's markers",
+    "does not cause collision damage",
+    "early mover",
+    "early mover localized physics",
+    "use static massive lightmap sample#cast A LOT of rays once and store the results for lighting",
+    "object scales attachments",
+    "inherits player's appearance",
+    "dead bipeds can't localize",
+    "attach to clusters by dynamic sphere#use this for the mac gun on spacestation",
+    "effects created by this object do not spawn objects in multiplayer",
+    "prophet is not displayed in pegasus builds!"
+   ]
+  },
+  "lightmap shadow mode": {
+   "options": [
+    "default",
+    "never",
+    "always"
+   ]
+  },
+  "sweetener size": {
+   "options": [
+    "small",
+    "medium",
+    "large"
+   ]
+  },
+  "ai flags": {
+   "options": [
+    "detroyable cover",
+    "pathfinding ignore when dead",
+    "dynamic cover"
+   ]
+  },
+  "ai size": {
+   "options": [
+    "default",
+    "tiny",
+    "small",
+    "medium",
+    "large",
+    "huge",
+    "immobile"
+   ]
+  },
+  "leap jump speed": {
+   "options": [
+    "NONE",
+    "down",
+    "step",
+    "crouch",
+    "stand",
+    "storey",
+    "tower",
+    "infinite"
+   ]
+  },
+  "flags_2": {
+   "options": [
+    "invert#result of function is one minus actual result",
+    "mapping does not controls active#the curve mapping can make the function active/inactive",
+    "always active#function does not deactivate when at or below lower bound",
+    "random time offset#function offsets periodic function input by random value between 0 and 1"
+   ]
+  },
+  "Flags": {
+   "options": [
+    "Range",
+    "Unused 0",
+    "Unused 1",
+    "Unused 2",
+    "Color Bit 0",
+    "Color Bit 1",
+    "Color Bit 2",
+    "Color Bit 3"
+   ]
+  },
+  "change color": {
+   "options": [
+    "none",
+    "primary",
+    "secondary",
+    "tertiary",
+    "quaternary"
+   ]
+  },
+  "scale flags": {
+   "options": [
+    "blend in hsv#blends colors in hsv rather than rgb space",
+    "...more colors#blends colors through more hues (goes the long way around the color wheel)"
+   ]
+  },
+  "type": {
+   "options": [
+    "bitmap",
+    "sound",
+    "render model geometry",
+    "cluster geometry",
+    "cluster instanced geometry",
+    "lightmap geometry object buckets",
+    "lightmap geometry instance buckets",
+    "lightmap cluster bitmaps",
+    "lightmap instance bitmaps"
+   ]
+  },
+  "flags_3": {
    "options": [
     "circular aiming",
     "destroyed after dying",
@@ -1828,21 +1923,21 @@
     "cannot open doors automatically",
     "melee attackers cannot attach",
     "not instantly killed by melee",
-    "unused17",
+    "unused17!",
     "runs around flaming",
     "inconsequential",
     "special cinematic unit",
     "ignored by autoaiming",
     "shields fry infection forms",
-    "unused23",
-    "unused24",
+    "unused23!",
+    "unused24!",
     "acts as gunner for parent",
     "controlled by parent gunner",
     "parent's primary weapon",
     "unit has boost"
    ]
   },
-  "default_team_enum": {
+  "default team": {
    "options": [
     "default",
     "player",
@@ -1862,7 +1957,7 @@
     "unused15"
    ]
   },
-  "constant_sound_volume_enum": {
+  "constant sound volume": {
    "options": [
     "silent",
     "medium",
@@ -1871,14 +1966,14 @@
     "quiet"
    ]
   },
-  "motion_sensor_blip_size_enum": {
+  "motion sensor blip size": {
    "options": [
     "medium",
     "small",
     "large"
    ]
   },
-  "type_enum": {
+  "type_2": {
    "options": [
     "brute",
     "grunt",
@@ -1927,7 +2022,7 @@
     "engineer_recharge_station"
    ]
   },
-  "class_enum": {
+  "class": {
    "options": [
     "infantry",
     "leader",
@@ -1939,23 +2034,23 @@
     "standard vehicle"
    ]
   },
-  "grenade_type_enum": {
+  "grenade type": {
    "options": [
     "human fragmentation",
     "covenant plasma"
    ]
   },
-  "flags_flags": {
+  "flags_4": {
    "options": [
     "invisible",
-    "unused1",
+    "unused1!",
     "driver",
     "gunner",
     "third person camera",
     "allows weapons",
     "third person on enter",
     "first person camera slaved to gun.",
-    "unused8",
+    "unused8!",
     "not valid without driver",
     "allow AI noncombatants",
     "boarding seat",
@@ -1969,7 +2064,7 @@
     "invisible under major damage"
    ]
   },
-  "ai_seat_type_enum": {
+  "ai seat type": {
    "options": [
     "NONE",
     "passenger",
@@ -1978,144 +2073,30 @@
     "large cargo",
     "driver"
    ]
-  },
-  "flags_flags_2": {
-   "options": [
-    "does not cast shadow",
-    "search cardinal direction lightmaps on failure",
-    "unused",
-    "not a pathfinding obstacle",
-    "extension of parent",
-    "does not cause collision damage",
-    "early mover",
-    "early mover localized physics",
-    "use static massive lightmap sample",
-    "object scales attachments",
-    "inherits player's appearance",
-    "dead bipeds can't localize",
-    "attach to clusters by dynamic sphere",
-    "effects created by this object do not spawn objects in multiplayer",
-    "prophet is not displayed in pegasus builds"
-   ]
-  },
-  "lightmap_shadow_mode_enum": {
-   "options": [
-    "default",
-    "never",
-    "always"
-   ]
-  },
-  "sweetener_size_enum": {
-   "options": [
-    "small",
-    "medium",
-    "large"
-   ]
-  },
-  "ai_flags_flags": {
-   "options": [
-    "detroyable cover",
-    "pathfinding ignore when dead",
-    "dynamic cover"
-   ]
-  },
-  "ai_size_enum": {
-   "options": [
-    "default",
-    "tiny",
-    "small",
-    "medium",
-    "large",
-    "huge",
-    "immobile"
-   ]
-  },
-  "leap_jump_speed_enum": {
-   "options": [
-    "NONE",
-    "down",
-    "step",
-    "crouch",
-    "stand",
-    "storey",
-    "tower",
-    "infinite"
-   ]
-  },
-  "flags_flags_3": {
-   "options": [
-    "invert",
-    "mapping does not controls active",
-    "always active",
-    "random time offset"
-   ]
-  },
-  "flags_flags_4": {
-   "options": [
-    "Range",
-    "Unused 0",
-    "Unused 1",
-    "Unused 2",
-    "Color Bit 0",
-    "Color Bit 1",
-    "Color Bit 2",
-    "Color Bit 3"
-   ]
-  },
-  "change_color_enum": {
-   "options": [
-    "none",
-    "primary",
-    "secondary",
-    "tertiary",
-    "quaternary"
-   ]
-  },
-  "scale_flags_flags": {
-   "options": [
-    "blend in hsv",
-    "...more colors"
-   ]
-  },
-  "type_enum_2": {
-   "options": [
-    "bitmap",
-    "sound",
-    "render model geometry",
-    "cluster geometry",
-    "cluster instanced geometry",
-    "lightmap geometry object buckets",
-    "lightmap geometry instance buckets",
-    "lightmap cluster bitmaps",
-    "lightmap instance bitmaps"
-   ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "unit_additional_node_names_struct": {
-   "0": "unit_additional_node_names_struct__v0",
-   "1": "unit_additional_node_names_struct"
-  },
-  "unit_boarding_melee_struct": {
-   "0": "unit_boarding_melee_struct__v0",
-   "1": "unit_boarding_melee_struct"
-  },
-  "unit_seat_block": {
-   "0": "unit_seat_block__v0",
-   "1": "unit_seat_block__v1",
-   "2": "unit_seat_block__v2",
-   "3": "unit_seat_block"
-  },
-  "unit_lipsync_scales_struct": {
-   "0": "unit_lipsync_scales_struct__v0",
-   "1": "unit_lipsync_scales_struct"
-  },
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
+  },
+  "unit_additional_node_names_struct_2": {
+   "0": "unit_additional_node_names_struct__v0",
+   "1": "unit_additional_node_names_struct_2"
+  },
+  "unit_boarding_melee_struct_2": {
+   "0": "unit_boarding_melee_struct__v0",
+   "1": "unit_boarding_melee_struct_2"
+  },
+  "unit_seat_block_struct": {
+   "0": "unit_seat_block_struct__v0",
+   "1": "unit_seat_block_struct__v1",
+   "2": "unit_seat_block_struct__v2",
+   "3": "unit_seat_block_struct"
+  },
+  "unit_lipsync_scales_struct_2": {
+   "0": "unit_lipsync_scales_struct__v0",
+   "1": "unit_lipsync_scales_struct_2"
   }
  }
 }

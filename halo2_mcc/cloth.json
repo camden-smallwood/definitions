@@ -2,33 +2,29 @@
  "name": "cloth",
  "tag": "clwd",
  "version": 0,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "cloth_block",
  "blocks": {
-  "cloth_vertices_block_2": {
+  "cloth_vertices_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "cloth_vertices_block"
+   "struct": "cloth_vertices_block_struct",
+   "max_count_string": "k_maximum_vertices_per_cloth"
   },
-  "cloth_indices_block_2": {
+  "cloth_indices_block": {
    "max_count": 768,
-   "max_count_string": "768",
-   "struct": "cloth_indices_block"
+   "struct": "cloth_indices_block_struct",
+   "max_count_string": "k_maximum_indices_per_cloth"
   },
-  "cloth_indices_block_3": {
-   "max_count": 768,
-   "max_count_string": "768",
-   "struct": "cloth_indices_block"
-  },
-  "cloth_links_block_2": {
+  "cloth_links_block": {
    "max_count": 640,
-   "max_count_string": "640",
-   "struct": "cloth_links_block"
+   "struct": "cloth_links_block_struct",
+   "max_count_string": "k_maximum_links_per_cloth"
   },
   "cloth_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "cloth_block_struct"
+   "struct": "cloth_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -39,7 +35,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "string_id",
@@ -68,27 +64,27 @@
     {
      "type": "struct",
      "name": "properties",
-     "definition": "cloth_properties"
+     "definition": "cloth_properties_2"
     },
     {
      "type": "block",
      "name": "vertices",
-     "definition": "cloth_vertices_block_2"
+     "definition": "cloth_vertices_block"
     },
     {
      "type": "block",
      "name": "indices",
-     "definition": "cloth_indices_block_2"
+     "definition": "cloth_indices_block"
     },
     {
      "type": "block",
      "name": "strip indices",
-     "definition": "cloth_indices_block_3"
+     "definition": "cloth_indices_block"
     },
     {
      "type": "block",
      "name": "links",
-     "definition": "cloth_links_block_2"
+     "definition": "cloth_links_block"
     },
     {
      "type": "terminator",
@@ -96,14 +92,14 @@
     }
    ]
   },
-  "cloth_properties": {
+  "cloth_properties_2": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
     {
      "type": "short_enum",
      "name": "Integration type",
-     "definition": "integration_type_enum"
+     "definition": "Integration type"
     },
     {
      "type": "short_integer",
@@ -131,7 +127,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(real)",
      "definition": 24
     },
     {
@@ -141,7 +137,7 @@
    ],
    "tag": "clpr"
   },
-  "cloth_vertices_block": {
+  "cloth_vertices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -159,7 +155,7 @@
     }
    ]
   },
-  "cloth_indices_block": {
+  "cloth_indices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
@@ -173,7 +169,7 @@
     }
    ]
   },
-  "cloth_links_block": {
+  "cloth_links_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -204,22 +200,17 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "Doesn't use wind",
     "Uses grid attach top"
    ]
   },
-  "integration_type_enum": {
+  "Integration type": {
    "options": [
     "verlet"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

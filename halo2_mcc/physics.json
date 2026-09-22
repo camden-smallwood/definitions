@@ -2,28 +2,29 @@
  "name": "physics",
  "tag": "phys",
  "version": 4,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "physics_block",
  "blocks": {
-  "inertial_matrix_block_2": {
+  "inertial_matrix_block": {
    "max_count": 2,
-   "max_count_string": "2",
-   "struct": "inertial_matrix_block"
+   "struct": "inertial_matrix_block_struct",
+   "max_count_string": "2"
   },
-  "powered_mass_point_block_2": {
+  "powered_mass_point_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "powered_mass_point_block"
+   "struct": "powered_mass_point_block_struct",
+   "max_count_string": "MAXIMUM_POWERED_MASS_POINTS_PER_PHYSICS"
   },
-  "mass_point_block_2": {
+  "mass_point_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "mass_point_block"
+   "struct": "mass_point_block_struct",
+   "max_count_string": "MAXIMUM_MASS_POINTS_PER_PHYSICS"
   },
   "physics_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "physics_block_struct"
+   "struct": "physics_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -98,7 +99,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -107,7 +108,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -125,17 +126,17 @@
     {
      "type": "block",
      "name": "inertial matrix and inverse",
-     "definition": "inertial_matrix_block_2"
+     "definition": "inertial_matrix_block"
     },
     {
      "type": "block",
      "name": "powered mass points",
-     "definition": "powered_mass_point_block_2"
+     "definition": "powered_mass_point_block"
     },
     {
      "type": "block",
      "name": "mass points",
-     "definition": "mass_point_block_2"
+     "definition": "mass_point_block"
     },
     {
      "type": "pad",
@@ -148,7 +149,7 @@
     }
    ]
   },
-  "inertial_matrix_block": {
+  "inertial_matrix_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
@@ -158,11 +159,11 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "-xy    zz+xx    -yz"
+     "name": " -xy    zz+xx    -yz"
     },
     {
      "type": "real_vector_3d",
-     "name": "-zx     -yz    xx+yy"
+     "name": " -zx     -yz    xx+yy"
     },
     {
      "type": "terminator",
@@ -170,7 +171,7 @@
     }
    ]
   },
-  "powered_mass_point_block": {
+  "powered_mass_point_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
@@ -181,7 +182,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -213,7 +214,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "16*sizeof(real)",
      "definition": 64
     },
     {
@@ -222,7 +223,7 @@
     }
    ]
   },
-  "mass_point_block": {
+  "mass_point_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
@@ -231,8 +232,9 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
-     "name": "powered mass point"
+     "type": "short_block_index",
+     "name": "powered mass point",
+     "definition": "powered_mass_point_block"
     },
     {
      "type": "short_integer",
@@ -241,7 +243,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real",
@@ -274,11 +276,11 @@
     {
      "type": "short_enum",
      "name": "friction type",
-     "definition": "friction_type_enum"
+     "definition": "friction type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -295,7 +297,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "5*sizeof(real)",
      "definition": 20
     },
     {
@@ -305,9 +307,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "ground friction",
     "water friction",
@@ -319,12 +320,12 @@
     "gets damage from region"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "metallic"
    ]
   },
-  "friction_type_enum": {
+  "friction type": {
    "options": [
     "point",
     "forward",
@@ -332,9 +333,5 @@
     "up"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

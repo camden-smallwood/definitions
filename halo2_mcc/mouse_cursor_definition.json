@@ -2,18 +2,19 @@
  "name": "mouse_cursor_definition",
  "tag": "mcsr",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "mouse_cursor_definition_block",
  "blocks": {
-  "mouse_cursor_bitmap_reference_block_2": {
+  "mouse_cursor_bitmap_reference_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "mouse_cursor_bitmap_reference_block"
+   "struct": "mouse_cursor_bitmap_reference_block_struct",
+   "max_count_string": "k_maximum_cursor_bitmaps"
   },
   "mouse_cursor_definition_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "mouse_cursor_definition_block_struct"
+   "struct": "mouse_cursor_definition_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,7 +25,7 @@
     {
      "type": "block",
      "name": "mouse cursor bitmaps",
-     "definition": "mouse_cursor_bitmap_reference_block_2"
+     "definition": "mouse_cursor_bitmap_reference_block"
     },
     {
      "type": "real",
@@ -36,7 +37,7 @@
     }
    ]
   },
-  "mouse_cursor_bitmap_reference_block": {
+  "mouse_cursor_bitmap_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -50,11 +51,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

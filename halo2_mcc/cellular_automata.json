@@ -2,13 +2,14 @@
  "name": "cellular_automata",
  "tag": "devo",
  "version": 2,
- "flags": 0,
+ "flags": 32,
+ "parent_tag": null,
  "block": "cellular_automata_block",
  "blocks": {
   "cellular_automata_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "cellular_automata_block_struct"
+   "struct": "cellular_automata_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -46,7 +47,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -59,7 +60,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -72,7 +73,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -85,7 +86,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -98,7 +99,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -111,7 +112,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -120,7 +121,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -129,7 +130,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -138,7 +139,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -147,7 +148,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "60*sizeof(long)",
      "definition": 240
     },
     {
@@ -156,11 +157,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

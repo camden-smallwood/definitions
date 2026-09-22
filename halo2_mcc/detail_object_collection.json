@@ -2,18 +2,19 @@
  "name": "detail_object_collection",
  "tag": "dobc",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "detail_object_collection_block",
  "blocks": {
-  "detail_object_type_block_2": {
+  "detail_object_type_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "detail_object_type_block"
+   "struct": "detail_object_type_block_struct",
+   "max_count_string": "MAXIMUM_DETAIL_OBJECT_TYPES_PER_COLLECTION"
   },
   "detail_object_collection_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "detail_object_collection_block_struct"
+   "struct": "detail_object_collection_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,11 +25,11 @@
     {
      "type": "short_enum",
      "name": "collection type",
-     "definition": "collection_type_enum"
+     "definition": "collection type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -37,7 +38,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*11",
      "definition": 44
     },
     {
@@ -47,11 +48,11 @@
     {
      "type": "block",
      "name": "types",
-     "definition": "detail_object_type_block_2"
+     "definition": "detail_object_type_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*12",
      "definition": 48
     },
     {
@@ -60,7 +61,7 @@
     }
    ]
   },
-  "detail_object_type_block": {
+  "detail_object_type_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 96,
    "fields": [
@@ -75,11 +76,11 @@
     {
      "type": "byte_flags",
      "name": "type flags",
-     "definition": "type_flags_flags"
+     "definition": "type flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(byte)*2",
      "definition": 2
     },
     {
@@ -88,7 +89,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*2",
      "definition": 8
     },
     {
@@ -105,7 +106,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -122,7 +123,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*1",
      "definition": 4
     },
     {
@@ -132,15 +133,14 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "collection_type_enum": {
+  "collection type": {
    "options": [
     "screen-facing",
     "viewer-facing"
    ]
   },
-  "type_flags_flags": {
+  "type flags": {
    "options": [
     "unused",
     "unused",
@@ -148,9 +148,5 @@
     "...more colors"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

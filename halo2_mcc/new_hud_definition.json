@@ -2,48 +2,44 @@
  "name": "new_hud_definition",
  "tag": "nhdt",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "new_hud_definition_block",
  "blocks": {
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "hud_widget_effect_block_2": {
+  "hud_widget_effect_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "hud_widget_effect_block"
+   "struct": "hud_widget_effect_block_struct",
+   "max_count_string": "1"
   },
-  "hud_bitmap_widgets_2": {
+  "hud_bitmap_widgets": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "hud_bitmap_widgets"
+   "struct": "hud_bitmap_widgets_struct",
+   "max_count_string": "k_maximum_hud_bitmap_widgets_per_tag"
   },
-  "hud_widget_effect_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "hud_widget_effect_block"
-  },
-  "hud_text_widgets_2": {
+  "hud_text_widgets": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "hud_text_widgets"
+   "struct": "hud_text_widgets_struct",
+   "max_count_string": "k_maximum_hud_text_widgets_per_tag"
   },
-  "hud_screen_effect_widgets_2": {
+  "hud_screen_effect_widgets": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "hud_screen_effect_widgets"
+   "struct": "hud_screen_effect_widgets_struct",
+   "max_count_string": "k_maximum_hud_screen_effect_widgets_per_tag"
   },
   "new_hud_definition_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "new_hud_definition_block_struct"
+   "struct": "new_hud_definition_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -58,22 +54,22 @@
     {
      "type": "block",
      "name": "bitmap widgets",
-     "definition": "hud_bitmap_widgets_2"
+     "definition": "hud_bitmap_widgets"
     },
     {
      "type": "block",
      "name": "text widgets",
-     "definition": "hud_text_widgets_2"
+     "definition": "hud_text_widgets"
     },
     {
      "type": "struct",
      "name": "dashlight data",
-     "definition": "new_hud_dashlight_data_struct"
+     "definition": "new_hud_dashlight_data_struct_2"
     },
     {
      "type": "block",
      "name": "screen effect widgets",
-     "definition": "hud_screen_effect_widgets_2"
+     "definition": "hud_screen_effect_widgets"
     },
     {
      "type": "terminator",
@@ -81,7 +77,7 @@
     }
    ]
   },
-  "hud_bitmap_widgets": {
+  "hud_bitmap_widgets_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 120,
    "fields": [
@@ -92,22 +88,22 @@
     {
      "type": "struct",
      "name": null,
-     "definition": "hud_widget_inputs_struct"
+     "definition": "hud_widget_inputs_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "hud_widget_state_definition_struct"
+     "definition": "hud_widget_state_definition_struct_2"
     },
     {
      "type": "short_enum",
      "name": "anchor",
-     "definition": "anchor_enum"
+     "definition": "anchor"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "tag_reference",
@@ -131,7 +127,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(byte)",
      "definition": 1
     },
     {
@@ -161,16 +157,16 @@
     {
      "type": "block",
      "name": "effect",
-     "definition": "hud_widget_effect_block_2"
+     "definition": "hud_widget_effect_block"
     },
     {
      "type": "short_enum",
      "name": "special hud type",
-     "definition": "special_hud_type_enum"
+     "definition": "special hud type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -190,29 +186,29 @@
    ],
    "tag": "hwis"
   },
-  "hud_widget_inputs_struct": {
+  "hud_widget_inputs_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
     {
      "type": "char_enum",
      "name": "input 1",
-     "definition": "input_1_enum"
+     "definition": "input 1"
     },
     {
      "type": "char_enum",
      "name": "input 2",
-     "definition": "input_1_enum"
+     "definition": "input 1"
     },
     {
      "type": "char_enum",
      "name": "input 3",
-     "definition": "input_1_enum"
+     "definition": "input 1"
     },
     {
      "type": "char_enum",
      "name": "input 4",
-     "definition": "input_1_enum"
+     "definition": "input 1"
     },
     {
      "type": "terminator",
@@ -221,29 +217,29 @@
    ],
    "tag": "hwis"
   },
-  "hud_widget_state_definition_struct": {
+  "hud_widget_state_definition_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "word_flags",
      "name": "[Y] unit flags",
-     "definition": "y_unit_flags_flags"
+     "definition": "[Y] unit flags"
     },
     {
      "type": "word_flags",
      "name": "[Y] extra flags",
-     "definition": "y_extra_flags_flags"
+     "definition": "[Y] extra flags"
     },
     {
      "type": "word_flags",
      "name": "[Y] weapon flags",
-     "definition": "y_weapon_flags_flags"
+     "definition": "[Y] weapon flags"
     },
     {
      "type": "word_flags",
      "name": "[Y] game engine state flags",
-     "definition": "y_game_engine_state_flags_flags"
+     "definition": "[Y] game engine state flags"
     },
     {
      "type": "useless_pad",
@@ -253,22 +249,22 @@
     {
      "type": "word_flags",
      "name": "[N] unit flags",
-     "definition": "y_unit_flags_flags"
+     "definition": "[Y] unit flags"
     },
     {
      "type": "word_flags",
      "name": "[N] extra flags",
-     "definition": "y_extra_flags_flags"
+     "definition": "[Y] extra flags"
     },
     {
      "type": "word_flags",
      "name": "[N] weapon flags",
-     "definition": "y_weapon_flags_flags"
+     "definition": "[Y] weapon flags"
     },
     {
      "type": "word_flags",
      "name": "[N] game engine state flags",
-     "definition": "y_game_engine_state_flags_flags"
+     "definition": "[Y] game engine state flags"
     },
     {
      "type": "useless_pad",
@@ -289,7 +285,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(byte)",
      "definition": 1
     },
     {
@@ -299,44 +295,44 @@
    ],
    "tag": "hwsd"
   },
-  "hud_widget_effect_block": {
+  "hud_widget_effect_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 124,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "struct",
      "name": "your mom",
-     "definition": "hud_widget_effect_function_struct"
+     "definition": "hud_widget_effect_function_struct_2"
     },
     {
      "type": "struct",
      "name": "your mom",
-     "definition": "hud_widget_effect_function_struct"
+     "definition": "hud_widget_effect_function_struct_2"
     },
     {
      "type": "struct",
      "name": "your mom",
-     "definition": "hud_widget_effect_function_struct"
+     "definition": "hud_widget_effect_function_struct_2"
     },
     {
      "type": "struct",
      "name": "your mom",
-     "definition": "hud_widget_effect_function_struct"
+     "definition": "hud_widget_effect_function_struct_2"
     },
     {
      "type": "struct",
      "name": "your mom",
-     "definition": "hud_widget_effect_function_struct"
+     "definition": "hud_widget_effect_function_struct_2"
     },
     {
      "type": "terminator",
@@ -344,7 +340,7 @@
     }
    ]
   },
-  "hud_widget_effect_function_struct": {
+  "hud_widget_effect_function_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -363,7 +359,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "terminator",
@@ -372,7 +368,7 @@
    ],
    "tag": "hwef"
   },
-  "scalar_function_struct": {
+  "scalar_function_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -383,7 +379,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -407,7 +403,7 @@
     {
      "type": "byte_flags",
      "name": "Flags",
-     "definition": "flags_flags_3"
+     "definition": "Flags"
     },
     {
      "type": "char_integer",
@@ -436,7 +432,7 @@
     {
      "type": "block",
      "name": "Values",
-     "definition": "real_block_2"
+     "definition": "real_block"
     },
     {
      "type": "custom",
@@ -449,7 +445,7 @@
    ],
    "tag": "MAPP"
   },
-  "real_block": {
+  "real_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -463,7 +459,7 @@
     }
    ]
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -474,7 +470,7 @@
     {
      "type": "block",
      "name": "data",
-     "definition": "byte_block_2"
+     "definition": "byte_block"
     },
     {
      "type": "custom",
@@ -487,7 +483,7 @@
    ],
    "tag": "MAPP"
   },
-  "byte_block": {
+  "byte_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -501,7 +497,7 @@
     }
    ]
   },
-  "hud_text_widgets": {
+  "hud_text_widgets_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 96,
    "fields": [
@@ -512,22 +508,22 @@
     {
      "type": "struct",
      "name": null,
-     "definition": "hud_widget_inputs_struct"
+     "definition": "hud_widget_inputs_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "hud_widget_state_definition_struct"
+     "definition": "hud_widget_state_definition_struct_2"
     },
     {
      "type": "short_enum",
      "name": "anchor",
-     "definition": "anchor_enum"
+     "definition": "anchor"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_3"
     },
     {
      "type": "tag_reference",
@@ -540,11 +536,11 @@
     {
      "type": "short_enum",
      "name": "justification",
-     "definition": "justification_enum"
+     "definition": "justification"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -555,21 +551,21 @@
     {
      "type": "char_enum",
      "name": "fullscreen font index",
-     "definition": "fullscreen_font_index_enum"
+     "definition": "fullscreen font index"
     },
     {
      "type": "char_enum",
      "name": "halfscreen font index",
-     "definition": "fullscreen_font_index_enum"
+     "definition": "fullscreen font index"
     },
     {
      "type": "char_enum",
      "name": "quarterscreen font index",
-     "definition": "fullscreen_font_index_enum"
+     "definition": "fullscreen font index"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(byte)",
      "definition": 1
     },
     {
@@ -599,7 +595,7 @@
     {
      "type": "block",
      "name": "effect",
-     "definition": "hud_widget_effect_block_3"
+     "definition": "hud_widget_effect_block"
     },
     {
      "type": "terminator",
@@ -607,7 +603,7 @@
     }
    ]
   },
-  "new_hud_dashlight_data_struct": {
+  "new_hud_dashlight_data_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -630,7 +626,7 @@
    ],
    "tag": "nhd2"
   },
-  "hud_screen_effect_widgets": {
+  "hud_screen_effect_widgets_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 112,
    "fields": [
@@ -641,22 +637,22 @@
     {
      "type": "struct",
      "name": null,
-     "definition": "hud_widget_inputs_struct"
+     "definition": "hud_widget_inputs_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "hud_widget_state_definition_struct"
+     "definition": "hud_widget_state_definition_struct_2"
     },
     {
      "type": "short_enum",
      "name": "anchor",
-     "definition": "anchor_enum"
+     "definition": "anchor"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_5"
+     "definition": "flags_4"
     },
     {
      "type": "tag_reference",
@@ -669,7 +665,7 @@
     {
      "type": "struct",
      "name": "waa",
-     "definition": "screen_effect_bonus_struct"
+     "definition": "screen_effect_bonus_struct_2"
     },
     {
      "type": "char_integer",
@@ -685,7 +681,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(byte)",
      "definition": 1
     },
     {
@@ -717,7 +713,7 @@
    ],
    "tag": "sebs"
   },
-  "screen_effect_bonus_struct": {
+  "screen_effect_bonus_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -737,9 +733,8 @@
    "tag": "sebs"
   }
  },
- "arrays": {},
  "enums_flags": {
-  "input_1_enum": {
+  "input 1": {
    "options": [
     "BASIC zero",
     "BASIC one",
@@ -824,7 +819,7 @@
     "..."
    ]
   },
-  "y_unit_flags_flags": {
+  "[Y] unit flags": {
    "options": [
     "default",
     "grenade type is NONE",
@@ -842,7 +837,7 @@
     "dervish"
    ]
   },
-  "y_extra_flags_flags": {
+  "[Y] extra flags": {
    "options": [
     "autoaim-friendly",
     "autoaim-plasma",
@@ -851,7 +846,7 @@
     "autoaim-invincible"
    ]
   },
-  "y_weapon_flags_flags": {
+  "[Y] weapon flags": {
    "options": [
     "primary weapon",
     "secondary weapon",
@@ -866,7 +861,7 @@
     "locked"
    ]
   },
-  "y_game_engine_state_flags_flags": {
+  "[Y] game engine state flags": {
    "options": [
     "campaign solo",
     "campaign coop",
@@ -882,7 +877,7 @@
     "player talking"
    ]
   },
-  "anchor_enum": {
+  "anchor": {
    "options": [
     "health and shield",
     "weapon hud",
@@ -896,7 +891,7 @@
     "right center"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "flip horizontally",
     "flip vertically",
@@ -905,14 +900,14 @@
     "(scope) stretch"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "apply scale",
     "apply theta",
     "apply offset"
    ]
   },
-  "flags_flags_3": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -924,7 +919,7 @@
     "Color Bit 3"
    ]
   },
-  "special_hud_type_enum": {
+  "special hud type": {
    "options": [
     "unspecial",
     "s.b. player emblem",
@@ -936,7 +931,7 @@
     "territory meter"
    ]
   },
-  "flags_flags_4": {
+  "flags_3": {
    "options": [
     "string is a number",
     "force 2-digit number",
@@ -944,40 +939,37 @@
     "talking player hack"
    ]
   },
-  "justification_enum": {
+  "justification": {
    "options": [
     "left",
     "center",
     "right"
    ]
   },
-  "fullscreen_font_index_enum": {
+  "fullscreen font index": {
    "options": [
     "default",
     "number font"
    ]
   },
-  "flags_flags_5": {
+  "flags_4": {
    "options": [
     "unused"
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "hud_widget_inputs_struct": {
+  "hud_widget_inputs_struct_2": {
    "0": "hud_widget_inputs_struct__v0",
-   "1": "hud_widget_inputs_struct"
+   "1": "hud_widget_inputs_struct_2"
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   },
-  "screen_effect_bonus_struct": {
+  "screen_effect_bonus_struct_2": {
    "0": "screen_effect_bonus_struct__v0",
-   "1": "screen_effect_bonus_struct"
+   "1": "screen_effect_bonus_struct_2"
   }
  }
 }

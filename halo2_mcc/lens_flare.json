@@ -2,43 +2,39 @@
  "name": "lens_flare",
  "tag": "lens",
  "version": 2,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "lens_flare_block",
  "blocks": {
-  "lens_flare_reflection_block_2": {
+  "lens_flare_reflection_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "lens_flare_reflection_block"
+   "struct": "lens_flare_reflection_block_struct",
+   "max_count_string": "k_maximum_reflections_per_lens_flare"
   },
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "lens_flare_scalar_animation_block_2": {
+  "lens_flare_scalar_animation_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "lens_flare_scalar_animation_block"
+   "struct": "lens_flare_scalar_animation_block_struct",
+   "max_count_string": "1"
   },
-  "lens_flare_color_animation_block_2": {
+  "lens_flare_color_animation_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "lens_flare_color_animation_block"
-  },
-  "lens_flare_scalar_animation_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "lens_flare_scalar_animation_block"
+   "struct": "lens_flare_color_animation_block_struct",
+   "max_count_string": "1"
   },
   "lens_flare_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "lens_flare_block_struct"
+   "struct": "lens_flare_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -56,12 +52,12 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -71,12 +67,12 @@
     {
      "type": "short_enum",
      "name": "occlusion offset direction",
-     "definition": "occlusion_offset_direction_enum"
+     "definition": "occlusion offset direction"
     },
     {
      "type": "short_enum",
      "name": "occlusion inner radius scale",
-     "definition": "occlusion_inner_radius_scale_enum"
+     "definition": "occlusion inner radius scale"
     },
     {
      "type": "real",
@@ -93,11 +89,11 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -108,11 +104,11 @@
     {
      "type": "short_enum",
      "name": "rotation function",
-     "definition": "rotation_function_enum"
+     "definition": "rotation function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -131,11 +127,11 @@
     {
      "type": "short_enum",
      "name": "falloff function",
-     "definition": "falloff_function_enum"
+     "definition": "falloff function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -146,32 +142,32 @@
     {
      "type": "block",
      "name": "reflections",
-     "definition": "lens_flare_reflection_block_2"
+     "definition": "lens_flare_reflection_block"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "brightness",
-     "definition": "lens_flare_scalar_animation_block_2"
+     "definition": "lens_flare_scalar_animation_block"
     },
     {
      "type": "block",
      "name": "color",
-     "definition": "lens_flare_color_animation_block_2"
+     "definition": "lens_flare_color_animation_block"
     },
     {
      "type": "block",
      "name": "rotation",
-     "definition": "lens_flare_scalar_animation_block_3"
+     "definition": "lens_flare_scalar_animation_block"
     },
     {
      "type": "useless_pad",
@@ -184,18 +180,18 @@
     }
    ]
   },
-  "lens_flare_reflection_block": {
+  "lens_flare_reflection_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -204,7 +200,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -262,14 +258,14 @@
     }
    ]
   },
-  "lens_flare_scalar_animation_block": {
+  "lens_flare_scalar_animation_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
     {
      "type": "struct",
      "name": "function",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "terminator",
@@ -277,7 +273,7 @@
     }
    ]
   },
-  "scalar_function_struct": {
+  "scalar_function_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -288,7 +284,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -312,7 +308,7 @@
     {
      "type": "byte_flags",
      "name": "Flags",
-     "definition": "flags_flags_4"
+     "definition": "Flags"
     },
     {
      "type": "char_integer",
@@ -341,7 +337,7 @@
     {
      "type": "block",
      "name": "Values",
-     "definition": "real_block_2"
+     "definition": "real_block"
     },
     {
      "type": "custom",
@@ -354,7 +350,7 @@
    ],
    "tag": "MAPP"
   },
-  "real_block": {
+  "real_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -368,7 +364,7 @@
     }
    ]
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -379,7 +375,7 @@
     {
      "type": "block",
      "name": "data",
-     "definition": "byte_block_2"
+     "definition": "byte_block"
     },
     {
      "type": "custom",
@@ -392,7 +388,7 @@
    ],
    "tag": "MAPP"
   },
-  "byte_block": {
+  "byte_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -406,14 +402,14 @@
     }
    ]
   },
-  "lens_flare_color_animation_block": {
+  "lens_flare_color_animation_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
     {
      "type": "struct",
      "name": "function",
-     "definition": "color_function_struct"
+     "definition": "color_function_struct_2"
     },
     {
      "type": "terminator",
@@ -421,7 +417,7 @@
     }
    ]
   },
-  "color_function_struct": {
+  "color_function_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -432,7 +428,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -442,16 +438,15 @@
    "tag": "CLFN"
   }
  },
- "arrays": {},
  "enums_flags": {
-  "occlusion_offset_direction_enum": {
+  "occlusion offset direction": {
    "options": [
     "toward viewer",
     "marker forward",
     "none"
    ]
   },
-  "occlusion_inner_radius_scale_enum": {
+  "occlusion inner radius scale": {
    "options": [
     "none",
     "1/2",
@@ -462,7 +457,7 @@
     "1/64"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "sun",
     "no occlusion test",
@@ -473,7 +468,7 @@
     "scale by marker"
    ]
   },
-  "rotation_function_enum": {
+  "rotation function": {
    "options": [
     "none",
     "rotation A",
@@ -482,7 +477,7 @@
     "translation"
    ]
   },
-  "falloff_function_enum": {
+  "falloff function": {
    "options": [
     "linear",
     "late",
@@ -494,7 +489,7 @@
     "one"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "align rotation with screen center",
     "radius NOT scaled by distance",
@@ -504,12 +499,12 @@
     "not affected by inner occlusion"
    ]
   },
-  "flags_flags_3": {
+  "flags_3": {
    "options": [
     "synchronized"
    ]
   },
-  "flags_flags_4": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -522,13 +517,10 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   }
  }
 }

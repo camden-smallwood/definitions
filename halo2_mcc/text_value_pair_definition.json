@@ -2,18 +2,19 @@
  "name": "text_value_pair_definition",
  "tag": "sily",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "text_value_pair_definition_block",
  "blocks": {
-  "text_value_pair_reference_block_2": {
+  "text_value_pair_reference_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "text_value_pair_reference_block"
+   "struct": "text_value_pair_reference_block_struct",
+   "max_count_string": "k_maximum_text_value_pairs_new_per_block"
   },
   "text_value_pair_definition_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "text_value_pair_definition_block_struct"
+   "struct": "text_value_pair_definition_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,11 +25,11 @@
     {
      "type": "long_enum",
      "name": "parameter",
-     "definition": "parameter_enum"
+     "definition": "parameter"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -50,7 +51,7 @@
     {
      "type": "block",
      "name": "text value pairs",
-     "definition": "text_value_pair_reference_block_2"
+     "definition": "text_value_pair_reference_block"
     },
     {
      "type": "terminator",
@@ -58,14 +59,14 @@
     }
    ]
   },
-  "text_value_pair_reference_block": {
+  "text_value_pair_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "long_integer",
@@ -82,9 +83,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "parameter_enum": {
+  "parameter": {
    "options": [
     "match round setting",
     "match ctf score to win",
@@ -246,14 +246,10 @@
     "ctf flag shows player emblem"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "default setting"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

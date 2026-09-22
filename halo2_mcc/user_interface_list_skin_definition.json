@@ -2,43 +2,44 @@
  "name": "user_interface_list_skin_definition",
  "tag": "skin",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "user_interface_list_skin_definition_block",
  "blocks": {
-  "screen_animation_keyframe_reference_block_2": {
+  "screen_animation_keyframe_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "screen_animation_keyframe_reference_block"
+   "struct": "screen_animation_keyframe_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_animation_keyframe_blocks"
   },
-  "single_animation_reference_block_2": {
+  "single_animation_reference_block": {
    "max_count": 7,
-   "max_count_string": "7",
-   "struct": "single_animation_reference_block"
+   "struct": "single_animation_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_single_animations"
   },
-  "text_block_reference_block_2": {
+  "text_block_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "text_block_reference_block"
+   "struct": "text_block_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_text_blocks"
   },
-  "bitmap_block_reference_block_2": {
+  "bitmap_block_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "bitmap_block_reference_block"
+   "struct": "bitmap_block_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_bitmap_blocks"
   },
-  "hud_block_reference_block_2": {
+  "hud_block_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "hud_block_reference_block"
+   "struct": "hud_block_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_hud_blocks"
   },
-  "player_block_reference_block_2": {
+  "player_block_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "player_block_reference_block"
+   "struct": "player_block_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_player_blocks"
   },
   "user_interface_list_skin_definition_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "user_interface_list_skin_definition_block_struct"
+   "struct": "user_interface_list_skin_definition_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -49,7 +50,7 @@
     {
      "type": "long_flags",
      "name": "list flags",
-     "definition": "list_flags_flags"
+     "definition": "list flags"
     },
     {
      "type": "useless_pad",
@@ -76,27 +77,27 @@
     {
      "type": "block",
      "name": "item animations",
-     "definition": "single_animation_reference_block_2"
+     "definition": "single_animation_reference_block"
     },
     {
      "type": "block",
      "name": "text blocks",
-     "definition": "text_block_reference_block_2"
+     "definition": "text_block_reference_block"
     },
     {
      "type": "block",
      "name": "bitmap blocks",
-     "definition": "bitmap_block_reference_block_2"
+     "definition": "bitmap_block_reference_block"
     },
     {
      "type": "block",
      "name": "hud blocks",
-     "definition": "hud_block_reference_block_2"
+     "definition": "hud_block_reference_block"
     },
     {
      "type": "block",
      "name": "player blocks",
-     "definition": "player_block_reference_block_2"
+     "definition": "player_block_reference_block"
     },
     {
      "type": "terminator",
@@ -104,14 +105,14 @@
     }
    ]
   },
-  "single_animation_reference_block": {
+  "single_animation_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "list_flags_flags"
+     "definition": "flags"
     },
     {
      "type": "long_integer",
@@ -120,7 +121,7 @@
     {
      "type": "block",
      "name": "keyframes",
-     "definition": "screen_animation_keyframe_reference_block_2"
+     "definition": "screen_animation_keyframe_reference_block"
     },
     {
      "type": "terminator",
@@ -128,13 +129,13 @@
     }
    ]
   },
-  "screen_animation_keyframe_reference_block": {
+  "screen_animation_keyframe_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -151,19 +152,19 @@
     }
    ]
   },
-  "text_block_reference_block": {
+  "text_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
     {
      "type": "long_flags",
      "name": "text flags",
-     "definition": "text_flags_flags"
+     "definition": "text flags"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -171,13 +172,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "custom font",
-     "definition": "custom_font_enum"
+     "definition": "custom font"
     },
     {
      "type": "real_argb_color",
@@ -197,7 +198,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -206,19 +207,19 @@
     }
    ]
   },
-  "bitmap_block_reference_block": {
+  "bitmap_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_2"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -227,7 +228,7 @@
     {
      "type": "short_enum",
      "name": "bitmap blend method",
-     "definition": "bitmap_blend_method_enum"
+     "definition": "bitmap blend method"
     },
     {
      "type": "short_integer",
@@ -255,7 +256,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -300,19 +301,19 @@
     }
    ]
   },
-  "hud_block_reference_block": {
+  "hud_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_3"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -344,13 +345,13 @@
     }
    ]
   },
-  "player_block_reference_block": {
+  "player_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(dword)",
      "definition": 4
     },
     {
@@ -364,7 +365,7 @@
     {
      "type": "char_enum",
      "name": "table order",
-     "definition": "table_order_enum"
+     "definition": "table order"
     },
     {
      "type": "char_integer",
@@ -393,14 +394,18 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "list_flags_flags": {
+  "list flags": {
    "options": [
     "unused"
    ]
   },
-  "text_flags_flags": {
+  "flags": {
+   "options": [
+    "unused"
+   ]
+  },
+  "text flags": {
    "options": [
     "left justify text",
     "right justify text",
@@ -409,7 +414,7 @@
     "small (31 char) buffer"
    ]
   },
-  "animation_index_enum": {
+  "animation index": {
    "options": [
     "NONE",
     "00",
@@ -478,7 +483,7 @@
     "63"
    ]
   },
-  "custom_font_enum": {
+  "custom font": {
    "options": [
     "terminal",
     "body text",
@@ -494,35 +499,31 @@
     "text chat font"
    ]
   },
-  "flags_flags": {
+  "flags_2": {
    "options": [
     "ignore for list skin size calculation",
     "swap on relative list position",
     "render as progress bar"
    ]
   },
-  "bitmap_blend_method_enum": {
+  "bitmap blend method": {
    "options": [
     "standard",
     "multiply",
-    "UNUSED"
+    "UNUSED!"
    ]
   },
-  "flags_flags_2": {
+  "flags_3": {
    "options": [
     "ignore for list skin size",
     "needs valid rank"
    ]
   },
-  "table_order_enum": {
+  "table order": {
    "options": [
     "row major",
     "column major"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

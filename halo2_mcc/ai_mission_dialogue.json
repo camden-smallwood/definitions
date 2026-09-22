@@ -2,23 +2,24 @@
  "name": "ai_mission_dialogue",
  "tag": "mdlg",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "ai_mission_dialogue_block",
  "blocks": {
-  "mission_dialogue_variants_block_2": {
+  "mission_dialogue_variants_block": {
    "max_count": 10,
-   "max_count_string": "10",
-   "struct": "mission_dialogue_variants_block"
+   "struct": "mission_dialogue_variants_block_struct",
+   "max_count_string": "k_max_variants_per_line"
   },
-  "mission_dialogue_lines_block_2": {
+  "mission_dialogue_lines_block": {
    "max_count": 500,
-   "max_count_string": "500",
-   "struct": "mission_dialogue_lines_block"
+   "struct": "mission_dialogue_lines_block_struct",
+   "max_count_string": "k_max_lines_per_scenario"
   },
   "ai_mission_dialogue_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "ai_mission_dialogue_block_struct"
+   "struct": "ai_mission_dialogue_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -29,7 +30,7 @@
     {
      "type": "block",
      "name": "lines",
-     "definition": "mission_dialogue_lines_block_2"
+     "definition": "mission_dialogue_lines_block"
     },
     {
      "type": "terminator",
@@ -37,7 +38,7 @@
     }
    ]
   },
-  "mission_dialogue_lines_block": {
+  "mission_dialogue_lines_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -48,7 +49,7 @@
     {
      "type": "block",
      "name": "variants",
-     "definition": "mission_dialogue_variants_block_2"
+     "definition": "mission_dialogue_variants_block"
     },
     {
      "type": "string_id",
@@ -60,7 +61,7 @@
     }
    ]
   },
-  "mission_dialogue_variants_block": {
+  "mission_dialogue_variants_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -82,11 +83,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

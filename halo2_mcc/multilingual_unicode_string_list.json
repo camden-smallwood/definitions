@@ -2,18 +2,19 @@
  "name": "multilingual_unicode_string_list",
  "tag": "unic",
  "version": 2,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "multilingual_unicode_string_list_block",
  "blocks": {
-  "multilingual_unicode_string_reference_block_2": {
+  "multilingual_unicode_string_reference_block": {
    "max_count": 9216,
-   "max_count_string": "9216",
-   "struct": "multilingual_unicode_string_reference_block"
+   "struct": "multilingual_unicode_string_reference_block_struct",
+   "max_count_string": "k_maximum_multilingual_unicode_strings_per_string_list"
   },
   "multilingual_unicode_string_list_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "multilingual_unicode_string_list_block_struct"
+   "struct": "multilingual_unicode_string_list_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,16 +25,16 @@
     {
      "type": "block",
      "name": "string references",
-     "definition": "multilingual_unicode_string_reference_block_2"
+     "definition": "multilingual_unicode_string_reference_block"
     },
     {
      "type": "data",
      "name": "string data utf8",
-     "definition": "string_data_utf8_data"
+     "definition": "utf8_string_data"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_language_count * sizeof(s_language_pack_offsets)",
      "definition": 36
     },
     {
@@ -42,7 +43,7 @@
     }
    ]
   },
-  "multilingual_unicode_string_reference_block": {
+  "multilingual_unicode_string_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -93,17 +94,7 @@
    ]
   }
  },
- "arrays": {},
- "enums_flags": {},
  "datas": {
-  "string_data_utf8_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  }
- },
- "resources": {},
- "interops": {},
- "struct_versions": {}
+  "utf8_string_data": {}
+ }
 }

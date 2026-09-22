@@ -2,223 +2,209 @@
  "name": "particle",
  "tag": "prt3",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "particle_block",
  "blocks": {
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_animation_property_block_2": {
+  "shader_animation_property_block": {
    "max_count": 14,
-   "max_count_string": "14",
-   "struct": "shader_animation_property_block"
+   "struct": "shader_animation_property_block_struct",
+   "max_count_string": "k_number_of_shader_animation_property_types"
   },
-  "global_shader_parameter_block_2": {
+  "global_shader_parameter_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "global_shader_parameter_block"
+   "struct": "global_shader_parameter_block_struct",
+   "max_count_string": "k_maximum_parameters_per_shader"
   },
-  "effect_locations_block_2": {
+  "effect_locations_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "effect_locations_block"
+   "struct": "effect_locations_block_struct",
+   "max_count_string": "k_maximum_effect_locations_count"
   },
-  "particle_system_emitter_definition_block_2": {
+  "particle_system_emitter_definition_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "particle_system_emitter_definition_block"
+   "struct": "particle_system_emitter_definition_block_struct",
+   "max_count_string": "c_particle_system_definition::k_maximum_emitters_per_definition"
   },
-  "particle_system_emitter_definition_block_3": {
-   "max_count": 8,
-   "max_count_string": "8",
-   "struct": "particle_system_emitter_definition_block"
-  },
-  "particle_system_definition_block_new_2": {
+  "particle_system_definition_block_new": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "particle_system_definition_block_new"
+   "struct": "particle_system_definition_block_new_struct",
+   "max_count_string": "c_particle_system_definition::k_maximum_particle_systems_per_block"
   },
-  "shader_postprocess_bitmap_new_block_2": {
+  "shader_postprocess_bitmap_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_bitmap_new_block"
+   "struct": "shader_postprocess_bitmap_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "pixel32_block_2": {
+  "pixel32_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "pixel32_block"
+   "struct": "pixel32_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "real_vector4d_block_2": {
+  "real_vector4d_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "real_vector4d_block"
+   "struct": "real_vector4d_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_postprocess_level_of_detail_new_block_2": {
+  "shader_postprocess_level_of_detail_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_level_of_detail_new_block"
+   "struct": "shader_postprocess_level_of_detail_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "tag_block_index_block_2": {
+  "tag_block_index_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "tag_block_index_block"
+   "struct": "tag_block_index_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "tag_block_index_block_3": {
+  "shader_postprocess_implementation_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "tag_block_index_block"
+   "struct": "shader_postprocess_implementation_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_postprocess_implementation_new_block_2": {
+  "shader_postprocess_overlay_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_implementation_new_block"
+   "struct": "shader_postprocess_overlay_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_postprocess_overlay_new_block_2": {
+  "shader_postprocess_overlay_reference_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_overlay_new_block"
+   "struct": "shader_postprocess_overlay_reference_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_postprocess_overlay_reference_new_block_2": {
+  "shader_postprocess_animated_parameter_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_overlay_reference_new_block"
+   "struct": "shader_postprocess_animated_parameter_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_postprocess_animated_parameter_new_block_2": {
+  "shader_postprocess_animated_parameter_reference_new_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_animated_parameter_new_block"
+   "struct": "shader_postprocess_animated_parameter_reference_new_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "shader_postprocess_animated_parameter_reference_new_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_animated_parameter_reference_new_block"
-  },
-  "shader_postprocess_bitmap_property_block_2": {
+  "shader_postprocess_bitmap_property_block": {
    "max_count": 5,
-   "max_count_string": "5",
-   "struct": "shader_postprocess_bitmap_property_block"
+   "struct": "shader_postprocess_bitmap_property_block_struct",
+   "max_count_string": "k_shader_bitmap_property_count"
   },
-  "shader_postprocess_color_property_block_2": {
+  "shader_postprocess_color_property_block": {
    "max_count": 2,
-   "max_count_string": "2",
-   "struct": "shader_postprocess_color_property_block"
+   "struct": "shader_postprocess_color_property_block_struct",
+   "max_count_string": "k_shader_color_property_count"
   },
-  "shader_postprocess_value_property_block_2": {
+  "shader_postprocess_value_property_block": {
    "max_count": 6,
-   "max_count_string": "6",
-   "struct": "shader_postprocess_value_property_block"
+   "struct": "shader_postprocess_value_property_block_struct",
+   "max_count_string": "k_shader_value_property_count"
   },
-  "shader_postprocess_layer_block_2": {
+  "shader_postprocess_layer_block": {
    "max_count": 25,
-   "max_count_string": "25",
-   "struct": "shader_postprocess_layer_block"
+   "struct": "shader_postprocess_layer_block_struct",
+   "max_count_string": "k_number_of_render_layers"
   },
-  "shader_postprocess_pass_block_2": {
+  "shader_postprocess_pass_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_pass_block"
+   "struct": "shader_postprocess_pass_block_struct",
+   "max_count_string": "k_number_of_shader_passes"
   },
-  "shader_postprocess_implementation_block_2": {
+  "shader_postprocess_implementation_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_implementation_block"
+   "struct": "shader_postprocess_implementation_block_struct",
+   "max_count_string": "k_number_of_shader_implementations"
   },
-  "shader_postprocess_bitmap_block_2": {
+  "shader_postprocess_bitmap_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_bitmap_block"
+   "struct": "shader_postprocess_bitmap_block_struct",
+   "max_count_string": "k_number_of_shader_postprocess_bitmaps"
   },
-  "shader_postprocess_bitmap_transform_block_2": {
+  "shader_postprocess_bitmap_transform_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_bitmap_transform_block"
+   "struct": "shader_postprocess_bitmap_transform_block_struct",
+   "max_count_string": "k_number_of_shader_postprocess_bitmap_transforms"
   },
-  "shader_postprocess_value_block_2": {
+  "shader_postprocess_value_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_value_block"
+   "struct": "shader_postprocess_value_block_struct",
+   "max_count_string": "k_number_of_shader_postprocess_values"
   },
-  "shader_postprocess_color_block_2": {
+  "shader_postprocess_color_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_color_block"
+   "struct": "shader_postprocess_color_block_struct",
+   "max_count_string": "k_number_of_shader_postprocess_colors"
   },
-  "shader_postprocess_bitmap_transform_overlay_block_2": {
+  "shader_postprocess_bitmap_transform_overlay_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_bitmap_transform_overlay_block"
+   "struct": "shader_postprocess_bitmap_transform_overlay_block_struct",
+   "max_count_string": "k_number_of_shader_postprocess_bitmap_transform_overlays"
   },
-  "shader_postprocess_value_overlay_block_2": {
+  "shader_postprocess_value_overlay_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_value_overlay_block"
+   "struct": "shader_postprocess_value_overlay_block_struct",
+   "max_count_string": "k_number_of_shader_postprocess_value_overlays"
   },
-  "shader_postprocess_color_overlay_block_2": {
+  "shader_postprocess_color_overlay_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_color_overlay_block"
+   "struct": "shader_postprocess_color_overlay_block_struct",
+   "max_count_string": "k_number_of_shader_postprocess_color_overlays"
   },
-  "shader_postprocess_vertex_shader_constant_block_2": {
+  "shader_postprocess_vertex_shader_constant_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_vertex_shader_constant_block"
+   "struct": "shader_postprocess_vertex_shader_constant_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "render_state_block_2": {
+  "render_state_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "render_state_block"
+   "struct": "render_state_block_struct",
+   "max_count_string": "k_number_of_render_states"
   },
-  "texture_stage_state_block_2": {
+  "texture_stage_state_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "texture_stage_state_block"
+   "struct": "texture_stage_state_block_struct",
+   "max_count_string": "k_number_of_texture_stage_states"
   },
-  "render_state_parameter_block_2": {
+  "render_state_parameter_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "render_state_parameter_block"
+   "struct": "render_state_parameter_block_struct",
+   "max_count_string": "k_number_of_render_state_parameters"
   },
-  "texture_stage_state_parameter_block_2": {
+  "texture_stage_state_parameter_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "texture_stage_state_parameter_block"
+   "struct": "texture_stage_state_parameter_block_struct",
+   "max_count_string": "k_number_of_texture_stage_state_parameters"
   },
-  "texture_block_2": {
+  "texture_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "texture_block"
+   "struct": "texture_block_struct",
+   "max_count_string": "k_number_of_textures"
   },
-  "vertex_shader_constant_block_2": {
+  "vertex_shader_constant_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "vertex_shader_constant_block"
+   "struct": "vertex_shader_constant_block_struct",
+   "max_count_string": "k_number_of_vertex_shader_constants"
   },
-  "vertex_shader_constant_block_3": {
+  "shader_postprocess_level_of_detail_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "vertex_shader_constant_block"
+   "struct": "shader_postprocess_level_of_detail_block_struct",
+   "max_count_string": "k_number_of_shader_levels_of_detail"
   },
-  "shader_postprocess_level_of_detail_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "shader_postprocess_level_of_detail_block"
-  },
-  "shader_postprocess_definition_new_block_2": {
+  "shader_postprocess_definition_new_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "shader_postprocess_definition_new_block"
+   "struct": "shader_postprocess_definition_new_block_struct",
+   "max_count_string": "k_render_shader_platform_count"
   },
   "particle_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "particle_block_struct"
+   "struct": "particle_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -229,16 +215,16 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_enum",
      "name": "particle billboard style",
-     "definition": "particle_billboard_style_enum"
+     "definition": "particle billboard style"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -264,7 +250,7 @@
     {
      "type": "block",
      "name": "shader parameters",
-     "definition": "global_shader_parameter_block_2"
+     "definition": "global_shader_parameter_block"
     },
     {
      "type": "custom",
@@ -273,27 +259,27 @@
     {
      "type": "struct",
      "name": "color",
-     "definition": "particle_property_color_struct_new"
+     "definition": "particle_property_color_struct_new_2"
     },
     {
      "type": "struct",
      "name": "alpha",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "scale",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "rotation",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "frame index",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "tag_reference",
@@ -306,31 +292,31 @@
     {
      "type": "block",
      "name": "locations",
-     "definition": "effect_locations_block_2"
+     "definition": "effect_locations_block"
     },
     {
      "type": "block",
      "name": "attached particle systems",
-     "definition": "particle_system_definition_block_new_2"
+     "definition": "particle_system_definition_block_new"
     },
     {
      "type": "block",
      "name": null,
-     "definition": "shader_postprocess_definition_new_block_2"
+     "definition": "shader_postprocess_definition_new_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(dword)*2",
      "definition": 8
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_vector4d)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_rectangle2d)",
      "definition": 16
     },
     {
@@ -339,7 +325,7 @@
     }
    ]
   },
-  "global_shader_parameter_block": {
+  "global_shader_parameter_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
@@ -350,11 +336,11 @@
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -372,7 +358,7 @@
     {
      "type": "block",
      "name": "animation properties",
-     "definition": "shader_animation_property_block_2"
+     "definition": "shader_animation_property_block"
     },
     {
      "type": "terminator",
@@ -380,18 +366,18 @@
     }
    ]
   },
-  "shader_animation_property_block": {
+  "shader_animation_property_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum_2"
+     "definition": "type_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -413,7 +399,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -436,7 +422,7 @@
     {
      "type": "byte_flags",
      "name": "Flags",
-     "definition": "flags_flags_2"
+     "definition": "Flags"
     },
     {
      "type": "char_integer",
@@ -465,7 +451,7 @@
     {
      "type": "block",
      "name": "Values",
-     "definition": "real_block_2"
+     "definition": "real_block"
     },
     {
      "type": "custom",
@@ -478,7 +464,7 @@
    ],
    "tag": "MAPP"
   },
-  "real_block": {
+  "real_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -492,7 +478,7 @@
     }
    ]
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -503,7 +489,7 @@
     {
      "type": "block",
      "name": "data",
-     "definition": "byte_block_2"
+     "definition": "byte_block"
     },
     {
      "type": "custom",
@@ -516,7 +502,7 @@
    ],
    "tag": "MAPP"
   },
-  "byte_block": {
+  "byte_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -530,29 +516,29 @@
     }
    ]
   },
-  "particle_property_color_struct_new": {
+  "particle_property_color_struct_new_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "short_enum",
      "name": "Input Variable",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "short_enum",
      "name": "Range Variable",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "short_enum",
      "name": "Output Modifier",
-     "definition": "output_modifier_enum"
+     "definition": "Output Modifier"
     },
     {
      "type": "short_enum",
      "name": "Output Modifier Input",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "custom",
@@ -561,7 +547,7 @@
     {
      "type": "struct",
      "name": "Mapping",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -570,29 +556,29 @@
    ],
    "tag": "PRPC"
   },
-  "particle_property_scalar_struct_new": {
+  "particle_property_scalar_struct_new_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "short_enum",
      "name": "Input Variable",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "short_enum",
      "name": "Range Variable",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "short_enum",
      "name": "Output Modifier",
-     "definition": "output_modifier_enum"
+     "definition": "Output Modifier"
     },
     {
      "type": "short_enum",
      "name": "Output Modifier Input",
-     "definition": "input_variable_enum"
+     "definition": "Input Variable"
     },
     {
      "type": "custom",
@@ -601,7 +587,7 @@
     {
      "type": "struct",
      "name": "Mapping",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -610,7 +596,7 @@
    ],
    "tag": "PRPS"
   },
-  "effect_locations_block": {
+  "effect_locations_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -624,7 +610,7 @@
     }
    ]
   },
-  "particle_system_definition_block_new__v0": {
+  "particle_system_definition_block_new_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
@@ -633,28 +619,29 @@
      "name": "particle"
     },
     {
-     "type": "long_integer",
-     "name": "location"
+     "type": "long_block_index",
+     "name": "location",
+     "definition": "effect_locations_block"
     },
     {
      "type": "short_enum",
      "name": "coordinate system",
-     "definition": "coordinate_system_enum"
+     "definition": "coordinate system"
     },
     {
      "type": "short_enum",
      "name": "environment",
-     "definition": "environment_enum"
+     "definition": "environment"
     },
     {
      "type": "short_enum",
      "name": "disposition",
-     "definition": "disposition_enum"
+     "definition": "disposition"
     },
     {
      "type": "short_enum",
      "name": "camera mode",
-     "definition": "camera_mode_enum"
+     "definition": "camera mode"
     },
     {
      "type": "short_integer",
@@ -663,12 +650,12 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_2"
     },
     {
      "type": "block",
      "name": "emitters",
-     "definition": "particle_system_emitter_definition_block_2"
+     "definition": "particle_system_emitter_definition_block"
     },
     {
      "type": "terminator",
@@ -676,7 +663,7 @@
     }
    ]
   },
-  "particle_system_emitter_definition_block": {
+  "particle_system_emitter_definition_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 228,
    "fields": [
@@ -687,52 +674,52 @@
     {
      "type": "struct",
      "name": "particle emission rate",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle lifespan",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle velocity",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle angular velocity",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle size",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle tint",
-     "definition": "particle_property_color_struct_new"
+     "definition": "particle_property_color_struct_new_2"
     },
     {
      "type": "struct",
      "name": "particle alpha",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "long_enum",
      "name": "emission shape",
-     "definition": "emission_shape_enum"
+     "definition": "emission shape"
     },
     {
      "type": "struct",
      "name": "emission radius",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "struct",
      "name": "emission angle",
-     "definition": "particle_property_scalar_struct_new"
+     "definition": "particle_property_scalar_struct_new_2"
     },
     {
      "type": "real_point_3d",
@@ -744,7 +731,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(dword)*2",
      "definition": 8
     },
     {
@@ -753,7 +740,7 @@
     }
    ]
   },
-  "particle_system_definition_block_new": {
+  "particle_system_definition_block_new_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
@@ -762,28 +749,29 @@
      "name": "particle"
     },
     {
-     "type": "long_integer",
-     "name": "location"
+     "type": "long_block_index",
+     "name": "location",
+     "definition": "effect_locations_block"
     },
     {
      "type": "short_enum",
      "name": "coordinate system",
-     "definition": "coordinate_system_enum"
+     "definition": "coordinate system"
     },
     {
      "type": "short_enum",
      "name": "environment",
-     "definition": "environment_enum"
+     "definition": "environment"
     },
     {
      "type": "short_enum",
      "name": "disposition",
-     "definition": "disposition_enum"
+     "definition": "disposition"
     },
     {
      "type": "short_enum",
      "name": "camera mode",
-     "definition": "camera_mode_enum"
+     "definition": "camera mode"
     },
     {
      "type": "short_integer",
@@ -792,7 +780,7 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_2"
     },
     {
      "type": "real",
@@ -804,7 +792,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -817,13 +805,13 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "block",
      "name": "emitters",
-     "definition": "particle_system_emitter_definition_block_3"
+     "definition": "particle_system_emitter_definition_block"
     },
     {
      "type": "terminator",
@@ -831,7 +819,7 @@
     }
    ]
   },
-  "shader_postprocess_definition_new_block": {
+  "shader_postprocess_definition_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 184,
    "fields": [
@@ -842,77 +830,77 @@
     {
      "type": "block",
      "name": "bitmaps",
-     "definition": "shader_postprocess_bitmap_new_block_2"
+     "definition": "shader_postprocess_bitmap_new_block"
     },
     {
      "type": "block",
      "name": "pixel constants",
-     "definition": "pixel32_block_2"
+     "definition": "pixel32_block"
     },
     {
      "type": "block",
      "name": "vertex constants",
-     "definition": "real_vector4d_block_2"
+     "definition": "real_vector4d_block"
     },
     {
      "type": "block",
      "name": "levels of detail",
-     "definition": "shader_postprocess_level_of_detail_new_block_2"
+     "definition": "shader_postprocess_level_of_detail_new_block"
     },
     {
      "type": "block",
      "name": "layers",
-     "definition": "tag_block_index_block_2"
+     "definition": "tag_block_index_block"
     },
     {
      "type": "block",
      "name": "passes",
-     "definition": "tag_block_index_block_3"
+     "definition": "tag_block_index_block"
     },
     {
      "type": "block",
      "name": "implementations",
-     "definition": "shader_postprocess_implementation_new_block_2"
+     "definition": "shader_postprocess_implementation_new_block"
     },
     {
      "type": "block",
      "name": "overlays",
-     "definition": "shader_postprocess_overlay_new_block_2"
+     "definition": "shader_postprocess_overlay_new_block"
     },
     {
      "type": "block",
      "name": "overlay references",
-     "definition": "shader_postprocess_overlay_reference_new_block_2"
+     "definition": "shader_postprocess_overlay_reference_new_block"
     },
     {
      "type": "block",
      "name": "animated parameters",
-     "definition": "shader_postprocess_animated_parameter_new_block_2"
+     "definition": "shader_postprocess_animated_parameter_new_block"
     },
     {
      "type": "block",
      "name": "animated parameter references",
-     "definition": "shader_postprocess_animated_parameter_reference_new_block_2"
+     "definition": "shader_postprocess_animated_parameter_reference_new_block"
     },
     {
      "type": "block",
      "name": "bitmap properties",
-     "definition": "shader_postprocess_bitmap_property_block_2"
+     "definition": "shader_postprocess_bitmap_property_block"
     },
     {
      "type": "block",
      "name": "color properties",
-     "definition": "shader_postprocess_color_property_block_2"
+     "definition": "shader_postprocess_color_property_block"
     },
     {
      "type": "block",
      "name": "value properties",
-     "definition": "shader_postprocess_value_property_block_2"
+     "definition": "shader_postprocess_value_property_block"
     },
     {
      "type": "block",
      "name": "old levels of detail",
-     "definition": "shader_postprocess_level_of_detail_block_2"
+     "definition": "shader_postprocess_level_of_detail_block"
     },
     {
      "type": "terminator",
@@ -920,7 +908,7 @@
     }
    ]
   },
-  "shader_postprocess_bitmap_new_block": {
+  "shader_postprocess_bitmap_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -942,7 +930,7 @@
     }
    ]
   },
-  "pixel32_block": {
+  "pixel32_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -956,7 +944,7 @@
     }
    ]
   },
-  "real_vector4d_block": {
+  "real_vector4d_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -974,7 +962,7 @@
     }
    ]
   },
-  "shader_postprocess_level_of_detail_new_block": {
+  "shader_postprocess_level_of_detail_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 6,
    "fields": [
@@ -985,7 +973,7 @@
     {
      "type": "struct",
      "name": "layers",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -993,7 +981,7 @@
     }
    ]
   },
-  "tag_block_index_struct": {
+  "tag_block_index_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
@@ -1008,14 +996,14 @@
    ],
    "tag": "shtb"
   },
-  "tag_block_index_block": {
+  "tag_block_index_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
     {
      "type": "struct",
      "name": "indices",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -1023,34 +1011,34 @@
     }
    ]
   },
-  "shader_postprocess_implementation_new_block": {
+  "shader_postprocess_implementation_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 10,
    "fields": [
     {
      "type": "struct",
      "name": "bitmap transforms",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "render states",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "texture states",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "pixel constants",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "vertex constants",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -1058,7 +1046,7 @@
     }
    ]
   },
-  "shader_postprocess_overlay_new_block": {
+  "shader_postprocess_overlay_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -1077,7 +1065,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "terminator",
@@ -1085,7 +1073,7 @@
     }
    ]
   },
-  "scalar_function_struct": {
+  "scalar_function_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -1096,7 +1084,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -1105,7 +1093,7 @@
    ],
    "tag": "SCFN"
   },
-  "shader_postprocess_overlay_reference_new_block": {
+  "shader_postprocess_overlay_reference_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -1123,14 +1111,14 @@
     }
    ]
   },
-  "shader_postprocess_animated_parameter_new_block": {
+  "shader_postprocess_animated_parameter_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
     {
      "type": "struct",
      "name": "overlay references",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -1138,13 +1126,13 @@
     }
    ]
   },
-  "shader_postprocess_animated_parameter_reference_new_block": {
+  "shader_postprocess_animated_parameter_reference_new_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(byte)*3",
      "definition": 3
     },
     {
@@ -1157,7 +1145,7 @@
     }
    ]
   },
-  "shader_postprocess_bitmap_property_block": {
+  "shader_postprocess_bitmap_property_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -1175,7 +1163,7 @@
     }
    ]
   },
-  "shader_postprocess_color_property_block": {
+  "shader_postprocess_color_property_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -1189,7 +1177,7 @@
     }
    ]
   },
-  "shader_postprocess_value_property_block": {
+  "shader_postprocess_value_property_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -1203,7 +1191,7 @@
     }
    ]
   },
-  "shader_postprocess_level_of_detail_block": {
+  "shader_postprocess_level_of_detail_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 224,
    "fields": [
@@ -1218,62 +1206,62 @@
     {
      "type": "block",
      "name": "layers",
-     "definition": "shader_postprocess_layer_block_2"
+     "definition": "shader_postprocess_layer_block"
     },
     {
      "type": "block",
      "name": "passes",
-     "definition": "shader_postprocess_pass_block_2"
+     "definition": "shader_postprocess_pass_block"
     },
     {
      "type": "block",
      "name": "implementations",
-     "definition": "shader_postprocess_implementation_block_2"
+     "definition": "shader_postprocess_implementation_block"
     },
     {
      "type": "block",
      "name": "bitmaps",
-     "definition": "shader_postprocess_bitmap_block_2"
+     "definition": "shader_postprocess_bitmap_block"
     },
     {
      "type": "block",
      "name": "bitmap transforms",
-     "definition": "shader_postprocess_bitmap_transform_block_2"
+     "definition": "shader_postprocess_bitmap_transform_block"
     },
     {
      "type": "block",
      "name": "values",
-     "definition": "shader_postprocess_value_block_2"
+     "definition": "shader_postprocess_value_block"
     },
     {
      "type": "block",
      "name": "colors",
-     "definition": "shader_postprocess_color_block_2"
+     "definition": "shader_postprocess_color_block"
     },
     {
      "type": "block",
      "name": "bitmap transform overlays",
-     "definition": "shader_postprocess_bitmap_transform_overlay_block_2"
+     "definition": "shader_postprocess_bitmap_transform_overlay_block"
     },
     {
      "type": "block",
      "name": "value overlays",
-     "definition": "shader_postprocess_value_overlay_block_2"
+     "definition": "shader_postprocess_value_overlay_block"
     },
     {
      "type": "block",
      "name": "color overlays",
-     "definition": "shader_postprocess_color_overlay_block_2"
+     "definition": "shader_postprocess_color_overlay_block"
     },
     {
      "type": "block",
      "name": "vertex shader constants",
-     "definition": "shader_postprocess_vertex_shader_constant_block_2"
+     "definition": "shader_postprocess_vertex_shader_constant_block"
     },
     {
      "type": "struct",
      "name": "GPU state",
-     "definition": "shader_gpu_state_struct"
+     "definition": "shader_gpu_state_struct_2"
     },
     {
      "type": "terminator",
@@ -1281,14 +1269,14 @@
     }
    ]
   },
-  "shader_postprocess_layer_block": {
+  "shader_postprocess_layer_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
     {
      "type": "struct",
      "name": "passes",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -1296,7 +1284,7 @@
     }
    ]
   },
-  "shader_postprocess_pass_block": {
+  "shader_postprocess_pass_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 18,
    "fields": [
@@ -1307,7 +1295,7 @@
     {
      "type": "struct",
      "name": "implementations",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -1315,59 +1303,59 @@
     }
    ]
   },
-  "shader_postprocess_implementation_block": {
+  "shader_postprocess_implementation_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
     {
      "type": "struct",
      "name": "GPU constant state",
-     "definition": "shader_gpu_state_reference_struct"
+     "definition": "shader_gpu_state_reference_struct_2"
     },
     {
      "type": "struct",
      "name": "GPU volatile state",
-     "definition": "shader_gpu_state_reference_struct"
+     "definition": "shader_gpu_state_reference_struct_2"
     },
     {
      "type": "struct",
      "name": "bitmap parameters",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "bitmap transforms",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "value parameters",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "color parameters",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "bitmap transform overlays",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "value overlays",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "color overlays",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "vertex shader constants",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -1375,44 +1363,44 @@
     }
    ]
   },
-  "shader_gpu_state_reference_struct": {
+  "shader_gpu_state_reference_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 14,
    "fields": [
     {
      "type": "struct",
      "name": "render states",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "texture stage states",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "render state parameters",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "texture stage parameters",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "textures",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "Vn constants",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "struct",
      "name": "Cn constants",
-     "definition": "tag_block_index_struct"
+     "definition": "tag_block_index_struct_2"
     },
     {
      "type": "terminator",
@@ -1421,7 +1409,7 @@
    ],
    "tag": "GPUR"
   },
-  "shader_postprocess_bitmap_block": {
+  "shader_postprocess_bitmap_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 10,
    "fields": [
@@ -1447,7 +1435,7 @@
     }
    ]
   },
-  "shader_postprocess_bitmap_transform_block": {
+  "shader_postprocess_bitmap_transform_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 6,
    "fields": [
@@ -1469,7 +1457,7 @@
     }
    ]
   },
-  "shader_postprocess_value_block": {
+  "shader_postprocess_value_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 5,
    "fields": [
@@ -1487,7 +1475,7 @@
     }
    ]
   },
-  "shader_postprocess_color_block": {
+  "shader_postprocess_color_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 13,
    "fields": [
@@ -1505,7 +1493,7 @@
     }
    ]
   },
-  "shader_postprocess_bitmap_transform_overlay_block": {
+  "shader_postprocess_bitmap_transform_overlay_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 27,
    "fields": [
@@ -1536,7 +1524,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "scalar_function_struct"
+     "definition": "scalar_function_struct_2"
     },
     {
      "type": "terminator",
@@ -1544,7 +1532,7 @@
     }
    ]
   },
-  "shader_postprocess_value_overlay_block": {
+  "shader_postprocess_value_overlay_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 25,
    "fields": [
@@ -1567,7 +1555,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "color_function_struct"
+     "definition": "color_function_struct_2"
     },
     {
      "type": "terminator",
@@ -1575,7 +1563,7 @@
     }
    ]
   },
-  "color_function_struct": {
+  "color_function_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -1586,7 +1574,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -1595,7 +1583,7 @@
    ],
    "tag": "CLFN"
   },
-  "shader_postprocess_color_overlay_block": {
+  "shader_postprocess_color_overlay_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 25,
    "fields": [
@@ -1618,7 +1606,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "color_function_struct"
+     "definition": "color_function_struct_2"
     },
     {
      "type": "terminator",
@@ -1626,7 +1614,7 @@
     }
    ]
   },
-  "shader_postprocess_vertex_shader_constant_block": {
+  "shader_postprocess_vertex_shader_constant_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 18,
    "fields": [
@@ -1660,44 +1648,44 @@
     }
    ]
   },
-  "shader_gpu_state_struct": {
+  "shader_gpu_state_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
     {
      "type": "block",
      "name": "render states",
-     "definition": "render_state_block_2"
+     "definition": "render_state_block"
     },
     {
      "type": "block",
      "name": "texture stage states",
-     "definition": "texture_stage_state_block_2"
+     "definition": "texture_stage_state_block"
     },
     {
      "type": "block",
      "name": "render state parameters",
-     "definition": "render_state_parameter_block_2"
+     "definition": "render_state_parameter_block"
     },
     {
      "type": "block",
      "name": "texture stage parameters",
-     "definition": "texture_stage_state_parameter_block_2"
+     "definition": "texture_stage_state_parameter_block"
     },
     {
      "type": "block",
      "name": "textures",
-     "definition": "texture_block_2"
+     "definition": "texture_block"
     },
     {
      "type": "block",
      "name": "Vn constants",
-     "definition": "vertex_shader_constant_block_2"
+     "definition": "vertex_shader_constant_block"
     },
     {
      "type": "block",
      "name": "Cn constants",
-     "definition": "vertex_shader_constant_block_3"
+     "definition": "vertex_shader_constant_block"
     },
     {
      "type": "terminator",
@@ -1706,7 +1694,7 @@
    ],
    "tag": "GPUS"
   },
-  "render_state_block": {
+  "render_state_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 5,
    "fields": [
@@ -1724,7 +1712,7 @@
     }
    ]
   },
-  "texture_stage_state_block": {
+  "texture_stage_state_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 6,
    "fields": [
@@ -1746,7 +1734,7 @@
     }
    ]
   },
-  "render_state_parameter_block": {
+  "render_state_parameter_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 3,
    "fields": [
@@ -1768,7 +1756,7 @@
     }
    ]
   },
-  "texture_stage_state_parameter_block": {
+  "texture_stage_state_parameter_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -1794,7 +1782,7 @@
     }
    ]
   },
-  "texture_block": {
+  "texture_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -1820,7 +1808,7 @@
     }
    ]
   },
-  "vertex_shader_constant_block": {
+  "vertex_shader_constant_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -1847,9 +1835,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "spins",
     "random u mirror",
@@ -1868,7 +1855,7 @@
     "has sweetener"
    ]
   },
-  "particle_billboard_style_enum": {
+  "particle billboard style": {
    "options": [
     "screen facing",
     "parallel to direction",
@@ -1877,7 +1864,7 @@
     "horizontal"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "bitmap",
     "value",
@@ -1885,7 +1872,7 @@
     "switch"
    ]
   },
-  "type_enum_2": {
+  "type_2": {
    "options": [
     "bitmap scale uniform",
     "bitmap scale x",
@@ -1903,7 +1890,7 @@
     "bitmap index"
    ]
   },
-  "flags_flags_2": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -1915,7 +1902,7 @@
     "Color Bit 3"
    ]
   },
-  "input_variable_enum": {
+  "Input Variable": {
    "options": [
     "particle age",
     "particle emit time",
@@ -1936,21 +1923,21 @@
     "location random"
    ]
   },
-  "output_modifier_enum": {
+  "Output Modifier": {
    "options": [
-    null,
+    " ",
     "Plus",
     "Times"
    ]
   },
-  "coordinate_system_enum": {
+  "coordinate system": {
    "options": [
     "world",
     "local",
     "parent"
    ]
   },
-  "environment_enum": {
+  "environment": {
    "options": [
     "any environment",
     "air only",
@@ -1958,14 +1945,14 @@
     "space only"
    ]
   },
-  "disposition_enum": {
+  "disposition": {
    "options": [
     "either mode",
     "violent mode only",
     "nonviolent mode only"
    ]
   },
-  "camera_mode_enum": {
+  "camera mode": {
    "options": [
     "independent of camera mode",
     "only in first person",
@@ -1973,7 +1960,7 @@
     "both first and third"
    ]
   },
-  "flags_flags_3": {
+  "flags_2": {
    "options": [
     "glow",
     "cinematics",
@@ -1987,7 +1974,7 @@
     "expensive visibility"
    ]
   },
-  "emission_shape_enum": {
+  "emission shape": {
    "options": [
     "sprayer",
     "disc",
@@ -2002,17 +1989,14 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   },
-  "particle_system_definition_block_new": {
-   "0": "particle_system_definition_block_new__v0",
-   "1": "particle_system_definition_block_new"
+  "particle_system_definition_block_new_struct": {
+   "0": "particle_system_definition_block_new_struct__v0",
+   "1": "particle_system_definition_block_new_struct"
   }
  }
 }

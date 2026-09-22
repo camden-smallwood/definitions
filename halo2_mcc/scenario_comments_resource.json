@@ -2,18 +2,19 @@
  "name": "scenario_comments_resource",
  "tag": "/**/",
  "version": 1,
- "flags": 0,
+ "flags": 56,
+ "parent_tag": null,
  "block": "scenario_comments_resource_block",
  "blocks": {
-  "editor_comment_block_2": {
+  "editor_comment_block": {
    "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "editor_comment_block"
+   "struct": "editor_comment_block_struct",
+   "max_count_string": "MAXIMUM_EDITOR_COMMENTS"
   },
   "scenario_comments_resource_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "scenario_comments_resource_block_struct"
+   "struct": "scenario_comments_resource_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,7 +25,7 @@
     {
      "type": "block",
      "name": "comments",
-     "definition": "editor_comment_block_2"
+     "definition": "editor_comment_block"
     },
     {
      "type": "terminator",
@@ -32,7 +33,7 @@
     }
    ]
   },
-  "editor_comment_block": {
+  "editor_comment_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 304,
    "fields": [
@@ -43,7 +44,7 @@
     {
      "type": "long_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "string",
@@ -60,16 +61,11 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "type_enum": {
+  "type": {
    "options": [
     "generic"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

@@ -2,28 +2,29 @@
  "name": "chocolate_mountain",
  "tag": "gldf",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "chocolate_mountain_block",
  "blocks": {
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "lighting_variables_block_2": {
+  "lighting_variables_block": {
    "max_count": 13,
-   "max_count_string": "13",
-   "struct": "lighting_variables_block"
+   "struct": "lighting_variables_block_struct",
+   "max_count_string": "k_object_types_count"
   },
   "chocolate_mountain_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "chocolate_mountain_block_struct"
+   "struct": "chocolate_mountain_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -34,7 +35,7 @@
     {
      "type": "block",
      "name": "lighting variables",
-     "definition": "lighting_variables_block_2"
+     "definition": "lighting_variables_block"
     },
     {
      "type": "terminator",
@@ -42,14 +43,14 @@
     }
    ]
   },
-  "lighting_variables_block": {
+  "lighting_variables_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 160,
    "fields": [
     {
      "type": "long_flags",
      "name": "object affected",
-     "definition": "object_affected_flags"
+     "definition": "object affected"
     },
     {
      "type": "real",
@@ -58,22 +59,22 @@
     {
      "type": "struct",
      "name": "primary light",
-     "definition": "primary_light_struct"
+     "definition": "primary_light_struct_2"
     },
     {
      "type": "struct",
      "name": "secondary light",
-     "definition": "secondary_light_struct"
+     "definition": "secondary_light_struct_2"
     },
     {
      "type": "struct",
      "name": "ambient light",
-     "definition": "ambient_light_struct"
+     "definition": "ambient_light_struct_2"
     },
     {
      "type": "struct",
      "name": "lightmap shadows",
-     "definition": "lightmap_shadows_struct"
+     "definition": "lightmap_shadows_struct_2"
     },
     {
      "type": "terminator",
@@ -81,7 +82,7 @@
     }
    ]
   },
-  "primary_light_struct": {
+  "primary_light_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -104,7 +105,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -128,7 +129,7 @@
     {
      "type": "byte_flags",
      "name": "Flags",
-     "definition": "flags_flags"
+     "definition": "Flags"
     },
     {
      "type": "char_integer",
@@ -157,7 +158,7 @@
     {
      "type": "block",
      "name": "Values",
-     "definition": "real_block_2"
+     "definition": "real_block"
     },
     {
      "type": "custom",
@@ -170,7 +171,7 @@
    ],
    "tag": "MAPP"
   },
-  "real_block": {
+  "real_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -184,7 +185,7 @@
     }
    ]
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -195,7 +196,7 @@
     {
      "type": "block",
      "name": "data",
-     "definition": "byte_block_2"
+     "definition": "byte_block"
     },
     {
      "type": "custom",
@@ -208,7 +209,7 @@
    ],
    "tag": "MAPP"
   },
-  "byte_block": {
+  "byte_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -222,7 +223,7 @@
     }
    ]
   },
-  "secondary_light_struct": {
+  "secondary_light_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
@@ -253,7 +254,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -262,7 +263,7 @@
    ],
    "tag": "scli"
   },
-  "ambient_light_struct": {
+  "ambient_light_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
@@ -281,7 +282,7 @@
     {
      "type": "struct",
      "name": "function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -290,7 +291,7 @@
    ],
    "tag": "amli"
   },
-  "lightmap_shadows_struct": {
+  "lightmap_shadows_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -301,7 +302,7 @@
     {
      "type": "struct",
      "name": "function 1",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -311,9 +312,8 @@
    "tag": "lmsh"
   }
  },
- "arrays": {},
  "enums_flags": {
-  "object_affected_flags": {
+  "object affected": {
    "options": [
     "all",
     "biped",
@@ -331,7 +331,7 @@
     "creature"
    ]
   },
-  "flags_flags": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -344,13 +344,10 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   }
  }
 }

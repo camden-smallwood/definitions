@@ -2,48 +2,49 @@
  "name": "hud_globals",
  "tag": "hudg",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "hud_globals_block",
  "blocks": {
-  "hud_button_icon_block_2": {
+  "hud_button_icon_block": {
    "max_count": 18,
-   "max_count_string": "18",
-   "struct": "hud_button_icon_block"
+   "struct": "hud_button_icon_block_struct",
+   "max_count_string": "NUMBER_OF_GAMEPAD_BUTTONS+NUMBER_OF_GAMEPAD_STICKS"
+  },
+  "hud_waypoint_arrow_block": {
+   "max_count": 16,
+   "struct": "hud_waypoint_arrow_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_WAYPOINTS"
+  },
+  "hud_dashlights_block": {
+   "max_count": 9,
+   "struct": "hud_dashlights_block_struct",
+   "max_count_string": "k_hud_dashlight_count"
   },
   "hud_waypoint_arrow_block_2": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "hud_waypoint_arrow_block"
-  },
-  "hud_dashlights_block_2": {
-   "max_count": 9,
-   "max_count_string": "9",
-   "struct": "hud_dashlights_block"
-  },
-  "hud_waypoint_arrow_block_4": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "hud_waypoint_arrow_block_3"
+   "struct": "hud_waypoint_arrow_block_struct_2",
+   "max_count_string": "k_hud_waypoint_arrow_type_count"
   },
-  "hud_waypoint_block_2": {
+  "hud_waypoint_block": {
    "max_count": 12,
-   "max_count_string": "12",
-   "struct": "hud_waypoint_block"
+   "struct": "hud_waypoint_block_struct",
+   "max_count_string": "k_hud_waypoint_type_count"
   },
-  "new_hud_sound_block_2": {
+  "new_hud_sound_block": {
    "max_count": 6,
-   "max_count_string": "6",
-   "struct": "new_hud_sound_block"
+   "struct": "new_hud_sound_block_struct",
+   "max_count_string": "k_maximum_hud_sounds"
   },
-  "player_training_entry_data_block_2": {
+  "player_training_entry_data_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "player_training_entry_data_block"
+   "struct": "player_training_entry_data_block_struct",
+   "max_count_string": "k_player_training_count"
   },
   "hud_globals_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "hud_globals_block_struct"
+   "struct": "hud_globals_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -54,16 +55,16 @@
     {
      "type": "short_enum",
      "name": "anchor",
-     "definition": "anchor_enum"
+     "definition": "anchor"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*8",
      "definition": 32
     },
     {
@@ -81,16 +82,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -136,7 +137,7 @@
     {
      "type": "block",
      "name": "button icons",
-     "definition": "hud_button_icon_block_2"
+     "definition": "hud_button_icon_block"
     },
     {
      "type": "argb_color",
@@ -161,7 +162,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -173,7 +174,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -203,7 +204,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -239,7 +240,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -249,11 +250,11 @@
     {
      "type": "block",
      "name": "waypoint arrows",
-     "definition": "hud_waypoint_arrow_block_2"
+     "definition": "hud_waypoint_arrow_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "20*sizeof(long)",
      "definition": 80
     },
     {
@@ -262,12 +263,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "64*sizeof(long)",
      "definition": 256
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -288,7 +289,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "11*sizeof(long)",
      "definition": 44
     },
     {
@@ -309,7 +310,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -330,7 +331,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -356,7 +357,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -368,7 +369,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -394,7 +395,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -406,12 +407,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "10*sizeof(long)",
      "definition": 40
     },
     {
@@ -440,13 +441,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "24*sizeof(long)",
      "definition": 96
     },
     {
      "type": "struct",
      "name": "new globals",
-     "definition": "global_new_hud_globals_struct"
+     "definition": "global_new_hud_globals_struct_2"
     },
     {
      "type": "terminator",
@@ -454,7 +455,7 @@
     }
    ]
   },
-  "hud_button_icon_block": {
+  "hud_button_icon_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -481,7 +482,7 @@
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_integer",
@@ -493,7 +494,7 @@
     }
    ]
   },
-  "hud_waypoint_arrow_block": {
+  "hud_waypoint_arrow_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 104,
    "fields": [
@@ -503,7 +504,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -532,22 +533,22 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
@@ -556,7 +557,7 @@
     }
    ]
   },
-  "global_new_hud_globals_struct": {
+  "global_new_hud_globals_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 260,
    "fields": [
@@ -567,32 +568,32 @@
     {
      "type": "block",
      "name": "dashlights",
-     "definition": "hud_dashlights_block_2"
+     "definition": "hud_dashlights_block"
     },
     {
      "type": "block",
      "name": "waypoint arrows",
-     "definition": "hud_waypoint_arrow_block_4"
+     "definition": "hud_waypoint_arrow_block_2"
     },
     {
      "type": "block",
      "name": "waypoints",
-     "definition": "hud_waypoint_block_2"
+     "definition": "hud_waypoint_block"
     },
     {
      "type": "block",
      "name": "hud sounds",
-     "definition": "new_hud_sound_block_2"
+     "definition": "new_hud_sound_block"
     },
     {
      "type": "block",
      "name": "player training data",
-     "definition": "player_training_entry_data_block_2"
+     "definition": "player_training_entry_data_block"
     },
     {
      "type": "struct",
      "name": "constants",
-     "definition": "global_new_hud_globals_constants_struct"
+     "definition": "global_new_hud_globals_constants_struct_2"
     },
     {
      "type": "terminator",
@@ -601,7 +602,7 @@
    ],
    "tag": "nhgs"
   },
-  "hud_dashlights_block": {
+  "hud_dashlights_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
@@ -620,7 +621,7 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "tag_reference",
@@ -632,7 +633,7 @@
     }
    ]
   },
-  "hud_waypoint_arrow_block_3": {
+  "hud_waypoint_arrow_block_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 60,
    "fields": [
@@ -650,7 +651,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -671,7 +672,7 @@
     }
    ]
   },
-  "hud_waypoint_block": {
+  "hud_waypoint_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -697,7 +698,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -706,7 +707,7 @@
     }
    ]
   },
-  "new_hud_sound_block": {
+  "new_hud_sound_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -717,7 +718,7 @@
     {
      "type": "long_flags",
      "name": "latched to",
-     "definition": "latched_to_flags"
+     "definition": "latched to"
     },
     {
      "type": "real",
@@ -733,7 +734,7 @@
     }
    ]
   },
-  "player_training_entry_data_block": {
+  "player_training_entry_data_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
@@ -772,11 +773,11 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_4"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -785,7 +786,7 @@
     }
    ]
   },
-  "global_new_hud_globals_constants_struct": {
+  "global_new_hud_globals_constants_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 184,
    "fields": [
@@ -849,9 +850,8 @@
    "tag": "nhgs"
   }
  },
- "arrays": {},
  "enums_flags": {
-  "anchor_enum": {
+  "anchor": {
    "options": [
     "top left",
     "top right",
@@ -861,35 +861,35 @@
     "crosshair"
    ]
   },
-  "scaling_flags_flags": {
+  "scaling flags": {
    "options": [
     "don't scale offset",
     "don't scale size"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "use text from string_list instead",
     "override default color",
     "width offset is absolute icon width"
    ]
   },
-  "flash_flags_flags": {
+  "flash flags": {
    "options": [
     "reverse default/flashing colors"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "don't rotate when pointing offscreen"
    ]
   },
-  "flags_flags_3": {
+  "flags_3": {
    "options": [
     "don't scale when pulsing"
    ]
   },
-  "latched_to_flags": {
+  "latched to": {
    "options": [
     "shield recharging",
     "shield damaged",
@@ -903,14 +903,10 @@
     "rocket locked"
    ]
   },
-  "flags_flags_4": {
+  "flags_4": {
    "options": [
     "not in multiplayer"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

@@ -2,43 +2,39 @@
  "name": "material_effects",
  "tag": "foot",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "material_effects_block",
  "blocks": {
-  "material_effect_material_block_old_v1_2": {
+  "material_effect_material_block_old_v1": {
    "max_count": 33,
-   "max_count_string": "33",
-   "struct": "material_effect_material_block_old_v1"
+   "struct": "material_effect_material_block_old_v1_struct",
+   "max_count_string": "NUMBER_OF_MATERIAL_TYPES"
   },
-  "material_effect_block_v1_2": {
+  "material_effect_block_v1": {
    "max_count": 14,
-   "max_count_string": "14",
-   "struct": "material_effect_block_v1"
+   "struct": "material_effect_block_v1_struct",
+   "max_count_string": "k_material_effect_v1_type_count"
   },
-  "old_material_effect_material_block_2": {
+  "old_material_effect_material_block": {
    "max_count": 33,
-   "max_count_string": "33",
-   "struct": "old_material_effect_material_block"
+   "struct": "old_material_effect_material_block_struct",
+   "max_count_string": "NUMBER_OF_MATERIAL_TYPES"
   },
-  "material_effect_material_block_2": {
+  "material_effect_material_block": {
    "max_count": 500,
-   "max_count_string": "500",
-   "struct": "material_effect_material_block"
+   "struct": "material_effect_material_block_struct",
+   "max_count_string": "k_maximum_material_effect_blocks"
   },
-  "material_effect_material_block_3": {
-   "max_count": 500,
-   "max_count_string": "500",
-   "struct": "material_effect_material_block"
-  },
-  "material_effect_block_v2_2": {
+  "material_effect_block_v2": {
    "max_count": 21,
-   "max_count_string": "21",
-   "struct": "material_effect_block_v2"
+   "struct": "material_effect_block_v2_struct",
+   "max_count_string": "k_material_effect_type_count"
   },
   "material_effects_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "material_effects_block_struct"
+   "struct": "material_effects_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -49,11 +45,11 @@
     {
      "type": "block",
      "name": "effects",
-     "definition": "material_effect_block_v1_2"
+     "definition": "material_effect_block_v1"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "32*sizeof(long)",
      "definition": 128
     },
     {
@@ -62,18 +58,18 @@
     }
    ]
   },
-  "material_effect_block_v1": {
+  "material_effect_block_v1_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
     {
      "type": "block",
      "name": "materials",
-     "definition": "material_effect_material_block_old_v1_2"
+     "definition": "material_effect_material_block_old_v1"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -82,7 +78,7 @@
     }
    ]
   },
-  "material_effect_material_block_old_v1": {
+  "material_effect_material_block_old_v1_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
@@ -100,22 +96,22 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "char_enum",
      "name": "sweetener mode",
-     "definition": "sweetener_mode_enum"
+     "definition": "sweetener mode"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3",
      "definition": 3
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -131,7 +127,7 @@
     {
      "type": "block",
      "name": "effects",
-     "definition": "material_effect_block_v2_2"
+     "definition": "material_effect_block_v2"
     },
     {
      "type": "useless_pad",
@@ -144,24 +140,24 @@
     }
    ]
   },
-  "material_effect_block_v2": {
+  "material_effect_block_v2_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
      "type": "block",
      "name": "old materials (DO NOT USE)",
-     "definition": "old_material_effect_material_block_2"
+     "definition": "old_material_effect_material_block"
     },
     {
      "type": "block",
      "name": "sounds",
-     "definition": "material_effect_material_block_2"
+     "definition": "material_effect_material_block"
     },
     {
      "type": "block",
      "name": "effects",
-     "definition": "material_effect_material_block_3"
+     "definition": "material_effect_material_block"
     },
     {
      "type": "terminator",
@@ -169,7 +165,7 @@
     }
    ]
   },
-  "old_material_effect_material_block": {
+  "old_material_effect_material_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
@@ -187,17 +183,17 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "char_enum",
      "name": "sweetener mode",
-     "definition": "sweetener_mode_enum"
+     "definition": "sweetener mode"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3",
      "definition": 3
     },
     {
@@ -211,7 +207,7 @@
     }
    ]
   },
-  "material_effect_material_block__v0": {
+  "material_effect_material_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -225,17 +221,17 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "char_enum",
      "name": "sweetener mode",
-     "definition": "sweetener_mode_enum"
+     "definition": "sweetener mode"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1",
      "definition": 1
     },
     {
@@ -244,7 +240,7 @@
     }
    ]
   },
-  "material_effect_material_block": {
+  "material_effect_material_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -262,17 +258,17 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "char_enum",
      "name": "sweetener mode",
-     "definition": "sweetener_mode_enum"
+     "definition": "sweetener mode"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1",
      "definition": 1
     },
     {
@@ -282,9 +278,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "sweetener_mode_enum": {
+  "sweetener mode": {
    "options": [
     "sweetener default",
     "sweetener enabled",
@@ -292,13 +287,10 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "material_effect_material_block": {
-   "0": "material_effect_material_block__v0",
-   "1": "material_effect_material_block"
+  "material_effect_material_block_struct": {
+   "0": "material_effect_material_block_struct__v0",
+   "1": "material_effect_material_block_struct"
   },
   "material_effects_block_struct": {
    "0": "material_effects_block_struct__v0",

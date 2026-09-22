@@ -2,353 +2,149 @@
  "name": "character",
  "tag": "char",
  "version": 1,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "character_block",
  "blocks": {
-  "character_general_block_2": {
+  "character_general_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_general_block"
+   "struct": "character_general_block_struct",
+   "max_count_string": "1"
   },
-  "character_placement_block_2": {
+  "character_placement_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_placement_block"
+   "struct": "character_placement_block_struct",
+   "max_count_string": "1"
   },
-  "character_vitality_block_2": {
+  "character_vitality_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_vitality_block"
+   "struct": "character_vitality_block_struct",
+   "max_count_string": "1"
   },
-  "character_perception_block_2": {
+  "character_perception_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "character_perception_block"
+   "struct": "character_perception_block_struct",
+   "max_count_string": "4"
   },
-  "character_retreat_block_2": {
+  "character_retreat_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_retreat_block"
+   "struct": "character_retreat_block_struct",
+   "max_count_string": "k_style_attitude_count"
   },
-  "character_look_block_2": {
+  "character_look_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_look_block"
+   "struct": "character_look_block_struct",
+   "max_count_string": "1"
   },
-  "character_movement_block_2": {
+  "character_movement_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_movement_block"
+   "struct": "character_movement_block_struct",
+   "max_count_string": "1"
   },
-  "character_engage_block_2": {
+  "character_engage_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_engage_block"
+   "struct": "character_engage_block_struct",
+   "max_count_string": "k_style_attitude_count"
   },
-  "character_evasion_block_2": {
+  "character_evasion_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_evasion_block"
+   "struct": "character_evasion_block_struct",
+   "max_count_string": "k_style_attitude_count"
   },
-  "character_cover_block_2": {
+  "character_cover_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_cover_block"
+   "struct": "character_cover_block_struct",
+   "max_count_string": "k_style_attitude_count"
   },
-  "character_search_block_2": {
+  "character_search_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_search_block"
+   "struct": "character_search_block_struct",
+   "max_count_string": "k_style_attitude_count"
   },
-  "character_presearch_block_2": {
+  "character_presearch_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_presearch_block"
+   "struct": "character_presearch_block_struct",
+   "max_count_string": "k_style_attitude_count"
   },
-  "character_firing_pattern_block_2": {
+  "character_firing_pattern_block": {
    "max_count": 2,
-   "max_count_string": "2",
-   "struct": "character_firing_pattern_block"
+   "struct": "character_firing_pattern_block_struct",
+   "max_count_string": "2"
   },
-  "character_weapons_block_2": {
+  "character_weapons_block": {
    "max_count": 100,
-   "max_count_string": "100",
-   "struct": "character_weapons_block"
+   "struct": "character_weapons_block_struct",
+   "max_count_string": "100"
   },
-  "character_grenades_block_2": {
+  "character_grenades_block": {
    "max_count": 10,
-   "max_count_string": "10",
-   "struct": "character_grenades_block"
+   "struct": "character_grenades_block_struct",
+   "max_count_string": "10"
   },
-  "character_charge_block_2": {
+  "character_charge_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_charge_block"
+   "struct": "character_charge_block_struct",
+   "max_count_string": "k_style_attitude_count"
   },
-  "character_ready_block_2": {
+  "character_ready_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_ready_block"
+   "struct": "character_ready_block_struct",
+   "max_count_string": "k_style_attitude_count"
   },
-  "character_vehicle_block_2": {
+  "character_vehicle_block": {
    "max_count": 100,
-   "max_count_string": "100",
-   "struct": "character_vehicle_block"
+   "struct": "character_vehicle_block_struct",
+   "max_count_string": "100"
   },
-  "character_idle_block_2": {
+  "character_idle_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_idle_block"
+   "struct": "character_idle_block_struct",
+   "max_count_string": "k_style_attitude_count"
   },
-  "character_general_block_3": {
+  "character_swarm_block": {
+   "max_count": 3,
+   "struct": "character_swarm_block_struct",
+   "max_count_string": "k_style_attitude_count"
+  },
+  "character_vocalization_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_general_block"
+   "struct": "character_vocalization_block_struct",
+   "max_count_string": "1"
   },
-  "character_vitality_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_vitality_block"
-  },
-  "character_placement_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_placement_block"
-  },
-  "character_perception_block_3": {
-   "max_count": 4,
-   "max_count_string": "4",
-   "struct": "character_perception_block"
-  },
-  "character_look_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_look_block"
-  },
-  "character_movement_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_movement_block"
-  },
-  "character_swarm_block_2": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_swarm_block"
-  },
-  "character_ready_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_ready_block"
-  },
-  "character_engage_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_engage_block"
-  },
-  "character_charge_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_charge_block"
-  },
-  "character_evasion_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_evasion_block"
-  },
-  "character_cover_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_cover_block"
-  },
-  "character_retreat_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_retreat_block"
-  },
-  "character_search_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_search_block"
-  },
-  "character_presearch_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_presearch_block"
-  },
-  "character_idle_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_idle_block"
-  },
-  "character_vocalization_block_2": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_vocalization_block"
-  },
-  "character_weapons_block_3": {
+  "character_firing_pattern_properties_block": {
    "max_count": 100,
-   "max_count_string": "100",
-   "struct": "character_weapons_block"
+   "struct": "character_firing_pattern_properties_block_struct",
+   "max_count_string": "100"
   },
-  "character_firing_pattern_block_3": {
-   "max_count": 2,
-   "max_count_string": "2",
-   "struct": "character_firing_pattern_block"
-  },
-  "character_firing_pattern_properties_block_2": {
-   "max_count": 100,
-   "max_count_string": "100",
-   "struct": "character_firing_pattern_properties_block"
-  },
-  "character_grenades_block_3": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "character_grenades_block"
-  },
-  "character_vehicle_block_3": {
-   "max_count": 100,
-   "max_count_string": "100",
-   "struct": "character_vehicle_block"
-  },
-  "character_variants_block_2": {
+  "character_variants_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "character_variants_block"
+   "struct": "character_variants_block_struct",
+   "max_count_string": "k_maximum_variants_per_model"
   },
-  "character_general_block_4": {
+  "character_boarding_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_general_block"
+   "struct": "character_boarding_block_struct",
+   "max_count_string": "1"
   },
-  "character_vitality_block_4": {
+  "character_boss_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_vitality_block"
+   "struct": "character_boss_block_struct",
+   "max_count_string": "1"
   },
-  "character_placement_block_4": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_placement_block"
-  },
-  "character_perception_block_4": {
-   "max_count": 4,
-   "max_count_string": "4",
-   "struct": "character_perception_block"
-  },
-  "character_look_block_4": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_look_block"
-  },
-  "character_movement_block_4": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_movement_block"
-  },
-  "character_swarm_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_swarm_block"
-  },
-  "character_ready_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_ready_block"
-  },
-  "character_engage_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_engage_block"
-  },
-  "character_charge_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_charge_block"
-  },
-  "character_evasion_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_evasion_block"
-  },
-  "character_cover_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_cover_block"
-  },
-  "character_retreat_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_retreat_block"
-  },
-  "character_search_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_search_block"
-  },
-  "character_presearch_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_presearch_block"
-  },
-  "character_idle_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "character_idle_block"
-  },
-  "character_vocalization_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_vocalization_block"
-  },
-  "character_boarding_block_2": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_boarding_block"
-  },
-  "character_boss_block_2": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_boss_block"
-  },
-  "character_weapons_block_4": {
-   "max_count": 100,
-   "max_count_string": "100",
-   "struct": "character_weapons_block"
-  },
-  "character_firing_pattern_properties_block_3": {
-   "max_count": 100,
-   "max_count_string": "100",
-   "struct": "character_firing_pattern_properties_block"
-  },
-  "character_grenades_block_4": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "character_grenades_block"
-  },
-  "character_vehicle_block_4": {
-   "max_count": 100,
-   "max_count_string": "100",
-   "struct": "character_vehicle_block"
-  },
-  "g_null_block_2": {
+  "g_null_block": {
    "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
+   "struct": "g_null_block_struct",
+   "max_count_string": "0"
   },
-  "g_null_block_3": {
-   "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
-  },
-  "campaign_metagame_bucket_block_2": {
+  "campaign_metagame_bucket_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "campaign_metagame_bucket_block"
+   "struct": "campaign_metagame_bucket_block_struct",
+   "max_count_string": "1"
   },
   "character_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "character_block_struct"
+   "struct": "character_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -359,7 +155,7 @@
     {
      "type": "long_flags",
      "name": "Character flags",
-     "definition": "character_flags_flags"
+     "definition": "Character flags"
     },
     {
      "type": "useless_pad",
@@ -399,67 +195,67 @@
     {
      "type": "block",
      "name": "general properties",
-     "definition": "character_general_block_2"
+     "definition": "character_general_block"
     },
     {
      "type": "block",
      "name": "placement properties",
-     "definition": "character_placement_block_2"
+     "definition": "character_placement_block"
     },
     {
      "type": "block",
      "name": "vitality properties",
-     "definition": "character_vitality_block_2"
+     "definition": "character_vitality_block"
     },
     {
      "type": "block",
      "name": "perception properties",
-     "definition": "character_perception_block_2"
+     "definition": "character_perception_block"
     },
     {
      "type": "block",
      "name": "retreat properties",
-     "definition": "character_retreat_block_2"
+     "definition": "character_retreat_block"
     },
     {
      "type": "block",
      "name": "Look properties",
-     "definition": "character_look_block_2"
+     "definition": "character_look_block"
     },
     {
      "type": "block",
      "name": "Movement properties",
-     "definition": "character_movement_block_2"
+     "definition": "character_movement_block"
     },
     {
      "type": "block",
      "name": "Engage properties",
-     "definition": "character_engage_block_2"
+     "definition": "character_engage_block"
     },
     {
      "type": "block",
      "name": "Evasion properties",
-     "definition": "character_evasion_block_2"
+     "definition": "character_evasion_block"
     },
     {
      "type": "block",
      "name": "Cover properties",
-     "definition": "character_cover_block_2"
+     "definition": "character_cover_block"
     },
     {
      "type": "block",
      "name": "search properties",
-     "definition": "character_search_block_2"
+     "definition": "character_search_block"
     },
     {
      "type": "block",
      "name": "pre-search properties",
-     "definition": "character_presearch_block_2"
+     "definition": "character_presearch_block"
     },
     {
      "type": "block",
      "name": "weapons properties",
-     "definition": "character_weapons_block_2"
+     "definition": "character_weapons_block"
     },
     {
      "type": "useless_pad",
@@ -469,27 +265,27 @@
     {
      "type": "block",
      "name": "grenades properties",
-     "definition": "character_grenades_block_2"
+     "definition": "character_grenades_block"
     },
     {
      "type": "block",
      "name": "charge properties",
-     "definition": "character_charge_block_2"
+     "definition": "character_charge_block"
     },
     {
      "type": "block",
      "name": "ready properties",
-     "definition": "character_ready_block_2"
+     "definition": "character_ready_block"
     },
     {
      "type": "block",
      "name": "vehicle properties",
-     "definition": "character_vehicle_block_2"
+     "definition": "character_vehicle_block"
     },
     {
      "type": "block",
      "name": "idle properties",
-     "definition": "character_idle_block_2"
+     "definition": "character_idle_block"
     },
     {
      "type": "terminator",
@@ -497,24 +293,24 @@
     }
    ]
   },
-  "character_general_block": {
+  "character_general_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
     {
      "type": "long_flags",
      "name": "general flags",
-     "definition": "general_flags_flags"
+     "definition": "general flags"
     },
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "struct",
      "name": "OBSOLETE campaign metagame bucket",
-     "definition": "campaign_metagame_bucket_struct"
+     "definition": "campaign_metagame_bucket_struct_2"
     },
     {
      "type": "useless_pad",
@@ -531,19 +327,19 @@
     }
    ]
   },
-  "campaign_metagame_bucket_struct": {
+  "campaign_metagame_bucket_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
     {
      "type": "char_enum",
      "name": "type",
-     "definition": "type_enum_2"
+     "definition": "type_2"
     },
     {
      "type": "char_enum",
      "name": "class",
-     "definition": "class_enum"
+     "definition": "class"
     },
     {
      "type": "terminator",
@@ -552,13 +348,13 @@
    ],
    "tag": "cmtb"
   },
-  "character_placement_block": {
+  "character_placement_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -615,14 +411,14 @@
     }
    ]
   },
-  "character_vitality_block": {
+  "character_vitality_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 112,
    "fields": [
     {
      "type": "long_flags",
      "name": "vitality flags",
-     "definition": "vitality_flags_flags"
+     "definition": "vitality flags"
     },
     {
      "type": "real",
@@ -759,14 +555,14 @@
     }
    ]
   },
-  "character_perception_block": {
+  "character_perception_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
     {
      "type": "long_flags",
      "name": "perception flags",
-     "definition": "character_flags_flags"
+     "definition": "perception flags"
     },
     {
      "type": "real",
@@ -847,14 +643,14 @@
     }
    ]
   },
-  "character_retreat_block": {
+  "character_retreat_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
     {
      "type": "long_flags",
      "name": "Retreat flags",
-     "definition": "retreat_flags_flags"
+     "definition": "Retreat flags"
     },
     {
      "type": "real",
@@ -947,7 +743,7 @@
     }
    ]
   },
-  "character_look_block": {
+  "character_look_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 80,
    "fields": [
@@ -1005,14 +801,14 @@
     }
    ]
   },
-  "character_movement_block": {
+  "character_movement_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
      "type": "long_flags",
      "name": "movement flags",
-     "definition": "movement_flags_flags"
+     "definition": "movement flags"
     },
     {
      "type": "real",
@@ -1039,37 +835,37 @@
     {
      "type": "short_enum",
      "name": "obstacle leap min size",
-     "definition": "obstacle_leap_min_size_enum"
+     "definition": "obstacle leap min size"
     },
     {
      "type": "short_enum",
      "name": "obstacle leap max size",
-     "definition": "obstacle_leap_min_size_enum"
+     "definition": "obstacle leap min size"
     },
     {
      "type": "short_enum",
      "name": "obstacle ignore size",
-     "definition": "obstacle_leap_min_size_enum"
+     "definition": "obstacle leap min size"
     },
     {
      "type": "short_enum",
      "name": "obstacle smashable size",
-     "definition": "obstacle_leap_min_size_enum"
+     "definition": "obstacle leap min size"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "RQEMJY",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "jump height",
-     "definition": "jump_height_enum"
+     "definition": "jump height"
     },
     {
      "type": "long_flags",
      "name": "movement hints",
-     "definition": "movement_hints_flags"
+     "definition": "movement hints"
     },
     {
      "type": "real",
@@ -1081,14 +877,14 @@
     }
    ]
   },
-  "character_engage_block": {
+  "character_engage_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "useless_pad",
@@ -1113,7 +909,7 @@
     }
    ]
   },
-  "character_evasion_block": {
+  "character_evasion_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -1153,14 +949,14 @@
     }
    ]
   },
-  "character_cover_block": {
+  "character_cover_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
     {
      "type": "long_flags",
      "name": "cover flags",
-     "definition": "character_flags_flags"
+     "definition": "perception flags"
     },
     {
      "type": "real_bounds",
@@ -1235,14 +1031,14 @@
     }
    ]
   },
-  "character_search_block": {
+  "character_search_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "long_flags",
      "name": "Search flags",
-     "definition": "search_flags_flags"
+     "definition": "Search flags"
     },
     {
      "type": "useless_pad",
@@ -1268,14 +1064,14 @@
     }
    ]
   },
-  "character_presearch_block__v0": {
+  "character_presearch_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "long_flags",
      "name": "Pre-search flags",
-     "definition": "character_flags_flags"
+     "definition": "perception flags"
     },
     {
      "type": "useless_pad",
@@ -1300,14 +1096,14 @@
     }
    ]
   },
-  "character_presearch_block": {
+  "character_presearch_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
      "type": "long_flags",
      "name": "Pre-search flags",
-     "definition": "character_flags_flags"
+     "definition": "perception flags"
     },
     {
      "type": "real_bounds",
@@ -1335,14 +1131,14 @@
     }
    ]
   },
-  "character_weapons_block__v0": {
+  "character_weapons_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 204,
    "fields": [
     {
      "type": "long_flags",
      "name": "weapons flags",
-     "definition": "weapons_flags_flags"
+     "definition": "weapons flags"
     },
     {
      "type": "tag_reference",
@@ -1460,12 +1256,12 @@
     {
      "type": "short_enum",
      "name": "special-fire mode",
-     "definition": "special_fire_mode_enum"
+     "definition": "special-fire mode"
     },
     {
      "type": "short_enum",
      "name": "special-fire situation",
-     "definition": "special_fire_situation_enum"
+     "definition": "special-fire situation"
     },
     {
      "type": "real",
@@ -1511,14 +1307,14 @@
     }
    ]
   },
-  "character_weapons_block": {
+  "character_weapons_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 224,
    "fields": [
     {
      "type": "long_flags",
      "name": "weapons flags",
-     "definition": "weapons_flags_flags"
+     "definition": "weapons flags"
     },
     {
      "type": "tag_reference",
@@ -1615,12 +1411,12 @@
     {
      "type": "short_enum",
      "name": "special-fire mode",
-     "definition": "special_fire_mode_enum"
+     "definition": "special-fire mode"
     },
     {
      "type": "short_enum",
      "name": "special-fire situation",
-     "definition": "special_fire_situation_enum"
+     "definition": "special-fire situation"
     },
     {
      "type": "real",
@@ -1703,7 +1499,7 @@
     {
      "type": "block",
      "name": "firing patterns",
-     "definition": "character_firing_pattern_block_2"
+     "definition": "character_firing_pattern_block"
     },
     {
      "type": "tag_reference",
@@ -1715,7 +1511,7 @@
     }
    ]
   },
-  "character_firing_pattern_block": {
+  "character_firing_pattern_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
@@ -1782,28 +1578,28 @@
     }
    ]
   },
-  "character_grenades_block": {
+  "character_grenades_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 60,
    "fields": [
     {
      "type": "long_flags",
      "name": "grenades flags",
-     "definition": "character_flags_flags"
+     "definition": "perception flags"
     },
     {
      "type": "short_enum",
      "name": "grenade type",
-     "definition": "grenade_type_enum"
+     "definition": "grenade type"
     },
     {
      "type": "short_enum",
      "name": "trajectory type",
-     "definition": "trajectory_type_enum"
+     "definition": "trajectory type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "YZNPI",
      "definition": 2
     },
     {
@@ -1875,14 +1671,14 @@
     }
    ]
   },
-  "character_charge_block__v0": {
+  "character_charge_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
     {
      "type": "long_flags",
      "name": "Charge flags",
-     "definition": "character_flags_flags"
+     "definition": "perception flags"
     },
     {
      "type": "real",
@@ -1922,14 +1718,14 @@
     }
    ]
   },
-  "character_charge_block__v1": {
+  "character_charge_block_struct__v1": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
     {
      "type": "long_flags",
      "name": "Charge flags",
-     "definition": "character_flags_flags"
+     "definition": "perception flags"
     },
     {
      "type": "real",
@@ -1973,14 +1769,14 @@
     }
    ]
   },
-  "character_charge_block__v2": {
+  "character_charge_block_struct__v2": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
     {
      "type": "long_flags",
      "name": "Charge flags",
-     "definition": "character_flags_flags"
+     "definition": "perception flags"
     },
     {
      "type": "real",
@@ -2028,14 +1824,14 @@
     }
    ]
   },
-  "character_charge_block": {
+  "character_charge_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 72,
    "fields": [
     {
      "type": "long_flags",
      "name": "Charge flags",
-     "definition": "charge_flags_flags"
+     "definition": "Charge flags"
     },
     {
      "type": "real",
@@ -2100,7 +1896,7 @@
     }
    ]
   },
-  "character_ready_block": {
+  "character_ready_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -2114,7 +1910,7 @@
     }
    ]
   },
-  "character_vehicle_block__v0": {
+  "character_vehicle_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
@@ -2125,7 +1921,7 @@
     {
      "type": "long_flags",
      "name": "vehicle flags",
-     "definition": "character_flags_flags"
+     "definition": "perception flags"
     },
     {
      "type": "useless_pad",
@@ -2277,7 +2073,7 @@
     }
    ]
   },
-  "character_vehicle_block": {
+  "character_vehicle_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 196,
    "fields": [
@@ -2297,7 +2093,7 @@
     {
      "type": "long_flags",
      "name": "vehicle flags",
-     "definition": "vehicle_flags_flags"
+     "definition": "vehicle flags"
     },
     {
      "type": "useless_pad",
@@ -2499,11 +2295,11 @@
     {
      "type": "short_enum",
      "name": "obstacle ignore size",
-     "definition": "obstacle_leap_min_size_enum"
+     "definition": "obstacle leap min size"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "I",
      "definition": 2
     },
     {
@@ -2512,13 +2308,13 @@
     }
    ]
   },
-  "character_idle_block": {
+  "character_idle_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -2543,7 +2339,7 @@
     {
      "type": "long_flags",
      "name": "Character flags",
-     "definition": "character_flags_flags"
+     "definition": "Character flags"
     },
     {
      "type": "useless_pad",
@@ -2587,37 +2383,37 @@
     {
      "type": "block",
      "name": "general properties",
-     "definition": "character_general_block_3"
+     "definition": "character_general_block"
     },
     {
      "type": "block",
      "name": "vitality properties",
-     "definition": "character_vitality_block_3"
+     "definition": "character_vitality_block"
     },
     {
      "type": "block",
      "name": "placement properties",
-     "definition": "character_placement_block_3"
+     "definition": "character_placement_block"
     },
     {
      "type": "block",
      "name": "perception properties",
-     "definition": "character_perception_block_3"
+     "definition": "character_perception_block"
     },
     {
      "type": "block",
      "name": "look properties",
-     "definition": "character_look_block_3"
+     "definition": "character_look_block"
     },
     {
      "type": "block",
      "name": "movement properties",
-     "definition": "character_movement_block_3"
+     "definition": "character_movement_block"
     },
     {
      "type": "block",
      "name": "swarm properties",
-     "definition": "character_swarm_block_2"
+     "definition": "character_swarm_block"
     },
     {
      "type": "useless_pad",
@@ -2627,52 +2423,52 @@
     {
      "type": "block",
      "name": "ready properties",
-     "definition": "character_ready_block_3"
+     "definition": "character_ready_block"
     },
     {
      "type": "block",
      "name": "engage properties",
-     "definition": "character_engage_block_3"
+     "definition": "character_engage_block"
     },
     {
      "type": "block",
      "name": "charge properties",
-     "definition": "character_charge_block_3"
+     "definition": "character_charge_block"
     },
     {
      "type": "block",
      "name": "evasion properties",
-     "definition": "character_evasion_block_3"
+     "definition": "character_evasion_block"
     },
     {
      "type": "block",
      "name": "cover properties",
-     "definition": "character_cover_block_3"
+     "definition": "character_cover_block"
     },
     {
      "type": "block",
      "name": "retreat properties",
-     "definition": "character_retreat_block_3"
+     "definition": "character_retreat_block"
     },
     {
      "type": "block",
      "name": "search properties",
-     "definition": "character_search_block_3"
+     "definition": "character_search_block"
     },
     {
      "type": "block",
      "name": "pre-search properties",
-     "definition": "character_presearch_block_3"
+     "definition": "character_presearch_block"
     },
     {
      "type": "block",
      "name": "idle properties",
-     "definition": "character_idle_block_3"
+     "definition": "character_idle_block"
     },
     {
      "type": "block",
      "name": "vocalization properties",
-     "definition": "character_vocalization_block_2"
+     "definition": "character_vocalization_block"
     },
     {
      "type": "useless_pad",
@@ -2682,12 +2478,12 @@
     {
      "type": "block",
      "name": "weapons properties",
-     "definition": "character_weapons_block_3"
+     "definition": "character_weapons_block"
     },
     {
      "type": "block",
      "name": "firing pattern properties",
-     "definition": "character_firing_pattern_properties_block_2"
+     "definition": "character_firing_pattern_properties_block"
     },
     {
      "type": "useless_pad",
@@ -2697,7 +2493,7 @@
     {
      "type": "block",
      "name": "grenades properties",
-     "definition": "character_grenades_block_3"
+     "definition": "character_grenades_block"
     },
     {
      "type": "useless_pad",
@@ -2707,7 +2503,7 @@
     {
      "type": "block",
      "name": "vehicle properties",
-     "definition": "character_vehicle_block_3"
+     "definition": "character_vehicle_block"
     },
     {
      "type": "terminator",
@@ -2715,7 +2511,7 @@
     }
    ]
   },
-  "character_swarm_block": {
+  "character_swarm_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -2730,7 +2526,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "PEVUDXUKY",
      "definition": 2
     },
     {
@@ -2781,7 +2577,7 @@
     }
    ]
   },
-  "character_vocalization_block": {
+  "character_vocalization_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -2799,7 +2595,7 @@
     }
    ]
   },
-  "character_firing_pattern_properties_block": {
+  "character_firing_pattern_properties_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
@@ -2815,7 +2611,7 @@
     {
      "type": "block",
      "name": "firing patterns",
-     "definition": "character_firing_pattern_block_3"
+     "definition": "character_firing_pattern_block"
     },
     {
      "type": "terminator",
@@ -2830,7 +2626,7 @@
     {
      "type": "long_flags",
      "name": "Character flags",
-     "definition": "character_flags_flags"
+     "definition": "Character flags"
     },
     {
      "type": "useless_pad",
@@ -2870,7 +2666,7 @@
     {
      "type": "block",
      "name": "variants",
-     "definition": "character_variants_block_2"
+     "definition": "character_variants_block"
     },
     {
      "type": "useless_pad",
@@ -2880,37 +2676,37 @@
     {
      "type": "block",
      "name": "general properties",
-     "definition": "character_general_block_4"
+     "definition": "character_general_block"
     },
     {
      "type": "block",
      "name": "vitality properties",
-     "definition": "character_vitality_block_4"
+     "definition": "character_vitality_block"
     },
     {
      "type": "block",
      "name": "placement properties",
-     "definition": "character_placement_block_4"
+     "definition": "character_placement_block"
     },
     {
      "type": "block",
      "name": "perception properties",
-     "definition": "character_perception_block_4"
+     "definition": "character_perception_block"
     },
     {
      "type": "block",
      "name": "look properties",
-     "definition": "character_look_block_4"
+     "definition": "character_look_block"
     },
     {
      "type": "block",
      "name": "movement properties",
-     "definition": "character_movement_block_4"
+     "definition": "character_movement_block"
     },
     {
      "type": "block",
      "name": "swarm properties",
-     "definition": "character_swarm_block_3"
+     "definition": "character_swarm_block"
     },
     {
      "type": "useless_pad",
@@ -2920,57 +2716,57 @@
     {
      "type": "block",
      "name": "ready properties",
-     "definition": "character_ready_block_4"
+     "definition": "character_ready_block"
     },
     {
      "type": "block",
      "name": "engage properties",
-     "definition": "character_engage_block_4"
+     "definition": "character_engage_block"
     },
     {
      "type": "block",
      "name": "charge properties",
-     "definition": "character_charge_block_4"
+     "definition": "character_charge_block"
     },
     {
      "type": "block",
      "name": "evasion properties",
-     "definition": "character_evasion_block_4"
+     "definition": "character_evasion_block"
     },
     {
      "type": "block",
      "name": "cover properties",
-     "definition": "character_cover_block_4"
+     "definition": "character_cover_block"
     },
     {
      "type": "block",
      "name": "retreat properties",
-     "definition": "character_retreat_block_4"
+     "definition": "character_retreat_block"
     },
     {
      "type": "block",
      "name": "search properties",
-     "definition": "character_search_block_4"
+     "definition": "character_search_block"
     },
     {
      "type": "block",
      "name": "pre-search properties",
-     "definition": "character_presearch_block_4"
+     "definition": "character_presearch_block"
     },
     {
      "type": "block",
      "name": "idle properties",
-     "definition": "character_idle_block_4"
+     "definition": "character_idle_block"
     },
     {
      "type": "block",
      "name": "vocalization properties",
-     "definition": "character_vocalization_block_3"
+     "definition": "character_vocalization_block"
     },
     {
      "type": "block",
      "name": "boarding properties",
-     "definition": "character_boarding_block_2"
+     "definition": "character_boarding_block"
     },
     {
      "type": "useless_pad",
@@ -2980,17 +2776,17 @@
     {
      "type": "block",
      "name": "boss properties",
-     "definition": "character_boss_block_2"
+     "definition": "character_boss_block"
     },
     {
      "type": "block",
      "name": "weapons properties",
-     "definition": "character_weapons_block_4"
+     "definition": "character_weapons_block"
     },
     {
      "type": "block",
      "name": "firing pattern properties",
-     "definition": "character_firing_pattern_properties_block_3"
+     "definition": "character_firing_pattern_properties_block"
     },
     {
      "type": "useless_pad",
@@ -3000,7 +2796,7 @@
     {
      "type": "block",
      "name": "grenades properties",
-     "definition": "character_grenades_block_4"
+     "definition": "character_grenades_block"
     },
     {
      "type": "useless_pad",
@@ -3010,22 +2806,22 @@
     {
      "type": "block",
      "name": "vehicle properties",
-     "definition": "character_vehicle_block_4"
+     "definition": "character_vehicle_block"
     },
     {
      "type": "block",
      "name": "morph properties",
-     "definition": "g_null_block_2"
+     "definition": "g_null_block"
     },
     {
      "type": "block",
      "name": "equipment definitions",
-     "definition": "g_null_block_3"
+     "definition": "g_null_block"
     },
     {
      "type": "block",
      "name": "campaign metagame bucket",
-     "definition": "campaign_metagame_bucket_block_2"
+     "definition": "campaign_metagame_bucket_block"
     },
     {
      "type": "terminator",
@@ -3033,7 +2829,7 @@
     }
    ]
   },
-  "character_variants_block": {
+  "character_variants_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -3047,7 +2843,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "VN",
      "definition": 2
     },
     {
@@ -3060,14 +2856,14 @@
     }
    ]
   },
-  "character_boarding_block": {
+  "character_boarding_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real",
@@ -3092,13 +2888,13 @@
     }
    ]
   },
-  "character_boss_block": {
+  "character_boss_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -3120,7 +2916,7 @@
     }
    ]
   },
-  "g_null_block": {
+  "g_null_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 0,
    "fields": [
@@ -3134,19 +2930,19 @@
     }
    ]
   },
-  "campaign_metagame_bucket_block": {
+  "campaign_metagame_bucket_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
     {
      "type": "char_enum",
      "name": "type",
-     "definition": "type_enum_2"
+     "definition": "type_2"
     },
     {
      "type": "char_enum",
      "name": "class",
-     "definition": "class_enum"
+     "definition": "class"
     },
     {
      "type": "terminator",
@@ -3155,14 +2951,13 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "character_flags_flags": {
+  "Character flags": {
    "options": [
     "Flag1"
    ]
   },
-  "general_flags_flags": {
+  "general flags": {
    "options": [
     "swarm",
     "flying",
@@ -3170,7 +2965,7 @@
     "uses gravemind"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "elite",
     "jackal",
@@ -3194,7 +2989,7 @@
     "juggernaut"
    ]
   },
-  "type_enum_2": {
+  "type_2": {
    "options": [
     "brute",
     "grunt",
@@ -3243,7 +3038,7 @@
     "engineer_recharge_station"
    ]
   },
-  "class_enum": {
+  "class": {
    "options": [
     "infantry",
     "leader",
@@ -3255,18 +3050,23 @@
     "standard vehicle"
    ]
   },
-  "vitality_flags_flags": {
+  "vitality flags": {
    "options": [
     "unused"
    ]
   },
-  "retreat_flags_flags": {
+  "perception flags": {
    "options": [
-    "Zig-zag when fleeing",
-    "Unused1"
+    "Flag1"
    ]
   },
-  "movement_flags_flags": {
+  "Retreat flags": {
+   "options": [
+    "Zig-zag when fleeing",
+    "Unused1!"
+   ]
+  },
+  "movement flags": {
    "options": [
     "danger crouch allow movement",
     "no side-step",
@@ -3277,7 +3077,7 @@
     "disallow crouch"
    ]
   },
-  "obstacle_leap_min_size_enum": {
+  "obstacle leap min size": {
    "options": [
     "none",
     "tiny",
@@ -3288,7 +3088,7 @@
     "immobile"
    ]
   },
-  "jump_height_enum": {
+  "jump height": {
    "options": [
     "NONE",
     "down",
@@ -3300,54 +3100,54 @@
     "infinite"
    ]
   },
-  "movement_hints_flags": {
+  "movement hints": {
    "options": [
     "vault step",
     "vault crouch",
-    "unused0",
-    "unused1",
-    "unused2",
+    "unused0!",
+    "unused1!",
+    "unused2!",
     "mount step",
     "mount crouch",
     "mount stand",
-    "unused3",
-    "unused4",
-    "unused5",
+    "unused3!",
+    "unused4!",
+    "unused5!",
     "hoist crouch",
     "hoist stand",
-    "unused6",
-    "unused7",
-    "unused8"
+    "unused6!",
+    "unused7!",
+    "unused8!"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "engage perch",
     "fight constant movement",
     "flight fight constant movement"
    ]
   },
-  "search_flags_flags": {
+  "Search flags": {
    "options": [
     "crouch on investigate",
     "walk on pursuit"
    ]
   },
-  "weapons_flags_flags": {
+  "weapons flags": {
    "options": [
     "bursting inhibits movement",
     "must crouch to shoot",
     "use extended safe-to-save range"
    ]
   },
-  "special_fire_mode_enum": {
+  "special-fire mode": {
    "options": [
     "none",
     "overcharge",
     "secondary trigger"
    ]
   },
-  "special_fire_situation_enum": {
+  "special-fire situation": {
    "options": [
     "never",
     "enemy visible",
@@ -3355,57 +3155,54 @@
     "strafing"
    ]
   },
-  "grenade_type_enum": {
+  "grenade type": {
    "options": [
     "human fragmentation",
     "covenant plasma"
    ]
   },
-  "trajectory_type_enum": {
+  "trajectory type": {
    "options": [
     "toss",
     "lob",
     "bounce"
    ]
   },
-  "charge_flags_flags": {
+  "Charge flags": {
    "options": [
     "offhand melee allowed",
     "berserk whenever charge"
    ]
   },
-  "vehicle_flags_flags": {
+  "vehicle flags": {
    "options": [
     "passengers adopt original squad"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "airborne boarding"
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "character_presearch_block": {
-   "0": "character_presearch_block__v0",
-   "1": "character_presearch_block"
+  "character_presearch_block_struct": {
+   "0": "character_presearch_block_struct__v0",
+   "1": "character_presearch_block_struct"
   },
-  "character_weapons_block": {
-   "0": "character_weapons_block__v0",
-   "1": "character_weapons_block"
+  "character_weapons_block_struct": {
+   "0": "character_weapons_block_struct__v0",
+   "1": "character_weapons_block_struct"
   },
-  "character_charge_block": {
-   "0": "character_charge_block__v0",
-   "1": "character_charge_block__v1",
-   "2": "character_charge_block__v2",
-   "3": "character_charge_block"
+  "character_charge_block_struct": {
+   "0": "character_charge_block_struct__v0",
+   "1": "character_charge_block_struct__v1",
+   "2": "character_charge_block_struct__v2",
+   "3": "character_charge_block_struct"
   },
-  "character_vehicle_block": {
-   "0": "character_vehicle_block__v0",
-   "1": "character_vehicle_block"
+  "character_vehicle_block_struct": {
+   "0": "character_vehicle_block_struct__v0",
+   "1": "character_vehicle_block_struct"
   },
   "character_block_struct": {
    "0": "character_block_struct__v0",

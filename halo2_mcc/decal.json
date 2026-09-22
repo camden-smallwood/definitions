@@ -2,13 +2,14 @@
  "name": "decal",
  "tag": "deca",
  "version": 1,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": null,
  "block": "decal_block",
  "blocks": {
   "decal_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "decal_block_struct"
+   "struct": "decal_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -19,17 +20,17 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "short_enum",
      "name": "layer",
-     "definition": "layer_enum"
+     "definition": "layer"
     },
     {
      "type": "short_integer",
@@ -90,32 +91,32 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(struct _shader)",
      "definition": 40
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
@@ -124,7 +125,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
@@ -133,7 +134,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(word)",
      "definition": 4
     },
     {
@@ -148,9 +149,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "geometry inherited by next decal in chain",
     "interpolate color in hsv",
@@ -164,7 +164,7 @@
     "UNUSED"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "scratch",
     "splatter",
@@ -172,7 +172,7 @@
     "painted sign"
    ]
   },
-  "layer_enum": {
+  "layer": {
    "options": [
     "lit alpha-blend prelight",
     "lit alpha-blend",
@@ -183,9 +183,5 @@
     "error"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

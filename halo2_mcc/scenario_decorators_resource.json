@@ -2,83 +2,74 @@
  "name": "scenario_decorators_resource",
  "tag": "dc*s",
  "version": 1,
- "flags": 0,
+ "flags": 56,
+ "parent_tag": null,
  "block": "scenario_decorators_resource_block",
  "blocks": {
-  "global_geometry_block_resource_block_2": {
+  "global_geometry_block_resource_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "global_geometry_block_resource_block"
+   "struct": "global_geometry_block_resource_block_struct",
+   "max_count_string": "MAXIMUM_RESOURCES_PER_GEOMETRY_BLOCK"
   },
-  "decorator_placement_block_2": {
+  "decorator_placement_block": {
    "max_count": 32768,
-   "max_count_string": "32768",
-   "struct": "decorator_placement_block"
+   "struct": "decorator_placement_block_struct",
+   "max_count_string": "32*k_kilo"
   },
-  "decorator_placement_block_3": {
-   "max_count": 32768,
-   "max_count_string": "32768",
-   "struct": "decorator_placement_block"
-  },
-  "decal_vertices_block_2": {
+  "decal_vertices_block": {
    "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "decal_vertices_block"
+   "struct": "decal_vertices_block_struct",
+   "max_count_string": "64*k_kilo"
   },
-  "indices_block_2": {
+  "indices_block": {
    "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "indices_block"
+   "struct": "indices_block_struct",
+   "max_count_string": "64*k_kilo"
   },
-  "sprite_vertices_block_2": {
+  "sprite_vertices_block": {
    "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "sprite_vertices_block"
+   "struct": "sprite_vertices_block_struct",
+   "max_count_string": "64*k_kilo"
   },
-  "indices_block_3": {
-   "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "indices_block"
-  },
-  "decorator_cache_block_data_block_2": {
+  "decorator_cache_block_data_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "decorator_cache_block_data_block"
+   "struct": "decorator_cache_block_data_block_struct",
+   "max_count_string": "1"
   },
-  "decorator_cache_block_block_2": {
+  "decorator_cache_block_block": {
    "max_count": 4096,
-   "max_count_string": "4096",
-   "struct": "decorator_cache_block_block"
+   "struct": "decorator_cache_block_block_struct",
+   "max_count_string": "c_decorator_placement_definition::k_maximum_cache_block_count"
   },
-  "decorator_group_block_2": {
-   "max_count": 131072,
-   "max_count_string": "131072",
-   "struct": "decorator_group_block"
-  },
-  "decorator_cell_collection_block_2": {
-   "max_count": 65535,
-   "max_count_string": "65535",
-   "struct": "decorator_cell_collection_block"
-  },
-  "decorator_projected_decal_block_2": {
-   "max_count": 32768,
-   "max_count_string": "32768",
-   "struct": "decorator_projected_decal_block"
-  },
-  "decorator_placement_definition_block_2": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "decorator_placement_definition_block"
-  },
-  "scenario_decorator_set_palette_entry_block_2": {
+  "scenario_decorator_set_palette_entry_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "scenario_decorator_set_palette_entry_block"
+   "struct": "scenario_decorator_set_palette_entry_block_struct",
+   "max_count_string": "c_decorator_set_definition::k_maximum_decorator_sets_per_scenario"
+  },
+  "decorator_group_block": {
+   "max_count": 131072,
+   "struct": "decorator_group_block_struct",
+   "max_count_string": "c_decorator_placement_definition::k_maximum_group_count"
+  },
+  "decorator_cell_collection_block": {
+   "max_count": 65535,
+   "struct": "decorator_cell_collection_block_struct",
+   "max_count_string": "c_decorator_placement_definition::k_maximum_cell_collection_count"
+  },
+  "decorator_projected_decal_block": {
+   "max_count": 32768,
+   "struct": "decorator_projected_decal_block_struct",
+   "max_count_string": "c_decorator_placement_definition::k_maximum_projected_decal_count"
+  },
+  "decorator_placement_definition_block": {
+   "max_count": 1,
+   "struct": "decorator_placement_definition_block_struct",
+   "max_count_string": "1"
   },
   "scenario_decorators_resource_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "scenario_decorators_resource_block_struct"
+   "struct": "scenario_decorators_resource_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -89,12 +80,12 @@
     {
      "type": "block",
      "name": "decorator",
-     "definition": "decorator_placement_definition_block_2"
+     "definition": "decorator_placement_definition_block"
     },
     {
      "type": "block",
      "name": "decorator palette",
-     "definition": "scenario_decorator_set_palette_entry_block_2"
+     "definition": "scenario_decorator_set_palette_entry_block"
     },
     {
      "type": "terminator",
@@ -102,7 +93,7 @@
     }
    ]
   },
-  "decorator_placement_definition_block": {
+  "decorator_placement_definition_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
@@ -117,22 +108,22 @@
     {
      "type": "block",
      "name": "cache blocks",
-     "definition": "decorator_cache_block_block_2"
+     "definition": "decorator_cache_block_block"
     },
     {
      "type": "block",
      "name": "groups",
-     "definition": "decorator_group_block_2"
+     "definition": "decorator_group_block"
     },
     {
      "type": "block",
      "name": "cells",
-     "definition": "decorator_cell_collection_block_2"
+     "definition": "decorator_cell_collection_block"
     },
     {
      "type": "block",
      "name": "decals",
-     "definition": "decorator_projected_decal_block_2"
+     "definition": "decorator_projected_decal_block"
     },
     {
      "type": "terminator",
@@ -140,28 +131,28 @@
     }
    ]
   },
-  "decorator_cache_block_block": {
+  "decorator_cache_block_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 60,
    "fields": [
     {
      "type": "struct",
      "name": "geometry block info",
-     "definition": "global_geometry_block_info_struct"
+     "definition": "global_geometry_block_info_struct_2"
     },
     {
      "type": "block",
      "name": "cache block data",
-     "definition": "decorator_cache_block_data_block_2"
+     "definition": "decorator_cache_block_data_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -170,7 +161,7 @@
     }
    ]
   },
-  "global_geometry_block_info_struct": {
+  "global_geometry_block_info_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -193,11 +184,11 @@
     {
      "type": "block",
      "name": "resources",
-     "definition": "global_geometry_block_resource_block_2"
+     "definition": "global_geometry_block_resource_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -206,12 +197,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -221,18 +212,18 @@
    ],
    "tag": "BLOK"
   },
-  "global_geometry_block_resource_block": {
+  "global_geometry_block_resource_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "char_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(byte)",
      "definition": 3
     },
     {
@@ -257,14 +248,14 @@
     }
    ]
   },
-  "decorator_cache_block_data_block__v0": {
+  "decorator_cache_block_data_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 76,
    "fields": [
     {
      "type": "block",
      "name": "placements",
-     "definition": "decorator_placement_block_2"
+     "definition": "decorator_placement_block"
     },
     {
      "type": "vertex_buffer",
@@ -280,7 +271,7 @@
     }
    ]
   },
-  "decorator_placement_block": {
+  "decorator_placement_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -314,24 +305,24 @@
     }
    ]
   },
-  "decorator_cache_block_data_block": {
+  "decorator_cache_block_data_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 156,
    "fields": [
     {
      "type": "block",
      "name": "placements",
-     "definition": "decorator_placement_block_3"
+     "definition": "decorator_placement_block"
     },
     {
      "type": "block",
      "name": "decal vertices",
-     "definition": "decal_vertices_block_2"
+     "definition": "decal_vertices_block"
     },
     {
      "type": "block",
      "name": "decal indices",
-     "definition": "indices_block_2"
+     "definition": "indices_block"
     },
     {
      "type": "vertex_buffer",
@@ -339,18 +330,18 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(triangle_buffer)",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sprite vertices",
-     "definition": "sprite_vertices_block_2"
+     "definition": "sprite_vertices_block"
     },
     {
      "type": "block",
      "name": "sprite indices",
-     "definition": "indices_block_3"
+     "definition": "indices_block"
     },
     {
      "type": "vertex_buffer",
@@ -358,7 +349,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(triangle_buffer)",
      "definition": 16
     },
     {
@@ -367,7 +358,7 @@
     }
    ]
   },
-  "decal_vertices_block": {
+  "decal_vertices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -393,7 +384,7 @@
     }
    ]
   },
-  "indices_block": {
+  "indices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
@@ -407,7 +398,7 @@
     }
    ]
   },
-  "sprite_vertices_block": {
+  "sprite_vertices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
@@ -437,18 +428,19 @@
     }
    ]
   },
-  "decorator_group_block": {
+  "decorator_group_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
     {
-     "type": "char_integer",
-     "name": "decorator set"
+     "type": "char_block_index",
+     "name": "decorator set",
+     "definition": "scenario_decorator_set_palette_entry_block"
     },
     {
      "type": "char_enum",
      "name": "decorator_type",
-     "definition": "decorator_type_enum"
+     "definition": "decorator_type"
     },
     {
      "type": "char_integer",
@@ -463,8 +455,9 @@
      "name": "cluster"
     },
     {
-     "type": "short_integer",
-     "name": "cache block"
+     "type": "short_block_index",
+     "name": "cache block",
+     "definition": "decorator_cache_block_block"
     },
     {
      "type": "short_integer",
@@ -500,18 +493,33 @@
     }
    ]
   },
-  "decorator_cell_collection_block": {
+  "scenario_decorator_set_palette_entry_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "decorator set"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "decorator_cell_collection_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
     {
      "type": "array",
      "name": "child indices",
-     "definition": "child_indices_array"
+     "definition": "child indices_array"
     },
     {
-     "type": "short_integer",
-     "name": "cache block index"
+     "type": "short_block_index",
+     "name": "cache block index",
+     "definition": "decorator_cache_block_block"
     },
     {
      "type": "short_integer",
@@ -527,7 +535,7 @@
     }
    ]
   },
-  "child_indices_struct": {
+  "child indices_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
@@ -541,13 +549,14 @@
     }
    ]
   },
-  "decorator_projected_decal_block": {
+  "decorator_projected_decal_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
     {
-     "type": "char_integer",
-     "name": "decorator set"
+     "type": "char_block_index",
+     "name": "decorator set",
+     "definition": "scenario_decorator_set_palette_entry_block"
     },
     {
      "type": "char_integer",
@@ -586,37 +595,23 @@
      "name": null
     }
    ]
-  },
-  "scenario_decorator_set_palette_entry_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 16,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "decorator set"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
   }
  },
  "arrays": {
-  "child_indices_array": {
+  "child indices_array": {
    "count": 8,
-   "struct": "child_indices_struct"
+   "struct": "child indices_struct"
   }
  },
  "enums_flags": {
-  "type_enum": {
+  "type": {
    "options": [
     "tag block",
     "tag data",
     "vertex buffer"
    ]
   },
-  "decorator_type_enum": {
+  "decorator_type": {
    "options": [
     "model",
     "floating decal",
@@ -627,13 +622,10 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "decorator_cache_block_data_block": {
-   "0": "decorator_cache_block_data_block__v0",
-   "1": "decorator_cache_block_data_block"
+  "decorator_cache_block_data_block_struct": {
+   "0": "decorator_cache_block_data_block_struct__v0",
+   "1": "decorator_cache_block_data_block_struct"
   }
  }
 }

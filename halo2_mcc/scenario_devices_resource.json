@@ -2,73 +2,79 @@
  "name": "scenario_devices_resource",
  "tag": "dgr*",
  "version": 1,
- "flags": 0,
+ "flags": 56,
+ "parent_tag": null,
  "block": "scenario_devices_resource_block",
  "blocks": {
-  "scenario_object_names_block_2": {
+  "scenario_object_names_block": {
    "max_count": 640,
-   "max_count_string": "640",
-   "struct": "scenario_object_names_block"
+   "struct": "scenario_object_names_block_struct",
+   "max_count_string": "MAXIMUM_OBJECT_NAMES_PER_SCENARIO"
   },
-  "dont_use_me_scenario_environment_object_block_2": {
+  "scenario_sky_reference_block": {
+   "max_count": 32,
+   "struct": "scenario_sky_reference_block_struct",
+   "max_count_string": "MAXIMUM_SKIES_PER_SCENARIO"
+  },
+  "scenario_structure_bsp_reference_block": {
+   "max_count": 16,
+   "struct": "scenario_structure_bsp_reference_block_struct",
+   "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO"
+  },
+  "dont_use_me_scenario_environment_object_block": {
    "max_count": 4096,
-   "max_count_string": "4096",
-   "struct": "dont_use_me_scenario_environment_object_block"
+   "struct": "dont_use_me_scenario_environment_object_block_struct",
+   "max_count_string": "MAXIMUM_ENVIRONMENT_OBJECTS_PER_SCENARIO"
   },
-  "scenario_structure_bsp_reference_block_2": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "scenario_structure_bsp_reference_block"
-  },
-  "device_group_block_2": {
+  "device_group_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "device_group_block"
+   "struct": "device_group_block_struct",
+   "max_count_string": "MAXIMUM_DEVICE_GROUPS_PER_SCENARIO"
   },
-  "pathfinding_object_index_list_block_2": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "pathfinding_object_index_list_block"
-  },
-  "scenario_machine_block_2": {
-   "max_count": 400,
-   "max_count_string": "400",
-   "struct": "scenario_machine_block"
-  },
-  "scenario_machine_palette_block_2": {
+  "scenario_machine_palette_block": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "scenario_machine_palette_block"
+   "struct": "scenario_machine_palette_block_struct",
+   "max_count_string": "MAXIMUM_SCENARIO_OBJECT_PALETTE_ENTRIES_PER_BLOCK"
   },
-  "scenario_control_block_2": {
-   "max_count": 100,
-   "max_count_string": "100",
-   "struct": "scenario_control_block"
-  },
-  "scenario_control_palette_block_2": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "scenario_control_palette_block"
-  },
-  "scenario_light_fixture_block_2": {
-   "max_count": 500,
-   "max_count_string": "500",
-   "struct": "scenario_light_fixture_block"
-  },
-  "scenario_light_fixture_palette_block_2": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "scenario_light_fixture_palette_block"
-  },
-  "g_scenario_editor_folder_block_2": {
+  "g_scenario_editor_folder_block": {
    "max_count": 32767,
-   "max_count_string": "32767",
-   "struct": "g_scenario_editor_folder_block"
+   "struct": "g_scenario_editor_folder_block_struct",
+   "max_count_string": "k_maximum_scenario_editor_folders"
+  },
+  "pathfinding_object_index_list_block": {
+   "max_count": 16,
+   "struct": "pathfinding_object_index_list_block_struct",
+   "max_count_string": "MAXIMUM_STRUCTURE_BSPS_PER_SCENARIO"
+  },
+  "scenario_machine_block": {
+   "max_count": 400,
+   "struct": "scenario_machine_block_struct",
+   "max_count_string": "MAXIMUM_MACHINE_DATUMS_PER_SCENARIO"
+  },
+  "scenario_control_palette_block": {
+   "max_count": 256,
+   "struct": "scenario_control_palette_block_struct",
+   "max_count_string": "MAXIMUM_SCENARIO_OBJECT_PALETTE_ENTRIES_PER_BLOCK"
+  },
+  "scenario_control_block": {
+   "max_count": 100,
+   "struct": "scenario_control_block_struct",
+   "max_count_string": "MAXIMUM_CONTROL_DATUMS_PER_SCENARIO"
+  },
+  "scenario_light_fixture_palette_block": {
+   "max_count": 256,
+   "struct": "scenario_light_fixture_palette_block_struct",
+   "max_count_string": "MAXIMUM_SCENARIO_OBJECT_PALETTE_ENTRIES_PER_BLOCK"
+  },
+  "scenario_light_fixture_block": {
+   "max_count": 500,
+   "struct": "scenario_light_fixture_block_struct",
+   "max_count_string": "MAXIMUM_LIGHT_FIXTURE_DATUMS_PER_SCENARIO"
   },
   "scenario_devices_resource_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "scenario_devices_resource_block_struct"
+   "struct": "scenario_devices_resource_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -79,52 +85,52 @@
     {
      "type": "block",
      "name": "names",
-     "definition": "scenario_object_names_block_2"
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "block",
      "name": "going away",
-     "definition": "dont_use_me_scenario_environment_object_block_2"
+     "definition": "dont_use_me_scenario_environment_object_block"
     },
     {
      "type": "block",
      "name": "structure references",
-     "definition": "scenario_structure_bsp_reference_block_2"
+     "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "block",
      "name": "device groups",
-     "definition": "device_group_block_2"
+     "definition": "device_group_block"
     },
     {
      "type": "block",
      "name": "machines",
-     "definition": "scenario_machine_block_2"
+     "definition": "scenario_machine_block"
     },
     {
      "type": "block",
      "name": "machine palette",
-     "definition": "scenario_machine_palette_block_2"
+     "definition": "scenario_machine_palette_block"
     },
     {
      "type": "block",
      "name": "controls",
-     "definition": "scenario_control_block_2"
+     "definition": "scenario_control_block"
     },
     {
      "type": "block",
      "name": "control palette",
-     "definition": "scenario_control_palette_block_2"
+     "definition": "scenario_control_palette_block"
     },
     {
      "type": "block",
      "name": "light fixtures",
-     "definition": "scenario_light_fixture_block_2"
+     "definition": "scenario_light_fixture_block"
     },
     {
      "type": "block",
      "name": "light fixture palette",
-     "definition": "scenario_light_fixture_palette_block_2"
+     "definition": "scenario_light_fixture_palette_block"
     },
     {
      "type": "long_integer",
@@ -141,7 +147,7 @@
     {
      "type": "block",
      "name": "editor folders",
-     "definition": "g_scenario_editor_folder_block_2"
+     "definition": "g_scenario_editor_folder_block"
     },
     {
      "type": "terminator",
@@ -149,7 +155,7 @@
     }
    ]
   },
-  "scenario_object_names_block": {
+  "scenario_object_names_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
@@ -158,11 +164,11 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": null
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": null
     },
     {
@@ -171,7 +177,7 @@
     }
    ]
   },
-  "dont_use_me_scenario_environment_object_block": {
+  "dont_use_me_scenario_environment_object_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
@@ -180,8 +186,9 @@
      "name": "SCENARIO_ENVIRONMENT_OBJECT_EDITOR_FLAGS_ID"
     },
     {
-     "type": "short_integer",
-     "name": "bsp"
+     "type": "short_block_index",
+     "name": "bsp",
+     "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "short_integer",
@@ -193,7 +200,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(unsigned long)",
      "definition": 4
     },
     {
@@ -206,7 +213,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*11",
      "definition": 44
     },
     {
@@ -215,13 +222,13 @@
     }
    ]
   },
-  "scenario_structure_bsp_reference_block__v0": {
+  "scenario_structure_bsp_reference_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -234,13 +241,13 @@
     }
    ]
   },
-  "scenario_structure_bsp_reference_block": {
+  "scenario_structure_bsp_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -253,7 +260,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -262,7 +269,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -275,26 +282,27 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "default sky"
+     "type": "short_block_index",
+     "name": "default sky",
+     "definition": "scenario_sky_reference_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -303,7 +311,21 @@
     }
    ]
   },
-  "device_group_block": {
+  "scenario_sky_reference_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "sky"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "device_group_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -318,7 +340,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "useless_pad",
@@ -331,22 +353,24 @@
     }
    ]
   },
-  "scenario_machine_block__v0": {
+  "scenario_machine_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_machine_palette_block"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "word_flags",
      "name": "not placed",
-     "definition": "not_placed_flags"
+     "definition": "not placed"
     },
     {
      "type": "short_integer",
@@ -362,26 +386,27 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
-     "type": "long_integer",
-     "name": "environment object reference"
+     "type": "long_block_index",
+     "name": "environment object reference",
+     "definition": "dont_use_me_scenario_environment_object_block"
     },
     {
      "type": "struct",
      "name": "device data",
-     "definition": "old_scenario_device_struct"
+     "definition": "old_scenario_device_struct_2"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_4"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -390,22 +415,43 @@
     }
    ]
   },
-  "old_scenario_device_struct": {
+  "scenario_machine_palette_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 48,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "name"
+    },
+    {
+     "type": "pad",
+     "name": "8*sizeof(long)",
+     "definition": 32
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "old_scenario_device_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "power group"
+     "type": "short_block_index",
+     "name": "power group",
+     "definition": "device_group_block"
     },
     {
-     "type": "short_integer",
-     "name": "position group"
+     "type": "short_block_index",
+     "name": "position group",
+     "definition": "device_group_block"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "terminator",
@@ -414,7 +460,7 @@
    ],
    "tag": "sdst"
   },
-  "scenario_machine_block__v1": {
+  "scenario_machine_block_struct__v1": {
    "guid": "00000000000000000000000000000000",
    "size": 80,
    "fields": [
@@ -423,31 +469,33 @@
      "name": "FILTER_ON_NEXT_FIELD_ID,-1"
     },
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_machine_palette_block"
     },
     {
      "type": "custom",
      "name": "FILTER_ON_NEXT_FIELD_ID,-2"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "struct",
      "name": "object data",
-     "definition": "scenario_object_datum_struct"
+     "definition": "scenario_object_datum_struct_2"
     },
     {
      "type": "struct",
      "name": "device data",
-     "definition": "scenario_device_struct"
+     "definition": "scenario_device_struct_2"
     },
     {
      "type": "struct",
      "name": "machine data",
-     "definition": "scenario_machine_struct_v2"
+     "definition": "scenario_machine_struct_v2_2"
     },
     {
      "type": "terminator",
@@ -466,7 +514,7 @@
     {
      "type": "long_flags",
      "name": "placement flags",
-     "definition": "not_placed_flags"
+     "definition": "not placed"
     },
     {
      "type": "real_point_3d",
@@ -483,30 +531,32 @@
     {
      "type": "word_flags",
      "name": null,
-     "definition": "unnamed_flags"
+     "definition": "enum_0x100fdec"
     },
     {
-     "type": "short_integer",
-     "name": "manual bsp flags"
+     "type": "word_block_flags",
+     "name": "manual bsp flags",
+     "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "struct",
      "name": "object id",
-     "definition": "scenario_object_id_struct"
+     "definition": "scenario_object_id_struct_2"
     },
     {
      "type": "char_enum",
      "name": "bsp policy",
-     "definition": "bsp_policy_enum"
+     "definition": "bsp policy"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(char)",
      "definition": 1
     },
     {
-     "type": "short_integer",
-     "name": null
+     "type": "short_block_index",
+     "name": null,
+     "definition": "g_scenario_editor_folder_block"
     },
     {
      "type": "terminator",
@@ -515,7 +565,7 @@
    ],
    "tag": "sobj"
   },
-  "scenario_object_id_struct": {
+  "scenario_object_id_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -524,18 +574,19 @@
      "name": "unique id"
     },
     {
-     "type": "short_integer",
-     "name": "origin bsp index"
+     "type": "short_block_index",
+     "name": "origin bsp index",
+     "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "char_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "char_enum",
      "name": "source",
-     "definition": "source_enum"
+     "definition": "source"
     },
     {
      "type": "terminator",
@@ -544,7 +595,26 @@
    ],
    "tag": "obj#"
   },
-  "scenario_object_datum_struct": {
+  "g_scenario_editor_folder_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 260,
+   "fields": [
+    {
+     "type": "long_block_index",
+     "name": "parent folder",
+     "definition": "g_scenario_editor_folder_block"
+    },
+    {
+     "type": "long_string",
+     "name": "name"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "scenario_object_datum_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
@@ -555,7 +625,7 @@
     {
      "type": "long_flags",
      "name": "placement flags",
-     "definition": "not_placed_flags"
+     "definition": "not placed"
     },
     {
      "type": "real_point_3d",
@@ -572,30 +642,32 @@
     {
      "type": "word_flags",
      "name": null,
-     "definition": "unnamed_flags"
+     "definition": "enum_0x100fdec"
     },
     {
-     "type": "short_integer",
-     "name": "manual bsp flags"
+     "type": "word_block_flags",
+     "name": "manual bsp flags",
+     "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "struct",
      "name": "object id",
-     "definition": "scenario_object_id_struct"
+     "definition": "scenario_object_id_struct_2"
     },
     {
      "type": "char_enum",
      "name": "bsp policy",
-     "definition": "bsp_policy_enum"
+     "definition": "bsp policy"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(char)",
      "definition": 1
     },
     {
-     "type": "short_integer",
-     "name": null
+     "type": "short_block_index",
+     "name": null,
+     "definition": "g_scenario_editor_folder_block"
     },
     {
      "type": "terminator",
@@ -604,22 +676,24 @@
    ],
    "tag": "sobj"
   },
-  "scenario_device_struct": {
+  "scenario_device_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "power group"
+     "type": "short_block_index",
+     "name": "power group",
+     "definition": "device_group_block"
     },
     {
-     "type": "short_integer",
-     "name": "position group"
+     "type": "short_block_index",
+     "name": "position group",
+     "definition": "device_group_block"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "terminator",
@@ -628,18 +702,18 @@
    ],
    "tag": "sdvt"
   },
-  "scenario_machine_struct_v2": {
+  "scenario_machine_struct_v2_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_4"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -648,7 +722,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -658,7 +732,7 @@
    ],
    "tag": "smht"
   },
-  "scenario_machine_block__v2": {
+  "scenario_machine_block_struct__v2": {
    "guid": "00000000000000000000000000000000",
    "size": 80,
    "fields": [
@@ -667,31 +741,33 @@
      "name": "FILTER_ON_NEXT_FIELD_ID,-1"
     },
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_machine_palette_block"
     },
     {
      "type": "custom",
      "name": "FILTER_ON_NEXT_FIELD_ID,-2"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "struct",
      "name": "object data",
-     "definition": "scenario_object_datum_struct"
+     "definition": "scenario_object_datum_struct_2"
     },
     {
      "type": "struct",
      "name": "device data",
-     "definition": "scenario_device_struct"
+     "definition": "scenario_device_struct_2"
     },
     {
      "type": "struct",
      "name": "machine data",
-     "definition": "scenario_machine_struct_v2"
+     "definition": "scenario_machine_struct_v2_2"
     },
     {
      "type": "terminator",
@@ -699,7 +775,7 @@
     }
    ]
   },
-  "scenario_machine_block": {
+  "scenario_machine_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 76,
    "fields": [
@@ -708,31 +784,33 @@
      "name": "FILTER_ON_NEXT_FIELD_ID,-1"
     },
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_machine_palette_block"
     },
     {
      "type": "custom",
      "name": "FILTER_ON_NEXT_FIELD_ID,-2"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "struct",
      "name": "object data",
-     "definition": "scenario_object_datum_struct"
+     "definition": "scenario_object_datum_struct_2"
     },
     {
      "type": "struct",
      "name": "device data",
-     "definition": "scenario_device_struct"
+     "definition": "scenario_device_struct_2"
     },
     {
      "type": "struct",
      "name": "machine data",
-     "definition": "scenario_machine_struct_v3"
+     "definition": "scenario_machine_struct_v3_2"
     },
     {
      "type": "terminator",
@@ -740,19 +818,19 @@
     }
    ]
   },
-  "scenario_machine_struct_v3": {
+  "scenario_machine_struct_v3_2": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_4"
     },
     {
      "type": "block",
      "name": "pathfinding references",
-     "definition": "pathfinding_object_index_list_block_2"
+     "definition": "pathfinding_object_index_list_block"
     },
     {
      "type": "terminator",
@@ -761,7 +839,7 @@
    ],
    "tag": "smht"
   },
-  "pathfinding_object_index_list_block": {
+  "pathfinding_object_index_list_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -779,41 +857,24 @@
     }
    ]
   },
-  "scenario_machine_palette_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 48,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "name"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "scenario_control_block__v0": {
+  "scenario_control_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_control_palette_block"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "word_flags",
      "name": "not placed",
-     "definition": "not_placed_flags"
+     "definition": "not placed"
     },
     {
      "type": "short_integer",
@@ -829,26 +890,27 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
-     "type": "long_integer",
-     "name": "environment object reference"
+     "type": "long_block_index",
+     "name": "environment object reference",
+     "definition": "dont_use_me_scenario_environment_object_block"
     },
     {
      "type": "struct",
      "name": "device data",
-     "definition": "old_scenario_device_struct"
+     "definition": "old_scenario_device_struct_2"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_5"
+     "definition": "flags_5"
     },
     {
      "type": "short_integer",
-     "name": "DON'T TOUCH THIS"
+     "name": "*DON'T TOUCH THIS"
     },
     {
      "type": "custom",
@@ -856,12 +918,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -870,7 +932,26 @@
     }
    ]
   },
-  "scenario_control_block__v1": {
+  "scenario_control_palette_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 48,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "name"
+    },
+    {
+     "type": "pad",
+     "name": "8*sizeof(long)",
+     "definition": 32
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "scenario_control_block_struct__v1": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
@@ -879,31 +960,33 @@
      "name": "FILTER_ON_NEXT_FIELD_ID,-1"
     },
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_control_palette_block"
     },
     {
      "type": "custom",
      "name": "FILTER_ON_NEXT_FIELD_ID,-2"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "struct",
      "name": "object data",
-     "definition": "scenario_object_datum_struct"
+     "definition": "scenario_object_datum_struct_2"
     },
     {
      "type": "struct",
      "name": "device data",
-     "definition": "scenario_device_struct"
+     "definition": "scenario_device_struct_2"
     },
     {
      "type": "struct",
      "name": "control data",
-     "definition": "scenario_control_struct"
+     "definition": "scenario_control_struct_2"
     },
     {
      "type": "terminator",
@@ -911,22 +994,22 @@
     }
    ]
   },
-  "scenario_control_struct": {
+  "scenario_control_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_5"
+     "definition": "flags_5"
     },
     {
      "type": "short_integer",
-     "name": "DON'T TOUCH THIS"
+     "name": "*DON'T TOUCH THIS"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -936,7 +1019,7 @@
    ],
    "tag": "sctt"
   },
-  "scenario_control_block": {
+  "scenario_control_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
@@ -945,31 +1028,33 @@
      "name": "FILTER_ON_NEXT_FIELD_ID,-1"
     },
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_control_palette_block"
     },
     {
      "type": "custom",
      "name": "FILTER_ON_NEXT_FIELD_ID,-2"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "struct",
      "name": "object data",
-     "definition": "scenario_object_datum_struct"
+     "definition": "scenario_object_datum_struct_2"
     },
     {
      "type": "struct",
      "name": "device data",
-     "definition": "scenario_device_struct"
+     "definition": "scenario_device_struct_2"
     },
     {
      "type": "struct",
      "name": "control data",
-     "definition": "scenario_control_struct"
+     "definition": "scenario_control_struct_2"
     },
     {
      "type": "terminator",
@@ -977,41 +1062,24 @@
     }
    ]
   },
-  "scenario_control_palette_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 48,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "name"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "scenario_light_fixture_block__v0": {
+  "scenario_light_fixture_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 88,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_light_fixture_palette_block"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "word_flags",
      "name": "not placed",
-     "definition": "not_placed_flags"
+     "definition": "not placed"
     },
     {
      "type": "short_integer",
@@ -1027,17 +1095,18 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
-     "type": "long_integer",
-     "name": "environment object reference"
+     "type": "long_block_index",
+     "name": "environment object reference",
+     "definition": "dont_use_me_scenario_environment_object_block"
     },
     {
      "type": "struct",
      "name": "device data",
-     "definition": "old_scenario_device_struct"
+     "definition": "old_scenario_device_struct_2"
     },
     {
      "type": "real_rgb_color",
@@ -1057,7 +1126,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -1066,7 +1135,26 @@
     }
    ]
   },
-  "scenario_light_fixture_block__v1": {
+  "scenario_light_fixture_palette_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 48,
+   "fields": [
+    {
+     "type": "tag_reference",
+     "name": "name"
+    },
+    {
+     "type": "pad",
+     "name": "8*sizeof(long)",
+     "definition": 32
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "scenario_light_fixture_block_struct__v1": {
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
@@ -1075,31 +1163,33 @@
      "name": "FILTER_ON_NEXT_FIELD_ID,-1"
     },
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_light_fixture_palette_block"
     },
     {
      "type": "custom",
      "name": "FILTER_ON_NEXT_FIELD_ID,-2"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "struct",
      "name": "object data",
-     "definition": "scenario_object_datum_struct"
+     "definition": "scenario_object_datum_struct_2"
     },
     {
      "type": "struct",
      "name": "device data",
-     "definition": "scenario_device_struct"
+     "definition": "scenario_device_struct_2"
     },
     {
      "type": "struct",
      "name": "light_fixture data",
-     "definition": "scenario_light_fixture_struct"
+     "definition": "scenario_light_fixture_struct_2"
     },
     {
      "type": "terminator",
@@ -1107,7 +1197,7 @@
     }
    ]
   },
-  "scenario_light_fixture_struct": {
+  "scenario_light_fixture_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -1134,7 +1224,7 @@
    ],
    "tag": "slft"
   },
-  "scenario_light_fixture_block": {
+  "scenario_light_fixture_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
@@ -1143,68 +1233,33 @@
      "name": "FILTER_ON_NEXT_FIELD_ID,-1"
     },
     {
-     "type": "short_integer",
-     "name": "type"
+     "type": "short_block_index",
+     "name": "type",
+     "definition": "scenario_light_fixture_palette_block"
     },
     {
      "type": "custom",
      "name": "FILTER_ON_NEXT_FIELD_ID,-2"
     },
     {
-     "type": "short_integer",
-     "name": "name"
+     "type": "short_block_index",
+     "name": "name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "struct",
      "name": "object data",
-     "definition": "scenario_object_datum_struct"
+     "definition": "scenario_object_datum_struct_2"
     },
     {
      "type": "struct",
      "name": "device data",
-     "definition": "scenario_device_struct"
+     "definition": "scenario_device_struct_2"
     },
     {
      "type": "struct",
      "name": "light_fixture data",
-     "definition": "scenario_light_fixture_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "scenario_light_fixture_palette_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 48,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "name"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "g_scenario_editor_folder_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 260,
-   "fields": [
-    {
-     "type": "long_integer",
-     "name": "parent folder"
-    },
-    {
-     "type": "long_string",
-     "name": "name"
+     "definition": "scenario_light_fixture_struct_2"
     },
     {
      "type": "terminator",
@@ -1213,19 +1268,18 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "default sky enabled"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "can change only once"
    ]
   },
-  "not_placed_flags": {
+  "not placed": {
    "options": [
     "not automatically",
     "unused",
@@ -1238,7 +1292,7 @@
     "create at rest"
    ]
   },
-  "flags_flags_3": {
+  "flags_3": {
    "options": [
     "initially open (1.0)",
     "initially off (0.0)",
@@ -1247,7 +1301,7 @@
     "not usable from any side"
    ]
   },
-  "flags_flags_4": {
+  "flags_4": {
    "options": [
     "does not operate automatically",
     "one-sided",
@@ -1257,12 +1311,12 @@
     "does not close automatically"
    ]
   },
-  "unnamed_flags": {
+  "enum_0x100fdec": {
    "options": [
     "mirrored"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "biped",
     "vehicle",
@@ -1279,7 +1333,7 @@
     "creature"
    ]
   },
-  "source_enum": {
+  "source": {
    "options": [
     "structure",
     "editor",
@@ -1287,46 +1341,43 @@
     "legacy"
    ]
   },
-  "bsp_policy_enum": {
+  "bsp policy": {
    "options": [
     "default",
     "always placed",
     "manual bsp placement"
    ]
   },
-  "flags_flags_5": {
+  "flags_5": {
    "options": [
     "usable from both sides"
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "scenario_structure_bsp_reference_block": {
-   "0": "scenario_structure_bsp_reference_block__v0",
-   "1": "scenario_structure_bsp_reference_block"
+  "scenario_structure_bsp_reference_block_struct": {
+   "0": "scenario_structure_bsp_reference_block_struct__v0",
+   "1": "scenario_structure_bsp_reference_block_struct"
   },
-  "scenario_object_datum_struct": {
+  "scenario_object_datum_struct_2": {
    "0": "scenario_object_datum_struct__v0",
-   "1": "scenario_object_datum_struct"
+   "1": "scenario_object_datum_struct_2"
   },
-  "scenario_machine_block": {
-   "0": "scenario_machine_block__v0",
-   "1": "scenario_machine_block__v1",
-   "2": "scenario_machine_block__v2",
-   "3": "scenario_machine_block"
+  "scenario_machine_block_struct": {
+   "0": "scenario_machine_block_struct__v0",
+   "1": "scenario_machine_block_struct__v1",
+   "2": "scenario_machine_block_struct__v2",
+   "3": "scenario_machine_block_struct"
   },
-  "scenario_control_block": {
-   "0": "scenario_control_block__v0",
-   "1": "scenario_control_block__v1",
-   "2": "scenario_control_block"
+  "scenario_control_block_struct": {
+   "0": "scenario_control_block_struct__v0",
+   "1": "scenario_control_block_struct__v1",
+   "2": "scenario_control_block_struct"
   },
-  "scenario_light_fixture_block": {
-   "0": "scenario_light_fixture_block__v0",
-   "1": "scenario_light_fixture_block__v1",
-   "2": "scenario_light_fixture_block"
+  "scenario_light_fixture_block_struct": {
+   "0": "scenario_light_fixture_block_struct__v0",
+   "1": "scenario_light_fixture_block_struct__v1",
+   "2": "scenario_light_fixture_block_struct"
   }
  }
 }

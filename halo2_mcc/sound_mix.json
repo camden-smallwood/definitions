@@ -2,13 +2,14 @@
  "name": "sound_mix",
  "tag": "snmx",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "sound_mix_block",
  "blocks": {
   "sound_mix_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sound_mix_block_struct"
+   "struct": "sound_mix_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -59,7 +60,7 @@
     {
      "type": "struct",
      "name": "global mix",
-     "definition": "sound_global_mix_struct"
+     "definition": "sound_global_mix_struct_2"
     },
     {
      "type": "terminator",
@@ -67,7 +68,7 @@
     }
    ]
   },
-  "sound_global_mix_struct": {
+  "sound_global_mix_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
@@ -126,11 +127,5 @@
    ],
    "tag": "sngl"
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

@@ -2,13 +2,14 @@
  "name": "sound_environment",
  "tag": "snde",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "sound_environment_block",
  "blocks": {
   "sound_environment_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sound_environment_block_struct"
+   "struct": "sound_environment_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -18,7 +19,7 @@
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -27,7 +28,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -84,7 +85,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -99,7 +100,7 @@
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -108,7 +109,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -165,7 +166,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -175,11 +176,6 @@
    ]
   }
  },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
   "sound_environment_block_struct": {
    "0": "sound_environment_block_struct__v0",

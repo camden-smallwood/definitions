@@ -3,17 +3,18 @@
  "tag": "mply",
  "version": 1,
  "flags": 0,
+ "parent_tag": null,
  "block": "multiplayer_scenario_description_block",
  "blocks": {
-  "scenario_description_block_2": {
+  "scenario_description_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "scenario_description_block"
+   "struct": "scenario_description_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_MULTIPLAYER_SCENARIOS"
   },
   "multiplayer_scenario_description_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "multiplayer_scenario_description_block_struct"
+   "struct": "multiplayer_scenario_description_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,7 +25,7 @@
     {
      "type": "block",
      "name": "multiplayer scenarios",
-     "definition": "scenario_description_block_2"
+     "definition": "scenario_description_block"
     },
     {
      "type": "terminator",
@@ -32,7 +33,7 @@
     }
    ]
   },
-  "scenario_description_block": {
+  "scenario_description_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
@@ -50,7 +51,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(short)",
      "definition": 4
     },
     {
@@ -59,11 +60,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

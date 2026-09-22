@@ -3,17 +3,18 @@
  "tag": "colo",
  "version": 1,
  "flags": 0,
+ "parent_tag": null,
  "block": "color_table_block",
  "blocks": {
-  "color_block_2": {
+  "color_block": {
    "max_count": 512,
-   "max_count_string": "512",
-   "struct": "color_block"
+   "struct": "color_block_struct",
+   "max_count_string": "MAXIMUM_COLORS_PER_COLOR_TABLE_GROUP"
   },
   "color_table_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "color_table_block_struct"
+   "struct": "color_table_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,7 +25,7 @@
     {
      "type": "block",
      "name": "colors",
-     "definition": "color_block_2"
+     "definition": "color_block"
     },
     {
      "type": "terminator",
@@ -32,7 +33,7 @@
     }
    ]
   },
-  "color_block": {
+  "color_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
@@ -50,11 +51,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

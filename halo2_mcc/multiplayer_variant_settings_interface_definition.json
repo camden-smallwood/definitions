@@ -2,43 +2,39 @@
  "name": "multiplayer_variant_settings_interface_definition",
  "tag": "goof",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "multiplayer_variant_settings_interface_definition_block",
  "blocks": {
-  "text_value_pair_block_2": {
+  "text_value_pair_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "text_value_pair_block"
+   "struct": "text_value_pair_block_struct",
+   "max_count_string": "k_maximum_text_value_pair_blocks"
   },
-  "null_block_2": {
+  "null_block": {
    "max_count": 0,
-   "max_count_string": "0",
-   "struct": "null_block"
+   "struct": "null_block_struct",
+   "max_count_string": "0"
   },
-  "variant_setting_edit_reference_block_2": {
+  "variant_setting_edit_reference_block": {
    "max_count": 53,
-   "max_count_string": "53",
-   "struct": "variant_setting_edit_reference_block"
+   "struct": "variant_setting_edit_reference_block_struct",
+   "max_count_string": "k_maximum_game_setting_blocks"
   },
-  "default_variant_settings_block_2": {
+  "default_variant_settings_block": {
    "max_count": 158,
-   "max_count_string": "158",
-   "struct": "default_variant_settings_block"
+   "struct": "default_variant_settings_block_struct",
+   "max_count_string": "k_number_of_editable_game_variant_parameters"
   },
-  "g_default_variants_block_2": {
+  "g_default_variants_block": {
    "max_count": 100,
-   "max_count_string": "100",
-   "struct": "g_default_variants_block"
-  },
-  "default_variant_settings_block_3": {
-   "max_count": 158,
-   "max_count_string": "158",
-   "struct": "default_variant_settings_block"
+   "struct": "g_default_variants_block_struct",
+   "max_count_string": "k_maximum_default_variants"
   },
   "multiplayer_variant_settings_interface_definition_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "multiplayer_variant_settings_interface_definition_block_struct"
+   "struct": "multiplayer_variant_settings_interface_definition_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -61,7 +57,7 @@
     {
      "type": "block",
      "name": "game engine settings",
-     "definition": "variant_setting_edit_reference_block_2"
+     "definition": "variant_setting_edit_reference_block"
     },
     {
      "type": "tag_reference",
@@ -70,17 +66,17 @@
     {
      "type": "block",
      "name": "default variants",
-     "definition": "g_default_variants_block_2"
+     "definition": "g_default_variants_block"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "custom",
@@ -89,7 +85,7 @@
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "custom",
@@ -98,47 +94,47 @@
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "custom",
@@ -159,29 +155,29 @@
     }
    ]
   },
-  "variant_setting_edit_reference_block": {
+  "variant_setting_edit_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
     {
      "type": "long_enum",
      "name": "setting category",
-     "definition": "setting_category_enum"
+     "definition": "setting category"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "block",
      "name": "options",
-     "definition": "text_value_pair_block_2"
+     "definition": "text_value_pair_block"
     },
     {
      "type": "block",
      "name": null,
-     "definition": "null_block_2"
+     "definition": "null_block"
     },
     {
      "type": "terminator",
@@ -189,7 +185,7 @@
     }
    ]
   },
-  "text_value_pair_block": {
+  "text_value_pair_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -203,7 +199,7 @@
     }
    ]
   },
-  "null_block": {
+  "null_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 0,
    "fields": [
@@ -213,7 +209,7 @@
     }
    ]
   },
-  "g_default_variants_block": {
+  "g_default_variants_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -224,12 +220,12 @@
     {
      "type": "long_enum",
      "name": "variant type",
-     "definition": "variant_type_enum"
+     "definition": "variant type"
     },
     {
      "type": "block",
      "name": "settings",
-     "definition": "default_variant_settings_block_2"
+     "definition": "default_variant_settings_block"
     },
     {
      "type": "char_integer",
@@ -237,7 +233,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3",
      "definition": 3
     },
     {
@@ -246,14 +242,14 @@
     }
    ]
   },
-  "default_variant_settings_block": {
+  "default_variant_settings_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
     {
      "type": "long_enum",
      "name": "setting category",
-     "definition": "setting_category_enum_2"
+     "definition": "setting category_2"
     },
     {
      "type": "long_integer",
@@ -265,7 +261,7 @@
     }
    ]
   },
-  "create_new_variant_struct": {
+  "create_new_variant_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -276,12 +272,12 @@
     {
      "type": "long_enum",
      "name": "unused variant type",
-     "definition": "variant_type_enum"
+     "definition": "variant type"
     },
     {
      "type": "block",
      "name": "settings",
-     "definition": "default_variant_settings_block_3"
+     "definition": "default_variant_settings_block"
     },
     {
      "type": "char_integer",
@@ -289,7 +285,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3",
      "definition": 3
     },
     {
@@ -306,7 +302,7 @@
     {
      "type": "struct",
      "name": null,
-     "definition": "create_new_variant_struct"
+     "definition": "create_new_variant_struct_2"
     },
     {
      "type": "terminator",
@@ -322,7 +318,7 @@
   }
  },
  "enums_flags": {
-  "setting_category_enum": {
+  "setting category": {
    "options": [
     "match-ctf",
     "match-slayer",
@@ -379,7 +375,7 @@
     "team-infection"
    ]
   },
-  "variant_type_enum": {
+  "variant type": {
    "options": [
     "slayer",
     "oddball",
@@ -395,7 +391,7 @@
     "race"
    ]
   },
-  "setting_category_enum_2": {
+  "setting category_2": {
    "options": [
     "match round setting",
     "match ctf score to win",
@@ -557,9 +553,5 @@
     "ctf flag shows player emblem"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

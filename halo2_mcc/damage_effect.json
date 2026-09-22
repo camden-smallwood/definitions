@@ -2,28 +2,29 @@
  "name": "damage_effect",
  "tag": "jpt!",
  "version": 6,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "damage_effect_block",
  "blocks": {
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "damage_effect_player_response_block_2": {
+  "damage_effect_player_response_block": {
    "max_count": 2,
-   "max_count_string": "2",
-   "struct": "damage_effect_player_response_block"
+   "struct": "damage_effect_player_response_block_struct",
+   "max_count_string": "2"
   },
   "damage_effect_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "damage_effect_block_struct"
+   "struct": "damage_effect_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -42,7 +43,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -60,12 +61,12 @@
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "short_enum",
      "name": "priority",
-     "definition": "priority_enum"
+     "definition": "priority"
     },
     {
      "type": "useless_pad",
@@ -79,11 +80,11 @@
     {
      "type": "short_enum",
      "name": "fade function",
-     "definition": "fade_function_enum"
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -115,11 +116,11 @@
     {
      "type": "short_enum",
      "name": "fade function",
-     "definition": "fade_function_enum"
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -138,11 +139,11 @@
     {
      "type": "short_enum",
      "name": "fade function",
-     "definition": "fade_function_enum"
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -167,11 +168,11 @@
     {
      "type": "short_enum",
      "name": "fade function",
-     "definition": "fade_function_enum"
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -203,11 +204,11 @@
     {
      "type": "short_enum",
      "name": "falloff function",
-     "definition": "fade_function_enum"
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -226,11 +227,11 @@
     {
      "type": "short_enum",
      "name": "wobble function",
-     "definition": "wobble_function_enum"
+     "definition": "wobble function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -297,17 +298,17 @@
     {
      "type": "short_enum",
      "name": "side effect",
-     "definition": "side_effect_enum"
+     "definition": "side effect"
     },
     {
      "type": "short_enum",
      "name": "category",
-     "definition": "category_enum"
+     "definition": "category"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real",
@@ -328,7 +329,7 @@
     {
      "type": "struct",
      "name": "blah",
-     "definition": "damage_outer_cone_angle_struct"
+     "definition": "damage_outer_cone_angle_struct_2"
     },
     {
      "type": "real",
@@ -407,7 +408,7 @@
    ],
    "tag": "masd"
   },
-  "damage_outer_cone_angle_struct": {
+  "damage_outer_cone_angle_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -437,22 +438,22 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_enum",
      "name": "side effect",
-     "definition": "side_effect_enum"
+     "definition": "side effect"
     },
     {
      "type": "short_enum",
      "name": "category",
-     "definition": "category_enum"
+     "definition": "category"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real",
@@ -473,7 +474,7 @@
     {
      "type": "struct",
      "name": "blah",
-     "definition": "damage_outer_cone_angle_struct"
+     "definition": "damage_outer_cone_angle_struct_2"
     },
     {
      "type": "real",
@@ -554,7 +555,7 @@
     {
      "type": "block",
      "name": "player responses",
-     "definition": "damage_effect_player_response_block_2"
+     "definition": "damage_effect_player_response_block"
     },
     {
      "type": "real",
@@ -563,11 +564,11 @@
     {
      "type": "short_enum",
      "name": "fade function",
-     "definition": "fade_function_enum"
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -599,11 +600,11 @@
     {
      "type": "short_enum",
      "name": "falloff function",
-     "definition": "fade_function_enum"
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -622,11 +623,11 @@
     {
      "type": "short_enum",
      "name": "wobble function",
-     "definition": "wobble_function_enum"
+     "definition": "wobble function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -701,34 +702,34 @@
     }
    ]
   },
-  "damage_effect_player_response_block": {
+  "damage_effect_player_response_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 88,
    "fields": [
     {
      "type": "short_enum",
      "name": "response type",
-     "definition": "response_type_enum"
+     "definition": "response type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "struct",
      "name": "screen flash",
-     "definition": "screen_flash_definition_struct"
+     "definition": "screen_flash_definition_struct_2"
     },
     {
      "type": "struct",
      "name": "vibration",
-     "definition": "vibration_definition_struct"
+     "definition": "vibration_definition_struct_2"
     },
     {
      "type": "struct",
      "name": "sound effect",
-     "definition": "damage_effect_sound_effect_definition"
+     "definition": "damage_effect_sound_effect_definition_2"
     },
     {
      "type": "useless_pad",
@@ -741,19 +742,19 @@
     }
    ]
   },
-  "screen_flash_definition_struct": {
+  "screen_flash_definition_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "short_enum",
      "name": "priority",
-     "definition": "priority_enum"
+     "definition": "priority"
     },
     {
      "type": "useless_pad",
@@ -767,11 +768,11 @@
     {
      "type": "short_enum",
      "name": "fade function",
-     "definition": "fade_function_enum"
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -799,19 +800,19 @@
    ],
    "tag": "SFDS"
   },
-  "vibration_definition_struct": {
+  "vibration_definition_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
     {
      "type": "struct",
      "name": "low frequency vibration",
-     "definition": "vibration_frequency_definition_struct"
+     "definition": "vibration_frequency_definition_struct_2"
     },
     {
      "type": "struct",
      "name": "high frequency vibration",
-     "definition": "vibration_frequency_definition_struct"
+     "definition": "vibration_frequency_definition_struct_2"
     },
     {
      "type": "useless_pad",
@@ -825,7 +826,7 @@
    ],
    "tag": "RBDS"
   },
-  "vibration_frequency_definition_struct": {
+  "vibration_frequency_definition_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -840,7 +841,7 @@
     {
      "type": "struct",
      "name": "dirty whore",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "useless_pad",
@@ -869,7 +870,7 @@
     {
      "type": "byte_flags",
      "name": "Flags",
-     "definition": "flags_flags_3"
+     "definition": "Flags"
     },
     {
      "type": "char_integer",
@@ -898,7 +899,7 @@
     {
      "type": "block",
      "name": "Values",
-     "definition": "real_block_2"
+     "definition": "real_block"
     },
     {
      "type": "custom",
@@ -911,7 +912,7 @@
    ],
    "tag": "MAPP"
   },
-  "real_block": {
+  "real_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -925,7 +926,7 @@
     }
    ]
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -936,7 +937,7 @@
     {
      "type": "block",
      "name": "data",
-     "definition": "byte_block_2"
+     "definition": "byte_block"
     },
     {
      "type": "custom",
@@ -949,7 +950,7 @@
    ],
    "tag": "MAPP"
   },
-  "byte_block": {
+  "byte_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -963,7 +964,7 @@
     }
    ]
   },
-  "damage_effect_sound_effect_definition": {
+  "damage_effect_sound_effect_definition_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -982,7 +983,7 @@
     {
      "type": "struct",
      "name": "effect scale function",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -992,15 +993,14 @@
    "tag": "dsfx"
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "don't scale damage by distance",
-    "area damage players only"
+    "area damage players only#area of effect damage only affects players"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "none",
     "lighten",
@@ -1011,14 +1011,14 @@
     "tint"
    ]
   },
-  "priority_enum": {
+  "priority": {
    "options": [
     "low",
     "medium",
     "high"
    ]
   },
-  "fade_function_enum": {
+  "fade function": {
    "options": [
     "linear",
     "late",
@@ -1030,7 +1030,7 @@
     "one"
    ]
   },
-  "wobble_function_enum": {
+  "wobble function": {
    "options": [
     "one",
     "zero",
@@ -1046,7 +1046,7 @@
     "spark"
    ]
   },
-  "side_effect_enum": {
+  "side effect": {
    "options": [
     "none",
     "harmless",
@@ -1054,7 +1054,7 @@
     "emp"
    ]
   },
-  "category_enum": {
+  "category": {
    "options": [
     "none",
     "falling",
@@ -1071,7 +1071,7 @@
     "shotgun"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "does not hurt owner",
     "can cause headshots",
@@ -1091,14 +1091,14 @@
     "does not hurt players"
    ]
   },
-  "response_type_enum": {
+  "response type": {
    "options": [
     "shielded",
     "unshielded",
     "all"
    ]
   },
-  "flags_flags_3": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -1111,17 +1111,14 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "damage_outer_cone_angle_struct": {
+  "damage_outer_cone_angle_struct_2": {
    "0": "damage_outer_cone_angle_struct__v0",
-   "1": "damage_outer_cone_angle_struct"
+   "1": "damage_outer_cone_angle_struct_2"
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   },
   "damage_effect_block_struct": {
    "0": "damage_effect_block_struct__v0",

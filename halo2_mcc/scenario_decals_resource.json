@@ -2,23 +2,24 @@
  "name": "scenario_decals_resource",
  "tag": "dec*",
  "version": 1,
- "flags": 0,
+ "flags": 56,
+ "parent_tag": null,
  "block": "scenario_decals_resource_block",
  "blocks": {
-  "scenario_decal_palette_block_2": {
+  "scenario_decal_palette_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "scenario_decal_palette_block"
+   "struct": "scenario_decal_palette_block_struct",
+   "max_count_string": "MAXIMUM_DECAL_PALETTES_PER_SCENARIO"
   },
-  "scenario_decals_block_2": {
+  "scenario_decals_block": {
    "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "scenario_decals_block"
+   "struct": "scenario_decals_block_struct",
+   "max_count_string": "MAXIMUM_DECALS_PER_SCENARIO"
   },
   "scenario_decals_resource_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "scenario_decals_resource_block_struct"
+   "struct": "scenario_decals_resource_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -29,12 +30,12 @@
     {
      "type": "block",
      "name": "palette",
-     "definition": "scenario_decal_palette_block_2"
+     "definition": "scenario_decal_palette_block"
     },
     {
      "type": "block",
      "name": "decals",
-     "definition": "scenario_decals_block_2"
+     "definition": "scenario_decals_block"
     },
     {
      "type": "terminator",
@@ -42,7 +43,7 @@
     }
    ]
   },
-  "scenario_decal_palette_block": {
+  "scenario_decal_palette_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -56,13 +57,14 @@
     }
    ]
   },
-  "scenario_decals_block": {
+  "scenario_decals_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "decal type"
+     "type": "short_block_index",
+     "name": "decal type",
+     "definition": "scenario_decal_palette_block"
     },
     {
      "type": "char_integer",
@@ -82,11 +84,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

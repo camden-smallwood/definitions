@@ -2,83 +2,44 @@
  "name": "unit_hud_interface",
  "tag": "unhi",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "unit_hud_interface_block",
  "blocks": {
-  "global_hud_multitexture_overlay_effector_definition_2": {
+  "global_hud_multitexture_overlay_effector_definition": {
    "max_count": 30,
-   "max_count_string": "30",
-   "struct": "global_hud_multitexture_overlay_effector_definition"
+   "struct": "global_hud_multitexture_overlay_effector_definition_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_MULTITEXTURE_OVERLAY_EFFECTORS"
   },
-  "global_hud_multitexture_overlay_definition_2": {
+  "global_hud_multitexture_overlay_definition": {
    "max_count": 30,
-   "max_count_string": "30",
-   "struct": "global_hud_multitexture_overlay_definition"
+   "struct": "global_hud_multitexture_overlay_definition_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_MULTITEXTURE_OVERLAYS"
   },
-  "global_hud_multitexture_overlay_definition_3": {
-   "max_count": 30,
-   "max_count_string": "30",
-   "struct": "global_hud_multitexture_overlay_definition"
-  },
-  "g_null_block_2": {
+  "g_null_block": {
    "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
+   "struct": "g_null_block_struct",
+   "max_count_string": "0"
   },
-  "global_hud_multitexture_overlay_definition_4": {
-   "max_count": 30,
-   "max_count_string": "30",
-   "struct": "global_hud_multitexture_overlay_definition"
-  },
-  "g_null_block_3": {
-   "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
-  },
-  "global_hud_multitexture_overlay_definition_5": {
-   "max_count": 30,
-   "max_count_string": "30",
-   "struct": "global_hud_multitexture_overlay_definition"
-  },
-  "global_hud_multitexture_overlay_definition_6": {
-   "max_count": 30,
-   "max_count_string": "30",
-   "struct": "global_hud_multitexture_overlay_definition"
-  },
-  "global_hud_multitexture_overlay_definition_7": {
-   "max_count": 30,
-   "max_count_string": "30",
-   "struct": "global_hud_multitexture_overlay_definition"
-  },
-  "unit_hud_auxilary_overlay_block_2": {
+  "unit_hud_auxilary_overlay_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "unit_hud_auxilary_overlay_block"
+   "struct": "unit_hud_auxilary_overlay_block_struct",
+   "max_count_string": "16"
   },
-  "unit_hud_sound_block_2": {
+  "unit_hud_sound_block": {
    "max_count": 12,
-   "max_count_string": "12",
-   "struct": "unit_hud_sound_block"
+   "struct": "unit_hud_sound_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_HUD_SOUNDS"
   },
-  "global_hud_multitexture_overlay_definition_8": {
-   "max_count": 30,
-   "max_count_string": "30",
-   "struct": "global_hud_multitexture_overlay_definition"
-  },
-  "g_null_block_4": {
-   "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
-  },
-  "unit_hud_auxilary_panel_block_2": {
+  "unit_hud_auxilary_panel_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "unit_hud_auxilary_panel_block"
+   "struct": "unit_hud_auxilary_panel_block_struct",
+   "max_count_string": "16"
   },
   "unit_hud_interface_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "unit_hud_interface_block_struct"
+   "struct": "unit_hud_interface_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -93,16 +54,16 @@
     {
      "type": "short_enum",
      "name": "anchor",
-     "definition": "anchor_enum"
+     "definition": "anchor"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*8",
      "definition": 32
     },
     {
@@ -120,16 +81,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -159,7 +120,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -171,7 +132,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -180,17 +141,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "multitex overlay",
-     "definition": "global_hud_multitexture_overlay_definition_2"
+     "definition": "global_hud_multitexture_overlay_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -208,16 +169,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -247,7 +208,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -259,7 +220,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -268,17 +229,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "multitex overlay",
-     "definition": "global_hud_multitexture_overlay_definition_3"
+     "definition": "global_hud_multitexture_overlay_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -296,16 +257,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -331,7 +292,7 @@
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "char_integer",
@@ -368,11 +329,11 @@
     {
      "type": "block",
      "name": null,
-     "definition": "g_null_block_2"
+     "definition": "g_null_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -393,7 +354,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -411,16 +372,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -450,7 +411,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -462,7 +423,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -471,17 +432,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "multitex overlay",
-     "definition": "global_hud_multitexture_overlay_definition_4"
+     "definition": "global_hud_multitexture_overlay_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -499,16 +460,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -534,7 +495,7 @@
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "char_integer",
@@ -571,11 +532,11 @@
     {
      "type": "block",
      "name": null,
-     "definition": "g_null_block_3"
+     "definition": "g_null_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -592,7 +553,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -610,16 +571,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -649,7 +610,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -661,7 +622,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -670,17 +631,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "multitex overlay",
-     "definition": "global_hud_multitexture_overlay_definition_5"
+     "definition": "global_hud_multitexture_overlay_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -698,16 +659,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -737,7 +698,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -749,7 +710,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -758,22 +719,22 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "multitex overlay",
-     "definition": "global_hud_multitexture_overlay_definition_6"
+     "definition": "global_hud_multitexture_overlay_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*8",
      "definition": 32
     },
     {
@@ -791,52 +752,52 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
      "type": "short_enum",
      "name": "anchor",
-     "definition": "anchor_enum"
+     "definition": "anchor"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*8",
      "definition": 32
     },
     {
      "type": "block",
      "name": "overlays",
-     "definition": "unit_hud_auxilary_overlay_block_2"
+     "definition": "unit_hud_auxilary_overlay_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sounds",
-     "definition": "unit_hud_sound_block_2"
+     "definition": "unit_hud_sound_block"
     },
     {
      "type": "block",
      "name": "meters",
-     "definition": "unit_hud_auxilary_panel_block_2"
+     "definition": "unit_hud_auxilary_panel_block"
     },
     {
      "type": "tag_reference",
@@ -844,12 +805,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*89",
      "definition": 356
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*12",
      "definition": 48
     },
     {
@@ -858,13 +819,13 @@
     }
    ]
   },
-  "global_hud_multitexture_overlay_definition": {
+  "global_hud_multitexture_overlay_definition_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 480,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(word)",
      "definition": 2
     },
     {
@@ -874,46 +835,46 @@
     {
      "type": "short_enum",
      "name": "framebuffer blend func",
-     "definition": "framebuffer_blend_func_enum"
+     "definition": "framebuffer blend func"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
      "type": "short_enum",
      "name": "primary anchor",
-     "definition": "primary_anchor_enum"
+     "definition": "primary anchor"
     },
     {
      "type": "short_enum",
      "name": "secondary anchor",
-     "definition": "primary_anchor_enum"
+     "definition": "primary anchor"
     },
     {
      "type": "short_enum",
      "name": "tertiary anchor",
-     "definition": "primary_anchor_enum"
+     "definition": "primary anchor"
     },
     {
      "type": "short_enum",
      "name": "0 to 1 blend func",
-     "definition": "0_to_1_blend_func_enum"
+     "definition": "0 to 1 blend func"
     },
     {
      "type": "short_enum",
      "name": "1 to 2 blend func",
-     "definition": "0_to_1_blend_func_enum"
+     "definition": "0 to 1 blend func"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(word)",
      "definition": 2
     },
     {
@@ -955,36 +916,36 @@
     {
      "type": "short_enum",
      "name": "primary wrap mode",
-     "definition": "primary_wrap_mode_enum"
+     "definition": "primary wrap mode"
     },
     {
      "type": "short_enum",
      "name": "secondary wrap mode",
-     "definition": "primary_wrap_mode_enum"
+     "definition": "primary wrap mode"
     },
     {
      "type": "short_enum",
      "name": "tertiary wrap mode",
-     "definition": "primary_wrap_mode_enum"
+     "definition": "primary wrap mode"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "46*sizeof(long)",
      "definition": 184
     },
     {
      "type": "block",
      "name": "effectors",
-     "definition": "global_hud_multitexture_overlay_effector_definition_2"
+     "definition": "global_hud_multitexture_overlay_effector_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "32*sizeof(long)",
      "definition": 128
     },
     {
@@ -993,33 +954,33 @@
     }
    ]
   },
-  "global_hud_multitexture_overlay_effector_definition": {
+  "global_hud_multitexture_overlay_effector_definition_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 220,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "16*sizeof(long)",
      "definition": 64
     },
     {
      "type": "short_enum",
      "name": "destination type",
-     "definition": "destination_type_enum"
+     "definition": "destination type"
     },
     {
      "type": "short_enum",
      "name": "destination",
-     "definition": "destination_enum"
+     "definition": "destination"
     },
     {
      "type": "short_enum",
      "name": "source",
-     "definition": "source_enum"
+     "definition": "source"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(word)",
      "definition": 2
     },
     {
@@ -1032,7 +993,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "16*sizeof(long)",
      "definition": 64
     },
     {
@@ -1046,11 +1007,11 @@
     {
      "type": "short_enum",
      "name": "periodic function",
-     "definition": "periodic_function_enum"
+     "definition": "periodic function"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(word)",
      "definition": 2
     },
     {
@@ -1063,7 +1024,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -1072,7 +1033,7 @@
     }
    ]
   },
-  "g_null_block": {
+  "g_null_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 0,
    "fields": [
@@ -1086,7 +1047,7 @@
     }
    ]
   },
-  "unit_hud_auxilary_overlay_block": {
+  "unit_hud_auxilary_overlay_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 132,
    "fields": [
@@ -1105,16 +1066,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -1144,7 +1105,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -1156,7 +1117,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -1165,32 +1126,32 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "multitex overlay",
-     "definition": "global_hud_multitexture_overlay_definition_7"
+     "definition": "global_hud_multitexture_overlay_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
@@ -1199,7 +1160,7 @@
     }
    ]
   },
-  "unit_hud_sound_block": {
+  "unit_hud_sound_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 56,
    "fields": [
@@ -1210,7 +1171,7 @@
     {
      "type": "long_flags",
      "name": "latched to",
-     "definition": "latched_to_flags"
+     "definition": "latched to"
     },
     {
      "type": "real",
@@ -1218,7 +1179,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -1227,23 +1188,23 @@
     }
    ]
   },
-  "unit_hud_auxilary_panel_block": {
+  "unit_hud_auxilary_panel_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 324,
    "fields": [
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum_2"
+     "definition": "type_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -1261,16 +1222,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -1300,7 +1261,7 @@
     {
      "type": "word_flags",
      "name": "flash flags",
-     "definition": "flash_flags_flags"
+     "definition": "flash flags"
     },
     {
      "type": "real",
@@ -1312,7 +1273,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -1321,17 +1282,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "multitex overlay",
-     "definition": "global_hud_multitexture_overlay_definition_8"
+     "definition": "global_hud_multitexture_overlay_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -1349,16 +1310,16 @@
     {
      "type": "word_flags",
      "name": "scaling flags",
-     "definition": "scaling_flags_flags"
+     "definition": "scaling flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*5",
      "definition": 20
     },
     {
@@ -1384,7 +1345,7 @@
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "char_integer",
@@ -1421,11 +1382,11 @@
     {
      "type": "block",
      "name": null,
-     "definition": "g_null_block_4"
+     "definition": "g_null_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -1435,16 +1396,16 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*6",
      "definition": 24
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "16*sizeof(long)",
      "definition": 64
     },
     {
@@ -1454,9 +1415,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "anchor_enum": {
+  "anchor": {
    "options": [
     "top left",
     "top right",
@@ -1466,18 +1426,18 @@
     "crosshair"
    ]
   },
-  "scaling_flags_flags": {
+  "scaling flags": {
    "options": [
     "don't scale offset",
     "don't scale size"
    ]
   },
-  "flash_flags_flags": {
+  "flash flags": {
    "options": [
     "reverse default/flashing colors"
    ]
   },
-  "framebuffer_blend_func_enum": {
+  "framebuffer blend func": {
    "options": [
     "alpha blend",
     "multiply",
@@ -1492,13 +1452,13 @@
     "none"
    ]
   },
-  "primary_anchor_enum": {
+  "primary anchor": {
    "options": [
     "texture",
     "screen"
    ]
   },
-  "0_to_1_blend_func_enum": {
+  "0 to 1 blend func": {
    "options": [
     "add",
     "subtract",
@@ -1507,13 +1467,13 @@
     "dot"
    ]
   },
-  "primary_wrap_mode_enum": {
+  "primary wrap mode": {
    "options": [
     "clamp",
     "wrap"
    ]
   },
-  "destination_type_enum": {
+  "destination type": {
    "options": [
     "tint [0,1]",
     "horizontal offset",
@@ -1521,7 +1481,7 @@
     "fade [0,1]"
    ]
   },
-  "destination_enum": {
+  "destination": {
    "options": [
     "geometry offset",
     "primary map",
@@ -1529,7 +1489,7 @@
     "tertiary map"
    ]
   },
-  "source_enum": {
+  "source": {
    "options": [
     "player pitch",
     "player pitch tangent",
@@ -1541,7 +1501,7 @@
     "weapon zoom level"
    ]
   },
-  "periodic_function_enum": {
+  "periodic function": {
    "options": [
     "one",
     "zero",
@@ -1557,7 +1517,7 @@
     "spark"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "use min/max for state changes",
     "interpolate between min/max flash colors as state changes",
@@ -1566,17 +1526,17 @@
     "invert interpolation"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "team icon"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "use team color"
    ]
   },
-  "latched_to_flags": {
+  "latched to": {
    "options": [
     "shield recharging",
     "shield damaged",
@@ -1588,20 +1548,16 @@
     "health major damage"
    ]
   },
-  "type_enum_2": {
+  "type_2": {
    "options": [
     "integrated light"
    ]
   },
-  "flags_flags_3": {
+  "flags_3": {
    "options": [
     "show only when active",
     "flash once if activated while disabled"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

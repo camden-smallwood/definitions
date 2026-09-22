@@ -2,13 +2,14 @@
  "name": "patchy_fog",
  "tag": "fpch",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "patchy_fog_block",
  "blocks": {
   "patchy_fog_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "patchy_fog_block_struct"
+   "struct": "patchy_fog_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -19,11 +20,11 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -122,17 +123,12 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "separate layer depths",
     "sort behind transparents"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

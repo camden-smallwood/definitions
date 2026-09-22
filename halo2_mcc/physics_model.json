@@ -2,448 +2,214 @@
  "name": "physics_model",
  "tag": "phmo",
  "version": 2,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "physics_model_block",
  "blocks": {
-  "rigid_bodies_block_2": {
+  "nodes_block": {
+   "max_count": 255,
+   "struct": "nodes_block_struct",
+   "max_count_string": "MAXIMUM_NODES_PER_MODEL"
+  },
+  "rigid_body_indices_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "rigid_bodies_block"
+   "struct": "rigid_body_indices_block_struct",
+   "max_count_string": "k_maximum_rigid_bodies_per_physics_model"
   },
-  "materials_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "materials_block"
-  },
-  "spheres_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "spheres_block"
-  },
-  "pills_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "pills_block"
-  },
-  "boxes_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "boxes_block"
-  },
-  "triangles_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "triangles_block"
-  },
-  "polyhedra_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "polyhedra_block"
-  },
-  "polyhedron_four_vectors_block_2": {
-   "max_count": 4096,
-   "max_count_string": "4096",
-   "struct": "polyhedron_four_vectors_block"
-  },
-  "polyhedron_plane_equations_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "polyhedron_plane_equations_block"
-  },
-  "mass_distributions_block_2": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "mass_distributions_block"
-  },
-  "lists_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "lists_block"
-  },
-  "list_shapes_block_2": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "list_shapes_block"
-  },
-  "mopps_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "mopps_block"
-  },
-  "hinge_constraints_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "hinge_constraints_block"
-  },
-  "ragdoll_constraints_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "ragdoll_constraints_block"
-  },
-  "rigid_body_indices_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "rigid_body_indices_block"
-  },
-  "permutations_block_2": {
+  "permutations_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "permutations_block"
+   "struct": "permutations_block_struct",
+   "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION"
   },
-  "regions_block_2": {
+  "regions_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "regions_block"
+   "struct": "regions_block_struct",
+   "max_count_string": "MAXIMUM_REGIONS_PER_MODEL"
   },
-  "nodes_block_2": {
-   "max_count": 255,
-   "max_count_string": "255",
-   "struct": "nodes_block"
+  "rigid_bodies_block": {
+   "max_count": 64,
+   "struct": "rigid_bodies_block_struct",
+   "max_count_string": "k_maximum_rigid_bodies_per_physics_model"
   },
-  "tag_import_file_block_2": {
+  "phantom_types_block": {
+   "max_count": 16,
+   "struct": "phantom_types_block_struct",
+   "max_count_string": "k_maximum_phantom_types_per_physics_model"
+  },
+  "materials_block": {
+   "max_count": 64,
+   "struct": "materials_block_struct",
+   "max_count_string": "k_maximum_materials_per_physics_model"
+  },
+  "phantoms_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "tag_import_file_block"
+   "struct": "phantoms_block_struct",
+   "max_count_string": "k_maximum_phantoms_per_physics_model"
   },
-  "global_tag_import_info_block_2": {
+  "spheres_block": {
+   "max_count": 1024,
+   "struct": "spheres_block_struct",
+   "max_count_string": "k_maximum_shapes_per_physics_model"
+  },
+  "pills_block": {
+   "max_count": 1024,
+   "struct": "pills_block_struct",
+   "max_count_string": "k_maximum_shapes_per_physics_model"
+  },
+  "boxes_block": {
+   "max_count": 1024,
+   "struct": "boxes_block_struct",
+   "max_count_string": "k_maximum_shapes_per_physics_model"
+  },
+  "triangles_block": {
+   "max_count": 1024,
+   "struct": "triangles_block_struct",
+   "max_count_string": "k_maximum_shapes_per_physics_model"
+  },
+  "polyhedra_block": {
+   "max_count": 1024,
+   "struct": "polyhedra_block_struct",
+   "max_count_string": "k_maximum_shapes_per_physics_model"
+  },
+  "polyhedron_four_vectors_block": {
+   "max_count": 4096,
+   "struct": "polyhedron_four_vectors_block_struct",
+   "max_count_string": "k_maximum_four_vectors_per_physics_model"
+  },
+  "polyhedron_plane_equations_block": {
+   "max_count": 1024,
+   "struct": "polyhedron_plane_equations_block_struct",
+   "max_count_string": "k_maximum_plane_equations_per_physics_model"
+  },
+  "mass_distributions_block": {
+   "max_count": 256,
+   "struct": "mass_distributions_block_struct",
+   "max_count_string": "k_maximum_inertia_tensors_per_physics_model"
+  },
+  "lists_block": {
+   "max_count": 64,
+   "struct": "lists_block_struct",
+   "max_count_string": "k_maximum_rigid_bodies_per_physics_model"
+  },
+  "list_shapes_block": {
+   "max_count": 256,
+   "struct": "list_shapes_block_struct",
+   "max_count_string": "k_maximum_list_shapes_per_physics_model"
+  },
+  "mopps_block": {
+   "max_count": 64,
+   "struct": "mopps_block_struct",
+   "max_count_string": "k_maximum_rigid_bodies_per_physics_model"
+  },
+  "physics_model_constraint_edge_constraint_block": {
+   "max_count": 64,
+   "struct": "physics_model_constraint_edge_constraint_block_struct",
+   "max_count_string": "k_maximum_constraints_per_physics_model"
+  },
+  "physics_model_node_constraint_edge_block": {
+   "max_count": 4096,
+   "struct": "physics_model_node_constraint_edge_block_struct",
+   "max_count_string": "k_maximum_node_constraint_edges_per_physics_model"
+  },
+  "hinge_constraints_block": {
+   "max_count": 64,
+   "struct": "hinge_constraints_block_struct",
+   "max_count_string": "k_maximum_constraints_per_physics_model"
+  },
+  "ragdoll_constraints_block": {
+   "max_count": 64,
+   "struct": "ragdoll_constraints_block_struct",
+   "max_count_string": "k_maximum_constraints_per_physics_model"
+  },
+  "tag_import_file_block": {
+   "max_count": 1024,
+   "struct": "tag_import_file_block_struct",
+   "max_count_string": "MAXIMUM_FILES_PER_TAG_IMPORT_INFO"
+  },
+  "global_tag_import_info_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "global_tag_import_info_block"
+   "struct": "global_tag_import_info_block_struct",
+   "max_count_string": "1"
   },
-  "error_report_vertices_block_2": {
+  "error_report_vertices_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_vertices_block"
+   "struct": "error_report_vertices_block_struct",
+   "max_count_string": "MAXIMUM_VERTICES_PER_ERROR_REPORT"
   },
-  "error_report_vectors_block_2": {
+  "error_report_vectors_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_vectors_block"
+   "struct": "error_report_vectors_block_struct",
+   "max_count_string": "MAXIMUM_VECTORS_PER_ERROR_REPORT"
   },
-  "error_report_lines_block_2": {
+  "error_report_lines_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_lines_block"
+   "struct": "error_report_lines_block_struct",
+   "max_count_string": "MAXIMUM_LINES_PER_ERROR_REPORT"
   },
-  "error_report_triangles_block_2": {
+  "error_report_triangles_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_triangles_block"
+   "struct": "error_report_triangles_block_struct",
+   "max_count_string": "MAXIMUM_TRIANGLES_PER_ERROR_REPORT"
   },
-  "error_report_quads_block_2": {
+  "error_report_quads_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_quads_block"
+   "struct": "error_report_quads_block_struct",
+   "max_count_string": "MAXIMUM_QUADS_PER_ERROR_REPORT"
   },
-  "error_report_comments_block_2": {
+  "error_report_comments_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_report_comments_block"
+   "struct": "error_report_comments_block_struct",
+   "max_count_string": "MAXIMUM_COMMENTS_PER_ERROR_REPORT"
   },
-  "error_reports_block_2": {
+  "error_reports_block": {
    "max_count": 1048576,
-   "max_count_string": "1048576",
-   "struct": "error_reports_block"
+   "struct": "error_reports_block_struct",
+   "max_count_string": "MAXIMUM_REPORTS_PER_ERROR_REPORT_CATEGORY"
   },
-  "global_error_report_categories_block_2": {
+  "global_error_report_categories_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "global_error_report_categories_block"
+   "struct": "global_error_report_categories_block_struct",
+   "max_count_string": "MAXIMUM_ERROR_REPORT_CATEGORIES"
   },
-  "phantom_types_block_2": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "phantom_types_block"
-  },
-  "physics_model_constraint_edge_constraint_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "physics_model_constraint_edge_constraint_block"
-  },
-  "physics_model_node_constraint_edge_block_2": {
-   "max_count": 4096,
-   "max_count_string": "4096",
-   "struct": "physics_model_node_constraint_edge_block"
-  },
-  "rigid_bodies_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "rigid_bodies_block"
-  },
-  "materials_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "materials_block"
-  },
-  "spheres_block_3": {
+  "multi_spheres_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "spheres_block"
+   "struct": "multi_spheres_block_struct",
+   "max_count_string": "k_maximum_shapes_per_physics_model"
   },
-  "multi_spheres_block_2": {
+  "point_to_path_curve_point_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "multi_spheres_block"
+   "struct": "point_to_path_curve_point_block_struct",
+   "max_count_string": "1024"
   },
-  "pills_block_3": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "pills_block"
-  },
-  "boxes_block_3": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "boxes_block"
-  },
-  "triangles_block_3": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "triangles_block"
-  },
-  "polyhedra_block_3": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "polyhedra_block"
-  },
-  "polyhedron_four_vectors_block_3": {
-   "max_count": 4096,
-   "max_count_string": "4096",
-   "struct": "polyhedron_four_vectors_block"
-  },
-  "polyhedron_plane_equations_block_3": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "polyhedron_plane_equations_block"
-  },
-  "mass_distributions_block_3": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "mass_distributions_block"
-  },
-  "lists_block_3": {
+  "point_to_path_curve_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "lists_block"
+   "struct": "point_to_path_curve_block_struct",
+   "max_count_string": "k_maximum_rigid_bodies_per_physics_model"
   },
-  "list_shapes_block_3": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "list_shapes_block"
-  },
-  "mopps_block_3": {
+  "limited_hinge_constraints_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "mopps_block"
+   "struct": "limited_hinge_constraints_block_struct",
+   "max_count_string": "k_maximum_constraints_per_physics_model"
   },
-  "hinge_constraints_block_3": {
+  "ball_and_socket_constraints_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "hinge_constraints_block"
+   "struct": "ball_and_socket_constraints_block_struct",
+   "max_count_string": "k_maximum_constraints_per_physics_model"
   },
-  "ragdoll_constraints_block_3": {
+  "stiff_spring_constraints_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "ragdoll_constraints_block"
+   "struct": "stiff_spring_constraints_block_struct",
+   "max_count_string": "k_maximum_constraints_per_physics_model"
   },
-  "regions_block_3": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "regions_block"
-  },
-  "nodes_block_3": {
-   "max_count": 255,
-   "max_count_string": "255",
-   "struct": "nodes_block"
-  },
-  "global_tag_import_info_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "global_tag_import_info_block"
-  },
-  "global_error_report_categories_block_3": {
+  "prismatic_constraints_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "global_error_report_categories_block"
-  },
-  "point_to_path_curve_point_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "point_to_path_curve_point_block"
-  },
-  "point_to_path_curve_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "point_to_path_curve_block"
-  },
-  "limited_hinge_constraints_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "limited_hinge_constraints_block"
-  },
-  "ball_and_socket_constraints_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "ball_and_socket_constraints_block"
-  },
-  "stiff_spring_constraints_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "stiff_spring_constraints_block"
-  },
-  "prismatic_constraints_block_2": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "prismatic_constraints_block"
-  },
-  "phantoms_block_2": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "phantoms_block"
-  },
-  "phantom_types_block_3": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "phantom_types_block"
-  },
-  "physics_model_node_constraint_edge_block_3": {
-   "max_count": 4096,
-   "max_count_string": "4096",
-   "struct": "physics_model_node_constraint_edge_block"
-  },
-  "rigid_bodies_block_4": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "rigid_bodies_block"
-  },
-  "materials_block_4": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "materials_block"
-  },
-  "spheres_block_4": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "spheres_block"
-  },
-  "multi_spheres_block_3": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "multi_spheres_block"
-  },
-  "pills_block_4": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "pills_block"
-  },
-  "boxes_block_4": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "boxes_block"
-  },
-  "triangles_block_4": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "triangles_block"
-  },
-  "polyhedra_block_4": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "polyhedra_block"
-  },
-  "polyhedron_four_vectors_block_4": {
-   "max_count": 4096,
-   "max_count_string": "4096",
-   "struct": "polyhedron_four_vectors_block"
-  },
-  "polyhedron_plane_equations_block_4": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "polyhedron_plane_equations_block"
-  },
-  "mass_distributions_block_4": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "mass_distributions_block"
-  },
-  "lists_block_4": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "lists_block"
-  },
-  "list_shapes_block_4": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "list_shapes_block"
-  },
-  "mopps_block_4": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "mopps_block"
-  },
-  "hinge_constraints_block_4": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "hinge_constraints_block"
-  },
-  "ragdoll_constraints_block_4": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "ragdoll_constraints_block"
-  },
-  "regions_block_4": {
-   "max_count": 16,
-   "max_count_string": "16",
-   "struct": "regions_block"
-  },
-  "nodes_block_4": {
-   "max_count": 255,
-   "max_count_string": "255",
-   "struct": "nodes_block"
-  },
-  "global_tag_import_info_block_4": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "global_tag_import_info_block"
-  },
-  "global_error_report_categories_block_4": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "global_error_report_categories_block"
-  },
-  "point_to_path_curve_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "point_to_path_curve_block"
-  },
-  "limited_hinge_constraints_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "limited_hinge_constraints_block"
-  },
-  "ball_and_socket_constraints_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "ball_and_socket_constraints_block"
-  },
-  "stiff_spring_constraints_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "stiff_spring_constraints_block"
-  },
-  "prismatic_constraints_block_3": {
-   "max_count": 64,
-   "max_count_string": "64",
-   "struct": "prismatic_constraints_block"
-  },
-  "phantoms_block_3": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "phantoms_block"
+   "struct": "prismatic_constraints_block_struct",
+   "max_count_string": "k_maximum_constraints_per_physics_model"
   },
   "physics_model_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "physics_model_block_struct"
+   "struct": "physics_model_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -454,7 +220,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -462,73 +228,73 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "14*sizeof(real)",
      "definition": 56
     },
     {
      "type": "block",
      "name": "rigid bodies",
-     "definition": "rigid_bodies_block_2"
+     "definition": "rigid_bodies_block"
     },
     {
      "type": "block",
      "name": "materials",
-     "definition": "materials_block_2"
+     "definition": "materials_block"
     },
     {
      "type": "block",
      "name": "spheres",
-     "definition": "spheres_block_2"
+     "definition": "spheres_block"
     },
     {
      "type": "block",
      "name": "pills",
-     "definition": "pills_block_2"
+     "definition": "pills_block"
     },
     {
      "type": "block",
      "name": "boxes",
-     "definition": "boxes_block_2"
+     "definition": "boxes_block"
     },
     {
      "type": "block",
      "name": "triangles",
-     "definition": "triangles_block_2"
+     "definition": "triangles_block"
     },
     {
      "type": "block",
      "name": "polyhedra",
-     "definition": "polyhedra_block_2"
+     "definition": "polyhedra_block"
     },
     {
      "type": "block",
      "name": "polyhedron four vectors",
-     "definition": "polyhedron_four_vectors_block_2"
+     "definition": "polyhedron_four_vectors_block"
     },
     {
      "type": "block",
      "name": "polyhedron plane equations",
-     "definition": "polyhedron_plane_equations_block_2"
+     "definition": "polyhedron_plane_equations_block"
     },
     {
      "type": "block",
      "name": "mass distributions",
-     "definition": "mass_distributions_block_2"
+     "definition": "mass_distributions_block"
     },
     {
      "type": "block",
      "name": "lists",
-     "definition": "lists_block_2"
+     "definition": "lists_block"
     },
     {
      "type": "block",
      "name": "list shapes",
-     "definition": "list_shapes_block_2"
+     "definition": "list_shapes_block"
     },
     {
      "type": "block",
      "name": "mopps",
-     "definition": "mopps_block_2"
+     "definition": "mopps_block"
     },
     {
      "type": "data",
@@ -538,32 +304,32 @@
     {
      "type": "block",
      "name": "hinge constraints",
-     "definition": "hinge_constraints_block_2"
+     "definition": "hinge_constraints_block"
     },
     {
      "type": "block",
      "name": "ragdoll constraints",
-     "definition": "ragdoll_constraints_block_2"
+     "definition": "ragdoll_constraints_block"
     },
     {
      "type": "block",
      "name": "regions",
-     "definition": "regions_block_2"
+     "definition": "regions_block"
     },
     {
      "type": "block",
      "name": "nodes",
-     "definition": "nodes_block_2"
+     "definition": "nodes_block"
     },
     {
      "type": "block",
      "name": "import info",
-     "definition": "global_tag_import_info_block_2"
+     "definition": "global_tag_import_info_block"
     },
     {
      "type": "block",
      "name": "errors",
-     "definition": "global_error_report_categories_block_2"
+     "definition": "global_error_report_categories_block"
     },
     {
      "type": "terminator",
@@ -571,40 +337,42 @@
     }
    ]
   },
-  "rigid_bodies_block__v0": {
+  "rigid_bodies_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 112,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "node"
+     "type": "short_block_index",
+     "name": "node",
+     "definition": "nodes_block"
     },
     {
-     "type": "short_integer",
-     "name": "region"
+     "type": "short_block_index",
+     "name": "region",
+     "definition": "regions_block"
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": "permutation"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_3"
     },
     {
      "type": "short_enum",
      "name": "motion type",
-     "definition": "motion_type_enum"
+     "definition": "motion type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -629,7 +397,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -638,7 +406,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -647,7 +415,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -656,7 +424,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -665,7 +433,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -674,25 +442,114 @@
     }
    ]
   },
-  "rigid_bodies_block": {
+  "nodes_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 12,
+   "fields": [
+    {
+     "type": "string_id",
+     "name": "name"
+    },
+    {
+     "type": "word_flags",
+     "name": "flags",
+     "definition": "flags_2"
+    },
+    {
+     "type": "short_block_index",
+     "name": "parent",
+     "definition": "nodes_block"
+    },
+    {
+     "type": "short_block_index",
+     "name": "sibling",
+     "definition": "nodes_block"
+    },
+    {
+     "type": "short_block_index",
+     "name": "child",
+     "definition": "nodes_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "regions_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "string_id",
+     "name": "name"
+    },
+    {
+     "type": "block",
+     "name": "permutations",
+     "definition": "permutations_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "permutations_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 16,
+   "fields": [
+    {
+     "type": "string_id",
+     "name": "name"
+    },
+    {
+     "type": "block",
+     "name": "rigid bodies",
+     "definition": "rigid_body_indices_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "rigid_body_indices_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 2,
+   "fields": [
+    {
+     "type": "short_block_index",
+     "name": "rigid body",
+     "definition": "rigid_bodies_block"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "rigid_bodies_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 144,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "node"
+     "type": "short_block_index",
+     "name": "node",
+     "definition": "nodes_block"
     },
     {
-     "type": "short_integer",
-     "name": "region"
+     "type": "short_block_index",
+     "name": "region",
+     "definition": "regions_block"
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": "permutattion"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -706,21 +563,22 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_3"
     },
     {
      "type": "short_enum",
      "name": "motion type",
-     "definition": "motion_type_enum"
+     "definition": "motion type"
     },
     {
-     "type": "short_integer",
-     "name": "no phantom power alt"
+     "type": "short_block_index",
+     "name": "no phantom power alt",
+     "definition": "rigid_bodies_block"
     },
     {
      "type": "short_enum",
      "name": "size",
-     "definition": "size_enum"
+     "definition": "size"
     },
     {
      "type": "real",
@@ -757,7 +615,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -766,7 +624,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -775,7 +633,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -784,7 +642,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -793,7 +651,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(real)",
      "definition": 12
     },
     {
@@ -802,7 +660,7 @@
     }
    ]
   },
-  "materials_block": {
+  "materials_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -815,13 +673,14 @@
      "name": "global material name"
     },
     {
-     "type": "short_integer",
-     "name": "phantom type"
+     "type": "short_block_index",
+     "name": "phantom type",
+     "definition": "phantom_types_block"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_6"
     },
     {
      "type": "terminator",
@@ -829,7 +688,191 @@
     }
    ]
   },
-  "spheres_block": {
+  "phantom_types_block_struct__v0": {
+   "guid": "00000000000000000000000000000000",
+   "size": 104,
+   "fields": [
+    {
+     "type": "word_flags",
+     "name": "flags",
+     "definition": "flags_4"
+    },
+    {
+     "type": "char_enum",
+     "name": "minimum size",
+     "definition": "size"
+    },
+    {
+     "type": "char_enum",
+     "name": "maximum size",
+     "definition": "size"
+    },
+    {
+     "type": "string_id",
+     "name": "marker name"
+    },
+    {
+     "type": "string_id",
+     "name": "alignment marker name"
+    },
+    {
+     "type": "pad",
+     "name": "4*sizeof(real)",
+     "definition": 16
+    },
+    {
+     "type": "real",
+     "name": "linear dead radius"
+    },
+    {
+     "type": "real",
+     "name": "center acc"
+    },
+    {
+     "type": "real",
+     "name": "center max vel"
+    },
+    {
+     "type": "real",
+     "name": "axis acc"
+    },
+    {
+     "type": "real",
+     "name": "axis max vel"
+    },
+    {
+     "type": "real",
+     "name": "direction acc"
+    },
+    {
+     "type": "real",
+     "name": "direction max vel"
+    },
+    {
+     "type": "pad",
+     "name": "8*sizeof(real)",
+     "definition": 32
+    },
+    {
+     "type": "real",
+     "name": "alignment acc"
+    },
+    {
+     "type": "real",
+     "name": "alignment max vel"
+    },
+    {
+     "type": "real",
+     "name": "spin acc"
+    },
+    {
+     "type": "real",
+     "name": "spin max vel"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "phantom_types_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 104,
+   "fields": [
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_5"
+    },
+    {
+     "type": "char_enum",
+     "name": "minimum size",
+     "definition": "size"
+    },
+    {
+     "type": "char_enum",
+     "name": "maximum size",
+     "definition": "size"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "string_id",
+     "name": "marker name"
+    },
+    {
+     "type": "string_id",
+     "name": "alignment marker name"
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(real)",
+     "definition": 8
+    },
+    {
+     "type": "real",
+     "name": "hookes law e"
+    },
+    {
+     "type": "real",
+     "name": "linear dead radius"
+    },
+    {
+     "type": "real",
+     "name": "center acc"
+    },
+    {
+     "type": "real",
+     "name": "center max vel"
+    },
+    {
+     "type": "real",
+     "name": "axis acc"
+    },
+    {
+     "type": "real",
+     "name": "axis max vel"
+    },
+    {
+     "type": "real",
+     "name": "direction acc"
+    },
+    {
+     "type": "real",
+     "name": "direction max vel"
+    },
+    {
+     "type": "pad",
+     "name": "7*sizeof(real)",
+     "definition": 28
+    },
+    {
+     "type": "real",
+     "name": "alignment hookes law e"
+    },
+    {
+     "type": "real",
+     "name": "alignment acc"
+    },
+    {
+     "type": "real",
+     "name": "alignment max vel"
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(real)",
+     "definition": 8
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "spheres_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
@@ -838,13 +881,14 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
-     "name": "material"
+     "type": "short_block_index",
+     "name": "material",
+     "definition": "materials_block"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_7"
     },
     {
      "type": "real",
@@ -860,7 +904,7 @@
     },
     {
      "type": "real",
-     "name": "volume "
+     "name": "volume"
     },
     {
      "type": "real",
@@ -868,12 +912,13 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "phantom"
+     "type": "short_block_index",
+     "name": "phantom",
+     "definition": "phantoms_block"
     },
     {
      "type": "pointer",
@@ -894,7 +939,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -930,7 +975,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -948,7 +993,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -957,7 +1002,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -966,7 +1011,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -975,7 +1020,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -984,51 +1029,44 @@
     }
    ]
   },
-  "pills_block": {
+  "phantoms_block_struct": {
    "guid": "00000000000000000000000000000000",
-   "size": 80,
+   "size": 32,
    "fields": [
     {
-     "type": "string_id",
-     "name": "name"
+     "type": "pointer",
+     "name": null
     },
     {
      "type": "short_integer",
-     "name": "material"
+     "name": "size"
     },
     {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags"
+     "type": "short_integer",
+     "name": "count"
     },
     {
-     "type": "real",
-     "name": "relative mass scale"
-    },
-    {
-     "type": "real_fraction",
-     "name": "friction"
-    },
-    {
-     "type": "real_fraction",
-     "name": "restitution"
-    },
-    {
-     "type": "real",
-     "name": "volume "
-    },
-    {
-     "type": "real",
-     "name": "mass"
+     "type": "pad",
+     "name": null,
+     "definition": 0
     },
     {
      "type": "skip",
-     "name": null,
-     "definition": 2
+     "name": "sizeof(int)",
+     "definition": 4
     },
     {
-     "type": "short_integer",
-     "name": "phantom"
+     "type": "pad",
+     "name": null,
+     "definition": 0
+    },
+    {
+     "type": "pointer",
+     "name": null
+    },
+    {
+     "type": "pointer",
+     "name": null
     },
     {
      "type": "pointer",
@@ -1049,7 +1087,88 @@
     },
     {
      "type": "skip",
+     "name": "sizeof(int)",
+     "definition": 4
+    },
+    {
+     "type": "pad",
      "name": null,
+     "definition": 0
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "pills_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 80,
+   "fields": [
+    {
+     "type": "string_id",
+     "name": "name"
+    },
+    {
+     "type": "short_block_index",
+     "name": "material",
+     "definition": "materials_block"
+    },
+    {
+     "type": "word_flags",
+     "name": "flags",
+     "definition": "flags_7"
+    },
+    {
+     "type": "real",
+     "name": "relative mass scale"
+    },
+    {
+     "type": "real_fraction",
+     "name": "friction"
+    },
+    {
+     "type": "real_fraction",
+     "name": "restitution"
+    },
+    {
+     "type": "real",
+     "name": "volume"
+    },
+    {
+     "type": "real",
+     "name": "mass"
+    },
+    {
+     "type": "skip",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "short_block_index",
+     "name": "phantom",
+     "definition": "phantoms_block"
+    },
+    {
+     "type": "pointer",
+     "name": null
+    },
+    {
+     "type": "short_integer",
+     "name": "size"
+    },
+    {
+     "type": "short_integer",
+     "name": "count"
+    },
+    {
+     "type": "pad",
+     "name": null,
+     "definition": 0
+    },
+    {
+     "type": "skip",
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1072,7 +1191,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1081,7 +1200,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1090,7 +1209,7 @@
     }
    ]
   },
-  "boxes_block": {
+  "boxes_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 144,
    "fields": [
@@ -1099,13 +1218,14 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
-     "name": "material"
+     "type": "short_block_index",
+     "name": "material",
+     "definition": "materials_block"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_7"
     },
     {
      "type": "real",
@@ -1121,7 +1241,7 @@
     },
     {
      "type": "real",
-     "name": "volume "
+     "name": "volume"
     },
     {
      "type": "real",
@@ -1129,12 +1249,13 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "phantom"
+     "type": "short_block_index",
+     "name": "phantom",
+     "definition": "phantoms_block"
     },
     {
      "type": "pointer",
@@ -1155,7 +1276,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1178,7 +1299,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1200,7 +1321,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1218,7 +1339,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1227,7 +1348,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1236,7 +1357,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1245,7 +1366,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1254,7 +1375,7 @@
     }
    ]
   },
-  "triangles_block": {
+  "triangles_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 96,
    "fields": [
@@ -1263,13 +1384,14 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
-     "name": "material"
+     "type": "short_block_index",
+     "name": "material",
+     "definition": "materials_block"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_7"
     },
     {
      "type": "real",
@@ -1285,7 +1407,7 @@
     },
     {
      "type": "real",
-     "name": "volume "
+     "name": "volume"
     },
     {
      "type": "real",
@@ -1293,12 +1415,13 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "phantom"
+     "type": "short_block_index",
+     "name": "phantom",
+     "definition": "phantoms_block"
     },
     {
      "type": "pointer",
@@ -1319,7 +1442,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1342,7 +1465,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1351,7 +1474,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1360,7 +1483,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1369,7 +1492,7 @@
     }
    ]
   },
-  "polyhedra_block": {
+  "polyhedra_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 256,
    "fields": [
@@ -1378,13 +1501,14 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
-     "name": "material"
+     "type": "short_block_index",
+     "name": "material",
+     "definition": "materials_block"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_7"
     },
     {
      "type": "real",
@@ -1400,7 +1524,7 @@
     },
     {
      "type": "real",
-     "name": "volume "
+     "name": "volume"
     },
     {
      "type": "real",
@@ -1408,12 +1532,13 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "phantom"
+     "type": "short_block_index",
+     "name": "phantom",
+     "definition": "phantoms_block"
     },
     {
      "type": "pointer",
@@ -1434,7 +1559,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1457,7 +1582,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1466,7 +1591,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1484,12 +1609,12 @@
     {
      "type": "pad",
      "name": null,
-     "definition": 4
+     "definition": 0
     },
     {
      "type": "array",
      "name": "four vectors storage",
-     "definition": "four_vectors_storage_array"
+     "definition": "four vectors storage_array"
     },
     {
      "type": "long_integer",
@@ -1515,7 +1640,7 @@
     {
      "type": "pad",
      "name": null,
-     "definition": 0
+     "definition": 4
     },
     {
      "type": "terminator",
@@ -1523,7 +1648,7 @@
     }
    ]
   },
-  "four_vectors_storage_struct": {
+  "four vectors storage_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
@@ -1533,7 +1658,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1542,7 +1667,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1551,7 +1676,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1560,7 +1685,7 @@
     }
    ]
   },
-  "polyhedron_four_vectors_block": {
+  "polyhedron_four_vectors_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
@@ -1570,7 +1695,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1579,7 +1704,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1588,7 +1713,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1597,13 +1722,13 @@
     }
    ]
   },
-  "polyhedron_plane_equations_block": {
+  "polyhedron_plane_equations_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(hkVector4)",
      "definition": 16
     },
     {
@@ -1612,7 +1737,7 @@
     }
    ]
   },
-  "mass_distributions_block": {
+  "mass_distributions_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
@@ -1622,7 +1747,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1631,7 +1756,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1640,7 +1765,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1649,7 +1774,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -1658,7 +1783,7 @@
     }
    ]
   },
-  "lists_block": {
+  "lists_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 56,
    "fields": [
@@ -1681,7 +1806,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1704,7 +1829,7 @@
     {
      "type": "array",
      "name": "child shapes storage",
-     "definition": "child_shapes_storage_array"
+     "definition": "child shapes storage_array"
     },
     {
      "type": "terminator",
@@ -1712,7 +1837,7 @@
     }
    ]
   },
-  "child_shapes_storage_struct": {
+  "child shapes storage_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -1722,7 +1847,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1736,7 +1861,7 @@
     }
    ]
   },
-  "list_shapes_block": {
+  "list_shapes_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -1746,7 +1871,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1760,7 +1885,7 @@
     }
    ]
   },
-  "mopps_block": {
+  "mopps_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -1783,7 +1908,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -1805,18 +1930,18 @@
     }
    ]
   },
-  "hinge_constraints_block": {
+  "hinge_constraints_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 120,
    "fields": [
     {
      "type": "struct",
      "name": "constraint bodies",
-     "definition": "constraint_bodies_struct"
+     "definition": "constraint_bodies_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -1825,7 +1950,7 @@
     }
    ]
   },
-  "constraint_bodies_struct": {
+  "constraint_bodies_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 116,
    "fields": [
@@ -1834,12 +1959,14 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
-     "name": "node a"
+     "type": "short_block_index",
+     "name": "node a",
+     "definition": "nodes_block"
     },
     {
-     "type": "short_integer",
-     "name": "node b"
+     "type": "short_block_index",
+     "name": "node b",
+     "definition": "nodes_block"
     },
     {
      "type": "real",
@@ -1882,12 +2009,13 @@
      "name": "b position"
     },
     {
-     "type": "short_integer",
-     "name": "edge index"
+     "type": "short_block_index",
+     "name": "edge index",
+     "definition": "physics_model_node_constraint_edge_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -1897,18 +2025,84 @@
    ],
    "tag": "csbs"
   },
-  "ragdoll_constraints_block": {
+  "physics_model_node_constraint_edge_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 28,
+   "fields": [
+    {
+     "type": "pad",
+     "name": "2*sizeof(c_global_material_type)",
+     "definition": 4
+    },
+    {
+     "type": "short_block_index",
+     "name": "node a",
+     "definition": "nodes_block"
+    },
+    {
+     "type": "short_block_index",
+     "name": "node b",
+     "definition": "nodes_block"
+    },
+    {
+     "type": "block",
+     "name": "constraints",
+     "definition": "physics_model_constraint_edge_constraint_block"
+    },
+    {
+     "type": "string_id",
+     "name": "node a material"
+    },
+    {
+     "type": "string_id",
+     "name": "node b material"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "physics_model_constraint_edge_constraint_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 12,
+   "fields": [
+    {
+     "type": "short_enum",
+     "name": "type",
+     "definition": "type"
+    },
+    {
+     "type": "custom_short_block_index",
+     "name": "index"
+    },
+    {
+     "type": "long_flags",
+     "name": "flags",
+     "definition": "flags_8"
+    },
+    {
+     "type": "real",
+     "name": "friction"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "ragdoll_constraints_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 148,
    "fields": [
     {
      "type": "struct",
      "name": "constraint bodies",
-     "definition": "constraint_bodies_struct"
+     "definition": "constraint_bodies_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(s_physics_model_ragdoll_constraint",
      "definition": 4
     },
     {
@@ -1945,90 +2139,7 @@
     }
    ]
   },
-  "regions_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 16,
-   "fields": [
-    {
-     "type": "string_id",
-     "name": "name"
-    },
-    {
-     "type": "block",
-     "name": "permutations",
-     "definition": "permutations_block_2"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "permutations_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 16,
-   "fields": [
-    {
-     "type": "string_id",
-     "name": "name"
-    },
-    {
-     "type": "block",
-     "name": "rigid bodies",
-     "definition": "rigid_body_indices_block_2"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "rigid_body_indices_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 2,
-   "fields": [
-    {
-     "type": "short_integer",
-     "name": "rigid body"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "nodes_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 12,
-   "fields": [
-    {
-     "type": "string_id",
-     "name": "name"
-    },
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags_4"
-    },
-    {
-     "type": "short_integer",
-     "name": "parent"
-    },
-    {
-     "type": "short_integer",
-     "name": "sibling"
-    },
-    {
-     "type": "short_integer",
-     "name": "child"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "global_tag_import_info_block": {
+  "global_tag_import_info_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 596,
    "fields": [
@@ -2050,7 +2161,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "24*sizeof(long)",
      "definition": 96
     },
     {
@@ -2059,17 +2170,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "block",
      "name": "files",
-     "definition": "tag_import_file_block_2"
+     "definition": "tag_import_file_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "32*sizeof(long)",
      "definition": 128
     },
     {
@@ -2078,7 +2189,7 @@
     }
    ]
   },
-  "tag_import_file_block": {
+  "tag_import_file_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 540,
    "fields": [
@@ -2092,12 +2203,12 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(file_last_modification_date)",
      "definition": 8
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "22*sizeof(long)",
      "definition": 88
     },
     {
@@ -2111,11 +2222,11 @@
     {
      "type": "data",
      "name": "zipped data",
-     "definition": "zipped_data_data"
+     "definition": "tag_import_file_zipped_data_definition"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "32*sizeof(long)",
      "definition": 128
     },
     {
@@ -2124,7 +2235,7 @@
     }
    ]
   },
-  "global_error_report_categories_block": {
+  "global_error_report_categories_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 680,
    "fields": [
@@ -2135,32 +2246,32 @@
     {
      "type": "short_enum",
      "name": "report type",
-     "definition": "report_type_enum"
+     "definition": "report type"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_5"
+     "definition": "flags_9"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "101*sizeof(long)",
      "definition": 404
     },
     {
      "type": "block",
      "name": "reports",
-     "definition": "error_reports_block_2"
+     "definition": "error_reports_block"
     },
     {
      "type": "terminator",
@@ -2168,24 +2279,24 @@
     }
    ]
   },
-  "error_reports_block": {
+  "error_reports_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 644,
    "fields": [
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "report_type_enum"
+     "definition": "report type"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_5"
+     "definition": "flags_9"
     },
     {
      "type": "data",
      "name": "text",
-     "definition": "text_data"
+     "definition": "error_report_string_data"
     },
     {
      "type": "string",
@@ -2198,36 +2309,36 @@
     {
      "type": "block",
      "name": "vertices",
-     "definition": "error_report_vertices_block_2"
+     "definition": "error_report_vertices_block"
     },
     {
      "type": "block",
      "name": "vectors",
-     "definition": "error_report_vectors_block_2"
+     "definition": "error_report_vectors_block"
     },
     {
      "type": "block",
      "name": "lines",
-     "definition": "error_report_lines_block_2"
+     "definition": "error_report_lines_block"
     },
     {
      "type": "block",
      "name": "triangles",
-     "definition": "error_report_triangles_block_2"
+     "definition": "error_report_triangles_block"
     },
     {
      "type": "block",
      "name": "quads",
-     "definition": "error_report_quads_block_2"
+     "definition": "error_report_quads_block"
     },
     {
      "type": "block",
      "name": "comments",
-     "definition": "error_report_comments_block_2"
+     "definition": "error_report_comments_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "95*sizeof(long)",
      "definition": 380
     },
     {
@@ -2256,7 +2367,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "21*sizeof(long)",
      "definition": 84
     },
     {
@@ -2265,7 +2376,7 @@
     }
    ]
   },
-  "error_report_vertices_block": {
+  "error_report_vertices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
@@ -2276,12 +2387,12 @@
     {
      "type": "array",
      "name": "node indices",
-     "definition": "node_indices_array"
+     "definition": "node indices_array"
     },
     {
      "type": "array",
      "name": "node weights",
-     "definition": "node_weights_array"
+     "definition": "node weights_array"
     },
     {
      "type": "real_argb_color",
@@ -2297,7 +2408,7 @@
     }
    ]
   },
-  "node_indices_struct": {
+  "node indices_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -2311,7 +2422,7 @@
     }
    ]
   },
-  "node_weights_struct": {
+  "node weights_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -2325,7 +2436,7 @@
     }
    ]
   },
-  "error_report_vectors_block": {
+  "error_report_vectors_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
@@ -2336,12 +2447,12 @@
     {
      "type": "array",
      "name": "node indices",
-     "definition": "node_indices_array_2"
+     "definition": "node indices_array_2"
     },
     {
      "type": "array",
      "name": "node weights",
-     "definition": "node_weights_array_2"
+     "definition": "node weights_array_2"
     },
     {
      "type": "real_argb_color",
@@ -2361,7 +2472,7 @@
     }
    ]
   },
-  "node_indices_struct_2": {
+  "node indices_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -2375,7 +2486,7 @@
     }
    ]
   },
-  "node_weights_struct_2": {
+  "node weights_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -2389,7 +2500,7 @@
     }
    ]
   },
-  "error_report_lines_block": {
+  "error_report_lines_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 80,
    "fields": [
@@ -2408,31 +2519,7 @@
     }
    ]
   },
-  "points_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "real_point_3d",
-     "name": "position"
-    },
-    {
-     "type": "array",
-     "name": "node indices",
-     "definition": "node_indices_array_3"
-    },
-    {
-     "type": "array",
-     "name": "node weights",
-     "definition": "node_weights_array_3"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "node_indices_struct_3": {
+  "node indices_struct_3": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -2446,7 +2533,7 @@
     }
    ]
   },
-  "node_weights_struct_3": {
+  "node weights_struct_3": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -2460,7 +2547,31 @@
     }
    ]
   },
-  "error_report_triangles_block": {
+  "points_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "real_point_3d",
+     "name": "position"
+    },
+    {
+     "type": "array",
+     "name": "node indices",
+     "definition": "node indices_array_3"
+    },
+    {
+     "type": "array",
+     "name": "node weights",
+     "definition": "node weights_array_3"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "error_report_triangles_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 112,
    "fields": [
@@ -2479,31 +2590,7 @@
     }
    ]
   },
-  "points_struct_2": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "real_point_3d",
-     "name": "position"
-    },
-    {
-     "type": "array",
-     "name": "node indices",
-     "definition": "node_indices_array_4"
-    },
-    {
-     "type": "array",
-     "name": "node weights",
-     "definition": "node_weights_array_4"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "node_indices_struct_4": {
+  "node indices_struct_4": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -2517,7 +2604,7 @@
     }
    ]
   },
-  "node_weights_struct_4": {
+  "node weights_struct_4": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -2531,7 +2618,31 @@
     }
    ]
   },
-  "error_report_quads_block": {
+  "points_struct_2": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "real_point_3d",
+     "name": "position"
+    },
+    {
+     "type": "array",
+     "name": "node indices",
+     "definition": "node indices_array_4"
+    },
+    {
+     "type": "array",
+     "name": "node weights",
+     "definition": "node weights_array_4"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "error_report_quads_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 144,
    "fields": [
@@ -2550,31 +2661,7 @@
     }
    ]
   },
-  "points_struct_3": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "real_point_3d",
-     "name": "position"
-    },
-    {
-     "type": "array",
-     "name": "node indices",
-     "definition": "node_indices_array_5"
-    },
-    {
-     "type": "array",
-     "name": "node weights",
-     "definition": "node_weights_array_5"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "node_indices_struct_5": {
+  "node indices_struct_5": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -2588,7 +2675,7 @@
     }
    ]
   },
-  "node_weights_struct_5": {
+  "node weights_struct_5": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -2602,14 +2689,38 @@
     }
    ]
   },
-  "error_report_comments_block": {
+  "points_struct_3": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "real_point_3d",
+     "name": "position"
+    },
+    {
+     "type": "array",
+     "name": "node indices",
+     "definition": "node indices_array_5"
+    },
+    {
+     "type": "array",
+     "name": "node weights",
+     "definition": "node weights_array_5"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "error_report_comments_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
     {
      "type": "data",
      "name": "text",
-     "definition": "text_data_2"
+     "definition": "error_report_string_data"
     },
     {
      "type": "real_point_3d",
@@ -2618,12 +2729,12 @@
     {
      "type": "array",
      "name": "node indices",
-     "definition": "node_indices_array_6"
+     "definition": "node indices_array_6"
     },
     {
      "type": "array",
      "name": "node weights",
-     "definition": "node_weights_array_6"
+     "definition": "node weights_array_6"
     },
     {
      "type": "real_argb_color",
@@ -2635,7 +2746,7 @@
     }
    ]
   },
-  "node_indices_struct_6": {
+  "node indices_struct_6": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -2649,7 +2760,7 @@
     }
    ]
   },
-  "node_weights_struct_6": {
+  "node weights_struct_6": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -2670,7 +2781,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -2686,153 +2797,153 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(real)",
      "definition": 24
     },
     {
      "type": "block",
      "name": "phantom types",
-     "definition": "phantom_types_block_2"
+     "definition": "phantom_types_block"
     },
     {
      "type": "block",
      "name": "node edges",
-     "definition": "physics_model_node_constraint_edge_block_2"
+     "definition": "physics_model_node_constraint_edge_block"
     },
     {
      "type": "block",
      "name": "rigid bodies",
-     "definition": "rigid_bodies_block_3"
+     "definition": "rigid_bodies_block"
     },
     {
      "type": "block",
      "name": "materials",
-     "definition": "materials_block_3"
+     "definition": "materials_block"
     },
     {
      "type": "block",
      "name": "spheres",
-     "definition": "spheres_block_3"
+     "definition": "spheres_block"
     },
     {
      "type": "block",
      "name": "multi spheres",
-     "definition": "multi_spheres_block_2"
+     "definition": "multi_spheres_block"
     },
     {
      "type": "block",
      "name": "pills",
-     "definition": "pills_block_3"
+     "definition": "pills_block"
     },
     {
      "type": "block",
      "name": "boxes",
-     "definition": "boxes_block_3"
+     "definition": "boxes_block"
     },
     {
      "type": "block",
      "name": "triangles",
-     "definition": "triangles_block_3"
+     "definition": "triangles_block"
     },
     {
      "type": "block",
      "name": "polyhedra",
-     "definition": "polyhedra_block_3"
+     "definition": "polyhedra_block"
     },
     {
      "type": "block",
      "name": "polyhedron four vectors",
-     "definition": "polyhedron_four_vectors_block_3"
+     "definition": "polyhedron_four_vectors_block"
     },
     {
      "type": "block",
      "name": "polyhedron plane equations",
-     "definition": "polyhedron_plane_equations_block_3"
+     "definition": "polyhedron_plane_equations_block"
     },
     {
      "type": "block",
      "name": "mass distributions",
-     "definition": "mass_distributions_block_3"
+     "definition": "mass_distributions_block"
     },
     {
      "type": "block",
      "name": "lists",
-     "definition": "lists_block_3"
+     "definition": "lists_block"
     },
     {
      "type": "block",
      "name": "list shapes",
-     "definition": "list_shapes_block_3"
+     "definition": "list_shapes_block"
     },
     {
      "type": "block",
      "name": "mopps",
-     "definition": "mopps_block_3"
+     "definition": "mopps_block"
     },
     {
      "type": "data",
      "name": "mopp codes",
-     "definition": "mopp_codes_data_2"
+     "definition": "mopp_codes_data"
     },
     {
      "type": "block",
      "name": "hinge constraints",
-     "definition": "hinge_constraints_block_3"
+     "definition": "hinge_constraints_block"
     },
     {
      "type": "block",
      "name": "ragdoll constraints",
-     "definition": "ragdoll_constraints_block_3"
+     "definition": "ragdoll_constraints_block"
     },
     {
      "type": "block",
      "name": "regions",
-     "definition": "regions_block_3"
+     "definition": "regions_block"
     },
     {
      "type": "block",
      "name": "nodes",
-     "definition": "nodes_block_3"
+     "definition": "nodes_block"
     },
     {
      "type": "block",
      "name": "import info",
-     "definition": "global_tag_import_info_block_3"
+     "definition": "global_tag_import_info_block"
     },
     {
      "type": "block",
      "name": "errors",
-     "definition": "global_error_report_categories_block_3"
+     "definition": "global_error_report_categories_block"
     },
     {
      "type": "block",
      "name": "point to path curves",
-     "definition": "point_to_path_curve_block_2"
+     "definition": "point_to_path_curve_block"
     },
     {
      "type": "block",
      "name": "limited hinge constraints",
-     "definition": "limited_hinge_constraints_block_2"
+     "definition": "limited_hinge_constraints_block"
     },
     {
      "type": "block",
      "name": "ball and socket constraints",
-     "definition": "ball_and_socket_constraints_block_2"
+     "definition": "ball_and_socket_constraints_block"
     },
     {
      "type": "block",
      "name": "stiff spring constraints",
-     "definition": "stiff_spring_constraints_block_2"
+     "definition": "stiff_spring_constraints_block"
     },
     {
      "type": "block",
      "name": "prismatic constraints",
-     "definition": "prismatic_constraints_block_2"
+     "definition": "prismatic_constraints_block"
     },
     {
      "type": "block",
      "name": "phantoms",
-     "definition": "phantoms_block_2"
+     "definition": "phantoms_block"
     },
     {
      "type": "terminator",
@@ -2840,255 +2951,7 @@
     }
    ]
   },
-  "phantom_types_block__v0": {
-   "guid": "00000000000000000000000000000000",
-   "size": 104,
-   "fields": [
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags_6"
-    },
-    {
-     "type": "char_enum",
-     "name": "minimum size",
-     "definition": "size_enum"
-    },
-    {
-     "type": "char_enum",
-     "name": "maximum size",
-     "definition": "size_enum"
-    },
-    {
-     "type": "string_id",
-     "name": "marker name"
-    },
-    {
-     "type": "string_id",
-     "name": "alignment marker name"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 16
-    },
-    {
-     "type": "real",
-     "name": "linear dead radius"
-    },
-    {
-     "type": "real",
-     "name": "center acc"
-    },
-    {
-     "type": "real",
-     "name": "center max vel"
-    },
-    {
-     "type": "real",
-     "name": "axis acc"
-    },
-    {
-     "type": "real",
-     "name": "axis max vel"
-    },
-    {
-     "type": "real",
-     "name": "direction acc"
-    },
-    {
-     "type": "real",
-     "name": "direction max vel"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 32
-    },
-    {
-     "type": "real",
-     "name": "alignment acc"
-    },
-    {
-     "type": "real",
-     "name": "alignment max vel"
-    },
-    {
-     "type": "real",
-     "name": "spin acc"
-    },
-    {
-     "type": "real",
-     "name": "spin max vel"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "phantom_types_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 104,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_7"
-    },
-    {
-     "type": "char_enum",
-     "name": "minimum size",
-     "definition": "size_enum"
-    },
-    {
-     "type": "char_enum",
-     "name": "maximum size",
-     "definition": "size_enum"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 2
-    },
-    {
-     "type": "string_id",
-     "name": "marker name"
-    },
-    {
-     "type": "string_id",
-     "name": "alignment marker name"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "real",
-     "name": "hookes law e"
-    },
-    {
-     "type": "real",
-     "name": "linear dead radius"
-    },
-    {
-     "type": "real",
-     "name": "center acc"
-    },
-    {
-     "type": "real",
-     "name": "center max vel"
-    },
-    {
-     "type": "real",
-     "name": "axis acc"
-    },
-    {
-     "type": "real",
-     "name": "axis max vel"
-    },
-    {
-     "type": "real",
-     "name": "direction acc"
-    },
-    {
-     "type": "real",
-     "name": "direction max vel"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 28
-    },
-    {
-     "type": "real",
-     "name": "alignment hookes law e"
-    },
-    {
-     "type": "real",
-     "name": "alignment acc"
-    },
-    {
-     "type": "real",
-     "name": "alignment max vel"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 8
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "physics_model_node_constraint_edge_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 28,
-   "fields": [
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "short_integer",
-     "name": "node a"
-    },
-    {
-     "type": "short_integer",
-     "name": "node b"
-    },
-    {
-     "type": "block",
-     "name": "constraints",
-     "definition": "physics_model_constraint_edge_constraint_block_2"
-    },
-    {
-     "type": "string_id",
-     "name": "node a material"
-    },
-    {
-     "type": "string_id",
-     "name": "node b material"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "physics_model_constraint_edge_constraint_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 12,
-   "fields": [
-    {
-     "type": "short_enum",
-     "name": "type",
-     "definition": "type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "index"
-    },
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_8"
-    },
-    {
-     "type": "real",
-     "name": "friction"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "multi_spheres_block": {
+  "multi_spheres_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 176,
    "fields": [
@@ -3097,13 +2960,14 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
-     "name": "material"
+     "type": "short_block_index",
+     "name": "material",
+     "definition": "materials_block"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_7"
     },
     {
      "type": "real",
@@ -3119,7 +2983,7 @@
     },
     {
      "type": "real",
-     "name": "volume "
+     "name": "volume"
     },
     {
      "type": "real",
@@ -3127,12 +2991,13 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "phantom"
+     "type": "short_block_index",
+     "name": "phantom",
+     "definition": "phantoms_block"
     },
     {
      "type": "pointer",
@@ -3153,7 +3018,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(int)",
      "definition": 4
     },
     {
@@ -3173,7 +3038,7 @@
     {
      "type": "array",
      "name": "four vectors storage",
-     "definition": "four_vectors_storage_array_2"
+     "definition": "four vectors storage_array_2"
     },
     {
      "type": "terminator",
@@ -3181,7 +3046,7 @@
     }
    ]
   },
-  "four_vectors_storage_struct_2": {
+  "four vectors storage_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -3191,7 +3056,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -3200,7 +3065,7 @@
     }
    ]
   },
-  "point_to_path_curve_block": {
+  "point_to_path_curve_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -3209,18 +3074,19 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
-     "name": "node index"
+     "type": "short_block_index",
+     "name": "node index",
+     "definition": "nodes_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "points",
-     "definition": "point_to_path_curve_point_block_2"
+     "definition": "point_to_path_curve_point_block"
     },
     {
      "type": "terminator",
@@ -3228,7 +3094,7 @@
     }
    ]
   },
-  "point_to_path_curve_point_block": {
+  "point_to_path_curve_point_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -3246,18 +3112,18 @@
     }
    ]
   },
-  "limited_hinge_constraints_block": {
+  "limited_hinge_constraints_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 132,
    "fields": [
     {
      "type": "struct",
      "name": "constraint bodies",
-     "definition": "constraint_bodies_struct"
+     "definition": "constraint_bodies_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -3278,18 +3144,18 @@
     }
    ]
   },
-  "ball_and_socket_constraints_block": {
+  "ball_and_socket_constraints_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 120,
    "fields": [
     {
      "type": "struct",
      "name": "constraint bodies",
-     "definition": "constraint_bodies_struct"
+     "definition": "constraint_bodies_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -3298,18 +3164,18 @@
     }
    ]
   },
-  "stiff_spring_constraints_block": {
+  "stiff_spring_constraints_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 124,
    "fields": [
     {
      "type": "struct",
      "name": "constraint bodies",
-     "definition": "constraint_bodies_struct"
+     "definition": "constraint_bodies_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -3322,18 +3188,18 @@
     }
    ]
   },
-  "prismatic_constraints_block": {
+  "prismatic_constraints_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 132,
    "fields": [
     {
      "type": "struct",
      "name": "constraint bodies",
-     "definition": "constraint_bodies_struct"
+     "definition": "constraint_bodies_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -3354,78 +3220,6 @@
     }
    ]
   },
-  "phantoms_block": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "pointer",
-     "name": null
-    },
-    {
-     "type": "short_integer",
-     "name": "size"
-    },
-    {
-     "type": "short_integer",
-     "name": "count"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 0
-    },
-    {
-     "type": "skip",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 0
-    },
-    {
-     "type": "pointer",
-     "name": null
-    },
-    {
-     "type": "pointer",
-     "name": null
-    },
-    {
-     "type": "pointer",
-     "name": null
-    },
-    {
-     "type": "short_integer",
-     "name": "size"
-    },
-    {
-     "type": "short_integer",
-     "name": "count"
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 0
-    },
-    {
-     "type": "skip",
-     "name": null,
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": null,
-     "definition": 0
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
   "physics_model_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 396,
@@ -3433,7 +3227,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -3449,153 +3243,153 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(real)",
      "definition": 24
     },
     {
      "type": "block",
      "name": "phantom types",
-     "definition": "phantom_types_block_3"
+     "definition": "phantom_types_block"
     },
     {
      "type": "block",
      "name": "node edges",
-     "definition": "physics_model_node_constraint_edge_block_3"
+     "definition": "physics_model_node_constraint_edge_block"
     },
     {
      "type": "block",
      "name": "rigid bodies",
-     "definition": "rigid_bodies_block_4"
+     "definition": "rigid_bodies_block"
     },
     {
      "type": "block",
      "name": "materials",
-     "definition": "materials_block_4"
+     "definition": "materials_block"
     },
     {
      "type": "block",
      "name": "spheres",
-     "definition": "spheres_block_4"
+     "definition": "spheres_block"
     },
     {
      "type": "block",
      "name": "multi spheres",
-     "definition": "multi_spheres_block_3"
+     "definition": "multi_spheres_block"
     },
     {
      "type": "block",
      "name": "pills",
-     "definition": "pills_block_4"
+     "definition": "pills_block"
     },
     {
      "type": "block",
      "name": "boxes",
-     "definition": "boxes_block_4"
+     "definition": "boxes_block"
     },
     {
      "type": "block",
      "name": "triangles",
-     "definition": "triangles_block_4"
+     "definition": "triangles_block"
     },
     {
      "type": "block",
      "name": "polyhedra",
-     "definition": "polyhedra_block_4"
+     "definition": "polyhedra_block"
     },
     {
      "type": "block",
      "name": "polyhedron four vectors",
-     "definition": "polyhedron_four_vectors_block_4"
+     "definition": "polyhedron_four_vectors_block"
     },
     {
      "type": "block",
      "name": "polyhedron plane equations",
-     "definition": "polyhedron_plane_equations_block_4"
+     "definition": "polyhedron_plane_equations_block"
     },
     {
      "type": "block",
      "name": "mass distributions",
-     "definition": "mass_distributions_block_4"
+     "definition": "mass_distributions_block"
     },
     {
      "type": "block",
      "name": "lists",
-     "definition": "lists_block_4"
+     "definition": "lists_block"
     },
     {
      "type": "block",
      "name": "list shapes",
-     "definition": "list_shapes_block_4"
+     "definition": "list_shapes_block"
     },
     {
      "type": "block",
      "name": "mopps",
-     "definition": "mopps_block_4"
+     "definition": "mopps_block"
     },
     {
      "type": "data",
      "name": "mopp codes",
-     "definition": "mopp_codes_data_3"
+     "definition": "mopp_codes_data"
     },
     {
      "type": "block",
      "name": "hinge constraints",
-     "definition": "hinge_constraints_block_4"
+     "definition": "hinge_constraints_block"
     },
     {
      "type": "block",
      "name": "ragdoll constraints",
-     "definition": "ragdoll_constraints_block_4"
+     "definition": "ragdoll_constraints_block"
     },
     {
      "type": "block",
      "name": "regions",
-     "definition": "regions_block_4"
+     "definition": "regions_block"
     },
     {
      "type": "block",
      "name": "nodes",
-     "definition": "nodes_block_4"
+     "definition": "nodes_block"
     },
     {
      "type": "block",
      "name": "import info",
-     "definition": "global_tag_import_info_block_4"
+     "definition": "global_tag_import_info_block"
     },
     {
      "type": "block",
      "name": "errors",
-     "definition": "global_error_report_categories_block_4"
+     "definition": "global_error_report_categories_block"
     },
     {
      "type": "block",
      "name": "point to path curves",
-     "definition": "point_to_path_curve_block_3"
+     "definition": "point_to_path_curve_block"
     },
     {
      "type": "block",
      "name": "limited hinge constraints",
-     "definition": "limited_hinge_constraints_block_3"
+     "definition": "limited_hinge_constraints_block"
     },
     {
      "type": "block",
      "name": "ball and socket constraints",
-     "definition": "ball_and_socket_constraints_block_3"
+     "definition": "ball_and_socket_constraints_block"
     },
     {
      "type": "block",
      "name": "stiff spring constraints",
-     "definition": "stiff_spring_constraints_block_3"
+     "definition": "stiff_spring_constraints_block"
     },
     {
      "type": "block",
      "name": "prismatic constraints",
-     "definition": "prismatic_constraints_block_3"
+     "definition": "prismatic_constraints_block"
     },
     {
      "type": "block",
      "name": "phantoms",
-     "definition": "phantoms_block_3"
+     "definition": "phantoms_block"
     },
     {
      "type": "terminator",
@@ -3605,96 +3399,101 @@
   }
  },
  "arrays": {
-  "four_vectors_storage_array": {
+  "four vectors storage_array": {
    "count": 3,
-   "struct": "four_vectors_storage_struct"
+   "struct": "four vectors storage_struct"
   },
-  "child_shapes_storage_array": {
+  "child shapes storage_array": {
    "count": 4,
-   "struct": "child_shapes_storage_struct"
+   "struct": "child shapes storage_struct"
   },
-  "node_indices_array": {
+  "node indices_array": {
    "count": 4,
-   "struct": "node_indices_struct"
+   "struct": "node indices_struct"
   },
-  "node_weights_array": {
+  "node weights_array": {
    "count": 4,
-   "struct": "node_weights_struct"
+   "struct": "node weights_struct"
   },
-  "node_indices_array_2": {
+  "node indices_array_2": {
    "count": 4,
-   "struct": "node_indices_struct_2"
+   "struct": "node indices_struct_2"
   },
-  "node_weights_array_2": {
+  "node weights_array_2": {
    "count": 4,
-   "struct": "node_weights_struct_2"
+   "struct": "node weights_struct_2"
   },
-  "node_indices_array_3": {
+  "node indices_array_3": {
    "count": 4,
-   "struct": "node_indices_struct_3"
+   "struct": "node indices_struct_3"
   },
-  "node_weights_array_3": {
+  "node weights_array_3": {
    "count": 4,
-   "struct": "node_weights_struct_3"
+   "struct": "node weights_struct_3"
   },
   "points_array": {
    "count": 2,
    "struct": "points_struct"
   },
-  "node_indices_array_4": {
+  "node indices_array_4": {
    "count": 4,
-   "struct": "node_indices_struct_4"
+   "struct": "node indices_struct_4"
   },
-  "node_weights_array_4": {
+  "node weights_array_4": {
    "count": 4,
-   "struct": "node_weights_struct_4"
+   "struct": "node weights_struct_4"
   },
   "points_array_2": {
    "count": 3,
    "struct": "points_struct_2"
   },
-  "node_indices_array_5": {
+  "node indices_array_5": {
    "count": 4,
-   "struct": "node_indices_struct_5"
+   "struct": "node indices_struct_5"
   },
-  "node_weights_array_5": {
+  "node weights_array_5": {
    "count": 4,
-   "struct": "node_weights_struct_5"
+   "struct": "node weights_struct_5"
   },
   "points_array_3": {
    "count": 4,
    "struct": "points_struct_3"
   },
-  "node_indices_array_6": {
+  "node indices_array_6": {
    "count": 4,
-   "struct": "node_indices_struct_6"
+   "struct": "node indices_struct_6"
   },
-  "node_weights_array_6": {
+  "node weights_array_6": {
    "count": 4,
-   "struct": "node_weights_struct_6"
+   "struct": "node weights_struct_6"
   },
-  "four_vectors_storage_array_2": {
+  "four vectors storage_array_2": {
    "count": 8,
-   "struct": "four_vectors_storage_struct_2"
+   "struct": "four vectors storage_struct_2"
   }
  },
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "unused"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
+   "options": [
+    "does not animate"
+   ]
+  },
+  "flags_3": {
    "options": [
     "no collisions w/self",
     "only collide w/env",
-    "disable effects",
-    "does not interact w/environment",
-    "best early mover body",
-    "has no phantom power version"
+    "disable effects#this rigid body will not generate impact effects unless it hits another dynamic rigid body that does",
+    "does not interact w/environment#set this flag if this rigid bodies won't touch the environment, this allows us to open up some optimizations",
+    "best early mover body# if you have either of the early mover flags set in the object definitoin this body will be choosen as the one to make every thing local to, otherwise I pick :-)",
+    "has no phantom power version#don't check this flag without talking to eamon"
    ]
   },
-  "motion_type_enum": {
+  "motion type": {
    "options": [
     "sphere",
     "stabilized sphere",
@@ -3704,7 +3503,7 @@
     "fixed"
    ]
   },
-  "size_enum": {
+  "size": {
    "options": [
     "default",
     "tiny",
@@ -3715,34 +3514,7 @@
     "extra huge"
    ]
   },
-  "flags_flags_3": {
-   "options": [
-    "does not collide with fixed bodies"
-   ]
-  },
-  "flags_flags_4": {
-   "options": [
-    "does not animate"
-   ]
-  },
-  "report_type_enum": {
-   "options": [
-    "silent",
-    "comment",
-    "warning",
-    "error"
-   ]
-  },
-  "flags_flags_5": {
-   "options": [
-    "rendered",
-    "tangent-space",
-    "non-critical",
-    "lightmap light",
-    "report key is valid"
-   ]
-  },
-  "flags_flags_6": {
+  "flags_4": {
    "options": [
     "generates effects",
     "use acc as force",
@@ -3751,7 +3523,7 @@
     "ignores bipeds"
    ]
   },
-  "flags_flags_7": {
+  "flags_5": {
    "options": [
     "generates effects",
     "use acc as force",
@@ -3771,19 +3543,29 @@
     "ignores sound scenery",
     "ignores crates",
     "ignores creatures",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
     "localizes physics",
     "disable linear damping",
     "disable angular damping",
     "ignores dead bipeds"
    ]
   },
-  "type_enum": {
+  "flags_6": {
+   "options": [
+    "does not collide with fixed bodies"
+   ]
+  },
+  "flags_7": {
+   "options": [
+    "unused"
+   ]
+  },
+  "type": {
    "options": [
     "hinge",
     "limited hinge",
@@ -3793,61 +3575,43 @@
     "prismatic"
    ]
   },
-  "flags_flags_8": {
+  "flags_8": {
    "options": [
-    "is rigid",
-    "disable effects"
+    "is rigid#this constraint makes the edge rigid until it is loosened by damage",
+    "disable effects#this constraint will not generate impact effects"
+   ]
+  },
+  "report type": {
+   "options": [
+    "silent",
+    "comment",
+    "warning",
+    "error"
+   ]
+  },
+  "flags_9": {
+   "options": [
+    "rendered",
+    "tangent-space",
+    "non-critical",
+    "lightmap light",
+    "report key is valid"
    ]
   }
  },
  "datas": {
-  "mopp_codes_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  },
-  "zipped_data_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  },
-  "text_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  },
-  "text_data_2": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  },
-  "mopp_codes_data_2": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  },
-  "mopp_codes_data_3": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  }
+  "mopp_codes_data": {},
+  "tag_import_file_zipped_data_definition": {},
+  "error_report_string_data": {}
  },
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "rigid_bodies_block": {
-   "0": "rigid_bodies_block__v0",
-   "1": "rigid_bodies_block"
+  "rigid_bodies_block_struct": {
+   "0": "rigid_bodies_block_struct__v0",
+   "1": "rigid_bodies_block_struct"
   },
-  "phantom_types_block": {
-   "0": "phantom_types_block__v0",
-   "1": "phantom_types_block"
+  "phantom_types_block_struct": {
+   "0": "phantom_types_block_struct__v0",
+   "1": "phantom_types_block_struct"
   },
   "physics_model_block_struct": {
    "0": "physics_model_block_struct__v0",

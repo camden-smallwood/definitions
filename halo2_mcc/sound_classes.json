@@ -2,38 +2,34 @@
  "name": "sound_classes",
  "tag": "sncl",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "sound_classes_block",
  "blocks": {
-  "real_block_2": {
+  "real_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "real_block"
+   "struct": "real_block_struct",
+   "max_count_string": "64"
   },
-  "byte_block_2": {
+  "byte_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "byte_block"
+   "struct": "byte_block_struct",
+   "max_count_string": "k_kilo"
   },
-  "sound_class_ducker_block_definition_2": {
+  "sound_class_ducker_block_definition": {
    "max_count": 54,
-   "max_count_string": "54",
-   "struct": "sound_class_ducker_block_definition"
+   "struct": "sound_class_ducker_block_definition_struct",
+   "max_count_string": "NUMBER_OF_SOUND_CLASSES"
   },
-  "sound_class_block_2": {
+  "sound_class_block": {
    "max_count": 54,
-   "max_count_string": "54",
-   "struct": "sound_class_block"
-  },
-  "sound_class_block_3": {
-   "max_count": 54,
-   "max_count_string": "54",
-   "struct": "sound_class_block"
+   "struct": "sound_class_block_struct",
+   "max_count_string": "NUMBER_OF_SOUND_CLASSES"
   },
   "sound_classes_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sound_classes_block_struct"
+   "struct": "sound_classes_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -44,7 +40,7 @@
     {
      "type": "block",
      "name": "sound classes",
-     "definition": "sound_class_block_2"
+     "definition": "sound_class_block"
     },
     {
      "type": "terminator",
@@ -52,13 +48,13 @@
     }
    ]
   },
-  "sound_class_block__v0": {
+  "sound_class_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 92,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "92*sizeof(byte)",
      "definition": 92
     },
     {
@@ -67,7 +63,7 @@
     }
    ]
   },
-  "sound_class_block__v1": {
+  "sound_class_block_struct__v1": {
    "guid": "00000000000000000000000000000000",
    "size": 96,
    "fields": [
@@ -86,12 +82,12 @@
     {
      "type": "word_flags",
      "name": "internal flags",
-     "definition": "internal_flags_flags"
+     "definition": "internal flags"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_integer",
@@ -100,7 +96,7 @@
     {
      "type": "short_enum",
      "name": "cache miss mode",
-     "definition": "cache_miss_mode_enum"
+     "definition": "cache miss mode"
     },
     {
      "type": "real",
@@ -161,11 +157,11 @@
     {
      "type": "char_enum",
      "name": "stereo playback type",
-     "definition": "stereo_playback_type_enum"
+     "definition": "stereo playback type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(byte)",
      "definition": 1
     },
     {
@@ -194,7 +190,7 @@
     }
    ]
   },
-  "sound_class_block__v2": {
+  "sound_class_block_struct__v2": {
    "guid": "00000000000000000000000000000000",
    "size": 116,
    "fields": [
@@ -213,12 +209,12 @@
     {
      "type": "word_flags",
      "name": "internal flags",
-     "definition": "internal_flags_flags"
+     "definition": "internal flags"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_integer",
@@ -227,7 +223,7 @@
     {
      "type": "short_enum",
      "name": "cache miss mode",
-     "definition": "cache_miss_mode_enum"
+     "definition": "cache miss mode"
     },
     {
      "type": "real",
@@ -288,16 +284,16 @@
     {
      "type": "char_enum",
      "name": "stereo playback type",
-     "definition": "stereo_playback_type_enum"
+     "definition": "stereo playback type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(byte)",
      "definition": 1
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
@@ -319,7 +315,7 @@
     {
      "type": "struct",
      "name": "lowpass cut off parameters",
-     "definition": "sound_lowpass_struct"
+     "definition": "sound_lowpass_struct_2"
     },
     {
      "type": "terminator",
@@ -327,7 +323,7 @@
     }
    ]
   },
-  "sound_lowpass_struct": {
+  "sound_lowpass_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -346,7 +342,7 @@
     {
      "type": "struct",
      "name": "Mapping",
-     "definition": "mapping_function"
+     "definition": "mapping_function_2"
     },
     {
      "type": "terminator",
@@ -370,7 +366,7 @@
     {
      "type": "byte_flags",
      "name": "Flags",
-     "definition": "flags_flags_2"
+     "definition": "Flags"
     },
     {
      "type": "char_integer",
@@ -399,7 +395,7 @@
     {
      "type": "block",
      "name": "Values",
-     "definition": "real_block_2"
+     "definition": "real_block"
     },
     {
      "type": "custom",
@@ -412,7 +408,7 @@
    ],
    "tag": "MAPP"
   },
-  "real_block": {
+  "real_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -426,7 +422,7 @@
     }
    ]
   },
-  "mapping_function": {
+  "mapping_function_2": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -437,7 +433,7 @@
     {
      "type": "block",
      "name": "data",
-     "definition": "byte_block_2"
+     "definition": "byte_block"
     },
     {
      "type": "custom",
@@ -450,7 +446,7 @@
    ],
    "tag": "MAPP"
   },
-  "byte_block": {
+  "byte_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 1,
    "fields": [
@@ -464,7 +460,7 @@
     }
    ]
   },
-  "sound_class_block": {
+  "sound_class_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
@@ -483,12 +479,12 @@
     {
      "type": "word_flags",
      "name": "internal flags",
-     "definition": "internal_flags_flags"
+     "definition": "internal flags"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_integer",
@@ -497,7 +493,7 @@
     {
      "type": "short_enum",
      "name": "cache miss mode",
-     "definition": "cache_miss_mode_enum"
+     "definition": "cache miss mode"
     },
     {
      "type": "real",
@@ -558,16 +554,16 @@
     {
      "type": "char_enum",
      "name": "stereo playback type",
-     "definition": "stereo_playback_type_enum"
+     "definition": "stereo playback type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(byte)",
      "definition": 1
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
@@ -589,12 +585,12 @@
     {
      "type": "struct",
      "name": "lowpass cut off parameters",
-     "definition": "sound_lowpass_struct"
+     "definition": "sound_lowpass_struct_2"
     },
     {
      "type": "block",
      "name": "ext ducking",
-     "definition": "sound_class_ducker_block_definition_2"
+     "definition": "sound_class_ducker_block_definition"
     },
     {
      "type": "terminator",
@@ -602,14 +598,14 @@
     }
    ]
   },
-  "sound_class_ducker_block_definition": {
+  "sound_class_ducker_block_definition_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "long_enum",
      "name": "sound class",
-     "definition": "sound_class_enum"
+     "definition": "sound class"
     },
     {
      "type": "real",
@@ -640,7 +636,7 @@
     {
      "type": "block",
      "name": "sound classes",
-     "definition": "sound_class_block_3"
+     "definition": "sound_class_block"
     },
     {
      "type": "terminator",
@@ -649,9 +645,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "internal_flags_flags": {
+  "internal flags": {
    "options": [
     "valid",
     "is speech",
@@ -663,7 +658,7 @@
     "multilingual"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "plays during pause",
     "dry stereo mix",
@@ -681,19 +676,19 @@
     "bypass lfe"
    ]
   },
-  "cache_miss_mode_enum": {
+  "cache miss mode": {
    "options": [
     "discard",
     "postpone"
    ]
   },
-  "stereo_playback_type_enum": {
+  "stereo playback type": {
    "options": [
     "first person",
     "ambient"
    ]
   },
-  "flags_flags_2": {
+  "Flags": {
    "options": [
     "Range",
     "Unused 0",
@@ -705,12 +700,12 @@
     "Color Bit 3"
    ]
   },
-  "sound_class_enum": {
+  "sound class": {
    "options": [
     "projectile_impact",
     "projectile_detonation",
     "projectile_flyby",
-    null,
+    "",
     "weapon_fire",
     "weapon_ready",
     "weapon_reload",
@@ -728,30 +723,30 @@
     "unit_footsteps",
     "unit_dialog",
     "unit_animation",
-    null,
+    "",
     "vehicle_collision",
     "vehicle_engine",
     "vehicle_animation",
-    null,
+    "",
     "device_door",
-    null,
+    "",
     "device_machinery",
     "device_stationary",
-    null,
-    null,
+    "",
+    "",
     "music",
     "ambient_nature",
     "ambient_machinery",
-    null,
+    "",
     "huge_ass",
     "object_looping",
     "cinematic_music",
     "reflection",
     "reflection_lod",
     "reflection_lod_far",
-    null,
-    null,
-    null,
+    "",
+    "",
+    "",
     "cortana_mission",
     "cortana_cinematic",
     "mission_dialog",
@@ -764,19 +759,16 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "mapping_function": {
+  "mapping_function_2": {
    "0": "mapping_function__v0",
-   "1": "mapping_function"
+   "1": "mapping_function_2"
   },
-  "sound_class_block": {
-   "0": "sound_class_block__v0",
-   "1": "sound_class_block__v1",
-   "2": "sound_class_block__v2",
-   "3": "sound_class_block"
+  "sound_class_block_struct": {
+   "0": "sound_class_block_struct__v0",
+   "1": "sound_class_block_struct__v1",
+   "2": "sound_class_block_struct__v2",
+   "3": "sound_class_block_struct"
   },
   "sound_classes_block_struct": {
    "0": "sound_classes_block_struct__v0",

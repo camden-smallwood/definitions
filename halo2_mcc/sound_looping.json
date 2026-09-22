@@ -2,53 +2,24 @@
  "name": "sound_looping",
  "tag": "lsnd",
  "version": 3,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "sound_looping_block",
  "blocks": {
-  "looping_sound_track_block_2": {
+  "looping_sound_track_block": {
    "max_count": 3,
-   "max_count_string": "3",
-   "struct": "looping_sound_track_block"
+   "struct": "looping_sound_track_block_struct",
+   "max_count_string": "MAXIMUM_TRACKS_PER_LOOPING_SOUND"
   },
-  "looping_sound_detail_block_2": {
+  "looping_sound_detail_block": {
    "max_count": 12,
-   "max_count_string": "12",
-   "struct": "looping_sound_detail_block"
-  },
-  "looping_sound_track_block_3": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "looping_sound_track_block"
-  },
-  "looping_sound_detail_block_3": {
-   "max_count": 12,
-   "max_count_string": "12",
-   "struct": "looping_sound_detail_block"
-  },
-  "looping_sound_track_block_4": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "looping_sound_track_block"
-  },
-  "looping_sound_detail_block_4": {
-   "max_count": 12,
-   "max_count_string": "12",
-   "struct": "looping_sound_detail_block"
-  },
-  "looping_sound_track_block_5": {
-   "max_count": 3,
-   "max_count_string": "3",
-   "struct": "looping_sound_track_block"
-  },
-  "looping_sound_detail_block_5": {
-   "max_count": 12,
-   "max_count_string": "12",
-   "struct": "looping_sound_detail_block"
+   "struct": "looping_sound_detail_block_struct",
+   "max_count_string": "MAXIMUM_DETAIL_SOUNDS_PER_LOOPING_SOUND"
   },
   "sound_looping_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sound_looping_block_struct"
+   "struct": "sound_looping_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -59,7 +30,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -67,7 +38,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -76,12 +47,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -91,12 +62,12 @@
     {
      "type": "block",
      "name": "tracks",
-     "definition": "looping_sound_track_block_2"
+     "definition": "looping_sound_track_block"
     },
     {
      "type": "block",
      "name": "detail sounds",
-     "definition": "looping_sound_detail_block_2"
+     "definition": "looping_sound_detail_block"
     },
     {
      "type": "terminator",
@@ -104,14 +75,14 @@
     }
    ]
   },
-  "looping_sound_track_block__v0": {
+  "looping_sound_track_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 160,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real",
@@ -127,7 +98,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -144,7 +115,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -161,7 +132,7 @@
     }
    ]
   },
-  "looping_sound_track_block": {
+  "looping_sound_track_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 144,
    "fields": [
@@ -172,7 +143,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real",
@@ -214,11 +185,11 @@
     {
      "type": "short_enum",
      "name": "output effect",
-     "definition": "output_effect_enum"
+     "definition": "output effect"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -243,7 +214,7 @@
     }
    ]
   },
-  "looping_sound_detail_block__v0": {
+  "looping_sound_detail_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 104,
    "fields": [
@@ -262,11 +233,11 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "12*sizeof(long)",
      "definition": 48
     },
     {
@@ -287,7 +258,7 @@
     }
    ]
   },
-  "looping_sound_detail_block": {
+  "looping_sound_detail_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 60,
    "fields": [
@@ -310,7 +281,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "angle_bounds",
@@ -337,7 +308,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -349,7 +320,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -359,12 +330,12 @@
     {
      "type": "block",
      "name": "tracks",
-     "definition": "looping_sound_track_block_3"
+     "definition": "looping_sound_track_block"
     },
     {
      "type": "block",
      "name": "detail sounds",
-     "definition": "looping_sound_detail_block_3"
+     "definition": "looping_sound_detail_block"
     },
     {
      "type": "terminator",
@@ -379,7 +350,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -391,7 +362,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -401,12 +372,12 @@
     {
      "type": "block",
      "name": "tracks",
-     "definition": "looping_sound_track_block_4"
+     "definition": "looping_sound_track_block"
     },
     {
      "type": "block",
      "name": "detail sounds",
-     "definition": "looping_sound_detail_block_4"
+     "definition": "looping_sound_detail_block"
     },
     {
      "type": "terminator",
@@ -425,7 +396,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -437,7 +408,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -447,12 +418,12 @@
     {
      "type": "block",
      "name": "tracks",
-     "definition": "looping_sound_track_block_5"
+     "definition": "looping_sound_track_block"
     },
     {
      "type": "block",
      "name": "detail sounds",
-     "definition": "looping_sound_detail_block_5"
+     "definition": "looping_sound_detail_block"
     },
     {
      "type": "terminator",
@@ -461,15 +432,14 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
-    "deafening to AIs",
-    "not a loop",
-    "stops music",
-    "always spatialize",
-    "synchronize playback",
+    "deafening to AIs#when used as a background stereo track, causes nearby AIs to be unable to hear",
+    "not a loop#this is a collection of permutations strung together that should play once then stop.",
+    "stops music#all other music loops will stop when this one starts.",
+    "always spatialize#always play as 3d sound, even in first person",
+    "synchronize playback#synchronizes playback with other looping sounds attached to the owner of this sound",
     "synchronize tracks",
     "fake spatialization with distance",
     "combine all 3d playback",
@@ -477,16 +447,16 @@
     "remastered only"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
-    "fade in at start",
-    "fade out at stop",
-    "crossfade alt loop",
+    "fade in at start#the loop sound should fade in while the start sound is playing.",
+    "fade out at stop#the loop sound should fade out while the stop sound is playing.",
+    "crossfade alt loop#when the sound changes to the alternate version,  .",
     "master surround sound track",
     "fade out at alt stop"
    ]
   },
-  "output_effect_enum": {
+  "output effect": {
    "options": [
     "none",
     "output front speakers",
@@ -494,7 +464,7 @@
     "output center speakers"
    ]
   },
-  "flags_flags_3": {
+  "flags_3": {
    "options": [
     "don't play with alternate",
     "don't play without alternate",
@@ -502,17 +472,14 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "looping_sound_track_block": {
-   "0": "looping_sound_track_block__v0",
-   "1": "looping_sound_track_block"
+  "looping_sound_track_block_struct": {
+   "0": "looping_sound_track_block_struct__v0",
+   "1": "looping_sound_track_block_struct"
   },
-  "looping_sound_detail_block": {
-   "0": "looping_sound_detail_block__v0",
-   "1": "looping_sound_detail_block"
+  "looping_sound_detail_block_struct": {
+   "0": "looping_sound_detail_block_struct__v0",
+   "1": "looping_sound_detail_block_struct"
   },
   "sound_looping_block_struct": {
    "0": "sound_looping_block_struct__v0",

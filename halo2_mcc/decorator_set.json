@@ -2,83 +2,54 @@
  "name": "decorator_set",
  "tag": "DECR",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "decorator_set_block",
  "blocks": {
-  "decorator_shader_reference_block_2": {
+  "decorator_shader_reference_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "decorator_shader_reference_block"
+   "struct": "decorator_shader_reference_block_struct",
+   "max_count_string": "c_decorator_set_definition::k_maximum_shader_count"
   },
-  "decorator_permutations_block_2": {
+  "decorator_permutations_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "decorator_permutations_block"
+   "struct": "decorator_permutations_block_struct",
+   "max_count_string": "c_decorator_permutation_definition::k_maximum_count"
   },
-  "decorator_classes_block_2": {
+  "decorator_classes_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "decorator_classes_block"
+   "struct": "decorator_classes_block_struct",
+   "max_count_string": "c_decorator_class_definition::k_maximum_count"
   },
-  "decorator_models_block_2": {
+  "decorator_models_block": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "decorator_models_block"
+   "struct": "decorator_models_block_struct",
+   "max_count_string": "c_decorator_model_definition::k_maximum_count"
   },
-  "decorator_model_vertices_block_2": {
+  "decorator_model_vertices_block": {
    "max_count": 32768,
-   "max_count_string": "32768",
-   "struct": "decorator_model_vertices_block"
+   "struct": "decorator_model_vertices_block_struct",
+   "max_count_string": "c_decorator_set_definition::k_maximum_model_vertices"
   },
-  "decorator_model_indices_block_2": {
+  "decorator_model_indices_block": {
    "max_count": 32768,
-   "max_count_string": "32768",
-   "struct": "decorator_model_indices_block"
+   "struct": "decorator_model_indices_block_struct",
+   "max_count_string": "c_decorator_set_definition::k_maximum_model_indices"
   },
-  "cached_data_block_2": {
+  "cached_data_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "cached_data_block"
+   "struct": "cached_data_block_struct",
+   "max_count_string": "1"
   },
-  "global_geometry_block_resource_block_2": {
+  "global_geometry_block_resource_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "global_geometry_block_resource_block"
-  },
-  "decorator_shader_reference_block_3": {
-   "max_count": 8,
-   "max_count_string": "8",
-   "struct": "decorator_shader_reference_block"
-  },
-  "decorator_classes_block_3": {
-   "max_count": 8,
-   "max_count_string": "8",
-   "struct": "decorator_classes_block"
-  },
-  "decorator_models_block_3": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "decorator_models_block"
-  },
-  "decorator_model_vertices_block_3": {
-   "max_count": 32768,
-   "max_count_string": "32768",
-   "struct": "decorator_model_vertices_block"
-  },
-  "decorator_model_indices_block_3": {
-   "max_count": 32768,
-   "max_count_string": "32768",
-   "struct": "decorator_model_indices_block"
-  },
-  "cached_data_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "cached_data_block"
+   "struct": "global_geometry_block_resource_block_struct",
+   "max_count_string": "MAXIMUM_RESOURCES_PER_GEOMETRY_BLOCK"
   },
   "decorator_set_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "decorator_set_block_struct"
+   "struct": "decorator_set_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -89,41 +60,41 @@
     {
      "type": "block",
      "name": "shaders",
-     "definition": "decorator_shader_reference_block_2"
+     "definition": "decorator_shader_reference_block"
     },
     {
      "type": "block",
      "name": "classes",
-     "definition": "decorator_classes_block_2"
+     "definition": "decorator_classes_block"
     },
     {
      "type": "block",
      "name": "models",
-     "definition": "decorator_models_block_2"
+     "definition": "decorator_models_block"
     },
     {
      "type": "block",
      "name": "raw vertices",
-     "definition": "decorator_model_vertices_block_2"
+     "definition": "decorator_model_vertices_block"
     },
     {
      "type": "block",
      "name": "indices",
-     "definition": "decorator_model_indices_block_2"
+     "definition": "decorator_model_indices_block"
     },
     {
      "type": "block",
      "name": "cached data",
-     "definition": "cached_data_block_2"
+     "definition": "cached_data_block"
     },
     {
      "type": "struct",
      "name": "geometry section info",
-     "definition": "global_geometry_block_info_struct"
+     "definition": "global_geometry_block_info_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(triangle_buffer)",
      "definition": 16
     },
     {
@@ -132,7 +103,7 @@
     }
    ]
   },
-  "decorator_shader_reference_block": {
+  "decorator_shader_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -146,7 +117,7 @@
     }
    ]
   },
-  "decorator_classes_block": {
+  "decorator_classes_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -157,11 +128,11 @@
     {
      "type": "char_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(byte)*3",
      "definition": 3
     },
     {
@@ -171,7 +142,7 @@
     {
      "type": "block",
      "name": "permutations",
-     "definition": "decorator_permutations_block_2"
+     "definition": "decorator_permutations_block"
     },
     {
      "type": "terminator",
@@ -179,7 +150,7 @@
     }
    ]
   },
-  "decorator_permutations_block": {
+  "decorator_permutations_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -188,23 +159,24 @@
      "name": "name"
     },
     {
-     "type": "char_integer",
-     "name": "shader"
+     "type": "char_block_index",
+     "name": "shader",
+     "definition": "decorator_shader_reference_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(byte)*3",
      "definition": 3
     },
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "char_enum",
      "name": "fade distance",
-     "definition": "fade_distance_enum"
+     "definition": "fade distance"
     },
     {
      "type": "char_integer",
@@ -244,7 +216,7 @@
     }
    ]
   },
-  "decorator_models_block": {
+  "decorator_models_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -266,7 +238,7 @@
     }
    ]
   },
-  "decorator_model_vertices_block": {
+  "decorator_model_vertices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 56,
    "fields": [
@@ -296,7 +268,7 @@
     }
    ]
   },
-  "decorator_model_indices_block": {
+  "decorator_model_indices_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
@@ -310,7 +282,7 @@
     }
    ]
   },
-  "cached_data_block": {
+  "cached_data_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -324,7 +296,7 @@
     }
    ]
   },
-  "global_geometry_block_info_struct": {
+  "global_geometry_block_info_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
@@ -347,11 +319,11 @@
     {
      "type": "block",
      "name": "resources",
-     "definition": "global_geometry_block_resource_block_2"
+     "definition": "global_geometry_block_resource_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -360,12 +332,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -375,18 +347,18 @@
    ],
    "tag": "BLOK"
   },
-  "global_geometry_block_resource_block": {
+  "global_geometry_block_resource_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "char_enum",
      "name": "type",
-     "definition": "type_enum_2"
+     "definition": "type_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(byte)",
      "definition": 3
     },
     {
@@ -418,7 +390,7 @@
     {
      "type": "block",
      "name": "shaders",
-     "definition": "decorator_shader_reference_block_3"
+     "definition": "decorator_shader_reference_block"
     },
     {
      "type": "real",
@@ -431,41 +403,41 @@
     {
      "type": "block",
      "name": "classes",
-     "definition": "decorator_classes_block_3"
+     "definition": "decorator_classes_block"
     },
     {
      "type": "block",
      "name": "models",
-     "definition": "decorator_models_block_3"
+     "definition": "decorator_models_block"
     },
     {
      "type": "block",
      "name": "raw vertices",
-     "definition": "decorator_model_vertices_block_3"
+     "definition": "decorator_model_vertices_block"
     },
     {
      "type": "block",
      "name": "indices",
-     "definition": "decorator_model_indices_block_3"
+     "definition": "decorator_model_indices_block"
     },
     {
      "type": "block",
      "name": "cached data",
-     "definition": "cached_data_block_3"
+     "definition": "cached_data_block"
     },
     {
      "type": "struct",
      "name": "geometry section info",
-     "definition": "global_geometry_block_info_struct"
+     "definition": "global_geometry_block_info_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(triangle_buffer)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -475,9 +447,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "type_enum": {
+  "type": {
    "options": [
     "model",
     "floating decal",
@@ -487,21 +458,21 @@
     "cross quad"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "align to normal",
     "only on ground",
     "upright"
    ]
   },
-  "fade_distance_enum": {
+  "fade distance": {
    "options": [
     "close",
     "medium",
     "far"
    ]
   },
-  "type_enum_2": {
+  "type_2": {
    "options": [
     "tag block",
     "tag data",
@@ -509,9 +480,6 @@
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
   "decorator_set_block_struct": {
    "0": "decorator_set_block_struct__v0",

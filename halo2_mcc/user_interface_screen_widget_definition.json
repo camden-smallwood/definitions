@@ -2,108 +2,104 @@
  "name": "user_interface_screen_widget_definition",
  "tag": "wgit",
  "version": 898,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "user_interface_screen_widget_definition_block",
  "blocks": {
-  "button_widget_reference_block_2": {
+  "button_widget_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "button_widget_reference_block"
+   "struct": "button_widget_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_button_widget_blocks"
   },
-  "s_text_value_pair_reference_block_unused_2": {
+  "s_text_value_pair_reference_block_UNUSED": {
    "max_count": 100,
-   "max_count_string": "100",
-   "struct": "s_text_value_pair_reference_block_unused"
+   "struct": "s_text_value_pair_reference_block_UNUSED_struct",
+   "max_count_string": "k_maximum_text_value_pairs_per_block"
   },
-  "list_reference_block_2": {
+  "list_reference_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "list_reference_block"
+   "struct": "list_reference_block_struct",
+   "max_count_string": "1"
   },
-  "table_view_list_item_reference_block_2": {
+  "table_view_list_item_reference_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "table_view_list_item_reference_block"
+   "struct": "table_view_list_item_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_table_view_list_cell_blocks"
   },
-  "table_view_list_row_reference_block_2": {
+  "table_view_list_row_reference_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "table_view_list_row_reference_block"
+   "struct": "table_view_list_row_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_table_view_list_row_blocks"
   },
-  "table_view_list_reference_block_2": {
+  "table_view_list_reference_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "table_view_list_reference_block"
+   "struct": "table_view_list_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_table_view_list_blocks"
   },
-  "text_block_reference_block_2": {
+  "text_block_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "text_block_reference_block"
+   "struct": "text_block_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_text_blocks"
   },
-  "bitmap_block_reference_block_2": {
+  "bitmap_block_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "bitmap_block_reference_block"
+   "struct": "bitmap_block_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_bitmap_blocks"
   },
-  "ui_object_reference_block_2": {
+  "ui_object_reference_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "ui_object_reference_block"
+   "struct": "ui_object_reference_block_struct",
+   "max_count_string": "k_maximum_objects_per_ui_scene"
   },
-  "ui_light_reference_block_2": {
+  "ui_light_reference_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "ui_light_reference_block"
+   "struct": "ui_light_reference_block_struct",
+   "max_count_string": "k_maximum_lights_per_ui_scene"
   },
-  "ui_model_scene_reference_block_2": {
+  "ui_model_scene_reference_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "ui_model_scene_reference_block"
+   "struct": "ui_model_scene_reference_block_struct",
+   "max_count_string": "k_maximum_object_scenes_per_screen"
   },
-  "s_text_value_pair_reference_block_unused_3": {
+  "s_text_value_pair_blocks_block_UNUSED": {
    "max_count": 100,
-   "max_count_string": "100",
-   "struct": "s_text_value_pair_reference_block_unused"
+   "struct": "s_text_value_pair_blocks_block_UNUSED_struct",
+   "max_count_string": "k_maximum_text_value_pairs_per_block"
   },
-  "s_text_value_pair_blocks_block_unused_2": {
-   "max_count": 100,
-   "max_count_string": "100",
-   "struct": "s_text_value_pair_blocks_block_unused"
-  },
-  "hud_block_reference_block_2": {
+  "hud_block_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "hud_block_reference_block"
+   "struct": "hud_block_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_hud_blocks"
   },
-  "player_block_reference_block_2": {
+  "player_block_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "player_block_reference_block"
+   "struct": "player_block_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_player_blocks"
   },
-  "window_pane_reference_block_2": {
+  "window_pane_reference_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "window_pane_reference_block"
+   "struct": "window_pane_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_window_pane_tag_blocks"
   },
-  "local_string_id_list_string_reference_block_2": {
+  "local_string_id_list_string_reference_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "local_string_id_list_string_reference_block"
+   "struct": "local_string_id_list_string_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_local_string_ids"
   },
-  "local_string_id_list_section_reference_block_2": {
+  "local_string_id_list_section_reference_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "local_string_id_list_section_reference_block"
+   "struct": "local_string_id_list_section_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_local_string_id_sections"
   },
-  "local_bitmap_reference_block_2": {
+  "local_bitmap_reference_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "local_bitmap_reference_block"
+   "struct": "local_bitmap_reference_block_struct",
+   "max_count_string": "k_maximum_number_of_local_bitmaps"
   },
   "user_interface_screen_widget_definition_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "user_interface_screen_widget_definition_block_struct"
+   "struct": "user_interface_screen_widget_definition_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -114,12 +110,12 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_enum",
      "name": "screen ID",
-     "definition": "screen_id_enum"
+     "definition": "screen ID"
     },
     {
      "type": "useless_pad",
@@ -134,7 +130,7 @@
     {
      "type": "short_enum",
      "name": "button key type",
-     "definition": "button_key_type_enum"
+     "definition": "button key type"
     },
     {
      "type": "real_argb_color",
@@ -147,16 +143,16 @@
     {
      "type": "block",
      "name": "panes",
-     "definition": "window_pane_reference_block_2"
+     "definition": "window_pane_reference_block"
     },
     {
      "type": "short_enum",
      "name": "shape group",
-     "definition": "shape_group_enum"
+     "definition": "shape group"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -166,12 +162,12 @@
     {
      "type": "block",
      "name": "local strings",
-     "definition": "local_string_id_list_section_reference_block_2"
+     "definition": "local_string_id_list_section_reference_block"
     },
     {
      "type": "block",
      "name": "local bitmaps",
-     "definition": "local_bitmap_reference_block_2"
+     "definition": "local_bitmap_reference_block"
     },
     {
      "type": "real_rgb_color",
@@ -212,64 +208,64 @@
     }
    ]
   },
-  "window_pane_reference_block": {
+  "window_pane_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 112,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "block",
      "name": "buttons",
-     "definition": "button_widget_reference_block_2"
+     "definition": "button_widget_reference_block"
     },
     {
      "type": "block",
      "name": "list block",
-     "definition": "list_reference_block_2"
+     "definition": "list_reference_block"
     },
     {
      "type": "block",
      "name": "table view",
-     "definition": "table_view_list_reference_block_2"
+     "definition": "table_view_list_reference_block"
     },
     {
      "type": "block",
      "name": "text blocks",
-     "definition": "text_block_reference_block_2"
+     "definition": "text_block_reference_block"
     },
     {
      "type": "block",
      "name": "bitmap blocks",
-     "definition": "bitmap_block_reference_block_2"
+     "definition": "bitmap_block_reference_block"
     },
     {
      "type": "block",
      "name": "model scene blocks",
-     "definition": "ui_model_scene_reference_block_2"
+     "definition": "ui_model_scene_reference_block"
     },
     {
      "type": "block",
      "name": "text-value blocks",
-     "definition": "s_text_value_pair_blocks_block_unused_2"
+     "definition": "s_text_value_pair_blocks_block_UNUSED"
     },
     {
      "type": "block",
      "name": "hud blocks",
-     "definition": "hud_block_reference_block_2"
+     "definition": "hud_block_reference_block"
     },
     {
      "type": "block",
      "name": "player blocks",
-     "definition": "player_block_reference_block_2"
+     "definition": "player_block_reference_block"
     },
     {
      "type": "terminator",
@@ -277,19 +273,19 @@
     }
    ]
   },
-  "button_widget_reference_block": {
+  "button_widget_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
     {
      "type": "long_flags",
      "name": "text flags",
-     "definition": "text_flags_flags"
+     "definition": "text flags"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -297,13 +293,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "custom font",
-     "definition": "custom_font_enum"
+     "definition": "custom font"
     },
     {
      "type": "real_argb_color",
@@ -336,7 +332,7 @@
     {
      "type": "long_flags",
      "name": "button flags",
-     "definition": "button_flags_flags"
+     "definition": "button flags"
     },
     {
      "type": "terminator",
@@ -344,19 +340,19 @@
     }
    ]
   },
-  "list_reference_block": {
+  "list_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "short_enum",
      "name": "skin index",
-     "definition": "skin_index_enum"
+     "definition": "skin index"
     },
     {
      "type": "short_integer",
@@ -369,7 +365,7 @@
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -378,7 +374,7 @@
     {
      "type": "block",
      "name": "item text-value pairs",
-     "definition": "s_text_value_pair_reference_block_unused_2"
+     "definition": "s_text_value_pair_reference_block_UNUSED"
     },
     {
      "type": "terminator",
@@ -386,19 +382,19 @@
     }
    ]
   },
-  "s_text_value_pair_reference_block_unused": {
+  "s_text_value_pair_reference_block_UNUSED_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "short_enum",
      "name": "value type",
-     "definition": "value_type_enum"
+     "definition": "value type"
     },
     {
      "type": "short_enum",
      "name": "boolean value",
-     "definition": "boolean_value_enum"
+     "definition": "boolean value"
     },
     {
      "type": "long_integer",
@@ -422,19 +418,19 @@
     }
    ]
   },
-  "table_view_list_reference_block": {
+  "table_view_list_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -443,11 +439,11 @@
     {
      "type": "short_enum",
      "name": "custom font",
-     "definition": "custom_font_enum"
+     "definition": "custom font"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -461,7 +457,7 @@
     {
      "type": "block",
      "name": "table rows",
-     "definition": "table_view_list_row_reference_block_2"
+     "definition": "table_view_list_row_reference_block"
     },
     {
      "type": "terminator",
@@ -469,14 +465,14 @@
     }
    ]
   },
-  "table_view_list_row_reference_block": {
+  "table_view_list_row_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_4"
     },
     {
      "type": "short_integer",
@@ -484,13 +480,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "row cells",
-     "definition": "table_view_list_item_reference_block_2"
+     "definition": "table_view_list_item_reference_block"
     },
     {
      "type": "terminator",
@@ -498,14 +494,14 @@
     }
    ]
   },
-  "table_view_list_item_reference_block": {
+  "table_view_list_item_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
      "type": "long_flags",
      "name": "text flags",
-     "definition": "text_flags_flags"
+     "definition": "text flags"
     },
     {
      "type": "short_integer",
@@ -513,7 +509,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -534,7 +530,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -543,19 +539,19 @@
     }
    ]
   },
-  "text_block_reference_block": {
+  "text_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
     {
      "type": "long_flags",
      "name": "text flags",
-     "definition": "text_flags_flags"
+     "definition": "text flags"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -563,13 +559,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "custom font",
-     "definition": "custom_font_enum"
+     "definition": "custom font"
     },
     {
      "type": "real_argb_color",
@@ -589,7 +585,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -598,19 +594,19 @@
     }
    ]
   },
-  "bitmap_block_reference_block": {
+  "bitmap_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_5"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -619,7 +615,7 @@
     {
      "type": "short_enum",
      "name": "bitmap blend method",
-     "definition": "bitmap_blend_method_enum"
+     "definition": "bitmap blend method"
     },
     {
      "type": "short_integer",
@@ -647,7 +643,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -692,19 +688,19 @@
     }
    ]
   },
-  "ui_model_scene_reference_block": {
+  "ui_model_scene_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_6"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -716,18 +712,18 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "block",
      "name": "objects",
-     "definition": "ui_object_reference_block_2"
+     "definition": "ui_object_reference_block"
     },
     {
      "type": "block",
      "name": "lights",
-     "definition": "ui_light_reference_block_2"
+     "definition": "ui_light_reference_block"
     },
     {
      "type": "real_vector_3d",
@@ -768,7 +764,7 @@
     }
    ]
   },
-  "ui_object_reference_block": {
+  "ui_object_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -782,7 +778,7 @@
     }
    ]
   },
-  "ui_light_reference_block": {
+  "ui_light_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -796,7 +792,7 @@
     }
    ]
   },
-  "s_text_value_pair_blocks_block_unused": {
+  "s_text_value_pair_blocks_block_UNUSED_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
@@ -807,7 +803,7 @@
     {
      "type": "block",
      "name": "text value pairs",
-     "definition": "s_text_value_pair_reference_block_unused_3"
+     "definition": "s_text_value_pair_reference_block_UNUSED"
     },
     {
      "type": "terminator",
@@ -815,19 +811,19 @@
     }
    ]
   },
-  "hud_block_reference_block": {
+  "hud_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_5"
+     "definition": "flags_7"
     },
     {
      "type": "short_enum",
      "name": "animation index",
-     "definition": "animation_index_enum"
+     "definition": "animation index"
     },
     {
      "type": "short_integer",
@@ -859,13 +855,13 @@
     }
    ]
   },
-  "player_block_reference_block": {
+  "player_block_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(dword)",
      "definition": 4
     },
     {
@@ -879,7 +875,7 @@
     {
      "type": "char_enum",
      "name": "table order",
-     "definition": "table_order_enum"
+     "definition": "table order"
     },
     {
      "type": "char_integer",
@@ -907,7 +903,7 @@
     }
    ]
   },
-  "local_string_id_list_section_reference_block": {
+  "local_string_id_list_section_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -918,7 +914,7 @@
     {
      "type": "block",
      "name": "local string section references",
-     "definition": "local_string_id_list_string_reference_block_2"
+     "definition": "local_string_id_list_string_reference_block"
     },
     {
      "type": "terminator",
@@ -926,7 +922,7 @@
     }
    ]
   },
-  "local_string_id_list_string_reference_block": {
+  "local_string_id_list_string_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -940,7 +936,7 @@
     }
    ]
   },
-  "local_bitmap_reference_block": {
+  "local_bitmap_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -955,9 +951,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "1/4 screen dialog",
     "multiple panes are for list flavor items",
@@ -967,13 +962,13 @@
     "disable overlay effect"
    ]
   },
-  "screen_id_enum": {
+  "screen ID": {
    "options": [
-    "Test",
-    "Test",
-    "Test",
-    "Test",
-    "Test",
+    "Test #1",
+    "Test #2",
+    "Test #3",
+    "Test #4",
+    "Test #5",
     "Game Shell Background",
     "Main Menu",
     "Error Dialog OK Cancel",
@@ -1269,7 +1264,7 @@
     "About Dialog"
    ]
   },
-  "button_key_type_enum": {
+  "button key type": {
    "options": [
     "NONE",
     "A=SELECT B=BACK",
@@ -1299,7 +1294,7 @@
     "A=ACCEPT B=CANCEL"
    ]
   },
-  "animation_index_enum": {
+  "animation index": {
    "options": [
     "NONE",
     "00",
@@ -1368,7 +1363,7 @@
     "63"
    ]
   },
-  "text_flags_flags": {
+  "text flags": {
    "options": [
     "left justify text",
     "right justify text",
@@ -1377,7 +1372,7 @@
     "small (31 char) buffer"
    ]
   },
-  "custom_font_enum": {
+  "custom font": {
    "options": [
     "terminal",
     "body text",
@@ -1393,19 +1388,19 @@
     "text chat font"
    ]
   },
-  "button_flags_flags": {
+  "button flags": {
    "options": [
     "DOESN'T tab vertically",
     "DOESN'T tab horizontally"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "list wraps",
     "interactive"
    ]
   },
-  "skin_index_enum": {
+  "skin index": {
    "options": [
     "default",
     "squad lobby player list",
@@ -1441,7 +1436,7 @@
     "unused31"
    ]
   },
-  "value_type_enum": {
+  "value type": {
    "options": [
     "integer number",
     "floating point number",
@@ -1449,44 +1444,54 @@
     "text string"
    ]
   },
-  "boolean_value_enum": {
+  "boolean value": {
    "options": [
     "FALSE",
     "TRUE"
    ]
   },
-  "flags_flags_3": {
+  "flags_3": {
    "options": [
     "unused"
    ]
   },
-  "flags_flags_4": {
+  "flags_4": {
+   "options": [
+    "unused"
+   ]
+  },
+  "flags_5": {
    "options": [
     "ignore for list skin size calculation",
     "swap on relative list position",
     "render as progress bar"
    ]
   },
-  "bitmap_blend_method_enum": {
+  "bitmap blend method": {
    "options": [
     "standard",
     "multiply",
-    "UNUSED"
+    "UNUSED!"
    ]
   },
-  "flags_flags_5": {
+  "flags_6": {
+   "options": [
+    "unused"
+   ]
+  },
+  "flags_7": {
    "options": [
     "ignore for list skin size",
     "needs valid rank"
    ]
   },
-  "table_order_enum": {
+  "table order": {
    "options": [
     "row major",
     "column major"
    ]
   },
-  "shape_group_enum": {
+  "shape group": {
    "options": [
     "NONE",
     "00",
@@ -1523,9 +1528,5 @@
     "31"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

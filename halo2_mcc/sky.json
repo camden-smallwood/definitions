@@ -2,68 +2,59 @@
  "name": "sky",
  "tag": "sky ",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "sky_block",
  "blocks": {
-  "sky_cubemap_block_2": {
+  "sky_cubemap_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sky_cubemap_block"
+   "struct": "sky_cubemap_block_struct",
+   "max_count_string": "1"
   },
-  "sky_atmospheric_fog_block_2": {
+  "sky_atmospheric_fog_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sky_atmospheric_fog_block"
+   "struct": "sky_atmospheric_fog_block_struct",
+   "max_count_string": "1"
   },
-  "sky_atmospheric_fog_block_3": {
+  "sky_fog_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sky_atmospheric_fog_block"
+   "struct": "sky_fog_block_struct",
+   "max_count_string": "1"
   },
-  "sky_fog_block_2": {
+  "sky_patchy_fog_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sky_fog_block"
+   "struct": "sky_patchy_fog_block_struct",
+   "max_count_string": "1"
   },
-  "sky_patchy_fog_block_2": {
+  "sky_light_fog_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sky_patchy_fog_block"
+   "struct": "sky_light_fog_block_struct",
+   "max_count_string": "1"
   },
-  "sky_light_fog_block_2": {
+  "sky_radiosity_light_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sky_light_fog_block"
+   "struct": "sky_radiosity_light_block_struct",
+   "max_count_string": "1"
   },
-  "sky_light_fog_block_3": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sky_light_fog_block"
-  },
-  "sky_radiosity_light_block_2": {
-   "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sky_radiosity_light_block"
-  },
-  "sky_light_block_2": {
+  "sky_light_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "sky_light_block"
+   "struct": "sky_light_block_struct",
+   "max_count_string": "MAXIMUM_LIGHTS_PER_SKY"
   },
-  "sky_shader_function_block_2": {
+  "sky_shader_function_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "sky_shader_function_block"
+   "struct": "sky_shader_function_block_struct",
+   "max_count_string": "MAXIMUM_SHADER_FUNCTIONS_PER_SKY"
   },
-  "sky_animation_block_2": {
+  "sky_animation_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "sky_animation_block"
+   "struct": "sky_animation_block_struct",
+   "max_count_string": "MAXIMUM_ANIMATIONS_PER_SKY"
   },
   "sky_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sky_block_struct"
+   "struct": "sky_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -82,7 +73,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -95,7 +86,7 @@
     {
      "type": "block",
      "name": "cubemap",
-     "definition": "sky_cubemap_block_2"
+     "definition": "sky_cubemap_block"
     },
     {
      "type": "real_rgb_color",
@@ -103,7 +94,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -112,7 +103,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -122,22 +113,22 @@
     {
      "type": "block",
      "name": "atmospheric fog",
-     "definition": "sky_atmospheric_fog_block_2"
+     "definition": "sky_atmospheric_fog_block"
     },
     {
      "type": "block",
      "name": "secondary fog",
-     "definition": "sky_atmospheric_fog_block_3"
+     "definition": "sky_atmospheric_fog_block"
     },
     {
      "type": "block",
      "name": "sky fog",
-     "definition": "sky_fog_block_2"
+     "definition": "sky_fog_block"
     },
     {
      "type": "block",
      "name": "patchy fog",
-     "definition": "sky_patchy_fog_block_2"
+     "definition": "sky_patchy_fog_block"
     },
     {
      "type": "real_fraction",
@@ -158,7 +149,7 @@
     {
      "type": "block",
      "name": "lights",
-     "definition": "sky_light_block_2"
+     "definition": "sky_light_block"
     },
     {
      "type": "angle",
@@ -167,16 +158,16 @@
     {
      "type": "block",
      "name": "shader functions",
-     "definition": "sky_shader_function_block_2"
+     "definition": "sky_shader_function_block"
     },
     {
      "type": "block",
      "name": "animations",
-     "definition": "sky_animation_block_2"
+     "definition": "sky_animation_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -189,7 +180,7 @@
     }
    ]
   },
-  "sky_cubemap_block": {
+  "sky_cubemap_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
@@ -207,7 +198,7 @@
     }
    ]
   },
-  "sky_atmospheric_fog_block": {
+  "sky_atmospheric_fog_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
@@ -233,7 +224,7 @@
     }
    ]
   },
-  "sky_fog_block": {
+  "sky_fog_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -251,7 +242,7 @@
     }
    ]
   },
-  "sky_patchy_fog_block": {
+  "sky_patchy_fog_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 88,
    "fields": [
@@ -261,7 +252,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_rgb_color)",
      "definition": 12
     },
     {
@@ -274,7 +265,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -287,7 +278,7 @@
     }
    ]
   },
-  "sky_light_block": {
+  "sky_light_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 72,
    "fields": [
@@ -306,17 +297,17 @@
     {
      "type": "block",
      "name": "fog",
-     "definition": "sky_light_fog_block_2"
+     "definition": "sky_light_fog_block"
     },
     {
      "type": "block",
      "name": "fog opposite",
-     "definition": "sky_light_fog_block_3"
+     "definition": "sky_light_fog_block"
     },
     {
      "type": "block",
      "name": "radiosity",
-     "definition": "sky_radiosity_light_block_2"
+     "definition": "sky_radiosity_light_block"
     },
     {
      "type": "terminator",
@@ -324,7 +315,7 @@
     }
    ]
   },
-  "sky_light_fog_block": {
+  "sky_light_fog_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
@@ -366,14 +357,14 @@
     }
    ]
   },
-  "sky_radiosity_light_block": {
+  "sky_radiosity_light_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 40,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real_rgb_color",
@@ -389,7 +380,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -402,13 +393,13 @@
     }
    ]
   },
-  "sky_shader_function_block": {
+  "sky_shader_function_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -421,7 +412,7 @@
     }
    ]
   },
-  "sky_animation_block": {
+  "sky_animation_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
@@ -431,7 +422,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -440,7 +431,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
@@ -450,9 +441,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "fixed in worldspace",
     "depreciated",
@@ -462,7 +452,7 @@
     "use clear color"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "affects exteriors",
     "affects interiors",
@@ -470,9 +460,5 @@
     "indirect illumination in lightmaps"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

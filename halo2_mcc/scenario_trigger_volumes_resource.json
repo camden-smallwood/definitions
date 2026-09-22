@@ -2,23 +2,29 @@
  "name": "scenario_trigger_volumes_resource",
  "tag": "trg*",
  "version": 1,
- "flags": 0,
+ "flags": 56,
+ "parent_tag": null,
  "block": "scenario_trigger_volumes_resource_block",
  "blocks": {
-  "scenario_trigger_volume_block_2": {
-   "max_count": 256,
-   "max_count_string": "256",
-   "struct": "scenario_trigger_volume_block"
-  },
-  "scenario_object_names_block_2": {
+  "scenario_object_names_block": {
    "max_count": 640,
-   "max_count_string": "640",
-   "struct": "scenario_object_names_block"
+   "struct": "scenario_object_names_block_struct",
+   "max_count_string": "MAXIMUM_OBJECT_NAMES_PER_SCENARIO"
+  },
+  "scenario_kill_trigger_volumes_block": {
+   "max_count": 256,
+   "struct": "scenario_kill_trigger_volumes_block_struct",
+   "max_count_string": "MAXIMUM_TRIGGER_VOLUMES_PER_SCENARIO"
+  },
+  "scenario_trigger_volume_block": {
+   "max_count": 256,
+   "struct": "scenario_trigger_volume_block_struct",
+   "max_count_string": "MAXIMUM_TRIGGER_VOLUMES_PER_SCENARIO"
   },
   "scenario_trigger_volumes_resource_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "scenario_trigger_volumes_resource_block_struct"
+   "struct": "scenario_trigger_volumes_resource_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -29,12 +35,12 @@
     {
      "type": "block",
      "name": "trigger volumes",
-     "definition": "scenario_trigger_volume_block_2"
+     "definition": "scenario_trigger_volume_block"
     },
     {
      "type": "block",
      "name": "object names",
-     "definition": "scenario_object_names_block_2"
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "terminator",
@@ -42,7 +48,7 @@
     }
    ]
   },
-  "scenario_trigger_volume_block__v0": {
+  "scenario_trigger_volume_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 100,
    "fields": [
@@ -52,7 +58,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -62,11 +68,11 @@
     {
      "type": "array",
      "name": null,
-     "definition": "unnamed_array"
+     "definition": "array_array"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -75,7 +81,7 @@
     }
    ]
   },
-  "inline_struct": {
+  "array_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -89,7 +95,7 @@
     }
    ]
   },
-  "scenario_trigger_volume_block": {
+  "scenario_trigger_volume_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
@@ -98,12 +104,13 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
-     "name": "object name"
+     "type": "short_block_index",
+     "name": "object name",
+     "definition": "scenario_object_names_block"
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -128,16 +135,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
-     "type": "short_integer",
-     "name": "kill trigger volume"
+     "type": "short_block_index",
+     "name": "kill trigger volume",
+     "definition": "scenario_kill_trigger_volumes_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -146,7 +154,7 @@
     }
    ]
   },
-  "scenario_object_names_block": {
+  "scenario_object_names_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
@@ -155,12 +163,27 @@
      "name": "name"
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": null
     },
     {
-     "type": "short_integer",
+     "type": "custom_short_block_index",
      "name": null
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "scenario_kill_trigger_volumes_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 2,
+   "fields": [
+    {
+     "type": "short_block_index",
+     "name": "trigger volume",
+     "definition": "scenario_trigger_volume_block"
     },
     {
      "type": "terminator",
@@ -170,19 +193,15 @@
   }
  },
  "arrays": {
-  "unnamed_array": {
+  "array_array": {
    "count": 15,
-   "struct": "inline_struct"
+   "struct": "array_struct"
   }
  },
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "scenario_trigger_volume_block": {
-   "0": "scenario_trigger_volume_block__v0",
-   "1": "scenario_trigger_volume_block"
+  "scenario_trigger_volume_block_struct": {
+   "0": "scenario_trigger_volume_block_struct__v0",
+   "1": "scenario_trigger_volume_block_struct"
   }
  }
 }

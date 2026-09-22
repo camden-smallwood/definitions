@@ -2,18 +2,19 @@
  "name": "camera_track",
  "tag": "trak",
  "version": 2,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "camera_track_block",
  "blocks": {
-  "camera_track_control_point_block_2": {
+  "camera_track_control_point_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "camera_track_control_point_block"
+   "struct": "camera_track_control_point_block_struct",
+   "max_count_string": "k_maximum_number_of_camera_track_control_points"
   },
   "camera_track_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "camera_track_block_struct"
+   "struct": "camera_track_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -24,12 +25,12 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "block",
      "name": "control points",
-     "definition": "camera_track_control_point_block_2"
+     "definition": "camera_track_control_point_block"
     },
     {
      "type": "useless_pad",
@@ -42,7 +43,7 @@
     }
    ]
   },
-  "camera_track_control_point_block": {
+  "camera_track_control_point_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
@@ -66,14 +67,9 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": []
   }
- },
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

@@ -2,18 +2,19 @@
  "name": "antenna",
  "tag": "ant!",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "antenna_block",
  "blocks": {
-  "antenna_vertex_block_2": {
+  "antenna_vertex_block": {
    "max_count": 20,
-   "max_count_string": "20",
-   "struct": "antenna_vertex_block"
+   "struct": "antenna_vertex_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_ANTENNA_VERTICES"
   },
   "antenna_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "antenna_block_struct"
+   "struct": "antenna_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -35,7 +36,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "20*sizeof(long)",
      "definition": 80
     },
     {
@@ -52,13 +53,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "10*sizeof(long)",
      "definition": 40
     },
     {
      "type": "block",
      "name": "vertices",
-     "definition": "antenna_vertex_block_2"
+     "definition": "antenna_vertex_block"
     },
     {
      "type": "terminator",
@@ -66,7 +67,7 @@
     }
    ]
   },
-  "antenna_vertex_block": {
+  "antenna_vertex_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
@@ -76,7 +77,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
@@ -93,7 +94,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -106,12 +107,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "10*sizeof(long)",
      "definition": 40
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real_vector3d)",
      "definition": 12
     },
     {
@@ -120,11 +121,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {},
- "struct_versions": {}
+ }
 }

@@ -2,258 +2,229 @@
  "name": "globals",
  "tag": "matg",
  "version": 3,
- "flags": 0,
+ "flags": 16,
+ "parent_tag": null,
  "block": "globals_block",
  "blocks": {
-  "havok_cleanup_resources_block_2": {
+  "havok_cleanup_resources_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "havok_cleanup_resources_block"
+   "struct": "havok_cleanup_resources_block_struct",
+   "max_count_string": "1"
   },
-  "collision_damage_block_2": {
+  "collision_damage_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "collision_damage_block"
+   "struct": "collision_damage_block_struct",
+   "max_count_string": "1"
   },
-  "sound_globals_block_2": {
+  "sound_globals_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sound_globals_block"
+   "struct": "sound_globals_block_struct",
+   "max_count_string": "1"
   },
-  "ai_globals_gravemind_block_2": {
+  "ai_globals_gravemind_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "ai_globals_gravemind_block"
+   "struct": "ai_globals_gravemind_block_struct",
+   "max_count_string": "1"
   },
-  "ai_globals_block_2": {
+  "ai_globals_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "ai_globals_block"
+   "struct": "ai_globals_block_struct",
+   "max_count_string": "1"
   },
-  "armor_modifier_block_2": {
+  "armor_modifier_block": {
    "max_count": 2147483647,
-   "max_count_string": "2147483647",
-   "struct": "armor_modifier_block"
+   "struct": "armor_modifier_block_struct",
+   "max_count_string": "LONG_MAX"
   },
-  "damage_group_block_2": {
+  "damage_group_block": {
    "max_count": 2147483647,
-   "max_count_string": "2147483647",
-   "struct": "damage_group_block"
+   "struct": "damage_group_block_struct",
+   "max_count_string": "LONG_MAX"
   },
-  "game_globals_damage_block_2": {
+  "game_globals_damage_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "game_globals_damage_block"
+   "struct": "game_globals_damage_block_struct",
+   "max_count_string": "1"
   },
-  "custom_references_block_2": {
+  "custom_references_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "custom_references_block"
+   "struct": "custom_references_block_struct",
+   "max_count_string": "k_custom_tag_references_count"
   },
-  "sound_block_2": {
+  "sound_block": {
    "max_count": 2,
-   "max_count_string": "2",
-   "struct": "sound_block"
+   "struct": "sound_block_struct",
+   "max_count_string": "NUMBER_OF_GLOBAL_SOUNDS"
   },
-  "camera_block_2": {
+  "camera_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "camera_block"
+   "struct": "camera_block_struct",
+   "max_count_string": "1"
   },
-  "look_function_block_2": {
+  "look_function_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "look_function_block"
+   "struct": "look_function_block_struct",
+   "max_count_string": "16"
   },
-  "player_control_block_2": {
+  "player_control_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "player_control_block"
+   "struct": "player_control_block_struct",
+   "max_count_string": "1"
   },
-  "difficulty_block_2": {
+  "difficulty_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "difficulty_block"
+   "struct": "difficulty_block_struct",
+   "max_count_string": "1"
   },
-  "grenades_block_2": {
+  "grenades_block": {
    "max_count": 2,
-   "max_count_string": "2",
-   "struct": "grenades_block"
+   "struct": "grenades_block_struct",
+   "max_count_string": "k_unit_grenade_types_count"
   },
-  "vertex_shader_reference_block_2": {
+  "vertex_shader_reference_block": {
    "max_count": 33,
-   "max_count_string": "33",
-   "struct": "vertex_shader_reference_block"
+   "struct": "vertex_shader_reference_block_struct",
+   "max_count_string": "k_global_vertex_shader_count"
   },
-  "rasterizer_data_block_2": {
+  "rasterizer_data_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "rasterizer_data_block"
+   "struct": "rasterizer_data_block_struct",
+   "max_count_string": "1"
   },
-  "interface_tag_references_2": {
+  "interface_tag_references": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "interface_tag_references"
+   "struct": "interface_tag_references_struct",
+   "max_count_string": "1"
   },
-  "cheat_weapons_block_2": {
+  "cheat_weapons_block": {
    "max_count": 20,
-   "max_count_string": "20",
-   "struct": "cheat_weapons_block"
+   "struct": "cheat_weapons_block_struct",
+   "max_count_string": "20"
   },
-  "cheat_powerups_block_2": {
+  "cheat_powerups_block": {
    "max_count": 20,
-   "max_count_string": "20",
-   "struct": "cheat_powerups_block"
+   "struct": "cheat_powerups_block_struct",
+   "max_count_string": "20"
   },
-  "vehicles_block_2": {
+  "vehicles_block": {
    "max_count": 20,
-   "max_count_string": "20",
-   "struct": "vehicles_block"
+   "struct": "vehicles_block_struct",
+   "max_count_string": "20"
   },
-  "sounds_block_2": {
+  "sounds_block": {
    "max_count": 60,
-   "max_count_string": "60",
-   "struct": "sounds_block"
+   "struct": "sounds_block_struct",
+   "max_count_string": "60"
   },
-  "sound_response_definition_block_2": {
+  "sound_response_definition_block": {
    "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
+   "struct": "sound_response_definition_block_struct",
+   "max_count_string": "10"
   },
-  "game_engine_general_event_block_2": {
+  "game_engine_general_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_general_event_block"
+   "struct": "game_engine_general_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_3": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_slayer_event_block_2": {
+  "game_engine_slayer_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_slayer_event_block"
+   "struct": "game_engine_slayer_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_4": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_ctf_event_block_2": {
+  "game_engine_ctf_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_ctf_event_block"
+   "struct": "game_engine_ctf_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "sound_response_definition_block_5": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_oddball_event_block_2": {
+  "game_engine_oddball_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_oddball_event_block"
+   "struct": "game_engine_oddball_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "g_null_block_2": {
+  "g_null_block": {
    "max_count": 0,
-   "max_count_string": "0",
-   "struct": "g_null_block"
+   "struct": "g_null_block_struct",
+   "max_count_string": "0"
   },
-  "sound_response_definition_block_6": {
-   "max_count": 10,
-   "max_count_string": "10",
-   "struct": "sound_response_definition_block"
-  },
-  "game_engine_king_event_block_2": {
+  "game_engine_king_event_block": {
    "max_count": 128,
-   "max_count_string": "128",
-   "struct": "game_engine_king_event_block"
+   "struct": "game_engine_king_event_block_struct",
+   "max_count_string": "k_maximum_game_engine_event_responses_per_type"
   },
-  "multiplayer_information_block_2": {
+  "multiplayer_information_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "multiplayer_information_block"
+   "struct": "multiplayer_information_block_struct",
+   "max_count_string": "1"
   },
-  "player_information_block_2": {
+  "player_information_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "player_information_block"
+   "struct": "player_information_block_struct",
+   "max_count_string": "1"
   },
-  "player_representation_block_2": {
+  "player_representation_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "player_representation_block"
+   "struct": "player_representation_block_struct",
+   "max_count_string": "k_player_character_type_count"
   },
-  "falling_damage_block_2": {
+  "falling_damage_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "falling_damage_block"
+   "struct": "falling_damage_block_struct",
+   "max_count_string": "1"
   },
-  "old_materials_block_2": {
+  "old_materials_block": {
    "max_count": 33,
-   "max_count_string": "33",
-   "struct": "old_materials_block"
+   "struct": "old_materials_block_struct",
+   "max_count_string": "NUMBER_OF_MATERIAL_TYPES"
   },
-  "materials_block_2": {
+  "materials_block": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "materials_block"
+   "struct": "materials_block_struct",
+   "max_count_string": "k_maximum_material_types"
   },
-  "multiplayer_color_block_2": {
+  "multiplayer_color_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "multiplayer_color_block"
+   "struct": "multiplayer_color_block_struct",
+   "max_count_string": "k_game_globals_maximum_multiplayer_colors"
   },
-  "multiplayer_color_block_3": {
-   "max_count": 32,
-   "max_count_string": "32",
-   "struct": "multiplayer_color_block"
-  },
-  "multiplayer_ui_block_2": {
+  "multiplayer_ui_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "multiplayer_ui_block"
+   "struct": "multiplayer_ui_block_struct",
+   "max_count_string": "1"
   },
-  "multiplayer_color_block_4": {
-   "max_count": 32,
-   "max_count_string": "32",
-   "struct": "multiplayer_color_block"
-  },
-  "runtime_campaign_level_block_2": {
+  "runtime_campaign_level_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "runtime_campaign_level_block"
+   "struct": "runtime_campaign_level_block_struct",
+   "max_count_string": "k_maximum_number_of_campaign_maps"
   },
-  "runtime_levels_definition_block_2": {
+  "runtime_levels_definition_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "runtime_levels_definition_block"
+   "struct": "runtime_levels_definition_block_struct",
+   "max_count_string": "1"
   },
-  "ui_campaign_block_2": {
+  "ui_campaign_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "ui_campaign_block"
+   "struct": "ui_campaign_block_struct",
+   "max_count_string": "((4)>(k_maximum_number_of_campaigns)?(4):(k_maximum_number_of_campaigns))"
   },
-  "global_ui_campaign_level_block_2": {
+  "global_ui_campaign_level_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "global_ui_campaign_level_block"
+   "struct": "global_ui_campaign_level_block_struct",
+   "max_count_string": "k_maximum_number_of_campaign_maps"
   },
-  "global_ui_multiplayer_level_block_2": {
+  "global_ui_multiplayer_level_block": {
    "max_count": 50,
-   "max_count_string": "50",
-   "struct": "global_ui_multiplayer_level_block"
+   "struct": "global_ui_multiplayer_level_block_struct",
+   "max_count_string": "k_maximum_number_of_multiplayer_maps"
   },
-  "ui_levels_definition_block_2": {
+  "ui_levels_definition_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "ui_levels_definition_block"
+   "struct": "ui_levels_definition_block_struct",
+   "max_count_string": "1"
   },
   "globals_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "globals_block_struct"
+   "struct": "globals_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -263,128 +234,128 @@
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "43*sizeof(long)",
      "definition": 172
     },
     {
      "type": "long_enum",
      "name": "language",
-     "definition": "language_enum"
+     "definition": "language"
     },
     {
      "type": "block",
      "name": "havok cleanup resources",
-     "definition": "havok_cleanup_resources_block_2"
+     "definition": "havok_cleanup_resources_block"
     },
     {
      "type": "block",
      "name": "collision damage",
-     "definition": "collision_damage_block_2"
+     "definition": "collision_damage_block"
     },
     {
      "type": "block",
      "name": "sound globals",
-     "definition": "sound_globals_block_2"
+     "definition": "sound_globals_block"
     },
     {
      "type": "block",
      "name": "ai globals",
-     "definition": "ai_globals_block_2"
+     "definition": "ai_globals_block"
     },
     {
      "type": "block",
      "name": "damage table",
-     "definition": "game_globals_damage_block_2"
+     "definition": "game_globals_damage_block"
     },
     {
      "type": "block",
      "name": "custom references",
-     "definition": "custom_references_block_2"
+     "definition": "custom_references_block"
     },
     {
      "type": "block",
      "name": "sounds",
-     "definition": "sound_block_2"
+     "definition": "sound_block"
     },
     {
      "type": "block",
      "name": "camera",
-     "definition": "camera_block_2"
+     "definition": "camera_block"
     },
     {
      "type": "block",
      "name": "player control",
-     "definition": "player_control_block_2"
+     "definition": "player_control_block"
     },
     {
      "type": "block",
      "name": "difficulty",
-     "definition": "difficulty_block_2"
+     "definition": "difficulty_block"
     },
     {
      "type": "block",
      "name": "grenades",
-     "definition": "grenades_block_2"
+     "definition": "grenades_block"
     },
     {
      "type": "block",
      "name": "rasterizer data",
-     "definition": "rasterizer_data_block_2"
+     "definition": "rasterizer_data_block"
     },
     {
      "type": "block",
      "name": "interface tags",
-     "definition": "interface_tag_references_2"
+     "definition": "interface_tag_references"
     },
     {
      "type": "block",
      "name": "weapon list",
-     "definition": "cheat_weapons_block_2"
+     "definition": "cheat_weapons_block"
     },
     {
      "type": "block",
      "name": "@cheat powerups",
-     "definition": "cheat_powerups_block_2"
+     "definition": "cheat_powerups_block"
     },
     {
      "type": "block",
      "name": "@multiplayer information",
-     "definition": "multiplayer_information_block_2"
+     "definition": "multiplayer_information_block"
     },
     {
      "type": "block",
      "name": "@player information",
-     "definition": "player_information_block_2"
+     "definition": "player_information_block"
     },
     {
      "type": "block",
      "name": "@player representation",
-     "definition": "player_representation_block_2"
+     "definition": "player_representation_block"
     },
     {
      "type": "block",
      "name": "falling damage",
-     "definition": "falling_damage_block_2"
+     "definition": "falling_damage_block"
     },
     {
      "type": "block",
      "name": "old materials",
-     "definition": "old_materials_block_2"
+     "definition": "old_materials_block"
     },
     {
      "type": "block",
      "name": "materials",
-     "definition": "materials_block_2"
+     "definition": "materials_block"
     },
     {
      "type": "block",
      "name": "multiplayer UI",
-     "definition": "multiplayer_ui_block_2"
+     "definition": "multiplayer_ui_block"
     },
     {
      "type": "block",
      "name": "profile colors",
-     "definition": "multiplayer_color_block_4"
+     "definition": "multiplayer_color_block"
     },
     {
      "type": "tag_reference",
@@ -393,12 +364,12 @@
     {
      "type": "block",
      "name": "runtime level data",
-     "definition": "runtime_levels_definition_block_2"
+     "definition": "runtime_levels_definition_block"
     },
     {
      "type": "block",
      "name": "ui level data",
-     "definition": "ui_levels_definition_block_2"
+     "definition": "ui_levels_definition_block"
     },
     {
      "type": "tag_reference",
@@ -406,7 +377,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_language_count * sizeof(c_language_pack)",
      "definition": 252
     },
     {
@@ -415,7 +386,7 @@
     }
    ]
   },
-  "havok_cleanup_resources_block": {
+  "havok_cleanup_resources_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -429,7 +400,7 @@
     }
    ]
   },
-  "collision_damage_block": {
+  "collision_damage_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 80,
    "fields": [
@@ -471,7 +442,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -480,7 +451,7 @@
     }
    ]
   },
-  "sound_globals_block__v0": {
+  "sound_globals_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 72,
    "fields": [
@@ -538,7 +509,7 @@
     }
    ]
   },
-  "sound_globals_block__v1": {
+  "sound_globals_block_struct__v1": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
@@ -568,7 +539,7 @@
     }
    ]
   },
-  "sound_globals_block": {
+  "sound_globals_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
@@ -602,7 +573,7 @@
     }
    ]
   },
-  "ai_globals_block": {
+  "ai_globals_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 372,
    "fields": [
@@ -612,7 +583,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -621,7 +592,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -630,7 +601,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -639,7 +610,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -660,7 +631,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "12*sizeof(long)",
      "definition": 48
     },
     {
@@ -673,7 +644,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
@@ -738,7 +709,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
@@ -751,17 +722,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "12*sizeof(long)",
      "definition": 48
     },
     {
      "type": "block",
      "name": "gravemind properties",
-     "definition": "ai_globals_gravemind_block_2"
+     "definition": "ai_globals_gravemind_block"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "12*sizeof(long)",
      "definition": 48
     },
     {
@@ -786,7 +757,7 @@
     }
    ]
   },
-  "ai_globals_gravemind_block": {
+  "ai_globals_gravemind_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -808,14 +779,14 @@
     }
    ]
   },
-  "game_globals_damage_block": {
+  "game_globals_damage_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
     {
      "type": "block",
      "name": "damage groups",
-     "definition": "damage_group_block_2"
+     "definition": "damage_group_block"
     },
     {
      "type": "terminator",
@@ -823,7 +794,7 @@
     }
    ]
   },
-  "damage_group_block": {
+  "damage_group_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -834,7 +805,7 @@
     {
      "type": "block",
      "name": "armor modifiers",
-     "definition": "armor_modifier_block_2"
+     "definition": "armor_modifier_block"
     },
     {
      "type": "terminator",
@@ -842,7 +813,7 @@
     }
    ]
   },
-  "armor_modifier_block": {
+  "armor_modifier_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
@@ -860,7 +831,7 @@
     }
    ]
   },
-  "custom_references_block": {
+  "custom_references_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -874,7 +845,7 @@
     }
    ]
   },
-  "sound_block": {
+  "sound_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -888,7 +859,7 @@
     }
    ]
   },
-  "camera_block": {
+  "camera_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
@@ -914,7 +885,7 @@
     }
    ]
   },
-  "player_control_block": {
+  "player_control_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 132,
    "fields": [
@@ -932,7 +903,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(real)",
      "definition": 12
     },
     {
@@ -965,7 +936,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*2",
      "definition": 8
     },
     {
@@ -1002,7 +973,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(real)",
      "definition": 8
     },
     {
@@ -1011,7 +982,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -1025,7 +996,7 @@
     {
      "type": "block",
      "name": "look function",
-     "definition": "look_function_block_2"
+     "definition": "look_function_block"
     },
     {
      "type": "real",
@@ -1037,7 +1008,7 @@
     }
    ]
   },
-  "look_function_block": {
+  "look_function_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 4,
    "fields": [
@@ -1051,7 +1022,7 @@
     }
    ]
   },
-  "difficulty_block": {
+  "difficulty_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 644,
    "fields": [
@@ -1201,7 +1172,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_campaign_difficulty_levels_count*sizeof(real)",
      "definition": 16
     },
     {
@@ -1398,7 +1369,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_campaign_difficulty_levels_count*sizeof(real)",
      "definition": 16
     },
     {
@@ -1435,17 +1406,17 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_campaign_difficulty_levels_count*sizeof(real)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_campaign_difficulty_levels_count*sizeof(real)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_campaign_difficulty_levels_count*sizeof(real)",
      "definition": 16
     },
     {
@@ -1514,22 +1485,22 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_campaign_difficulty_levels_count*sizeof(real)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_campaign_difficulty_levels_count*sizeof(real)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "k_campaign_difficulty_levels_count*sizeof(real)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "21*sizeof(unsigned long)",
      "definition": 84
     },
     {
@@ -1538,7 +1509,7 @@
     }
    ]
   },
-  "grenades_block": {
+  "grenades_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
@@ -1548,7 +1519,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -1557,7 +1528,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -1574,7 +1545,7 @@
     }
    ]
   },
-  "rasterizer_data_block": {
+  "rasterizer_data_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 428,
    "fields": [
@@ -1616,13 +1587,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "block",
      "name": "global vertex shaders",
-     "definition": "vertex_shader_reference_block_2"
+     "definition": "vertex_shader_reference_block"
     },
     {
      "type": "tag_reference",
@@ -1662,7 +1633,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "9*sizeof(long)",
      "definition": 36
     },
     {
@@ -1672,11 +1643,11 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -1713,7 +1684,7 @@
     }
    ]
   },
-  "vertex_shader_reference_block": {
+  "vertex_shader_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1727,7 +1698,7 @@
     }
    ]
   },
-  "interface_tag_references": {
+  "interface_tag_references_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 304,
    "fields": [
@@ -1813,7 +1784,7 @@
     }
    ]
   },
-  "cheat_weapons_block": {
+  "cheat_weapons_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1827,7 +1798,7 @@
     }
    ]
   },
-  "cheat_powerups_block": {
+  "cheat_powerups_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1841,7 +1812,7 @@
     }
    ]
   },
-  "multiplayer_information_block": {
+  "multiplayer_information_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 232,
    "fields": [
@@ -1856,7 +1827,7 @@
     {
      "type": "block",
      "name": "vehicles",
-     "definition": "vehicles_block_2"
+     "definition": "vehicles_block"
     },
     {
      "type": "tag_reference",
@@ -1873,7 +1844,7 @@
     {
      "type": "block",
      "name": "sounds",
-     "definition": "sounds_block_2"
+     "definition": "sounds_block"
     },
     {
      "type": "tag_reference",
@@ -1881,38 +1852,38 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "10*sizeof(long)",
      "definition": 40
     },
     {
      "type": "block",
      "name": "general events",
-     "definition": "game_engine_general_event_block_2"
+     "definition": "game_engine_general_event_block"
     },
     {
      "type": "block",
      "name": "slayer events",
-     "definition": "game_engine_slayer_event_block_2"
+     "definition": "game_engine_slayer_event_block"
     },
     {
      "type": "block",
      "name": "ctf events",
-     "definition": "game_engine_ctf_event_block_2"
+     "definition": "game_engine_ctf_event_block"
     },
     {
      "type": "block",
      "name": "oddball events",
-     "definition": "game_engine_oddball_event_block_2"
+     "definition": "game_engine_oddball_event_block"
     },
     {
      "type": "block",
      "name": null,
-     "definition": "g_null_block_2"
+     "definition": "g_null_block"
     },
     {
      "type": "block",
      "name": "king events",
-     "definition": "game_engine_king_event_block_2"
+     "definition": "game_engine_king_event_block"
     },
     {
      "type": "terminator",
@@ -1920,7 +1891,7 @@
     }
    ]
   },
-  "vehicles_block": {
+  "vehicles_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1934,7 +1905,7 @@
     }
    ]
   },
-  "sounds_block": {
+  "sounds_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
@@ -1948,38 +1919,38 @@
     }
    ]
   },
-  "game_engine_general_event_block": {
+  "game_engine_general_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum"
+     "definition": "event"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -1989,12 +1960,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2010,7 +1981,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2020,11 +1991,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2034,22 +2005,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_2"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2068,7 +2039,7 @@
    ],
    "tag": "masd"
   },
-  "sound_response_extra_sounds_struct": {
+  "sound_response_extra_sounds_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
@@ -2111,18 +2082,18 @@
    ],
    "tag": "masd"
   },
-  "sound_response_definition_block": {
+  "sound_response_definition_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 152,
    "fields": [
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2132,7 +2103,7 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "real",
@@ -2144,38 +2115,38 @@
     }
    ]
   },
-  "game_engine_slayer_event_block": {
+  "game_engine_slayer_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_2"
+     "definition": "event_2"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2185,12 +2156,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2206,7 +2177,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2216,11 +2187,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2230,22 +2201,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_3"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2253,38 +2224,38 @@
     }
    ]
   },
-  "game_engine_ctf_event_block": {
+  "game_engine_ctf_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_3"
+     "definition": "event_3"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2294,12 +2265,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2315,7 +2286,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2325,11 +2296,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2339,22 +2310,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_4"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2362,38 +2333,38 @@
     }
    ]
   },
-  "game_engine_oddball_event_block": {
+  "game_engine_oddball_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_4"
+     "definition": "event_4"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2403,12 +2374,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2424,7 +2395,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2434,11 +2405,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2448,22 +2419,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_5"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2471,7 +2442,7 @@
     }
    ]
   },
-  "g_null_block": {
+  "g_null_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 0,
    "fields": [
@@ -2485,38 +2456,38 @@
     }
    ]
   },
-  "game_engine_king_event_block": {
+  "game_engine_king_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 244,
    "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "event",
-     "definition": "event_enum_5"
+     "definition": "event_5"
     },
     {
      "type": "short_enum",
      "name": "audience",
-     "definition": "audience_enum"
+     "definition": "audience"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2526,12 +2497,12 @@
     {
      "type": "short_enum",
      "name": "required field",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "short_enum",
      "name": "excluded audience",
-     "definition": "required_field_enum"
+     "definition": "required field"
     },
     {
      "type": "string_id",
@@ -2547,7 +2518,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*7",
      "definition": 28
     },
     {
@@ -2557,11 +2528,11 @@
     {
      "type": "word_flags",
      "name": "sound flags",
-     "definition": "sound_flags_flags"
+     "definition": "sound flags"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -2571,22 +2542,22 @@
     {
      "type": "struct",
      "name": "extra sounds",
-     "definition": "sound_response_extra_sounds_struct"
+     "definition": "sound_response_extra_sounds_struct_2"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(real)*1",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sound permutations",
-     "definition": "sound_response_definition_block_6"
+     "definition": "sound_response_definition_block"
     },
     {
      "type": "terminator",
@@ -2594,7 +2565,7 @@
     }
    ]
   },
-  "player_information_block": {
+  "player_information_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 372,
    "fields": [
@@ -2604,7 +2575,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
@@ -2613,7 +2584,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -2654,7 +2625,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -2663,7 +2634,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
@@ -2688,7 +2659,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -2701,7 +2672,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -2726,7 +2697,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)*4",
      "definition": 16
     },
     {
@@ -2763,7 +2734,7 @@
     }
    ]
   },
-  "player_representation_block": {
+  "player_representation_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 212,
    "fields": [
@@ -2777,12 +2748,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "10*sizeof(long)",
      "definition": 40
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "30*sizeof(long)",
      "definition": 120
     },
     {
@@ -2799,13 +2770,13 @@
     }
    ]
   },
-  "falling_damage_block": {
+  "falling_damage_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 152,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -2818,7 +2789,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -2847,7 +2818,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
@@ -2856,7 +2827,7 @@
     }
    ]
   },
-  "old_materials_block": {
+  "old_materials_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
@@ -2923,7 +2894,7 @@
     }
    ]
   },
-  "materials_block": {
+  "materials_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 316,
    "fields": [
@@ -2937,22 +2908,22 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "1*sizeof(c_global_material_type)",
      "definition": 2
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "short_enum",
      "name": "old material type",
-     "definition": "old_material_type_enum"
+     "definition": "old material type"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -2966,7 +2937,7 @@
     {
      "type": "struct",
      "name": "physics properties",
-     "definition": "material_physics_properties_struct"
+     "definition": "material_physics_properties_struct_2"
     },
     {
      "type": "tag_reference",
@@ -2979,7 +2950,7 @@
     {
      "type": "struct",
      "name": "sweeteners",
-     "definition": "materials_sweeteners_struct"
+     "definition": "materials_sweeteners_struct_2"
     },
     {
      "type": "tag_reference",
@@ -3002,13 +2973,13 @@
    ],
    "tag": "mphp"
   },
-  "material_physics_properties_struct": {
+  "material_physics_properties_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(unsigned long)",
      "definition": 4
     },
     {
@@ -3030,7 +3001,7 @@
    ],
    "tag": "mphp"
   },
-  "materials_sweeteners_struct": {
+  "materials_sweeteners_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 228,
    "fields": [
@@ -3093,7 +3064,7 @@
     {
      "type": "long_flags",
      "name": "sweetener inheritance flags",
-     "definition": "sweetener_inheritance_flags_flags"
+     "definition": "sweetener inheritance flags"
     },
     {
      "type": "terminator",
@@ -3102,7 +3073,7 @@
    ],
    "tag": "msst"
   },
-  "multiplayer_ui_block": {
+  "multiplayer_ui_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 56,
    "fields": [
@@ -3113,12 +3084,12 @@
     {
      "type": "block",
      "name": "obsolete profile colors",
-     "definition": "multiplayer_color_block_2"
+     "definition": "multiplayer_color_block"
     },
     {
      "type": "block",
      "name": "team colors",
-     "definition": "multiplayer_color_block_3"
+     "definition": "multiplayer_color_block"
     },
     {
      "type": "tag_reference",
@@ -3130,7 +3101,7 @@
     }
    ]
   },
-  "multiplayer_color_block": {
+  "multiplayer_color_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -3144,14 +3115,14 @@
     }
    ]
   },
-  "runtime_levels_definition_block": {
+  "runtime_levels_definition_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
     {
      "type": "block",
      "name": "campaign levels",
-     "definition": "runtime_campaign_level_block_2"
+     "definition": "runtime_campaign_level_block"
     },
     {
      "type": "terminator",
@@ -3159,7 +3130,7 @@
     }
    ]
   },
-  "runtime_campaign_level_block": {
+  "runtime_campaign_level_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 264,
    "fields": [
@@ -3181,24 +3152,24 @@
     }
    ]
   },
-  "ui_levels_definition_block": {
+  "ui_levels_definition_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
      "type": "block",
      "name": "campaigns",
-     "definition": "ui_campaign_block_2"
+     "definition": "ui_campaign_block"
     },
     {
      "type": "block",
      "name": "campaign levels",
-     "definition": "global_ui_campaign_level_block_2"
+     "definition": "global_ui_campaign_level_block"
     },
     {
      "type": "block",
      "name": "multiplayer levels",
-     "definition": "global_ui_multiplayer_level_block_2"
+     "definition": "global_ui_multiplayer_level_block"
     },
     {
      "type": "terminator",
@@ -3206,7 +3177,7 @@
     }
    ]
   },
-  "ui_campaign_block": {
+  "ui_campaign_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2884,
    "fields": [
@@ -3216,12 +3187,12 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(s_level_name) * k_language_count",
      "definition": 576
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(s_level_description) * k_language_count",
      "definition": 2304
     },
     {
@@ -3230,7 +3201,7 @@
     }
    ]
   },
-  "global_ui_campaign_level_block": {
+  "global_ui_campaign_level_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2904,
    "fields": [
@@ -3248,12 +3219,12 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(s_level_name) * k_language_count",
      "definition": 576
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(s_level_description) * k_language_count",
      "definition": 2304
     },
     {
@@ -3262,7 +3233,7 @@
     }
    ]
   },
-  "global_ui_multiplayer_level_block": {
+  "global_ui_multiplayer_level_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 3180,
    "fields": [
@@ -3276,12 +3247,12 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(s_level_name) * k_language_count",
      "definition": 576
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(s_level_description) * k_language_count",
      "definition": 2304
     },
     {
@@ -3295,11 +3266,11 @@
     {
      "type": "byte_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_4"
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "3*sizeof(byte)",
      "definition": 3
     },
     {
@@ -3373,9 +3344,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "language_enum": {
+  "language": {
    "options": [
     "english",
     "japanese",
@@ -3388,17 +3358,17 @@
     "portuguese"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "tint edge density"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "quantity message"
    ]
   },
-  "event_enum": {
+  "event": {
    "options": [
     "kill",
     "suicide",
@@ -3452,7 +3422,7 @@
     "pre game over"
    ]
   },
-  "audience_enum": {
+  "audience": {
    "options": [
     "cause player",
     "cause team",
@@ -3461,7 +3431,7 @@
     "all"
    ]
   },
-  "required_field_enum": {
+  "required field": {
    "options": [
     "NONE",
     "cause player",
@@ -3470,18 +3440,18 @@
     "effect team"
    ]
   },
-  "sound_flags_flags": {
+  "sound flags": {
    "options": [
     "announcer sound"
    ]
   },
-  "event_enum_2": {
+  "event_2": {
    "options": [
     "game start",
     "new target"
    ]
   },
-  "event_enum_3": {
+  "event_3": {
    "options": [
     "game start",
     "flag taken",
@@ -3499,7 +3469,7 @@
     "flag capture faliure"
    ]
   },
-  "event_enum_4": {
+  "event_4": {
    "options": [
     "game start",
     "ball spawned",
@@ -3509,7 +3479,7 @@
     "ball tick"
    ]
   },
-  "event_enum_5": {
+  "event_5": {
    "options": [
     "game start",
     "hill controlled",
@@ -3520,13 +3490,13 @@
     "hill contested team"
    ]
   },
-  "flags_flags_3": {
+  "flags_3": {
    "options": [
     "flammable",
     "biomass"
    ]
   },
-  "old_material_type_enum": {
+  "old material type": {
    "options": [
     "dirt",
     "sand",
@@ -3563,7 +3533,7 @@
     "hunter shield"
    ]
   },
-  "sweetener_inheritance_flags_flags": {
+  "sweetener inheritance flags": {
    "options": [
     "sound_small",
     "sound_medium",
@@ -3571,38 +3541,35 @@
     "sound_rolling",
     "sound_grinding",
     "sound_melee",
-    null,
+    "",
     "effect_small",
     "effect_medium",
     "effect_large",
     "effect_rolling",
     "effect_grinding",
     "effect_melee",
-    null
+    ""
    ]
   },
-  "flags_flags_4": {
+  "flags_4": {
    "options": [
-    "unlockable"
+    "unlockable!"
    ]
   }
  },
- "datas": {},
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "sound_globals_block": {
-   "0": "sound_globals_block__v0",
-   "1": "sound_globals_block__v1",
-   "2": "sound_globals_block"
+  "sound_globals_block_struct": {
+   "0": "sound_globals_block_struct__v0",
+   "1": "sound_globals_block_struct__v1",
+   "2": "sound_globals_block_struct"
   },
-  "sound_response_extra_sounds_struct": {
+  "sound_response_extra_sounds_struct_2": {
    "0": "sound_response_extra_sounds_struct__v0",
-   "1": "sound_response_extra_sounds_struct"
+   "1": "sound_response_extra_sounds_struct_2"
   },
-  "material_physics_properties_struct": {
+  "material_physics_properties_struct_2": {
    "0": "material_physics_properties_struct__v0",
-   "1": "material_physics_properties_struct"
+   "1": "material_physics_properties_struct_2"
   }
  }
 }

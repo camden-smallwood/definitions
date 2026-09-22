@@ -2,33 +2,34 @@
  "name": "bitmap",
  "tag": "bitm",
  "version": 7,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": null,
  "block": "bitmap_block",
  "blocks": {
-  "bitmap_group_sprite_block_2": {
+  "bitmap_group_sprite_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "bitmap_group_sprite_block"
+   "struct": "bitmap_group_sprite_block_struct",
+   "max_count_string": "MAXIMUM_SPRITES_PER_SEQUENCE"
   },
-  "bitmap_group_sequence_block_2": {
+  "bitmap_group_sequence_block": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "bitmap_group_sequence_block"
+   "struct": "bitmap_group_sequence_block_struct",
+   "max_count_string": "MAXIMUM_SEQUENCES_PER_BITMAP_GROUP"
   },
-  "bitmap_native_mipmap_info_block_2": {
+  "bitmap_native_mipmap_info_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "bitmap_native_mipmap_info_block"
+   "struct": "bitmap_native_mipmap_info_block_struct",
+   "max_count_string": "16"
   },
-  "bitmap_data_block_2": {
+  "bitmap_data_block": {
    "max_count": 65536,
-   "max_count_string": "65536",
-   "struct": "bitmap_data_block"
+   "struct": "bitmap_data_block_struct",
+   "max_count_string": "MAXIMUM_BITMAPS_PER_BITMAP_GROUP"
   },
   "bitmap_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "bitmap_block_struct"
+   "struct": "bitmap_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -43,22 +44,22 @@
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "short_enum",
      "name": "format",
-     "definition": "format_enum"
+     "definition": "format"
     },
     {
      "type": "short_enum",
      "name": "usage",
-     "definition": "usage_enum"
+     "definition": "usage"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real_fraction",
@@ -75,7 +76,7 @@
     {
      "type": "short_enum",
      "name": null,
-     "definition": "unnamed_enum"
+     "definition": "enum_0xfdf250"
     },
     {
      "type": "short_integer",
@@ -92,12 +93,12 @@
     {
      "type": "data",
      "name": "compressed color plate data",
-     "definition": "compressed_color_plate_data_data"
+     "definition": "color_plate_data"
     },
     {
      "type": "data",
      "name": "processed pixel data",
-     "definition": "processed_pixel_data_data"
+     "definition": "bitmap_pixel_data"
     },
     {
      "type": "real",
@@ -114,7 +115,7 @@
     {
      "type": "short_enum",
      "name": "sprite usage",
-     "definition": "sprite_usage_enum"
+     "definition": "sprite usage"
     },
     {
      "type": "short_integer",
@@ -123,17 +124,17 @@
     {
      "type": "short_enum",
      "name": "force format",
-     "definition": "force_format_enum"
+     "definition": "force format"
     },
     {
      "type": "block",
      "name": "sequences",
-     "definition": "bitmap_group_sequence_block_2"
+     "definition": "bitmap_group_sequence_block"
     },
     {
      "type": "block",
      "name": "bitmaps",
-     "definition": "bitmap_data_block_2"
+     "definition": "bitmap_data_block"
     },
     {
      "type": "char_integer",
@@ -157,7 +158,7 @@
     }
    ]
   },
-  "bitmap_group_sequence_block": {
+  "bitmap_group_sequence_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
@@ -175,13 +176,13 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "block",
      "name": "sprites",
-     "definition": "bitmap_group_sprite_block_2"
+     "definition": "bitmap_group_sprite_block"
     },
     {
      "type": "terminator",
@@ -189,7 +190,7 @@
     }
    ]
   },
-  "bitmap_group_sprite_block": {
+  "bitmap_group_sprite_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
@@ -199,12 +200,12 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -233,7 +234,7 @@
     }
    ]
   },
-  "bitmap_data_block__v0": {
+  "bitmap_data_block_struct__v0": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
@@ -256,17 +257,17 @@
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum_2"
+     "definition": "type_2"
     },
     {
      "type": "short_enum",
      "name": "format",
-     "definition": "format_enum_2"
+     "definition": "format_2"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "point_2d",
@@ -278,7 +279,7 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -287,22 +288,22 @@
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(short)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(struct bitmap_data*)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "sizeof(unsigned long)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": null,
+     "name": "2*sizeof(void*)",
      "definition": 8
     },
     {
@@ -311,7 +312,7 @@
     }
    ]
   },
-  "bitmap_data_block__v1": {
+  "bitmap_data_block_struct__v1": {
    "guid": "00000000000000000000000000000000",
    "size": 116,
    "fields": [
@@ -334,22 +335,22 @@
     {
      "type": "byte_flags",
      "name": "more flags",
-     "definition": "more_flags_flags"
+     "definition": "more flags"
     },
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum_2"
+     "definition": "type_2"
     },
     {
      "type": "short_enum",
      "name": "format",
-     "definition": "format_enum_2"
+     "definition": "format_2"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "point_2d",
@@ -366,7 +367,7 @@
     {
      "type": "char_enum",
      "name": "cache usage",
-     "definition": "cache_usage_enum"
+     "definition": "cache usage"
     },
     {
      "type": "long_integer",
@@ -374,17 +375,17 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(long) * k_texture_size_count",
      "definition": 12
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(long) * k_texture_size_count",
      "definition": 12
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(long) * k_texture_size_count",
      "definition": 12
     },
     {
@@ -401,7 +402,7 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -419,12 +420,12 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(s_TrackingData)",
      "definition": 20
     },
     {
@@ -437,7 +438,7 @@
     }
    ]
   },
-  "bitmap_data_block": {
+  "bitmap_data_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 140,
    "fields": [
@@ -460,22 +461,22 @@
     {
      "type": "byte_flags",
      "name": "more flags",
-     "definition": "more_flags_flags"
+     "definition": "more flags"
     },
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum_2"
+     "definition": "type_2"
     },
     {
      "type": "short_enum",
      "name": "format",
-     "definition": "format_enum_2"
+     "definition": "format_2"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "point_2d",
@@ -492,7 +493,7 @@
     {
      "type": "char_enum",
      "name": "cache usage",
-     "definition": "cache_usage_enum"
+     "definition": "cache usage"
     },
     {
      "type": "long_integer",
@@ -500,27 +501,27 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "struct",
      "name": "native bitmap info",
-     "definition": "bitmap_native_info_struct"
+     "definition": "bitmap_native_info_struct_2"
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(long) * k_texture_size_count",
      "definition": 12
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(long) * k_texture_size_count",
      "definition": 12
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(long) * k_texture_size_count",
      "definition": 12
     },
     {
@@ -550,12 +551,12 @@
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "skip",
-     "name": null,
+     "name": "sizeof(s_TrackingData)",
      "definition": 20
     },
     {
@@ -568,14 +569,14 @@
     }
    ]
   },
-  "bitmap_native_info_struct": {
+  "bitmap_native_info_struct_2": {
    "guid": "00000000000000000000000000000000",
    "size": 24,
    "fields": [
     {
      "type": "block",
      "name": "native mipmap info",
-     "definition": "bitmap_native_mipmap_info_block_2"
+     "definition": "bitmap_native_mipmap_info_block"
     },
     {
      "type": "long_integer",
@@ -596,7 +597,7 @@
    ],
    "tag": "nbmi"
   },
-  "bitmap_native_mipmap_info_block": {
+  "bitmap_native_mipmap_info_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
@@ -619,9 +620,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "type_enum": {
+  "type": {
    "options": [
     "2D textures",
     "3D textures",
@@ -630,7 +630,7 @@
     "interface bitmaps"
    ]
   },
-  "format_enum": {
+  "format": {
    "options": [
     "compressed with color-key transparency",
     "compressed with explicit alpha",
@@ -640,7 +640,7 @@
     "monochrome"
    ]
   },
-  "usage_enum": {
+  "usage": {
    "options": [
     "alpha-blend",
     "default",
@@ -655,14 +655,14 @@
     "height map G8B8 w/ alpha"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "enable diffusion dithering",
     "disable height map compression",
     "uniform sprite sequences",
     "filthy sprite bug fix",
     "use sharp bump filter",
-    "WDP compression",
+    "WDP compression!",
     "use clamped/mirrored bump filter",
     "invert detail fade",
     "swap x-y vector components",
@@ -673,7 +673,7 @@
     "og xbox mipmap selection"
    ]
   },
-  "unnamed_enum": {
+  "enum_0xfdf250": {
    "options": [
     "32x32",
     "64x64",
@@ -683,14 +683,14 @@
     "1024x1024"
    ]
   },
-  "sprite_usage_enum": {
+  "sprite usage": {
    "options": [
     "blend/add/subtract/max",
     "multiply/min",
     "double multiply"
    ]
   },
-  "force_format_enum": {
+  "force format": {
    "options": [
     "default",
     "force G8B8",
@@ -701,14 +701,14 @@
     "force A4R4G4B4"
    ]
   },
-  "type_enum_2": {
+  "type_2": {
    "options": [
     "2D texture",
     "3D texture",
     "cube map"
    ]
   },
-  "format_enum_2": {
+  "format_2": {
    "options": [
     "a8",
     "y8",
@@ -736,7 +736,7 @@
     "g8b8"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "power of two dimensions",
     "compressed",
@@ -745,10 +745,10 @@
     "linear",
     "v16u16",
     "MIPmap debug level",
-    "prefer stutter (prefer low detail)"
+    "prefer stutter (prefer low detail)!"
    ]
   },
-  "more_flags_flags": {
+  "more flags": {
    "options": [
     "delete from cache file",
     "bitmap create attempted",
@@ -756,7 +756,7 @@
     "bitmap sampling allowed"
    ]
   },
-  "cache_usage_enum": {
+  "cache usage": {
    "options": [
     "default",
     "environment",
@@ -782,26 +782,14 @@
   }
  },
  "datas": {
-  "compressed_color_plate_data_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  },
-  "processed_pixel_data_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
-  }
+  "color_plate_data": {},
+  "bitmap_pixel_data": {}
  },
- "resources": {},
- "interops": {},
  "struct_versions": {
-  "bitmap_data_block": {
-   "0": "bitmap_data_block__v0",
-   "1": "bitmap_data_block__v1",
-   "2": "bitmap_data_block"
+  "bitmap_data_block_struct": {
+   "0": "bitmap_data_block_struct__v0",
+   "1": "bitmap_data_block_struct__v1",
+   "2": "bitmap_data_block_struct"
   }
  }
 }

@@ -38,6 +38,11 @@
    "size": 116,
    "fields": [
     {
+     "type": "explanation",
+     "name": "LIQUID",
+     "definition": ""
+    },
+    {
      "type": "pad",
      "name": "sizeof(word)",
      "definition": 2
@@ -58,11 +63,11 @@
     },
     {
      "type": "real",
-     "name": "falloff distance from camera"
+     "name": "falloff distance from camera:world units"
     },
     {
      "type": "real",
-     "name": "cutoff distance from camera"
+     "name": "cutoff distance from camera:world units"
     },
     {
      "type": "pad",
@@ -85,6 +90,11 @@
    "size": 276,
    "fields": [
     {
+     "type": "explanation",
+     "name": "LIQUID ARC",
+     "definition": "Note that if the type is not STANDARD, then the 'collide_with_stuff' and material effects will not have any effect. In addition, the 'natural_length' will not have an effect except as a means to compute the collision fraction."
+    },
+    {
      "type": "word_flags",
      "name": "flags",
      "definition": "flags"
@@ -96,7 +106,7 @@
     },
     {
      "type": "real",
-     "name": "natural length"
+     "name": "natural length:world units"
     },
     {
      "type": "short_integer",
@@ -109,11 +119,11 @@
     },
     {
      "type": "angle",
-     "name": "instance spread angle"
+     "name": "instance spread angle:degrees"
     },
     {
      "type": "real",
-     "name": "instance rotation period"
+     "name": "instance rotation period:seconds"
     },
     {
      "type": "pad",
@@ -134,9 +144,19 @@
      "definition": 8
     },
     {
+     "type": "explanation",
+     "name": "HORIZONTAL RANGE",
+     "definition": "In world units, how far the noise extends horizontally. By default the horizontal range is along the world XY plane."
+    },
+    {
      "type": "struct",
      "name": "horizontal range",
      "definition": "scalar_function_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "VERTICAL RANGE",
+     "definition": "In world units, how far the noise extends vertically. By default the vertical range is along the world Z axis (up)."
     },
     {
      "type": "struct",
@@ -145,7 +165,12 @@
     },
     {
      "type": "real_fraction",
-     "name": "vertical negative scale"
+     "name": "vertical negative scale:[0,1]"
+    },
+    {
+     "type": "explanation",
+     "name": "ROUGHNESS",
+     "definition": "Roughness controls how the different 'octaves' of noise get scaled. Usually it is in the range [0,1] but it can be slightly higher or lower and still make sense (zero is actually a pretty decent value). The mathematical equation used is 2^(-k*(1-r)) where 'k' is the octave index starting at 0 and 'r' is the roughness value."
     },
     {
      "type": "struct",
@@ -158,40 +183,45 @@
      "definition": 64
     },
     {
-     "type": "real",
-     "name": "octave 1 frequency"
+     "type": "explanation",
+     "name": "NOISE FREQUENCIES",
+     "definition": "4 sprites is 3 octaves\n8 sprites is 4 octaves\n16 sprites is 5 octaves\n32 sprites is 6 octaves\n64 sprites is 7 octaves\n128 sprites is 8 octaves\n256 sprites is 9 octaves, etc."
     },
     {
      "type": "real",
-     "name": "octave 2 frequency"
+     "name": "octave 1 frequency:cycles/second"
     },
     {
      "type": "real",
-     "name": "octave 3 frequency"
+     "name": "octave 2 frequency:cycles/second"
     },
     {
      "type": "real",
-     "name": "octave 4 frequency"
+     "name": "octave 3 frequency:cycles/second"
     },
     {
      "type": "real",
-     "name": "octave 5 frequency"
+     "name": "octave 4 frequency:cycles/second"
     },
     {
      "type": "real",
-     "name": "octave 6 frequency"
+     "name": "octave 5 frequency:cycles/second"
     },
     {
      "type": "real",
-     "name": "octave 7 frequency"
+     "name": "octave 6 frequency:cycles/second"
     },
     {
      "type": "real",
-     "name": "octave 8 frequency"
+     "name": "octave 7 frequency:cycles/second"
     },
     {
      "type": "real",
-     "name": "octave 9 frequency"
+     "name": "octave 8 frequency:cycles/second"
+    },
+    {
+     "type": "real",
+     "name": "octave 9 frequency:cycles/second"
     },
     {
      "type": "pad",
@@ -214,9 +244,19 @@
      "definition": "liquid_core_block"
     },
     {
+     "type": "explanation",
+     "name": "RANGE-COLLISION SCALE",
+     "definition": "Scales range (amplitude) by collision fraction. The input to the function will be 1 if there is no collision, and 0 if the collision occurs at the origin."
+    },
+    {
      "type": "struct",
      "name": "range-scale",
      "definition": "scalar_function_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "BRIGHTNESS-COLLISION SCALE",
+     "definition": "Scales brightness by collision fraction."
     },
     {
      "type": "struct",
@@ -377,9 +417,19 @@
      "definition": 2
     },
     {
+     "type": "explanation",
+     "name": "THICKNESS",
+     "definition": "In world units."
+    },
+    {
      "type": "struct",
      "name": "thickness",
      "definition": "scalar_function_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "COLOR",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -387,14 +437,29 @@
      "definition": "color_function_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "BRIGHTNESS/TIME",
+     "definition": "Periodic function based on time."
+    },
+    {
      "type": "struct",
      "name": "brightness-time",
      "definition": "scalar_function_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "BRIGHTNESS/FACING",
+     "definition": "Brightness when facing perpendicular versus parallel."
+    },
+    {
      "type": "struct",
      "name": "brightness-facing",
      "definition": "scalar_function_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "ALONG-AXIS SCALE",
+     "definition": "Scale along-axis. Default should be 1."
     },
     {
      "type": "struct",

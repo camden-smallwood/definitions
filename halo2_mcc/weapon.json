@@ -124,7 +124,7 @@
     },
     {
      "type": "real",
-     "name": "bounding radius"
+     "name": "bounding radius:world units"
     },
     {
      "type": "real_point_3d",
@@ -137,7 +137,7 @@
     },
     {
      "type": "real",
-     "name": "acceleration scale"
+     "name": "acceleration scale:[0,+inf]#marine 1.0, grunt 1.4, elite 0.9, hunter 0.5, etc."
     },
     {
      "type": "short_enum",
@@ -166,11 +166,11 @@
     },
     {
      "type": "real",
-     "name": "dynamic light sphere radius"
+     "name": "dynamic light sphere radius#sphere to use for dynamic lights and shadows. only used if not 0"
     },
     {
      "type": "real_point_3d",
-     "name": "dynamic light sphere offset"
+     "name": "dynamic light sphere offset#only used if radius not 0"
     },
     {
      "type": "string_id",
@@ -227,44 +227,59 @@
      "definition": 16
     },
     {
-     "type": "real",
-     "name": "Apply collision damage scale"
+     "type": "explanation",
+     "name": "Applying collision damage",
+     "definition": "for things that want to cause more or less collision damage"
     },
     {
      "type": "real",
-     "name": "min game acc (default)"
+     "name": "Apply collision damage scale#0 means 1.  1 is standard scale.  Some things may want to apply more damage"
+    },
+    {
+     "type": "explanation",
+     "name": "Game collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max game acc (default)"
+     "name": "min game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min game scale (default)"
+     "name": "max game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max game scale (default)"
+     "name": "min game scale (default)#0-1"
     },
     {
      "type": "real",
-     "name": "min abs acc (default)"
+     "name": "max game scale (default)#0-1"
+    },
+    {
+     "type": "explanation",
+     "name": "Absolute collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max abs acc (default)"
+     "name": "min abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min abs scale (default)"
+     "name": "max abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max abs scale (default)"
+     "name": "min abs scale (default)#0-1"
+    },
+    {
+     "type": "real",
+     "name": "max abs scale (default)#0-1"
     },
     {
      "type": "short_integer",
-     "name": "hud text message index"
+     "name": "hud text message index!"
     },
     {
      "type": "pad",
@@ -283,7 +298,7 @@
     },
     {
      "type": "block",
-     "name": "old functions",
+     "name": "old functions!",
      "definition": "old_object_function_block"
     },
     {
@@ -293,7 +308,7 @@
     },
     {
      "type": "block",
-     "name": "predicted resources",
+     "name": "predicted resources*!",
      "definition": "predicted_resource_block"
     },
     {
@@ -313,7 +328,7 @@
     },
     {
      "type": "string_id",
-     "name": "ai type name"
+     "name": "ai type name#used for combat dialogue, etc."
     },
     {
      "type": "pad",
@@ -355,11 +370,11 @@
     },
     {
      "type": "string_id",
-     "name": "turn off with"
+     "name": "turn off with#if the specified function is off, so is this function"
     },
     {
      "type": "real",
-     "name": "min value"
+     "name": "min value#function must exceed this value (after mapping) to be active 0. means do nothing"
     },
     {
      "type": "custom",
@@ -495,7 +510,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "old_string_id",
@@ -541,7 +556,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "useless_pad",
@@ -616,7 +631,7 @@
     },
     {
      "type": "string_id",
-     "name": "variant name"
+     "name": "variant name#if empty, may be used by any model variant"
     },
     {
      "type": "terminator",
@@ -693,6 +708,11 @@
      "definition": "object_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ ITEM $$$",
+     "definition": ""
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags_3"
@@ -712,6 +732,11 @@
     {
      "type": "real",
      "name": "campaign on-ground scale"
+    },
+    {
+     "type": "explanation",
+     "name": "NEW hud messages",
+     "definition": "everything you need to display stuff"
     },
     {
      "type": "string_id",
@@ -760,7 +785,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED*"
     },
     {
      "type": "tag_reference",
@@ -782,7 +807,7 @@
     },
     {
      "type": "real_bounds",
-     "name": "detonation delay"
+     "name": "detonation delay:seconds"
     },
     {
      "type": "tag_reference",
@@ -804,7 +829,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "bitmap"
+     "name": "bitmap^"
     },
     {
      "type": "terminator",
@@ -837,7 +862,7 @@
     },
     {
      "type": "short_integer",
-     "name": "maximum alternate shots loaded"
+     "name": "maximum alternate shots loaded#if the second trigger loads alternate ammunition, this is the maximum number of shots that can be loaded at a time"
     },
     {
      "type": "pad",
@@ -846,7 +871,7 @@
     },
     {
      "type": "real",
-     "name": "ready time"
+     "name": "ready time:seconds"
     },
     {
      "type": "tag_reference",
@@ -854,31 +879,31 @@
     },
     {
      "type": "real_fraction",
-     "name": "heat recovery threshold"
+     "name": "heat recovery threshold:[0,1]#the heat value a weapon must return to before leaving the overheated state, once it has become overheated in the first place"
     },
     {
      "type": "real_fraction",
-     "name": "overheated threshold"
+     "name": "overheated threshold:[0,1]#the heat value over which a weapon first becomes overheated (should be greater than the heat recovery threshold)"
     },
     {
      "type": "real_fraction",
-     "name": "heat detonation threshold"
+     "name": "heat detonation threshold:[0,1]#the heat value above which the weapon has a chance of exploding each time it is fired"
     },
     {
      "type": "real_fraction",
-     "name": "heat detonation fraction"
+     "name": "heat detonation fraction:[0,1]#the percent chance (between 0.0 and 1.0) the weapon will explode when fired over the heat detonation threshold"
     },
     {
      "type": "real_fraction",
-     "name": "heat loss per second"
+     "name": "heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired"
     },
     {
      "type": "real_fraction",
-     "name": "heat illumination"
+     "name": "heat illumination:[0,1]#the amount of illumination given off when the weapon is overheated"
     },
     {
      "type": "real_fraction",
-     "name": "overheated heat loss per second"
+     "name": "overheated heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired"
     },
     {
      "type": "pad",
@@ -937,15 +962,15 @@
     },
     {
      "type": "real",
-     "name": "near reticle range"
+     "name": "near reticle range:world units#the range at which the closer of the two static target reticles will be drawn"
     },
     {
      "type": "real",
-     "name": "far reticle range"
+     "name": "far reticle range:world units#the range at which the farther of the two static target reticles will be drawn"
     },
     {
      "type": "real",
-     "name": "intersection reticle range"
+     "name": "intersection reticle range#the maximum range at which the dynamic target reticle will be drawn"
     },
     {
      "type": "pad",
@@ -954,7 +979,7 @@
     },
     {
      "type": "short_integer",
-     "name": "magnification levels"
+     "name": "magnification levels#the number of magnification levels this weapon allows"
     },
     {
      "type": "real_bounds",
@@ -977,11 +1002,11 @@
     },
     {
      "type": "real",
-     "name": "forward movement penalty"
+     "name": "forward movement penalty#percent slowdown to forward movement for units carrying this weapon"
     },
     {
      "type": "real",
-     "name": "sideways movement penalty"
+     "name": "sideways movement penalty#percent slowdown to sideways and backward movement for units carrying this weapon"
     },
     {
      "type": "pad",
@@ -999,11 +1024,11 @@
     },
     {
      "type": "real",
-     "name": "light power-on time"
+     "name": "light power-on time:seconds"
     },
     {
      "type": "real",
-     "name": "light power-off time"
+     "name": "light power-off time:seconds"
     },
     {
      "type": "tag_reference",
@@ -1015,24 +1040,29 @@
     },
     {
      "type": "real",
-     "name": "age heat recovery penalty"
+     "name": "age heat recovery penalty#how much the weapon's heat recovery is penalized as it ages"
     },
     {
      "type": "real",
-     "name": "age rate of fire penalty"
+     "name": "age rate of fire penalty#how much the weapon's rate of fire is penalized as it ages"
     },
     {
      "type": "real_fraction",
-     "name": "age misfire start"
+     "name": "age misfire start:[0,1]#the age threshold when the weapon begins to misfire"
     },
     {
      "type": "real_fraction",
-     "name": "age misfire chance"
+     "name": "age misfire chance:[0,1]#at age 1.0, the misfire chance per shot"
     },
     {
      "type": "pad",
      "name": "3*sizeof(long)",
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "interface",
+     "definition": ""
     },
     {
      "type": "tag_reference",
@@ -1071,15 +1101,15 @@
     },
     {
      "type": "real",
-     "name": "active camo ding"
+     "name": "active camo ding#how much to decrease active camo when a round is fired"
     },
     {
      "type": "real",
-     "name": "active camo regrowth rate"
+     "name": "active camo regrowth rate#how fast to increase active camo (per tick) when a round is fired"
     },
     {
      "type": "string_id",
-     "name": "handle node"
+     "name": "handle node#the node that get's attached to the unit's hand"
     },
     {
      "type": "string_id",
@@ -1137,11 +1167,11 @@
    "fields": [
     {
      "type": "angle",
-     "name": "magnetism angle"
+     "name": "magnetism angle:degrees#the maximum angle that magnetism works at full strength"
     },
     {
      "type": "real",
-     "name": "magnetism range"
+     "name": "magnetism range:world units#the maximum distance that magnetism works at full strength"
     },
     {
      "type": "useless_pad",
@@ -1158,7 +1188,7 @@
     },
     {
      "type": "angle",
-     "name": "throttle maximum adjustment angle"
+     "name": "throttle maximum adjustment angle:degrees"
     },
     {
      "type": "useless_pad",
@@ -1196,6 +1226,11 @@
      "name": "damage pyramid depth"
     },
     {
+     "type": "explanation",
+     "name": "melee combo damage",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
      "name": "1st hit melee damage"
     },
@@ -1221,11 +1256,11 @@
     },
     {
      "type": "tag_reference",
-     "name": "lunge melee damage"
+     "name": "lunge melee damage#this is only important for the energy sword"
     },
     {
      "type": "tag_reference",
-     "name": "lunge melee response"
+     "name": "lunge melee response#this is only important for the energy sword"
     },
     {
      "type": "terminator",
@@ -1240,23 +1275,23 @@
    "fields": [
     {
      "type": "angle",
-     "name": "autoaim angle"
+     "name": "autoaim angle:degrees#the maximum angle that autoaim works at full strength"
     },
     {
      "type": "real",
-     "name": "autoaim range"
+     "name": "autoaim range:world units#the maximum distance that autoaim works at full strength"
     },
     {
      "type": "angle",
-     "name": "magnetism angle"
+     "name": "magnetism angle:degrees#the maximum angle that magnetism works at full strength"
     },
     {
      "type": "real",
-     "name": "magnetism range"
+     "name": "magnetism range:world units#the maximum distance that magnetism works at full strength"
     },
     {
      "type": "angle",
-     "name": "deviation angle"
+     "name": "deviation angle:degrees#the maximum angle that a projectile is allowed to deviate from the gun barrel"
     },
     {
      "type": "pad",
@@ -1300,7 +1335,7 @@
     },
     {
      "type": "short_integer",
-     "name": "rounds recharged"
+     "name": "rounds recharged:per second"
     },
     {
      "type": "short_integer",
@@ -1321,7 +1356,7 @@
     },
     {
      "type": "real",
-     "name": "reload time"
+     "name": "reload time:seconds#the length of time it takes to load a single magazine into the weapon"
     },
     {
      "type": "short_integer",
@@ -1334,7 +1369,7 @@
     },
     {
      "type": "real",
-     "name": "chamber time"
+     "name": "chamber time:seconds#the length of time it takes to chamber the next round"
     },
     {
      "type": "pad",
@@ -1385,7 +1420,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "equipment"
+     "name": "equipment^"
     },
     {
      "type": "terminator",
@@ -1408,7 +1443,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "equipment"
+     "name": "equipment^"
     },
     {
      "type": "terminator",
@@ -1427,7 +1462,7 @@
     },
     {
      "type": "short_integer",
-     "name": "rounds recharged"
+     "name": "rounds recharged:per second"
     },
     {
      "type": "short_integer",
@@ -1453,7 +1488,7 @@
     },
     {
      "type": "real",
-     "name": "reload time"
+     "name": "reload time:seconds#the length of time it takes to load a single magazine into the weapon"
     },
     {
      "type": "short_integer",
@@ -1466,7 +1501,7 @@
     },
     {
      "type": "real",
-     "name": "chamber time"
+     "name": "chamber time:seconds#the length of time it takes to chamber the next round"
     },
     {
      "type": "pad",
@@ -1520,6 +1555,11 @@
      "definition": "item_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ WEAPON $$$",
+     "definition": "All weapons should have 'primary trigger' and 'secondary trigger' markers as appropriate.\nBlurred permutations are called '$primary-blur' and '$secondary-blur'."
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags_4"
@@ -1535,7 +1575,12 @@
     },
     {
      "type": "short_integer",
-     "name": "maximum alternate shots loaded"
+     "name": "maximum alternate shots loaded#if the second trigger loads alternate ammunition, this is the maximum number of shots that can be loaded at a time"
+    },
+    {
+     "type": "explanation",
+     "name": "old obsolete export to functions",
+     "definition": ""
     },
     {
      "type": "pad",
@@ -1544,7 +1589,7 @@
     },
     {
      "type": "real",
-     "name": "ready time"
+     "name": "ready time:seconds"
     },
     {
      "type": "tag_reference",
@@ -1555,32 +1600,37 @@
      "name": "ready damage effect"
     },
     {
-     "type": "real_fraction",
-     "name": "heat recovery threshold"
+     "type": "explanation",
+     "name": "heat",
+     "definition": ""
     },
     {
      "type": "real_fraction",
-     "name": "overheated threshold"
+     "name": "heat recovery threshold:[0,1]#the heat value a weapon must return to before leaving the overheated state, once it has become overheated in the first place"
     },
     {
      "type": "real_fraction",
-     "name": "heat detonation threshold"
+     "name": "overheated threshold:[0,1]#the heat value over which a weapon first becomes overheated (should be greater than the heat recovery threshold)"
     },
     {
      "type": "real_fraction",
-     "name": "heat detonation fraction"
+     "name": "heat detonation threshold:[0,1]#the heat value above which the weapon has a chance of exploding each time it is fired"
     },
     {
      "type": "real_fraction",
-     "name": "heat loss per second"
+     "name": "heat detonation fraction:[0,1]#the percent chance (between 0.0 and 1.0) the weapon will explode when fired over the heat detonation threshold"
     },
     {
      "type": "real_fraction",
-     "name": "heat illumination"
+     "name": "heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired"
     },
     {
      "type": "real_fraction",
-     "name": "overheated heat loss per second"
+     "name": "heat illumination:[0,1]#the amount of illumination given off when the weapon is overheated"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired"
     },
     {
      "type": "pad",
@@ -1612,9 +1662,19 @@
      "name": "player melee response"
     },
     {
+     "type": "explanation",
+     "name": "melee aim assist",
+     "definition": "magnetism angle: the maximum angle that magnetism works at full strength\nmagnetism range: the maximum distance that magnetism works at full strength\nthrottle magnitude: additional throttle to apply towards target when melee-ing w/ magnetism\nthrottle minimum distance: minimum distance to target that throttle magnetism kicks in\nthrottle maximum adjustment angle: maximum angle throttle magnetism will have an effect, relative to the players movement throttle\n"
+    },
+    {
      "type": "struct",
      "name": "melee aim assist",
      "definition": "melee_aim_assist_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "melee damage parameters",
+     "definition": "damage pyramid angles: defines the frustum from the camera that the melee-attack uses to find targets\ndamage pyramid depth: how far the melee attack searches for a target"
     },
     {
      "type": "struct",
@@ -1637,22 +1697,37 @@
      "definition": 2
     },
     {
+     "type": "explanation",
+     "name": "zoom",
+     "definition": ""
+    },
+    {
      "type": "pad",
      "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "short_integer",
-     "name": "magnification levels"
+     "name": "magnification levels#the number of magnification levels this weapon allows"
     },
     {
      "type": "real_bounds",
      "name": "magnification range"
     },
     {
+     "type": "explanation",
+     "name": "weapon aim assist",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "weapon aim assist",
      "definition": "aim_assist_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "movement",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -1666,16 +1741,21 @@
     },
     {
      "type": "real_fraction",
-     "name": "forward movement penalty"
+     "name": "forward movement penalty#percent slowdown to forward movement for units carrying this weapon"
     },
     {
      "type": "real_fraction",
-     "name": "sideways movement penalty"
+     "name": "sideways movement penalty#percent slowdown to sideways and backward movement for units carrying this weapon"
     },
     {
      "type": "pad",
      "name": "sizeof(real)",
      "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "AI targeting parameters",
+     "definition": ""
     },
     {
      "type": "pad",
@@ -1687,12 +1767,17 @@
      "name": "AI scariness"
     },
     {
-     "type": "real",
-     "name": "weapon power-on time"
+     "type": "explanation",
+     "name": "miscellaneous",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "weapon power-off time"
+     "name": "weapon power-on time:seconds"
+    },
+    {
+     "type": "real",
+     "name": "weapon power-off time:seconds"
     },
     {
      "type": "tag_reference",
@@ -1709,24 +1794,29 @@
     },
     {
      "type": "real",
-     "name": "age heat recovery penalty"
+     "name": "age heat recovery penalty#how much the weapon's heat recovery is penalized as it ages"
     },
     {
      "type": "real",
-     "name": "age rate of fire penalty"
+     "name": "age rate of fire penalty#how much the weapon's rate of fire is penalized as it ages"
     },
     {
      "type": "real_fraction",
-     "name": "age misfire start"
+     "name": "age misfire start:[0,1]#the age threshold when the weapon begins to misfire"
     },
     {
      "type": "real_fraction",
-     "name": "age misfire chance"
+     "name": "age misfire chance:[0,1]#at age 1.0, the misfire chance per shot"
     },
     {
      "type": "pad",
      "name": "3*sizeof(long)",
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "interface",
+     "definition": ""
     },
     {
      "type": "tag_reference",
@@ -1765,15 +1855,20 @@
     },
     {
      "type": "real",
-     "name": "active camo ding"
+     "name": "active camo ding#how much to decrease active camo when a round is fired"
     },
     {
      "type": "real",
-     "name": "active camo regrowth rate"
+     "name": "active camo regrowth rate#how fast to increase active camo (per tick) when a round is fired"
     },
     {
      "type": "string_id",
-     "name": "handle node"
+     "name": "handle node#the node that get's attached to the unit's hand"
+    },
+    {
+     "type": "explanation",
+     "name": "weapon labels",
+     "definition": ""
     },
     {
      "type": "string_id",
@@ -1787,6 +1882,11 @@
      "type": "short_enum",
      "name": "multiplayer weapon type",
      "definition": "multiplayer weapon type"
+    },
+    {
+     "type": "explanation",
+     "name": "more miscellaneous",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -1937,48 +2037,48 @@
     },
     {
      "type": "real_bounds",
-     "name": "rounds per second"
+     "name": "rounds per second#the number of firing effects created per second"
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final rounds per second"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return from its final rounds per second to its initial"
     },
     {
      "type": "real_fraction",
-     "name": "blurred rate of fire"
+     "name": "blurred rate of fire#a percentage between 0 and 1 which controls how soon in its firing animation the weapon blurs"
     },
     {
      "type": "short_bounds",
-     "name": "shots per fire"
+     "name": "shots per fire#allows designer caps to the shots you can fire from one firing action"
     },
     {
      "type": "real",
-     "name": "fire recovery time"
+     "name": "fire recovery time:seconds#how long after a set of shots it takes before the barrel can fire again"
     },
     {
      "type": "real_fraction",
-     "name": "soft recovery fraction"
+     "name": "soft recovery fraction#how much of the recovery allows shots to be queued"
     },
     {
      "type": "short_block_index",
-     "name": "magazine",
+     "name": "magazine#the magazine from which this trigger draws its ammunition",
      "definition": "magazines"
     },
     {
      "type": "short_integer",
-     "name": "rounds per shot"
+     "name": "rounds per shot#the number of rounds expended to create a single firing effect"
     },
     {
      "type": "short_integer",
-     "name": "minimum rounds loaded"
+     "name": "minimum rounds loaded#the minimum number of rounds necessary to fire the weapon"
     },
     {
      "type": "short_integer",
-     "name": "rounds between tracers"
+     "name": "rounds between tracers#the number of non-tracer rounds fired between tracers"
     },
     {
      "type": "string_id",
@@ -1991,7 +2091,7 @@
     },
     {
      "type": "short_enum",
-     "name": "firing noise",
+     "name": "firing noise#how loud this weapon appears to the AI",
      "definition": "firing noise"
     },
     {
@@ -2001,23 +2101,23 @@
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final error"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return to its initial error"
     },
     {
      "type": "real_bounds",
-     "name": "damage error"
+     "name": "damage error#the range of angles (in degrees) that a damaged weapon will skew fire"
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final error"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return to its initial error"
     },
     {
      "type": "pad",
@@ -2026,11 +2126,11 @@
     },
     {
      "type": "angle",
-     "name": "minimum error"
+     "name": "minimum error:degrees"
     },
     {
      "type": "angle_bounds",
-     "name": "error angle"
+     "name": "error angle:degrees"
     },
     {
      "type": "real_fraction",
@@ -2052,7 +2152,7 @@
     },
     {
      "type": "real",
-     "name": "distribution angle"
+     "name": "distribution angle:degrees"
     },
     {
      "type": "pad",
@@ -2061,15 +2161,15 @@
     },
     {
      "type": "angle",
-     "name": "minimum error"
+     "name": "minimum error:degrees"
     },
     {
      "type": "angle_bounds",
-     "name": "error angle"
+     "name": "error angle:degrees"
     },
     {
      "type": "real_point_3d",
-     "name": "first person offset"
+     "name": "first person offset:world units#+x is forward, +z is up, +y is left"
     },
     {
      "type": "char_enum",
@@ -2092,11 +2192,11 @@
     },
     {
      "type": "real",
-     "name": "ejection port recovery time"
+     "name": "ejection port recovery time#the amount of time (in seconds) it takes for the ejection port to transition from 1.0 (open) to 0.0 (closed) after a shot has been fired"
     },
     {
      "type": "real",
-     "name": "illumination recovery time"
+     "name": "illumination recovery time#the amount of time (in seconds) it takes the illumination function to transition from 1.0 (bright) to 0.0 (dark) after a shot has been fired"
     },
     {
      "type": "pad",
@@ -2105,11 +2205,11 @@
     },
     {
      "type": "real_fraction",
-     "name": "heat generated per round"
+     "name": "heat generated per round:[0,1]#the amount of heat generated each time the trigger is fired"
     },
     {
      "type": "real_fraction",
-     "name": "age generated per round"
+     "name": "age generated per round:[0,1]#the amount the weapon ages each time the trigger is fired"
     },
     {
      "type": "pad",
@@ -2118,7 +2218,7 @@
     },
     {
      "type": "real",
-     "name": "overload time"
+     "name": "overload time:seconds#the next trigger fires this often while holding down this trigger"
     },
     {
      "type": "pad",
@@ -2127,19 +2227,19 @@
     },
     {
      "type": "angle_bounds",
-     "name": "angle change per shot"
+     "name": "angle change per shot#angle change per shot of the weapon during firing"
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final angle change per shot"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return to its initial angle change per shot"
     },
     {
      "type": "short_enum",
-     "name": "angle change function",
+     "name": "angle change function#function used to scale between initial and final angle change per shot",
      "definition": "angle change function"
     },
     {
@@ -2169,7 +2269,7 @@
     },
     {
      "type": "block",
-     "name": "firing effects",
+     "name": "firing effects#firing effects determine what happens when this trigger is fired",
      "definition": "barrel_firing_effect_block"
     },
     {
@@ -2210,11 +2310,11 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "shot count lower bound"
+     "name": "shot count lower bound#the minimum number of times this firing effect will be used, once it has been chosen"
     },
     {
      "type": "short_integer",
-     "name": "shot count upper bound"
+     "name": "shot count upper bound#the maximum number of times this firing effect will be used, once it has been chosen"
     },
     {
      "type": "pad",
@@ -2223,27 +2323,27 @@
     },
     {
      "type": "tag_reference",
-     "name": "firing effect"
+     "name": "firing effect^#this effect is used when the weapon is loaded and fired normally"
     },
     {
      "type": "tag_reference",
-     "name": "misfire effect"
+     "name": "misfire effect#this effect is used when the weapon is loaded but fired while overheated"
     },
     {
      "type": "tag_reference",
-     "name": "empty effect"
+     "name": "empty effect#this effect is used when the weapon is not loaded"
     },
     {
      "type": "tag_reference",
-     "name": "firing damage"
+     "name": "firing damage#this effect is used when the weapon is loaded and fired normally"
     },
     {
      "type": "tag_reference",
-     "name": "misfire damage"
+     "name": "misfire damage#this effect is used when the weapon is loaded but fired while overheated"
     },
     {
      "type": "tag_reference",
-     "name": "empty damage"
+     "name": "empty damage#this effect is used when the weapon is not loaded"
     },
     {
      "type": "terminator",
@@ -2257,35 +2357,35 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "shot count lower bound"
+     "name": "shot count lower bound#the minimum number of times this firing effect will be used, once it has been chosen"
     },
     {
      "type": "short_integer",
-     "name": "shot count upper bound"
+     "name": "shot count upper bound#the maximum number of times this firing effect will be used, once it has been chosen"
     },
     {
      "type": "tag_reference",
-     "name": "firing effect"
+     "name": "firing effect^#this effect is used when the weapon is loaded and fired normally"
     },
     {
      "type": "tag_reference",
-     "name": "misfire effect"
+     "name": "misfire effect#this effect is used when the weapon is loaded but fired while overheated"
     },
     {
      "type": "tag_reference",
-     "name": "empty effect"
+     "name": "empty effect#this effect is used when the weapon is not loaded"
     },
     {
      "type": "tag_reference",
-     "name": "firing damage"
+     "name": "firing damage#this effect is used when the weapon is loaded and fired normally"
     },
     {
      "type": "tag_reference",
-     "name": "misfire damage"
+     "name": "misfire damage#this effect is used when the weapon is loaded but fired while overheated"
     },
     {
      "type": "tag_reference",
-     "name": "empty damage"
+     "name": "empty damage#this effect is used when the weapon is not loaded"
     },
     {
      "type": "terminator",
@@ -2303,53 +2403,63 @@
      "definition": "flags_7"
     },
     {
+     "type": "explanation",
+     "name": "firing",
+     "definition": ""
+    },
+    {
      "type": "real_bounds",
-     "name": "rounds per second"
+     "name": "rounds per second#the number of firing effects created per second"
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final rounds per second"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return from its final rounds per second to its initial"
     },
     {
      "type": "real_fraction",
-     "name": "blurred rate of fire"
+     "name": "blurred rate of fire#a percentage between 0 and 1 which controls how soon in its firing animation the weapon blurs"
     },
     {
      "type": "short_bounds",
-     "name": "shots per fire"
+     "name": "shots per fire#allows designer caps to the shots you can fire from one firing action"
     },
     {
      "type": "real",
-     "name": "fire recovery time"
+     "name": "fire recovery time:seconds#how long after a set of shots it takes before the barrel can fire again"
     },
     {
      "type": "real_fraction",
-     "name": "soft recovery fraction"
+     "name": "soft recovery fraction#how much of the recovery allows shots to be queued"
     },
     {
      "type": "short_block_index",
-     "name": "magazine",
+     "name": "magazine#the magazine from which this trigger draws its ammunition",
      "definition": "magazines"
     },
     {
      "type": "short_integer",
-     "name": "rounds per shot"
+     "name": "rounds per shot#the number of rounds expended to create a single firing effect"
     },
     {
      "type": "short_integer",
-     "name": "minimum rounds loaded"
+     "name": "minimum rounds loaded#the minimum number of rounds necessary to fire the weapon"
     },
     {
      "type": "short_integer",
-     "name": "rounds between tracers"
+     "name": "rounds between tracers#the number of non-tracer rounds fired between tracers"
     },
     {
      "type": "string_id",
      "name": "optional barrel marker name"
+    },
+    {
+     "type": "explanation",
+     "name": "prediction properties",
+     "definition": "what the behavior of this barrel is in a predicted network game"
     },
     {
      "type": "short_enum",
@@ -2358,28 +2468,38 @@
     },
     {
      "type": "short_enum",
-     "name": "firing noise",
+     "name": "firing noise#how loud this weapon appears to the AI",
      "definition": "firing noise"
     },
     {
-     "type": "real",
-     "name": "acceleration time"
+     "type": "explanation",
+     "name": "error",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final error"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return to its initial error"
     },
     {
      "type": "real_bounds",
-     "name": "damage error"
+     "name": "damage error#the range of angles (in degrees) that a damaged weapon will skew fire"
+    },
+    {
+     "type": "explanation",
+     "name": "dual weapon error",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final error"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return to its initial error"
     },
     {
      "type": "pad",
@@ -2388,15 +2508,20 @@
     },
     {
      "type": "angle",
-     "name": "minimum error"
+     "name": "minimum error:degrees"
     },
     {
      "type": "angle_bounds",
-     "name": "error angle"
+     "name": "error angle:degrees"
     },
     {
      "type": "real_fraction",
      "name": "dual wield damage scale"
+    },
+    {
+     "type": "explanation",
+     "name": "projectile",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -2409,19 +2534,19 @@
     },
     {
      "type": "real",
-     "name": "distribution angle"
+     "name": "distribution angle:degrees"
     },
     {
      "type": "angle",
-     "name": "minimum error"
+     "name": "minimum error:degrees"
     },
     {
      "type": "angle_bounds",
-     "name": "error angle"
+     "name": "error angle:degrees"
     },
     {
      "type": "real_point_3d",
-     "name": "first person offset"
+     "name": "first person offset:world units#+x is forward, +z is up, +y is left"
     },
     {
      "type": "char_enum",
@@ -2443,40 +2568,50 @@
      "definition": "weapon_barrel_damage_effect_struct_2"
     },
     {
-     "type": "real",
-     "name": "ejection port recovery time"
+     "type": "explanation",
+     "name": "misc",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "illumination recovery time"
+     "name": "ejection port recovery time#the amount of time (in seconds) it takes for the ejection port to transition from 1.0 (open) to 0.0 (closed) after a shot has been fired"
+    },
+    {
+     "type": "real",
+     "name": "illumination recovery time#the amount of time (in seconds) it takes the illumination function to transition from 1.0 (bright) to 0.0 (dark) after a shot has been fired"
     },
     {
      "type": "real_fraction",
-     "name": "heat generated per round"
+     "name": "heat generated per round:[0,1]#the amount of heat generated each time the trigger is fired"
     },
     {
      "type": "real_fraction",
-     "name": "age generated per round"
+     "name": "age generated per round:[0,1]#the amount the weapon ages each time the trigger is fired"
     },
     {
      "type": "real",
-     "name": "overload time"
+     "name": "overload time:seconds#the next trigger fires this often while holding down this trigger"
+    },
+    {
+     "type": "explanation",
+     "name": "angle change (recoil)",
+     "definition": ""
     },
     {
      "type": "angle_bounds",
-     "name": "angle change per shot"
+     "name": "angle change per shot#angle change per shot of the weapon during firing"
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final angle change per shot"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return to its initial angle change per shot"
     },
     {
      "type": "short_enum",
-     "name": "angle change function",
+     "name": "angle change function#function used to scale between initial and final angle change per shot",
      "definition": "angle change function"
     },
     {
@@ -2496,7 +2631,7 @@
     },
     {
      "type": "block",
-     "name": "firing effects",
+     "name": "firing effects#firing effects determine what happens when this trigger is fired",
      "definition": "barrel_firing_effect_block"
     },
     {
@@ -2515,57 +2650,67 @@
      "definition": "flags_7"
     },
     {
+     "type": "explanation",
+     "name": "firing",
+     "definition": ""
+    },
+    {
      "type": "real_bounds",
-     "name": "rounds per second"
+     "name": "rounds per second#the number of firing effects created per second"
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final rounds per second"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return from its final rounds per second to its initial"
     },
     {
      "type": "real_fraction",
-     "name": "barrel spin scale"
+     "name": "barrel spin scale#scale the barrel spin speed by this amount"
     },
     {
      "type": "real_fraction",
-     "name": "blurred rate of fire"
+     "name": "blurred rate of fire#a percentage between 0 and 1 which controls how soon in its firing animation the weapon blurs"
     },
     {
      "type": "short_bounds",
-     "name": "shots per fire"
+     "name": "shots per fire#allows designer caps to the shots you can fire from one firing action"
     },
     {
      "type": "real",
-     "name": "fire recovery time"
+     "name": "fire recovery time:seconds#how long after a set of shots it takes before the barrel can fire again"
     },
     {
      "type": "real_fraction",
-     "name": "soft recovery fraction"
+     "name": "soft recovery fraction#how much of the recovery allows shots to be queued"
     },
     {
      "type": "short_block_index",
-     "name": "magazine",
+     "name": "magazine#the magazine from which this trigger draws its ammunition",
      "definition": "magazines"
     },
     {
      "type": "short_integer",
-     "name": "rounds per shot"
+     "name": "rounds per shot#the number of rounds expended to create a single firing effect"
     },
     {
      "type": "short_integer",
-     "name": "minimum rounds loaded"
+     "name": "minimum rounds loaded#the minimum number of rounds necessary to fire the weapon"
     },
     {
      "type": "short_integer",
-     "name": "rounds between tracers"
+     "name": "rounds between tracers#the number of non-tracer rounds fired between tracers"
     },
     {
      "type": "string_id",
      "name": "optional barrel marker name"
+    },
+    {
+     "type": "explanation",
+     "name": "prediction properties",
+     "definition": "what the behavior of this barrel is in a predicted network game"
     },
     {
      "type": "short_enum",
@@ -2574,28 +2719,38 @@
     },
     {
      "type": "short_enum",
-     "name": "firing noise",
+     "name": "firing noise#how loud this weapon appears to the AI",
      "definition": "firing noise"
     },
     {
-     "type": "real",
-     "name": "acceleration time"
+     "type": "explanation",
+     "name": "error",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final error"
+    },
+    {
+     "type": "real",
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return to its initial error"
     },
     {
      "type": "real_bounds",
-     "name": "damage error"
+     "name": "damage error#the range of angles (in degrees) that a damaged weapon will skew fire"
+    },
+    {
+     "type": "explanation",
+     "name": "dual weapon error",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final error"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return to its initial error"
     },
     {
      "type": "pad",
@@ -2604,15 +2759,20 @@
     },
     {
      "type": "angle",
-     "name": "minimum error"
+     "name": "minimum error:degrees"
     },
     {
      "type": "angle_bounds",
-     "name": "error angle"
+     "name": "error angle:degrees"
     },
     {
      "type": "real_fraction",
      "name": "dual wield damage scale"
+    },
+    {
+     "type": "explanation",
+     "name": "projectile",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -2625,19 +2785,19 @@
     },
     {
      "type": "real",
-     "name": "distribution angle"
+     "name": "distribution angle:degrees"
     },
     {
      "type": "angle",
-     "name": "minimum error"
+     "name": "minimum error:degrees"
     },
     {
      "type": "angle_bounds",
-     "name": "error angle"
+     "name": "error angle:degrees"
     },
     {
      "type": "real_point_3d",
-     "name": "first person offset"
+     "name": "first person offset:world units#+x is forward, +z is up, +y is left"
     },
     {
      "type": "char_enum",
@@ -2659,40 +2819,50 @@
      "definition": "weapon_barrel_damage_effect_struct_2"
     },
     {
-     "type": "real",
-     "name": "ejection port recovery time"
+     "type": "explanation",
+     "name": "misc",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "illumination recovery time"
+     "name": "ejection port recovery time#the amount of time (in seconds) it takes for the ejection port to transition from 1.0 (open) to 0.0 (closed) after a shot has been fired"
+    },
+    {
+     "type": "real",
+     "name": "illumination recovery time#the amount of time (in seconds) it takes the illumination function to transition from 1.0 (bright) to 0.0 (dark) after a shot has been fired"
     },
     {
      "type": "real_fraction",
-     "name": "heat generated per round"
+     "name": "heat generated per round:[0,1]#the amount of heat generated each time the trigger is fired"
     },
     {
      "type": "real_fraction",
-     "name": "age generated per round"
+     "name": "age generated per round:[0,1]#the amount the weapon ages each time the trigger is fired"
     },
     {
      "type": "real",
-     "name": "overload time"
+     "name": "overload time:seconds#the next trigger fires this often while holding down this trigger"
+    },
+    {
+     "type": "explanation",
+     "name": "angle change (recoil)",
+     "definition": ""
     },
     {
      "type": "angle_bounds",
-     "name": "angle change per shot"
+     "name": "angle change per shot#angle change per shot of the weapon during firing"
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final angle change per shot"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return to its initial angle change per shot"
     },
     {
      "type": "short_enum",
-     "name": "angle change function",
+     "name": "angle change function#function used to scale between initial and final angle change per shot",
      "definition": "angle change function"
     },
     {
@@ -2712,7 +2882,7 @@
     },
     {
      "type": "block",
-     "name": "firing effects",
+     "name": "firing effects#firing effects determine what happens when this trigger is fired",
      "definition": "barrel_firing_effect_block"
     },
     {
@@ -2725,6 +2895,11 @@
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "AUTOFIRE",
+     "definition": ""
+    },
     {
      "type": "real",
      "name": "autofire time"
@@ -2755,12 +2930,17 @@
    "size": 52,
    "fields": [
     {
-     "type": "real",
-     "name": "charging time"
+     "type": "explanation",
+     "name": "CHARGING",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "charged time"
+     "name": "charging time:seconds#the amount of time it takes for this trigger to become fully charged"
+    },
+    {
+     "type": "real",
+     "name": "charged time:seconds#the amount of time this trigger can be charged before becoming overcharged"
     },
     {
      "type": "short_enum",
@@ -2774,19 +2954,19 @@
     },
     {
      "type": "real",
-     "name": "charged illumination"
+     "name": "charged illumination:[0,1]#the amount of illumination given off when the weapon is fully charged"
     },
     {
      "type": "real",
-     "name": "spew time"
+     "name": "spew time:seconds#length of time the weapon will spew (fire continuously) while discharging"
     },
     {
      "type": "tag_reference",
-     "name": "charging effect"
+     "name": "charging effect#the charging effect is created once when the trigger begins to charge"
     },
     {
      "type": "tag_reference",
-     "name": "charging damage effect"
+     "name": "charging damage effect#the charging effect is created once when the trigger begins to charge"
     },
     {
      "type": "terminator",
@@ -2805,6 +2985,11 @@
      "definition": "item_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ WEAPON $$$",
+     "definition": "All weapons should have 'primary trigger' and 'secondary trigger' markers as appropriate.\nBlurred permutations are called '$primary-blur' and '$secondary-blur'."
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags_4"
@@ -2820,11 +3005,16 @@
     },
     {
      "type": "short_integer",
-     "name": "maximum alternate shots loaded"
+     "name": "maximum alternate shots loaded#if the second trigger loads alternate ammunition, this is the maximum number of shots that can be loaded at a time"
     },
     {
      "type": "real",
-     "name": "turn on time"
+     "name": "turn on time#how long after being readied it takes this weapon to switch its 'turned_on' attachment to 1.0"
+    },
+    {
+     "type": "explanation",
+     "name": "old obsolete export to functions",
+     "definition": ""
     },
     {
      "type": "pad",
@@ -2833,7 +3023,7 @@
     },
     {
      "type": "real",
-     "name": "ready time"
+     "name": "ready time:seconds"
     },
     {
      "type": "tag_reference",
@@ -2844,32 +3034,37 @@
      "name": "ready damage effect"
     },
     {
-     "type": "real_fraction",
-     "name": "heat recovery threshold"
+     "type": "explanation",
+     "name": "heat",
+     "definition": ""
     },
     {
      "type": "real_fraction",
-     "name": "overheated threshold"
+     "name": "heat recovery threshold:[0,1]#the heat value a weapon must return to before leaving the overheated state, once it has become overheated in the first place"
     },
     {
      "type": "real_fraction",
-     "name": "heat detonation threshold"
+     "name": "overheated threshold:[0,1]#the heat value over which a weapon first becomes overheated (should be greater than the heat recovery threshold)"
     },
     {
      "type": "real_fraction",
-     "name": "heat detonation fraction"
+     "name": "heat detonation threshold:[0,1]#the heat value above which the weapon has a chance of exploding each time it is fired"
     },
     {
      "type": "real_fraction",
-     "name": "heat loss per second"
+     "name": "heat detonation fraction:[0,1]#the percent chance (between 0.0 and 1.0) the weapon will explode when fired over the heat detonation threshold"
     },
     {
      "type": "real_fraction",
-     "name": "heat illumination"
+     "name": "heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired"
     },
     {
      "type": "real_fraction",
-     "name": "overheated heat loss per second"
+     "name": "heat illumination:[0,1]#the amount of illumination given off when the weapon is overheated"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired"
     },
     {
      "type": "pad",
@@ -2901,9 +3096,19 @@
      "name": "player melee response"
     },
     {
+     "type": "explanation",
+     "name": "melee aim assist",
+     "definition": "magnetism angle: the maximum angle that magnetism works at full strength\nmagnetism range: the maximum distance that magnetism works at full strength\nthrottle magnitude: additional throttle to apply towards target when melee-ing w/ magnetism\nthrottle minimum distance: minimum distance to target that throttle magnetism kicks in\nthrottle maximum adjustment angle: maximum angle throttle magnetism will have an effect, relative to the players movement throttle\n"
+    },
+    {
      "type": "struct",
      "name": "melee aim assist",
      "definition": "melee_aim_assist_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "melee damage parameters",
+     "definition": "damage pyramid angles: defines the frustum from the camera that the melee-attack uses to find targets\ndamage pyramid depth: how far the melee attack searches for a target"
     },
     {
      "type": "struct",
@@ -2931,22 +3136,37 @@
      "definition": 2
     },
     {
+     "type": "explanation",
+     "name": "zoom",
+     "definition": ""
+    },
+    {
      "type": "pad",
      "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "short_integer",
-     "name": "magnification levels"
+     "name": "magnification levels#the number of magnification levels this weapon allows"
     },
     {
      "type": "real_bounds",
      "name": "magnification range"
     },
     {
+     "type": "explanation",
+     "name": "weapon aim assist",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "weapon aim assist",
      "definition": "aim_assist_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "movement",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -2960,16 +3180,21 @@
     },
     {
      "type": "real_fraction",
-     "name": "forward movement penalty"
+     "name": "forward movement penalty#percent slowdown to forward movement for units carrying this weapon"
     },
     {
      "type": "real_fraction",
-     "name": "sideways movement penalty"
+     "name": "sideways movement penalty#percent slowdown to sideways and backward movement for units carrying this weapon"
     },
     {
      "type": "pad",
      "name": "sizeof(real)",
      "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "AI targeting parameters",
+     "definition": ""
     },
     {
      "type": "pad",
@@ -2981,12 +3206,17 @@
      "name": "AI scariness"
     },
     {
-     "type": "real",
-     "name": "weapon power-on time"
+     "type": "explanation",
+     "name": "miscellaneous",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "weapon power-off time"
+     "name": "weapon power-on time:seconds"
+    },
+    {
+     "type": "real",
+     "name": "weapon power-off time:seconds"
     },
     {
      "type": "tag_reference",
@@ -3003,19 +3233,19 @@
     },
     {
      "type": "real",
-     "name": "age heat recovery penalty"
+     "name": "age heat recovery penalty#how much the weapon's heat recovery is penalized as it ages"
     },
     {
      "type": "real",
-     "name": "age rate of fire penalty"
+     "name": "age rate of fire penalty#how much the weapon's rate of fire is penalized as it ages"
     },
     {
      "type": "real_fraction",
-     "name": "age misfire start"
+     "name": "age misfire start:[0,1]#the age threshold when the weapon begins to misfire"
     },
     {
      "type": "real_fraction",
-     "name": "age misfire chance"
+     "name": "age misfire chance:[0,1]#at age 1.0, the misfire chance per shot"
     },
     {
      "type": "pad",
@@ -3036,15 +3266,20 @@
     },
     {
      "type": "real",
-     "name": "active camo ding"
+     "name": "active camo ding#how much to decrease active camo when a round is fired"
     },
     {
      "type": "real",
-     "name": "active camo regrowth rate"
+     "name": "active camo regrowth rate#how fast to increase active camo (per tick) when a round is fired"
     },
     {
      "type": "string_id",
-     "name": "handle node"
+     "name": "handle node#the node that get's attached to the unit's hand"
+    },
+    {
+     "type": "explanation",
+     "name": "weapon labels",
+     "definition": ""
     },
     {
      "type": "string_id",
@@ -3058,6 +3293,11 @@
      "type": "short_enum",
      "name": "multiplayer weapon type",
      "definition": "multiplayer weapon type"
+    },
+    {
+     "type": "explanation",
+     "name": "more miscellaneous",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -3110,6 +3350,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "first-person movement control",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "max movement acceleration"
     },
@@ -3144,6 +3389,11 @@
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "interface",
+     "definition": ""
+    },
     {
      "type": "struct",
      "name": "shared interface",
@@ -3209,6 +3459,11 @@
      "definition": "item_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ WEAPON $$$",
+     "definition": "All weapons should have 'primary trigger' and 'secondary trigger' markers as appropriate.\nBlurred permutations are called '$primary-blur' and '$secondary-blur'."
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags_4"
@@ -3224,15 +3479,20 @@
     },
     {
      "type": "short_integer",
-     "name": "maximum alternate shots loaded"
+     "name": "maximum alternate shots loaded#if the second trigger loads alternate ammunition, this is the maximum number of shots that can be loaded at a time"
     },
     {
      "type": "real",
-     "name": "turn on time"
+     "name": "turn on time#how long after being readied it takes this weapon to switch its 'turned_on' attachment to 1.0"
+    },
+    {
+     "type": "explanation",
+     "name": "old obsolete export to functions",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "ready time"
+     "name": "ready time:seconds"
     },
     {
      "type": "tag_reference",
@@ -3243,32 +3503,37 @@
      "name": "ready damage effect"
     },
     {
-     "type": "real_fraction",
-     "name": "heat recovery threshold"
+     "type": "explanation",
+     "name": "heat",
+     "definition": ""
     },
     {
      "type": "real_fraction",
-     "name": "overheated threshold"
+     "name": "heat recovery threshold:[0,1]#the heat value a weapon must return to before leaving the overheated state, once it has become overheated in the first place"
     },
     {
      "type": "real_fraction",
-     "name": "heat detonation threshold"
+     "name": "overheated threshold:[0,1]#the heat value over which a weapon first becomes overheated (should be greater than the heat recovery threshold)"
     },
     {
      "type": "real_fraction",
-     "name": "heat detonation fraction"
+     "name": "heat detonation threshold:[0,1]#the heat value above which the weapon has a chance of exploding each time it is fired"
     },
     {
      "type": "real_fraction",
-     "name": "heat loss per second"
+     "name": "heat detonation fraction:[0,1]#the percent chance (between 0.0 and 1.0) the weapon will explode when fired over the heat detonation threshold"
     },
     {
      "type": "real_fraction",
-     "name": "heat illumination"
+     "name": "heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired"
     },
     {
      "type": "real_fraction",
-     "name": "overheated heat loss per second"
+     "name": "heat illumination:[0,1]#the amount of illumination given off when the weapon is overheated"
+    },
+    {
+     "type": "real_fraction",
+     "name": "overheated heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired"
     },
     {
      "type": "tag_reference",
@@ -3295,9 +3560,19 @@
      "name": "player melee response"
     },
     {
+     "type": "explanation",
+     "name": "melee aim assist",
+     "definition": "magnetism angle: the maximum angle that magnetism works at full strength\nmagnetism range: the maximum distance that magnetism works at full strength\nthrottle magnitude: additional throttle to apply towards target when melee-ing w/ magnetism\nthrottle minimum distance: minimum distance to target that throttle magnetism kicks in\nthrottle maximum adjustment angle: maximum angle throttle magnetism will have an effect, relative to the players movement throttle\n"
+    },
+    {
      "type": "struct",
      "name": "melee aim assist",
      "definition": "melee_aim_assist_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "melee damage parameters",
+     "definition": "damage pyramid angles: defines the frustum from the camera that the melee-attack uses to find targets\ndamage pyramid depth: how far the melee attack searches for a target"
     },
     {
      "type": "struct",
@@ -3315,17 +3590,32 @@
      "definition": 1
     },
     {
+     "type": "explanation",
+     "name": "zoom",
+     "definition": ""
+    },
+    {
      "type": "short_integer",
-     "name": "magnification levels"
+     "name": "magnification levels#the number of magnification levels this weapon allows"
     },
     {
      "type": "real_bounds",
      "name": "magnification range"
     },
     {
+     "type": "explanation",
+     "name": "weapon aim assist",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "weapon aim assist",
      "definition": "aim_assist_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "movement",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -3339,11 +3629,11 @@
     },
     {
      "type": "real_fraction",
-     "name": "forward movement penalty"
+     "name": "forward movement penalty#percent slowdown to forward movement for units carrying this weapon"
     },
     {
      "type": "real_fraction",
-     "name": "sideways movement penalty"
+     "name": "sideways movement penalty#percent slowdown to sideways and backward movement for units carrying this weapon"
     },
     {
      "type": "useless_pad",
@@ -3351,16 +3641,26 @@
      "definition": 4
     },
     {
+     "type": "explanation",
+     "name": "AI targeting parameters",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "AI scariness"
     },
     {
-     "type": "real",
-     "name": "weapon power-on time"
+     "type": "explanation",
+     "name": "miscellaneous",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "weapon power-off time"
+     "name": "weapon power-on time:seconds"
+    },
+    {
+     "type": "real",
+     "name": "weapon power-off time:seconds"
     },
     {
      "type": "tag_reference",
@@ -3372,19 +3672,19 @@
     },
     {
      "type": "real",
-     "name": "age heat recovery penalty"
+     "name": "age heat recovery penalty#how much the weapon's heat recovery is penalized as it ages"
     },
     {
      "type": "real",
-     "name": "age rate of fire penalty"
+     "name": "age rate of fire penalty#how much the weapon's rate of fire is penalized as it ages"
     },
     {
      "type": "real_fraction",
-     "name": "age misfire start"
+     "name": "age misfire start:[0,1]#the age threshold when the weapon begins to misfire"
     },
     {
      "type": "real_fraction",
-     "name": "age misfire chance"
+     "name": "age misfire chance:[0,1]#at age 1.0, the misfire chance per shot"
     },
     {
      "type": "tag_reference",
@@ -3400,15 +3700,20 @@
     },
     {
      "type": "real",
-     "name": "active camo ding"
+     "name": "active camo ding#how much to decrease active camo when a round is fired"
     },
     {
      "type": "real",
-     "name": "active camo regrowth rate"
+     "name": "active camo regrowth rate#how fast to increase active camo (per tick) when a round is fired"
     },
     {
      "type": "string_id",
-     "name": "handle node"
+     "name": "handle node#the node that get's attached to the unit's hand"
+    },
+    {
+     "type": "explanation",
+     "name": "weapon labels",
+     "definition": ""
     },
     {
      "type": "string_id",
@@ -3422,6 +3727,11 @@
      "type": "short_enum",
      "name": "multiplayer weapon type",
      "definition": "multiplayer weapon type"
+    },
+    {
+     "type": "explanation",
+     "name": "more miscellaneous",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -3467,6 +3777,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "first-person movement control",
+     "definition": ""
     },
     {
      "type": "real",

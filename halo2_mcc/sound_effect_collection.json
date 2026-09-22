@@ -114,7 +114,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "struct",
@@ -184,7 +184,7 @@
     },
     {
      "type": "real",
-     "name": "gain"
+     "name": "gain:dB"
     },
     {
      "type": "terminator",
@@ -197,13 +197,23 @@
    "size": 72,
    "fields": [
     {
+     "type": "explanation",
+     "name": "parameter description",
+     "definition": "DLS2 filtering:\n    resonance gain range: [0, 22.5] dB\n\nparametric EQ:\n    gain range: [-64, 14] dB\n\nfor mono sounds:\n    the left filter controls the DLS 2 parameters\n    the right filter controls the Parametric EQ parameters\n\nfor stereo sounds:\n    both left and right channels must have the same filter\n    i.e., filter type both is invalid"
+    },
+    {
      "type": "long_enum",
      "name": "filter type",
      "definition": "filter type"
     },
     {
      "type": "long_integer",
-     "name": "filter width"
+     "name": "filter width:[0,7]"
+    },
+    {
+     "type": "explanation",
+     "name": "left filter frequency",
+     "definition": "in Hz [0,8000]"
     },
     {
      "type": "struct",
@@ -211,14 +221,29 @@
      "definition": "sound_playback_parameter_definition_2"
     },
     {
+     "type": "explanation",
+     "name": "left filter gain",
+     "definition": "in dB"
+    },
+    {
      "type": "struct",
      "name": "left filter gain",
      "definition": "sound_playback_parameter_definition_2"
     },
     {
+     "type": "explanation",
+     "name": "right filter frequency",
+     "definition": "in Hz [0,8000]"
+    },
+    {
      "type": "struct",
      "name": "right filter frequency",
      "definition": "sound_playback_parameter_definition_2"
+    },
+    {
+     "type": "explanation",
+     "name": "right filter gain",
+     "definition": "in dB"
     },
     {
      "type": "struct",
@@ -255,14 +280,29 @@
    "size": 48,
    "fields": [
     {
+     "type": "explanation",
+     "name": "delay",
+     "definition": "seconds"
+    },
+    {
      "type": "struct",
      "name": "delay",
      "definition": "sound_playback_parameter_definition_2"
     },
     {
+     "type": "explanation",
+     "name": "frequency",
+     "definition": "Hz[0,43.7]"
+    },
+    {
      "type": "struct",
      "name": "frequency",
      "definition": "sound_playback_parameter_definition_2"
+    },
+    {
+     "type": "explanation",
+     "name": "pitch modulation",
+     "definition": "octaves[-1,1]"
     },
     {
      "type": "struct",
@@ -280,9 +320,19 @@
    "size": 64,
    "fields": [
     {
+     "type": "explanation",
+     "name": "delay",
+     "definition": "in seconds"
+    },
+    {
      "type": "struct",
      "name": "delay",
      "definition": "sound_playback_parameter_definition_2"
+    },
+    {
+     "type": "explanation",
+     "name": "frequency",
+     "definition": "in Hz[0,43.7]"
     },
     {
      "type": "struct",
@@ -290,9 +340,19 @@
      "definition": "sound_playback_parameter_definition_2"
     },
     {
+     "type": "explanation",
+     "name": "cutoff modulation",
+     "definition": "octaves[-8,8]"
+    },
+    {
      "type": "struct",
      "name": "cutoff modulation",
      "definition": "sound_playback_parameter_definition_2"
+    },
+    {
+     "type": "explanation",
+     "name": "gain modulation",
+     "definition": "dB[-16,16]"
     },
     {
      "type": "struct",
@@ -365,11 +425,11 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "real",
-     "name": "gain"
+     "name": "gain:dB#additional attenuation to sound"
     },
     {
      "type": "long_flags",
@@ -441,7 +501,7 @@
     },
     {
      "type": "real",
-     "name": "time period"
+     "name": "time period: seconds"
     },
     {
      "type": "long_integer",
@@ -581,12 +641,12 @@
    "fields": [
     {
      "type": "block",
-     "name": "sound effects",
+     "name": "sound effects*",
      "definition": "platform_sound_effect_block"
     },
     {
      "type": "block",
-     "name": "low frequency input",
+     "name": "low frequency input*",
      "definition": "platform_sound_effect_function_block"
     },
     {
@@ -649,7 +709,7 @@
     },
     {
      "type": "real",
-     "name": "time period"
+     "name": "time period: seconds"
     },
     {
      "type": "terminator",

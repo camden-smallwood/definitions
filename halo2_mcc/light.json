@@ -53,6 +53,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "SHAPE",
+     "definition": "overall shape of the light"
+    },
+    {
      "type": "short_enum",
      "name": "type",
      "definition": "type"
@@ -64,15 +69,15 @@
     },
     {
      "type": "real_bounds",
-     "name": "size modifer"
+     "name": "size modifer#how the light's size changes with external scale"
     },
     {
      "type": "real",
-     "name": "shadow quality bias"
+     "name": "shadow quality bias#larger positive numbers improve quality, larger negative numbers improve speed"
     },
     {
      "type": "short_enum",
-     "name": "shadow tap bias",
+     "name": "shadow tap bias#the less taps you use, the faster the light (but edges can look worse)",
      "definition": "shadow tap bias"
     },
     {
@@ -86,12 +91,17 @@
      "definition": 24
     },
     {
-     "type": "real",
-     "name": "radius"
+     "type": "explanation",
+     "name": "SPHERE LIGHT",
+     "definition": "default shape parameters for spherical lights"
     },
     {
      "type": "real",
-     "name": "specular radius"
+     "name": "radius:world units#the radius at which illumination falls off to zero"
+    },
+    {
+     "type": "real",
+     "name": "specular radius:world units#the radius at which specular highlights fall off to zero (if zero, same as maximum radius)"
     },
     {
      "type": "useless_pad",
@@ -99,29 +109,39 @@
      "definition": 32
     },
     {
-     "type": "real",
-     "name": "near width"
+     "type": "explanation",
+     "name": "FRUSTUM LIGHT",
+     "definition": "default shape parameters for frustum lights (orthogonal, projective or pyramid types)"
     },
     {
      "type": "real",
-     "name": "height stretch"
+     "name": "near width:world units#width of the frustum light at its near plane"
     },
     {
      "type": "real",
-     "name": "field of view"
+     "name": "height stretch#how much the gel is stretched vertically (0.0 or 1.0 = aspect ratio same as gel)"
     },
     {
      "type": "real",
-     "name": "falloff distance"
+     "name": "field of view:degrees#horizontal angle that the frustum light covers (0.0 = no spread, a parallel beam)"
     },
     {
      "type": "real",
-     "name": "cutoff distance"
+     "name": "falloff distance#distance from near plane to where the light falloff starts"
+    },
+    {
+     "type": "real",
+     "name": "cutoff distance#distance from near plane to where illumination falls off to zero"
     },
     {
      "type": "useless_pad",
      "name": null,
      "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "COLOR",
+     "definition": ""
     },
     {
      "type": "long_flags",
@@ -130,7 +150,7 @@
     },
     {
      "type": "real_bounds",
-     "name": "bloom bounds"
+     "name": "bloom bounds:[0..2]"
     },
     {
      "type": "real_rgb_color",
@@ -155,7 +175,7 @@
     },
     {
      "type": "real_bounds",
-     "name": "brightness bounds"
+     "name": "brightness bounds:[0..2]"
     },
     {
      "type": "useless_pad",
@@ -163,8 +183,13 @@
      "definition": 4
     },
     {
+     "type": "explanation",
+     "name": "GEL",
+     "definition": "the gel map tints the light's illumination per-pixel"
+    },
+    {
      "type": "tag_reference",
-     "name": "gel map"
+     "name": "gel map#must be a cubemap for spherical light and a 2d texture for frustum light"
     },
     {
      "type": "short_enum",
@@ -212,6 +237,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "FALLOFF",
+     "definition": ""
+    },
+    {
      "type": "short_enum",
      "name": "falloff function",
      "definition": "falloff function"
@@ -237,12 +267,17 @@
      "definition": 8
     },
     {
+     "type": "explanation",
+     "name": "LENS FLARE",
+     "definition": "optional lens flare and light volume associated with this light"
+    },
+    {
      "type": "tag_reference",
      "name": "lens flare"
     },
     {
      "type": "real",
-     "name": "bounding radius"
+     "name": "bounding radius:world units#used to generate a bounding radius for lensflare-only lights"
     },
     {
      "type": "tag_reference",
@@ -252,6 +287,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 8
+    },
+    {
+     "type": "explanation",
+     "name": "RADIOSITY",
+     "definition": "how the light affects the lightmaps (ignored for dynamic lights)"
     },
     {
      "type": "short_enum",
@@ -277,8 +317,13 @@
      "definition": 20
     },
     {
+     "type": "explanation",
+     "name": "EFFECT PARAMETERS",
+     "definition": "if the light is created by an effect, it will animate itself as follows"
+    },
+    {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds#the light will last this long when created by an effect"
     },
     {
      "type": "pad",
@@ -287,13 +332,18 @@
     },
     {
      "type": "short_enum",
-     "name": "falloff function",
+     "name": "falloff function#the scale of the light will diminish over time according to this function",
      "definition": "falloff function_2"
     },
     {
      "type": "useless_pad",
      "name": null,
      "definition": 8
+    },
+    {
+     "type": "explanation",
+     "name": "DISTANCE FADING PARAMETERS",
+     "definition": "To fade the light's illumination and shadow casting abilities"
     },
     {
      "type": "short_enum",
@@ -321,6 +371,11 @@
      "definition": 8
     },
     {
+     "type": "explanation",
+     "name": "ANIMATION PARAMETERS",
+     "definition": ""
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags_2"
@@ -344,6 +399,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 72
+    },
+    {
+     "type": "explanation",
+     "name": "SHADER",
+     "definition": ""
     },
     {
      "type": "tag_reference",

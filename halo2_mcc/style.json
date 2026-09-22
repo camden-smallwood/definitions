@@ -29,7 +29,12 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
+    },
+    {
+     "type": "explanation",
+     "name": "Combat status decay options",
+     "definition": "Controls how combat status is allowed to be automatically reduced in the absence of combat stimuli. 'Latch at X' means that once the level of x is attained (and/or surpassed) the combat status never falls below it"
     },
     {
      "type": "short_enum",
@@ -40,6 +45,11 @@
      "type": "pad",
      "name": "sizeof(short)",
      "definition": 2
+    },
+    {
+     "type": "explanation",
+     "name": "Atittude",
+     "definition": "Indicates general stance for style. This matches the property blocks in the character definition (e.g. defense properties)"
     },
     {
      "type": "short_enum",
@@ -115,6 +125,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 24
+    },
+    {
+     "type": "explanation",
+     "name": "Style Behavior Control",
+     "definition": "Check the appropriate box to turn on/off the given behavior"
     },
     {
      "type": "long_flags",
@@ -193,7 +208,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "behavior name"
+     "name": "behavior name*^"
     },
     {
      "type": "terminator",

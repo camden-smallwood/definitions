@@ -46,6 +46,11 @@
      "name": "Shader"
     },
     {
+     "type": "explanation",
+     "name": "Default cloth vertices",
+     "definition": "if not importing from a render model, type a grid size"
+    },
+    {
      "type": "short_integer",
      "name": "grid x dimension"
     },
@@ -62,28 +67,38 @@
      "name": "grid spacing y"
     },
     {
+     "type": "explanation",
+     "name": "Cloth Properties",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "properties",
      "definition": "cloth_properties_2"
     },
     {
+     "type": "explanation",
+     "name": "Import or grid data",
+     "definition": ""
+    },
+    {
      "type": "block",
-     "name": "vertices",
+     "name": "vertices*",
      "definition": "cloth_vertices_block"
     },
     {
      "type": "block",
-     "name": "indices",
+     "name": "indices*",
      "definition": "cloth_indices_block"
     },
     {
      "type": "block",
-     "name": "strip indices",
+     "name": "strip indices*",
      "definition": "cloth_indices_block"
     },
     {
      "type": "block",
-     "name": "links",
+     "name": "links*",
      "definition": "cloth_links_block"
     },
     {
@@ -98,32 +113,32 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "Integration type",
+     "name": "Integration type*",
      "definition": "Integration type"
     },
     {
      "type": "short_integer",
-     "name": "Number iterations"
+     "name": "Number iterations#[1-8] sug 1"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight#[-10.0 - 10.0] sug 1.0"
     },
     {
      "type": "real",
-     "name": "drag"
+     "name": "drag#[0.0 - 0.5] sug 0.07"
     },
     {
      "type": "real",
-     "name": "wind_scale"
+     "name": "wind_scale#[0.0 - 3.0] sug 1.0"
     },
     {
      "type": "real",
-     "name": "wind_flappiness_scale"
+     "name": "wind_flappiness_scale#[0.0 - 1.0] sug 0.75"
     },
     {
      "type": "real",
-     "name": "longest_rod"
+     "name": "longest_rod#[1.0 - 10.0] sug 3.5"
     },
     {
      "type": "pad",
@@ -143,11 +158,11 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "initial position"
+     "name": "initial position*"
     },
     {
      "type": "real_vector_2d",
-     "name": "uv"
+     "name": "uv*"
     },
     {
      "type": "terminator",
@@ -161,7 +176,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "index"
+     "name": "index*"
     },
     {
      "type": "terminator",
@@ -175,23 +190,23 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "attachment bits"
+     "name": "attachment bits*"
     },
     {
      "type": "short_integer",
-     "name": "index1"
+     "name": "index1*"
     },
     {
      "type": "short_integer",
-     "name": "index2"
+     "name": "index2*"
     },
     {
      "type": "real",
-     "name": "default_distance"
+     "name": "default_distance*"
     },
     {
      "type": "real",
-     "name": "damping_multiplier"
+     "name": "damping_multiplier*"
     },
     {
      "type": "terminator",

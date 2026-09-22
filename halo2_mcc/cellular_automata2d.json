@@ -28,8 +28,13 @@
    "size": 556,
    "fields": [
     {
+     "type": "explanation",
+     "name": "properties",
+     "definition": ""
+    },
+    {
      "type": "short_integer",
-     "name": "updates per second"
+     "name": "updates per second:Hz"
     },
     {
      "type": "pad",
@@ -50,24 +55,29 @@
      "definition": 80
     },
     {
-     "type": "short_integer",
-     "name": "width"
+     "type": "explanation",
+     "name": "height map",
+     "definition": ""
     },
     {
      "type": "short_integer",
-     "name": "height"
+     "name": "width:cells"
+    },
+    {
+     "type": "short_integer",
+     "name": "height:cells"
     },
     {
      "type": "real",
-     "name": "cell width"
+     "name": "cell width:world units"
     },
     {
      "type": "real",
-     "name": "height"
+     "name": "height:world units"
     },
     {
      "type": "real_vector_2d",
-     "name": "velocity"
+     "name": "velocity:cells/update"
     },
     {
      "type": "pad",
@@ -97,20 +107,25 @@
      "definition": 76
     },
     {
-     "type": "short_integer",
-     "name": "width"
+     "type": "explanation",
+     "name": "detail map",
+     "definition": ""
     },
     {
      "type": "short_integer",
-     "name": "height"
+     "name": "width:cells"
+    },
+    {
+     "type": "short_integer",
+     "name": "height:cells"
     },
     {
      "type": "real",
-     "name": "cell width"
+     "name": "cell width:world units"
     },
     {
      "type": "real_vector_2d",
-     "name": "velocity"
+     "name": "velocity:cells/update"
     },
     {
      "type": "pad",
@@ -123,7 +138,7 @@
     },
     {
      "type": "short_integer",
-     "name": "texture width"
+     "name": "texture width:cells"
     },
     {
      "type": "pad",
@@ -161,7 +176,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_rgb_color",
@@ -189,7 +204,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_rgb_color",
@@ -197,7 +212,7 @@
     },
     {
      "type": "short_integer",
-     "name": "counts as"
+     "name": "counts as:neighbors"
     },
     {
      "type": "pad",

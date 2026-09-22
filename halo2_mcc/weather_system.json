@@ -135,7 +135,7 @@
     },
     {
      "type": "struct",
-     "name": "geometry block info",
+     "name": "geometry block info*",
      "definition": "global_geometry_block_info_struct_2"
     },
     {
@@ -195,24 +195,29 @@
    "size": 40,
    "fields": [
     {
-     "type": "long_integer",
-     "name": "block offset"
+     "type": "explanation",
+     "name": "BLOCK INFO",
+     "definition": ""
     },
     {
      "type": "long_integer",
-     "name": "block size"
+     "name": "block offset*"
     },
     {
      "type": "long_integer",
-     "name": "section data size"
+     "name": "block size*"
     },
     {
      "type": "long_integer",
-     "name": "resource data size"
+     "name": "section data size*"
+    },
+    {
+     "type": "long_integer",
+     "name": "resource data size*"
     },
     {
      "type": "block",
-     "name": "resources",
+     "name": "resources*",
      "definition": "global_geometry_block_resource_block"
     },
     {
@@ -222,7 +227,7 @@
     },
     {
      "type": "short_integer",
-     "name": "owner tag section offset"
+     "name": "owner tag section offset*"
     },
     {
      "type": "pad",
@@ -247,7 +252,7 @@
    "fields": [
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
@@ -257,19 +262,19 @@
     },
     {
      "type": "short_integer",
-     "name": "primary locator"
+     "name": "primary locator*"
     },
     {
      "type": "short_integer",
-     "name": "secondary locator"
+     "name": "secondary locator*"
     },
     {
      "type": "long_integer",
-     "name": "resource data size"
+     "name": "resource data size*"
     },
     {
      "type": "long_integer",
-     "name": "resource data offset"
+     "name": "resource data offset*"
     },
     {
      "type": "terminator",
@@ -283,12 +288,12 @@
    "fields": [
     {
      "type": "block",
-     "name": "particles render data",
+     "name": "particles render data*",
      "definition": "particles_render_data_block"
     },
     {
      "type": "block",
-     "name": "particles other data",
+     "name": "particles other data*",
      "definition": "particles_update_data_block"
     },
     {
@@ -308,23 +313,23 @@
    "fields": [
     {
      "type": "real",
-     "name": "position.x"
+     "name": "position.x*"
     },
     {
      "type": "real",
-     "name": "position.y"
+     "name": "position.y*"
     },
     {
      "type": "real",
-     "name": "position.z"
+     "name": "position.z*"
     },
     {
      "type": "real",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "rgb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -338,15 +343,15 @@
    "fields": [
     {
      "type": "real",
-     "name": "velocity.x"
+     "name": "velocity.x*"
     },
     {
      "type": "real",
-     "name": "velocity.y"
+     "name": "velocity.y*"
     },
     {
      "type": "real",
-     "name": "velocity.z"
+     "name": "velocity.z*"
     },
     {
      "type": "pad",
@@ -355,11 +360,11 @@
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "real",
-     "name": "creation time stamp"
+     "name": "creation time stamp*"
     },
     {
      "type": "terminator",

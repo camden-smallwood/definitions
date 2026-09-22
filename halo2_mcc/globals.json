@@ -239,7 +239,7 @@
     },
     {
      "type": "long_enum",
-     "name": "language",
+     "name": "language!",
      "definition": "language"
     },
     {
@@ -274,7 +274,7 @@
     },
     {
      "type": "block",
-     "name": "sounds",
+     "name": "sounds!",
      "definition": "sound_block"
     },
     {
@@ -309,7 +309,7 @@
     },
     {
      "type": "block",
-     "name": "weapon list",
+     "name": "weapon list!",
      "definition": "cheat_weapons_block"
     },
     {
@@ -319,7 +319,7 @@
     },
     {
      "type": "block",
-     "name": "@multiplayer information",
+     "name": "@multiplayer information!",
      "definition": "multiplayer_information_block"
     },
     {
@@ -339,7 +339,7 @@
     },
     {
      "type": "block",
-     "name": "old materials",
+     "name": "old materials!",
      "definition": "old_materials_block"
     },
     {
@@ -349,7 +349,7 @@
     },
     {
      "type": "block",
-     "name": "multiplayer UI",
+     "name": "multiplayer UI!",
      "definition": "multiplayer_ui_block"
     },
     {
@@ -372,6 +372,11 @@
      "definition": "ui_levels_definition_block"
     },
     {
+     "type": "explanation",
+     "name": "Default global lighting",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
      "name": "default global lighting"
     },
@@ -392,7 +397,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "object cleanup effect"
+     "name": "object cleanup effect^"
     },
     {
      "type": "terminator",
@@ -410,35 +415,35 @@
     },
     {
      "type": "real",
-     "name": "min game acc (default)"
+     "name": "min game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max game acc (default)"
+     "name": "max game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min game scale (default)"
+     "name": "min game scale (default)#0-1"
     },
     {
      "type": "real",
-     "name": "max game scale (default)"
+     "name": "max game scale (default)#0-1"
     },
     {
      "type": "real",
-     "name": "min abs acc (default)"
+     "name": "min abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max abs acc (default)"
+     "name": "max abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min abs scale (default)"
+     "name": "min abs scale (default)#0-1"
     },
     {
      "type": "real",
-     "name": "max abs scale (default)"
+     "name": "max abs scale (default)#0-1"
     },
     {
      "type": "pad",
@@ -464,44 +469,69 @@
      "name": "sound effects"
     },
     {
-     "type": "real",
-     "name": "left stereo gain"
+     "type": "explanation",
+     "name": "first person left side mix",
+     "definition": "for first person sounds to the left of you"
     },
     {
      "type": "real",
-     "name": "right stereo gain"
+     "name": "left stereo gain:dB"
     },
     {
      "type": "real",
-     "name": "left stereo gain"
+     "name": "right stereo gain:dB"
+    },
+    {
+     "type": "explanation",
+     "name": "first person middle mix",
+     "definition": "for first person sounds between your ears"
     },
     {
      "type": "real",
-     "name": "right stereo gain"
+     "name": "left stereo gain:dB"
     },
     {
      "type": "real",
-     "name": "left stereo gain"
+     "name": "right stereo gain:dB"
+    },
+    {
+     "type": "explanation",
+     "name": "first person right side mix",
+     "definition": "for first person sounds to the right of you"
     },
     {
      "type": "real",
-     "name": "right stereo gain"
+     "name": "left stereo gain:dB"
     },
     {
      "type": "real",
-     "name": "front speaker gain"
+     "name": "right stereo gain:dB"
+    },
+    {
+     "type": "explanation",
+     "name": "first person stereo mix",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "rear speaker gain"
+     "name": "front speaker gain:dB"
     },
     {
      "type": "real",
-     "name": "front speaker gain"
+     "name": "rear speaker gain:dB"
+    },
+    {
+     "type": "explanation",
+     "name": "ambient stereo mix",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "rear speaker gain"
+     "name": "front speaker gain:dB"
+    },
+    {
+     "type": "real",
+     "name": "rear speaker gain:dB"
     },
     {
      "type": "terminator",
@@ -649,63 +679,63 @@
     },
     {
      "type": "real",
-     "name": "jump down"
+     "name": "jump down:wu/tick"
     },
     {
      "type": "real",
-     "name": "jump step"
+     "name": "jump step:wu/tick"
     },
     {
      "type": "real",
-     "name": "jump crouch"
+     "name": "jump crouch:wu/tick"
     },
     {
      "type": "real",
-     "name": "jump stand"
+     "name": "jump stand:wu/tick"
     },
     {
      "type": "real",
-     "name": "jump storey"
+     "name": "jump storey:wu/tick"
     },
     {
      "type": "real",
-     "name": "jump tower"
+     "name": "jump tower:wu/tick"
     },
     {
      "type": "real",
-     "name": "max jump down height down"
+     "name": "max jump down height down:wu"
     },
     {
      "type": "real",
-     "name": "max jump down height step"
+     "name": "max jump down height step:wu"
     },
     {
      "type": "real",
-     "name": "max jump down height crouch"
+     "name": "max jump down height crouch:wu"
     },
     {
      "type": "real",
-     "name": "max jump down height stand"
+     "name": "max jump down height stand:wu"
     },
     {
      "type": "real",
-     "name": "max jump down height storey"
+     "name": "max jump down height storey:wu"
     },
     {
      "type": "real",
-     "name": "max jump down height tower"
+     "name": "max jump down height tower:wu"
     },
     {
      "type": "real_bounds",
-     "name": "hoist step"
+     "name": "hoist step:wus"
     },
     {
      "type": "real_bounds",
-     "name": "hoist crouch"
+     "name": "hoist crouch:wus"
     },
     {
      "type": "real_bounds",
-     "name": "hoist stand"
+     "name": "hoist stand:wus"
     },
     {
      "type": "pad",
@@ -714,11 +744,11 @@
     },
     {
      "type": "real_bounds",
-     "name": "vault step"
+     "name": "vault step:wus"
     },
     {
      "type": "real_bounds",
-     "name": "vault crouch"
+     "name": "vault crouch:wus"
     },
     {
      "type": "pad",
@@ -737,11 +767,11 @@
     },
     {
      "type": "real",
-     "name": "scary target threhold"
+     "name": "scary target threhold#A target of this scariness is officially considered scary (by combat dialogue, etc.)"
     },
     {
      "type": "real",
-     "name": "scary weapon threhold"
+     "name": "scary weapon threhold#A weapon of this scariness is officially considered scary (by combat dialogue, etc.)"
     },
     {
      "type": "real",
@@ -763,15 +793,15 @@
    "fields": [
     {
      "type": "real",
-     "name": "min retreat time"
+     "name": "min retreat time:secs"
     },
     {
      "type": "real",
-     "name": "ideal retreat time"
+     "name": "ideal retreat time:secs"
     },
     {
      "type": "real",
-     "name": "max retreat time"
+     "name": "max retreat time:secs"
     },
     {
      "type": "terminator",
@@ -800,7 +830,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "block",
@@ -819,7 +849,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real",
@@ -837,7 +867,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "custom reference"
+     "name": "custom reference^"
     },
     {
      "type": "terminator",
@@ -865,7 +895,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "default unit camera track"
+     "name": "default unit camera track^"
     },
     {
      "type": "real",
@@ -891,15 +921,15 @@
    "fields": [
     {
      "type": "real_fraction",
-     "name": "magnetism friction"
+     "name": "magnetism friction#how much the crosshair slows over enemies"
     },
     {
      "type": "real_fraction",
-     "name": "magnetism adhesion"
+     "name": "magnetism adhesion#how much the crosshair sticks to enemies"
     },
     {
      "type": "real_fraction",
-     "name": "inconsequential target scale"
+     "name": "inconsequential target scale#scales magnetism level for inconsequential targets like infection forms"
     },
     {
      "type": "pad",
@@ -907,32 +937,42 @@
      "definition": 12
     },
     {
+     "type": "explanation",
+     "name": "crosshair",
+     "definition": ""
+    },
+    {
      "type": "real_point_2d",
-     "name": "crosshair location"
+     "name": "crosshair location#-1..1, 0 is middle of the screen"
+    },
+    {
+     "type": "explanation",
+     "name": "sprinting",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "seconds to start"
+     "name": "seconds to start#how long you must be pegged before you start sprinting"
     },
     {
      "type": "real",
-     "name": "seconds to full speed"
+     "name": "seconds to full speed#how long you must sprint before you reach top speed"
     },
     {
      "type": "real",
-     "name": "decay rate"
+     "name": "decay rate#how fast being unpegged decays the timer (seconds per second)"
     },
     {
      "type": "real",
-     "name": "full speed multiplier"
+     "name": "full speed multiplier#how much faster we actually go when at full sprint"
     },
     {
      "type": "real",
-     "name": "pegged magnitude"
+     "name": "pegged magnitude#how far the stick needs to be pressed before being considered pegged"
     },
     {
      "type": "real",
-     "name": "pegged angular threshold"
+     "name": "pegged angular threshold#how far off straight up (in degrees) we consider pegged"
     },
     {
      "type": "pad",
@@ -940,36 +980,41 @@
      "definition": 8
     },
     {
-     "type": "real",
-     "name": "look default pitch rate"
+     "type": "explanation",
+     "name": "looking",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "look default yaw rate"
+     "name": "look default pitch rate:degrees"
+    },
+    {
+     "type": "real",
+     "name": "look default yaw rate:degrees"
     },
     {
      "type": "real_fraction",
-     "name": "look peg threshold [0,1]"
+     "name": "look peg threshold [0,1]#magnitude of yaw for pegged acceleration to kick in"
     },
     {
      "type": "real",
-     "name": "look yaw acceleration time"
+     "name": "look yaw acceleration time:seconds#time for a pegged look to reach maximum effect"
     },
     {
      "type": "real",
-     "name": "look yaw acceleration scale"
+     "name": "look yaw acceleration scale#maximum effect of a pegged look (scales last value in the look function below)"
     },
     {
      "type": "real",
-     "name": "look pitch acceleration time"
+     "name": "look pitch acceleration time:seconds#time for a pegged look to reach maximum effect"
     },
     {
      "type": "real",
-     "name": "look pitch acceleration scale"
+     "name": "look pitch acceleration scale#maximum effect of a pegged look (scales last value in the look function below)"
     },
     {
      "type": "real",
-     "name": "look autolevelling scale"
+     "name": "look autolevelling scale#1 is fast, 0 is none, >1 will probably be really fast"
     },
     {
      "type": "pad",
@@ -987,11 +1032,11 @@
     },
     {
      "type": "short_integer",
-     "name": "minimum autolevelling ticks"
+     "name": "minimum autolevelling ticks#amount of time player needs to move and not look up or down for autolevelling to kick in"
     },
     {
      "type": "angle",
-     "name": "minimum angle for vehicle flipping"
+     "name": "minimum angle for vehicle flipping#0 means the vehicle's up vector is along the ground, 90 means the up vector is pointing straight up:degrees"
     },
     {
      "type": "block",
@@ -1000,7 +1045,7 @@
     },
     {
      "type": "real",
-     "name": "minimum action hold time"
+     "name": "minimum action hold time:seconds#time that player needs to press ACTION to register as a HOLD"
     },
     {
      "type": "terminator",
@@ -1027,148 +1072,153 @@
    "size": 644,
    "fields": [
     {
-     "type": "real",
-     "name": "easy enemy damage"
+     "type": "explanation",
+     "name": "health",
+     "definition": "scale values for enemy health and damage settings"
     },
     {
      "type": "real",
-     "name": "normal enemy damage"
+     "name": "easy enemy damage#enemy damage multiplier on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard enemy damage"
+     "name": "normal enemy damage#enemy damage multiplier on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. enemy damage"
+     "name": "hard enemy damage#enemy damage multiplier on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy enemy vitality"
+     "name": "imposs. enemy damage#enemy damage multiplier on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal enemy vitality"
+     "name": "easy enemy vitality#enemy maximum body vitality scale on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard enemy vitality"
+     "name": "normal enemy vitality#enemy maximum body vitality scale on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. enemy vitality"
+     "name": "hard enemy vitality#enemy maximum body vitality scale on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy enemy shield"
+     "name": "imposs. enemy vitality#enemy maximum body vitality scale on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal enemy shield"
+     "name": "easy enemy shield#enemy maximum shield vitality scale on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard enemy shield"
+     "name": "normal enemy shield#enemy maximum shield vitality scale on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. enemy shield"
+     "name": "hard enemy shield#enemy maximum shield vitality scale on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy enemy recharge"
+     "name": "imposs. enemy shield#enemy maximum shield vitality scale on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal enemy recharge"
+     "name": "easy enemy recharge#enemy shield recharge scale on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard enemy recharge"
+     "name": "normal enemy recharge#enemy shield recharge scale on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. enemy recharge"
+     "name": "hard enemy recharge#enemy shield recharge scale on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy friend damage"
+     "name": "imposs. enemy recharge#enemy shield recharge scale on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal friend damage"
+     "name": "easy friend damage#friend damage multiplier on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard friend damage"
+     "name": "normal friend damage#friend damage multiplier on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. friend damage"
+     "name": "hard friend damage#friend damage multiplier on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy friend vitality"
+     "name": "imposs. friend damage#friend damage multiplier on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal friend vitality"
+     "name": "easy friend vitality#friend maximum body vitality scale on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard friend vitality"
+     "name": "normal friend vitality#friend maximum body vitality scale on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. friend vitality"
+     "name": "hard friend vitality#friend maximum body vitality scale on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy friend shield"
+     "name": "imposs. friend vitality#friend maximum body vitality scale on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal friend shield"
+     "name": "easy friend shield#friend maximum shield vitality scale on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard friend shield"
+     "name": "normal friend shield#friend maximum shield vitality scale on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. friend shield"
+     "name": "hard friend shield#friend maximum shield vitality scale on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy friend recharge"
+     "name": "imposs. friend shield#friend maximum shield vitality scale on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal friend recharge"
+     "name": "easy friend recharge#friend shield recharge scale on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard friend recharge"
+     "name": "normal friend recharge#friend shield recharge scale on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. friend recharge"
+     "name": "hard friend recharge#friend shield recharge scale on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy infection forms"
+     "name": "imposs. friend recharge#friend shield recharge scale on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal infection forms"
+     "name": "easy infection forms#toughness of infection forms (may be negative) on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard infection forms"
+     "name": "normal infection forms#toughness of infection forms (may be negative) on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. infection forms"
+     "name": "hard infection forms#toughness of infection forms (may be negative) on hard difficulty"
+    },
+    {
+     "type": "real",
+     "name": "imposs. infection forms#toughness of infection forms (may be negative) on impossible difficulty"
     },
     {
      "type": "pad",
@@ -1176,233 +1226,201 @@
      "definition": 16
     },
     {
-     "type": "real",
-     "name": "easy rate of fire"
+     "type": "explanation",
+     "name": "ranged fire",
+     "definition": "difficulty-affecting values for enemy ranged combat settings"
     },
     {
      "type": "real",
-     "name": "normal rate of fire"
+     "name": "easy rate of fire#enemy rate of fire scale on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard rate of fire"
+     "name": "normal rate of fire#enemy rate of fire scale on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. rate of fire"
+     "name": "hard rate of fire#enemy rate of fire scale on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy projectile error"
+     "name": "imposs. rate of fire#enemy rate of fire scale on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal projectile error"
+     "name": "easy projectile error#enemy projectile error scale, as a fraction of their base firing error. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard projectile error"
+     "name": "normal projectile error#enemy projectile error scale, as a fraction of their base firing error. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. projectile error"
+     "name": "hard projectile error#enemy projectile error scale, as a fraction of their base firing error. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy burst error"
+     "name": "imposs. projectile error#enemy projectile error scale, as a fraction of their base firing error. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal burst error"
+     "name": "easy burst error#enemy burst error scale; reduces intra-burst shot distance. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard burst error"
+     "name": "normal burst error#enemy burst error scale; reduces intra-burst shot distance. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. burst error"
+     "name": "hard burst error#enemy burst error scale; reduces intra-burst shot distance. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy new target delay"
+     "name": "imposs. burst error#enemy burst error scale; reduces intra-burst shot distance. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal new target delay"
+     "name": "easy new target delay#enemy new-target delay scale factor. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard new target delay"
+     "name": "normal new target delay#enemy new-target delay scale factor. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. new target delay"
+     "name": "hard new target delay#enemy new-target delay scale factor. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy burst separation"
+     "name": "imposs. new target delay#enemy new-target delay scale factor. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal burst separation"
+     "name": "easy burst separation#delay time between bursts scale factor for enemies. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard burst separation"
+     "name": "normal burst separation#delay time between bursts scale factor for enemies. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. burst separation"
+     "name": "hard burst separation#delay time between bursts scale factor for enemies. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy target tracking"
+     "name": "imposs. burst separation#delay time between bursts scale factor for enemies. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal target tracking"
+     "name": "easy target tracking#additional target tracking fraction for enemies. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard target tracking"
+     "name": "normal target tracking#additional target tracking fraction for enemies. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. target tracking"
+     "name": "hard target tracking#additional target tracking fraction for enemies. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy target leading"
+     "name": "imposs. target tracking#additional target tracking fraction for enemies. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal target leading"
+     "name": "easy target leading#additional target leading fraction for enemies. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard target leading"
+     "name": "normal target leading#additional target leading fraction for enemies. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. target leading"
+     "name": "hard target leading#additional target leading fraction for enemies. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy overcharge chance"
+     "name": "imposs. target leading#additional target leading fraction for enemies. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal overcharge chance"
+     "name": "easy overcharge chance#overcharge chance scale factor for enemies. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard overcharge chance"
+     "name": "normal overcharge chance#overcharge chance scale factor for enemies. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. overcharge chance"
+     "name": "hard overcharge chance#overcharge chance scale factor for enemies. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy special fire delay"
+     "name": "imposs. overcharge chance#overcharge chance scale factor for enemies. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal special fire delay"
+     "name": "easy special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard special fire delay"
+     "name": "normal special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. special fire delay"
+     "name": "hard special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy guidance vs player"
+     "name": "imposs. special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal guidance vs player"
+     "name": "easy guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard guidance vs player"
+     "name": "normal guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. guidance vs player"
+     "name": "hard guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy melee delay base"
+     "name": "imposs. guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal melee delay base"
+     "name": "easy melee delay base#delay period added to all melee attacks, even when berserk. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard melee delay base"
+     "name": "normal melee delay base#delay period added to all melee attacks, even when berserk. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. melee delay base"
+     "name": "hard melee delay base#delay period added to all melee attacks, even when berserk. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy melee delay scale"
+     "name": "imposs. melee delay base#delay period added to all melee attacks, even when berserk. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal melee delay scale"
+     "name": "easy melee delay scale#multiplier for all existing non-berserk melee delay times. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard melee delay scale"
+     "name": "normal melee delay scale#multiplier for all existing non-berserk melee delay times. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. melee delay scale"
-    },
-    {
-     "type": "pad",
-     "name": "k_campaign_difficulty_levels_count*sizeof(real)",
-     "definition": 16
+     "name": "hard melee delay scale#multiplier for all existing non-berserk melee delay times. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy grenade chance scale"
-    },
-    {
-     "type": "real",
-     "name": "normal grenade chance scale"
-    },
-    {
-     "type": "real",
-     "name": "hard grenade chance scale"
-    },
-    {
-     "type": "real",
-     "name": "imposs. grenade chance scale"
-    },
-    {
-     "type": "real",
-     "name": "easy grenade timer scale"
-    },
-    {
-     "type": "real",
-     "name": "normal grenade timer scale"
-    },
-    {
-     "type": "real",
-     "name": "hard grenade timer scale"
-    },
-    {
-     "type": "real",
-     "name": "imposs. grenade timer scale"
+     "name": "imposs. melee delay scale#multiplier for all existing non-berserk melee delay times. on impossible difficulty"
     },
     {
      "type": "pad",
@@ -1410,6 +1428,43 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "grenades",
+     "definition": "difficulty-affecting values for enemy grenade behavior"
+    },
+    {
+     "type": "real",
+     "name": "easy grenade chance scale#scale factor affecting the desicions to throw a grenade. on easy difficulty"
+    },
+    {
+     "type": "real",
+     "name": "normal grenade chance scale#scale factor affecting the desicions to throw a grenade. on normal difficulty"
+    },
+    {
+     "type": "real",
+     "name": "hard grenade chance scale#scale factor affecting the desicions to throw a grenade. on hard difficulty"
+    },
+    {
+     "type": "real",
+     "name": "imposs. grenade chance scale#scale factor affecting the desicions to throw a grenade. on impossible difficulty"
+    },
+    {
+     "type": "real",
+     "name": "easy grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on easy difficulty"
+    },
+    {
+     "type": "real",
+     "name": "normal grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on normal difficulty"
+    },
+    {
+     "type": "real",
+     "name": "hard grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on hard difficulty"
+    },
+    {
+     "type": "real",
+     "name": "imposs. grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on impossible difficulty"
+    },
+    {
      "type": "pad",
      "name": "k_campaign_difficulty_levels_count*sizeof(real)",
      "definition": 16
@@ -1420,68 +1475,83 @@
      "definition": 16
     },
     {
-     "type": "real",
-     "name": "easy major upgrade (normal)"
+     "type": "pad",
+     "name": "k_campaign_difficulty_levels_count*sizeof(real)",
+     "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "placement",
+     "definition": "difficulty-affecting values for enemy placement"
     },
     {
      "type": "real",
-     "name": "normal major upgrade (normal)"
+     "name": "easy major upgrade (normal)#fraction of actors upgraded to their major variant. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard major upgrade (normal)"
+     "name": "normal major upgrade (normal)#fraction of actors upgraded to their major variant. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. major upgrade (normal)"
+     "name": "hard major upgrade (normal)#fraction of actors upgraded to their major variant. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy major upgrade (few)"
+     "name": "imposs. major upgrade (normal)#fraction of actors upgraded to their major variant. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal major upgrade (few)"
+     "name": "easy major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard major upgrade (few)"
+     "name": "normal major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. major upgrade (few)"
+     "name": "hard major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy major upgrade (many)"
+     "name": "imposs. major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on impossible difficulty"
     },
     {
      "type": "real",
-     "name": "normal major upgrade (many)"
+     "name": "easy major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard major upgrade (many)"
+     "name": "normal major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. major upgrade (many)"
+     "name": "hard major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on hard difficulty"
     },
     {
      "type": "real",
-     "name": "easy player vehicle ram chance"
+     "name": "imposs. major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on impossible difficulty"
+    },
+    {
+     "type": "explanation",
+     "name": "vehicles",
+     "definition": "difficulty-affecting values for vehicle driving/combat"
     },
     {
      "type": "real",
-     "name": "normal player vehicle ram chance"
+     "name": "easy player vehicle ram chance#Chance of deciding to ram the player in a vehicle on easy difficulty"
     },
     {
      "type": "real",
-     "name": "hard player vehicle ram chance"
+     "name": "normal player vehicle ram chance#Chance of deciding to ram the player in a vehicle on normal difficulty"
     },
     {
      "type": "real",
-     "name": "imposs. player vehicle ram chance"
+     "name": "hard player vehicle ram chance#Chance of deciding to ram the player in a vehicle on hard difficulty"
+    },
+    {
+     "type": "real",
+     "name": "imposs. player vehicle ram chance#Chance of deciding to ram the player in a vehicle on impossible difficulty"
     },
     {
      "type": "pad",
@@ -1550,6 +1620,11 @@
    "size": 428,
    "fields": [
     {
+     "type": "explanation",
+     "name": "function textures",
+     "definition": "Used internally by the rasterizer. (Do not change unless you know what you're doing!)"
+    },
+    {
      "type": "tag_reference",
      "name": "distance attenuation"
     },
@@ -1563,15 +1638,15 @@
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
     },
     {
      "type": "tag_reference",
@@ -1579,11 +1654,11 @@
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
     },
     {
      "type": "pad",
@@ -1594,6 +1669,11 @@
      "type": "block",
      "name": "global vertex shaders",
      "definition": "vertex_shader_reference_block"
+    },
+    {
+     "type": "explanation",
+     "name": "default textures",
+     "definition": "Used internally by the rasterizer - additive, multiplicative, detail, vector. (Do not change ever, period.)"
     },
     {
      "type": "tag_reference",
@@ -1608,28 +1688,38 @@
      "name": "default cube map"
     },
     {
-     "type": "tag_reference",
-     "name": "UNUSED"
+     "type": "explanation",
+     "name": "experimental textures",
+     "definition": "Used internally by the rasterizer. (Used by Bernie's experimental shaders.)"
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
+    },
+    {
+     "type": "explanation",
+     "name": "video effect textures!",
+     "definition": "Used in cinematics."
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
+    },
+    {
+     "type": "tag_reference",
+     "name": "UNUSED!"
     },
     {
      "type": "pad",
@@ -1637,8 +1727,18 @@
      "definition": 36
     },
     {
+     "type": "explanation",
+     "name": "global shader",
+     "definition": "Used for layers that need to do something for other layers to work correctly if the layer is disabled, also used for active-camo, etc."
+    },
+    {
      "type": "tag_reference",
      "name": "global shader"
+    },
+    {
+     "type": "explanation",
+     "name": "active camouflage",
+     "definition": ""
     },
     {
      "type": "word_flags",
@@ -1652,7 +1752,7 @@
     },
     {
      "type": "real",
-     "name": "refraction amount"
+     "name": "refraction amount:pixels"
     },
     {
      "type": "real",
@@ -1664,7 +1764,7 @@
     },
     {
      "type": "real",
-     "name": "hyper-stealth refraction"
+     "name": "hyper-stealth refraction:pixels"
     },
     {
      "type": "real",
@@ -1675,8 +1775,13 @@
      "name": "hyper-stealth tint color"
     },
     {
+     "type": "explanation",
+     "name": "PC textures!",
+     "definition": "The PC can't use 3D textures, so we use this instead."
+    },
+    {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED!"
     },
     {
      "type": "terminator",
@@ -1704,23 +1809,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "obsolete1"
+     "name": "obsolete1!"
     },
     {
      "type": "tag_reference",
-     "name": "obsolete2"
+     "name": "obsolete2!"
     },
     {
      "type": "tag_reference",
-     "name": "screen color table"
+     "name": "screen color table!"
     },
     {
      "type": "tag_reference",
-     "name": "hud color table"
+     "name": "hud color table!"
     },
     {
      "type": "tag_reference",
-     "name": "editor color table"
+     "name": "editor color table!"
     },
     {
      "type": "tag_reference",
@@ -1790,7 +1895,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "weapon"
+     "name": "weapon^"
     },
     {
      "type": "terminator",
@@ -1804,7 +1909,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "powerup"
+     "name": "powerup^"
     },
     {
      "type": "terminator",
@@ -1897,7 +2002,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "vehicle"
+     "name": "vehicle^"
     },
     {
      "type": "terminator",
@@ -1911,7 +2016,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "terminator",
@@ -1935,12 +2040,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -1973,7 +2078,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -2000,7 +2105,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2098,7 +2203,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "english sound"
+     "name": "english sound^"
     },
     {
      "type": "struct",
@@ -2131,12 +2236,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_2"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -2169,7 +2274,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -2196,7 +2301,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2240,12 +2345,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_3"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -2278,7 +2383,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -2305,7 +2410,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2349,12 +2454,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_4"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -2387,7 +2492,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -2414,7 +2519,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2472,12 +2577,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_5"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -2510,7 +2615,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -2537,7 +2642,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2571,7 +2676,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "unused"
+     "name": "unused!"
     },
     {
      "type": "pad",
@@ -2580,7 +2685,7 @@
     },
     {
      "type": "real",
-     "name": "walking speed"
+     "name": "walking speed:world units per second"
     },
     {
      "type": "pad",
@@ -2589,39 +2694,39 @@
     },
     {
      "type": "real",
-     "name": "run forward"
+     "name": "run forward:world units per second"
     },
     {
      "type": "real",
-     "name": "run backward"
+     "name": "run backward:world units per second"
     },
     {
      "type": "real",
-     "name": "run sideways"
+     "name": "run sideways:world units per second"
     },
     {
      "type": "real",
-     "name": "run acceleration"
+     "name": "run acceleration:world units per second squared"
     },
     {
      "type": "real",
-     "name": "sneak forward"
+     "name": "sneak forward:world units per second"
     },
     {
      "type": "real",
-     "name": "sneak backward"
+     "name": "sneak backward:world units per second"
     },
     {
      "type": "real",
-     "name": "sneak sideways"
+     "name": "sneak sideways:world units per second"
     },
     {
      "type": "real",
-     "name": "sneak acceleration"
+     "name": "sneak acceleration:world units per second squared"
     },
     {
      "type": "real",
-     "name": "airborne acceleration"
+     "name": "airborne acceleration:world units per second squared"
     },
     {
      "type": "pad",
@@ -2639,23 +2744,23 @@
     },
     {
      "type": "real",
-     "name": "stun movement penalty"
+     "name": "stun movement penalty:[0,1]#1.0 prevents moving while stunned"
     },
     {
      "type": "real",
-     "name": "stun turning penalty"
+     "name": "stun turning penalty:[0,1]#1.0 prevents turning while stunned"
     },
     {
      "type": "real",
-     "name": "stun jumping penalty"
+     "name": "stun jumping penalty:[0,1]#1.0 prevents jumping while stunned"
     },
     {
      "type": "real",
-     "name": "minimum stun time"
+     "name": "minimum stun time:seconds#all stunning damage will last for at least this long"
     },
     {
      "type": "real",
-     "name": "maximum stun time"
+     "name": "maximum stun time:seconds#no stunning damage will last for longer than this"
     },
     {
      "type": "pad",
@@ -2664,11 +2769,11 @@
     },
     {
      "type": "real_bounds",
-     "name": "first person idle time"
+     "name": "first person idle time:seconds"
     },
     {
      "type": "real_fraction",
-     "name": "first person skip fraction"
+     "name": "first person skip fraction:[0,1]"
     },
     {
      "type": "pad",
@@ -2781,7 +2886,7 @@
     },
     {
      "type": "real_bounds",
-     "name": "harmful falling distance"
+     "name": "harmful falling distance:world units"
     },
     {
      "type": "tag_reference",
@@ -2794,7 +2899,7 @@
     },
     {
      "type": "real",
-     "name": "maximum falling distance"
+     "name": "maximum falling distance:world units"
     },
     {
      "type": "tag_reference",
@@ -2802,15 +2907,15 @@
     },
     {
      "type": "tag_reference",
-     "name": "vehicle environment collision damage effect"
+     "name": "vehicle environment collision damage effect!"
     },
     {
      "type": "tag_reference",
-     "name": "vehicle killed unit damage effect"
+     "name": "vehicle killed unit damage effect!"
     },
     {
      "type": "tag_reference",
-     "name": "vehicle collision damage"
+     "name": "vehicle collision damage!"
     },
     {
      "type": "tag_reference",
@@ -2855,24 +2960,29 @@
      "definition": 48
     },
     {
-     "type": "real",
-     "name": "ground friction scale"
+     "type": "explanation",
+     "name": "vehicle terrain parameters",
+     "definition": "the following fields modify the way a vehicle drives over terrain of this material type."
     },
     {
      "type": "real",
-     "name": "ground friction normal k1 scale"
+     "name": "ground friction scale#fraction of original velocity parallel to the ground after one tick"
     },
     {
      "type": "real",
-     "name": "ground friction normal k0 scale"
+     "name": "ground friction normal k1 scale#cosine of angle at which friction falls off"
     },
     {
      "type": "real",
-     "name": "ground depth scale"
+     "name": "ground friction normal k0 scale#cosine of angle at which friction is zero"
     },
     {
      "type": "real",
-     "name": "ground damp fraction scale"
+     "name": "ground depth scale#depth a point mass rests in the ground"
+    },
+    {
+     "type": "real",
+     "name": "ground damp fraction scale#fraction of original velocity perpendicular to the ground after one tick"
     },
     {
      "type": "useless_pad",
@@ -2900,7 +3010,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "string_id",
@@ -2992,7 +3102,7 @@
     },
     {
      "type": "real",
-     "name": "density"
+     "name": "density:kg/m^3"
     },
     {
      "type": "terminator",
@@ -3060,6 +3170,11 @@
     {
      "type": "tag_reference",
      "name": null
+    },
+    {
+     "type": "explanation",
+     "name": "sweetener inheritance flags",
+     "definition": "when a sweetener inheritance flag is set the sound\\effect is not inherited from the parent material.  If you leave the sweetener blank and set the flag than no effect\\sound will play"
     },
     {
      "type": "long_flags",
@@ -3144,7 +3259,7 @@
     },
     {
      "type": "long_string",
-     "name": "path"
+     "name": "path^"
     },
     {
      "type": "terminator",
@@ -3215,7 +3330,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "bitmap"
+     "name": "bitmap^"
     },
     {
      "type": "skip",
@@ -3257,7 +3372,7 @@
     },
     {
      "type": "long_string",
-     "name": "path"
+     "name": "path^"
     },
     {
      "type": "long_integer",

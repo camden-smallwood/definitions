@@ -154,7 +154,7 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "Character flags",
+     "name": "Character flags!",
      "definition": "Character flags"
     },
     {
@@ -233,6 +233,11 @@
      "definition": "character_engage_block"
     },
     {
+     "type": "explanation",
+     "name": "Danger Values",
+     "definition": "Danger values can be found in the ai-globals section of the globals tag."
+    },
+    {
      "type": "block",
      "name": "Evasion properties",
      "definition": "character_evasion_block"
@@ -309,7 +314,7 @@
     },
     {
      "type": "struct",
-     "name": "OBSOLETE campaign metagame bucket",
+     "name": "OBSOLETE campaign metagame bucket!",
      "definition": "campaign_metagame_bucket_struct_2"
     },
     {
@@ -319,7 +324,7 @@
     },
     {
      "type": "real",
-     "name": "scariness"
+     "name": "scariness#the inherent scariness of the character"
     },
     {
      "type": "terminator",
@@ -417,40 +422,40 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "vitality flags",
+     "name": "vitality flags!",
      "definition": "vitality flags"
     },
     {
      "type": "real",
-     "name": "normal body vitality"
+     "name": "normal body vitality#maximum body vitality of our unit"
     },
     {
      "type": "real",
-     "name": "normal shield vitality"
+     "name": "normal shield vitality#maximum shield vitality of our unit"
     },
     {
      "type": "real",
-     "name": "legendary body vitality"
+     "name": "legendary body vitality#maximum body vitality of our unit (on legendary)"
     },
     {
      "type": "real",
-     "name": "legendary shield vitality"
+     "name": "legendary shield vitality#maximum shield vitality of our unit (on legendary)"
     },
     {
      "type": "real",
-     "name": "body recharge fraction"
+     "name": "body recharge fraction#fraction of body health that can be regained after damage"
     },
     {
      "type": "real",
-     "name": "soft ping threshold (with shields)"
+     "name": "soft ping threshold (with shields)#damage necessary to trigger a soft ping when shields are up"
     },
     {
      "type": "real",
-     "name": "soft ping threshold (no shields)"
+     "name": "soft ping threshold (no shields)#damage necessary to trigger a soft ping when shields are down"
     },
     {
      "type": "real",
-     "name": "soft ping min interrupt time"
+     "name": "soft ping min interrupt time#minimum time before a soft ping can be interrupted"
     },
     {
      "type": "useless_pad",
@@ -459,15 +464,15 @@
     },
     {
      "type": "real",
-     "name": "hard ping threshold (with shields)"
+     "name": "hard ping threshold (with shields)#damage necessary to trigger a hard ping when shields are up"
     },
     {
      "type": "real",
-     "name": "hard ping threshold (no shields)"
+     "name": "hard ping threshold (no shields)#damage necessary to trigger a hard ping when shields are down"
     },
     {
      "type": "real",
-     "name": "hard ping min interrupt time"
+     "name": "hard ping min interrupt time#minimum time before a hard ping can be interrupted"
     },
     {
      "type": "useless_pad",
@@ -476,11 +481,11 @@
     },
     {
      "type": "real",
-     "name": "current damage decay delay"
+     "name": "current damage decay delay#current damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)"
     },
     {
      "type": "real",
-     "name": "current damage decay time"
+     "name": "current damage decay time#amount of time it would take for 100% current damage to decay to 0"
     },
     {
      "type": "useless_pad",
@@ -489,35 +494,35 @@
     },
     {
      "type": "real",
-     "name": "recent damage decay delay"
+     "name": "recent damage decay delay#recent damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)"
     },
     {
      "type": "real",
-     "name": "recent damage decay time"
+     "name": "recent damage decay time#amount of time it would take for 100% recent damage to decay to 0"
     },
     {
      "type": "real",
-     "name": "body recharge delay time"
+     "name": "body recharge delay time#amount of time delay before a shield begins to recharge"
     },
     {
      "type": "real",
-     "name": "body recharge time"
+     "name": "body recharge time#amount of time for shields to recharge completely"
     },
     {
      "type": "real",
-     "name": "shield recharge delay time"
+     "name": "shield recharge delay time#amount of time delay before a shield begins to recharge"
     },
     {
      "type": "real",
-     "name": "shield recharge time"
+     "name": "shield recharge time#amount of time for shields to recharge completely"
     },
     {
      "type": "real",
-     "name": "stun threshold"
+     "name": "stun threshold#stun level that triggers the stunned state (currently, the 'stunned' behavior)"
     },
     {
      "type": "real_bounds",
-     "name": "stun time bounds"
+     "name": "stun time bounds:seconds"
     },
     {
      "type": "useless_pad",
@@ -526,11 +531,11 @@
     },
     {
      "type": "real",
-     "name": "extended shield damage threshold"
+     "name": "extended shield damage threshold:%#Amount of shield damage sustained before it is considered 'extended'"
     },
     {
      "type": "real",
-     "name": "extended body damage threshold"
+     "name": "extended body damage threshold:%#Amount of body damage sustained before it is considered 'extended'"
     },
     {
      "type": "useless_pad",
@@ -539,15 +544,15 @@
     },
     {
      "type": "real",
-     "name": "suicide radius"
+     "name": "suicide radius#when I die and explode, I damage stuff within this distance of me."
     },
     {
      "type": "real",
-     "name": "runtime_body_recharge_velocity"
+     "name": "runtime_body_recharge_velocity!"
     },
     {
      "type": "real",
-     "name": "runtime_shield_recharge_velocity"
+     "name": "runtime_shield_recharge_velocity!"
     },
     {
      "type": "terminator",
@@ -566,15 +571,15 @@
     },
     {
      "type": "real",
-     "name": "max vision distance"
+     "name": "max vision distance:world units#maximum range of sight"
     },
     {
      "type": "angle",
-     "name": "central vision angle"
+     "name": "central vision angle:degrees#horizontal angle within which we see targets out to our maximum range"
     },
     {
      "type": "angle",
-     "name": "max vision angle"
+     "name": "max vision angle:degrees#maximum horizontal angle within which we see targets at range"
     },
     {
      "type": "useless_pad",
@@ -583,11 +588,11 @@
     },
     {
      "type": "angle",
-     "name": "peripheral vision angle"
+     "name": "peripheral vision angle:degrees#maximum horizontal angle within which we can see targets out of the corner of our eye"
     },
     {
      "type": "real",
-     "name": "peripheral distance"
+     "name": "peripheral distance:world units#maximum range at which we can see targets our of the corner of our eye"
     },
     {
      "type": "useless_pad",
@@ -601,15 +606,15 @@
     },
     {
      "type": "real",
-     "name": "hearing distance"
+     "name": "hearing distance:world units#maximum range at which sounds can be heard"
     },
     {
      "type": "real",
-     "name": "notice projectile chance"
+     "name": "notice projectile chance:[0,1]#random chance of noticing a dangerous enemy projectile (e.g. grenade)"
     },
     {
      "type": "real",
-     "name": "notice vehicle chance"
+     "name": "notice vehicle chance:[0,1]#random chance of noticing a dangerous vehicle"
     },
     {
      "type": "useless_pad",
@@ -618,15 +623,15 @@
     },
     {
      "type": "real",
-     "name": "combat perception time"
+     "name": "combat perception time:seconds#time required to acknowledge a visible enemy when we are already in combat or searching for them"
     },
     {
      "type": "real",
-     "name": "guard perception time"
+     "name": "guard perception time:seconds#time required to acknowledge a visible enemy when we have been alerted"
     },
     {
      "type": "real",
-     "name": "non-combat perception time"
+     "name": "non-combat perception time:seconds#time required to acknowledge a visible enemy when we are not alerted"
     },
     {
      "type": "useless_pad",
@@ -635,7 +640,7 @@
     },
     {
      "type": "real",
-     "name": "first ack. surprise distance"
+     "name": "first ack. surprise distance:world units#If a new prop is acknowledged within the given distance, surprise is registerd"
     },
     {
      "type": "terminator",
@@ -654,19 +659,19 @@
     },
     {
      "type": "real",
-     "name": "Shield threshold"
+     "name": "Shield threshold#When shield vitality drops below given amount, retreat is triggered by low_shield_retreat_impulse"
     },
     {
      "type": "real",
-     "name": "Scary target threshold"
+     "name": "Scary target threshold#When confronting an enemy of over the given scariness, retreat is triggered by scary_target_retreat_impulse"
     },
     {
      "type": "real",
-     "name": "Danger threshold"
+     "name": "Danger threshold#When perceived danger rises above the given threshold, retreat is triggered by danger_retreat_impulse"
     },
     {
      "type": "real",
-     "name": "Proximity threshold"
+     "name": "Proximity threshold#When enemy closer than given threshold, retreat is triggered by proximity_retreat_impulse"
     },
     {
      "type": "useless_pad",
@@ -675,11 +680,11 @@
     },
     {
      "type": "real_bounds",
-     "name": "min/max forced cower time bounds"
+     "name": "min/max forced cower time bounds#actor cowers for at least the given amount of time"
     },
     {
      "type": "real_bounds",
-     "name": "min/max cower timeout bounds"
+     "name": "min/max cower timeout bounds#actor times out of cower after the given amount of time"
     },
     {
      "type": "useless_pad",
@@ -688,11 +693,11 @@
     },
     {
      "type": "real",
-     "name": "proximity ambush threshold"
+     "name": "proximity ambush threshold#If target reaches is within the given proximity, an ambush is triggered by the proximity ambush impulse"
     },
     {
      "type": "real",
-     "name": "awareness ambush threshold"
+     "name": "awareness ambush threshold#If target is less than threshold (0-1) aware of me, an ambush is triggered by the vulnerable enemy ambush impulse"
     },
     {
      "type": "useless_pad",
@@ -701,15 +706,15 @@
     },
     {
      "type": "real",
-     "name": "leader dead retreat chance"
+     "name": "leader dead retreat chance#If leader-dead-retreat-impulse is active, gives the chance that we will flee when our leader dies within 4 world units of us"
     },
     {
      "type": "real",
-     "name": "peer dead retreat chance"
+     "name": "peer dead retreat chance#If peer-dead-retreat-impulse is active, gives the chance that we will flee when one of our peers (friend of the same race) dies within 4 world units of us"
     },
     {
      "type": "real",
-     "name": "second peer dead retreat chance"
+     "name": "second peer dead retreat chance#If peer-dead-retreat-impulse is active, gives the chance that we will flee when a second peer (friend of the same race) dies within 4 world units of us"
     },
     {
      "type": "useless_pad",
@@ -718,11 +723,11 @@
     },
     {
      "type": "angle",
-     "name": "zig-zag angle"
+     "name": "zig-zag angle:degrees#The angle from the intended destination direction that a zig-zag will cause"
     },
     {
      "type": "real",
-     "name": "zig-zag period"
+     "name": "zig-zag period:seconds#How long it takes to zig left and then zag right."
     },
     {
      "type": "useless_pad",
@@ -731,11 +736,11 @@
     },
     {
      "type": "real",
-     "name": "retreat grenade chance"
+     "name": "retreat grenade chance#The likelihood of throwing down a grenade to cover our retreat"
     },
     {
      "type": "tag_reference",
-     "name": "backup weapon"
+     "name": "backup weapon#If I want to flee and I don't have flee animations with my current weapon, throw it away and try a ..."
     },
     {
      "type": "terminator",
@@ -749,51 +754,51 @@
    "fields": [
     {
      "type": "real_euler_angles_2d",
-     "name": "maximum aiming deviation"
+     "name": "maximum aiming deviation:degrees#how far we can turn our weapon"
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "maximum looking deviation"
+     "name": "maximum looking deviation:degrees#how far we can turn our head"
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "runtime aiming deviation cosines"
+     "name": "runtime aiming deviation cosines!"
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "runtime looking deviation cosines"
+     "name": "runtime looking deviation cosines!"
     },
     {
      "type": "angle",
-     "name": "noncombat look delta L"
+     "name": "noncombat look delta L:degrees#how far we can turn our head left away from our aiming vector when not in combat"
     },
     {
      "type": "angle",
-     "name": "noncombat look delta R"
+     "name": "noncombat look delta R:degrees#how far we can turn our head right away from our aiming vector when not in combat"
     },
     {
      "type": "angle",
-     "name": "combat look delta L"
+     "name": "combat look delta L:degrees#how far we can turn our head left away from our aiming vector when in combat"
     },
     {
      "type": "angle",
-     "name": "combat look delta R"
+     "name": "combat look delta R:degrees#how far we can turn our head right away from our aiming vector when in combat"
     },
     {
      "type": "real_bounds",
-     "name": "noncombat idle looking"
+     "name": "noncombat idle looking:seconds#rate at which we change look around randomly when not in combat"
     },
     {
      "type": "real_bounds",
-     "name": "noncombat idle aiming"
+     "name": "noncombat idle aiming:seconds#rate at which we change aiming directions when looking around randomly when not in combat"
     },
     {
      "type": "real_bounds",
-     "name": "combat idle looking"
+     "name": "combat idle looking:seconds#rate at which we change look around randomly when searching or in combat"
     },
     {
      "type": "real_bounds",
-     "name": "combat idle aiming"
+     "name": "combat idle aiming:seconds#rate at which we change aiming directions when looking around randomly when searching or in combat"
     },
     {
      "type": "terminator",
@@ -893,15 +898,15 @@
     },
     {
      "type": "real",
-     "name": "Crouch danger threshold"
+     "name": "Crouch danger threshold#When danger rises above the threshold, the actor crouches"
     },
     {
      "type": "real",
-     "name": "Stand danger threshold"
+     "name": "Stand danger threshold#When danger drops below this threshold, the actor can stand again."
     },
     {
      "type": "real",
-     "name": "Fight danger move threshold"
+     "name": "Fight danger move threshold#When danger goes above given level, this actor switches firing positions"
     },
     {
      "type": "terminator",
@@ -920,19 +925,19 @@
     },
     {
      "type": "real",
-     "name": "Evasion danger threshold"
+     "name": "Evasion danger threshold#Consider evading when immediate danger surpasses threshold"
     },
     {
      "type": "real",
-     "name": "Evasion delay timer"
+     "name": "Evasion delay timer#Wait at least this delay between evasions"
     },
     {
      "type": "real",
-     "name": "Evasion chance"
+     "name": "Evasion chance#If danger is above threshold, the chance that we will evade. Expressed as chance of evading within a 1 second time period"
     },
     {
      "type": "real",
-     "name": "Evasion proximity threshold"
+     "name": "Evasion proximity threshold#If target is within given proximity, possibly evade"
     },
     {
      "type": "useless_pad",
@@ -941,7 +946,7 @@
     },
     {
      "type": "real",
-     "name": "dive retreat chance"
+     "name": "dive retreat chance#Chance of retreating (fleeing) after danger avoidance dive"
     },
     {
      "type": "terminator",
@@ -955,12 +960,12 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "cover flags",
+     "name": "cover flags!",
      "definition": "perception flags"
     },
     {
      "type": "real_bounds",
-     "name": "hide behind cover time"
+     "name": "hide behind cover time:seconds#how long we stay behind cover after seeking cover"
     },
     {
      "type": "useless_pad",
@@ -969,39 +974,44 @@
     },
     {
      "type": "real",
-     "name": "Cover vitality threshold"
+     "name": "Cover vitality threshold#When vitality drops below this level, possibly trigger a cover"
     },
     {
      "type": "real",
-     "name": "Cover shield fraction"
+     "name": "Cover shield fraction#trigger cover when shield drops below this fraction (low shield cover impulse must be enabled)"
     },
     {
      "type": "real",
-     "name": "Cover check delay"
+     "name": "Cover check delay#amount of time I will wait before trying again after covering"
     },
     {
      "type": "real",
-     "name": "Emerge from cover when shield fraction reaches threshold"
+     "name": "Emerge from cover when shield fraction reaches threshold#Emerge from cover when shield fraction reaches threshold"
     },
     {
      "type": "real",
-     "name": "Cover danger threshold"
+     "name": "Cover danger threshold#Danger must be this high to cover. At a danger level of 'danger threshold', the chance of seeking cover is the cover chance lower bound (below)"
     },
     {
      "type": "real",
-     "name": "Danger upper threshold"
+     "name": "Danger upper threshold#At or above danger level of upper threshold, the chance of seeking cover is the cover chance upper bound (below)"
+    },
+    {
+     "type": "explanation",
+     "name": "Cover chance",
+     "definition": "The Bounds on the chance of seeking cover.\nThe lower bound is valid when the danger is at 'danger threshold'\nThe upper bound is valid when the danger is at or above 'danger upper threshold'.\nIt is interpolated linearly everywhere in between.\n All chances are expressed as 'chance of triggering cover in a 1 second period'."
     },
     {
      "type": "real_bounds",
-     "name": "Cover chance"
+     "name": "Cover chance#Bounds on the chances of seeking cover."
     },
     {
      "type": "real",
-     "name": "Proximity self-preserve"
+     "name": "Proximity self-preserve:wus#When the proximity_self_preservation impulse is enabled, triggers self-preservation when target within this distance"
     },
     {
      "type": "real",
-     "name": "Disallow cover distance"
+     "name": "Disallow cover distance:world units#Disallow covering from visible target under the given distance away"
     },
     {
      "type": "useless_pad",
@@ -1010,7 +1020,7 @@
     },
     {
      "type": "real",
-     "name": "proximity melee distance"
+     "name": "proximity melee distance#When self preserving from a target less than given distance, causes melee attack (assuming proximity_melee_impulse is enabled)"
     },
     {
      "type": "useless_pad",
@@ -1019,11 +1029,11 @@
     },
     {
      "type": "real",
-     "name": "unreachable enemy danger threshold"
+     "name": "unreachable enemy danger threshold#When danger from an unreachable enemy surpasses threshold, actor cover (assuming unreachable_enemy_cover impulse is enabled)"
     },
     {
      "type": "real",
-     "name": "scary target threshold"
+     "name": "scary target threshold#When target is aware of me and surpasses the given scariness, self-preserve (assuming scary_target_cover_impulse is enabled)"
     },
     {
      "type": "terminator",
@@ -1055,8 +1065,13 @@
      "definition": 24
     },
     {
+     "type": "explanation",
+     "name": "Uncover",
+     "definition": ""
+    },
+    {
      "type": "real_bounds",
-     "name": "Uncover distance bounds"
+     "name": "Uncover distance bounds#Distance of uncover point from target. Hard lower limit, soft upper limit."
     },
     {
      "type": "terminator",
@@ -1070,7 +1085,7 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "Pre-search flags",
+     "name": "Pre-search flags!",
      "definition": "perception flags"
     },
     {
@@ -1080,7 +1095,7 @@
     },
     {
      "type": "real_bounds",
-     "name": "Min/Max pre-search bounds"
+     "name": "Min/Max pre-search bounds#If the min presearch time expires and the target is (actually) outside the min-certainty radius, presearch turns off"
     },
     {
      "type": "real",
@@ -1102,16 +1117,16 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "Pre-search flags",
+     "name": "Pre-search flags!",
      "definition": "perception flags"
     },
     {
      "type": "real_bounds",
-     "name": "min presearch time"
+     "name": "min presearch time:seconds#If the min presearch time expires and the target is (actually) outside the min-certainty radius, presearch turns off"
     },
     {
      "type": "real_bounds",
-     "name": "max presearch time"
+     "name": "max presearch time:seconds#Presearch turns off after the given time"
     },
     {
      "type": "real",
@@ -1119,11 +1134,11 @@
     },
     {
      "type": "real",
-     "name": "Max uncover distance"
+     "name": "Max uncover distance:DEPRECATED!"
     },
     {
      "type": "real_bounds",
-     "name": "min suppressing time"
+     "name": "min suppressing time#if the min suppressing time expires and the target is outside the min-certainty radius, suppressing fire turns off"
     },
     {
      "type": "terminator",
@@ -1142,95 +1157,100 @@
     },
     {
      "type": "tag_reference",
-     "name": "weapon"
+     "name": "weapon^"
     },
     {
      "type": "real",
-     "name": "maximum firing distance"
+     "name": "maximum firing distance:world units#we can only fire our weapon at targets within this distance"
     },
     {
      "type": "real",
-     "name": "rate of fire"
+     "name": "rate of fire#how many times per second we pull the trigger (zero = continuously held down)"
     },
     {
      "type": "angle",
-     "name": "projectile error"
+     "name": "projectile error:degrees#error added to every projectile we fire"
     },
     {
      "type": "real_bounds",
-     "name": "first burst delay time"
+     "name": "first burst delay time:seconds"
     },
     {
      "type": "real",
-     "name": "surprise delay time"
+     "name": "surprise delay time:seconds"
     },
     {
      "type": "real",
-     "name": "surprise fire-wildly time"
+     "name": "surprise fire-wildly time:seconds"
     },
     {
      "type": "real",
-     "name": "death fire-wildly chance"
+     "name": "death fire-wildly chance:[0,1]"
     },
     {
      "type": "real",
-     "name": "death fire-wildly time"
+     "name": "death fire-wildly time:seconds"
     },
     {
      "type": "real_bounds",
-     "name": "desired combat range"
+     "name": "desired combat range:world units"
     },
     {
      "type": "real_vector_3d",
-     "name": "custom stand gun offset"
+     "name": "custom stand gun offset#custom standing gun offset for overriding the default in the base actor"
     },
     {
      "type": "real_vector_3d",
-     "name": "custom crouch gun offset"
+     "name": "custom crouch gun offset#custom crouching gun offset for overriding the default in the base actor"
     },
     {
      "type": "real",
-     "name": "target tracking"
+     "name": "target tracking:[0,1]#how well our bursts track moving targets. 0.0= fire at the position they were standing when we started the burst. 1.0= fire at current position"
     },
     {
      "type": "real",
-     "name": "target leading"
+     "name": "target leading:[0,1]#how much we lead moving targets. 0.0= no prediction. 1.0= predict completely."
     },
     {
      "type": "real",
-     "name": "weapon damage modifier"
+     "name": "weapon damage modifier#what fraction of its normal damage our weapon inflicts (zero = no modifier)"
     },
     {
      "type": "real",
-     "name": "minimum firing range"
+     "name": "minimum firing range#weapon will not be fired at target closer than given distance"
+    },
+    {
+     "type": "explanation",
+     "name": "burst geometry",
+     "definition": "at the start of every burst we pick a random point near the target to fire at, on either the left or the right side.\nthe burst origin angle controls whether this error is exactly horizontal or might have some vertical component.\n\nover the course of the burst we move our projectiles back in the opposite direction towards the target. this return motion is also controlled by an angle that specifies how close to the horizontal it is.\n\nfor example if the burst origin angle and the burst return angle were both zero, and the return length was the same as the burst length, every burst would start the same amount away from the target (on either the left or right) and move back to exactly over the target at the end of the burst."
     },
     {
      "type": "real",
-     "name": "burst origin radius"
+     "name": "burst origin radius:world units#how far away from the target the starting point is"
     },
     {
      "type": "angle",
-     "name": "burst origin angle"
+     "name": "burst origin angle:degrees#the range from the horizontal that our starting error can be"
     },
     {
      "type": "real_bounds",
-     "name": "burst return length"
+     "name": "burst return length:world units#how far the burst point moves back towards the target (could be negative)"
     },
     {
      "type": "angle",
-     "name": "burst return angle"
+     "name": "burst return angle:degrees#the range from the horizontal that the return direction can be"
     },
     {
      "type": "real_bounds",
-     "name": "burst duration"
+     "name": "burst duration:seconds#how long each burst we fire is"
     },
     {
      "type": "real_bounds",
-     "name": "burst separation"
+     "name": "burst separation:seconds#how long we wait between bursts"
     },
     {
      "type": "angle",
-     "name": "burst angular velocity"
+     "name": "burst angular velocity:degrees per second#the maximum rate at which we can sweep our fire (zero = unlimited)"
     },
     {
      "type": "useless_pad",
@@ -1239,37 +1259,42 @@
     },
     {
      "type": "real",
-     "name": "special damage modifier"
+     "name": "special damage modifier:[0,1]#damage modifier for special weapon fire (applied in addition to the normal damage modifier. zero = no change)"
     },
     {
      "type": "angle",
-     "name": "special projectile error"
+     "name": "special projectile error:degrees#projectile error angle for special weapon fire (applied in addition to the normal error)"
+    },
+    {
+     "type": "explanation",
+     "name": "special-case firing properties",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "super-ballistic range"
+     "name": "super-ballistic range#we try to aim our shots super-ballistically if target is outside this range (zero = never)"
     },
     {
      "type": "real",
-     "name": "bombardment range"
+     "name": "bombardment range#we offset our burst targets randomly by this range when firing at non-visible enemies (zero = never)"
     },
     {
      "type": "short_enum",
-     "name": "special-fire mode",
+     "name": "special-fire mode#the type of special weapon fire that we can use",
      "definition": "special-fire mode"
     },
     {
      "type": "short_enum",
-     "name": "special-fire situation",
+     "name": "special-fire situation#when we will decide to use our special weapon fire mode",
      "definition": "special-fire situation"
     },
     {
      "type": "real",
-     "name": "special-fire chance"
+     "name": "special-fire chance:[0,1]#how likely we are to use our special weapon fire mode"
     },
     {
      "type": "real",
-     "name": "special-fire delay"
+     "name": "special-fire delay:seconds#how long we must wait between uses of our special weapon fire mode"
     },
     {
      "type": "useless_pad",
@@ -1277,12 +1302,17 @@
      "definition": 24
     },
     {
+     "type": "explanation",
+     "name": "Weapon drop when killed",
+     "definition": ""
+    },
+    {
      "type": "real_bounds",
-     "name": "drop weapon loaded"
+     "name": "drop weapon loaded#amount of ammo loaded into the weapon that we drop (in fractions of a clip, e.g. 0.3 to 0.5)"
     },
     {
      "type": "short_bounds",
-     "name": "drop weapon ammo"
+     "name": "drop weapon ammo#total number of rounds in the weapon that we drop (ignored for energy weapons)"
     },
     {
      "type": "useless_pad",
@@ -1290,16 +1320,26 @@
      "definition": 12
     },
     {
+     "type": "explanation",
+     "name": "Special Targeting",
+     "definition": ""
+    },
+    {
      "type": "real",
-     "name": "Max special target distance"
+     "name": "Max special target distance:world units#Specific target regions on a vehicle or unit will be fired upon only under the given distance"
+    },
+    {
+     "type": "explanation",
+     "name": "Ballistic firing",
+     "definition": ""
     },
     {
      "type": "real_bounds",
-     "name": "Ballistic firing bounds"
+     "name": "Ballistic firing bounds:world units#At the min range, the min ballistic fraction is used, at the max, the max ballistic fraction is used"
     },
     {
      "type": "real_bounds",
-     "name": "Ballistic fraction bounds"
+     "name": "Ballistic fraction bounds:[0-1]#Controls speed and degree of arc. 0 = high, slow, 1 = low, fast"
     },
     {
      "type": "terminator",
@@ -1318,7 +1358,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "weapon"
+     "name": "weapon^"
     },
     {
      "type": "useless_pad",
@@ -1326,44 +1366,54 @@
      "definition": 24
     },
     {
-     "type": "real",
-     "name": "maximum firing range"
+     "type": "explanation",
+     "name": "Combat ranges",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "minimum firing range"
-    },
-    {
-     "type": "real_bounds",
-     "name": "normal combat range"
+     "name": "maximum firing range:world units#we can only fire our weapon at targets within this distance"
     },
     {
      "type": "real",
-     "name": "bombardment range"
+     "name": "minimum firing range#weapon will not be fired at target closer than given distance"
+    },
+    {
+     "type": "real_bounds",
+     "name": "normal combat range:world units"
     },
     {
      "type": "real",
-     "name": "Max special target distance"
-    },
-    {
-     "type": "real_bounds",
-     "name": "timid combat range"
-    },
-    {
-     "type": "real_bounds",
-     "name": "aggressive combat range"
+     "name": "bombardment range#we offset our burst targets randomly by this range when firing at non-visible enemies (zero = never)"
     },
     {
      "type": "real",
-     "name": "super-ballistic range"
+     "name": "Max special target distance:world units#Specific target regions on a vehicle or unit will be fired upon only under the given distance"
     },
     {
      "type": "real_bounds",
-     "name": "Ballistic firing bounds"
+     "name": "timid combat range:world units"
     },
     {
      "type": "real_bounds",
-     "name": "Ballistic fraction bounds"
+     "name": "aggressive combat range:world units"
+    },
+    {
+     "type": "explanation",
+     "name": "Ballistic Firing",
+     "definition": ""
+    },
+    {
+     "type": "real",
+     "name": "super-ballistic range#we try to aim our shots super-ballistically if target is outside this range (zero = never)"
+    },
+    {
+     "type": "real_bounds",
+     "name": "Ballistic firing bounds:world units#At the min range, the min ballistic fraction is used, at the max, the max ballistic fraction is used"
+    },
+    {
+     "type": "real_bounds",
+     "name": "Ballistic fraction bounds:[0-1]#Controls speed and degree of arc. 0 = high, slow, 1 = low, fast"
     },
     {
      "type": "useless_pad",
@@ -1371,24 +1421,29 @@
      "definition": 24
     },
     {
+     "type": "explanation",
+     "name": "Behavior",
+     "definition": ""
+    },
+    {
      "type": "real_bounds",
-     "name": "first burst delay time"
+     "name": "first burst delay time:seconds"
     },
     {
      "type": "real",
-     "name": "surprise delay time"
+     "name": "surprise delay time:seconds"
     },
     {
      "type": "real",
-     "name": "surprise fire-wildly time"
+     "name": "surprise fire-wildly time:seconds"
     },
     {
      "type": "real",
-     "name": "death fire-wildly chance"
+     "name": "death fire-wildly chance:[0,1]"
     },
     {
      "type": "real",
-     "name": "death fire-wildly time"
+     "name": "death fire-wildly time:seconds"
     },
     {
      "type": "useless_pad",
@@ -1397,42 +1452,47 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "custom stand gun offset"
+     "name": "custom stand gun offset#custom standing gun offset for overriding the default in the base actor"
     },
     {
      "type": "real_vector_3d",
-     "name": "custom crouch gun offset"
+     "name": "custom crouch gun offset#custom crouching gun offset for overriding the default in the base actor"
     },
     {
      "type": "useless_pad",
      "name": null,
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "special-case firing properties",
+     "definition": ""
     },
     {
      "type": "short_enum",
-     "name": "special-fire mode",
+     "name": "special-fire mode#the type of special weapon fire that we can use",
      "definition": "special-fire mode"
     },
     {
      "type": "short_enum",
-     "name": "special-fire situation",
+     "name": "special-fire situation#when we will decide to use our special weapon fire mode",
      "definition": "special-fire situation"
     },
     {
      "type": "real",
-     "name": "special-fire chance"
+     "name": "special-fire chance:[0,1]#how likely we are to use our special weapon fire mode"
     },
     {
      "type": "real",
-     "name": "special-fire delay"
+     "name": "special-fire delay:seconds#how long we must wait between uses of our special weapon fire mode"
     },
     {
      "type": "real",
-     "name": "special damage modifier"
+     "name": "special damage modifier:[0,1]#damage modifier for special weapon fire (applied in addition to the normal damage modifier. zero = no change)"
     },
     {
      "type": "angle",
-     "name": "special projectile error"
+     "name": "special projectile error:degrees#projectile error angle for special weapon fire (applied in addition to the normal error)"
     },
     {
      "type": "useless_pad",
@@ -1440,12 +1500,17 @@
      "definition": 24
     },
     {
+     "type": "explanation",
+     "name": "Weapon drop when killed",
+     "definition": ""
+    },
+    {
      "type": "real_bounds",
-     "name": "drop weapon loaded"
+     "name": "drop weapon loaded#amount of ammo loaded into the weapon that we drop (in fractions of a clip, e.g. 0.3 to 0.5)"
     },
     {
      "type": "short_bounds",
-     "name": "drop weapon ammo"
+     "name": "drop weapon ammo#total number of rounds in the weapon that we drop (ignored for energy weapons)"
     },
     {
      "type": "useless_pad",
@@ -1453,12 +1518,17 @@
      "definition": 24
     },
     {
+     "type": "explanation",
+     "name": "Accuracy",
+     "definition": "Parameters control how accuracy changes over the duration of a series of bursts\nAccuracy is an analog value between 0 and 1. At zero, the parameters of the first\nfiring-pattern block is used. At 1, the parameters in the second block is used. In\nbetween, all the values are linearly interpolated"
+    },
+    {
      "type": "real_bounds",
-     "name": "normal accuracy bounds"
+     "name": "normal accuracy bounds#Indicates starting and ending accuracies at normal difficulty"
     },
     {
      "type": "real",
-     "name": "normal accuracy time"
+     "name": "normal accuracy time#The amount of time it takes the accuracy to go from starting to ending"
     },
     {
      "type": "useless_pad",
@@ -1467,11 +1537,11 @@
     },
     {
      "type": "real_bounds",
-     "name": "heroic accuracy bounds"
+     "name": "heroic accuracy bounds#Indicates starting and ending accuracies at heroic difficulty"
     },
     {
      "type": "real",
-     "name": "heroic accuracy time"
+     "name": "heroic accuracy time#The amount of time it takes the accuracy to go from starting to ending"
     },
     {
      "type": "useless_pad",
@@ -1480,11 +1550,11 @@
     },
     {
      "type": "real_bounds",
-     "name": "legendary accuracy bounds"
+     "name": "legendary accuracy bounds#Indicates starting and ending accuracies at legendary difficulty"
     },
     {
      "type": "real",
-     "name": "legendary accuracy time"
+     "name": "legendary accuracy time#The amount of time it takes the accuracy to go from starting to ending"
     },
     {
      "type": "useless_pad",
@@ -1517,47 +1587,52 @@
    "fields": [
     {
      "type": "real",
-     "name": "rate of fire"
+     "name": "rate of fire#how many times per second we pull the trigger (zero = continuously held down)"
     },
     {
      "type": "real",
-     "name": "target tracking"
+     "name": "target tracking:[0,1]#how well our bursts track moving targets. 0.0= fire at the position they were standing when we started the burst. 1.0= fire at current position"
     },
     {
      "type": "real",
-     "name": "target leading"
+     "name": "target leading:[0,1]#how much we lead moving targets. 0.0= no prediction. 1.0= predict completely."
+    },
+    {
+     "type": "explanation",
+     "name": "burst geometry",
+     "definition": "at the start of every burst we pick a random point near the target to fire at, on either the left or the right side.\nthe burst origin angle controls whether this error is exactly horizontal or might have some vertical component.\n\nover the course of the burst we move our projectiles back in the opposite direction towards the target. this return motion is also controlled by an angle that specifies how close to the horizontal it is.\n\nfor example if the burst origin angle and the burst return angle were both zero, and the return length was the same as the burst length, every burst would start the same amount away from the target (on either the left or right) and move back to exactly over the target at the end of the burst."
     },
     {
      "type": "real",
-     "name": "burst origin radius"
+     "name": "burst origin radius:world units#how far away from the target the starting point is"
     },
     {
      "type": "angle",
-     "name": "burst origin angle"
+     "name": "burst origin angle:degrees#the range from the horizontal that our starting error can be"
     },
     {
      "type": "real_bounds",
-     "name": "burst return length"
+     "name": "burst return length:world units#how far the burst point moves back towards the target (could be negative)"
     },
     {
      "type": "angle",
-     "name": "burst return angle"
+     "name": "burst return angle:degrees#the range from the horizontal that the return direction can be"
     },
     {
      "type": "real_bounds",
-     "name": "burst duration"
+     "name": "burst duration:seconds#how long each burst we fire is"
     },
     {
      "type": "real_bounds",
-     "name": "burst separation"
+     "name": "burst separation:seconds#how long we wait between bursts"
     },
     {
      "type": "real",
-     "name": "weapon damage modifier"
+     "name": "weapon damage modifier#what fraction of its normal damage our weapon inflicts (zero = no modifier)"
     },
     {
      "type": "angle",
-     "name": "projectile error"
+     "name": "projectile error:degrees#error added to every projectile we fire"
     },
     {
      "type": "useless_pad",
@@ -1566,11 +1641,11 @@
     },
     {
      "type": "angle",
-     "name": "burst angular velocity"
+     "name": "burst angular velocity:degrees per second#the maximum rate at which we can sweep our fire (zero = unlimited)"
     },
     {
      "type": "angle",
-     "name": "maximum error angle"
+     "name": "maximum error angle:degrees#cap on the maximum angle by which we will miss target (restriction on burst origin radius"
     },
     {
      "type": "terminator",
@@ -1584,17 +1659,17 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "grenades flags",
+     "name": "grenades flags!",
      "definition": "perception flags"
     },
     {
      "type": "short_enum",
-     "name": "grenade type",
+     "name": "grenade type#type of grenades that we throw^",
      "definition": "grenade type"
     },
     {
      "type": "short_enum",
-     "name": "trajectory type",
+     "name": "trajectory type#how we throw our grenades",
      "definition": "trajectory type"
     },
     {
@@ -1604,35 +1679,35 @@
     },
     {
      "type": "short_integer",
-     "name": "minimum enemy count"
+     "name": "minimum enemy count#how many enemies must be within the radius of the grenade before we will consider throwing there"
     },
     {
      "type": "real",
-     "name": "enemy radius"
+     "name": "enemy radius:world units#we consider enemies within this radius when determining where to throw"
     },
     {
      "type": "real",
-     "name": "grenade ideal velocity"
+     "name": "grenade ideal velocity:world units per second#how fast we LIKE to throw our grenades"
     },
     {
      "type": "real",
-     "name": "grenade velocity"
+     "name": "grenade velocity:world units per second#the fastest we can possibly throw our grenades"
     },
     {
      "type": "real_bounds",
-     "name": "grenade ranges"
+     "name": "grenade ranges:world units#ranges within which we will consider throwing a grenade"
     },
     {
      "type": "real",
-     "name": "collateral damage radius"
+     "name": "collateral damage radius:world units#we won't throw if there are friendlies around our target within this range"
     },
     {
      "type": "real_fraction",
-     "name": "grenade chance"
+     "name": "grenade chance:[0,1]#how likely we are to throw a grenade in one second"
     },
     {
      "type": "real",
-     "name": "grenade throw delay"
+     "name": "grenade throw delay:seconds#How long we have to wait after throwing a grenade before we can throw another one"
     },
     {
      "type": "useless_pad",
@@ -1641,7 +1716,7 @@
     },
     {
      "type": "real_fraction",
-     "name": "grenade uncover chance"
+     "name": "grenade uncover chance:[0,1]#how likely we are to throw a grenade to flush out a target in one second"
     },
     {
      "type": "useless_pad",
@@ -1650,20 +1725,25 @@
     },
     {
      "type": "real_fraction",
-     "name": "anti-vehicle grenade chance"
+     "name": "anti-vehicle grenade chance:[0,1]#how likely we are to throw a grenade against a vehicle"
     },
     {
      "type": "useless_pad",
      "name": null,
      "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "Grenade drop when killed",
+     "definition": ""
     },
     {
      "type": "short_bounds",
-     "name": "grenade count"
+     "name": "grenade count#number of grenades that we start with"
     },
     {
      "type": "real",
-     "name": "dont drop grenades chance"
+     "name": "dont drop grenades chance:[0,1]#how likely we are not to drop any grenades when we die, even if we still have some"
     },
     {
      "type": "terminator",
@@ -1677,7 +1757,7 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "Charge flags",
+     "name": "Charge flags!",
      "definition": "perception flags"
     },
     {
@@ -1690,7 +1770,7 @@
     },
     {
      "type": "real",
-     "name": "melee attack timeout"
+     "name": "melee attack timeout:seconds#Give up after given amount of time spent charging"
     },
     {
      "type": "real",
@@ -1724,7 +1804,7 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "Charge flags",
+     "name": "Charge flags!",
      "definition": "perception flags"
     },
     {
@@ -1741,7 +1821,7 @@
     },
     {
      "type": "real",
-     "name": "melee attack timeout"
+     "name": "melee attack timeout:seconds#Give up after given amount of time spent charging"
     },
     {
      "type": "real",
@@ -1775,7 +1855,7 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "Charge flags",
+     "name": "Charge flags!",
      "definition": "perception flags"
     },
     {
@@ -1792,7 +1872,7 @@
     },
     {
      "type": "real",
-     "name": "melee attack timeout"
+     "name": "melee attack timeout:seconds#Give up after given amount of time spent charging"
     },
     {
      "type": "real",
@@ -1839,7 +1919,7 @@
     },
     {
      "type": "real",
-     "name": "melee chance"
+     "name": "melee chance#chance of initiating a melee within a 1 second period"
     },
     {
      "type": "real",
@@ -1851,11 +1931,11 @@
     },
     {
      "type": "real",
-     "name": "melee attack timeout"
+     "name": "melee attack timeout:seconds#Give up after given amount of time spent charging"
     },
     {
      "type": "real",
-     "name": "melee attack delay timer"
+     "name": "melee attack delay timer:seconds#don't attempt again before given time since last melee"
     },
     {
      "type": "real_bounds",
@@ -1879,7 +1959,7 @@
     },
     {
      "type": "real",
-     "name": "melee delay timer"
+     "name": "melee delay timer:seconds#time between melee leaps"
     },
     {
      "type": "useless_pad",
@@ -1888,7 +1968,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "berserk weapon"
+     "name": "berserk weapon#when I berserk, I pull out a ..."
     },
     {
      "type": "terminator",
@@ -1902,7 +1982,7 @@
    "fields": [
     {
      "type": "real_bounds",
-     "name": "ready time bounds"
+     "name": "ready time bounds#Character will pause for given time before engaging threat"
     },
     {
      "type": "terminator",
@@ -1916,11 +1996,11 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "unit"
+     "name": "unit^"
     },
     {
      "type": "long_flags",
-     "name": "vehicle flags",
+     "name": "vehicle flags!",
      "definition": "perception flags"
     },
     {
@@ -1929,16 +2009,21 @@
      "definition": 8
     },
     {
-     "type": "real",
-     "name": "ai pathfinding radius"
+     "type": "explanation",
+     "name": "Pathfinding",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "ai destination radius"
+     "name": "ai pathfinding radius:world units#(Ground vehicles)"
     },
     {
      "type": "real",
-     "name": "ai deceleration distance"
+     "name": "ai destination radius:world units#(All vehicles) Distance within which goal is considered reached"
+    },
+    {
+     "type": "real",
+     "name": "ai deceleration distance:world units#(All vehicles)Distance from goal at which AI starts to decelerate"
     },
     {
      "type": "useless_pad",
@@ -1946,45 +2031,55 @@
      "definition": 8
     },
     {
-     "type": "real",
-     "name": "ai turning radius"
+     "type": "explanation",
+     "name": "Turning",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "ai inner turning radius (< tr)"
+     "name": "ai turning radius#(Warthog, Pelican) Idealized average turning radius (should reflect actual vehicle physics)"
     },
     {
      "type": "real",
-     "name": "ai ideal turning radius (> tr)"
+     "name": "ai inner turning radius (< tr)#(Warthog-type) Idealized minimum turning radius (should reflect actual vehicle physics)"
+    },
+    {
+     "type": "real",
+     "name": "ai ideal turning radius (> tr)#(Warthogs, ghosts) Ideal turning radius for rounding turns (barring obstacles, etc.)"
     },
     {
      "type": "useless_pad",
      "name": null,
      "definition": 8
+    },
+    {
+     "type": "explanation",
+     "name": "Steering",
+     "definition": ""
     },
     {
      "type": "angle",
-     "name": "ai banshee steering maximum"
+     "name": "ai banshee steering maximum#(Banshee)"
     },
     {
      "type": "real",
-     "name": "ai max steering angle"
+     "name": "ai max steering angle:degrees#(Warthog, ghosts, wraiths)Maximum steering angle from forward (ultimately controls turning speed)"
     },
     {
      "type": "real",
-     "name": "ai max steering delta"
+     "name": "ai max steering delta: degrees#(pelicans, dropships, ghosts, wraiths)Maximum delta in steering angle from one tick to the next (ultimately controls turn acceleration)"
     },
     {
      "type": "real",
-     "name": "ai oversteering scale"
+     "name": "ai oversteering scale#(Warthog, ghosts, wraiths)"
     },
     {
      "type": "angle_bounds",
-     "name": "ai oversteering bounds"
+     "name": "ai oversteering bounds#(Banshee) Angle to goal at which AI will oversteer"
     },
     {
      "type": "real",
-     "name": "ai sideslip distance"
+     "name": "ai sideslip distance#(Ghosts, Dropships) Distance within which AI will strafe to target (as opposed to turning)"
     },
     {
      "type": "useless_pad",
@@ -1992,24 +2087,29 @@
      "definition": 8
     },
     {
-     "type": "real",
-     "name": "ai throttle maximum"
+     "type": "explanation",
+     "name": "Throttle",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "ai goal min throttle scale"
+     "name": "ai throttle maximum:(0 - 1)#(All vehicles)"
     },
     {
      "type": "real",
-     "name": "ai turn min throttle scale"
+     "name": "ai goal min throttle scale#(Warthogs, Dropships, ghosts)scale on throttle when within 'ai deceleration distance' of goal (0...1)"
     },
     {
      "type": "real",
-     "name": "ai direction min throttle scale"
+     "name": "ai turn min throttle scale#(Warthogs, ghosts) Scale on throttle due to nearness to a turn (0...1)"
     },
     {
      "type": "real",
-     "name": "ai acceleration scale"
+     "name": "ai direction min throttle scale#(Warthogs, ghosts) Scale on throttle due to facing away from intended direction (0...1)"
+    },
+    {
+     "type": "real",
+     "name": "ai acceleration scale:(0-1)#(warthogs, ghosts) The maximum allowable change in throttle between ticks"
     },
     {
      "type": "useless_pad",
@@ -2017,20 +2117,25 @@
      "definition": 8
     },
     {
-     "type": "real",
-     "name": "ai charge repeat timeout"
+     "type": "explanation",
+     "name": "Behavior",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "DEPRECATED (ai strafing abort range)"
+     "name": "ai charge repeat timeout#(All vehicles) Time delay between vehicle charges"
     },
     {
      "type": "real",
-     "name": "ai avoidance distance"
+     "name": "DEPRECATED (ai strafing abort range)#(All vehicles) Distance at which charge will be aborted!"
     },
     {
      "type": "real",
-     "name": "ai charge look-ahead time"
+     "name": "ai avoidance distance:world units#(Banshee, Sentinels, Dropships) Look-ahead distance for obstacle avoidance"
+    },
+    {
+     "type": "real",
+     "name": "ai charge look-ahead time#(All vehicles) In deciding when to abort vehicle charge, look ahead these many seconds to predict time of contact"
     },
     {
      "type": "useless_pad",
@@ -2048,11 +2153,11 @@
     },
     {
      "type": "real",
-     "name": "ai cover min distance"
+     "name": "ai cover min distance#(All vehicles) When executing vehicle-cover, minimum distance from the target to flee to"
     },
     {
      "type": "real",
-     "name": "ai cover time"
+     "name": "ai cover time#(All vehicles) How long to stay away from the target"
     },
     {
      "type": "useless_pad",
@@ -2061,11 +2166,11 @@
     },
     {
      "type": "real",
-     "name": "ai charge consider distance"
+     "name": "ai charge consider distance#Consider charging the target when it is within this range (0 = infinite distance)"
     },
     {
      "type": "real",
-     "name": "ai charge abort distance"
+     "name": "ai charge abort distance#Abort the charge when the target get more than this far away (0 = never abort)"
     },
     {
      "type": "terminator",
@@ -2079,11 +2184,11 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "unit"
+     "name": "unit^"
     },
     {
      "type": "tag_reference",
-     "name": "style"
+     "name": "style^"
     },
     {
      "type": "useless_pad",
@@ -2101,16 +2206,21 @@
      "definition": 8
     },
     {
-     "type": "real",
-     "name": "ai pathfinding radius"
+     "type": "explanation",
+     "name": "Pathfinding",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "ai destination radius"
+     "name": "ai pathfinding radius:world units (Ground vehicles)"
     },
     {
      "type": "real",
-     "name": "ai deceleration distance"
+     "name": "ai destination radius:world units (All vehicles)#Distance within which goal is considered reached"
+    },
+    {
+     "type": "real",
+     "name": "ai deceleration distance:world units: (All vehicles)#Distance from goal at which AI starts to decelerate"
     },
     {
      "type": "useless_pad",
@@ -2118,53 +2228,63 @@
      "definition": 8
     },
     {
-     "type": "real",
-     "name": "ai turning radius"
+     "type": "explanation",
+     "name": "Turning",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "ai inner turning radius (< tr)"
+     "name": "ai turning radius:world units (Warthog, Pelican, Ghost)#Idealized average turning radius (should reflect actual vehicle physics)"
     },
     {
      "type": "real",
-     "name": "ai ideal turning radius (> tr)"
+     "name": "ai inner turning radius (< tr): (Warthogs)#Idealized minimum turning radius (should reflect actual vehicle physics)"
+    },
+    {
+     "type": "real",
+     "name": "ai ideal turning radius (> tr): (Warthogs, ghosts)#Ideal turning radius for rounding turns (barring obstacles, etc.)"
     },
     {
      "type": "useless_pad",
      "name": null,
      "definition": 8
+    },
+    {
+     "type": "explanation",
+     "name": "Steering",
+     "definition": ""
     },
     {
      "type": "angle",
-     "name": "ai banshee steering maximum"
+     "name": "ai banshee steering maximum:(banshees)"
     },
     {
      "type": "real",
-     "name": "ai max steering angle"
+     "name": "ai max steering angle:degrees (warthogs, ghosts, wraiths)#Maximum steering angle from forward (ultimately controls turning speed)"
     },
     {
      "type": "real",
-     "name": "ai max steering delta"
+     "name": "ai max steering delta:degrees (warthogs, dropships, ghosts, wraiths)#Maximum delta in steering angle from one tick to the next (ultimately controls turn acceleration)"
     },
     {
      "type": "real",
-     "name": "ai oversteering scale"
+     "name": "ai oversteering scale:(warthogs, ghosts, wraiths)"
     },
     {
      "type": "angle_bounds",
-     "name": "ai oversteering bounds"
+     "name": "ai oversteering bounds:(banshees)# Angle to goal at which AI will oversteer"
     },
     {
      "type": "real",
-     "name": "ai sideslip distance"
+     "name": "ai sideslip distance:(ghosts, dropships)#Distance within which AI will strafe to target (as opposed to turning)"
     },
     {
      "type": "real",
-     "name": "ai avoidance distance"
+     "name": "ai avoidance distance:world units:(banshees)#Look-ahead distance for obstacle avoidance"
     },
     {
      "type": "real",
-     "name": "ai min urgency"
+     "name": "ai min urgency:[0-1] (Banshees)#The minimum urgency with which a turn can be made (urgency = percent of maximum steering delta)"
     },
     {
      "type": "useless_pad",
@@ -2172,41 +2292,51 @@
      "definition": 4
     },
     {
-     "type": "real",
-     "name": "ai throttle maximum"
+     "type": "explanation",
+     "name": "Throttle",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "ai goal min throttle scale"
+     "name": "ai throttle maximum:(0 - 1) (all vehicles)"
     },
     {
      "type": "real",
-     "name": "ai turn min throttle scale"
+     "name": "ai goal min throttle scale: (warthogs, dropships, ghosts)#scale on throttle when within 'ai deceleration distance' of goal (0...1)"
     },
     {
      "type": "real",
-     "name": "ai direction min throttle scale"
+     "name": "ai turn min throttle scale: (warthogs, dropships, ghosts)# Scale on throttle due to nearness to a turn (0...1)"
     },
     {
      "type": "real",
-     "name": "ai acceleration scale"
+     "name": "ai direction min throttle scale: (warthogs, dropships, ghosts)# Scale on throttle due to facing away from intended direction (0...1)"
     },
     {
      "type": "real",
-     "name": "ai throttle blend"
+     "name": "ai acceleration scale:(0-1): (warthogs, ghosts)# The maximum allowable change in throttle between ticks"
     },
     {
      "type": "real",
-     "name": "theoretical max speed"
+     "name": "ai throttle blend:(0-1): (dropships, sentinels)# The degree of throttle blending between one tick and the next (0 = no blending)"
     },
     {
      "type": "real",
-     "name": "error scale"
+     "name": "theoretical max speed:wu/s (warthogs, dropships, ghosts)# About how fast I can go."
+    },
+    {
+     "type": "real",
+     "name": "error scale: (warthogs, dropships)# scale on the difference between desired and actual speed, applied to throttle"
     },
     {
      "type": "useless_pad",
      "name": null,
      "definition": 8
+    },
+    {
+     "type": "explanation",
+     "name": "Combat",
+     "definition": ""
     },
     {
      "type": "angle",
@@ -2218,28 +2348,33 @@
      "definition": 12
     },
     {
-     "type": "real",
-     "name": "ai charge tight angle distance"
+     "type": "explanation",
+     "name": "Behavior",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "ai charge tight angle"
+     "name": "ai charge tight angle distance: (all vehicles)# The distance at which the tight angle criterion is used for deciding to vehicle charge"
     },
     {
      "type": "real",
-     "name": "ai charge repeat timeout"
+     "name": "ai charge tight angle:[0-1] (all vehicles)# Angle cosine within which the target must be when target is closer than tight angle distance in order to charge"
     },
     {
      "type": "real",
-     "name": "ai charge look-ahead time"
+     "name": "ai charge repeat timeout: (all vehicles)# Time delay between vehicle charges"
     },
     {
      "type": "real",
-     "name": "ai charge consider distance"
+     "name": "ai charge look-ahead time: (all vehicles)# In deciding when to abort vehicle charge, look ahead these many seconds to predict time of contact"
     },
     {
      "type": "real",
-     "name": "ai charge abort distance"
+     "name": "ai charge consider distance: (all vehicles)# Consider charging the target when it is within this range (0 = infinite distance)"
+    },
+    {
+     "type": "real",
+     "name": "ai charge abort distance: (all vehicles)# Abort the charge when the target get more than this far away (0 = never abort)"
     },
     {
      "type": "useless_pad",
@@ -2248,11 +2383,11 @@
     },
     {
      "type": "real",
-     "name": "vehicle ram timeout"
+     "name": "vehicle ram timeout#The ram behavior stops after a maximum of the given number of seconds"
     },
     {
      "type": "real",
-     "name": "ram paralysis time"
+     "name": "ram paralysis time#The ram behavior freezes the vehicle for a given number of seconds after performing the ram"
     },
     {
      "type": "useless_pad",
@@ -2261,31 +2396,31 @@
     },
     {
      "type": "real",
-     "name": "ai cover damage threshold"
+     "name": "ai cover damage threshold: (all vehicles)# Trigger a cover when recent damage is above given threshold (damage_vehicle_cover impulse)"
     },
     {
      "type": "real",
-     "name": "ai cover min distance"
+     "name": "ai cover min distance: (all vehicles)# When executing vehicle-cover, minimum distance from the target to flee to"
     },
     {
      "type": "real",
-     "name": "ai cover time"
+     "name": "ai cover time: (all vehicles)# How long to stay away from the target"
     },
     {
      "type": "real",
-     "name": "ai cover min boost distance"
+     "name": "ai cover min boost distance: (all vehicles)# Boosting allowed when distance to cover destination is greater then this."
     },
     {
      "type": "real",
-     "name": "turtling recent damage threshold"
+     "name": "turtling recent damage threshold:%#If vehicle turtling behavior is enabled, turtling is initiated if 'recent damage' surpasses the given threshold"
     },
     {
      "type": "real",
-     "name": "turtling min time"
+     "name": "turtling min time:seconds#If the vehicle turtling behavior is enabled, turtling occurs for at least the given time"
     },
     {
      "type": "real",
-     "name": "turtling timeout"
+     "name": "turtling timeout:seconds#The turtled state times out after the given number of seconds"
     },
     {
      "type": "useless_pad",
@@ -2324,7 +2459,7 @@
     },
     {
      "type": "real_bounds",
-     "name": "idle pose delay time"
+     "name": "idle pose delay time:seconds#time range for delays between idle poses"
     },
     {
      "type": "terminator",
@@ -2338,7 +2473,7 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "Character flags",
+     "name": "Character flags!",
      "definition": "Character flags"
     },
     {
@@ -2373,7 +2508,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "creature"
+     "name": "creature#Creature reference for swarm characters ONLY"
     },
     {
      "type": "useless_pad",
@@ -2434,6 +2569,11 @@
      "type": "block",
      "name": "charge properties",
      "definition": "character_charge_block"
+    },
+    {
+     "type": "explanation",
+     "name": "Danger Values",
+     "definition": "Danger values can be found in the ai-globals section of the globals tag."
     },
     {
      "type": "block",
@@ -2522,7 +2662,7 @@
     },
     {
      "type": "short_integer",
-     "name": "scatter killed count"
+     "name": "scatter killed count#After the given number of deaths, the swarm scatters"
     },
     {
      "type": "pad",
@@ -2531,11 +2671,11 @@
     },
     {
      "type": "real",
-     "name": "scatter radius"
+     "name": "scatter radius#the distance from the target that the swarm scatters"
     },
     {
      "type": "real",
-     "name": "scatter time"
+     "name": "scatter time#amount of time to remain scattered"
     },
     {
      "type": "useless_pad",
@@ -2557,19 +2697,19 @@
     },
     {
      "type": "real",
-     "name": "perlin offset scale"
+     "name": "perlin offset scale:[0-1]#amount of randomness added to creature's throttle"
     },
     {
      "type": "real_bounds",
-     "name": "offset period"
+     "name": "offset period:s#how fast the creature changes random offset to throttle"
     },
     {
      "type": "real",
-     "name": "perlin idle movement threshold"
+     "name": "perlin idle movement threshold:[0-1]#a random offset lower then given threshold is made 0. (threshold of 1 = no movement)"
     },
     {
      "type": "real",
-     "name": "perlin combat movement threshold"
+     "name": "perlin combat movement threshold:[0-1]#a random offset lower then given threshold is made 0. (threshold of 1 = no movement)"
     },
     {
      "type": "terminator",
@@ -2583,11 +2723,11 @@
    "fields": [
     {
      "type": "real",
-     "name": "look comment time"
+     "name": "look comment time:s#How long does the player look at an AI before the AI responds?"
     },
     {
      "type": "real",
-     "name": "look long comment time"
+     "name": "look long comment time:s#How long does the player look at the AI before he responds with his 'long look' comment?"
     },
     {
      "type": "terminator",
@@ -2601,7 +2741,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "weapon"
+     "name": "weapon^"
     },
     {
      "type": "useless_pad",
@@ -2625,7 +2765,7 @@
    "fields": [
     {
      "type": "long_flags",
-     "name": "Character flags",
+     "name": "Character flags!",
      "definition": "Character flags"
     },
     {
@@ -2643,7 +2783,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "creature"
+     "name": "creature#Creature reference for swarm characters ONLY"
     },
     {
      "type": "tag_reference",
@@ -2729,6 +2869,11 @@
      "definition": "character_charge_block"
     },
     {
+     "type": "explanation",
+     "name": "Danger Values",
+     "definition": "Danger values can be found in the ai-globals section of the globals tag."
+    },
+    {
      "type": "block",
      "name": "evasion properties",
      "definition": "character_evasion_block"
@@ -2810,12 +2955,12 @@
     },
     {
      "type": "block",
-     "name": "morph properties",
+     "name": "morph properties!",
      "definition": "g_null_block"
     },
     {
      "type": "block",
-     "name": "equipment definitions",
+     "name": "equipment definitions!",
      "definition": "g_null_block"
     },
     {
@@ -2835,11 +2980,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "variant name"
+     "name": "variant name^"
     },
     {
      "type": "short_integer",
-     "name": "variant index"
+     "name": "variant index*"
     },
     {
      "type": "pad",
@@ -2848,7 +2993,7 @@
     },
     {
      "type": "string_id",
-     "name": "variant designator"
+     "name": "variant designator*"
     },
     {
      "type": "terminator",
@@ -2867,11 +3012,11 @@
     },
     {
      "type": "real",
-     "name": "max distance"
+     "name": "max distance:wu/s#maximum distance from entry point that we will consider boarding"
     },
     {
      "type": "real",
-     "name": "abort distance"
+     "name": "abort distance:wu/s#give up trying to get in boarding seat if entry point is further away than this"
     },
     {
      "type": "useless_pad",
@@ -2880,7 +3025,7 @@
     },
     {
      "type": "real",
-     "name": "max speed"
+     "name": "max speed:wu/s#maximum speed at which we will consider boarding"
     },
     {
      "type": "terminator",
@@ -2904,11 +3049,11 @@
     },
     {
      "type": "real",
-     "name": "flurry damage threshold"
+     "name": "flurry damage threshold:[0..1]#when more than x damage is caused a juggernaut flurry is triggered"
     },
     {
      "type": "real",
-     "name": "flurry time"
+     "name": "flurry time:seconds#flurry lasts this long"
     },
     {
      "type": "terminator",

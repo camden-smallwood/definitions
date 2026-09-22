@@ -173,8 +173,13 @@
      "definition": "model_animation_runtime_data_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "RESULTS OF THE LAST IMPORT",
+     "definition": ""
+    },
+    {
      "type": "data",
-     "name": "last import results",
+     "name": "last import results*",
      "definition": "error_report_string_data"
     },
     {
@@ -192,6 +197,11 @@
    "guid": "00000000000000000000000000000000",
    "size": 104,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "GRAPH DATA",
+     "definition": ""
+    },
     {
      "type": "tag_reference",
      "name": "parent animation graph"
@@ -223,12 +233,12 @@
     },
     {
      "type": "word_flags",
-     "name": "animation graph flags",
+     "name": "animation graph flags*",
      "definition": "animation graph flags"
     },
     {
      "type": "short_integer",
-     "name": "animation codec pack"
+     "name": "animation codec pack*"
     },
     {
      "type": "pad",
@@ -248,21 +258,21 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_block_index",
-     "name": "next sibling node index",
+     "name": "next sibling node index*",
      "definition": "animation_graph_node_block"
     },
     {
      "type": "short_block_index",
-     "name": "first child node index",
+     "name": "first child node index*",
      "definition": "animation_graph_node_block"
     },
     {
      "type": "short_block_index",
-     "name": "parent node index",
+     "name": "parent node index*",
      "definition": "animation_graph_node_block"
     },
     {
@@ -277,15 +287,15 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "base vector"
+     "name": "base vector*"
     },
     {
      "type": "real",
-     "name": "vector range"
+     "name": "vector range*"
     },
     {
      "type": "real",
-     "name": "z_pos"
+     "name": "z_pos*"
     },
     {
      "type": "terminator",
@@ -299,26 +309,26 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_block_index",
-     "name": "next sibling node index",
+     "name": "next sibling node index*",
      "definition": "animation_graph_node_block"
     },
     {
      "type": "short_block_index",
-     "name": "first child node index",
+     "name": "first child node index*",
      "definition": "animation_graph_node_block"
     },
     {
      "type": "short_block_index",
-     "name": "parent node index",
+     "name": "parent node index*",
      "definition": "animation_graph_node_block"
     },
     {
      "type": "byte_flags",
-     "name": "model flags",
+     "name": "model flags*",
      "definition": "model flags"
     },
     {
@@ -328,15 +338,15 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "base vector"
+     "name": "base vector*"
     },
     {
      "type": "real",
-     "name": "vector range"
+     "name": "vector range*"
     },
     {
      "type": "real",
-     "name": "z_pos"
+     "name": "z_pos*"
     },
     {
      "type": "terminator",
@@ -350,7 +360,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "word_flags",
@@ -374,11 +384,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "struct",
-     "name": "aiming screen",
+     "name": "aiming screen*",
      "definition": "animation_aiming_screen_struct_2"
     },
     {
@@ -436,16 +446,16 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^"
     },
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
      "type": "char_enum",
-     "name": "frame info type",
+     "name": "frame info type*",
      "definition": "frame info type"
     },
     {
@@ -454,19 +464,19 @@
     },
     {
      "type": "char_integer",
-     "name": "node count"
+     "name": "node count*"
     },
     {
      "type": "short_integer",
-     "name": "frame count"
+     "name": "frame count*"
     },
     {
      "type": "short_integer",
-     "name": "frame size"
+     "name": "frame size*"
     },
     {
      "type": "long_integer",
-     "name": "node list checksum"
+     "name": "node list checksum*"
     },
     {
      "type": "pad",
@@ -480,7 +490,7 @@
     },
     {
      "type": "byte_flags",
-     "name": "internal flags",
+     "name": "internal flags*",
      "definition": "internal flags"
     },
     {
@@ -510,7 +520,7 @@
     },
     {
      "type": "short_integer",
-     "name": "next animation"
+     "name": "next animation*"
     },
     {
      "type": "char_enum",
@@ -519,43 +529,43 @@
     },
     {
      "type": "char_enum",
-     "name": "current compression",
+     "name": "current compression*",
      "definition": "desired compression"
     },
     {
      "type": "array",
-     "name": "node trans. flag data",
+     "name": "node trans. flag data*",
      "definition": "node trans. flag data_array"
     },
     {
      "type": "array",
-     "name": "node rotation flag data",
+     "name": "node rotation flag data*",
      "definition": "node rotation flag data_array"
     },
     {
      "type": "array",
-     "name": "node scale flag data",
+     "name": "node scale flag data*",
      "definition": "node scale flag data_array"
     },
     {
      "type": "short_integer",
-     "name": "movement_data size"
+     "name": "movement_data size*"
     },
     {
      "type": "short_integer",
-     "name": "default_data size"
+     "name": "default_data size*"
     },
     {
      "type": "long_integer",
-     "name": "uncompressed_data size"
+     "name": "uncompressed_data size*"
     },
     {
      "type": "long_integer",
-     "name": "compressed_data size"
+     "name": "compressed_data size*"
     },
     {
      "type": "data",
-     "name": "animation data",
+     "name": "animation data*",
      "definition": "animation_data_definition"
     },
     {
@@ -570,7 +580,7 @@
     },
     {
      "type": "long_integer",
-     "name": "production checksum"
+     "name": "production checksum*"
     },
     {
      "type": "terminator",
@@ -668,24 +678,24 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^"
     },
     {
      "type": "long_integer",
-     "name": "node list checksum"
+     "name": "node list checksum*"
     },
     {
      "type": "long_integer",
-     "name": "production checksum"
+     "name": "production checksum*"
     },
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
      "type": "char_enum",
-     "name": "frame info type",
+     "name": "frame info type*",
      "definition": "frame info type"
     },
     {
@@ -695,15 +705,15 @@
     },
     {
      "type": "char_integer",
-     "name": "node count"
+     "name": "node count*"
     },
     {
      "type": "short_integer",
-     "name": "frame count"
+     "name": "frame count*"
     },
     {
      "type": "byte_flags",
-     "name": "internal flags",
+     "name": "internal flags*",
      "definition": "internal flags"
     },
     {
@@ -723,7 +733,7 @@
     },
     {
      "type": "char_enum",
-     "name": "current compression",
+     "name": "current compression*",
      "definition": "desired compression"
     },
     {
@@ -740,17 +750,17 @@
     },
     {
      "type": "short_block_index",
-     "name": "parent animation",
+     "name": "parent animation*",
      "definition": "animation_pool_block"
     },
     {
      "type": "short_block_index",
-     "name": "next animation",
+     "name": "next animation*",
      "definition": "animation_pool_block"
     },
     {
      "type": "data",
-     "name": "animation data",
+     "name": "animation data*",
      "definition": "animation_data_definition"
     },
     {
@@ -765,12 +775,12 @@
     },
     {
      "type": "struct",
-     "name": "data sizes",
+     "name": "data sizes*",
      "definition": "packed_data_sizes_struct_2"
     },
     {
      "type": "long_integer",
-     "name": "import_checksum"
+     "name": "import_checksum*"
     },
     {
      "type": "terminator",
@@ -823,28 +833,28 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^"
     },
     {
      "type": "long_integer",
-     "name": "node list checksum"
+     "name": "node list checksum*"
     },
     {
      "type": "long_integer",
-     "name": "production checksum"
+     "name": "production checksum*"
     },
     {
      "type": "long_integer",
-     "name": "import_checksum"
+     "name": "import_checksum*"
     },
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
      "type": "char_enum",
-     "name": "frame info type",
+     "name": "frame info type*",
      "definition": "frame info type"
     },
     {
@@ -854,15 +864,15 @@
     },
     {
      "type": "char_integer",
-     "name": "node count"
+     "name": "node count*"
     },
     {
      "type": "short_integer",
-     "name": "frame count"
+     "name": "frame count*"
     },
     {
      "type": "byte_flags",
-     "name": "internal flags",
+     "name": "internal flags*",
      "definition": "internal flags"
     },
     {
@@ -882,7 +892,7 @@
     },
     {
      "type": "char_enum",
-     "name": "current compression",
+     "name": "current compression*",
      "definition": "desired compression"
     },
     {
@@ -899,22 +909,22 @@
     },
     {
      "type": "short_block_index",
-     "name": "parent animation",
+     "name": "parent animation*",
      "definition": "animation_pool_block"
     },
     {
      "type": "short_block_index",
-     "name": "next animation",
+     "name": "next animation*",
      "definition": "animation_pool_block"
     },
     {
      "type": "data",
-     "name": "animation data",
+     "name": "animation data*",
      "definition": "animation_data_definition"
     },
     {
      "type": "struct",
-     "name": "data sizes",
+     "name": "data sizes*",
      "definition": "packed_data_sizes_struct_2"
     },
     {
@@ -972,7 +982,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "effect"
+     "name": "effect^"
     },
     {
      "type": "word_flags",
@@ -1015,7 +1025,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "node_index"
+     "name": "node_index*"
     },
     {
      "type": "word_flags",
@@ -1024,15 +1034,15 @@
     },
     {
      "type": "real_quaternion",
-     "name": "default rotation"
+     "name": "default rotation*"
     },
     {
      "type": "real_point_3d",
-     "name": "default translation"
+     "name": "default translation*"
     },
     {
      "type": "real",
-     "name": "default scale"
+     "name": "default scale*"
     },
     {
      "type": "terminator",
@@ -1046,28 +1056,28 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^"
     },
     {
      "type": "long_integer",
-     "name": "node list checksum"
+     "name": "node list checksum*"
     },
     {
      "type": "long_integer",
-     "name": "production checksum"
+     "name": "production checksum*"
     },
     {
      "type": "long_integer",
-     "name": "import_checksum"
+     "name": "import_checksum*"
     },
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
      "type": "char_enum",
-     "name": "frame info type",
+     "name": "frame info type*",
      "definition": "frame info type"
     },
     {
@@ -1077,15 +1087,15 @@
     },
     {
      "type": "char_integer",
-     "name": "node count"
+     "name": "node count*"
     },
     {
      "type": "short_integer",
-     "name": "frame count"
+     "name": "frame count*"
     },
     {
      "type": "byte_flags",
-     "name": "internal flags",
+     "name": "internal flags*",
      "definition": "internal flags"
     },
     {
@@ -1105,7 +1115,7 @@
     },
     {
      "type": "char_enum",
-     "name": "current compression",
+     "name": "current compression*",
      "definition": "desired compression"
     },
     {
@@ -1134,22 +1144,22 @@
     },
     {
      "type": "short_block_index",
-     "name": "parent animation",
+     "name": "parent animation*",
      "definition": "animation_pool_block"
     },
     {
      "type": "short_block_index",
-     "name": "next animation",
+     "name": "next animation*",
      "definition": "animation_pool_block"
     },
     {
      "type": "data",
-     "name": "animation data",
+     "name": "animation data*",
      "definition": "animation_data_definition"
     },
     {
      "type": "struct",
-     "name": "data sizes",
+     "name": "data sizes*",
      "definition": "packed_data_sizes_struct_2"
     },
     {
@@ -1184,7 +1194,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "node_index"
+     "name": "node_index*"
     },
     {
      "type": "word_flags",
@@ -1193,7 +1203,7 @@
     },
     {
      "type": "struct",
-     "name": "orientation",
+     "name": "orientation*",
      "definition": "quantized_orientation_struct_2"
     },
     {
@@ -1208,27 +1218,27 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "rotation x"
+     "name": "rotation x*"
     },
     {
      "type": "short_integer",
-     "name": "rotation y"
+     "name": "rotation y*"
     },
     {
      "type": "short_integer",
-     "name": "rotation z"
+     "name": "rotation z*"
     },
     {
      "type": "short_integer",
-     "name": "rotation w"
+     "name": "rotation w*"
     },
     {
      "type": "real_point_3d",
-     "name": "default translation"
+     "name": "default translation*"
     },
     {
      "type": "real",
-     "name": "default scale"
+     "name": "default scale*"
     },
     {
      "type": "terminator",
@@ -1243,28 +1253,28 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^"
     },
     {
      "type": "long_integer",
-     "name": "node list checksum"
+     "name": "node list checksum*"
     },
     {
      "type": "long_integer",
-     "name": "production checksum"
+     "name": "production checksum*"
     },
     {
      "type": "long_integer",
-     "name": "import_checksum"
+     "name": "import_checksum*"
     },
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
      "type": "char_enum",
-     "name": "frame info type",
+     "name": "frame info type*",
      "definition": "frame info type"
     },
     {
@@ -1274,15 +1284,15 @@
     },
     {
      "type": "char_integer",
-     "name": "node count"
+     "name": "node count*"
     },
     {
      "type": "short_integer",
-     "name": "frame count"
+     "name": "frame count*"
     },
     {
      "type": "byte_flags",
-     "name": "internal flags",
+     "name": "internal flags*",
      "definition": "internal flags"
     },
     {
@@ -1302,7 +1312,7 @@
     },
     {
      "type": "char_enum",
-     "name": "current compression",
+     "name": "current compression*",
      "definition": "desired compression"
     },
     {
@@ -1311,19 +1321,19 @@
     },
     {
      "type": "long_integer",
-     "name": "parent graph index"
+     "name": "parent graph index!"
     },
     {
      "type": "long_integer",
-     "name": "parent graph block index"
+     "name": "parent graph block index!"
     },
     {
      "type": "long_integer",
-     "name": "parent graph block offset"
+     "name": "parent graph block offset!"
     },
     {
      "type": "short_integer",
-     "name": "parent graph starting point index"
+     "name": "parent graph starting point index!"
     },
     {
      "type": "short_integer",
@@ -1331,22 +1341,22 @@
     },
     {
      "type": "short_block_index",
-     "name": "parent animation",
+     "name": "parent animation*!",
      "definition": "animation_pool_block"
     },
     {
      "type": "short_block_index",
-     "name": "next animation",
+     "name": "next animation*!",
      "definition": "animation_pool_block"
     },
     {
      "type": "data",
-     "name": "animation data",
+     "name": "animation data*!",
      "definition": "aligned_animation_data_definition"
     },
     {
      "type": "struct",
-     "name": "data sizes",
+     "name": "data sizes*!",
      "definition": "packed_data_sizes_struct_2"
     },
     {
@@ -1381,7 +1391,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^"
     },
     {
      "type": "custom",
@@ -1389,24 +1399,24 @@
     },
     {
      "type": "long_integer",
-     "name": "node list checksum"
+     "name": "node list checksum*"
     },
     {
      "type": "long_integer",
-     "name": "production checksum"
+     "name": "production checksum*"
     },
     {
      "type": "long_integer",
-     "name": "import_checksum"
+     "name": "import_checksum*"
     },
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
      "type": "char_enum",
-     "name": "frame info type",
+     "name": "frame info type*",
      "definition": "frame info type"
     },
     {
@@ -1416,15 +1426,15 @@
     },
     {
      "type": "char_integer",
-     "name": "node count"
+     "name": "node count*"
     },
     {
      "type": "short_integer",
-     "name": "frame count"
+     "name": "frame count*"
     },
     {
      "type": "byte_flags",
-     "name": "internal flags",
+     "name": "internal flags*",
      "definition": "internal flags"
     },
     {
@@ -1444,7 +1454,7 @@
     },
     {
      "type": "char_enum",
-     "name": "current compression",
+     "name": "current compression*",
      "definition": "desired compression"
     },
     {
@@ -1511,6 +1521,11 @@
    "size": 68,
    "fields": [
     {
+     "type": "explanation",
+     "name": "GRAPH DATA",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
      "name": "parent animation graph"
     },
@@ -1521,12 +1536,12 @@
     },
     {
      "type": "byte_flags",
-     "name": "private flags",
+     "name": "private flags*",
      "definition": "animation graph flags"
     },
     {
      "type": "short_integer",
-     "name": "animation codec pack"
+     "name": "animation codec pack*"
     },
     {
      "type": "block",
@@ -1560,6 +1575,11 @@
    "size": 80,
    "fields": [
     {
+     "type": "explanation",
+     "name": "GRAPH DATA",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
      "name": "parent animation graph"
     },
@@ -1570,12 +1590,12 @@
     },
     {
      "type": "byte_flags",
-     "name": "private flags",
+     "name": "private flags*",
      "definition": "animation graph flags"
     },
     {
      "type": "short_integer",
-     "name": "animation codec pack"
+     "name": "animation codec pack*"
     },
     {
      "type": "block",
@@ -1614,9 +1634,19 @@
    "size": 36,
    "fields": [
     {
+     "type": "explanation",
+     "name": "MODE-n-STATE GRAPH",
+     "definition": ""
+    },
+    {
      "type": "block",
      "name": "modes|AABBCC",
      "definition": "animation_mode_block"
+    },
+    {
+     "type": "explanation",
+     "name": "SPECIAL CASE ANIMS",
+     "definition": ""
     },
     {
      "type": "block",
@@ -1641,7 +1671,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "block",
@@ -1665,7 +1695,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "block",
@@ -1689,7 +1719,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "block",
@@ -1733,11 +1763,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "struct",
-     "name": "animation",
+     "name": "animation*",
      "definition": "animation_index_struct_2"
     },
     {
@@ -1752,11 +1782,11 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "graph index"
+     "name": "graph index*"
     },
     {
      "type": "short_block_index",
-     "name": "animation",
+     "name": "animation*",
      "definition": "animation_pool_block"
     },
     {
@@ -1772,7 +1802,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "block",
@@ -1806,7 +1836,7 @@
    "fields": [
     {
      "type": "struct",
-     "name": "animation",
+     "name": "animation*",
      "definition": "animation_index_struct_2"
     },
     {
@@ -1821,7 +1851,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "full name"
+     "name": "full name^#name of the mode & state of the source"
     },
     {
      "type": "struct",
@@ -1845,7 +1875,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "state name"
+     "name": "state name*#name of the state"
     },
     {
      "type": "pad",
@@ -1854,11 +1884,11 @@
     },
     {
      "type": "char_integer",
-     "name": "index a"
+     "name": "index a*#first level sub-index into state"
     },
     {
      "type": "char_integer",
-     "name": "index b"
+     "name": "index b*#second level sub-index into state"
     },
     {
      "type": "terminator",
@@ -1873,11 +1903,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "full name"
+     "name": "full name^#name of the mode & state this transitions to"
     },
     {
      "type": "string_id",
-     "name": "mode"
+     "name": "mode*#name of the mode"
     },
     {
      "type": "struct",
@@ -1886,7 +1916,7 @@
     },
     {
      "type": "struct",
-     "name": "animation",
+     "name": "animation*",
      "definition": "animation_index_struct_2"
     },
     {
@@ -1901,11 +1931,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "state name"
+     "name": "state name*#name of the state"
     },
     {
      "type": "char_enum",
-     "name": "frame event link",
+     "name": "frame event link*#which frame event to link to",
      "definition": "frame event link"
     },
     {
@@ -1915,11 +1945,11 @@
     },
     {
      "type": "char_integer",
-     "name": "index a"
+     "name": "index a*#first level sub-index into state"
     },
     {
      "type": "char_integer",
-     "name": "index b"
+     "name": "index b*#second level sub-index into state"
     },
     {
      "type": "terminator",
@@ -1948,11 +1978,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "marker"
+     "name": "marker#the marker name on the object being attached"
     },
     {
      "type": "string_id",
-     "name": "attach to marker"
+     "name": "attach to marker#the marker name object (weapon, vehicle, etc.) the above marker is being attached to"
     },
     {
      "type": "terminator",
@@ -1966,11 +1996,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "struct",
-     "name": "animation",
+     "name": "animation*",
      "definition": "animation_index_struct_2"
     },
     {
@@ -1988,6 +2018,11 @@
     {
      "type": "real",
      "name": "full compression ground_depth"
+    },
+    {
+     "type": "explanation",
+     "name": "Destroyed Suspension",
+     "definition": "Only Necessary for suspensions with a destroyed state"
     },
     {
      "type": "string_id",
@@ -2017,11 +2052,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "struct",
-     "name": "animation",
+     "name": "animation*",
      "definition": "animation_index_struct_2"
     },
     {
@@ -2053,6 +2088,11 @@
    "guid": "00000000000000000000000000000000",
    "size": 88,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "RUN-TIME DATA",
+     "definition": ""
+    },
     {
      "type": "block",
      "name": "inheritence list*|BBAAAA",
@@ -2086,25 +2126,25 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "inherited graph"
+     "name": "inherited graph*"
     },
     {
      "type": "block",
-     "name": "node map",
+     "name": "node map*",
      "definition": "inherited_animation_node_map_block"
     },
     {
      "type": "block",
-     "name": "node map flags",
+     "name": "node map flags*",
      "definition": "inherited_animation_node_map_flag_block"
     },
     {
      "type": "real",
-     "name": "root z offset"
+     "name": "root z offset*"
     },
     {
      "type": "long_integer",
-     "name": "inheritance_flags"
+     "name": "inheritance_flags*"
     },
     {
      "type": "terminator",
@@ -2146,7 +2186,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "weapon name"
+     "name": "weapon name^"
     },
     {
      "type": "string_id",
@@ -2164,19 +2204,19 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "node name"
+     "name": "node name^"
     },
     {
      "type": "real_quaternion",
-     "name": "default rotation"
+     "name": "default rotation*"
     },
     {
      "type": "real_point_3d",
-     "name": "default translation"
+     "name": "default translation*"
     },
     {
      "type": "real",
-     "name": "default scale"
+     "name": "default scale*"
     },
     {
      "type": "real_point_3d",

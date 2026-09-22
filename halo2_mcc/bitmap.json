@@ -42,14 +42,29 @@
      "name": "BITMAP_GROUP_SHOW_BITMAP_CUSTOM_ID"
     },
     {
+     "type": "explanation",
+     "name": "type",
+     "definition": "Type controls bitmap 'geometry'. All dimensions must be a power of two except for SPRITES and INTERFACE BITMAPS:\n\n* 2D TEXTURES: Ordinary, 2D textures will be generated.\n* 3D TEXTURES: Volume textures will be generated from each sequence of 2D texture 'slices'.\n* CUBE MAPS: Cube maps will be generated from each consecutive set of six 2D textures in each sequence, all faces of a cube map must be square and the same size.\n* SPRITES: Sprite texture pages will be generated.\n* INTERFACE BITMAPS: Similar to 2D TEXTURES, but without mipmaps and without the power of two restriction."
+    },
+    {
      "type": "short_enum",
      "name": "type",
      "definition": "type"
     },
     {
+     "type": "explanation",
+     "name": "format",
+     "definition": "Format controls how pixels will be stored internally:\n\n* COMPRESSED WITH COLOR-KEY TRANSPARENCY: DXT1 compression, uses 4 bits per pixel. 4x4 blocks of pixels are reduced to 2 colors and interpolated, alpha channel uses color-key transparency instead of alpha from the plate (all zero-alpha pixels also have zero-color).\n* COMPRESSED WITH EXPLICIT ALPHA: DXT2/3 compression, uses 8 bits per pixel. Same as DXT1 without the color key transparency, alpha channel uses alpha from plate quantized down to 4 bits per pixel.\n* COMPRESSED WITH INTERPOLATED ALPHA: DXT4/5 compression, uses 8 bits per pixel. Same as DXT2/3, except alpha is smoother. Better for smooth alpha gradients, worse for noisy alpha.\n* 16-BIT COLOR: Uses 16 bits per pixel. Depending on the alpha channel, bitmaps are quantized to either r5g6b5 (no alpha), a1r5g5b5 (1-bit alpha), or a4r4g4b4 (>1-bit alpha).\n* 32-BIT COLOR: Uses 32 bits per pixel. Very high quality, can have alpha at no added cost. This format takes up the most memory, however. Bitmap formats are x8r8g8b8 and a8r8g8b.\n* MONOCHROME: Uses either 8 or 16 bits per pixel. Bitmap formats are a8 (alpha), y8 (intensity), ay8 (combined alpha-intensity) and a8y8 (separate alpha-intensity).\n\nNote: Height maps (a.k.a. bump maps) should use 32-bit color; this is internally converted to a palettized format which takes less memory."
+    },
+    {
      "type": "short_enum",
      "name": "format",
      "definition": "format"
+    },
+    {
+     "type": "explanation",
+     "name": "usage",
+     "definition": "Usage controls how mipmaps are generated:\n\n* ALPHA BLEND: Pixels with zero alpha are ignored in mipmaps, to prevent bleeding the transparent color. If the edges are zero alpha, the dimensions will in turn get cropped in this process.\n* DEFAULT: Downsampling works normally, as in Photoshop.\n* HEIGHT MAP: The bitmap (normally grayscale) is a height map which gets converted to a bump map. Uses <bump height> below. Alpha is passed through unmodified.\n* DETAIL MAP: Mipmap color fades to gray, controlled by <detail fade factor> below. Alpha fades to white.\n* LIGHT MAP: Generates no mipmaps. Do not use!\n* VECTOR MAP: Used mostly for special effects; pixels are treated as XYZ vectors and normalized after downsampling. Alpha is passed through unmodified."
     },
     {
      "type": "short_enum",
@@ -62,16 +77,21 @@
      "definition": "flags"
     },
     {
-     "type": "real_fraction",
-     "name": "detail fade factor"
+     "type": "explanation",
+     "name": "post-processing",
+     "definition": "These properties control how mipmaps are post-processed."
     },
     {
      "type": "real_fraction",
-     "name": "sharpen amount"
+     "name": "detail fade factor:[0,1]#0 means fade to gray by last mipmap, 1 means fade to gray by first mipmap"
+    },
+    {
+     "type": "real_fraction",
+     "name": "sharpen amount:[0,1]#sharpens mipmap after downsampling"
     },
     {
      "type": "real",
-     "name": "bump height"
+     "name": "bump height:repeats#the apparent height of the bump map above the triangle it is textured onto, in texture repeats (i.e., 1.0 would be as high as the texture is wide)"
     },
     {
      "type": "short_enum",
@@ -83,34 +103,54 @@
      "name": null
     },
     {
-     "type": "short_integer",
-     "name": "color plate width"
+     "type": "explanation",
+     "name": "color plate",
+     "definition": "The original TIFF file used to import the bitmap group."
     },
     {
      "type": "short_integer",
-     "name": "color plate height"
+     "name": "color plate width*:pixels"
+    },
+    {
+     "type": "short_integer",
+     "name": "color plate height*:pixels"
     },
     {
      "type": "data",
-     "name": "compressed color plate data",
+     "name": "compressed color plate data*",
      "definition": "color_plate_data"
     },
     {
-     "type": "data",
+     "type": "explanation",
      "name": "processed pixel data",
+     "definition": "Pixel data after being processed by the tool."
+    },
+    {
+     "type": "data",
+     "name": "processed pixel data*",
      "definition": "bitmap_pixel_data"
     },
     {
-     "type": "real",
-     "name": "blur filter size"
+     "type": "explanation",
+     "name": "miscellaneous",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "alpha bias"
+     "name": "blur filter size:[0,10] pixels#blurs the bitmap before generating mipmaps"
+    },
+    {
+     "type": "real",
+     "name": "alpha bias:[-1,1]#affects alpha mipmap generation"
     },
     {
      "type": "short_integer",
-     "name": "mipmap count"
+     "name": "mipmap count:levels#0 defaults to all levels"
+    },
+    {
+     "type": "explanation",
+     "name": "...more sprite processing",
+     "definition": "Sprite usage controls the background color of sprite plates."
     },
     {
      "type": "short_enum",
@@ -119,7 +159,12 @@
     },
     {
      "type": "short_integer",
-     "name": "sprite spacing"
+     "name": "sprite spacing*"
+    },
+    {
+     "type": "explanation",
+     "name": "...more stuff",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -128,29 +173,29 @@
     },
     {
      "type": "block",
-     "name": "sequences",
+     "name": "sequences*",
      "definition": "bitmap_group_sequence_block"
     },
     {
      "type": "block",
-     "name": "bitmaps",
+     "name": "bitmaps*",
      "definition": "bitmap_data_block"
     },
     {
      "type": "char_integer",
-     "name": "color compression quality"
+     "name": "color compression quality:[1,127]#1 means lossless, 127 means crappy!"
     },
     {
      "type": "char_integer",
-     "name": "alpha compression quality"
+     "name": "alpha compression quality:[1,127]#1 means lossless, 127 means crappy!"
     },
     {
      "type": "char_integer",
-     "name": "overlap"
+     "name": "overlap*!"
     },
     {
      "type": "char_integer",
-     "name": "color subsampling"
+     "name": "color subsampling*!"
     },
     {
      "type": "terminator",
@@ -164,15 +209,15 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_integer",
-     "name": "first bitmap index"
+     "name": "first bitmap index*"
     },
     {
      "type": "short_integer",
-     "name": "bitmap count"
+     "name": "bitmap count*"
     },
     {
      "type": "pad",
@@ -181,7 +226,7 @@
     },
     {
      "type": "block",
-     "name": "sprites",
+     "name": "sprites*",
      "definition": "bitmap_group_sprite_block"
     },
     {
@@ -196,7 +241,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "bitmap index"
+     "name": "bitmap index*"
     },
     {
      "type": "pad",
@@ -210,23 +255,23 @@
     },
     {
      "type": "real",
-     "name": "left"
+     "name": "left*"
     },
     {
      "type": "real",
-     "name": "right"
+     "name": "right*"
     },
     {
      "type": "real",
-     "name": "top"
+     "name": "top*"
     },
     {
      "type": "real",
-     "name": "bottom"
+     "name": "bottom*"
     },
     {
      "type": "real_point_2d",
-     "name": "registration point"
+     "name": "registration point*"
     },
     {
      "type": "terminator",
@@ -240,42 +285,42 @@
    "fields": [
     {
      "type": "tag",
-     "name": "signature"
+     "name": "signature*!"
     },
     {
      "type": "short_integer",
-     "name": "width"
+     "name": "width*:pixels"
     },
     {
      "type": "short_integer",
-     "name": "height"
+     "name": "height*:pixels"
     },
     {
      "type": "short_integer",
-     "name": "depth"
+     "name": "depth*:pixels#depth is 1 for 2D textures and cube maps"
     },
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type*#determines bitmap 'geometry'",
      "definition": "type_2"
     },
     {
      "type": "short_enum",
-     "name": "format",
+     "name": "format*#determines how pixels are represented internally",
      "definition": "format_2"
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_2"
     },
     {
      "type": "point_2d",
-     "name": "registration point"
+     "name": "registration point*"
     },
     {
      "type": "short_integer",
-     "name": "mipmap count"
+     "name": "mipmap count*"
     },
     {
      "type": "pad",
@@ -284,7 +329,7 @@
     },
     {
      "type": "long_integer",
-     "name": "pixels offset"
+     "name": "pixels offset*"
     },
     {
      "type": "pad",
@@ -318,19 +363,19 @@
    "fields": [
     {
      "type": "tag",
-     "name": "signature"
+     "name": "signature*!"
     },
     {
      "type": "short_integer",
-     "name": "width"
+     "name": "width*:pixels"
     },
     {
      "type": "short_integer",
-     "name": "height"
+     "name": "height*:pixels"
     },
     {
      "type": "char_integer",
-     "name": "depth"
+     "name": "depth*:pixels#depth is 1 for 2D textures and cube maps"
     },
     {
      "type": "byte_flags",
@@ -339,39 +384,39 @@
     },
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type*#determines bitmap 'geometry'",
      "definition": "type_2"
     },
     {
      "type": "short_enum",
-     "name": "format",
+     "name": "format*#determines how pixels are represented internally",
      "definition": "format_2"
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_2"
     },
     {
      "type": "point_2d",
-     "name": "registration point"
+     "name": "registration point*"
     },
     {
      "type": "short_integer",
-     "name": "mipmap count"
+     "name": "mipmap count*"
     },
     {
      "type": "char_integer",
-     "name": "lod adjust"
+     "name": "lod adjust*:postprocessed!"
     },
     {
      "type": "char_enum",
-     "name": "cache usage",
+     "name": "cache usage*:postprocessed!",
      "definition": "cache usage"
     },
     {
      "type": "long_integer",
-     "name": "pixels offset"
+     "name": "pixels offset*"
     },
     {
      "type": "skip",
@@ -444,19 +489,19 @@
    "fields": [
     {
      "type": "tag",
-     "name": "signature"
+     "name": "signature*!"
     },
     {
      "type": "short_integer",
-     "name": "width"
+     "name": "width*:pixels"
     },
     {
      "type": "short_integer",
-     "name": "height"
+     "name": "height*:pixels"
     },
     {
      "type": "char_integer",
-     "name": "depth"
+     "name": "depth*:pixels#depth is 1 for 2D textures and cube maps"
     },
     {
      "type": "byte_flags",
@@ -465,39 +510,39 @@
     },
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type*#determines bitmap 'geometry'",
      "definition": "type_2"
     },
     {
      "type": "short_enum",
-     "name": "format",
+     "name": "format*#determines how pixels are represented internally",
      "definition": "format_2"
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_2"
     },
     {
      "type": "point_2d",
-     "name": "registration point"
+     "name": "registration point*"
     },
     {
      "type": "short_integer",
-     "name": "mipmap count"
+     "name": "mipmap count*"
     },
     {
      "type": "char_integer",
-     "name": "lod adjust"
+     "name": "lod adjust*:postprocessed!"
     },
     {
      "type": "char_enum",
-     "name": "cache usage",
+     "name": "cache usage*:postprocessed!",
      "definition": "cache usage"
     },
     {
      "type": "long_integer",
-     "name": "pixels offset"
+     "name": "pixels offset*"
     },
     {
      "type": "skip",
@@ -506,7 +551,7 @@
     },
     {
      "type": "struct",
-     "name": "native bitmap info",
+     "name": "native bitmap info*!",
      "definition": "bitmap_native_info_struct_2"
     },
     {
@@ -575,16 +620,16 @@
    "fields": [
     {
      "type": "block",
-     "name": "native mipmap info",
+     "name": "native mipmap info*",
      "definition": "bitmap_native_mipmap_info_block"
     },
     {
      "type": "long_integer",
-     "name": "native size"
+     "name": "native size*"
     },
     {
      "type": "long_integer",
-     "name": "tile mode"
+     "name": "tile mode*"
     },
     {
      "type": "pointer",
@@ -603,15 +648,15 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "offset"
+     "name": "offset*"
     },
     {
      "type": "long_integer",
-     "name": "pitch row"
+     "name": "pitch row*"
     },
     {
      "type": "long_integer",
-     "name": "pitch slice"
+     "name": "pitch slice*"
     },
     {
      "type": "terminator",

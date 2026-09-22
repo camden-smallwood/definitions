@@ -18,6 +18,11 @@
    "size": 88,
    "fields": [
     {
+     "type": "explanation",
+     "name": "PATCHY FOG",
+     "definition": "Use the separate_layer_depths flag carefully, it's expensive!"
+    },
+    {
      "type": "word_flags",
      "name": "flags",
      "definition": "flags"
@@ -33,16 +38,21 @@
      "definition": 60
     },
     {
-     "type": "real_fraction",
-     "name": "rotation multiplier"
+     "type": "explanation",
+     "name": "MOVEMENT MODIFIERS",
+     "definition": ""
     },
     {
      "type": "real_fraction",
-     "name": "strafing multiplier"
+     "name": "rotation multiplier:[0,1]"
     },
     {
      "type": "real_fraction",
-     "name": "zoom multiplier"
+     "name": "strafing multiplier:[0,1]"
+    },
+    {
+     "type": "real_fraction",
+     "name": "zoom multiplier:[0,1]"
     },
     {
      "type": "useless_pad",
@@ -50,8 +60,13 @@
      "definition": 32
     },
     {
+     "type": "explanation",
+     "name": "NOISE MAP",
+     "definition": ""
+    },
+    {
      "type": "real",
-     "name": "noise map scale"
+     "name": "noise map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -59,15 +74,15 @@
     },
     {
      "type": "real",
-     "name": "noise vertical scale forward"
+     "name": "noise vertical scale forward#0 defaults to 1"
     },
     {
      "type": "real",
-     "name": "noise vertical scale up"
+     "name": "noise vertical scale up#0 defaults to 1"
     },
     {
      "type": "real",
-     "name": "noise opacity scale up"
+     "name": "noise opacity scale up#0 defaults to 1"
     },
     {
      "type": "useless_pad",
@@ -75,8 +90,13 @@
      "definition": 20
     },
     {
+     "type": "explanation",
+     "name": "ANIMATION",
+     "definition": ""
+    },
+    {
      "type": "real",
-     "name": "animation period"
+     "name": "animation period:seconds"
     },
     {
      "type": "useless_pad",
@@ -85,31 +105,31 @@
     },
     {
      "type": "real_bounds",
-     "name": "wind velocity"
+     "name": "wind velocity:world units per second"
     },
     {
      "type": "real_bounds",
-     "name": "wind period"
+     "name": "wind period:seconds#0 defaults to 1"
     },
     {
      "type": "real_fraction",
-     "name": "wind acceleration weight"
+     "name": "wind acceleration weight:[0,1]"
     },
     {
      "type": "real_fraction",
-     "name": "wind perpendicular weight"
+     "name": "wind perpendicular weight:[0,1]"
     },
     {
      "type": "real",
-     "name": "wind constant velocity x"
+     "name": "wind constant velocity x:world units per second"
     },
     {
      "type": "real",
-     "name": "wind constant velocity y"
+     "name": "wind constant velocity y:world units per second"
     },
     {
      "type": "real",
-     "name": "wind constant velocity z"
+     "name": "wind constant velocity z:world units per second"
     },
     {
      "type": "useless_pad",

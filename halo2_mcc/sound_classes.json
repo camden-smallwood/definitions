@@ -69,19 +69,19 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "max sounds per tag [1,16]"
+     "name": "max sounds per tag [1,16]#maximum number of sounds playing per individual sound tag"
     },
     {
      "type": "short_integer",
-     "name": "max sounds per object [1,16]"
+     "name": "max sounds per object [1,16]#maximum number of sounds of this type playing on an object"
     },
     {
      "type": "long_integer",
-     "name": "preemption time"
+     "name": "preemption time:ms#replaces other instances after this many milliseconds"
     },
     {
      "type": "word_flags",
-     "name": "internal flags",
+     "name": "internal flags*",
      "definition": "internal flags"
     },
     {
@@ -91,20 +91,20 @@
     },
     {
      "type": "short_integer",
-     "name": "priority"
+     "name": "priority*"
     },
     {
      "type": "short_enum",
-     "name": "cache miss mode",
+     "name": "cache miss mode*",
      "definition": "cache miss mode"
     },
     {
      "type": "real",
-     "name": "reverb gain"
+     "name": "reverb gain:dB#how much reverb applies to this sound class"
     },
     {
      "type": "real",
-     "name": "override speaker gain"
+     "name": "override speaker gain:dB"
     },
     {
      "type": "real_bounds",
@@ -116,39 +116,39 @@
     },
     {
      "type": "real_bounds",
-     "name": "gain bounds"
+     "name": "gain bounds:dB"
     },
     {
      "type": "real",
-     "name": "cutscene ducking"
+     "name": "cutscene ducking:dB"
     },
     {
      "type": "real",
-     "name": "cutscene ducking fade in time"
+     "name": "cutscene ducking fade in time:seconds"
     },
     {
      "type": "real",
-     "name": "cutscene ducking sustain time"
+     "name": "cutscene ducking sustain time:seconds#how long this lasts after the cutscene ends"
     },
     {
      "type": "real",
-     "name": "cutscene ducking fade out time"
+     "name": "cutscene ducking fade out time:seconds"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking"
+     "name": "scripted dialog ducking:dB"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking fade in time"
+     "name": "scripted dialog ducking fade in time:seconds"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking sustain time"
+     "name": "scripted dialog ducking sustain time:seconds#how long this lasts after the scripted dialog ends"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking fade out time"
+     "name": "scripted dialog ducking fade out time:seconds"
     },
     {
      "type": "real",
@@ -196,19 +196,19 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "max sounds per tag [1,16]"
+     "name": "max sounds per tag [1,16]#maximum number of sounds playing per individual sound tag"
     },
     {
      "type": "short_integer",
-     "name": "max sounds per object [1,16]"
+     "name": "max sounds per object [1,16]#maximum number of sounds of this type playing on an object"
     },
     {
      "type": "long_integer",
-     "name": "preemption time"
+     "name": "preemption time:ms#replaces other instances after this many milliseconds"
     },
     {
      "type": "word_flags",
-     "name": "internal flags",
+     "name": "internal flags*",
      "definition": "internal flags"
     },
     {
@@ -218,20 +218,20 @@
     },
     {
      "type": "short_integer",
-     "name": "priority"
+     "name": "priority*"
     },
     {
      "type": "short_enum",
-     "name": "cache miss mode",
+     "name": "cache miss mode*",
      "definition": "cache miss mode"
     },
     {
      "type": "real",
-     "name": "reverb gain"
+     "name": "reverb gain:dB#how much reverb applies to this sound class"
     },
     {
      "type": "real",
-     "name": "override speaker gain"
+     "name": "override speaker gain:dB"
     },
     {
      "type": "real_bounds",
@@ -243,39 +243,39 @@
     },
     {
      "type": "real_bounds",
-     "name": "gain bounds"
+     "name": "gain bounds:dB"
     },
     {
      "type": "real",
-     "name": "cutscene ducking"
+     "name": "cutscene ducking:dB"
     },
     {
      "type": "real",
-     "name": "cutscene ducking fade in time"
+     "name": "cutscene ducking fade in time:seconds"
     },
     {
      "type": "real",
-     "name": "cutscene ducking sustain time"
+     "name": "cutscene ducking sustain time:seconds#how long this lasts after the cutscene ends"
     },
     {
      "type": "real",
-     "name": "cutscene ducking fade out time"
+     "name": "cutscene ducking fade out time:seconds"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking"
+     "name": "scripted dialog ducking:dB"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking fade in time"
+     "name": "scripted dialog ducking fade in time:seconds"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking sustain time"
+     "name": "scripted dialog ducking sustain time:seconds#how long this lasts after the scripted dialog ends"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking fade out time"
+     "name": "scripted dialog ducking fade out time:seconds"
     },
     {
      "type": "real",
@@ -311,6 +311,11 @@
     {
      "type": "real",
      "name": "inner_silence_distance"
+    },
+    {
+     "type": "explanation",
+     "name": "low pass filter parameters",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -466,19 +471,19 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "max sounds per tag [1,16]"
+     "name": "max sounds per tag [1,16]#maximum number of sounds playing per individual sound tag"
     },
     {
      "type": "short_integer",
-     "name": "max sounds per object [1,16]"
+     "name": "max sounds per object [1,16]#maximum number of sounds of this type playing on an object"
     },
     {
      "type": "long_integer",
-     "name": "preemption time"
+     "name": "preemption time:ms#replaces other instances after this many milliseconds"
     },
     {
      "type": "word_flags",
-     "name": "internal flags",
+     "name": "internal flags*",
      "definition": "internal flags"
     },
     {
@@ -488,20 +493,20 @@
     },
     {
      "type": "short_integer",
-     "name": "priority"
+     "name": "priority*"
     },
     {
      "type": "short_enum",
-     "name": "cache miss mode",
+     "name": "cache miss mode*",
      "definition": "cache miss mode"
     },
     {
      "type": "real",
-     "name": "reverb gain"
+     "name": "reverb gain:dB#how much reverb applies to this sound class"
     },
     {
      "type": "real",
-     "name": "override speaker gain"
+     "name": "override speaker gain:dB"
     },
     {
      "type": "real_bounds",
@@ -513,39 +518,39 @@
     },
     {
      "type": "real_bounds",
-     "name": "gain bounds"
+     "name": "gain bounds:dB"
     },
     {
      "type": "real",
-     "name": "cutscene ducking"
+     "name": "cutscene ducking:dB"
     },
     {
      "type": "real",
-     "name": "cutscene ducking fade in time"
+     "name": "cutscene ducking fade in time:seconds"
     },
     {
      "type": "real",
-     "name": "cutscene ducking sustain time"
+     "name": "cutscene ducking sustain time:seconds#how long this lasts after the cutscene ends"
     },
     {
      "type": "real",
-     "name": "cutscene ducking fade out time"
+     "name": "cutscene ducking fade out time:seconds"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking"
+     "name": "scripted dialog ducking:dB"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking fade in time"
+     "name": "scripted dialog ducking fade in time:seconds"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking sustain time"
+     "name": "scripted dialog ducking sustain time:seconds#how long this lasts after the scripted dialog ends"
     },
     {
      "type": "real",
-     "name": "scripted dialog ducking fade out time"
+     "name": "scripted dialog ducking fade out time:seconds"
     },
     {
      "type": "real",
@@ -583,6 +588,11 @@
      "name": "inner_silence_distance"
     },
     {
+     "type": "explanation",
+     "name": "low pass filter parameters",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "lowpass cut off parameters",
      "definition": "sound_lowpass_struct_2"
@@ -609,19 +619,19 @@
     },
     {
      "type": "real",
-     "name": "ducking"
+     "name": "ducking:dB"
     },
     {
      "type": "real",
-     "name": "ducking fade in time"
+     "name": "ducking fade in time:seconds"
     },
     {
      "type": "real",
-     "name": "ducking sustain time"
+     "name": "ducking sustain time:seconds#how long this lasts after the sound ends"
     },
     {
      "type": "real",
-     "name": "ducking fade out time"
+     "name": "ducking fade out time:seconds"
     },
     {
      "type": "terminator",

@@ -109,7 +109,7 @@
     },
     {
      "type": "real",
-     "name": "bounding radius"
+     "name": "bounding radius:world units"
     },
     {
      "type": "real_point_3d",
@@ -122,7 +122,7 @@
     },
     {
      "type": "real",
-     "name": "acceleration scale"
+     "name": "acceleration scale:[0,+inf]#marine 1.0, grunt 1.4, elite 0.9, hunter 0.5, etc."
     },
     {
      "type": "short_enum",
@@ -151,11 +151,11 @@
     },
     {
      "type": "real",
-     "name": "dynamic light sphere radius"
+     "name": "dynamic light sphere radius#sphere to use for dynamic lights and shadows. only used if not 0"
     },
     {
      "type": "real_point_3d",
-     "name": "dynamic light sphere offset"
+     "name": "dynamic light sphere offset#only used if radius not 0"
     },
     {
      "type": "string_id",
@@ -212,44 +212,59 @@
      "definition": 16
     },
     {
-     "type": "real",
-     "name": "Apply collision damage scale"
+     "type": "explanation",
+     "name": "Applying collision damage",
+     "definition": "for things that want to cause more or less collision damage"
     },
     {
      "type": "real",
-     "name": "min game acc (default)"
+     "name": "Apply collision damage scale#0 means 1.  1 is standard scale.  Some things may want to apply more damage"
+    },
+    {
+     "type": "explanation",
+     "name": "Game collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max game acc (default)"
+     "name": "min game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min game scale (default)"
+     "name": "max game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max game scale (default)"
+     "name": "min game scale (default)#0-1"
     },
     {
      "type": "real",
-     "name": "min abs acc (default)"
+     "name": "max game scale (default)#0-1"
+    },
+    {
+     "type": "explanation",
+     "name": "Absolute collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max abs acc (default)"
+     "name": "min abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min abs scale (default)"
+     "name": "max abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max abs scale (default)"
+     "name": "min abs scale (default)#0-1"
+    },
+    {
+     "type": "real",
+     "name": "max abs scale (default)#0-1"
     },
     {
      "type": "short_integer",
-     "name": "hud text message index"
+     "name": "hud text message index!"
     },
     {
      "type": "pad",
@@ -268,7 +283,7 @@
     },
     {
      "type": "block",
-     "name": "old functions",
+     "name": "old functions!",
      "definition": "old_object_function_block"
     },
     {
@@ -278,7 +293,7 @@
     },
     {
      "type": "block",
-     "name": "predicted resources",
+     "name": "predicted resources*!",
      "definition": "predicted_resource_block"
     },
     {
@@ -298,7 +313,7 @@
     },
     {
      "type": "string_id",
-     "name": "ai type name"
+     "name": "ai type name#used for combat dialogue, etc."
     },
     {
      "type": "pad",
@@ -340,11 +355,11 @@
     },
     {
      "type": "string_id",
-     "name": "turn off with"
+     "name": "turn off with#if the specified function is off, so is this function"
     },
     {
      "type": "real",
-     "name": "min value"
+     "name": "min value#function must exceed this value (after mapping) to be active 0. means do nothing"
     },
     {
      "type": "custom",
@@ -480,7 +495,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "old_string_id",
@@ -526,7 +541,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "useless_pad",
@@ -601,7 +616,7 @@
     },
     {
      "type": "string_id",
-     "name": "variant name"
+     "name": "variant name#if empty, may be used by any model variant"
     },
     {
      "type": "terminator",
@@ -678,6 +693,11 @@
      "definition": "object_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ CREATURE $$$",
+     "definition": ""
+    },
+    {
      "type": "word_flags",
      "name": "flags",
      "definition": "flags_3"
@@ -699,15 +719,15 @@
     },
     {
      "type": "angle",
-     "name": "turning velocity maximum"
+     "name": "turning velocity maximum:degrees per second"
     },
     {
      "type": "angle",
-     "name": "turning acceleration maximum"
+     "name": "turning acceleration maximum:degrees per second squared"
     },
     {
      "type": "real_fraction",
-     "name": "casual turning modifier"
+     "name": "casual turning modifier:[0,1]"
     },
     {
      "type": "useless_pad",
@@ -716,7 +736,7 @@
     },
     {
      "type": "real",
-     "name": "autoaim width"
+     "name": "autoaim width:world units"
     },
     {
      "type": "struct",
@@ -734,7 +754,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "impact shield damage"
+     "name": "impact shield damage#if not specified, uses 'impact damage'"
     },
     {
      "type": "useless_pad",
@@ -742,8 +762,13 @@
      "definition": 32
     },
     {
+     "type": "explanation",
+     "name": "death and destruction",
+     "definition": ""
+    },
+    {
      "type": "real_bounds",
-     "name": "destroy after death time"
+     "name": "destroy after death time:seconds#if non-zero, the creature will destroy itself upon death after this much time"
     },
     {
      "type": "terminator",
@@ -799,11 +824,11 @@
     },
     {
      "type": "string_id",
-     "name": "living material name"
+     "name": "living material name#collision material used when character is alive"
     },
     {
      "type": "string_id",
-     "name": "dead material name"
+     "name": "dead material name#collision material used when character is dead"
     },
     {
      "type": "useless_pad",
@@ -836,9 +861,19 @@
      "definition": "spheres_block"
     },
     {
+     "type": "explanation",
+     "name": "ground",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "ground physics",
      "definition": "character_physics_ground_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "flying",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -846,9 +881,19 @@
      "definition": "character_physics_flying_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "dead",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "dead physics",
      "definition": "character_physics_dead_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "sentinel",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -868,11 +913,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "materials_block"
     },
     {
@@ -894,11 +939,11 @@
     },
     {
      "type": "real",
-     "name": "volume"
+     "name": "volume *"
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "skip",
@@ -907,7 +952,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "phantom",
+     "name": "phantom*",
      "definition": "phantoms_block"
     },
     {
@@ -916,11 +961,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -939,7 +984,7 @@
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "pad",
@@ -952,11 +997,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -979,7 +1024,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation i"
+     "name": "rotation i*"
     },
     {
      "type": "skip",
@@ -988,7 +1033,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation j"
+     "name": "rotation j*"
     },
     {
      "type": "skip",
@@ -997,7 +1042,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation k"
+     "name": "rotation k*"
     },
     {
      "type": "skip",
@@ -1006,7 +1051,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "translation"
+     "name": "translation*"
     },
     {
      "type": "skip",
@@ -1025,7 +1070,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "string_id",
@@ -1068,11 +1113,11 @@
     },
     {
      "type": "string_id",
-     "name": "marker name"
+     "name": "marker name#you don't need this if you're just generating effects.  If empty it defaults to the up of the object"
     },
     {
      "type": "string_id",
-     "name": "alignment marker name"
+     "name": "alignment marker name#you don't need this if you're just generating effects.  If empty it defaults to \"marker name\""
     },
     {
      "type": "pad",
@@ -1081,7 +1126,12 @@
     },
     {
      "type": "real",
-     "name": "linear dead radius"
+     "name": "linear dead radius#radius from linear motion origin in which acceleration is dead."
+    },
+    {
+     "type": "explanation",
+     "name": "Linear Motion",
+     "definition": "0 - means do nothing\nCENTER: motion towards marker position \nAXIS: motion towards marker axis, such that object is on the axis\nDIRECTION: motion along marker direction"
     },
     {
      "type": "real",
@@ -1111,6 +1161,16 @@
      "type": "pad",
      "name": "8*sizeof(real)",
      "definition": 32
+    },
+    {
+     "type": "explanation",
+     "name": "Angular Motion",
+     "definition": "0 - means do nothing\nALIGNMENT: algin objects in the phantom with the marker\nSPIN: spin the object about the marker axis"
+    },
+    {
+     "type": "explanation",
+     "name": "ANGULAR ACC NOT YET IMPLEMENTED",
+     "definition": ""
     },
     {
      "type": "real",
@@ -1160,11 +1220,16 @@
     },
     {
      "type": "string_id",
-     "name": "marker name"
+     "name": "marker name#you don't need this if you're just generating effects.  If empty it defaults to the up of the object"
     },
     {
      "type": "string_id",
-     "name": "alignment marker name"
+     "name": "alignment marker name#you don't need this if you're just generating effects.  If empty it defaults to \"marker name\""
+    },
+    {
+     "type": "explanation",
+     "name": "Linear Motion",
+     "definition": "0 - means do nothing\nCENTER: motion towards marker position \nAXIS: motion towards marker axis, such that object is on the axis\nDIRECTION: motion along marker direction"
     },
     {
      "type": "pad",
@@ -1173,11 +1238,11 @@
     },
     {
      "type": "real",
-     "name": "hookes law e"
+     "name": "hookes law e#0 if you don't want this to behave like spring.  1 is a good starting point if you do."
     },
     {
      "type": "real",
-     "name": "linear dead radius"
+     "name": "linear dead radius#radius from linear motion origin in which acceleration is dead."
     },
     {
      "type": "real",
@@ -1209,8 +1274,13 @@
      "definition": 28
     },
     {
+     "type": "explanation",
+     "name": "Angular Motion",
+     "definition": "0 - means do nothing\nALIGNMENT: algin objects in the phantom with the marker\nSPIN: spin the object about the marker axis"
+    },
+    {
      "type": "real",
-     "name": "alignment hookes law e"
+     "name": "alignment hookes law e#0 if you don't want this to behave like spring.  1 is a good starting point if you do."
     },
     {
      "type": "real",
@@ -1241,11 +1311,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1276,11 +1346,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1309,11 +1379,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "materials_block"
     },
     {
@@ -1335,11 +1405,11 @@
     },
     {
      "type": "real",
-     "name": "volume"
+     "name": "volume *"
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "skip",
@@ -1348,7 +1418,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "phantom",
+     "name": "phantom*",
      "definition": "phantoms_block"
     },
     {
@@ -1357,11 +1427,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1380,7 +1450,7 @@
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "pad",
@@ -1389,7 +1459,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "bottom"
+     "name": "bottom*"
     },
     {
      "type": "skip",
@@ -1398,7 +1468,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "top"
+     "name": "top*"
     },
     {
      "type": "skip",
@@ -1417,23 +1487,23 @@
    "fields": [
     {
      "type": "angle",
-     "name": "maximum slope angle"
+     "name": "maximum slope angle:degrees"
     },
     {
      "type": "angle",
-     "name": "downhill falloff angle"
+     "name": "downhill falloff angle:degrees"
     },
     {
      "type": "angle",
-     "name": "downhill cutoff angle"
+     "name": "downhill cutoff angle:degrees"
     },
     {
      "type": "angle",
-     "name": "uphill falloff angle"
+     "name": "uphill falloff angle:degrees"
     },
     {
      "type": "angle",
-     "name": "uphill cutoff angle"
+     "name": "uphill cutoff angle:degrees"
     },
     {
      "type": "useless_pad",
@@ -1476,47 +1546,47 @@
    "fields": [
     {
      "type": "angle",
-     "name": "bank angle"
+     "name": "bank angle:degrees#angle at which we bank left/right when sidestepping or turning while moving forwards"
     },
     {
      "type": "real",
-     "name": "bank apply time"
+     "name": "bank apply time:seconds#time it takes us to apply a bank"
     },
     {
      "type": "real",
-     "name": "bank decay time"
+     "name": "bank decay time:seconds#time it takes us to recover from a bank"
     },
     {
      "type": "real",
-     "name": "pitch ratio"
+     "name": "pitch ratio#amount that we pitch up/down when moving up or down"
     },
     {
      "type": "real",
-     "name": "max velocity"
+     "name": "max velocity:world units per second#max velocity when not crouching"
     },
     {
      "type": "real",
-     "name": "max sidestep velocity"
+     "name": "max sidestep velocity:world units per second#max sideways or up/down velocity when not crouching"
     },
     {
      "type": "real",
-     "name": "acceleration"
+     "name": "acceleration:world units per second squared"
     },
     {
      "type": "real",
-     "name": "deceleration"
+     "name": "deceleration:world units per second squared"
     },
     {
      "type": "angle",
-     "name": "angular velocity maximum"
+     "name": "angular velocity maximum:degrees per second#turn rate"
     },
     {
      "type": "angle",
-     "name": "angular acceleration maximum"
+     "name": "angular acceleration maximum:degrees per second squared#turn acceleration rate"
     },
     {
      "type": "real",
-     "name": "crouch velocity modifier"
+     "name": "crouch velocity modifier:[0,1]#how much slower we fly if crouching (zero = same speed)"
     },
     {
      "type": "useless_pad",

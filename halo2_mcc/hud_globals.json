@@ -53,6 +53,11 @@
    "size": 1364,
    "fields": [
     {
+     "type": "explanation",
+     "name": "Messaging parameters",
+     "definition": ""
+    },
+    {
      "type": "short_enum",
      "name": "anchor",
      "definition": "anchor"
@@ -96,11 +101,11 @@
     },
     {
      "type": "tag_reference",
-     "name": "obsolete1"
+     "name": "obsolete1!"
     },
     {
      "type": "tag_reference",
-     "name": "obsolete2"
+     "name": "obsolete2!"
     },
     {
      "type": "real",
@@ -124,20 +129,25 @@
     },
     {
      "type": "tag_reference",
-     "name": "item message text"
+     "name": "item message text!"
     },
     {
      "type": "tag_reference",
-     "name": "icon bitmap"
+     "name": "icon bitmap!"
     },
     {
      "type": "tag_reference",
-     "name": "alternate icon text"
+     "name": "alternate icon text!"
     },
     {
      "type": "block",
-     "name": "button icons",
+     "name": "button icons!",
      "definition": "hud_button_icon_block"
+    },
+    {
+     "type": "explanation",
+     "name": "HUD HELP TEXT COLOR",
+     "definition": ""
     },
     {
      "type": "argb_color",
@@ -153,7 +163,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -166,7 +176,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -178,8 +188,18 @@
      "definition": 4
     },
     {
+     "type": "explanation",
+     "name": "Other hud messaging data",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
-     "name": "hud messages"
+     "name": "hud messages!"
+    },
+    {
+     "type": "explanation",
+     "name": "Objective colors",
+     "definition": ""
     },
     {
      "type": "argb_color",
@@ -195,7 +215,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -208,7 +228,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -221,6 +241,11 @@
     {
      "type": "short_integer",
      "name": "fade ticks"
+    },
+    {
+     "type": "explanation",
+     "name": "Waypoint parameters",
+     "definition": "The offset values are how much the waypoint rectangle border is offset from the safe camera bounds"
     },
     {
      "type": "real",
@@ -258,13 +283,23 @@
      "definition": 80
     },
     {
+     "type": "explanation",
+     "name": "Multiplayer parameters!",
+     "definition": ""
+    },
+    {
      "type": "real",
-     "name": "hud scale in multiplayer"
+     "name": "hud scale in multiplayer!"
     },
     {
      "type": "pad",
      "name": "64*sizeof(long)",
      "definition": 256
+    },
+    {
+     "type": "explanation",
+     "name": "Hud globals",
+     "definition": ""
     },
     {
      "type": "pad",
@@ -277,11 +312,11 @@
     },
     {
      "type": "real",
-     "name": "motion sensor velocity sensitivity"
+     "name": "motion sensor velocity sensitivity#how fast something moves to show up on the motion sensor"
     },
     {
      "type": "real",
-     "name": "motion sensor scale [DON'T TOUCH EVER]"
+     "name": "motion sensor scale [DON'T TOUCH EVER]*!"
     },
     {
      "type": "rectangle_2d",
@@ -293,20 +328,25 @@
      "definition": 44
     },
     {
-     "type": "short_integer",
-     "name": "top offset"
+     "type": "explanation",
+     "name": "Hud damage indicators!",
+     "definition": ""
     },
     {
      "type": "short_integer",
-     "name": "bottom offset"
+     "name": "top offset!"
     },
     {
      "type": "short_integer",
-     "name": "left offset"
+     "name": "bottom offset!"
     },
     {
      "type": "short_integer",
-     "name": "right offset"
+     "name": "left offset!"
+    },
+    {
+     "type": "short_integer",
+     "name": "right offset!"
     },
     {
      "type": "pad",
@@ -315,24 +355,34 @@
     },
     {
      "type": "tag_reference",
-     "name": "indicator bitmap"
+     "name": "indicator bitmap!"
     },
     {
      "type": "short_integer",
-     "name": "sequence index"
+     "name": "sequence index!"
     },
     {
      "type": "short_integer",
-     "name": "multiplayer sequence index"
+     "name": "multiplayer sequence index!"
     },
     {
      "type": "argb_color",
-     "name": "color"
+     "name": "color!"
     },
     {
      "type": "pad",
      "name": "4*sizeof(long)",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "Hud timer definitions",
+     "definition": ""
+    },
+    {
+     "type": "explanation",
+     "name": "Not much time left flash color",
+     "definition": ""
     },
     {
      "type": "argb_color",
@@ -348,7 +398,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -361,7 +411,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -373,6 +423,11 @@
      "definition": 4
     },
     {
+     "type": "explanation",
+     "name": "Time out flash color",
+     "definition": ""
+    },
+    {
      "type": "argb_color",
      "name": "default color"
     },
@@ -386,7 +441,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -399,7 +454,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -417,23 +472,28 @@
     },
     {
      "type": "tag_reference",
-     "name": "carnage report bitmap"
+     "name": "carnage report bitmap!"
+    },
+    {
+     "type": "explanation",
+     "name": "Hud crap that wouldn't fit anywhere else",
+     "definition": ""
     },
     {
      "type": "short_integer",
-     "name": "loading begin text"
+     "name": "loading begin text!"
     },
     {
      "type": "short_integer",
-     "name": "loading end text"
+     "name": "loading end text!"
     },
     {
      "type": "short_integer",
-     "name": "checkpoint begin text"
+     "name": "checkpoint begin text!"
     },
     {
      "type": "short_integer",
-     "name": "checkpoint end text"
+     "name": "checkpoint end text!"
     },
     {
      "type": "tag_reference",
@@ -461,11 +521,11 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "sequence index"
+     "name": "sequence index#sequence index into the global hud icon bitmap"
     },
     {
      "type": "short_integer",
-     "name": "width offset"
+     "name": "width offset#extra spacing beyond bitmap width for text alignment"
     },
     {
      "type": "point_2d",
@@ -500,7 +560,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "pad",
@@ -713,7 +773,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "chief sound"
+     "name": "chief sound^"
     },
     {
      "type": "long_flags",
@@ -740,35 +800,35 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "display string"
+     "name": "display string#comes out of the HUD text globals"
     },
     {
      "type": "string_id",
-     "name": "display string2"
+     "name": "display string2#comes out of the HUD text globals, used for grouped prompt"
     },
     {
      "type": "string_id",
-     "name": "display string3"
+     "name": "display string3#comes out of the HUD text globals, used for ungrouped prompt"
     },
     {
      "type": "short_integer",
-     "name": "max display time"
+     "name": "max display time#how long the message can be on screen before being hidden"
     },
     {
      "type": "short_integer",
-     "name": "display count"
+     "name": "display count#how many times a training message will get displayed (0-3 only!)"
     },
     {
      "type": "short_integer",
-     "name": "dissapear delay"
+     "name": "dissapear delay#how long a displayed but untriggered message stays up"
     },
     {
      "type": "short_integer",
-     "name": "redisplay delay"
+     "name": "redisplay delay#how long after display this message will stay hidden"
     },
     {
      "type": "real",
-     "name": "display delay (s)"
+     "name": "display delay (s)#how long the event can be triggered before it's displayed"
     },
     {
      "type": "word_flags",

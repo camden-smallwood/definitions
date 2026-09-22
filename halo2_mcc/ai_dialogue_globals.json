@@ -109,7 +109,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -117,7 +117,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -136,12 +136,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -166,7 +166,7 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "pad",
@@ -175,27 +175,27 @@
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "short_enum",
@@ -209,11 +209,11 @@
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -278,7 +278,7 @@
     },
     {
      "type": "short_integer",
-     "name": "vocalization index (post process)"
+     "name": "vocalization index (post process)*"
     },
     {
      "type": "short_enum",
@@ -287,7 +287,7 @@
     },
     {
      "type": "short_integer",
-     "name": "dialogue index (import)"
+     "name": "dialogue index (import)*"
     },
     {
      "type": "terminator",
@@ -301,7 +301,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -309,7 +309,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -328,12 +328,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -358,7 +358,7 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "pad",
@@ -367,27 +367,27 @@
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "short_enum",
@@ -401,11 +401,11 @@
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -461,7 +461,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -469,7 +469,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -488,12 +488,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -518,7 +518,7 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "pad",
@@ -527,27 +527,27 @@
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "short_enum",
@@ -561,11 +561,11 @@
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -621,7 +621,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -629,7 +629,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -648,12 +648,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -678,7 +678,7 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "pad",
@@ -687,27 +687,27 @@
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "short_enum",
@@ -721,11 +721,11 @@
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -781,7 +781,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -789,7 +789,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -808,12 +808,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -838,7 +838,7 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "pad",
@@ -847,27 +847,27 @@
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "short_enum",
@@ -881,11 +881,11 @@
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -941,7 +941,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -949,7 +949,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -968,12 +968,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -998,7 +998,7 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "pad",
@@ -1007,27 +1007,27 @@
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "short_enum",
@@ -1041,11 +1041,11 @@
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -1101,7 +1101,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -1109,7 +1109,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -1123,12 +1123,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -1153,39 +1153,39 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -1245,7 +1245,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -1253,7 +1253,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -1267,12 +1267,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -1297,39 +1297,39 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -1375,7 +1375,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -1383,7 +1383,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -1397,12 +1397,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -1427,39 +1427,39 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -1505,7 +1505,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -1513,7 +1513,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -1527,12 +1527,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -1557,39 +1557,39 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -1635,7 +1635,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -1643,7 +1643,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -1657,12 +1657,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -1687,39 +1687,39 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -1765,7 +1765,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "vocalization"
+     "name": "vocalization^"
     },
     {
      "type": "string_id",
@@ -1773,7 +1773,7 @@
     },
     {
      "type": "short_integer",
-     "name": "parent index"
+     "name": "parent index*"
     },
     {
      "type": "short_enum",
@@ -1787,12 +1787,12 @@
     },
     {
      "type": "short_enum",
-     "name": "glance behavior",
+     "name": "glance behavior#how does the speaker of this vocalization direct his gaze?",
      "definition": "glance behavior"
     },
     {
      "type": "short_enum",
-     "name": "glance recipient behavior",
+     "name": "glance recipient behavior#how does someone who hears me behave?",
      "definition": "glance behavior"
     },
     {
@@ -1817,39 +1817,39 @@
     },
     {
      "type": "real",
-     "name": "sound repetition delay"
+     "name": "sound repetition delay:minutes#Minimum delay time between playing the same permutation"
     },
     {
      "type": "real",
-     "name": "allowable queue delay"
+     "name": "allowable queue delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "pre voc. delay"
+     "name": "pre voc. delay:seconds#How long to wait to actually start the vocalization"
     },
     {
      "type": "real",
-     "name": "notification delay"
+     "name": "notification delay:seconds#How long into the vocalization the AI should be notified"
     },
     {
      "type": "real",
-     "name": "post voc. delay"
+     "name": "post voc. delay:seconds#How long speech is suppressed in the speaking unit after vocalizing"
     },
     {
      "type": "real",
-     "name": "repeat delay"
+     "name": "repeat delay:seconds#How long before the same vocalization can be repeated"
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight:[0-1]#Inherent weight of this vocalization"
     },
     {
      "type": "real",
-     "name": "speaker freeze time"
+     "name": "speaker freeze time#speaker won't move for the given amount of time"
     },
     {
      "type": "real",
-     "name": "listener freeze time"
+     "name": "listener freeze time#listener won't move for the given amount of time (from start of vocalization)"
     },
     {
      "type": "short_enum",
@@ -1918,7 +1918,7 @@
     },
     {
      "type": "short_enum",
-     "name": "listener/target",
+     "name": "listener/target#who/what am I speaking to/of?",
      "definition": "speaker type"
     },
     {
@@ -1933,7 +1933,7 @@
     },
     {
      "type": "short_enum",
-     "name": "hostility",
+     "name": "hostility#The relationship between the subject and the cause",
      "definition": "hostility"
     },
     {
@@ -1943,7 +1943,7 @@
     },
     {
      "type": "short_enum",
-     "name": "danger level",
+     "name": "danger level#Speaker must have danger level of at least this much",
      "definition": "danger level"
     },
     {
@@ -1982,7 +1982,7 @@
     },
     {
      "type": "short_enum",
-     "name": "spatial relation",
+     "name": "spatial relation#with respect to the subject, the cause is ...",
      "definition": "spatial relation"
     },
     {
@@ -2016,11 +2016,11 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "start index (postprocess)"
+     "name": "start index (postprocess)*"
     },
     {
      "type": "short_integer",
-     "name": "length (postprocess)"
+     "name": "length (postprocess)*"
     },
     {
      "type": "terminator",
@@ -2034,7 +2034,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "involuntary vocalization index"
+     "name": "involuntary vocalization index*"
     },
     {
      "type": "pad",

@@ -77,11 +77,11 @@
     },
     {
      "type": "real",
-     "name": "render model scale"
+     "name": "render model scale#multiplier to scale the model's geometry up or down by (zero defaults to 'standard', 0.03)"
     },
     {
      "type": "real",
-     "name": "movement scale"
+     "name": "movement scale#how much the sky moves to remain centered on the player (zero defaults to 1.0, which means no parallax)"
     },
     {
      "type": "block",
@@ -89,8 +89,13 @@
      "definition": "sky_cubemap_block"
     },
     {
+     "type": "explanation",
+     "name": "AMBIENT LIGHT",
+     "definition": ""
+    },
+    {
      "type": "real_rgb_color",
-     "name": "indoor ambient color"
+     "name": "indoor ambient color#the indoor ambient light color"
     },
     {
      "type": "pad",
@@ -99,16 +104,21 @@
     },
     {
      "type": "real_rgb_color",
-     "name": "outdoor ambient color"
+     "name": "outdoor ambient color#the indoor ambient light color"
     },
     {
      "type": "pad",
      "name": "sizeof(real)",
      "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "FOG",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "fog spread distance"
+     "name": "fog spread distance:world units#how far fog spreads into adjacent clusters"
     },
     {
      "type": "block",
@@ -131,16 +141,21 @@
      "definition": "sky_patchy_fog_block"
     },
     {
-     "type": "real_fraction",
-     "name": "amount"
+     "type": "explanation",
+     "name": "BLOOM OVERRIDE",
+     "definition": ""
     },
     {
      "type": "real_fraction",
-     "name": "threshold"
+     "name": "amount:[0,1]"
     },
     {
      "type": "real_fraction",
-     "name": "brightness"
+     "name": "threshold:[0,1]"
+    },
+    {
+     "type": "real_fraction",
+     "name": "brightness:[0,1]"
     },
     {
      "type": "real",
@@ -152,17 +167,22 @@
      "definition": "sky_light_block"
     },
     {
+     "type": "explanation",
+     "name": "ROTATION",
+     "definition": ""
+    },
+    {
      "type": "angle",
      "name": "global sky rotation"
     },
     {
      "type": "block",
-     "name": "shader functions",
+     "name": "shader functions!",
      "definition": "sky_shader_function_block"
     },
     {
      "type": "block",
-     "name": "animations",
+     "name": "animations!",
      "definition": "sky_animation_block"
     },
     {
@@ -186,11 +206,11 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "cubemap reference"
+     "name": "cubemap reference^"
     },
     {
      "type": "real",
-     "name": "power scale"
+     "name": "power scale#0 defaults to 1"
     },
     {
      "type": "terminator",
@@ -208,15 +228,15 @@
     },
     {
      "type": "real_fraction",
-     "name": "maximum density"
+     "name": "maximum density:[0,1]#fog density is clamped to this value"
     },
     {
      "type": "real",
-     "name": "start distance"
+     "name": "start distance:world units#before this distance there is no fog"
     },
     {
      "type": "real",
-     "name": "opaque distance"
+     "name": "opaque distance:world units#the fog becomes opaque (maximum density) at this distance from the viewer"
     },
     {
      "type": "terminator",
@@ -234,7 +254,7 @@
     },
     {
      "type": "real_fraction",
-     "name": "density"
+     "name": "density:[0,1]#fog density is clamped to this value"
     },
     {
      "type": "terminator",
@@ -257,11 +277,11 @@
     },
     {
      "type": "fraction_bounds",
-     "name": "density"
+     "name": "density:[0,1]"
     },
     {
      "type": "real_bounds",
-     "name": "distance"
+     "name": "distance:world units"
     },
     {
      "type": "pad",
@@ -301,7 +321,7 @@
     },
     {
      "type": "block",
-     "name": "fog opposite",
+     "name": "fog opposite#fog from the opposite direction",
      "definition": "sky_light_fog_block"
     },
     {
@@ -325,31 +345,36 @@
     },
     {
      "type": "real_fraction",
-     "name": "maximum density"
+     "name": "maximum density:[0,1]#fog density is clamped to this value"
     },
     {
      "type": "real",
-     "name": "start distance"
+     "name": "start distance:world units#before this distance there is no fog"
     },
     {
      "type": "real",
-     "name": "opaque distance"
+     "name": "opaque distance:world units#the fog becomes opaque (maximum density) at this distance from the viewer"
+    },
+    {
+     "type": "explanation",
+     "name": "FOG INFLUENCES",
+     "definition": ""
     },
     {
      "type": "angle_bounds",
-     "name": "cone"
+     "name": "cone:degrees"
     },
     {
      "type": "real_fraction",
-     "name": "atmospheric fog influence"
+     "name": "atmospheric fog influence:[0,1]"
     },
     {
      "type": "real_fraction",
-     "name": "secondary fog influence"
+     "name": "secondary fog influence:[0,1]"
     },
     {
      "type": "real_fraction",
-     "name": "sky fog influence"
+     "name": "sky fog influence:[0,1]"
     },
     {
      "type": "terminator",
@@ -368,15 +393,15 @@
     },
     {
      "type": "real_rgb_color",
-     "name": "color"
+     "name": "color#light color"
     },
     {
      "type": "real",
-     "name": "power"
+     "name": "power:[0,+inf]#light power from 0 to infinity"
     },
     {
      "type": "real",
-     "name": "test distance"
+     "name": "test distance:world units#the length of the ray for shadow testing"
     },
     {
      "type": "pad",
@@ -385,7 +410,7 @@
     },
     {
      "type": "angle",
-     "name": "diameter"
+     "name": "diameter:degrees#angular diameter of the light source in the sky"
     },
     {
      "type": "terminator",
@@ -404,7 +429,7 @@
     },
     {
      "type": "string",
-     "name": "global function name"
+     "name": "global function name^#the global function that controls this shader value"
     },
     {
      "type": "terminator",
@@ -418,7 +443,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "animation index"
+     "name": "animation index#the index of the animation in the animation graph"
     },
     {
      "type": "pad",
@@ -427,7 +452,7 @@
     },
     {
      "type": "real",
-     "name": "period"
+     "name": "period:seconds"
     },
     {
      "type": "pad",

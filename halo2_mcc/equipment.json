@@ -89,7 +89,7 @@
     },
     {
      "type": "real",
-     "name": "bounding radius"
+     "name": "bounding radius:world units"
     },
     {
      "type": "real_point_3d",
@@ -102,7 +102,7 @@
     },
     {
      "type": "real",
-     "name": "acceleration scale"
+     "name": "acceleration scale:[0,+inf]#marine 1.0, grunt 1.4, elite 0.9, hunter 0.5, etc."
     },
     {
      "type": "short_enum",
@@ -131,11 +131,11 @@
     },
     {
      "type": "real",
-     "name": "dynamic light sphere radius"
+     "name": "dynamic light sphere radius#sphere to use for dynamic lights and shadows. only used if not 0"
     },
     {
      "type": "real_point_3d",
-     "name": "dynamic light sphere offset"
+     "name": "dynamic light sphere offset#only used if radius not 0"
     },
     {
      "type": "string_id",
@@ -192,44 +192,59 @@
      "definition": 16
     },
     {
-     "type": "real",
-     "name": "Apply collision damage scale"
+     "type": "explanation",
+     "name": "Applying collision damage",
+     "definition": "for things that want to cause more or less collision damage"
     },
     {
      "type": "real",
-     "name": "min game acc (default)"
+     "name": "Apply collision damage scale#0 means 1.  1 is standard scale.  Some things may want to apply more damage"
+    },
+    {
+     "type": "explanation",
+     "name": "Game collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max game acc (default)"
+     "name": "min game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min game scale (default)"
+     "name": "max game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max game scale (default)"
+     "name": "min game scale (default)#0-1"
     },
     {
      "type": "real",
-     "name": "min abs acc (default)"
+     "name": "max game scale (default)#0-1"
+    },
+    {
+     "type": "explanation",
+     "name": "Absolute collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max abs acc (default)"
+     "name": "min abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min abs scale (default)"
+     "name": "max abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max abs scale (default)"
+     "name": "min abs scale (default)#0-1"
+    },
+    {
+     "type": "real",
+     "name": "max abs scale (default)#0-1"
     },
     {
      "type": "short_integer",
-     "name": "hud text message index"
+     "name": "hud text message index!"
     },
     {
      "type": "pad",
@@ -248,7 +263,7 @@
     },
     {
      "type": "block",
-     "name": "old functions",
+     "name": "old functions!",
      "definition": "old_object_function_block"
     },
     {
@@ -258,7 +273,7 @@
     },
     {
      "type": "block",
-     "name": "predicted resources",
+     "name": "predicted resources*!",
      "definition": "predicted_resource_block"
     },
     {
@@ -278,7 +293,7 @@
     },
     {
      "type": "string_id",
-     "name": "ai type name"
+     "name": "ai type name#used for combat dialogue, etc."
     },
     {
      "type": "pad",
@@ -320,11 +335,11 @@
     },
     {
      "type": "string_id",
-     "name": "turn off with"
+     "name": "turn off with#if the specified function is off, so is this function"
     },
     {
      "type": "real",
-     "name": "min value"
+     "name": "min value#function must exceed this value (after mapping) to be active 0. means do nothing"
     },
     {
      "type": "custom",
@@ -460,7 +475,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "old_string_id",
@@ -506,7 +521,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "useless_pad",
@@ -581,7 +596,7 @@
     },
     {
      "type": "string_id",
-     "name": "variant name"
+     "name": "variant name#if empty, may be used by any model variant"
     },
     {
      "type": "terminator",
@@ -658,6 +673,11 @@
      "definition": "object_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ ITEM $$$",
+     "definition": ""
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags_3"
@@ -677,6 +697,11 @@
     {
      "type": "real",
      "name": "campaign on-ground scale"
+    },
+    {
+     "type": "explanation",
+     "name": "NEW hud messages",
+     "definition": "everything you need to display stuff"
     },
     {
      "type": "string_id",
@@ -725,7 +750,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED*"
     },
     {
      "type": "tag_reference",
@@ -747,7 +772,7 @@
     },
     {
      "type": "real_bounds",
-     "name": "detonation delay"
+     "name": "detonation delay:seconds"
     },
     {
      "type": "tag_reference",
@@ -769,7 +794,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "bitmap"
+     "name": "bitmap^"
     },
     {
      "type": "terminator",
@@ -798,7 +823,7 @@
     },
     {
      "type": "real",
-     "name": "powerup time"
+     "name": "powerup time:seconds"
     },
     {
      "type": "tag_reference",

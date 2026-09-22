@@ -42,6 +42,11 @@
      "name": "GRENADE_HUD_INTERFACE_VIEW_CUSTOM_ID"
     },
     {
+     "type": "explanation",
+     "name": "Grenade hud screen alignment",
+     "definition": ""
+    },
+    {
      "type": "short_enum",
      "name": "anchor",
      "definition": "anchor"
@@ -57,92 +62,9 @@
      "definition": 32
     },
     {
-     "type": "point_2d",
-     "name": "anchor offset"
-    },
-    {
-     "type": "real",
-     "name": "width scale"
-    },
-    {
-     "type": "real",
-     "name": "height scale"
-    },
-    {
-     "type": "word_flags",
-     "name": "scaling flags",
-     "definition": "scaling flags"
-    },
-    {
-     "type": "pad",
-     "name": "sizeof(short)",
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": "sizeof(long)*5",
-     "definition": 20
-    },
-    {
-     "type": "tag_reference",
-     "name": "interface bitmap"
-    },
-    {
-     "type": "argb_color",
-     "name": "default color"
-    },
-    {
-     "type": "argb_color",
-     "name": "flashing color"
-    },
-    {
-     "type": "real",
-     "name": "flash period"
-    },
-    {
-     "type": "real",
-     "name": "flash delay"
-    },
-    {
-     "type": "short_integer",
-     "name": "number of flashes"
-    },
-    {
-     "type": "word_flags",
-     "name": "flash flags",
-     "definition": "flash flags"
-    },
-    {
-     "type": "real",
-     "name": "flash length"
-    },
-    {
-     "type": "argb_color",
-     "name": "disabled color"
-    },
-    {
-     "type": "pad",
-     "name": "1*sizeof(long)",
-     "definition": 4
-    },
-    {
-     "type": "short_integer",
-     "name": "sequence index"
-    },
-    {
-     "type": "pad",
-     "name": "1*sizeof(short)",
-     "definition": 2
-    },
-    {
-     "type": "block",
-     "name": "multitex overlay",
-     "definition": "global_hud_multitexture_overlay_definition"
-    },
-    {
-     "type": "pad",
-     "name": "1*sizeof(long)",
-     "definition": 4
+     "type": "explanation",
+     "name": "Grenade hud background",
+     "definition": ""
     },
     {
      "type": "point_2d",
@@ -189,7 +111,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -202,7 +124,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -231,6 +153,104 @@
      "type": "pad",
      "name": "1*sizeof(long)",
      "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "Total grenades background",
+     "definition": ""
+    },
+    {
+     "type": "point_2d",
+     "name": "anchor offset"
+    },
+    {
+     "type": "real",
+     "name": "width scale"
+    },
+    {
+     "type": "real",
+     "name": "height scale"
+    },
+    {
+     "type": "word_flags",
+     "name": "scaling flags",
+     "definition": "scaling flags"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)*5",
+     "definition": 20
+    },
+    {
+     "type": "tag_reference",
+     "name": "interface bitmap"
+    },
+    {
+     "type": "argb_color",
+     "name": "default color"
+    },
+    {
+     "type": "argb_color",
+     "name": "flashing color"
+    },
+    {
+     "type": "real",
+     "name": "flash period"
+    },
+    {
+     "type": "real",
+     "name": "flash delay#time between flashes"
+    },
+    {
+     "type": "short_integer",
+     "name": "number of flashes"
+    },
+    {
+     "type": "word_flags",
+     "name": "flash flags",
+     "definition": "flash flags"
+    },
+    {
+     "type": "real",
+     "name": "flash length#time of each flash"
+    },
+    {
+     "type": "argb_color",
+     "name": "disabled color"
+    },
+    {
+     "type": "pad",
+     "name": "1*sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "short_integer",
+     "name": "sequence index"
+    },
+    {
+     "type": "pad",
+     "name": "1*sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "block",
+     "name": "multitex overlay",
+     "definition": "global_hud_multitexture_overlay_definition"
+    },
+    {
+     "type": "pad",
+     "name": "1*sizeof(long)",
+     "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "Total grenades numbers",
+     "definition": ""
     },
     {
      "type": "point_2d",
@@ -273,7 +293,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -286,7 +306,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -330,6 +350,11 @@
      "definition": 2
     },
     {
+     "type": "explanation",
+     "name": "Total grenades overlays",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
      "name": "Overlay bitmap"
     },
@@ -349,12 +374,17 @@
      "definition": 68
     },
     {
-     "type": "short_integer",
-     "name": "sequence index"
+     "type": "explanation",
+     "name": "Messaging information",
+     "definition": ""
     },
     {
      "type": "short_integer",
-     "name": "width offset"
+     "name": "sequence index#sequence index into the global hud icon bitmap"
+    },
+    {
+     "type": "short_integer",
+     "name": "width offset#extra spacing beyond bitmap width for text alignment"
     },
     {
      "type": "point_2d",
@@ -417,6 +447,11 @@
      "definition": 32
     },
     {
+     "type": "explanation",
+     "name": "anchors",
+     "definition": "where you want the origin of the texture.\n*\"texture\" uses the texture coordinates supplied\n*\"screen\" uses the origin of the screen as the origin of the texture"
+    },
+    {
      "type": "short_enum",
      "name": "primary anchor",
      "definition": "primary anchor"
@@ -430,6 +465,11 @@
      "type": "short_enum",
      "name": "tertiary anchor",
      "definition": "primary anchor"
+    },
+    {
+     "type": "explanation",
+     "name": "blending function",
+     "definition": "how to blend the textures together"
     },
     {
      "type": "short_enum",
@@ -447,6 +487,11 @@
      "definition": 2
     },
     {
+     "type": "explanation",
+     "name": "map scales",
+     "definition": "how much to scale the textures"
+    },
+    {
      "type": "real_point_2d",
      "name": "primary scale"
     },
@@ -459,6 +504,11 @@
      "name": "tertiary scale"
     },
     {
+     "type": "explanation",
+     "name": "map offsets",
+     "definition": "how much to offset the origin of the texture"
+    },
+    {
      "type": "real_point_2d",
      "name": "primary offset"
     },
@@ -469,6 +519,11 @@
     {
      "type": "real_point_2d",
      "name": "tertiary offset"
+    },
+    {
+     "type": "explanation",
+     "name": "map",
+     "definition": "which maps to use"
     },
     {
      "type": "tag_reference",
@@ -533,6 +588,11 @@
      "definition": 64
     },
     {
+     "type": "explanation",
+     "name": "source/destination",
+     "definition": "These describe the relationship that causes the effect.\n* destination type is the type of variable you want to be effected\n* destination tells which texture map (or geometry offset) to apply it to\n* source says which value to look at when computing the effect"
+    },
+    {
      "type": "short_enum",
      "name": "destination type",
      "definition": "destination type"
@@ -553,17 +613,27 @@
      "definition": 2
     },
     {
-     "type": "real_bounds",
-     "name": "in bounds"
+     "type": "explanation",
+     "name": "in/out bounds",
+     "definition": "When the source is at the lower inbound, the destination ends up the lower outbound and vice-versa applies for the upper values."
     },
     {
      "type": "real_bounds",
-     "name": "out bounds"
+     "name": "in bounds:source units"
+    },
+    {
+     "type": "real_bounds",
+     "name": "out bounds:pixels"
     },
     {
      "type": "pad",
      "name": "16*sizeof(long)",
      "definition": 64
+    },
+    {
+     "type": "explanation",
+     "name": "tint color bounds",
+     "definition": "If destination is tint, these values are used instead of the out bounds."
     },
     {
      "type": "real_rgb_color",
@@ -572,6 +642,11 @@
     {
      "type": "real_rgb_color",
      "name": "tint color upper bound"
+    },
+    {
+     "type": "explanation",
+     "name": "periodic functions",
+     "definition": "If you use a periodic function as the source, this lets you tweak it."
     },
     {
      "type": "short_enum",
@@ -585,11 +660,11 @@
     },
     {
      "type": "real",
-     "name": "function period"
+     "name": "function period:seconds"
     },
     {
      "type": "real",
-     "name": "function phase"
+     "name": "function phase:seconds"
     },
     {
      "type": "pad",
@@ -647,7 +722,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -660,7 +735,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -711,7 +786,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "long_flags",

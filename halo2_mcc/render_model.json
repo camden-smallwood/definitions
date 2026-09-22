@@ -294,11 +294,11 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name*"
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags"
     },
     {
@@ -313,57 +313,57 @@
     },
     {
      "type": "block",
-     "name": "import info",
+     "name": "import info*",
      "definition": "global_tag_import_info_block"
     },
     {
      "type": "block",
-     "name": "compression info",
+     "name": "compression info*",
      "definition": "global_geometry_compression_info_block"
     },
     {
      "type": "block",
-     "name": "regions",
+     "name": "regions*",
      "definition": "render_model_region_block"
     },
     {
      "type": "block",
-     "name": "sections",
+     "name": "sections*",
      "definition": "render_model_section_block"
     },
     {
      "type": "block",
-     "name": "invalid section pair bits",
+     "name": "invalid section pair bits*",
      "definition": "render_model_invalid_section_pairs_block"
     },
     {
      "type": "block",
-     "name": "section groups",
+     "name": "section groups*",
      "definition": "render_model_section_group_block"
     },
     {
      "type": "char_integer",
-     "name": "L1 section group index"
+     "name": "L1 section group index*:(super low)"
     },
     {
      "type": "char_integer",
-     "name": "L2 section group index"
+     "name": "L2 section group index*:(low)"
     },
     {
      "type": "char_integer",
-     "name": "L3 section group index"
+     "name": "L3 section group index*:(medium)"
     },
     {
      "type": "char_integer",
-     "name": "L4 section group index"
+     "name": "L4 section group index*:(high)"
     },
     {
      "type": "char_integer",
-     "name": "L5 section group index"
+     "name": "L5 section group index*:(super high)"
     },
     {
      "type": "char_integer",
-     "name": "L6 section group index"
+     "name": "L6 section group index*:(hollywood)"
     },
     {
      "type": "pad",
@@ -372,36 +372,36 @@
     },
     {
      "type": "long_integer",
-     "name": "node list checksum"
+     "name": "node list checksum*"
     },
     {
      "type": "block",
-     "name": "nodes",
+     "name": "nodes*",
      "definition": "render_model_node_block"
     },
     {
      "type": "block",
-     "name": "node map (OLD)",
+     "name": "node map (OLD)*!",
      "definition": "render_model_node_map_block_OLD"
     },
     {
      "type": "block",
-     "name": "marker groups",
+     "name": "marker groups*",
      "definition": "render_model_marker_group_block"
     },
     {
      "type": "block",
-     "name": "materials",
+     "name": "materials*",
      "definition": "global_geometry_material_block"
     },
     {
      "type": "block",
-     "name": "errors",
+     "name": "errors*",
      "definition": "global_error_report_categories_block"
     },
     {
      "type": "real",
-     "name": "don't draw over camera cosine angle"
+     "name": "don't draw over camera cosine angle#dont draw fp model when camera > this angle cosine (-1,1) Sugg. -0.2. 0 disables."
     },
     {
      "type": "block",
@@ -425,19 +425,19 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "build"
+     "name": "build*"
     },
     {
      "type": "long_string",
-     "name": "version"
+     "name": "version*"
     },
     {
      "type": "string",
-     "name": "import date"
+     "name": "import date*^"
     },
     {
      "type": "string",
-     "name": "culprit"
+     "name": "culprit*"
     },
     {
      "type": "pad",
@@ -446,7 +446,7 @@
     },
     {
      "type": "string",
-     "name": "import time"
+     "name": "import time*"
     },
     {
      "type": "pad",
@@ -455,7 +455,7 @@
     },
     {
      "type": "block",
-     "name": "files",
+     "name": "files*",
      "definition": "tag_import_file_block"
     },
     {
@@ -475,11 +475,11 @@
    "fields": [
     {
      "type": "long_string",
-     "name": "path"
+     "name": "path*^"
     },
     {
      "type": "string",
-     "name": "modification date"
+     "name": "modification date*"
     },
     {
      "type": "skip",
@@ -493,15 +493,15 @@
     },
     {
      "type": "long_integer",
-     "name": "checksum"
+     "name": "checksum*:crc32"
     },
     {
      "type": "long_integer",
-     "name": "size"
+     "name": "size*:bytes"
     },
     {
      "type": "data",
-     "name": "zipped data",
+     "name": "zipped data*",
      "definition": "tag_import_file_zipped_data_definition"
     },
     {
@@ -521,31 +521,31 @@
    "fields": [
     {
      "type": "real_bounds",
-     "name": "position bounds x"
+     "name": "position bounds x*"
     },
     {
      "type": "real_bounds",
-     "name": "position bounds y"
+     "name": "position bounds y*"
     },
     {
      "type": "real_bounds",
-     "name": "position bounds z"
+     "name": "position bounds z*"
     },
     {
      "type": "real_bounds",
-     "name": "texcoord bounds x"
+     "name": "texcoord bounds x*"
     },
     {
      "type": "real_bounds",
-     "name": "texcoord bounds y"
+     "name": "texcoord bounds y*"
     },
     {
      "type": "real_bounds",
-     "name": "secondary texcoord bounds x"
+     "name": "secondary texcoord bounds x*"
     },
     {
      "type": "real_bounds",
-     "name": "secondary texcoord bounds y"
+     "name": "secondary texcoord bounds y*"
     },
     {
      "type": "terminator",
@@ -559,19 +559,19 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_integer",
-     "name": "node map offset (OLD)"
+     "name": "node map offset (OLD)*"
     },
     {
      "type": "short_integer",
-     "name": "node map size (OLD)"
+     "name": "node map size (OLD)*"
     },
     {
      "type": "block",
-     "name": "permutations",
+     "name": "permutations*",
      "definition": "render_model_permutation_block"
     },
     {
@@ -586,31 +586,31 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_integer",
-     "name": "L1 section index"
+     "name": "L1 section index*:(super low)"
     },
     {
      "type": "short_integer",
-     "name": "L2 section index"
+     "name": "L2 section index*:(low)"
     },
     {
      "type": "short_integer",
-     "name": "L3 section index"
+     "name": "L3 section index*:(medium)"
     },
     {
      "type": "short_integer",
-     "name": "L4 section index"
+     "name": "L4 section index*:(high)"
     },
     {
      "type": "short_integer",
-     "name": "L5 section index"
+     "name": "L5 section index*:(super high)"
     },
     {
      "type": "short_integer",
-     "name": "L6 section index"
+     "name": "L6 section index*:(hollywood)"
     },
     {
      "type": "terminator",
@@ -634,12 +634,12 @@
     },
     {
      "type": "struct",
-     "name": "section info",
+     "name": "section info*",
      "definition": "global_geometry_section_info_struct_2"
     },
     {
      "type": "short_block_index",
-     "name": "rigid node",
+     "name": "rigid node*",
      "definition": "render_model_node_block"
     },
     {
@@ -649,12 +649,12 @@
     },
     {
      "type": "block",
-     "name": "section data",
+     "name": "section data*",
      "definition": "render_model_section_data_block"
     },
     {
      "type": "struct",
-     "name": "geometry block info",
+     "name": "geometry block info*",
      "definition": "global_geometry_block_info_struct_2"
     },
     {
@@ -668,57 +668,62 @@
    "size": 44,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "total vertex count"
+     "type": "explanation",
+     "name": "SECTION INFO",
+     "definition": ""
     },
     {
      "type": "short_integer",
-     "name": "total triangle count"
+     "name": "total vertex count*"
     },
     {
      "type": "short_integer",
-     "name": "total part count"
+     "name": "total triangle count*"
     },
     {
      "type": "short_integer",
-     "name": "shadow-casting triangle count"
+     "name": "total part count*"
     },
     {
      "type": "short_integer",
-     "name": "shadow-casting part count"
+     "name": "shadow-casting triangle count*"
     },
     {
      "type": "short_integer",
-     "name": "opaque point count"
+     "name": "shadow-casting part count*"
     },
     {
      "type": "short_integer",
-     "name": "opaque vertex count"
+     "name": "opaque point count*"
     },
     {
      "type": "short_integer",
-     "name": "opaque part count"
+     "name": "opaque vertex count*"
+    },
+    {
+     "type": "short_integer",
+     "name": "opaque part count*"
     },
     {
      "type": "char_integer",
-     "name": "opaque max nodes/vertex"
+     "name": "opaque max nodes/vertex*"
     },
     {
      "type": "char_integer",
-     "name": "transparent max nodes/vertex"
+     "name": "transparent max nodes/vertex*"
     },
     {
      "type": "short_integer",
-     "name": "shadow-casting rigid triangle count"
+     "name": "shadow-casting rigid triangle count*"
     },
     {
      "type": "short_enum",
-     "name": "geometry classification",
+     "name": "geometry classification*",
      "definition": "global_geometry_classification_enum_definition"
     },
     {
      "type": "word_flags",
-     "name": "geometry compression flags",
+     "name": "geometry compression flags*",
      "definition": "geometry compression flags"
     },
     {
@@ -728,23 +733,23 @@
     },
     {
      "type": "char_integer",
-     "name": "hardware node count"
+     "name": "hardware node count*"
     },
     {
      "type": "char_integer",
-     "name": "node map size"
+     "name": "node map size*"
     },
     {
      "type": "short_integer",
-     "name": "software plane count"
+     "name": "software plane count*"
     },
     {
      "type": "short_integer",
-     "name": "total subpart_cont"
+     "name": "total subpart_cont*"
     },
     {
      "type": "word_flags",
-     "name": "section lighting flags",
+     "name": "section lighting flags*",
      "definition": "section lighting flags"
     },
     {
@@ -760,58 +765,63 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "parent node",
+     "name": "parent node*",
      "definition": "render_model_node_block"
     },
     {
      "type": "short_block_index",
-     "name": "first child node",
+     "name": "first child node*",
      "definition": "render_model_node_block"
     },
     {
      "type": "short_block_index",
-     "name": "next sibling node",
+     "name": "next sibling node*",
      "definition": "render_model_node_block"
     },
     {
      "type": "short_integer",
-     "name": "import node index"
+     "name": "import node index*"
     },
     {
      "type": "real_point_3d",
-     "name": "default translation"
+     "name": "default translation*"
     },
     {
      "type": "real_quaternion",
-     "name": "default rotation"
+     "name": "default rotation*"
+    },
+    {
+     "type": "explanation",
+     "name": "Old Mistakes Die Hard",
+     "definition": "Be aware that the displayed inverse matrix below is incorrect.\nThe inverse scale value should come before the inverse matrix. Currently the first value of the inverse matrix is the inverse scale and the inverse scale is the final value of the inverse position.\ni.e. The actual field order should have been:\n  *inverse scale\n  *inverse forward\n  *inverse left\n  *inverse up\n  *inverse position\n"
     },
     {
      "type": "real_vector_3d",
-     "name": "inverse forward"
+     "name": "inverse forward*"
     },
     {
      "type": "real_vector_3d",
-     "name": "inverse left"
+     "name": "inverse left*"
     },
     {
      "type": "real_vector_3d",
-     "name": "inverse up"
+     "name": "inverse up*"
     },
     {
      "type": "real_point_3d",
-     "name": "inverse position"
+     "name": "inverse position*"
     },
     {
      "type": "real",
-     "name": "inverse scale"
+     "name": "inverse scale*"
     },
     {
      "type": "real",
-     "name": "distance from parent"
+     "name": "distance from parent*"
     },
     {
      "type": "terminator",
@@ -825,62 +835,72 @@
    "fields": [
     {
      "type": "struct",
-     "name": "section",
+     "name": "section*",
      "definition": "global_geometry_section_struct_2"
     },
     {
      "type": "struct",
-     "name": "point data",
+     "name": "point data*",
      "definition": "global_geometry_point_data_struct_2"
     },
     {
      "type": "block",
-     "name": "node map",
+     "name": "node map*",
      "definition": "render_model_node_map_block"
     },
     {
+     "type": "explanation",
+     "name": "ISQ INFO",
+     "definition": ""
+    },
+    {
      "type": "struct",
-     "name": "isq info",
+     "name": "isq info*",
      "definition": "global_geometry_isq_info_struct_2"
     },
     {
      "type": "block",
-     "name": "forward shared edges",
+     "name": "forward shared edges*",
      "definition": "render_model_forward_shared_edge_block"
     },
     {
      "type": "block",
-     "name": "forward shared edge groups",
+     "name": "forward shared edge groups*",
      "definition": "render_model_shared_edge_group_block"
     },
     {
      "type": "block",
-     "name": "backward shared edges",
+     "name": "backward shared edges*",
      "definition": "render_model_backward_shared_edge_block"
     },
     {
      "type": "block",
-     "name": "backward shared edge groups",
+     "name": "backward shared edge groups*",
      "definition": "render_model_shared_edge_group_block"
     },
     {
+     "type": "explanation",
+     "name": "DSQ INFO",
+     "definition": ""
+    },
+    {
      "type": "block",
-     "name": "raw vertices",
+     "name": "raw vertices*",
      "definition": "render_model_dsq_raw_vertex_block"
     },
     {
      "type": "block",
-     "name": "strip indices",
+     "name": "strip indices*",
      "definition": "render_model_dsq_strip_index_block"
     },
     {
      "type": "block",
-     "name": "silhouette quads",
+     "name": "silhouette quads*",
      "definition": "render_model_dsq_silhouette_quad_block"
     },
     {
      "type": "short_integer",
-     "name": "Carmack-silhouette quad count"
+     "name": "Carmack-silhouette quad count*"
     },
     {
      "type": "pad",
@@ -889,7 +909,7 @@
     },
     {
      "type": "pad",
-     "name": "sizeof(render_model_section_data_old",
+     "name": "sizeof(render_model_section_data_old::pad)",
      "definition": 4
     },
     {
@@ -909,31 +929,31 @@
    "fields": [
     {
      "type": "block",
-     "name": "raw vertices",
+     "name": "raw vertices*",
      "definition": "global_geometry_section_raw_vertex_block"
     },
     {
      "type": "array",
-     "name": "old vertex buffers",
+     "name": "old vertex buffers*",
      "definition": "old vertex buffers_array"
     },
     {
      "type": "vertex_buffer",
-     "name": "transparent position"
+     "name": "transparent position*"
     },
     {
      "type": "block",
-     "name": "vertex buffers",
+     "name": "vertex buffers*",
      "definition": "global_geometry_section_vertex_buffer_block"
     },
     {
      "type": "block",
-     "name": "strip indices",
+     "name": "strip indices*",
      "definition": "global_geometry_section_strip_index_block"
     },
     {
      "type": "block",
-     "name": "parts",
+     "name": "parts*",
      "definition": "global_geometry_part_block"
     },
     {
@@ -954,54 +974,54 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices (OLD)",
+     "name": "node indices (OLD)*",
      "definition": "node indices (OLD)_array"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array"
     },
     {
      "type": "array",
-     "name": "node indices (NEW)",
+     "name": "node indices (NEW)*",
      "definition": "node indices (NEW)_array"
     },
     {
      "type": "long_integer",
-     "name": "use new node indices"
+     "name": "use new node indices*"
     },
     {
      "type": "long_integer",
-     "name": "adjusted compound node index"
+     "name": "adjusted compound node index*"
     },
     {
      "type": "real_point_2d",
-     "name": "texcoord"
+     "name": "texcoord*"
     },
     {
      "type": "real_vector_3d",
-     "name": "normal"
+     "name": "normal*"
     },
     {
      "type": "real_vector_3d",
-     "name": "binormal"
+     "name": "binormal*"
     },
     {
      "type": "real_vector_3d",
-     "name": "tangent"
+     "name": "tangent*"
     },
     {
      "type": "real_vector_3d",
-     "name": "anisotropic binormal"
+     "name": "anisotropic binormal*"
     },
     {
      "type": "real_point_2d",
-     "name": "secondary texcoord"
+     "name": "secondary texcoord*"
     },
     {
      "type": "real_rgb_color",
@@ -1042,7 +1062,7 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "node index (OLD)"
+     "name": "node index (OLD)*"
     },
     {
      "type": "terminator",
@@ -1056,7 +1076,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node_weight"
+     "name": "node_weight*"
     },
     {
      "type": "terminator",
@@ -1070,7 +1090,7 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "node index (NEW)"
+     "name": "node index (NEW)*"
     },
     {
      "type": "terminator",
@@ -1084,7 +1104,7 @@
    "fields": [
     {
      "type": "vertex_buffer",
-     "name": "vertex buffer"
+     "name": "vertex buffer*"
     },
     {
      "type": "terminator",
@@ -1098,7 +1118,7 @@
    "fields": [
     {
      "type": "vertex_buffer",
-     "name": "vertex buffer"
+     "name": "vertex buffer*"
     },
     {
      "type": "terminator",
@@ -1112,7 +1132,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "index"
+     "name": "index*"
     },
     {
      "type": "terminator",
@@ -1126,67 +1146,67 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_3"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "global_geometry_material_block"
     },
     {
      "type": "short_enum",
-     "name": "geometry subclassification",
+     "name": "geometry subclassification*",
      "definition": "geometry subclassification"
     },
     {
      "type": "short_integer",
-     "name": "strip start index"
+     "name": "strip start index*"
     },
     {
      "type": "short_integer",
-     "name": "strip length"
+     "name": "strip length*"
     },
     {
      "type": "short_integer",
-     "name": "first strip segment index"
+     "name": "first strip segment index*"
     },
     {
      "type": "short_integer",
-     "name": "strip segment count"
+     "name": "strip segment count*"
     },
     {
      "type": "short_integer",
-     "name": "first vertex index"
+     "name": "first vertex index*"
     },
     {
      "type": "short_integer",
-     "name": "vertex count"
+     "name": "vertex count*"
     },
     {
      "type": "short_integer",
-     "name": "first triangle index"
+     "name": "first triangle index*"
     },
     {
      "type": "short_integer",
-     "name": "triangle count"
+     "name": "triangle count*"
     },
     {
      "type": "char_integer",
-     "name": "max nodes/vertex"
+     "name": "max nodes/vertex*"
     },
     {
      "type": "char_integer",
-     "name": "contributing compound node count"
+     "name": "contributing compound node count*"
     },
     {
      "type": "word_flags",
-     "name": "vertex usage flags",
+     "name": "vertex usage flags*",
      "definition": "vertex usage flags"
     },
     {
@@ -1205,22 +1225,27 @@
      "definition": 3
     },
     {
+     "type": "explanation",
+     "name": "CENTROID",
+     "definition": ""
+    },
+    {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_2"
     },
     {
      "type": "real",
-     "name": "lod mipmap magic number"
+     "name": "lod mipmap magic number*"
     },
     {
      "type": "skip",
@@ -1239,15 +1264,15 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "old shader"
+     "name": "old shader*"
     },
     {
      "type": "tag_reference",
-     "name": "shader"
+     "name": "shader^*"
     },
     {
      "type": "block",
-     "name": "properties",
+     "name": "properties*",
      "definition": "global_geometry_material_property_block"
     },
     {
@@ -1257,7 +1282,7 @@
     },
     {
      "type": "char_integer",
-     "name": "breakable surface index"
+     "name": "breakable surface index*"
     },
     {
      "type": "pad",
@@ -1276,16 +1301,16 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type_2"
     },
     {
      "type": "short_integer",
-     "name": "int-value"
+     "name": "int-value*"
     },
     {
      "type": "real",
-     "name": "real-value"
+     "name": "real-value*"
     },
     {
      "type": "terminator",
@@ -1299,7 +1324,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -1313,7 +1338,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -1327,42 +1352,42 @@
    "fields": [
     {
      "type": "block",
-     "name": "parts",
+     "name": "parts*",
      "definition": "global_geometry_part_block_new"
     },
     {
      "type": "block",
-     "name": "subparts",
+     "name": "subparts*",
      "definition": "global_subparts_block"
     },
     {
      "type": "block",
-     "name": "visibility bounds",
+     "name": "visibility bounds*",
      "definition": "global_visibility_bounds_block"
     },
     {
      "type": "block",
-     "name": "raw vertices",
+     "name": "raw vertices*",
      "definition": "global_geometry_section_raw_vertex_block"
     },
     {
      "type": "block",
-     "name": "strip indices",
+     "name": "strip indices*",
      "definition": "global_geometry_section_strip_index_block"
     },
     {
      "type": "data",
-     "name": "visibility mopp code",
+     "name": "visibility mopp code*",
      "definition": "global_section_mopp_code_data"
     },
     {
      "type": "block",
-     "name": "mopp reorder table",
+     "name": "mopp reorder table*",
      "definition": "global_geometry_section_strip_index_block"
     },
     {
      "type": "block",
-     "name": "vertex buffers",
+     "name": "vertex buffers*",
      "definition": "global_geometry_section_vertex_buffer_block"
     },
     {
@@ -1382,60 +1407,65 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_3"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "global_geometry_material_block"
     },
     {
      "type": "short_integer",
-     "name": "strip start index"
+     "name": "strip start index*"
     },
     {
      "type": "short_integer",
-     "name": "strip length"
+     "name": "strip length*"
     },
     {
      "type": "short_integer",
-     "name": "first subpart index"
+     "name": "first subpart index*"
     },
     {
      "type": "short_integer",
-     "name": "subpart count"
+     "name": "subpart count*"
     },
     {
      "type": "char_integer",
-     "name": "max nodes/vertex"
+     "name": "max nodes/vertex*"
     },
     {
      "type": "char_integer",
-     "name": "contributing compound node count"
+     "name": "contributing compound node count*"
+    },
+    {
+     "type": "explanation",
+     "name": "CENTROID",
+     "definition": ""
     },
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_2"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_3"
     },
     {
      "type": "real",
-     "name": "lod mipmap magic number"
+     "name": "lod mipmap magic number*"
     },
     {
      "type": "skip",
@@ -1454,7 +1484,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -1468,7 +1498,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -1482,19 +1512,19 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "indices_start_index"
+     "name": "indices_start_index*"
     },
     {
      "type": "short_integer",
-     "name": "indices_length"
+     "name": "indices_length*"
     },
     {
      "type": "short_integer",
-     "name": "visibility_bounds_index"
+     "name": "visibility_bounds_index*"
     },
     {
      "type": "short_integer",
-     "name": "part index"
+     "name": "part index*"
     },
     {
      "type": "terminator",
@@ -1508,23 +1538,23 @@
    "fields": [
     {
      "type": "real",
-     "name": "position x"
+     "name": "position x*"
     },
     {
      "type": "real",
-     "name": "position y"
+     "name": "position y*"
     },
     {
      "type": "real",
-     "name": "position z"
+     "name": "position z*"
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "char_integer",
-     "name": "node 0"
+     "name": "node 0*"
     },
     {
      "type": "pad",
@@ -1543,22 +1573,22 @@
    "fields": [
     {
      "type": "block",
-     "name": "raw points",
+     "name": "raw points*",
      "definition": "global_geometry_raw_point_block"
     },
     {
      "type": "data",
-     "name": "runtime point data",
+     "name": "runtime point data*",
      "definition": "global_geometry_runtime_point_data_definition"
     },
     {
      "type": "block",
-     "name": "rigid point groups",
+     "name": "rigid point groups*",
      "definition": "global_geometry_rigid_point_group_block"
     },
     {
      "type": "block",
-     "name": "vertex-point indices",
+     "name": "vertex-point indices*",
      "definition": "global_geometry_point_data_index_block"
     },
     {
@@ -1574,30 +1604,30 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices (OLD)",
+     "name": "node indices (OLD)*",
      "definition": "node indices (OLD)_array_2"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_4"
     },
     {
      "type": "array",
-     "name": "node indices (NEW)",
+     "name": "node indices (NEW)*",
      "definition": "node indices (NEW)_array_2"
     },
     {
      "type": "long_integer",
-     "name": "use new node indices"
+     "name": "use new node indices*"
     },
     {
      "type": "long_integer",
-     "name": "adjusted compound node index"
+     "name": "adjusted compound node index*"
     },
     {
      "type": "terminator",
@@ -1611,7 +1641,7 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "node index (OLD)"
+     "name": "node index (OLD)*"
     },
     {
      "type": "terminator",
@@ -1625,7 +1655,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node_weight"
+     "name": "node_weight*"
     },
     {
      "type": "terminator",
@@ -1639,7 +1669,7 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "node index (NEW)"
+     "name": "node index (NEW)*"
     },
     {
      "type": "terminator",
@@ -1653,15 +1683,15 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "rigid node index"
+     "name": "rigid node index*"
     },
     {
      "type": "char_integer",
-     "name": "nodes per point"
+     "name": "nodes per point*"
     },
     {
      "type": "short_integer",
-     "name": "point count"
+     "name": "point count*"
     },
     {
      "type": "terminator",
@@ -1675,7 +1705,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "index"
+     "name": "index*"
     },
     {
      "type": "terminator",
@@ -1689,7 +1719,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -1703,7 +1733,7 @@
    "fields": [
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_4"
     },
     {
@@ -1713,17 +1743,17 @@
     },
     {
      "type": "block",
-     "name": "raw planes",
+     "name": "raw planes*",
      "definition": "global_geometry_plane_block"
     },
     {
      "type": "data",
-     "name": "runtime plane data",
+     "name": "runtime plane data*",
      "definition": "global_geometry_runtime_plane_data_definition"
     },
     {
      "type": "block",
-     "name": "rigid plane groups",
+     "name": "rigid plane groups*",
      "definition": "global_geometry_rigid_plane_group_block"
     },
     {
@@ -1733,7 +1763,7 @@
     },
     {
      "type": "block",
-     "name": "explicit edges",
+     "name": "explicit edges*",
      "definition": "global_geometry_explicit_edge_block"
     },
     {
@@ -1749,7 +1779,7 @@
    "fields": [
     {
      "type": "real_plane_3d",
-     "name": "plane"
+     "name": "plane*"
     },
     {
      "type": "terminator",
@@ -1763,15 +1793,15 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "rigid node index"
+     "name": "rigid node index*"
     },
     {
      "type": "char_integer",
-     "name": "part index"
+     "name": "part index*"
     },
     {
      "type": "short_integer",
-     "name": "triangle count"
+     "name": "triangle count*"
     },
     {
      "type": "terminator",
@@ -1785,12 +1815,12 @@
    "fields": [
     {
      "type": "array",
-     "name": "vertex indices",
+     "name": "vertex indices*",
      "definition": "vertex indices_array"
     },
     {
      "type": "array",
-     "name": "triangle indices",
+     "name": "triangle indices*",
      "definition": "triangle indices_array"
     },
     {
@@ -1805,7 +1835,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "vertex index"
+     "name": "vertex index*"
     },
     {
      "type": "terminator",
@@ -1819,7 +1849,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "triangle index"
+     "name": "triangle index*"
     },
     {
      "type": "terminator",
@@ -1833,7 +1863,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "triangle index"
+     "name": "triangle index*"
     },
     {
      "type": "terminator",
@@ -1847,11 +1877,11 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "first shared edge index"
+     "name": "first shared edge index*"
     },
     {
      "type": "short_integer",
-     "name": "shared edge count"
+     "name": "shared edge count*"
     },
     {
      "type": "pad",
@@ -1860,7 +1890,7 @@
     },
     {
      "type": "char_integer",
-     "name": "adjacent region index"
+     "name": "adjacent region index*"
     },
     {
      "type": "pad",
@@ -1869,7 +1899,7 @@
     },
     {
      "type": "char_integer",
-     "name": "section set index"
+     "name": "section set index*"
     },
     {
      "type": "terminator",
@@ -1883,12 +1913,12 @@
    "fields": [
     {
      "type": "array",
-     "name": "vertex indices",
+     "name": "vertex indices*",
      "definition": "vertex indices_array_2"
     },
     {
      "type": "short_integer",
-     "name": "triangle index"
+     "name": "triangle index*"
     },
     {
      "type": "terminator",
@@ -1902,7 +1932,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "vertex index"
+     "name": "vertex index*"
     },
     {
      "type": "terminator",
@@ -1916,15 +1946,15 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "real_plane_3d",
-     "name": "plane"
+     "name": "plane*"
     },
     {
      "type": "long_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -1938,7 +1968,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "vertex index"
+     "name": "vertex index*"
     },
     {
      "type": "terminator",
@@ -1952,7 +1982,7 @@
    "fields": [
     {
      "type": "array",
-     "name": "vertex indices",
+     "name": "vertex indices*",
      "definition": "vertex indices_array_3"
     },
     {
@@ -1967,7 +1997,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "vertex index"
+     "name": "vertex index*"
     },
     {
      "type": "terminator",
@@ -1981,22 +2011,22 @@
    "fields": [
     {
      "type": "struct",
-     "name": "section",
+     "name": "section*",
      "definition": "global_geometry_section_struct_2"
     },
     {
      "type": "struct",
-     "name": "point data",
+     "name": "point data*",
      "definition": "global_geometry_point_data_struct_2"
     },
     {
      "type": "block",
-     "name": "node map",
+     "name": "node map*",
      "definition": "render_model_node_map_block"
     },
     {
      "type": "pad",
-     "name": "sizeof(render_model_section_data",
+     "name": "sizeof(render_model_section_data::pad)",
      "definition": 4
     },
     {
@@ -2015,24 +2045,29 @@
    "size": 40,
    "fields": [
     {
-     "type": "long_integer",
-     "name": "block offset"
+     "type": "explanation",
+     "name": "BLOCK INFO",
+     "definition": ""
     },
     {
      "type": "long_integer",
-     "name": "block size"
+     "name": "block offset*"
     },
     {
      "type": "long_integer",
-     "name": "section data size"
+     "name": "block size*"
     },
     {
      "type": "long_integer",
-     "name": "resource data size"
+     "name": "section data size*"
+    },
+    {
+     "type": "long_integer",
+     "name": "resource data size*"
     },
     {
      "type": "block",
-     "name": "resources",
+     "name": "resources*",
      "definition": "global_geometry_block_resource_block"
     },
     {
@@ -2042,7 +2077,7 @@
     },
     {
      "type": "short_integer",
-     "name": "owner tag section offset"
+     "name": "owner tag section offset*"
     },
     {
      "type": "pad",
@@ -2067,7 +2102,7 @@
    "fields": [
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type_3"
     },
     {
@@ -2077,19 +2112,19 @@
     },
     {
      "type": "short_integer",
-     "name": "primary locator"
+     "name": "primary locator*"
     },
     {
      "type": "short_integer",
-     "name": "secondary locator"
+     "name": "secondary locator*"
     },
     {
      "type": "long_integer",
-     "name": "resource data size"
+     "name": "resource data size*"
     },
     {
      "type": "long_integer",
-     "name": "resource data offset"
+     "name": "resource data offset*"
     },
     {
      "type": "terminator",
@@ -2103,7 +2138,7 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "bits"
+     "name": "bits*"
     },
     {
      "type": "terminator",
@@ -2117,7 +2152,7 @@
    "fields": [
     {
      "type": "word_flags",
-     "name": "detail levels",
+     "name": "detail levels*",
      "definition": "detail levels"
     },
     {
@@ -2127,7 +2162,7 @@
     },
     {
      "type": "block",
-     "name": "compound nodes",
+     "name": "compound nodes*",
      "definition": "render_model_compound_node_block"
     },
     {
@@ -2142,12 +2177,12 @@
    "fields": [
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_3"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_5"
     },
     {
@@ -2162,7 +2197,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2176,7 +2211,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2190,7 +2225,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2204,11 +2239,11 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "block",
-     "name": "markers",
+     "name": "markers*",
      "definition": "render_model_marker_block"
     },
     {
@@ -2223,15 +2258,15 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "region index"
+     "name": "region index*"
     },
     {
      "type": "char_integer",
-     "name": "permutation index"
+     "name": "permutation index*"
     },
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "pad",
@@ -2240,11 +2275,11 @@
     },
     {
      "type": "real_point_3d",
-     "name": "translation"
+     "name": "translation*"
     },
     {
      "type": "real_quaternion",
-     "name": "rotation"
+     "name": "rotation*"
     },
     {
      "type": "real",
@@ -2262,16 +2297,16 @@
    "fields": [
     {
      "type": "long_string",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_enum",
-     "name": "report type",
+     "name": "report type*",
      "definition": "report type"
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_5"
     },
     {
@@ -2291,7 +2326,7 @@
     },
     {
      "type": "block",
-     "name": "reports",
+     "name": "reports*",
      "definition": "error_reports_block"
     },
     {
@@ -2306,55 +2341,55 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "report type"
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_5"
     },
     {
      "type": "data",
-     "name": "text",
+     "name": "text*",
      "definition": "error_report_string_data"
     },
     {
      "type": "string",
-     "name": "source filename"
+     "name": "source filename*"
     },
     {
      "type": "long_integer",
-     "name": "source line number"
+     "name": "source line number*"
     },
     {
      "type": "block",
-     "name": "vertices",
+     "name": "vertices*",
      "definition": "error_report_vertices_block"
     },
     {
      "type": "block",
-     "name": "vectors",
+     "name": "vectors*",
      "definition": "error_report_vectors_block"
     },
     {
      "type": "block",
-     "name": "lines",
+     "name": "lines*",
      "definition": "error_report_lines_block"
     },
     {
      "type": "block",
-     "name": "triangles",
+     "name": "triangles*",
      "definition": "error_report_triangles_block"
     },
     {
      "type": "block",
-     "name": "quads",
+     "name": "quads*",
      "definition": "error_report_quads_block"
     },
     {
      "type": "block",
-     "name": "comments",
+     "name": "comments*",
      "definition": "error_report_comments_block"
     },
     {
@@ -2364,27 +2399,27 @@
     },
     {
      "type": "long_integer",
-     "name": "report key"
+     "name": "report key*"
     },
     {
      "type": "long_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "real_bounds",
-     "name": "bounds x"
+     "name": "bounds x*"
     },
     {
      "type": "real_bounds",
-     "name": "bounds y"
+     "name": "bounds y*"
     },
     {
      "type": "real_bounds",
-     "name": "bounds z"
+     "name": "bounds z*"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "pad",
@@ -2403,25 +2438,25 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_4"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_6"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "real",
-     "name": "screen size"
+     "name": "screen size*"
     },
     {
      "type": "terminator",
@@ -2435,7 +2470,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2449,7 +2484,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2463,29 +2498,29 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_5"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_7"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "real_vector_3d",
-     "name": "normal"
+     "name": "normal*"
     },
     {
      "type": "real",
-     "name": "screen length"
+     "name": "screen length*"
     },
     {
      "type": "terminator",
@@ -2499,7 +2534,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2513,7 +2548,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2527,12 +2562,12 @@
    "fields": [
     {
      "type": "array",
-     "name": "points",
+     "name": "points*",
      "definition": "points_array"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -2546,7 +2581,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2560,7 +2595,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2574,16 +2609,16 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_6"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_8"
     },
     {
@@ -2598,12 +2633,12 @@
    "fields": [
     {
      "type": "array",
-     "name": "points",
+     "name": "points*",
      "definition": "points_array_2"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -2617,7 +2652,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2631,7 +2666,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2645,16 +2680,16 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_7"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_9"
     },
     {
@@ -2669,12 +2704,12 @@
    "fields": [
     {
      "type": "array",
-     "name": "points",
+     "name": "points*",
      "definition": "points_array_3"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -2688,7 +2723,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2702,7 +2737,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2716,16 +2751,16 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_8"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_10"
     },
     {
@@ -2740,26 +2775,26 @@
    "fields": [
     {
      "type": "data",
-     "name": "text",
+     "name": "text*",
      "definition": "error_report_string_data"
     },
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_9"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_11"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -2773,7 +2808,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2787,7 +2822,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2801,35 +2836,35 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "SH Order"
+     "name": "SH Order*"
     },
     {
      "type": "short_integer",
-     "name": "num of clusters"
+     "name": "num of clusters*"
     },
     {
      "type": "short_integer",
-     "name": "pca vectors per cluster"
+     "name": "pca vectors per cluster*"
     },
     {
      "type": "short_integer",
-     "name": "number of rays"
+     "name": "number of rays*"
     },
     {
      "type": "short_integer",
-     "name": "number of bounces"
+     "name": "number of bounces*"
     },
     {
      "type": "short_integer",
-     "name": "mat index for sbsfc scattering"
+     "name": "mat index for sbsfc scattering*"
     },
     {
      "type": "real",
-     "name": "length scale"
+     "name": "length scale*"
     },
     {
      "type": "short_integer",
-     "name": "number of lods in model"
+     "name": "number of lods in model*"
     },
     {
      "type": "pad",
@@ -2838,27 +2873,27 @@
     },
     {
      "type": "block",
-     "name": "lod info",
+     "name": "lod info*",
      "definition": "prt_lod_info_block"
     },
     {
      "type": "block",
-     "name": "cluster basis",
+     "name": "cluster basis*",
      "definition": "prt_cluster_basis_block"
     },
     {
      "type": "block",
-     "name": "raw_pca_data",
+     "name": "raw_pca_data*",
      "definition": "prt_raw_pca_data_block"
     },
     {
      "type": "block",
-     "name": "vertex buffers",
+     "name": "vertex buffers*",
      "definition": "prt_vertex_buffers_block"
     },
     {
      "type": "struct",
-     "name": "geometry block info",
+     "name": "geometry block info*",
      "definition": "global_geometry_block_info_struct_2"
     },
     {
@@ -2873,11 +2908,11 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "cluster offset"
+     "name": "cluster offset*"
     },
     {
      "type": "block",
-     "name": "section info",
+     "name": "section info*",
      "definition": "prt_section_info_block"
     },
     {
@@ -2892,11 +2927,11 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "section index"
+     "name": "section index*"
     },
     {
      "type": "long_integer",
-     "name": "pca data offset"
+     "name": "pca data offset*"
     },
     {
      "type": "terminator",
@@ -2938,7 +2973,7 @@
    "fields": [
     {
      "type": "vertex_buffer",
-     "name": "vertex buffer"
+     "name": "vertex buffer*"
     },
     {
      "type": "terminator",
@@ -2952,7 +2987,7 @@
    "fields": [
     {
      "type": "block",
-     "name": "node render leaves",
+     "name": "node render leaves*",
      "definition": "node_render_leaves_block"
     },
     {
@@ -2967,12 +3002,12 @@
    "fields": [
     {
      "type": "block",
-     "name": "collision leaves",
+     "name": "collision leaves*",
      "definition": "bsp_leaf_block"
     },
     {
      "type": "block",
-     "name": "surface references",
+     "name": "surface references*",
      "definition": "bsp_surface_reference_block"
     },
     {
@@ -2987,15 +3022,15 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "cluster"
+     "name": "cluster*"
     },
     {
      "type": "short_integer",
-     "name": "surface reference count"
+     "name": "surface reference count*"
     },
     {
      "type": "long_integer",
-     "name": "first surface reference index"
+     "name": "first surface reference index*"
     },
     {
      "type": "terminator",
@@ -3009,15 +3044,15 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "strip index"
+     "name": "strip index*"
     },
     {
      "type": "short_integer",
-     "name": "lightmap triangle index"
+     "name": "lightmap triangle index*"
     },
     {
      "type": "long_integer",
-     "name": "bsp node index"
+     "name": "bsp node index*"
     },
     {
      "type": "terminator",

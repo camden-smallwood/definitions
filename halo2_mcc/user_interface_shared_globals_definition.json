@@ -133,16 +133,21 @@
      "definition": 8
     },
     {
+     "type": "explanation",
+     "name": "UI Rendering Globals",
+     "definition": "miscellaneous rendering globals, more below..."
+    },
+    {
      "type": "real",
      "name": "overlayed screen alpha mod"
     },
     {
      "type": "short_integer",
-     "name": "inc. text update period"
+     "name": "inc. text update period:milliseconds"
     },
     {
      "type": "short_integer",
-     "name": "inc. text block character"
+     "name": "inc. text block character:ASCII code"
     },
     {
      "type": "real",
@@ -154,15 +159,20 @@
     },
     {
      "type": "real",
-     "name": "near clip plane distance"
+     "name": "near clip plane distance:objects closer than this are not drawn"
     },
     {
      "type": "real",
-     "name": "projection plane distance"
+     "name": "projection plane distance:distance at which objects are rendered when z=0 (normal size)"
     },
     {
      "type": "real",
-     "name": "far clip plane distance"
+     "name": "far clip plane distance:objects farther than this are not drawn"
+    },
+    {
+     "type": "explanation",
+     "name": "Overlayed UI Color",
+     "definition": "This is the color of the overlayed ui effect; the alpha component is the maximum opacity"
     },
     {
      "type": "real_argb_color",
@@ -174,13 +184,109 @@
      "definition": 12
     },
     {
+     "type": "explanation",
+     "name": "Displayed Errors",
+     "definition": "For each error condition displayed in the UI, set the title and description string ids here"
+    },
+    {
      "type": "block",
      "name": "errors",
      "definition": "ui_error_category_block"
     },
     {
+     "type": "explanation",
+     "name": "Cursor Sound",
+     "definition": "This is the sound that plays as you tab through items"
+    },
+    {
      "type": "tag_reference",
      "name": "sound tag"
+    },
+    {
+     "type": "explanation",
+     "name": "Selection Sound",
+     "definition": "This is the sound that plays when an item is selected"
+    },
+    {
+     "type": "tag_reference",
+     "name": "sound tag"
+    },
+    {
+     "type": "explanation",
+     "name": "Error Sound",
+     "definition": "This is the sound that plays to alert the user that something went wrong"
+    },
+    {
+     "type": "tag_reference",
+     "name": "sound tag"
+    },
+    {
+     "type": "explanation",
+     "name": "Advancing Sound",
+     "definition": "This is the sound that plays when advancing to a new screen"
+    },
+    {
+     "type": "tag_reference",
+     "name": "sound tag"
+    },
+    {
+     "type": "explanation",
+     "name": "Retreating Sound",
+     "definition": "This is the sound that plays when retreating to a previous screen"
+    },
+    {
+     "type": "tag_reference",
+     "name": "sound tag"
+    },
+    {
+     "type": "explanation",
+     "name": "Initial Login Sound",
+     "definition": "This is the sound that plays when advancing past the initial login screen"
+    },
+    {
+     "type": "tag_reference",
+     "name": "sound tag"
+    },
+    {
+     "type": "explanation",
+     "name": "VKBD Cursor Sound",
+     "definition": "This is the sound that plays when cursoring in the vkeyboard"
+    },
+    {
+     "type": "tag_reference",
+     "name": "sound tag"
+    },
+    {
+     "type": "explanation",
+     "name": "VKBD Character Insertion Sound",
+     "definition": "This is the sound that plays when selecting buttons in the vkeyboard"
+    },
+    {
+     "type": "tag_reference",
+     "name": "sound tag"
+    },
+    {
+     "type": "explanation",
+     "name": "Online Notification Sound",
+     "definition": "This is the sound that plays when you receive an online notification"
+    },
+    {
+     "type": "tag_reference",
+     "name": "sound tag"
+    },
+    {
+     "type": "explanation",
+     "name": "Tabbed View Pane Tabbing Sound",
+     "definition": "This is the sound that plays when tabbing thru views in a tabbed view pane (eg, online menu)"
+    },
+    {
+     "type": "tag_reference",
+     "name": "sound tag"
+    },
+    {
+     "type": "explanation",
+     "name": "Pregame Countdown Timer Sound",
+     "definition": "This is the sound that plays as the countdown timer progresses"
     },
     {
      "type": "tag_reference",
@@ -188,35 +294,12 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound tag"
+     "name": null
     },
     {
-     "type": "tag_reference",
-     "name": "sound tag"
-    },
-    {
-     "type": "tag_reference",
-     "name": "sound tag"
-    },
-    {
-     "type": "tag_reference",
-     "name": "sound tag"
-    },
-    {
-     "type": "tag_reference",
-     "name": "sound tag"
-    },
-    {
-     "type": "tag_reference",
-     "name": "sound tag"
-    },
-    {
-     "type": "tag_reference",
-     "name": "sound tag"
-    },
-    {
-     "type": "tag_reference",
-     "name": "sound tag"
+     "type": "explanation",
+     "name": "Matchmaking Advance Sound",
+     "definition": "This is the sound that plays as matchmaking enters the final stage"
     },
     {
      "type": "tag_reference",
@@ -228,10 +311,6 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound tag"
-    },
-    {
-     "type": "tag_reference",
      "name": null
     },
     {
@@ -239,16 +318,27 @@
      "name": null
     },
     {
-     "type": "tag_reference",
-     "name": null
+     "type": "explanation",
+     "name": "Global Bitmaps",
+     "definition": "Sprite sequences for global ui bitmaps, as follows:\n1) vkeyboard cursor\n"
     },
     {
      "type": "tag_reference",
      "name": "global bitmaps tag"
     },
     {
+     "type": "explanation",
+     "name": "Global Text Strings",
+     "definition": "Global UI Text goes here"
+    },
+    {
      "type": "tag_reference",
      "name": "unicode string list tag"
+    },
+    {
+     "type": "explanation",
+     "name": "Screen Animations",
+     "definition": "Animations used by screen definitions for transitions and ambient animating"
     },
     {
      "type": "block",
@@ -256,9 +346,19 @@
      "definition": "animation_reference_block"
     },
     {
+     "type": "explanation",
+     "name": "Polygonal Shape Groups",
+     "definition": "Define the various groups of shape-objects for use on any ui screens here"
+    },
+    {
      "type": "block",
      "name": "shape groups",
      "definition": "shape_group_reference_block"
+    },
+    {
+     "type": "explanation",
+     "name": "Persistant Background Animations",
+     "definition": "These are the animations used by elements that live in the persistant background"
     },
     {
      "type": "block",
@@ -266,9 +366,19 @@
      "definition": "persistent_background_animation_block"
     },
     {
+     "type": "explanation",
+     "name": "List Skins",
+     "definition": "These define the visual appearances (skins) available for UI lists\nThey are expected to be entered in the following order:\n0) default\n1) squad lobby player list\n2) settings list\n3) playlist entry list\n4) variants list\n5) game browser list\n6) online player menu\n7) game setup menu\n8) playlist contents display\n9) profile picker\n10) mp map list\n11) main menu\n"
+    },
+    {
      "type": "block",
      "name": "list item skins",
      "definition": "list_skin_reference_block"
+    },
+    {
+     "type": "explanation",
+     "name": "Additional UI Strings",
+     "definition": "These are for specific purposes as noted"
     },
     {
      "type": "tag_reference",
@@ -283,9 +393,19 @@
      "name": null
     },
     {
+     "type": "explanation",
+     "name": "Skill to rank mapping table",
+     "definition": ""
+    },
+    {
      "type": "block",
      "name": "skill mappings",
      "definition": "skill_to_rank_mapping_block"
+    },
+    {
+     "type": "explanation",
+     "name": "WINDOW PARAMETERS",
+     "definition": "Various settings for different sized UI windows"
     },
     {
      "type": "short_enum",
@@ -344,12 +464,17 @@
      "name": "qtr dialog button key text bounds"
     },
     {
+     "type": "explanation",
+     "name": "Main menu music",
+     "definition": "Looping sound that plays while the main menu is active"
+    },
+    {
      "type": "tag_reference",
      "name": "main menu music"
     },
     {
      "type": "long_integer",
-     "name": "music fade time"
+     "name": "music fade time:milliseconds"
     },
     {
      "type": "terminator",
@@ -363,7 +488,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "category name"
+     "name": "category name^"
     },
     {
      "type": "word_flags",
@@ -467,8 +592,13 @@
      "definition": "flags_2"
     },
     {
+     "type": "explanation",
+     "name": "Primary Intro Transition",
+     "definition": "Defines the primary intro transitional animation"
+    },
+    {
      "type": "long_integer",
-     "name": "animation period"
+     "name": "animation period:milliseconds"
     },
     {
      "type": "block",
@@ -486,8 +616,13 @@
      "definition": 12
     },
     {
+     "type": "explanation",
+     "name": "Primary Outro Transition",
+     "definition": "Defines the primary outro transitional animation"
+    },
+    {
      "type": "long_integer",
-     "name": "animation period"
+     "name": "animation period:milliseconds"
     },
     {
      "type": "block",
@@ -505,8 +640,13 @@
      "definition": 12
     },
     {
+     "type": "explanation",
+     "name": "Ambient Animation",
+     "definition": "Defines the ambient animation"
+    },
+    {
      "type": "long_integer",
-     "name": "animation period"
+     "name": "animation period:milliseconds"
     },
     {
      "type": "short_enum",
@@ -562,14 +702,29 @@
    "size": 36,
    "fields": [
     {
+     "type": "explanation",
+     "name": "Unused Debug Geometry Shapes",
+     "definition": "This is the old way"
+    },
+    {
      "type": "block",
      "name": "shapes",
      "definition": "shape_block_reference_block"
     },
     {
+     "type": "explanation",
+     "name": "Model-Light Groups",
+     "definition": "Specify commonly used model/light groups here"
+    },
+    {
      "type": "block",
      "name": "model scene blocks",
      "definition": "ui_model_scene_reference_block"
+    },
+    {
+     "type": "explanation",
+     "name": "Bitmaps",
+     "definition": "Specify more flavor bitmaps here"
     },
     {
      "type": "block",
@@ -642,6 +797,11 @@
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "NOTE on coordinate systems",
+     "definition": "Halo y-axis=ui z-axis, and Halo z-axis=ui y-axis.\nAs a convention, let's always place objects in the ui scenario such that\nthey are facing in the '-y' direction, and the camera such that is is\nfacing the '+y' direction. This way the ui animation for models (which\ngets applied to the camera) will always be consisitent."
+    },
     {
      "type": "long_flags",
      "name": "flags",
@@ -847,7 +1007,7 @@
     },
     {
      "type": "long_integer",
-     "name": "animation period"
+     "name": "animation period:milliseconds"
     },
     {
      "type": "block",

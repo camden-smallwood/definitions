@@ -43,17 +43,22 @@
    "size": 20,
    "fields": [
     {
+     "type": "explanation",
+     "name": "LIGHT VOLUME",
+     "definition": "Light volumes are rendered as a sequence of glowy sprites, just like in Metal Gear Solid 2. Each instance of the light volume is rendered separately; this allows, for example, a narrow bright white volume to be overlaid on top of a fuzzy wide colored volume, or anything else you want!"
+    },
+    {
      "type": "useless_pad",
      "name": null,
      "definition": 64
     },
     {
      "type": "real",
-     "name": "falloff distance from camera"
+     "name": "falloff distance from camera:world units"
     },
     {
      "type": "real",
-     "name": "cutoff distance from camera"
+     "name": "cutoff distance from camera:world units"
     },
     {
      "type": "useless_pad",
@@ -76,6 +81,11 @@
    "size": 188,
    "fields": [
     {
+     "type": "explanation",
+     "name": "VOLUME",
+     "definition": "If no bitmap is selected, the default glow bitmap will be used. Sprite count controls how many sprites are used to render this volume. Using more sprites will result in a smoother and brighter effect, at a slight performance penalty. Don't touch the flags unless you know what you're doing (they should be off by default).\n\nBe careful with the 'fuzzy' flag! It should be used on very wide light volumes to make them blend smoothly into solid geometry rather than \"cutting\" into the zbuffer. Using this feature will make light volumes several times slower when they fill a large portion of the screen."
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags"
@@ -91,7 +101,7 @@
     },
     {
      "type": "long_integer",
-     "name": "sprite count"
+     "name": "sprite count:[4,256]"
     },
     {
      "type": "useless_pad",
@@ -99,9 +109,19 @@
      "definition": 32
     },
     {
+     "type": "explanation",
+     "name": "OFFSET",
+     "definition": "This function controls the offset along the projected forward axis of the light volume. The output range of this function is the distance in WORLD UNITS from the origin where the first and last sprite are rendered. The input to this function is the fractional value (from 0 to 1) along the projected axis. Using a transition function such as \"late\" will result in more sprites being bunched up towards the origin and spaced further apart near the end.\n\nNote that this and other functions in this tag have a range-input, which is controlled by the output of the FACING function below."
+    },
+    {
      "type": "struct",
      "name": "offset function",
      "definition": "scalar_function_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "RADIUS",
+     "definition": "This function controls the radius in WORLD UNITS of each sprite along the projected forward axis. Using a smaller min value and a larger max value results in a light volume that looks like a cone."
     },
     {
      "type": "struct",
@@ -109,9 +129,19 @@
      "definition": "scalar_function_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "BRIGHTNESS",
+     "definition": "This function controls the overall brightness (in [0,1]) of each sprite along the projected forward axis. Note that since the sprites are additive, they will be brighter in areas where they overlap more even if this function is constant, so it may be useful to use the brightness function to compensate for this."
+    },
+    {
      "type": "struct",
      "name": "brightness function",
      "definition": "scalar_function_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "COLOR",
+     "definition": "This function controls the color of each sprite along the projected forward axis. Color is multiplied by brightness to produce the final color that will be applied to the sprite."
     },
     {
      "type": "struct",
@@ -122,6 +152,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 64
+    },
+    {
+     "type": "explanation",
+     "name": "FACING",
+     "definition": "The input to this function is the facing angle between the light volume and the camera. Zero represents facing towards (parallel) or away from the camera and 1.0 represents facing perpendicular to the camera.\n\nThe output of this function is fed into the range-input of the functions above."
     },
     {
      "type": "struct",
@@ -144,32 +179,37 @@
      "definition": 64
     },
     {
-     "type": "real_fraction",
-     "name": "radius frac min"
+     "type": "explanation",
+     "name": "POSTPROCESS CONTROL",
+     "definition": "ADVANCED STUFF!! Don't change these values!!"
     },
     {
      "type": "real_fraction",
-     "name": "DEPRECATED!! x-step exponent"
-    },
-    {
-     "type": "long_integer",
-     "name": "DEPRECATED!! x-buffer length"
-    },
-    {
-     "type": "long_integer",
-     "name": "x-buffer spacing"
-    },
-    {
-     "type": "long_integer",
-     "name": "x-buffer min iterations"
-    },
-    {
-     "type": "long_integer",
-     "name": "x-buffer max iterations"
+     "name": "radius frac min*:[0.00390625, 1.0]"
     },
     {
      "type": "real_fraction",
-     "name": "x-delta max error"
+     "name": "DEPRECATED!! x-step exponent*:[0.5, 0.875]"
+    },
+    {
+     "type": "long_integer",
+     "name": "DEPRECATED!! x-buffer length*:[32, 512]"
+    },
+    {
+     "type": "long_integer",
+     "name": "x-buffer spacing*:[1, 256]"
+    },
+    {
+     "type": "long_integer",
+     "name": "x-buffer min iterations*:[1, 256]"
+    },
+    {
+     "type": "long_integer",
+     "name": "x-buffer max iterations*:[1, 256]"
+    },
+    {
+     "type": "real_fraction",
+     "name": "x-delta max error*:[0.001, 0.1]"
     },
     {
      "type": "useless_pad",
@@ -351,9 +391,24 @@
    "size": 36,
    "fields": [
     {
+     "type": "explanation",
+     "name": "SCALE FACTORS",
+     "definition": "These function control the screenspace aspect ratio of each sprite relative to the projected forward axis. Note that there is no range-input to these functions, because it would not make sense to stretch sprites when the light volume is facing directly towards or away from the camera (which way would we stretch them?)"
+    },
+    {
+     "type": "explanation",
+     "name": "ALONG-AXIS SCALE",
+     "definition": "Values higher than 1 along the axis will cause sprites to elongate and overlap more regardless of the orientation of the light volume, whereas values lower than 1 will cause sprite separation."
+    },
+    {
      "type": "struct",
      "name": "along axis",
      "definition": "scalar_function_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "AWAY-FROM-AXIS SCALE",
+     "definition": "Values higher than 1 away from the axis will cause the light volume to appear thicker."
     },
     {
      "type": "struct",
@@ -361,12 +416,17 @@
      "definition": "scalar_function_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "PARALLEL SCALE",
+     "definition": "When the light volume is viewed directly towards (parallel) or away from the camera, the scale factors above are interpolated towards this constant value. The threshold angle controls when the light volume is considered to be 100% parallel for these computations. The exponent controls how quickly the transition from using the perpendicular scale factors to using the parallel scale factor happens, e.g.:\n\n* exponent=0.0 -> perpendicular scale factors will always be used unless below threshold angle\n* exponent=0.1 -> transition quickly as viewing angle becomes perpendicular\n* exponent=1.0 -> transition smoothly between perpendicular and parallel\n* exponent=9.0 -> transition quickly as viewing angle becomes parallel"
+    },
+    {
      "type": "real",
      "name": "parallel scale"
     },
     {
      "type": "angle",
-     "name": "parallel threshold angle"
+     "name": "parallel threshold angle:degrees"
     },
     {
      "type": "real",

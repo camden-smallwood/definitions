@@ -222,7 +222,7 @@
     },
     {
      "type": "block",
-     "name": "runtime properties",
+     "name": "runtime properties*",
      "definition": "shader_properties_block"
     },
     {
@@ -242,7 +242,7 @@
     },
     {
      "type": "block",
-     "name": "postprocess definition",
+     "name": "postprocess definition*",
      "definition": "shader_postprocess_definition_new_block"
     },
     {
@@ -290,7 +290,7 @@
     },
     {
      "type": "real",
-     "name": "lightmap ambient bias"
+     "name": "lightmap ambient bias:[-1,1]"
     },
     {
      "type": "block",
@@ -317,51 +317,51 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "diffuse map"
+     "name": "diffuse map*"
     },
     {
      "type": "tag_reference",
-     "name": "lightmap emissive map"
+     "name": "lightmap emissive map*"
     },
     {
      "type": "real_rgb_color",
-     "name": "lightmap emissive color"
+     "name": "lightmap emissive color*"
     },
     {
      "type": "real",
-     "name": "lightmap emissive power"
+     "name": "lightmap emissive power*"
     },
     {
      "type": "real",
-     "name": "lightmap resolution scale"
+     "name": "lightmap resolution scale*"
     },
     {
      "type": "real",
-     "name": "lightmap half life"
+     "name": "lightmap half life*"
     },
     {
      "type": "real",
-     "name": "lightmap diffuse scale"
+     "name": "lightmap diffuse scale*"
     },
     {
      "type": "tag_reference",
-     "name": "alphatest map"
+     "name": "alphatest map*"
     },
     {
      "type": "tag_reference",
-     "name": "translucent map"
+     "name": "translucent map*"
     },
     {
      "type": "real_rgb_color",
-     "name": "lightmap transparent color"
+     "name": "lightmap transparent color*"
     },
     {
      "type": "real",
-     "name": "lightmap transparent alpha"
+     "name": "lightmap transparent alpha*"
     },
     {
      "type": "real",
-     "name": "lightmap foliage scale"
+     "name": "lightmap foliage scale*"
     },
     {
      "type": "terminator",
@@ -375,7 +375,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_enum",
@@ -416,7 +416,7 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type^",
      "definition": "type_2"
     },
     {
@@ -434,7 +434,12 @@
     },
     {
      "type": "real",
-     "name": "time period"
+     "name": "time period:seconds"
+    },
+    {
+     "type": "explanation",
+     "name": "FUNCTION",
+     "definition": ""
     },
     {
      "type": "custom",

@@ -108,6 +108,16 @@
    "size": 140,
    "fields": [
     {
+     "type": "explanation",
+     "name": "Notes on screen widgets:",
+     "definition": "- the widget coordinate system is a left-handed system (+x to the right, +y up, +z into the screen)\n  with the origin centered in the display (regardless of display size)\n- for widget component placement, all coordinates you define in the tag specifiy the object's\n  placement prior to the application of any animation\n- all coordinates you define are local to that object\n- all text specific to objects in the screen comes from the screen's string list tag\n  all of the string indices you may need to specify will refer to the screen's string list tag\n- a pane may contain either buttons OR a list OR a table-view, but never a combination of those\n  (widget won't function correctly if you try that)\n- all text is centered unless you specify otherwise"
+    },
+    {
+     "type": "explanation",
+     "name": "Flags",
+     "definition": "Set misc. screen behavior here"
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags"
@@ -128,22 +138,47 @@
      "definition": 2
     },
     {
+     "type": "explanation",
+     "name": "Button Key",
+     "definition": "The labels here are just a guide; the actual string used comes from the Nth position\nof this button key entry as found in the ui globals button key string list tag"
+    },
+    {
      "type": "short_enum",
      "name": "button key type",
      "definition": "button key type"
+    },
+    {
+     "type": "explanation",
+     "name": "Default Text Color",
+     "definition": "Any ui elements that don't explicitly set a text color will use this color"
     },
     {
      "type": "real_argb_color",
      "name": "text color"
     },
     {
+     "type": "explanation",
+     "name": "Screen Text",
+     "definition": "All text specific to this screen"
+    },
+    {
      "type": "tag_reference",
      "name": "string list tag"
+    },
+    {
+     "type": "explanation",
+     "name": "Panes",
+     "definition": "Define the screen's panes here (normal screens have 1 pane, tab-view screens have 2+ panes)"
     },
     {
      "type": "block",
      "name": "panes",
      "definition": "window_pane_reference_block"
+    },
+    {
+     "type": "explanation",
+     "name": "Shape Group",
+     "definition": "If the screen is to have a shape group, specify it here (references group in user interface globals tag)"
     },
     {
      "type": "short_enum",
@@ -156,8 +191,18 @@
      "definition": 2
     },
     {
+     "type": "explanation",
+     "name": "More Screen Parameters",
+     "definition": "These are down here because they got added on later. Have a nice day."
+    },
+    {
      "type": "string_id",
      "name": "header string id"
+    },
+    {
+     "type": "explanation",
+     "name": "Local strings",
+     "definition": "String IDs here allow defining new string ids that are visible only to this screen."
     },
     {
      "type": "block",
@@ -165,9 +210,19 @@
      "definition": "local_string_id_list_section_reference_block"
     },
     {
+     "type": "explanation",
+     "name": "Local bitmaps",
+     "definition": "Bitmaps here allow adding a bitmap that's accessible in code for use in this screen."
+    },
+    {
      "type": "block",
      "name": "local bitmaps",
      "definition": "local_bitmap_reference_block"
+    },
+    {
+     "type": "explanation",
+     "name": "LEVEL LOAD PROGRESS FIELDS",
+     "definition": "These are used only for level load progress bitmaps"
     },
     {
      "type": "real_rgb_color",
@@ -192,6 +247,11 @@
     {
      "type": "real",
      "name": "refraction scale y"
+    },
+    {
+     "type": "explanation",
+     "name": "Mouse cursors",
+     "definition": "The mouse cursor definition for this screen."
     },
     {
      "type": "tag_reference",
@@ -223,9 +283,19 @@
      "definition": "animation index"
     },
     {
+     "type": "explanation",
+     "name": "Button Definitions",
+     "definition": "If the pane contains buttons, define them here"
+    },
+    {
      "type": "block",
      "name": "buttons",
      "definition": "button_widget_reference_block"
+    },
+    {
+     "type": "explanation",
+     "name": "List Definition",
+     "definition": "If the pane contains a list, define it here"
     },
     {
      "type": "block",
@@ -233,9 +303,19 @@
      "definition": "list_reference_block"
     },
     {
+     "type": "explanation",
+     "name": "OBSOLETE Table View Definition!",
+     "definition": "If the pane contains a table-view, define it here"
+    },
+    {
      "type": "block",
-     "name": "table view",
+     "name": "table view!",
      "definition": "table_view_list_reference_block"
+    },
+    {
+     "type": "explanation",
+     "name": "Flavor Item Blocks",
+     "definition": "Define additional flavor items here"
     },
     {
      "type": "block",
@@ -253,8 +333,13 @@
      "definition": "ui_model_scene_reference_block"
     },
     {
+     "type": "explanation",
+     "name": "Text-Value Pair Blocks!",
+     "definition": "If you need general purpose text-value pairs for the contents of this pane,\ndefine them here. NOTE: special code will be needed to hook these into anything.\nThey are useful for things such as custom text labels that change depending on the\ncurrently selected list item, or current value of some game setting.\nThanks, have a nice day. -Stefan"
+    },
+    {
      "type": "block",
-     "name": "text-value blocks",
+     "name": "text-value blocks!",
      "definition": "s_text_value_pair_blocks_block_UNUSED"
     },
     {
@@ -315,7 +400,7 @@
     },
     {
      "type": "point_2d",
-     "name": "bitmap offset"
+     "name": "bitmap offset#from top-left"
     },
     {
      "type": "string_id",
@@ -372,8 +457,13 @@
      "name": "intro animation delay milliseconds"
     },
     {
+     "type": "explanation",
+     "name": "Item Text Value Pairs!",
+     "definition": "If you want to control item text-value pairing manually, add them here."
+    },
+    {
      "type": "block",
-     "name": "item text-value pairs",
+     "name": "item text-value pairs!",
      "definition": "s_text_value_pair_reference_block_UNUSED"
     },
     {
@@ -387,9 +477,19 @@
    "size": 20,
    "fields": [
     {
+     "type": "explanation",
+     "name": "OBSOLETE",
+     "definition": "this is all obsolete"
+    },
+    {
      "type": "short_enum",
      "name": "value type",
      "definition": "value type"
+    },
+    {
+     "type": "explanation",
+     "name": "Value",
+     "definition": "Enter the value in the box corresponding to the value type you specified above"
     },
     {
      "type": "short_enum",
@@ -407,6 +507,11 @@
     {
      "type": "string_id",
      "name": "text value string_id"
+    },
+    {
+     "type": "explanation",
+     "name": "Text Label",
+     "definition": "This is text string associated with data when it has the value specified above.\nThe string comes from the screen's string list tag."
     },
     {
      "type": "string_id",
@@ -514,7 +619,7 @@
     },
     {
      "type": "point_2d",
-     "name": "bitmap top-left"
+     "name": "bitmap top-left:if there is a bitmap"
     },
     {
      "type": "tag_reference",
@@ -693,6 +798,11 @@
    "size": 84,
    "fields": [
     {
+     "type": "explanation",
+     "name": "NOTE on coordinate systems",
+     "definition": "Halo y-axis=ui z-axis, and Halo z-axis=ui y-axis.\nAs a convention, let's always place objects in the ui scenario such that\nthey are facing in the '-y' direction, and the camera such that is is\nfacing the '+y' direction. This way the ui animation for models (which\ngets applied to the camera) will always be consisitent."
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags_6"
@@ -796,6 +906,11 @@
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "OBSOLETE",
+     "definition": "this is all obsolete"
+    },
     {
      "type": "string",
      "name": "name"
@@ -909,7 +1024,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "section name"
+     "name": "section name^"
     },
     {
      "type": "block",
@@ -928,7 +1043,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "string id"
+     "name": "string id^"
     },
     {
      "type": "terminator",
@@ -942,7 +1057,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "bitmap"
+     "name": "bitmap^"
     },
     {
      "type": "terminator",

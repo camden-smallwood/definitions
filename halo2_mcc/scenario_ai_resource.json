@@ -369,7 +369,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "reference"
+     "name": "reference^"
     },
     {
      "type": "terminator",
@@ -383,7 +383,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "useless_pad",
@@ -417,7 +417,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_block_index",
@@ -509,7 +509,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "pad",
@@ -558,7 +558,7 @@
     },
     {
      "type": "real",
-     "name": "squad delay time"
+     "name": "squad delay time:seconds"
     },
     {
      "type": "pad",
@@ -567,11 +567,11 @@
     },
     {
      "type": "short_integer",
-     "name": "normal diff count"
+     "name": "normal diff count#initial number of actors on normal difficulty"
     },
     {
      "type": "short_integer",
-     "name": "insane diff count"
+     "name": "insane diff count#initial number of actors on insane difficulty (hard difficulty is midway between normal and insane)"
     },
     {
      "type": "short_enum",
@@ -605,7 +605,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "initial weapon (DO NOT USE)"
+     "name": "initial weapon (DO NOT USE)*"
     },
     {
      "type": "pad",
@@ -654,7 +654,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "reference"
+     "name": "reference^"
     },
     {
      "type": "terminator",
@@ -668,7 +668,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
@@ -730,12 +730,17 @@
    "size": 44,
    "fields": [
     {
+     "type": "explanation",
+     "name": "CONTROLS`",
+     "definition": "Ctrl-N: Creates a new area and assigns it to the current selection of firing points."
+    },
+    {
      "type": "real_point_3d",
      "name": "placement position"
     },
     {
      "type": "short_block_index",
-     "name": "area",
+     "name": "area^",
      "definition": "areas_block"
     },
     {
@@ -754,7 +759,7 @@
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_4"
     },
     {
@@ -764,7 +769,7 @@
     },
     {
      "type": "real_point_3d",
-     "name": "local position"
+     "name": "local position*"
     },
     {
      "type": "short_integer",
@@ -787,7 +792,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
@@ -831,7 +836,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
@@ -845,11 +850,11 @@
     },
     {
      "type": "short_integer",
-     "name": "runtime starting index"
+     "name": "runtime starting index!"
     },
     {
      "type": "short_integer",
-     "name": "runtime count"
+     "name": "runtime count!"
     },
     {
      "type": "pad",
@@ -899,8 +904,13 @@
    "size": 32,
    "fields": [
     {
+     "type": "explanation",
+     "name": "CONTROLS`",
+     "definition": "Ctrl-N: Creates a new area and assigns it to the current selection of firing points."
+    },
+    {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_4"
     },
     {
@@ -923,12 +933,12 @@
     },
     {
      "type": "short_block_index",
-     "name": "area",
+     "name": "area^",
      "definition": "areas_block"
     },
     {
      "type": "short_integer",
-     "name": "cluster index"
+     "name": "cluster index*"
     },
     {
      "type": "skip",
@@ -950,8 +960,13 @@
    "size": 32,
    "fields": [
     {
+     "type": "explanation",
+     "name": "CONTROLS`",
+     "definition": "Ctrl-N: Creates a new area and assigns it to the current selection of firing points."
+    },
+    {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_4"
     },
     {
@@ -974,12 +989,12 @@
     },
     {
      "type": "short_block_index",
-     "name": "area",
+     "name": "area^",
      "definition": "areas_block"
     },
     {
      "type": "short_integer",
-     "name": "cluster index"
+     "name": "cluster index*"
     },
     {
      "type": "skip",
@@ -1001,6 +1016,11 @@
    "size": 32,
    "fields": [
     {
+     "type": "explanation",
+     "name": "CONTROLS`",
+     "definition": "Ctrl-N: Creates a new area and assigns it to the current selection of firing points."
+    },
+    {
      "type": "real_point_3d",
      "name": "position (local)"
     },
@@ -1010,17 +1030,17 @@
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_4"
     },
     {
      "type": "short_block_index",
-     "name": "area",
+     "name": "area^",
      "definition": "areas_block"
     },
     {
      "type": "short_integer",
-     "name": "cluster index"
+     "name": "cluster index*"
     },
     {
      "type": "skip",
@@ -1055,7 +1075,7 @@
     },
     {
      "type": "angle",
-     "name": "facing"
+     "name": "facing:degrees"
     },
     {
      "type": "short_enum",
@@ -1064,7 +1084,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "bsp index",
+     "name": "bsp index!",
      "definition": "scenario_structure_bsp_reference_block"
     },
     {
@@ -1109,11 +1129,11 @@
     },
     {
      "type": "string_id",
-     "name": "unused_names0"
+     "name": "unused_names0!"
     },
     {
      "type": "string_id",
-     "name": "unused_names1"
+     "name": "unused_names1!"
     },
     {
      "type": "short_enum",
@@ -1142,7 +1162,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "structure bsp"
+     "name": "structure bsp^"
     },
     {
      "type": "terminator",
@@ -1161,11 +1181,11 @@
     },
     {
      "type": "tag_reference",
-     "name": "structure bsp"
+     "name": "structure bsp^"
     },
     {
      "type": "tag_reference",
-     "name": "structure lightmap"
+     "name": "structure lightmap^"
     },
     {
      "type": "pad",
@@ -1174,7 +1194,7 @@
     },
     {
      "type": "real",
-     "name": "UNUSED radiance est. search distance"
+     "name": "UNUSED radiance est. search distance!"
     },
     {
      "type": "pad",
@@ -1183,11 +1203,11 @@
     },
     {
      "type": "real",
-     "name": "UNUSED luminels per world unit"
+     "name": "UNUSED luminels per world unit!"
     },
     {
      "type": "real",
-     "name": "UNUSED output white reference"
+     "name": "UNUSED output white reference!"
     },
     {
      "type": "pad",
@@ -1226,7 +1246,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sky"
+     "name": "sky^"
     },
     {
      "type": "terminator",
@@ -1244,7 +1264,7 @@
     },
     {
      "type": "angle",
-     "name": "facing"
+     "name": "facing:degrees"
     },
     {
      "type": "pad",
@@ -1273,7 +1293,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "weapon reference (DO NOT USE)"
+     "name": "weapon reference (DO NOT USE)*"
     },
     {
      "type": "pad",
@@ -1302,7 +1322,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "pad",
@@ -1321,7 +1341,7 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_point_3d",
@@ -1329,7 +1349,7 @@
     },
     {
      "type": "angle",
-     "name": "facing"
+     "name": "facing:degrees"
     },
     {
      "type": "skip",
@@ -1398,7 +1418,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "pad",
@@ -1417,7 +1437,7 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_point_3d",
@@ -1425,7 +1445,7 @@
     },
     {
      "type": "angle",
-     "name": "facing"
+     "name": "facing:degrees"
     },
     {
      "type": "skip",
@@ -1489,7 +1509,7 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_point_3d",
@@ -1497,7 +1517,7 @@
     },
     {
      "type": "short_integer",
-     "name": "reference frame"
+     "name": "reference frame*"
     },
     {
      "type": "pad",
@@ -1506,7 +1526,7 @@
     },
     {
      "type": "angle",
-     "name": "facing"
+     "name": "facing:degrees"
     },
     {
      "type": "long_flags",
@@ -1545,7 +1565,7 @@
     },
     {
      "type": "short_integer",
-     "name": "swarm count"
+     "name": "swarm count#number of cretures in swarm if a swarm is spawned at this location"
     },
     {
      "type": "string_id",
@@ -1567,7 +1587,7 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_point_3d",
@@ -1575,7 +1595,7 @@
     },
     {
      "type": "short_integer",
-     "name": "reference frame"
+     "name": "reference frame*"
     },
     {
      "type": "pad",
@@ -1584,7 +1604,7 @@
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "facing (yaw, pitch)"
+     "name": "facing (yaw, pitch):degrees"
     },
     {
      "type": "long_flags",
@@ -1623,7 +1643,7 @@
     },
     {
      "type": "short_integer",
-     "name": "swarm count"
+     "name": "swarm count#number of cretures in swarm if a swarm is spawned at this location"
     },
     {
      "type": "string_id",
@@ -1635,7 +1655,7 @@
     },
     {
      "type": "real",
-     "name": "initial movement distance"
+     "name": "initial movement distance#before doing anything else, the actor will travel the given distance in its forward direction"
     },
     {
      "type": "short_block_index",
@@ -1664,7 +1684,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "name",
+     "name": "name^",
      "definition": "scenario_object_names_block"
     },
     {
@@ -1674,7 +1694,7 @@
     },
     {
      "type": "short_integer",
-     "name": "desired permutation"
+     "name": "desired permutation#if non-zero, will try to use model permutations with names that end in that number, e.g. 7 would pick \"body-7\" and \"head-7\""
     },
     {
      "type": "real_point_3d",
@@ -1691,7 +1711,7 @@
     },
     {
      "type": "long_block_index",
-     "name": "environment object reference",
+     "name": "environment object reference*",
      "definition": "dont_use_me_scenario_environment_object_block"
     },
     {
@@ -1726,7 +1746,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "custom_short_block_index",
@@ -1752,16 +1772,16 @@
     },
     {
      "type": "short_block_index",
-     "name": "bsp",
+     "name": "bsp*",
      "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "short_integer",
-     "name": "runtime object type"
+     "name": "runtime object type!"
     },
     {
      "type": "long_integer",
-     "name": "unique id"
+     "name": "unique id*"
     },
     {
      "type": "pad",
@@ -1770,11 +1790,11 @@
     },
     {
      "type": "tag",
-     "name": "object definition tag"
+     "name": "object definition tag*"
     },
     {
      "type": "long_integer",
-     "name": "object"
+     "name": "object*^"
     },
     {
      "type": "pad",
@@ -1793,7 +1813,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "body vitality"
+     "name": "body vitality:[0,1]"
     },
     {
      "type": "long_flags",
@@ -1831,7 +1851,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "name",
+     "name": "name^",
      "definition": "scenario_object_names_block"
     },
     {
@@ -1887,7 +1907,7 @@
     },
     {
      "type": "word_block_flags",
-     "name": "manual bsp flags",
+     "name": "manual bsp flags*",
      "definition": "scenario_structure_bsp_reference_block"
     },
     {
@@ -1923,21 +1943,21 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "unique id"
+     "name": "unique id*"
     },
     {
      "type": "short_block_index",
-     "name": "origin bsp index",
+     "name": "origin bsp index*",
      "definition": "scenario_structure_bsp_reference_block"
     },
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
      "type": "char_enum",
-     "name": "source",
+     "name": "source*",
      "definition": "source"
     },
     {
@@ -1958,7 +1978,7 @@
     },
     {
      "type": "long_string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "terminator",
@@ -1998,7 +2018,7 @@
     },
     {
      "type": "word_block_flags",
-     "name": "manual bsp flags",
+     "name": "manual bsp flags*",
      "definition": "scenario_structure_bsp_reference_block"
     },
     {
@@ -2075,7 +2095,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "body vitality"
+     "name": "body vitality:[0,1]"
     },
     {
      "type": "long_flags",
@@ -2108,7 +2128,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "name",
+     "name": "name^",
      "definition": "scenario_object_names_block"
     },
     {
@@ -2138,7 +2158,7 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_point_3d",
@@ -2146,7 +2166,7 @@
     },
     {
      "type": "short_integer",
-     "name": "reference frame"
+     "name": "reference frame*"
     },
     {
      "type": "pad",
@@ -2155,7 +2175,7 @@
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "facing (yaw, pitch)"
+     "name": "facing (yaw, pitch):degrees"
     },
     {
      "type": "long_flags",
@@ -2194,7 +2214,7 @@
     },
     {
      "type": "short_integer",
-     "name": "swarm count"
+     "name": "swarm count#number of cretures in swarm if a swarm is spawned at this location"
     },
     {
      "type": "string_id",
@@ -2206,7 +2226,7 @@
     },
     {
      "type": "real",
-     "name": "initial movement distance"
+     "name": "initial movement distance#before doing anything else, the actor will travel the given distance in its forward direction"
     },
     {
      "type": "short_block_index",
@@ -2230,7 +2250,7 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_point_3d",
@@ -2238,7 +2258,7 @@
     },
     {
      "type": "short_integer",
-     "name": "reference frame"
+     "name": "reference frame*"
     },
     {
      "type": "pad",
@@ -2247,7 +2267,7 @@
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "facing (yaw, pitch)"
+     "name": "facing (yaw, pitch):degrees"
     },
     {
      "type": "long_flags",
@@ -2291,7 +2311,7 @@
     },
     {
      "type": "short_integer",
-     "name": "swarm count"
+     "name": "swarm count#number of cretures in swarm if a swarm is spawned at this location"
     },
     {
      "type": "string_id",
@@ -2303,7 +2323,7 @@
     },
     {
      "type": "real",
-     "name": "initial movement distance"
+     "name": "initial movement distance#before doing anything else, the actor will travel the given distance in its forward direction"
     },
     {
      "type": "short_block_index",
@@ -2341,7 +2361,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
@@ -2389,7 +2409,7 @@
     },
     {
      "type": "angle",
-     "name": "facing"
+     "name": "facing:degrees"
     },
     {
      "type": "real",
@@ -2397,7 +2417,7 @@
     },
     {
      "type": "real_bounds",
-     "name": "time"
+     "name": "time:seconds"
     },
     {
      "type": "short_block_index",
@@ -2406,7 +2426,7 @@
     },
     {
      "type": "char_integer",
-     "name": "sequence ID"
+     "name": "sequence ID#identifies this move position as belonging to a sequence, only actors whose starting locations match this sequence ID can use it (zero = no sequence)"
     },
     {
      "type": "pad",
@@ -2420,7 +2440,7 @@
     },
     {
      "type": "long_integer",
-     "name": "surface index"
+     "name": "surface index*"
     },
     {
      "type": "terminator",
@@ -2434,11 +2454,11 @@
    "fields": [
     {
      "type": "string",
-     "name": "animation name"
+     "name": "animation name^"
     },
     {
      "type": "tag_reference",
-     "name": "animation graph"
+     "name": "animation graph#leave this blank to use the unit's normal animation graph"
     },
     {
      "type": "pad",
@@ -2475,7 +2495,7 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
@@ -2499,7 +2519,7 @@
     },
     {
      "type": "real",
-     "name": "squad delay time"
+     "name": "squad delay time:seconds"
     },
     {
      "type": "pad",
@@ -2508,11 +2528,11 @@
     },
     {
      "type": "short_integer",
-     "name": "normal diff count"
+     "name": "normal diff count#initial number of actors on normal difficulty"
     },
     {
      "type": "short_integer",
-     "name": "insane diff count"
+     "name": "insane diff count#initial number of actors on insane difficulty (hard difficulty is midway between normal and insane)"
     },
     {
      "type": "short_enum",
@@ -2528,6 +2548,11 @@
      "type": "pad",
      "name": "3*sizeof(long)",
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "Actor defaults",
+     "definition": "The following default values are used for spawned actors"
     },
     {
      "type": "short_block_index",
@@ -2594,7 +2619,7 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
@@ -2613,15 +2638,15 @@
     },
     {
      "type": "real",
-     "name": "squad delay time"
+     "name": "squad delay time:seconds"
     },
     {
      "type": "short_integer",
-     "name": "normal diff count"
+     "name": "normal diff count#initial number of actors on normal difficulty"
     },
     {
      "type": "short_integer",
-     "name": "insane diff count"
+     "name": "insane diff count#initial number of actors on insane difficulty (hard difficulty is midway between normal and insane)"
     },
     {
      "type": "short_enum",
@@ -2637,6 +2662,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "Actor defaults",
+     "definition": "The following default values are used for spawned actors"
     },
     {
      "type": "short_block_index",
@@ -2718,7 +2748,7 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "area",
+     "name": "area^",
      "definition": "areas_block"
     },
     {
@@ -2751,12 +2781,12 @@
     },
     {
      "type": "short_block_index",
-     "name": "zone",
+     "name": "zone^",
      "definition": "zone_block"
     },
     {
      "type": "custom_short_block_index",
-     "name": "area"
+     "name": "area^"
     },
     {
      "type": "terminator",
@@ -2780,12 +2810,12 @@
     },
     {
      "type": "short_block_index",
-     "name": "zone",
+     "name": "zone^",
      "definition": "zone_block"
     },
     {
      "type": "custom_short_block_index",
-     "name": "area"
+     "name": "area^"
     },
     {
      "type": "terminator",
@@ -2804,7 +2834,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "next order",
+     "name": "next order^",
      "definition": "orders_block"
     },
     {
@@ -2829,7 +2859,7 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "rule type",
+     "name": "rule type^",
      "definition": "rule type"
     },
     {
@@ -2924,7 +2954,7 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "array",
@@ -2948,7 +2978,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "parameters"
+     "name": "parameters*!"
     },
     {
      "type": "terminator",
@@ -2962,7 +2992,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_block_index",
@@ -2980,11 +3010,11 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "forward"
+     "name": "forward!"
     },
     {
      "type": "real_vector_3d",
-     "name": "up"
+     "name": "up!"
     },
     {
      "type": "real_point_3d",
@@ -3001,7 +3031,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "kill trigger volume",
+     "name": "kill trigger volume*",
      "definition": "scenario_kill_trigger_volumes_block"
     },
     {
@@ -3021,7 +3051,7 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "trigger volume",
+     "name": "trigger volume^",
      "definition": "scenario_trigger_volume_block"
     },
     {
@@ -3036,7 +3066,7 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "next order",
+     "name": "next order^",
      "definition": "orders_block"
     },
     {
@@ -3050,7 +3080,7 @@
     },
     {
      "type": "short_enum",
-     "name": "dialogue type",
+     "name": "dialogue type#when this ending is triggered, launch a dialogue event of the given type",
      "definition": "dialogue type"
     },
     {
@@ -3085,7 +3115,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "trigger",
+     "name": "trigger^",
      "definition": "triggers_block"
     },
     {
@@ -3109,7 +3139,7 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
@@ -3152,7 +3182,7 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_block_index",
@@ -3253,7 +3283,7 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_block_index",
@@ -3344,12 +3374,12 @@
     },
     {
      "type": "short_block_index",
-     "name": "zone",
+     "name": "zone^",
      "definition": "zone_block"
     },
     {
      "type": "custom_short_block_index",
-     "name": "area"
+     "name": "area^"
     },
     {
      "type": "terminator",
@@ -3373,12 +3403,12 @@
     },
     {
      "type": "short_block_index",
-     "name": "zone",
+     "name": "zone^",
      "definition": "zone_block"
     },
     {
      "type": "custom_short_block_index",
-     "name": "area"
+     "name": "area^"
     },
     {
      "type": "terminator",
@@ -3397,7 +3427,7 @@
     },
     {
      "type": "short_enum",
-     "name": "dialogue type",
+     "name": "dialogue type#when this ending is triggered, launch a dialogue event of the given type",
      "definition": "dialogue type"
     },
     {
@@ -3417,7 +3447,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "script name"
+     "name": "script name^"
     },
     {
      "type": "pad",
@@ -3436,7 +3466,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "recording name"
+     "name": "recording name^"
     },
     {
      "type": "pad",
@@ -3455,7 +3485,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "word_flags",
@@ -3469,11 +3499,11 @@
     },
     {
      "type": "real",
-     "name": "trigger distance"
+     "name": "trigger distance:world units#distance the player must enter before the conversation can trigger"
     },
     {
      "type": "real",
-     "name": "run-to-player dist"
+     "name": "run-to-player dist:world units#if the 'involves player' flag is set, when triggered the conversation's participant(s) will run to within this distance of the player"
     },
     {
      "type": "pad",
@@ -3512,12 +3542,12 @@
     },
     {
      "type": "short_block_index",
-     "name": "use this object",
+     "name": "use this object#if a unit with this name exists, we try to pick them to start the conversation",
      "definition": "scenario_object_names_block"
     },
     {
      "type": "short_block_index",
-     "name": "set new name",
+     "name": "set new name#once we pick a unit, we name it this",
      "definition": "scenario_object_names_block"
     },
     {
@@ -3571,7 +3601,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "addressee participant",
+     "name": "addressee participant#this field is only used if the addressee type is 'participant'",
      "definition": "ai_conversation_participant_block"
     },
     {
@@ -3644,7 +3674,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "pad",
@@ -3678,7 +3708,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_point_3d",
@@ -3704,7 +3734,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_point_3d",
@@ -3712,7 +3742,7 @@
     },
     {
      "type": "short_integer",
-     "name": "reference frame"
+     "name": "reference frame*"
     },
     {
      "type": "pad",
@@ -3739,7 +3769,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "block",
@@ -3772,7 +3802,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
@@ -3831,7 +3861,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_enum",
@@ -3865,7 +3895,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "variant designation"
+     "name": "variant designation^"
     },
     {
      "type": "terminator",
@@ -3904,7 +3934,7 @@
     },
     {
      "type": "real",
-     "name": "ecology margin"
+     "name": "ecology margin:wus#distance from ecology boundary that creature begins to be repulsed"
     },
     {
      "type": "useless_pad",
@@ -3923,7 +3953,7 @@
     },
     {
      "type": "real",
-     "name": "production frequency"
+     "name": "production frequency:boids/sec#How frequently boids are produced at one of the sources (limited by the max boid count)"
     },
     {
      "type": "real_bounds",
@@ -3936,7 +3966,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "creature"
+     "name": "creature^"
     },
     {
      "type": "short_bounds",
@@ -3948,76 +3978,91 @@
      "definition": 24
     },
     {
-     "type": "real",
-     "name": "neighborhood radius"
+     "type": "explanation",
+     "name": "Flock parameters",
+     "definition": "Recommended initial values (for a sentinel-sized unit): \n\tneighborhood radius= 6.0 \n\tavoidance radius= 3 \n forward scale= 0.5 \n alignment scale= 0.5 \n avoidance scale= 1.0 \n leveling force scale= 0.1 \n perception angle= 120 \n average throttle= 0.75 \n maximum throttle= 1.0 \n position scale= 1.0 \n position min radius= 3 \n position max radius = 9"
+    },
+    {
+     "type": "explanation",
+     "name": "Let me give you a piece of free advice.",
+     "definition": "Flocks with a neighborhood radius of 0 don't FLOCK, per se (in the creature-creature interaction kind of way), but they are much cheaper. The best thing is to have a non-zero radius for small flocks, and a zero radius for large flocks (or for 'flow-flocks', ones with sources and sinks that are intended to create a steady flow of something). Note also that for flocks with a 0 neighborhood radius, the parameters for avoidance, alignment, position and perception angle are ignored entirely."
     },
     {
      "type": "real",
-     "name": "avoidance radius"
+     "name": "neighborhood radius:world units#distance within which one boid is affected by another"
     },
     {
      "type": "real",
-     "name": "forward scale"
+     "name": "avoidance radius:world units#distance that a boid tries to maintain from another"
     },
     {
      "type": "real",
-     "name": "alignment scale"
+     "name": "forward scale:[0..1]#weight given to boid's desire to fly straight ahead"
     },
     {
      "type": "real",
-     "name": "avoidance scale"
+     "name": "alignment scale:[0..1]#weight given to boid's desire to align itself with neighboring boids"
     },
     {
      "type": "real",
-     "name": "leveling force scale"
+     "name": "avoidance scale:[0..1]#weight given to boid's desire to avoid collisions with other boids, when within the avoidance radius"
     },
     {
      "type": "real",
-     "name": "sink scale"
+     "name": "leveling force scale:[0..1]#weight given to boids desire to fly level"
+    },
+    {
+     "type": "real",
+     "name": "sink scale:[0..1]#weight given to boid's desire to fly towards its sinks"
     },
     {
      "type": "angle",
-     "name": "perception angle"
+     "name": "perception angle:degrees#angle-from-forward within which one boid can perceive and react to another"
     },
     {
      "type": "real",
-     "name": "average throttle"
+     "name": "average throttle:[0..1]#throttle at which boids will naturally fly"
     },
     {
      "type": "real",
-     "name": "maximum throttle"
+     "name": "maximum throttle:[0..1]#maximum throttle applicable"
     },
     {
      "type": "real",
-     "name": "position scale"
+     "name": "position scale:[0..1]#weight given to boid's desire to be near flock center"
     },
     {
      "type": "real",
-     "name": "position min radius"
+     "name": "position min radius:wus#distance to flock center beyond which an attracting force is applied"
     },
     {
      "type": "real",
-     "name": "position max radius"
+     "name": "position max radius:wus#distance to flock center at which the maximum attracting force is applied"
     },
     {
      "type": "real",
-     "name": "movement weight threshold"
+     "name": "movement weight threshold#The threshold of accumulated weight over which movement occurs"
     },
     {
      "type": "real",
-     "name": "danger radius"
+     "name": "danger radius:wus#distance within which boids will avoid a dangerous object (e.g. the player)"
     },
     {
      "type": "real",
-     "name": "danger scale"
+     "name": "danger scale#weight given to boid's desire to avoid danger"
+    },
+    {
+     "type": "explanation",
+     "name": "Perlin noise parameters",
+     "definition": "Recommended initial values: \n\trandom offset scale= 0.2 \n\toffset period bounds= 1, 3"
     },
     {
      "type": "real",
-     "name": "random offset scale"
+     "name": "random offset scale:[0..1]#weight given to boid's random heading offset"
     },
     {
      "type": "real_bounds",
-     "name": "random offset period"
+     "name": "random offset period:seconds"
     },
     {
      "type": "useless_pad",
@@ -4049,7 +4094,7 @@
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "starting yaw, pitch"
+     "name": "starting yaw, pitch:degrees"
     },
     {
      "type": "real",
@@ -4057,7 +4102,7 @@
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight#probability of producing at this source"
     },
     {
      "type": "terminator",

@@ -119,7 +119,7 @@
     },
     {
      "type": "real",
-     "name": "bounding radius"
+     "name": "bounding radius:world units"
     },
     {
      "type": "real_point_3d",
@@ -132,7 +132,7 @@
     },
     {
      "type": "real",
-     "name": "acceleration scale"
+     "name": "acceleration scale:[0,+inf]#marine 1.0, grunt 1.4, elite 0.9, hunter 0.5, etc."
     },
     {
      "type": "short_enum",
@@ -161,11 +161,11 @@
     },
     {
      "type": "real",
-     "name": "dynamic light sphere radius"
+     "name": "dynamic light sphere radius#sphere to use for dynamic lights and shadows. only used if not 0"
     },
     {
      "type": "real_point_3d",
-     "name": "dynamic light sphere offset"
+     "name": "dynamic light sphere offset#only used if radius not 0"
     },
     {
      "type": "string_id",
@@ -222,44 +222,59 @@
      "definition": 16
     },
     {
-     "type": "real",
-     "name": "Apply collision damage scale"
+     "type": "explanation",
+     "name": "Applying collision damage",
+     "definition": "for things that want to cause more or less collision damage"
     },
     {
      "type": "real",
-     "name": "min game acc (default)"
+     "name": "Apply collision damage scale#0 means 1.  1 is standard scale.  Some things may want to apply more damage"
+    },
+    {
+     "type": "explanation",
+     "name": "Game collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max game acc (default)"
+     "name": "min game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min game scale (default)"
+     "name": "max game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max game scale (default)"
+     "name": "min game scale (default)#0-1"
     },
     {
      "type": "real",
-     "name": "min abs acc (default)"
+     "name": "max game scale (default)#0-1"
+    },
+    {
+     "type": "explanation",
+     "name": "Absolute collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max abs acc (default)"
+     "name": "min abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min abs scale (default)"
+     "name": "max abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max abs scale (default)"
+     "name": "min abs scale (default)#0-1"
+    },
+    {
+     "type": "real",
+     "name": "max abs scale (default)#0-1"
     },
     {
      "type": "short_integer",
-     "name": "hud text message index"
+     "name": "hud text message index!"
     },
     {
      "type": "pad",
@@ -278,7 +293,7 @@
     },
     {
      "type": "block",
-     "name": "old functions",
+     "name": "old functions!",
      "definition": "old_object_function_block"
     },
     {
@@ -288,7 +303,7 @@
     },
     {
      "type": "block",
-     "name": "predicted resources",
+     "name": "predicted resources*!",
      "definition": "predicted_resource_block"
     },
     {
@@ -308,7 +323,7 @@
     },
     {
      "type": "string_id",
-     "name": "ai type name"
+     "name": "ai type name#used for combat dialogue, etc."
     },
     {
      "type": "pad",
@@ -350,11 +365,11 @@
     },
     {
      "type": "string_id",
-     "name": "turn off with"
+     "name": "turn off with#if the specified function is off, so is this function"
     },
     {
      "type": "real",
-     "name": "min value"
+     "name": "min value#function must exceed this value (after mapping) to be active 0. means do nothing"
     },
     {
      "type": "custom",
@@ -490,7 +505,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "old_string_id",
@@ -536,7 +551,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "useless_pad",
@@ -611,7 +626,7 @@
     },
     {
      "type": "string_id",
-     "name": "variant name"
+     "name": "variant name#if empty, may be used by any model variant"
     },
     {
      "type": "terminator",
@@ -688,6 +703,11 @@
      "definition": "object_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ UNIT $$$",
+     "definition": ""
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags_3"
@@ -718,7 +738,7 @@
     },
     {
      "type": "angle",
-     "name": "camera field of view"
+     "name": "camera field of view:degrees"
     },
     {
      "type": "real",
@@ -741,39 +761,39 @@
     },
     {
      "type": "real",
-     "name": "soft ping threshold"
+     "name": "soft ping threshold:[0,1]"
     },
     {
      "type": "real",
-     "name": "soft ping interrupt time"
+     "name": "soft ping interrupt time:seconds"
     },
     {
      "type": "real",
-     "name": "hard ping threshold"
+     "name": "hard ping threshold:[0,1]"
     },
     {
      "type": "real",
-     "name": "hard ping interrupt time"
+     "name": "hard ping interrupt time:seconds"
     },
     {
      "type": "real",
-     "name": "hard death threshold"
+     "name": "hard death threshold:[0,1]"
     },
     {
      "type": "real",
-     "name": "feign death threshold"
+     "name": "feign death threshold:[0,1]"
     },
     {
      "type": "real",
-     "name": "feign death time"
+     "name": "feign death time:seconds"
     },
     {
      "type": "real",
-     "name": "distance of evade anim"
+     "name": "distance of evade anim:world units#this must be set to tell the AI how far it should expect our evade animation to move us"
     },
     {
      "type": "real",
-     "name": "distance of dive anim"
+     "name": "distance of dive anim:world units#this must be set to tell the AI how far it should expect our dive animation to move us"
     },
     {
      "type": "useless_pad",
@@ -782,55 +802,55 @@
     },
     {
      "type": "real",
-     "name": "stunned movement threshold"
+     "name": "stunned movement threshold:[0,1]#if we take this much damage in a short space of time we will play our 'stunned movement' animations"
     },
     {
      "type": "real",
-     "name": "feign death chance"
+     "name": "feign death chance:[0,1]"
     },
     {
      "type": "real",
-     "name": "feign repeat chance"
+     "name": "feign repeat chance:[0,1]"
     },
     {
      "type": "tag_reference",
-     "name": "spawned turret character"
+     "name": "spawned turret character#automatically created character when this unit is driven"
     },
     {
      "type": "short_bounds",
-     "name": "spawned actor count"
+     "name": "spawned actor count#number of actors which we spawn"
     },
     {
      "type": "real",
-     "name": "spawned velocity"
+     "name": "spawned velocity#velocity at which we throw spawned actors"
     },
     {
      "type": "angle",
-     "name": "aiming velocity maximum"
+     "name": "aiming velocity maximum:degrees per second"
     },
     {
      "type": "angle",
-     "name": "aiming acceleration maximum"
+     "name": "aiming acceleration maximum:degrees per second squared"
     },
     {
      "type": "real_fraction",
-     "name": "casual aiming modifier"
+     "name": "casual aiming modifier:[0,1]"
     },
     {
      "type": "angle",
-     "name": "looking velocity maximum"
+     "name": "looking velocity maximum:degrees per second"
     },
     {
      "type": "angle",
-     "name": "looking acceleration maximum"
+     "name": "looking acceleration maximum:degrees per second squared"
     },
     {
      "type": "string_id",
-     "name": "right_hand_node"
+     "name": "right_hand_node#where the primary weapon is attached"
     },
     {
      "type": "string_id",
-     "name": "left_hand_node"
+     "name": "left_hand_node#where the seconday weapon is attached (for dual-pistol modes)"
     },
     {
      "type": "struct",
@@ -878,7 +898,7 @@
     },
     {
      "type": "real",
-     "name": "grenade velocity"
+     "name": "grenade velocity:world units per second"
     },
     {
      "type": "short_enum",
@@ -910,9 +930,19 @@
      "definition": "unit_seat_block"
     },
     {
+     "type": "explanation",
+     "name": "Boost",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "boost",
      "definition": "unit_boost_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "Lipsync",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -982,15 +1012,15 @@
    "fields": [
     {
      "type": "real_vector_3d",
-     "name": "acceleration range"
+     "name": "acceleration range:world units per second squared"
     },
     {
      "type": "real",
-     "name": "accel action scale"
+     "name": "accel action scale:actions fail [0,1+]"
     },
     {
      "type": "real",
-     "name": "accel attach scale"
+     "name": "accel attach scale:detach unit [0,1+]"
     },
     {
      "type": "terminator",
@@ -1016,7 +1046,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "preferred_gun_node"
+     "name": "preferred_gun_node#if found, use this gun marker"
     },
     {
      "type": "terminator",
@@ -1094,7 +1124,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "useless_pad",
@@ -1141,7 +1171,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "variant number"
+     "name": "variant number#variant number to use this dialogue with (must match the suffix in the permutations on the unit's model)"
     },
     {
      "type": "pad",
@@ -1174,11 +1204,11 @@
     },
     {
      "type": "real",
-     "name": "driver powerup time"
+     "name": "driver powerup time:seconds"
     },
     {
      "type": "real",
-     "name": "driver powerdown time"
+     "name": "driver powerdown time:seconds"
     },
     {
      "type": "useless_pad",
@@ -1197,7 +1227,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "weapon"
+     "name": "weapon^"
     },
     {
      "type": "useless_pad",
@@ -1225,7 +1255,7 @@
     },
     {
      "type": "old_string_id",
-     "name": "marker name"
+     "name": "marker name^"
     },
     {
      "type": "pad",
@@ -1252,15 +1282,15 @@
     },
     {
      "type": "real_fraction",
-     "name": "listener interpolation factor"
+     "name": "listener interpolation factor#how far to interpolate listener position from camera to occupant's head"
     },
     {
      "type": "real",
-     "name": "yaw rate"
+     "name": "yaw rate:degrees per second"
     },
     {
      "type": "real",
-     "name": "pitch rate"
+     "name": "pitch rate:degrees per second"
     },
     {
      "type": "struct",
@@ -1324,7 +1354,7 @@
     },
     {
      "type": "old_string_id",
-     "name": "marker name"
+     "name": "marker name^"
     },
     {
      "type": "pad",
@@ -1351,15 +1381,15 @@
     },
     {
      "type": "real_fraction",
-     "name": "listener interpolation factor"
+     "name": "listener interpolation factor#how far to interpolate listener position from camera to occupant's head"
     },
     {
      "type": "real_bounds",
-     "name": "yaw rate bounds"
+     "name": "yaw rate bounds:degrees per second"
     },
     {
      "type": "real_bounds",
-     "name": "pitch rate bounds"
+     "name": "pitch rate bounds:degrees per second"
     },
     {
      "type": "real",
@@ -1427,7 +1457,7 @@
     },
     {
      "type": "old_string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "old_string_id",
@@ -1448,7 +1478,7 @@
     },
     {
      "type": "real",
-     "name": "turnover time"
+     "name": "turnover time:seconds#how much time it takes to evict a rider from a flipped vehicle"
     },
     {
      "type": "real_vector_3d",
@@ -1470,15 +1500,20 @@
     },
     {
      "type": "real_fraction",
-     "name": "listener interpolation factor"
+     "name": "listener interpolation factor#how far to interpolate listener position from camera to occupant's head"
+    },
+    {
+     "type": "explanation",
+     "name": "speed dependant turn rates",
+     "definition": "when the unit velocity is 0, the yaw/pitch rates are the left values\nat [max speed reference], the yaw/pitch rates are the right values.\nthe max speed reference is what the code uses to generate a clamped speed from 0..1\nthe exponent controls how midrange speeds are interpreted."
     },
     {
      "type": "real_bounds",
-     "name": "yaw rate bounds"
+     "name": "yaw rate bounds:degrees per second"
     },
     {
      "type": "real_bounds",
-     "name": "pitch rate bounds"
+     "name": "pitch rate bounds:degrees per second"
     },
     {
      "type": "real",
@@ -1496,6 +1531,11 @@
      "type": "pad",
      "name": "sizeof(long)*3",
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "camera fields",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -1539,16 +1579,21 @@
      "definition": 20
     },
     {
+     "type": "explanation",
+     "name": "entry fields",
+     "definition": "note: the entry radius shouldn't exceed 3 world units, \nas that is as far as the player will search for a vehicle\nto enter."
+    },
+    {
      "type": "real",
-     "name": "entry radius"
+     "name": "entry radius#how close to the entry marker a unit must be"
     },
     {
      "type": "angle",
-     "name": "entry marker cone angle"
+     "name": "entry marker cone angle#angle from marker forward the unit must be"
     },
     {
      "type": "angle",
-     "name": "entry marker facing angle"
+     "name": "entry marker facing angle#angle from unit facing the marker must be"
     },
     {
      "type": "real",
@@ -1576,7 +1621,7 @@
     },
     {
      "type": "old_string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "old_string_id",
@@ -1600,7 +1645,7 @@
     },
     {
      "type": "real_fraction",
-     "name": "ping scale"
+     "name": "ping scale#nathan is too lazy to make pings for each seat."
     },
     {
      "type": "useless_pad",
@@ -1609,7 +1654,7 @@
     },
     {
      "type": "real",
-     "name": "turnover time"
+     "name": "turnover time:seconds#how much time it takes to evict a rider from a flipped vehicle"
     },
     {
      "type": "struct",
@@ -1632,15 +1677,20 @@
     },
     {
      "type": "real_fraction",
-     "name": "listener interpolation factor"
+     "name": "listener interpolation factor#how far to interpolate listener position from camera to occupant's head"
+    },
+    {
+     "type": "explanation",
+     "name": "speed dependant turn rates",
+     "definition": "when the unit velocity is 0, the yaw/pitch rates are the left values\nat [max speed reference], the yaw/pitch rates are the right values.\nthe max speed reference is what the code uses to generate a clamped speed from 0..1\nthe exponent controls how midrange speeds are interpreted."
     },
     {
      "type": "real_bounds",
-     "name": "yaw rate bounds"
+     "name": "yaw rate bounds:degrees per second"
     },
     {
      "type": "real_bounds",
-     "name": "pitch rate bounds"
+     "name": "pitch rate bounds:degrees per second"
     },
     {
      "type": "real",
@@ -1658,6 +1708,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "camera fields",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -1696,16 +1751,21 @@
      "definition": 20
     },
     {
+     "type": "explanation",
+     "name": "entry fields",
+     "definition": "note: the entry radius shouldn't exceed 3 world units, \nas that is as far as the player will search for a vehicle\nto enter."
+    },
+    {
      "type": "real",
-     "name": "entry radius"
+     "name": "entry radius#how close to the entry marker a unit must be"
     },
     {
      "type": "angle",
-     "name": "entry marker cone angle"
+     "name": "entry marker cone angle#angle from marker forward the unit must be"
     },
     {
      "type": "angle",
-     "name": "entry marker facing angle"
+     "name": "entry marker facing angle#angle from unit facing the marker must be"
     },
     {
      "type": "real",
@@ -1722,7 +1782,7 @@
     },
     {
      "type": "long_integer",
-     "name": "runtime invisible seat region index"
+     "name": "runtime invisible seat region index*"
     },
     {
      "type": "terminator",

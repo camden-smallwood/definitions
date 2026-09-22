@@ -89,7 +89,7 @@
     },
     {
      "type": "real",
-     "name": "bounding radius"
+     "name": "bounding radius:world units"
     },
     {
      "type": "real_point_3d",
@@ -102,7 +102,7 @@
     },
     {
      "type": "real",
-     "name": "acceleration scale"
+     "name": "acceleration scale:[0,+inf]#marine 1.0, grunt 1.4, elite 0.9, hunter 0.5, etc."
     },
     {
      "type": "short_enum",
@@ -131,11 +131,11 @@
     },
     {
      "type": "real",
-     "name": "dynamic light sphere radius"
+     "name": "dynamic light sphere radius#sphere to use for dynamic lights and shadows. only used if not 0"
     },
     {
      "type": "real_point_3d",
-     "name": "dynamic light sphere offset"
+     "name": "dynamic light sphere offset#only used if radius not 0"
     },
     {
      "type": "string_id",
@@ -192,44 +192,59 @@
      "definition": 16
     },
     {
-     "type": "real",
-     "name": "Apply collision damage scale"
+     "type": "explanation",
+     "name": "Applying collision damage",
+     "definition": "for things that want to cause more or less collision damage"
     },
     {
      "type": "real",
-     "name": "min game acc (default)"
+     "name": "Apply collision damage scale#0 means 1.  1 is standard scale.  Some things may want to apply more damage"
+    },
+    {
+     "type": "explanation",
+     "name": "Game collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max game acc (default)"
+     "name": "min game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min game scale (default)"
+     "name": "max game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max game scale (default)"
+     "name": "min game scale (default)#0-1"
     },
     {
      "type": "real",
-     "name": "min abs acc (default)"
+     "name": "max game scale (default)#0-1"
+    },
+    {
+     "type": "explanation",
+     "name": "Absolute collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max abs acc (default)"
+     "name": "min abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min abs scale (default)"
+     "name": "max abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max abs scale (default)"
+     "name": "min abs scale (default)#0-1"
+    },
+    {
+     "type": "real",
+     "name": "max abs scale (default)#0-1"
     },
     {
      "type": "short_integer",
-     "name": "hud text message index"
+     "name": "hud text message index!"
     },
     {
      "type": "pad",
@@ -248,7 +263,7 @@
     },
     {
      "type": "block",
-     "name": "old functions",
+     "name": "old functions!",
      "definition": "old_object_function_block"
     },
     {
@@ -258,7 +273,7 @@
     },
     {
      "type": "block",
-     "name": "predicted resources",
+     "name": "predicted resources*!",
      "definition": "predicted_resource_block"
     },
     {
@@ -278,7 +293,7 @@
     },
     {
      "type": "string_id",
-     "name": "ai type name"
+     "name": "ai type name#used for combat dialogue, etc."
     },
     {
      "type": "pad",
@@ -320,11 +335,11 @@
     },
     {
      "type": "string_id",
-     "name": "turn off with"
+     "name": "turn off with#if the specified function is off, so is this function"
     },
     {
      "type": "real",
-     "name": "min value"
+     "name": "min value#function must exceed this value (after mapping) to be active 0. means do nothing"
     },
     {
      "type": "custom",
@@ -460,7 +475,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "old_string_id",
@@ -506,7 +521,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "useless_pad",
@@ -581,7 +596,7 @@
     },
     {
      "type": "string_id",
-     "name": "variant name"
+     "name": "variant name#if empty, may be used by any model variant"
     },
     {
      "type": "terminator",
@@ -658,6 +673,11 @@
      "definition": "object_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ PROJECTILE $$$",
+     "definition": ""
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags_3"
@@ -698,19 +718,24 @@
     },
     {
      "type": "real",
-     "name": "AI perception radius"
+     "name": "AI perception radius:world units"
     },
     {
      "type": "real",
-     "name": "collision radius"
+     "name": "collision radius:world units"
+    },
+    {
+     "type": "explanation",
+     "name": "detonation",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "arming time"
+     "name": "arming time:seconds#won't detonate before this time elapses"
     },
     {
      "type": "real",
-     "name": "danger radius"
+     "name": "danger radius:world units"
     },
     {
      "type": "tag_reference",
@@ -718,43 +743,48 @@
     },
     {
      "type": "real_bounds",
-     "name": "timer"
+     "name": "timer:seconds#detonation countdown (zero is untimed)"
     },
     {
      "type": "real",
-     "name": "minimum velocity"
+     "name": "minimum velocity:world units per second#detonates when slowed below this velocity"
     },
     {
      "type": "real",
-     "name": "maximum range"
+     "name": "maximum range:world units#detonates after travelling this distance"
+    },
+    {
+     "type": "explanation",
+     "name": "physics",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "air gravity scale"
+     "name": "air gravity scale#the proportion of normal gravity applied to the projectile when in air."
     },
     {
      "type": "real_bounds",
-     "name": "air damage range"
+     "name": "air damage range:world units#the range over which damage is scaled when the projectile is in air."
     },
     {
      "type": "real",
-     "name": "water gravity scale"
+     "name": "water gravity scale#the proportion of normal gravity applied to the projectile when in water."
     },
     {
      "type": "real_bounds",
-     "name": "water damage range"
+     "name": "water damage range:world units#the range over which damage is scaled when the projectile is in water."
     },
     {
      "type": "real",
-     "name": "initial velocity"
+     "name": "initial velocity:world units per second#bullet's velocity when inflicting maximum damage"
     },
     {
      "type": "real",
-     "name": "final velocity"
+     "name": "final velocity:world units per second#bullet's velocity when inflicting minimum damage"
     },
     {
      "type": "angle",
-     "name": "guided angular velocity"
+     "name": "guided angular velocity:degrees per second"
     },
     {
      "type": "short_enum",
@@ -793,6 +823,11 @@
      "definition": "projectile_material_response_block"
     },
     {
+     "type": "explanation",
+     "name": "New/unsorted fields",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
      "name": "impact effect"
     },
@@ -814,6 +849,11 @@
      "type": "word_flags",
      "name": "flags",
      "definition": "flags_4"
+    },
+    {
+     "type": "explanation",
+     "name": "default result",
+     "definition": "(if the potential result, below, fails to happen)"
     },
     {
      "type": "short_enum",
@@ -839,6 +879,11 @@
      "definition": 8
     },
     {
+     "type": "explanation",
+     "name": "potential result",
+     "definition": ""
+    },
+    {
      "type": "short_enum",
      "name": "response",
      "definition": "response"
@@ -850,15 +895,15 @@
     },
     {
      "type": "real_fraction",
-     "name": "chance fraction"
+     "name": "chance fraction:[0,1]"
     },
     {
      "type": "angle_bounds",
-     "name": "between"
+     "name": "between:degrees"
     },
     {
      "type": "real_bounds",
-     "name": "and"
+     "name": "and:world units per second"
     },
     {
      "type": "tag_reference",
@@ -868,6 +913,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "misc",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -881,11 +931,11 @@
     },
     {
      "type": "angle",
-     "name": "angular noise"
+     "name": "angular noise:degrees#the angle of incidence is randomly perturbed by at most this amount to simulate irregularity."
     },
     {
      "type": "real",
-     "name": "velocity noise"
+     "name": "velocity noise:world units per second#the velocity is randomly perturbed by at most this amount to simulate irregularity."
     },
     {
      "type": "tag_reference",
@@ -897,20 +947,30 @@
      "definition": 24
     },
     {
-     "type": "real",
-     "name": "initial friction"
+     "type": "explanation",
+     "name": "penetration",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "maximum distance"
+     "name": "initial friction#the fraction of the projectile's velocity lost on penetration"
     },
     {
      "type": "real",
-     "name": "parallel friction"
+     "name": "maximum distance#the maximum distance the projectile can travel through on object of this material"
+    },
+    {
+     "type": "explanation",
+     "name": "reflection",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "perpendicular friction"
+     "name": "parallel friction#the fraction of the projectile's velocity parallel to the surface lost on impact"
+    },
+    {
+     "type": "real",
+     "name": "perpendicular friction#the fraction of the projectile's velocity perpendicular to the surface lost on impact"
     },
     {
      "type": "terminator",
@@ -926,6 +986,11 @@
      "type": "struct",
      "name": "object",
      "definition": "object_block_struct"
+    },
+    {
+     "type": "explanation",
+     "name": "$$$ PROJECTILE $$$",
+     "definition": ""
     },
     {
      "type": "long_flags",
@@ -949,31 +1014,36 @@
     },
     {
      "type": "real",
-     "name": "AI perception radius"
+     "name": "AI perception radius:world units"
     },
     {
      "type": "real",
-     "name": "collision radius"
+     "name": "collision radius:world units"
+    },
+    {
+     "type": "explanation",
+     "name": "detonation",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "arming time"
+     "name": "arming time:seconds#won't detonate before this time elapses"
     },
     {
      "type": "real",
-     "name": "danger radius"
+     "name": "danger radius:world units"
     },
     {
      "type": "real_bounds",
-     "name": "timer"
+     "name": "timer:seconds#detonation countdown (zero is untimed)"
     },
     {
      "type": "real",
-     "name": "minimum velocity"
+     "name": "minimum velocity:world units per second#detonates when slowed below this velocity"
     },
     {
      "type": "real",
-     "name": "maximum range"
+     "name": "maximum range:world units#detonates after travelling this distance"
     },
     {
      "type": "short_enum",
@@ -1038,7 +1108,12 @@
     },
     {
      "type": "real",
-     "name": "material effect radius"
+     "name": "material effect radius#radius within we will generate material effects"
+    },
+    {
+     "type": "explanation",
+     "name": "flyby/impact",
+     "definition": ""
     },
     {
      "type": "tag_reference",
@@ -1051,6 +1126,11 @@
     {
      "type": "tag_reference",
      "name": "impact damage"
+    },
+    {
+     "type": "explanation",
+     "name": "boarding fields",
+     "definition": ""
     },
     {
      "type": "real",
@@ -1070,28 +1150,33 @@
      "definition": 28
     },
     {
+     "type": "explanation",
+     "name": "physics",
+     "definition": ""
+    },
+    {
      "type": "real",
-     "name": "air gravity scale"
+     "name": "air gravity scale#the proportion of normal gravity applied to the projectile when in air."
     },
     {
      "type": "real_bounds",
-     "name": "air damage range"
+     "name": "air damage range:world units#the range over which damage is scaled when the projectile is in air."
     },
     {
      "type": "real",
-     "name": "water gravity scale"
+     "name": "water gravity scale#the proportion of normal gravity applied to the projectile when in water."
     },
     {
      "type": "real_bounds",
-     "name": "water damage range"
+     "name": "water damage range:world units#the range over which damage is scaled when the projectile is in water."
     },
     {
      "type": "real",
-     "name": "initial velocity"
+     "name": "initial velocity:world units per second#bullet's velocity when inflicting maximum damage"
     },
     {
      "type": "real",
-     "name": "final velocity"
+     "name": "final velocity:world units per second#bullet's velocity when inflicting minimum damage"
     },
     {
      "type": "struct",
@@ -1100,11 +1185,11 @@
     },
     {
      "type": "angle",
-     "name": "guided angular velocity (upper)"
+     "name": "guided angular velocity (upper):degrees per second"
     },
     {
      "type": "real_bounds",
-     "name": "acceleration range"
+     "name": "acceleration range:world units#what distance range the projectile goes from initial velocity to final velocity"
     },
     {
      "type": "pad",
@@ -1174,7 +1259,7 @@
    "fields": [
     {
      "type": "angle",
-     "name": "guided angular velocity (lower)"
+     "name": "guided angular velocity (lower):degrees per second"
     },
     {
      "type": "terminator",

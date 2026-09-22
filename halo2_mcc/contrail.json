@@ -29,28 +29,38 @@
     },
     {
      "type": "word_flags",
-     "name": "scale flags",
+     "name": "scale flags#these flags determine which fields are scaled by the contrail density",
      "definition": "scale flags"
     },
     {
+     "type": "explanation",
+     "name": "point creation",
+     "definition": ""
+    },
+    {
      "type": "real",
-     "name": "point generation rate"
+     "name": "point generation rate:points per second#this many points are generated per second"
     },
     {
      "type": "real_bounds",
-     "name": "point velocity"
+     "name": "point velocity:world units per second#velocity added to each point's initial velocity"
     },
     {
      "type": "angle",
-     "name": "point velocity cone angle"
+     "name": "point velocity cone angle:degrees#initial velocity is inside the cone defined by the marker's forward vector and this angle"
     },
     {
      "type": "real_fraction",
-     "name": "inherited velocity fraction"
+     "name": "inherited velocity fraction#fraction of parent object's velocity that is inherited by contrail points."
+    },
+    {
+     "type": "explanation",
+     "name": "rendering",
+     "definition": ""
     },
     {
      "type": "short_enum",
-     "name": "render type",
+     "name": "render type#this specifies how the contrail is oriented in space",
      "definition": "render type"
     },
     {
@@ -60,23 +70,23 @@
     },
     {
      "type": "real",
-     "name": "texture repeats u"
+     "name": "texture repeats u#texture repeats per contrail segment"
     },
     {
      "type": "real",
-     "name": "texture repeats v"
+     "name": "texture repeats v#texture repeats across contrail width"
     },
     {
      "type": "real",
-     "name": "texture animation u"
+     "name": "texture animation u:repeats per second#the texture along the contrail is animated by this value"
     },
     {
      "type": "real",
-     "name": "texture animation v"
+     "name": "texture animation v:repeats per second#the texture across the contrail is animated by this value"
     },
     {
      "type": "real",
-     "name": "animation rate"
+     "name": "animation rate:frames per second"
     },
     {
      "type": "tag_reference",
@@ -126,6 +136,11 @@
      "definition": 28
     },
     {
+     "type": "explanation",
+     "name": "Secondary Map",
+     "definition": "Optional multitextured second map"
+    },
+    {
      "type": "tag_reference",
      "name": "bitmap"
     },
@@ -151,7 +166,7 @@
     },
     {
      "type": "real",
-     "name": "u-animation period"
+     "name": "u-animation period:seconds#0 defaults to 1"
     },
     {
      "type": "real",
@@ -159,7 +174,7 @@
     },
     {
      "type": "real",
-     "name": "u-animation scale"
+     "name": "u-animation scale:repeats#0 defaults to 1"
     },
     {
      "type": "pad",
@@ -173,7 +188,7 @@
     },
     {
      "type": "real",
-     "name": "v-animation period"
+     "name": "v-animation period:seconds#0 defaults to 1"
     },
     {
      "type": "real",
@@ -181,7 +196,7 @@
     },
     {
      "type": "real",
-     "name": "v-animation scale"
+     "name": "v-animation scale:repeats#0 defaults to 1"
     },
     {
      "type": "pad",
@@ -195,7 +210,7 @@
     },
     {
      "type": "real",
-     "name": "rotation-animation period"
+     "name": "rotation-animation period:seconds#0 defaults to 1"
     },
     {
      "type": "real",
@@ -203,7 +218,7 @@
     },
     {
      "type": "real",
-     "name": "rotation-animation scale"
+     "name": "rotation-animation scale:degrees#0 defaults to 360"
     },
     {
      "type": "real_point_2d",
@@ -239,12 +254,22 @@
    "size": 72,
    "fields": [
     {
-     "type": "real_bounds",
-     "name": "duration"
+     "type": "explanation",
+     "name": "state timing",
+     "definition": ""
     },
     {
      "type": "real_bounds",
-     "name": "transition duration"
+     "name": "duration:seconds:seconds#the time a point spends in this state"
+    },
+    {
+     "type": "real_bounds",
+     "name": "transition duration:seconds#the time a point takes to transition to the next state"
+    },
+    {
+     "type": "explanation",
+     "name": "point variables",
+     "definition": ""
     },
     {
      "type": "tag_reference",
@@ -257,19 +282,19 @@
     },
     {
      "type": "real",
-     "name": "width"
+     "name": "width:world units#contrail width at this point"
     },
     {
      "type": "real_argb_color",
-     "name": "color lower bound"
+     "name": "color lower bound#contrail color at this point"
     },
     {
      "type": "real_argb_color",
-     "name": "color upper bound"
+     "name": "color upper bound#contrail color at this point"
     },
     {
      "type": "long_flags",
-     "name": "scale flags",
+     "name": "scale flags#these flags determine which fields are scaled by the contrail density",
      "definition": "scale flags_2"
     },
     {

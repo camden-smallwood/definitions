@@ -191,6 +191,11 @@
    "size": 4,
    "fields": [
     {
+     "type": "explanation",
+     "name": "widget inputs",
+     "definition": ""
+    },
+    {
      "type": "char_enum",
      "name": "input 1",
      "definition": "input 1"
@@ -221,6 +226,11 @@
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "widget state",
+     "definition": "this section is split up into YES and NO flags.\na widget will draw if any of it's YES flags are true,\nbut it will NOT draw if any of it's NO flags are true.\n"
+    },
     {
      "type": "word_flags",
      "name": "[Y] unit flags",
@@ -300,6 +310,11 @@
    "size": 124,
    "fields": [
     {
+     "type": "explanation",
+     "name": "WIDGET EFFECTS",
+     "definition": "allow the scaling, rotation, and offsetting of widgets"
+    },
+    {
      "type": "word_flags",
      "name": "flags",
      "definition": "flags_2"
@@ -310,9 +325,9 @@
      "definition": 2
     },
     {
-     "type": "struct",
-     "name": "your mom",
-     "definition": "hud_widget_effect_function_struct_2"
+     "type": "explanation",
+     "name": "horizontal and vertical scale",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -323,6 +338,21 @@
      "type": "struct",
      "name": "your mom",
      "definition": "hud_widget_effect_function_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "theta",
+     "definition": ""
+    },
+    {
+     "type": "struct",
+     "name": "your mom",
+     "definition": "hud_widget_effect_function_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "horizontal and vertical offset",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -521,6 +551,11 @@
      "definition": "anchor"
     },
     {
+     "type": "explanation",
+     "name": "FLAGS",
+     "definition": "string is a number: treats the inputted string id as a function name, not a string name\n\nforce 2-digit number: when used in combination with above, forces output to be a 2-digit numberwith leading zeros if necessary\n\nforce 3-digit number: same as above, but with 3 digits instead of 2\n\n"
+    },
+    {
      "type": "word_flags",
      "name": "flags",
      "definition": "flags_3"
@@ -608,16 +643,21 @@
    "size": 8,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "low clip cutoff"
+     "type": "explanation",
+     "name": "dashlight data",
+     "definition": "only relevant to new hud tags for weapons"
     },
     {
      "type": "short_integer",
-     "name": "low ammo cutoff"
+     "name": "low clip cutoff#the cutoff for showing the reload dashlight"
+    },
+    {
+     "type": "short_integer",
+     "name": "low ammo cutoff#the cutoff for showing the low ammo dashlight"
     },
     {
      "type": "real",
-     "name": "age cutoff"
+     "name": "age cutoff#the age cutoff for showing the low battery dashlight"
     },
     {
      "type": "terminator",

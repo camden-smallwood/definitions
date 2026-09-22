@@ -104,7 +104,7 @@
     },
     {
      "type": "short_integer",
-     "name": "sort bias"
+     "name": "sort bias#use values between -10 and 10 to move closer and farther from camera (positive is closer)"
     },
     {
      "type": "word_flags",
@@ -127,8 +127,13 @@
    "size": 4,
    "fields": [
     {
+     "type": "explanation",
+     "name": "MARKER NAMES",
+     "definition": "In addition to the marker in the render model there are several special marker names:\n\nreplace\nReplace allows you to use the same effect with different markers. Damage transition effects support this for example.\n\ngravity, up\nThe direction of gravity (down) and the opposite direction (up).  Always supplied\n\nnormal\nVector pointing directly away from the surface you collided with. Supplied for effects from collision.\n\nforward\nThe 'negative incident' vector i.e. the direction the object is moving in. Most commonly used to generated decals. Supplied for effects from collision.\n\nbackward\nThe 'incident' vector i.e. the opposite of the direction the object is moving in. Supplied for effects from collision.\n\nreflection\nThe way the effect would reflect off the surface it hit. Supplied for effects from collision.\n\nroot\nThe object root (pivot). These can used for all effects which are associated with an object.\n\nimpact\nThe location of a havok impact.\n\n"
+    },
+    {
      "type": "old_string_id",
-     "name": "marker name"
+     "name": "marker name^"
     },
     {
      "type": "terminator",
@@ -145,9 +150,19 @@
      "name": "particle physics"
     },
     {
+     "type": "explanation",
+     "name": "particle emission rate (particles/tick)",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "particle emission rate",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "particle lifespan(seconds)",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -155,9 +170,19 @@
      "definition": "particle_property_scalar_struct_new_2"
     },
     {
+     "type": "explanation",
+     "name": "particle velocity(world units/second)",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "particle velocity",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "particle angular velocity(degrees/second)",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -165,9 +190,19 @@
      "definition": "particle_property_scalar_struct_new_2"
     },
     {
+     "type": "explanation",
+     "name": "particle size(world units)",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "particle size",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "particle tint",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -175,9 +210,19 @@
      "definition": "particle_property_color_struct_new_2"
     },
     {
+     "type": "explanation",
+     "name": "particle alpha",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "particle alpha",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "EMISSION SETTINGS",
+     "definition": ""
     },
     {
      "type": "long_enum",
@@ -185,9 +230,19 @@
      "definition": "emission shape"
     },
     {
+     "type": "explanation",
+     "name": "emission radius(world units)",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "emission radius",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "emission angle(degrees)",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -200,7 +255,7 @@
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "relative direction"
+     "name": "relative direction#particle initial velocity direction relative to the location's forward"
     },
     {
      "type": "pad",
@@ -437,7 +492,7 @@
     },
     {
      "type": "short_integer",
-     "name": "sort bias"
+     "name": "sort bias#use values between -10 and 10 to move closer and farther from camera (positive is closer)"
     },
     {
      "type": "word_flags",
@@ -446,11 +501,11 @@
     },
     {
      "type": "real",
-     "name": "LOD in distance"
+     "name": "LOD in distance#defaults to 0.0"
     },
     {
      "type": "real",
-     "name": "LOD feather in delta"
+     "name": "LOD feather in delta#defaults to 0.0"
     },
     {
      "type": "skip",
@@ -459,11 +514,11 @@
     },
     {
      "type": "real",
-     "name": "LOD out distance"
+     "name": "LOD out distance#defaults to 30.0"
     },
     {
      "type": "real",
-     "name": "LOD feather out delta"
+     "name": "LOD feather out delta#defaults to 10.0"
     },
     {
      "type": "skip",

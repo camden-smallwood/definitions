@@ -289,6 +289,11 @@
      "name": "default plasma grenade count"
     },
     {
+     "type": "explanation",
+     "name": "dynamic spawn zones",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "dynamic zone upper height"
     },
@@ -300,6 +305,11 @@
      "type": "pad",
      "name": "sizeof(long)*10",
      "definition": 40
+    },
+    {
+     "type": "explanation",
+     "name": "enemy",
+     "definition": ""
     },
     {
      "type": "real",
@@ -319,6 +329,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "friend",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "friend inner radius"
     },
@@ -334,6 +349,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "enemy vehicle",
+     "definition": ""
     },
     {
      "type": "real",
@@ -353,6 +373,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "friendly vehicle",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "friendly vehicle inner radius"
     },
@@ -368,6 +393,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "empty vehicle",
+     "definition": ""
     },
     {
      "type": "real",
@@ -387,6 +417,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "oddball inclusion",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "oddball inclusion inner radius"
     },
@@ -402,6 +437,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "oddball exclusion",
+     "definition": ""
     },
     {
      "type": "real",
@@ -421,6 +461,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "hill inclusion",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "hill inclusion inner radius"
     },
@@ -436,6 +481,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "hill exclusion",
+     "definition": ""
     },
     {
      "type": "real",
@@ -455,6 +505,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "last race flag",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "last race flag inner radius"
     },
@@ -470,6 +525,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "medic",
+     "definition": ""
     },
     {
      "type": "real",
@@ -510,7 +570,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "weapon"
+     "name": "weapon^"
     },
     {
      "type": "terminator",
@@ -524,7 +584,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "vehicle"
+     "name": "vehicle^"
     },
     {
      "type": "terminator",
@@ -538,7 +598,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "terminator",
@@ -562,12 +622,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -600,7 +660,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -627,7 +687,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -725,7 +785,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "english sound"
+     "name": "english sound^"
     },
     {
      "type": "struct",
@@ -758,12 +818,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_2"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -796,7 +856,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -823,7 +883,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -867,12 +927,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_3"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -905,7 +965,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -932,7 +992,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -976,12 +1036,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_4"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -1014,7 +1074,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -1041,7 +1101,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -1085,12 +1145,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_5"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -1123,7 +1183,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -1150,7 +1210,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -1355,6 +1415,11 @@
      "definition": 40
     },
     {
+     "type": "explanation",
+     "name": "dynamic spawn zones",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "dynamic zone upper height"
     },
@@ -1366,6 +1431,11 @@
      "type": "pad",
      "name": "sizeof(long)*10",
      "definition": 40
+    },
+    {
+     "type": "explanation",
+     "name": "enemy",
+     "definition": ""
     },
     {
      "type": "real",
@@ -1385,6 +1455,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "friend",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "friend inner radius"
     },
@@ -1400,6 +1475,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "enemy vehicle",
+     "definition": ""
     },
     {
      "type": "real",
@@ -1419,6 +1499,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "friendly vehicle",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "friendly vehicle inner radius"
     },
@@ -1434,6 +1519,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "empty vehicle",
+     "definition": ""
     },
     {
      "type": "real",
@@ -1453,6 +1543,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "oddball inclusion",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "oddball inclusion inner radius"
     },
@@ -1468,6 +1563,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "oddball exclusion",
+     "definition": ""
     },
     {
      "type": "real",
@@ -1487,6 +1587,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "hill inclusion",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "hill inclusion inner radius"
     },
@@ -1502,6 +1607,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "hill exclusion",
+     "definition": ""
     },
     {
      "type": "real",
@@ -1521,6 +1631,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "last race flag",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "last race flag inner radius"
     },
@@ -1536,6 +1651,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "dead ally",
+     "definition": ""
     },
     {
      "type": "real",
@@ -1555,6 +1675,11 @@
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "controlled territory",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "controlled territory inner radius"
     },
@@ -1570,6 +1695,11 @@
      "type": "pad",
      "name": "sizeof(long)*4",
      "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "medic",
+     "definition": ""
     },
     {
      "type": "real",
@@ -1672,7 +1802,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "grenade"
+     "name": "grenade^"
     },
     {
      "type": "terminator",
@@ -1686,7 +1816,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "equipment"
+     "name": "equipment^"
     },
     {
      "type": "terminator",
@@ -1710,12 +1840,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_6"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -1748,7 +1878,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -1775,7 +1905,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -1819,12 +1949,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_7"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -1857,7 +1987,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -1884,7 +2014,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -1928,12 +2058,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_8"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -1966,7 +2096,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -1993,7 +2123,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2037,12 +2167,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_9"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -2075,7 +2205,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -2102,7 +2232,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2146,12 +2276,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_10"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -2184,7 +2314,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -2211,7 +2341,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2255,12 +2385,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_11"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -2293,7 +2423,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -2320,7 +2450,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2364,12 +2494,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_12"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -2402,7 +2532,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -2429,7 +2559,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2473,12 +2603,12 @@
     },
     {
      "type": "short_enum",
-     "name": "event",
+     "name": "event^",
      "definition": "event_13"
     },
     {
      "type": "short_enum",
-     "name": "audience",
+     "name": "audience^",
      "definition": "audience"
     },
     {
@@ -2511,7 +2641,7 @@
     },
     {
      "type": "long_integer",
-     "name": "primary string duration"
+     "name": "primary string duration:seconds"
     },
     {
      "type": "string_id",
@@ -2538,7 +2668,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "struct",
@@ -2590,7 +2720,7 @@
     },
     {
      "type": "real",
-     "name": "teleporter recharge time"
+     "name": "teleporter recharge time:seconds"
     },
     {
      "type": "real",
@@ -2606,11 +2736,11 @@
     },
     {
      "type": "real",
-     "name": "grenade danger lead time"
+     "name": "grenade danger lead time:seconds"
     },
     {
      "type": "real",
-     "name": "vehicle danger min speed"
+     "name": "vehicle danger min speed:wu/sec"
     },
     {
      "type": "real",
@@ -2622,11 +2752,11 @@
     },
     {
      "type": "real",
-     "name": "vehicle danger lead time"
+     "name": "vehicle danger lead time:seconds"
     },
     {
      "type": "real",
-     "name": "vehicle nearby player dist"
+     "name": "vehicle nearby player dist#how nearby a player is to count a vehicle as 'occupied'"
     },
     {
      "type": "pad",
@@ -2718,7 +2848,7 @@
     },
     {
      "type": "short_enum",
-     "name": "state",
+     "name": "state^",
      "definition": "state"
     },
     {

@@ -77,6 +77,11 @@
      "name": "child hud"
     },
     {
+     "type": "explanation",
+     "name": "Flash cutoffs",
+     "definition": ""
+    },
+    {
      "type": "word_flags",
      "name": "flags",
      "definition": "flags"
@@ -106,6 +111,11 @@
      "type": "pad",
      "name": "8*sizeof(long)",
      "definition": 32
+    },
+    {
+     "type": "explanation",
+     "name": "Weapon hud screen alignment",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -138,6 +148,11 @@
      "definition": "weapon_hud_number_block"
     },
     {
+     "type": "explanation",
+     "name": "Crosshairs",
+     "definition": "Crosshairs always go in the center of the screen.\nCrosshairs can be attached to one of four different states:\n\n* Aim: Default crosshair. Frame 0 is the default state, frame 1 is the auto-aim state (frame rate ignored)\n* Zoom: Zoom overlay. Each zoom level has a corresponding frame (frame rate ignored)\n* Charge: Charging overlay. If you wish to display an animation for charging, put it here.\n* Flash: Similar to charging, but for low ammo/batter/heat states\n* Reload/Overheat: Similar to charging, but for reloading/overheating\n"
+    },
+    {
      "type": "block",
      "name": "crosshairs",
      "definition": "weapon_hud_crosshair_block"
@@ -168,12 +183,17 @@
      "definition": 132
     },
     {
-     "type": "short_integer",
-     "name": "sequence index"
+     "type": "explanation",
+     "name": "Messaging information",
+     "definition": ""
     },
     {
      "type": "short_integer",
-     "name": "width offset"
+     "name": "sequence index#sequence index into the global hud icon bitmap"
+    },
+    {
+     "type": "short_integer",
+     "name": "width offset#extra spacing beyond bitmap width for text alignment"
     },
     {
      "type": "point_2d",
@@ -281,7 +301,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -294,7 +314,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -364,6 +384,11 @@
      "definition": 32
     },
     {
+     "type": "explanation",
+     "name": "anchors",
+     "definition": "where you want the origin of the texture.\n*\"texture\" uses the texture coordinates supplied\n*\"screen\" uses the origin of the screen as the origin of the texture"
+    },
+    {
      "type": "short_enum",
      "name": "primary anchor",
      "definition": "primary anchor"
@@ -377,6 +402,11 @@
      "type": "short_enum",
      "name": "tertiary anchor",
      "definition": "primary anchor"
+    },
+    {
+     "type": "explanation",
+     "name": "blending function",
+     "definition": "how to blend the textures together"
     },
     {
      "type": "short_enum",
@@ -394,6 +424,11 @@
      "definition": 2
     },
     {
+     "type": "explanation",
+     "name": "map scales",
+     "definition": "how much to scale the textures"
+    },
+    {
      "type": "real_point_2d",
      "name": "primary scale"
     },
@@ -406,6 +441,11 @@
      "name": "tertiary scale"
     },
     {
+     "type": "explanation",
+     "name": "map offsets",
+     "definition": "how much to offset the origin of the texture"
+    },
+    {
      "type": "real_point_2d",
      "name": "primary offset"
     },
@@ -416,6 +456,11 @@
     {
      "type": "real_point_2d",
      "name": "tertiary offset"
+    },
+    {
+     "type": "explanation",
+     "name": "map",
+     "definition": "which maps to use"
     },
     {
      "type": "tag_reference",
@@ -480,6 +525,11 @@
      "definition": 64
     },
     {
+     "type": "explanation",
+     "name": "source/destination",
+     "definition": "These describe the relationship that causes the effect.\n* destination type is the type of variable you want to be effected\n* destination tells which texture map (or geometry offset) to apply it to\n* source says which value to look at when computing the effect"
+    },
+    {
      "type": "short_enum",
      "name": "destination type",
      "definition": "destination type"
@@ -500,17 +550,27 @@
      "definition": 2
     },
     {
-     "type": "real_bounds",
-     "name": "in bounds"
+     "type": "explanation",
+     "name": "in/out bounds",
+     "definition": "When the source is at the lower inbound, the destination ends up the lower outbound and vice-versa applies for the upper values."
     },
     {
      "type": "real_bounds",
-     "name": "out bounds"
+     "name": "in bounds:source units"
+    },
+    {
+     "type": "real_bounds",
+     "name": "out bounds:pixels"
     },
     {
      "type": "pad",
      "name": "16*sizeof(long)",
      "definition": 64
+    },
+    {
+     "type": "explanation",
+     "name": "tint color bounds",
+     "definition": "If destination is tint, these values are used instead of the out bounds."
     },
     {
      "type": "real_rgb_color",
@@ -519,6 +579,11 @@
     {
      "type": "real_rgb_color",
      "name": "tint color upper bound"
+    },
+    {
+     "type": "explanation",
+     "name": "periodic functions",
+     "definition": "If you use a periodic function as the source, this lets you tweak it."
     },
     {
      "type": "short_enum",
@@ -532,11 +597,11 @@
     },
     {
      "type": "real",
-     "name": "function period"
+     "name": "function period:seconds"
     },
     {
      "type": "real",
-     "name": "function phase"
+     "name": "function phase:seconds"
     },
     {
      "type": "pad",
@@ -648,7 +713,7 @@
     },
     {
      "type": "short_integer",
-     "name": "value scale"
+     "name": "value scale#used for non-integral values, i.e. health and shields"
     },
     {
      "type": "real",
@@ -767,7 +832,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -780,7 +845,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -929,7 +994,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -942,7 +1007,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -1071,7 +1136,7 @@
     },
     {
      "type": "real",
-     "name": "flash delay"
+     "name": "flash delay#time between flashes"
     },
     {
      "type": "short_integer",
@@ -1084,7 +1149,7 @@
     },
     {
      "type": "real",
-     "name": "flash length"
+     "name": "flash length#time of each flash"
     },
     {
      "type": "argb_color",
@@ -1142,6 +1207,11 @@
      "type": "pad",
      "name": "1*sizeof(long)",
      "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "Mask",
+     "definition": "Mask bitmap overlay. Use either a 2D bitmap or an interface bitmap."
     },
     {
      "type": "word_flags",
@@ -1202,6 +1272,11 @@
      "definition": 24
     },
     {
+     "type": "explanation",
+     "name": "Screen effect (fullscreen)",
+     "definition": ""
+    },
+    {
      "type": "long_flags",
      "name": "screen effect flags",
      "definition": "screen effect flags"
@@ -1219,6 +1294,11 @@
      "type": "pad",
      "name": "8*sizeof(long)",
      "definition": 32
+    },
+    {
+     "type": "explanation",
+     "name": "Screen effect (splitscreen)",
+     "definition": ""
     },
     {
      "type": "long_flags",

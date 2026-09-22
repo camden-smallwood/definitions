@@ -154,7 +154,7 @@
     },
     {
      "type": "real",
-     "name": "bounding radius"
+     "name": "bounding radius:world units"
     },
     {
      "type": "real_point_3d",
@@ -167,7 +167,7 @@
     },
     {
      "type": "real",
-     "name": "acceleration scale"
+     "name": "acceleration scale:[0,+inf]#marine 1.0, grunt 1.4, elite 0.9, hunter 0.5, etc."
     },
     {
      "type": "short_enum",
@@ -196,11 +196,11 @@
     },
     {
      "type": "real",
-     "name": "dynamic light sphere radius"
+     "name": "dynamic light sphere radius#sphere to use for dynamic lights and shadows. only used if not 0"
     },
     {
      "type": "real_point_3d",
-     "name": "dynamic light sphere offset"
+     "name": "dynamic light sphere offset#only used if radius not 0"
     },
     {
      "type": "string_id",
@@ -257,44 +257,59 @@
      "definition": 16
     },
     {
-     "type": "real",
-     "name": "Apply collision damage scale"
+     "type": "explanation",
+     "name": "Applying collision damage",
+     "definition": "for things that want to cause more or less collision damage"
     },
     {
      "type": "real",
-     "name": "min game acc (default)"
+     "name": "Apply collision damage scale#0 means 1.  1 is standard scale.  Some things may want to apply more damage"
+    },
+    {
+     "type": "explanation",
+     "name": "Game collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max game acc (default)"
+     "name": "min game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min game scale (default)"
+     "name": "max game acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max game scale (default)"
+     "name": "min game scale (default)#0-1"
     },
     {
      "type": "real",
-     "name": "min abs acc (default)"
+     "name": "max game scale (default)#0-1"
+    },
+    {
+     "type": "explanation",
+     "name": "Absolute collision damage parameters",
+     "definition": "0 - means take default value from globals.globals"
     },
     {
      "type": "real",
-     "name": "max abs acc (default)"
+     "name": "min abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "min abs scale (default)"
+     "name": "max abs acc (default)#0-oo"
     },
     {
      "type": "real",
-     "name": "max abs scale (default)"
+     "name": "min abs scale (default)#0-1"
+    },
+    {
+     "type": "real",
+     "name": "max abs scale (default)#0-1"
     },
     {
      "type": "short_integer",
-     "name": "hud text message index"
+     "name": "hud text message index!"
     },
     {
      "type": "pad",
@@ -313,7 +328,7 @@
     },
     {
      "type": "block",
-     "name": "old functions",
+     "name": "old functions!",
      "definition": "old_object_function_block"
     },
     {
@@ -323,7 +338,7 @@
     },
     {
      "type": "block",
-     "name": "predicted resources",
+     "name": "predicted resources*!",
      "definition": "predicted_resource_block"
     },
     {
@@ -343,7 +358,7 @@
     },
     {
      "type": "string_id",
-     "name": "ai type name"
+     "name": "ai type name#used for combat dialogue, etc."
     },
     {
      "type": "pad",
@@ -385,11 +400,11 @@
     },
     {
      "type": "string_id",
-     "name": "turn off with"
+     "name": "turn off with#if the specified function is off, so is this function"
     },
     {
      "type": "real",
-     "name": "min value"
+     "name": "min value#function must exceed this value (after mapping) to be active 0. means do nothing"
     },
     {
      "type": "custom",
@@ -525,7 +540,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "old_string_id",
@@ -571,7 +586,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "useless_pad",
@@ -646,7 +661,7 @@
     },
     {
      "type": "string_id",
-     "name": "variant name"
+     "name": "variant name#if empty, may be used by any model variant"
     },
     {
      "type": "terminator",
@@ -723,6 +738,11 @@
      "definition": "object_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ UNIT $$$",
+     "definition": ""
+    },
+    {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags_3"
@@ -753,7 +773,7 @@
     },
     {
      "type": "angle",
-     "name": "camera field of view"
+     "name": "camera field of view:degrees"
     },
     {
      "type": "real",
@@ -776,39 +796,39 @@
     },
     {
      "type": "real",
-     "name": "soft ping threshold"
+     "name": "soft ping threshold:[0,1]"
     },
     {
      "type": "real",
-     "name": "soft ping interrupt time"
+     "name": "soft ping interrupt time:seconds"
     },
     {
      "type": "real",
-     "name": "hard ping threshold"
+     "name": "hard ping threshold:[0,1]"
     },
     {
      "type": "real",
-     "name": "hard ping interrupt time"
+     "name": "hard ping interrupt time:seconds"
     },
     {
      "type": "real",
-     "name": "hard death threshold"
+     "name": "hard death threshold:[0,1]"
     },
     {
      "type": "real",
-     "name": "feign death threshold"
+     "name": "feign death threshold:[0,1]"
     },
     {
      "type": "real",
-     "name": "feign death time"
+     "name": "feign death time:seconds"
     },
     {
      "type": "real",
-     "name": "distance of evade anim"
+     "name": "distance of evade anim:world units#this must be set to tell the AI how far it should expect our evade animation to move us"
     },
     {
      "type": "real",
-     "name": "distance of dive anim"
+     "name": "distance of dive anim:world units#this must be set to tell the AI how far it should expect our dive animation to move us"
     },
     {
      "type": "useless_pad",
@@ -817,55 +837,55 @@
     },
     {
      "type": "real",
-     "name": "stunned movement threshold"
+     "name": "stunned movement threshold:[0,1]#if we take this much damage in a short space of time we will play our 'stunned movement' animations"
     },
     {
      "type": "real",
-     "name": "feign death chance"
+     "name": "feign death chance:[0,1]"
     },
     {
      "type": "real",
-     "name": "feign repeat chance"
+     "name": "feign repeat chance:[0,1]"
     },
     {
      "type": "tag_reference",
-     "name": "spawned turret character"
+     "name": "spawned turret character#automatically created character when this unit is driven"
     },
     {
      "type": "short_bounds",
-     "name": "spawned actor count"
+     "name": "spawned actor count#number of actors which we spawn"
     },
     {
      "type": "real",
-     "name": "spawned velocity"
+     "name": "spawned velocity#velocity at which we throw spawned actors"
     },
     {
      "type": "angle",
-     "name": "aiming velocity maximum"
+     "name": "aiming velocity maximum:degrees per second"
     },
     {
      "type": "angle",
-     "name": "aiming acceleration maximum"
+     "name": "aiming acceleration maximum:degrees per second squared"
     },
     {
      "type": "real_fraction",
-     "name": "casual aiming modifier"
+     "name": "casual aiming modifier:[0,1]"
     },
     {
      "type": "angle",
-     "name": "looking velocity maximum"
+     "name": "looking velocity maximum:degrees per second"
     },
     {
      "type": "angle",
-     "name": "looking acceleration maximum"
+     "name": "looking acceleration maximum:degrees per second squared"
     },
     {
      "type": "string_id",
-     "name": "right_hand_node"
+     "name": "right_hand_node#where the primary weapon is attached"
     },
     {
      "type": "string_id",
-     "name": "left_hand_node"
+     "name": "left_hand_node#where the seconday weapon is attached (for dual-pistol modes)"
     },
     {
      "type": "struct",
@@ -913,7 +933,7 @@
     },
     {
      "type": "real",
-     "name": "grenade velocity"
+     "name": "grenade velocity:world units per second"
     },
     {
      "type": "short_enum",
@@ -945,9 +965,19 @@
      "definition": "unit_seat_block"
     },
     {
+     "type": "explanation",
+     "name": "Boost",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "boost",
      "definition": "unit_boost_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "Lipsync",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -1017,15 +1047,15 @@
    "fields": [
     {
      "type": "real_vector_3d",
-     "name": "acceleration range"
+     "name": "acceleration range:world units per second squared"
     },
     {
      "type": "real",
-     "name": "accel action scale"
+     "name": "accel action scale:actions fail [0,1+]"
     },
     {
      "type": "real",
-     "name": "accel attach scale"
+     "name": "accel attach scale:detach unit [0,1+]"
     },
     {
      "type": "terminator",
@@ -1051,7 +1081,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "preferred_gun_node"
+     "name": "preferred_gun_node#if found, use this gun marker"
     },
     {
      "type": "terminator",
@@ -1129,7 +1159,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "useless_pad",
@@ -1176,7 +1206,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "variant number"
+     "name": "variant number#variant number to use this dialogue with (must match the suffix in the permutations on the unit's model)"
     },
     {
      "type": "pad",
@@ -1209,11 +1239,11 @@
     },
     {
      "type": "real",
-     "name": "driver powerup time"
+     "name": "driver powerup time:seconds"
     },
     {
      "type": "real",
-     "name": "driver powerdown time"
+     "name": "driver powerdown time:seconds"
     },
     {
      "type": "useless_pad",
@@ -1232,7 +1262,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "weapon"
+     "name": "weapon^"
     },
     {
      "type": "useless_pad",
@@ -1260,7 +1290,7 @@
     },
     {
      "type": "old_string_id",
-     "name": "marker name"
+     "name": "marker name^"
     },
     {
      "type": "pad",
@@ -1287,15 +1317,15 @@
     },
     {
      "type": "real_fraction",
-     "name": "listener interpolation factor"
+     "name": "listener interpolation factor#how far to interpolate listener position from camera to occupant's head"
     },
     {
      "type": "real",
-     "name": "yaw rate"
+     "name": "yaw rate:degrees per second"
     },
     {
      "type": "real",
-     "name": "pitch rate"
+     "name": "pitch rate:degrees per second"
     },
     {
      "type": "struct",
@@ -1359,7 +1389,7 @@
     },
     {
      "type": "old_string_id",
-     "name": "marker name"
+     "name": "marker name^"
     },
     {
      "type": "pad",
@@ -1386,15 +1416,15 @@
     },
     {
      "type": "real_fraction",
-     "name": "listener interpolation factor"
+     "name": "listener interpolation factor#how far to interpolate listener position from camera to occupant's head"
     },
     {
      "type": "real_bounds",
-     "name": "yaw rate bounds"
+     "name": "yaw rate bounds:degrees per second"
     },
     {
      "type": "real_bounds",
-     "name": "pitch rate bounds"
+     "name": "pitch rate bounds:degrees per second"
     },
     {
      "type": "real",
@@ -1462,7 +1492,7 @@
     },
     {
      "type": "old_string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "old_string_id",
@@ -1483,7 +1513,7 @@
     },
     {
      "type": "real",
-     "name": "turnover time"
+     "name": "turnover time:seconds#how much time it takes to evict a rider from a flipped vehicle"
     },
     {
      "type": "real_vector_3d",
@@ -1505,15 +1535,20 @@
     },
     {
      "type": "real_fraction",
-     "name": "listener interpolation factor"
+     "name": "listener interpolation factor#how far to interpolate listener position from camera to occupant's head"
+    },
+    {
+     "type": "explanation",
+     "name": "speed dependant turn rates",
+     "definition": "when the unit velocity is 0, the yaw/pitch rates are the left values\nat [max speed reference], the yaw/pitch rates are the right values.\nthe max speed reference is what the code uses to generate a clamped speed from 0..1\nthe exponent controls how midrange speeds are interpreted."
     },
     {
      "type": "real_bounds",
-     "name": "yaw rate bounds"
+     "name": "yaw rate bounds:degrees per second"
     },
     {
      "type": "real_bounds",
-     "name": "pitch rate bounds"
+     "name": "pitch rate bounds:degrees per second"
     },
     {
      "type": "real",
@@ -1531,6 +1566,11 @@
      "type": "pad",
      "name": "sizeof(long)*3",
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "camera fields",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -1574,16 +1614,21 @@
      "definition": 20
     },
     {
+     "type": "explanation",
+     "name": "entry fields",
+     "definition": "note: the entry radius shouldn't exceed 3 world units, \nas that is as far as the player will search for a vehicle\nto enter."
+    },
+    {
      "type": "real",
-     "name": "entry radius"
+     "name": "entry radius#how close to the entry marker a unit must be"
     },
     {
      "type": "angle",
-     "name": "entry marker cone angle"
+     "name": "entry marker cone angle#angle from marker forward the unit must be"
     },
     {
      "type": "angle",
-     "name": "entry marker facing angle"
+     "name": "entry marker facing angle#angle from unit facing the marker must be"
     },
     {
      "type": "real",
@@ -1611,7 +1656,7 @@
     },
     {
      "type": "old_string_id",
-     "name": "label"
+     "name": "label^"
     },
     {
      "type": "old_string_id",
@@ -1635,7 +1680,7 @@
     },
     {
      "type": "real_fraction",
-     "name": "ping scale"
+     "name": "ping scale#nathan is too lazy to make pings for each seat."
     },
     {
      "type": "useless_pad",
@@ -1644,7 +1689,7 @@
     },
     {
      "type": "real",
-     "name": "turnover time"
+     "name": "turnover time:seconds#how much time it takes to evict a rider from a flipped vehicle"
     },
     {
      "type": "struct",
@@ -1667,15 +1712,20 @@
     },
     {
      "type": "real_fraction",
-     "name": "listener interpolation factor"
+     "name": "listener interpolation factor#how far to interpolate listener position from camera to occupant's head"
+    },
+    {
+     "type": "explanation",
+     "name": "speed dependant turn rates",
+     "definition": "when the unit velocity is 0, the yaw/pitch rates are the left values\nat [max speed reference], the yaw/pitch rates are the right values.\nthe max speed reference is what the code uses to generate a clamped speed from 0..1\nthe exponent controls how midrange speeds are interpreted."
     },
     {
      "type": "real_bounds",
-     "name": "yaw rate bounds"
+     "name": "yaw rate bounds:degrees per second"
     },
     {
      "type": "real_bounds",
-     "name": "pitch rate bounds"
+     "name": "pitch rate bounds:degrees per second"
     },
     {
      "type": "real",
@@ -1693,6 +1743,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "camera fields",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -1731,16 +1786,21 @@
      "definition": 20
     },
     {
+     "type": "explanation",
+     "name": "entry fields",
+     "definition": "note: the entry radius shouldn't exceed 3 world units, \nas that is as far as the player will search for a vehicle\nto enter."
+    },
+    {
      "type": "real",
-     "name": "entry radius"
+     "name": "entry radius#how close to the entry marker a unit must be"
     },
     {
      "type": "angle",
-     "name": "entry marker cone angle"
+     "name": "entry marker cone angle#angle from marker forward the unit must be"
     },
     {
      "type": "angle",
-     "name": "entry marker facing angle"
+     "name": "entry marker facing angle#angle from unit facing the marker must be"
     },
     {
      "type": "real",
@@ -1757,7 +1817,7 @@
     },
     {
      "type": "long_integer",
-     "name": "runtime invisible seat region index"
+     "name": "runtime invisible seat region index*"
     },
     {
      "type": "terminator",
@@ -1836,8 +1896,13 @@
      "definition": "unit_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ BIPED $$$",
+     "definition": ""
+    },
+    {
      "type": "angle",
-     "name": "moving turning speed"
+     "name": "moving turning speed:degrees per second"
     },
     {
      "type": "skip",
@@ -1878,48 +1943,53 @@
      "name": "DON'T USE"
     },
     {
-     "type": "angle",
-     "name": "bank angle"
-    },
-    {
-     "type": "real",
-     "name": "bank apply time"
-    },
-    {
-     "type": "real",
-     "name": "bank decay time"
-    },
-    {
-     "type": "real",
-     "name": "pitch ratio"
-    },
-    {
-     "type": "real",
-     "name": "max velocity"
-    },
-    {
-     "type": "real",
-     "name": "max sidestep velocity"
-    },
-    {
-     "type": "real",
-     "name": "acceleration"
-    },
-    {
-     "type": "real",
-     "name": "deceleration"
+     "type": "explanation",
+     "name": "flying",
+     "definition": ""
     },
     {
      "type": "angle",
-     "name": "angular velocity maximum"
-    },
-    {
-     "type": "angle",
-     "name": "angular acceleration maximum"
+     "name": "bank angle:degrees#angle at which we bank left/right when sidestepping or turning while moving forwards"
     },
     {
      "type": "real",
-     "name": "crouch velocity modifier"
+     "name": "bank apply time:seconds#time it takes us to apply a bank"
+    },
+    {
+     "type": "real",
+     "name": "bank decay time:seconds#time it takes us to recover from a bank"
+    },
+    {
+     "type": "real",
+     "name": "pitch ratio#amount that we pitch up/down when moving up or down"
+    },
+    {
+     "type": "real",
+     "name": "max velocity:world units per second#max velocity when not crouching"
+    },
+    {
+     "type": "real",
+     "name": "max sidestep velocity:world units per second#max sideways or up/down velocity when not crouching"
+    },
+    {
+     "type": "real",
+     "name": "acceleration:world units per second squared"
+    },
+    {
+     "type": "real",
+     "name": "deceleration:world units per second squared"
+    },
+    {
+     "type": "angle",
+     "name": "angular velocity maximum:degrees per second#turn rate"
+    },
+    {
+     "type": "angle",
+     "name": "angular acceleration maximum:degrees per second squared#turn acceleration rate"
+    },
+    {
+     "type": "real",
+     "name": "crouch velocity modifier:[0,1]#how much slower we fly if crouching (zero = same speed)"
     },
     {
      "type": "pad",
@@ -1927,16 +1997,21 @@
      "definition": 8
     },
     {
-     "type": "angle",
-     "name": "maximum slope angle"
+     "type": "explanation",
+     "name": "movement",
+     "definition": ""
     },
     {
      "type": "angle",
-     "name": "downhill falloff angle"
+     "name": "maximum slope angle:degrees"
     },
     {
      "type": "angle",
-     "name": "downhill cutoff angle"
+     "name": "downhill falloff angle:degrees"
+    },
+    {
+     "type": "angle",
+     "name": "downhill cutoff angle:degrees"
     },
     {
      "type": "real",
@@ -1944,11 +2019,11 @@
     },
     {
      "type": "angle",
-     "name": "uphill falloff angle"
+     "name": "uphill falloff angle:degrees"
     },
     {
      "type": "angle",
-     "name": "uphill cutoff angle"
+     "name": "uphill cutoff angle:degrees"
     },
     {
      "type": "real",
@@ -1961,7 +2036,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "UNUSED*"
     },
     {
      "type": "pad",
@@ -1969,8 +2044,13 @@
      "definition": 24
     },
     {
+     "type": "explanation",
+     "name": "jumping and landing",
+     "definition": ""
+    },
+    {
      "type": "real",
-     "name": "jump velocity"
+     "name": "jump velocity:world units per second"
     },
     {
      "type": "pad",
@@ -1979,27 +2059,27 @@
     },
     {
      "type": "real",
-     "name": "maximum soft landing time"
+     "name": "maximum soft landing time:seconds#the longest amount of time the biped can take to recover from a soft landing"
     },
     {
      "type": "real",
-     "name": "maximum hard landing time"
+     "name": "maximum hard landing time:seconds#the longest amount of time the biped can take to recover from a hard landing"
     },
     {
      "type": "real",
-     "name": "minimum soft landing velocity"
+     "name": "minimum soft landing velocity:world units per second#below this velocity the biped does not react when landing"
     },
     {
      "type": "real",
-     "name": "minimum hard landing velocity"
+     "name": "minimum hard landing velocity:world units per second#below this velocity the biped will not do a soft landing when returning to the ground"
     },
     {
      "type": "real",
-     "name": "maximum hard landing velocity"
+     "name": "maximum hard landing velocity:world units per second#the velocity corresponding to the maximum landing time"
     },
     {
      "type": "real",
-     "name": "death hard landing velocity"
+     "name": "death hard landing velocity:world units per second#the maximum velocity with which a character can strike the ground and live"
     },
     {
      "type": "pad",
@@ -2007,60 +2087,65 @@
      "definition": 20
     },
     {
-     "type": "real",
-     "name": "standing camera height"
+     "type": "explanation",
+     "name": "camera, collision, and autoaim",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "crouching camera height"
+     "name": "standing camera height:world units"
     },
     {
      "type": "real",
-     "name": "crouch transition time"
+     "name": "crouching camera height:world units"
+    },
+    {
+     "type": "real",
+     "name": "crouch transition time:seconds"
     },
     {
      "type": "angle",
-     "name": "camera interpolation start"
+     "name": "camera interpolation start:degrees#looking-downward angle that starts camera interpolation to fp position"
     },
     {
      "type": "angle",
-     "name": "camera interpolation end"
+     "name": "camera interpolation end:degrees#looking-downward angle at which camera interpolation to fp position is complete"
     },
     {
      "type": "real",
-     "name": "camera forward movement scale"
+     "name": "camera forward movement scale#amount of fp camera movement forward and back (1.0 is full)"
     },
     {
      "type": "real",
-     "name": "camera side movement scale"
+     "name": "camera side movement scale#amount of fp camera movement side-to-side (1.0 is full)"
     },
     {
      "type": "real",
-     "name": "camera vertical movement scale"
+     "name": "camera vertical movement scale#amount of fp camera movement vertically (1.0 is full)"
     },
     {
      "type": "real",
-     "name": "camera exclusion distance"
+     "name": "camera exclusion distance:world units#fp camera must always be at least this far out from root node"
     },
     {
      "type": "real",
-     "name": "standing collision height"
+     "name": "standing collision height:world units"
     },
     {
      "type": "real",
-     "name": "crouching collision height"
+     "name": "crouching collision height:world units"
     },
     {
      "type": "real",
-     "name": "collision radius"
+     "name": "collision radius:world units"
     },
     {
      "type": "real",
-     "name": "collision mass"
+     "name": "collision mass:world mass units"
     },
     {
      "type": "string_id",
-     "name": "collision global material name"
+     "name": "collision global material name#collision material used when biped is alive"
     },
     {
      "type": "pad",
@@ -2074,7 +2159,7 @@
     },
     {
      "type": "string_id",
-     "name": "dead collision global material name"
+     "name": "dead collision global material name#collision material used when biped is dead"
     },
     {
      "type": "pad",
@@ -2083,7 +2168,7 @@
     },
     {
      "type": "real",
-     "name": "autoaim width"
+     "name": "autoaim width:world units"
     },
     {
      "type": "pad",
@@ -2092,12 +2177,12 @@
     },
     {
      "type": "block",
-     "name": "contact points",
+     "name": "contact points#these are the points where the biped touches the ground",
      "definition": "contact_point_block_v1"
     },
     {
      "type": "block",
-     "name": "pill shapes",
+     "name": "pill shapes#No point editing these.  They get filled out at map load.",
      "definition": "pills_block"
     },
     {
@@ -2117,7 +2202,7 @@
     },
     {
      "type": "old_string_id",
-     "name": "marker name"
+     "name": "marker name^"
     },
     {
      "type": "terminator",
@@ -2131,11 +2216,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "materials_block"
     },
     {
@@ -2157,11 +2242,11 @@
     },
     {
      "type": "real",
-     "name": "volume"
+     "name": "volume *"
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "skip",
@@ -2170,7 +2255,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "phantom",
+     "name": "phantom*",
      "definition": "phantoms_block"
     },
     {
@@ -2179,11 +2264,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -2202,7 +2287,7 @@
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "pad",
@@ -2211,7 +2296,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "bottom"
+     "name": "bottom*"
     },
     {
      "type": "skip",
@@ -2220,7 +2305,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "top"
+     "name": "top*"
     },
     {
      "type": "skip",
@@ -2239,7 +2324,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "string_id",
@@ -2282,11 +2367,11 @@
     },
     {
      "type": "string_id",
-     "name": "marker name"
+     "name": "marker name#you don't need this if you're just generating effects.  If empty it defaults to the up of the object"
     },
     {
      "type": "string_id",
-     "name": "alignment marker name"
+     "name": "alignment marker name#you don't need this if you're just generating effects.  If empty it defaults to \"marker name\""
     },
     {
      "type": "pad",
@@ -2295,7 +2380,12 @@
     },
     {
      "type": "real",
-     "name": "linear dead radius"
+     "name": "linear dead radius#radius from linear motion origin in which acceleration is dead."
+    },
+    {
+     "type": "explanation",
+     "name": "Linear Motion",
+     "definition": "0 - means do nothing\nCENTER: motion towards marker position \nAXIS: motion towards marker axis, such that object is on the axis\nDIRECTION: motion along marker direction"
     },
     {
      "type": "real",
@@ -2325,6 +2415,16 @@
      "type": "pad",
      "name": "8*sizeof(real)",
      "definition": 32
+    },
+    {
+     "type": "explanation",
+     "name": "Angular Motion",
+     "definition": "0 - means do nothing\nALIGNMENT: algin objects in the phantom with the marker\nSPIN: spin the object about the marker axis"
+    },
+    {
+     "type": "explanation",
+     "name": "ANGULAR ACC NOT YET IMPLEMENTED",
+     "definition": ""
     },
     {
      "type": "real",
@@ -2374,11 +2474,16 @@
     },
     {
      "type": "string_id",
-     "name": "marker name"
+     "name": "marker name#you don't need this if you're just generating effects.  If empty it defaults to the up of the object"
     },
     {
      "type": "string_id",
-     "name": "alignment marker name"
+     "name": "alignment marker name#you don't need this if you're just generating effects.  If empty it defaults to \"marker name\""
+    },
+    {
+     "type": "explanation",
+     "name": "Linear Motion",
+     "definition": "0 - means do nothing\nCENTER: motion towards marker position \nAXIS: motion towards marker axis, such that object is on the axis\nDIRECTION: motion along marker direction"
     },
     {
      "type": "pad",
@@ -2387,11 +2492,11 @@
     },
     {
      "type": "real",
-     "name": "hookes law e"
+     "name": "hookes law e#0 if you don't want this to behave like spring.  1 is a good starting point if you do."
     },
     {
      "type": "real",
-     "name": "linear dead radius"
+     "name": "linear dead radius#radius from linear motion origin in which acceleration is dead."
     },
     {
      "type": "real",
@@ -2423,8 +2528,13 @@
      "definition": 28
     },
     {
+     "type": "explanation",
+     "name": "Angular Motion",
+     "definition": "0 - means do nothing\nALIGNMENT: algin objects in the phantom with the marker\nSPIN: spin the object about the marker axis"
+    },
+    {
      "type": "real",
-     "name": "alignment hookes law e"
+     "name": "alignment hookes law e#0 if you don't want this to behave like spring.  1 is a good starting point if you do."
     },
     {
      "type": "real",
@@ -2455,11 +2565,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -2490,11 +2600,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -2527,8 +2637,13 @@
      "definition": "unit_block_struct"
     },
     {
+     "type": "explanation",
+     "name": "$$$ BIPED $$$",
+     "definition": ""
+    },
+    {
      "type": "angle",
-     "name": "moving turning speed"
+     "name": "moving turning speed:degrees per second"
     },
     {
      "type": "long_flags",
@@ -2550,8 +2665,13 @@
      "definition": 32
     },
     {
+     "type": "explanation",
+     "name": "jumping and landing",
+     "definition": ""
+    },
+    {
      "type": "real",
-     "name": "jump velocity"
+     "name": "jump velocity:world units per second"
     },
     {
      "type": "useless_pad",
@@ -2560,27 +2680,27 @@
     },
     {
      "type": "real",
-     "name": "maximum soft landing time"
+     "name": "maximum soft landing time:seconds#the longest amount of time the biped can take to recover from a soft landing"
     },
     {
      "type": "real",
-     "name": "maximum hard landing time"
+     "name": "maximum hard landing time:seconds#the longest amount of time the biped can take to recover from a hard landing"
     },
     {
      "type": "real",
-     "name": "minimum soft landing velocity"
+     "name": "minimum soft landing velocity:world units per second#below this velocity the biped does not react when landing"
     },
     {
      "type": "real",
-     "name": "minimum hard landing velocity"
+     "name": "minimum hard landing velocity:world units per second#below this velocity the biped will not do a soft landing when returning to the ground"
     },
     {
      "type": "real",
-     "name": "maximum hard landing velocity"
+     "name": "maximum hard landing velocity:world units per second#the velocity corresponding to the maximum landing time"
     },
     {
      "type": "real",
-     "name": "death hard landing velocity"
+     "name": "death hard landing velocity:world units per second#the maximum velocity with which a character can strike the ground and live"
     },
     {
      "type": "useless_pad",
@@ -2589,47 +2709,52 @@
     },
     {
      "type": "real",
-     "name": "stun duration"
+     "name": "stun duration#0 is the default.  Bipeds are stuned when damaged by vehicle collisions, also some are when they take emp damage"
+    },
+    {
+     "type": "explanation",
+     "name": "camera, collision, and autoaim",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "standing camera height"
+     "name": "standing camera height:world units"
     },
     {
      "type": "real",
-     "name": "crouching camera height"
+     "name": "crouching camera height:world units"
     },
     {
      "type": "real",
-     "name": "crouch transition time"
+     "name": "crouch transition time:seconds"
     },
     {
      "type": "angle",
-     "name": "camera interpolation start"
+     "name": "camera interpolation start:degrees#looking-downward angle that starts camera interpolation to fp position"
     },
     {
      "type": "angle",
-     "name": "camera interpolation end"
+     "name": "camera interpolation end:degrees#looking-downward angle at which camera interpolation to fp position is complete"
     },
     {
      "type": "real",
-     "name": "camera forward movement scale"
+     "name": "camera forward movement scale#amount of fp camera movement forward and back (1.0 is full)"
     },
     {
      "type": "real",
-     "name": "camera side movement scale"
+     "name": "camera side movement scale#amount of fp camera movement side-to-side (1.0 is full)"
     },
     {
      "type": "real",
-     "name": "camera vertical movement scale"
+     "name": "camera vertical movement scale#amount of fp camera movement vertically (1.0 is full)"
     },
     {
      "type": "real",
-     "name": "camera exclusion distance"
+     "name": "camera exclusion distance:world units#fp camera must always be at least this far out from root node"
     },
     {
      "type": "real",
-     "name": "autoaim width"
+     "name": "autoaim width:world units"
     },
     {
      "type": "struct",
@@ -2648,7 +2773,7 @@
     },
     {
      "type": "real",
-     "name": "head shot acc scale"
+     "name": "head shot acc scale#when the biped ragdolls from a head shot it acceleartes based on this value.  0 defaults to the standard acceleration scale"
     },
     {
      "type": "tag_reference",
@@ -2661,16 +2786,16 @@
     },
     {
      "type": "block",
-     "name": "contact points",
+     "name": "contact points#these are the points where the biped touches the ground",
      "definition": "contact_point_block"
     },
     {
      "type": "tag_reference",
-     "name": "reanimation character"
+     "name": "reanimation character#when the flood reanimate this guy, he turns into a ..."
     },
     {
      "type": "tag_reference",
-     "name": "death spawn character"
+     "name": "death spawn character#when I die, out of the ashes of my death crawls a ..."
     },
     {
      "type": "short_integer",
@@ -2702,6 +2827,11 @@
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "lock-on fields",
+     "definition": ""
+    },
     {
      "type": "long_flags",
      "name": "flags",
@@ -2745,11 +2875,11 @@
     },
     {
      "type": "string_id",
-     "name": "living material name"
+     "name": "living material name#collision material used when character is alive"
     },
     {
      "type": "string_id",
-     "name": "dead material name"
+     "name": "dead material name#collision material used when character is dead"
     },
     {
      "type": "useless_pad",
@@ -2782,9 +2912,19 @@
      "definition": "spheres_block"
     },
     {
+     "type": "explanation",
+     "name": "ground",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "ground physics",
      "definition": "character_physics_ground_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "flying",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -2792,9 +2932,19 @@
      "definition": "character_physics_flying_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "dead",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "dead physics",
      "definition": "character_physics_dead_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "sentinel",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -2814,11 +2964,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "materials_block"
     },
     {
@@ -2840,11 +2990,11 @@
     },
     {
      "type": "real",
-     "name": "volume"
+     "name": "volume *"
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "skip",
@@ -2853,7 +3003,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "phantom",
+     "name": "phantom*",
      "definition": "phantoms_block"
     },
     {
@@ -2862,11 +3012,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -2885,7 +3035,7 @@
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "pad",
@@ -2898,11 +3048,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -2925,7 +3075,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation i"
+     "name": "rotation i*"
     },
     {
      "type": "skip",
@@ -2934,7 +3084,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation j"
+     "name": "rotation j*"
     },
     {
      "type": "skip",
@@ -2943,7 +3093,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation k"
+     "name": "rotation k*"
     },
     {
      "type": "skip",
@@ -2952,7 +3102,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "translation"
+     "name": "translation*"
     },
     {
      "type": "skip",
@@ -2971,23 +3121,23 @@
    "fields": [
     {
      "type": "angle",
-     "name": "maximum slope angle"
+     "name": "maximum slope angle:degrees"
     },
     {
      "type": "angle",
-     "name": "downhill falloff angle"
+     "name": "downhill falloff angle:degrees"
     },
     {
      "type": "angle",
-     "name": "downhill cutoff angle"
+     "name": "downhill cutoff angle:degrees"
     },
     {
      "type": "angle",
-     "name": "uphill falloff angle"
+     "name": "uphill falloff angle:degrees"
     },
     {
      "type": "angle",
-     "name": "uphill cutoff angle"
+     "name": "uphill cutoff angle:degrees"
     },
     {
      "type": "useless_pad",
@@ -3030,47 +3180,47 @@
    "fields": [
     {
      "type": "angle",
-     "name": "bank angle"
+     "name": "bank angle:degrees#angle at which we bank left/right when sidestepping or turning while moving forwards"
     },
     {
      "type": "real",
-     "name": "bank apply time"
+     "name": "bank apply time:seconds#time it takes us to apply a bank"
     },
     {
      "type": "real",
-     "name": "bank decay time"
+     "name": "bank decay time:seconds#time it takes us to recover from a bank"
     },
     {
      "type": "real",
-     "name": "pitch ratio"
+     "name": "pitch ratio#amount that we pitch up/down when moving up or down"
     },
     {
      "type": "real",
-     "name": "max velocity"
+     "name": "max velocity:world units per second#max velocity when not crouching"
     },
     {
      "type": "real",
-     "name": "max sidestep velocity"
+     "name": "max sidestep velocity:world units per second#max sideways or up/down velocity when not crouching"
     },
     {
      "type": "real",
-     "name": "acceleration"
+     "name": "acceleration:world units per second squared"
     },
     {
      "type": "real",
-     "name": "deceleration"
+     "name": "deceleration:world units per second squared"
     },
     {
      "type": "angle",
-     "name": "angular velocity maximum"
+     "name": "angular velocity maximum:degrees per second#turn rate"
     },
     {
      "type": "angle",
-     "name": "angular acceleration maximum"
+     "name": "angular acceleration maximum:degrees per second squared#turn acceleration rate"
     },
     {
      "type": "real",
-     "name": "crouch velocity modifier"
+     "name": "crouch velocity modifier:[0,1]#how much slower we fly if crouching (zero = same speed)"
     },
     {
      "type": "useless_pad",
@@ -3127,7 +3277,7 @@
     },
     {
      "type": "old_string_id",
-     "name": "marker name"
+     "name": "marker name^"
     },
     {
      "type": "terminator",

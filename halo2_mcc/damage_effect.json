@@ -34,11 +34,11 @@
    "fields": [
     {
      "type": "real_bounds",
-     "name": "radius"
+     "name": "radius:world units"
     },
     {
      "type": "real_fraction",
-     "name": "cutoff scale"
+     "name": "cutoff scale:[0,1]"
     },
     {
      "type": "long_flags",
@@ -47,11 +47,11 @@
     },
     {
      "type": "real",
-     "name": "AI stun radius"
+     "name": "AI stun radius:world units"
     },
     {
      "type": "real_bounds",
-     "name": "AI stun bounds"
+     "name": "AI stun bounds:(0-1)"
     },
     {
      "type": "useless_pad",
@@ -75,7 +75,7 @@
     },
     {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds"
     },
     {
      "type": "short_enum",
@@ -94,7 +94,7 @@
     },
     {
      "type": "real_fraction",
-     "name": "maximum intensity"
+     "name": "maximum intensity:[0,1]"
     },
     {
      "type": "useless_pad",
@@ -107,11 +107,11 @@
     },
     {
      "type": "real_fraction",
-     "name": "frequency"
+     "name": "frequency:[0,1]"
     },
     {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds"
     },
     {
      "type": "short_enum",
@@ -130,11 +130,11 @@
     },
     {
      "type": "real_fraction",
-     "name": "frequency"
+     "name": "frequency:[0,1]"
     },
     {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds"
     },
     {
      "type": "short_enum",
@@ -163,7 +163,7 @@
     },
     {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds"
     },
     {
      "type": "short_enum",
@@ -177,15 +177,15 @@
     },
     {
      "type": "angle",
-     "name": "rotation"
+     "name": "rotation:degrees"
     },
     {
      "type": "real",
-     "name": "pushback"
+     "name": "pushback:world units"
     },
     {
      "type": "real_bounds",
-     "name": "jitter"
+     "name": "jitter:world units"
     },
     {
      "type": "useless_pad",
@@ -199,11 +199,11 @@
     },
     {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds#the effect will last for this duration."
     },
     {
      "type": "short_enum",
-     "name": "falloff function",
+     "name": "falloff function#a function to envelope the effect's magnitude over time",
      "definition": "fade function"
     },
     {
@@ -213,11 +213,11 @@
     },
     {
      "type": "real",
-     "name": "random translation"
+     "name": "random translation:world units#random translation in all directions"
     },
     {
      "type": "angle",
-     "name": "random rotation"
+     "name": "random rotation:degrees#random rotation in all directions"
     },
     {
      "type": "useless_pad",
@@ -226,7 +226,7 @@
     },
     {
      "type": "short_enum",
-     "name": "wobble function",
+     "name": "wobble function#a function to perturb the effect's behavior over time",
      "definition": "wobble function"
     },
     {
@@ -236,11 +236,11 @@
     },
     {
      "type": "real",
-     "name": "wobble function period"
+     "name": "wobble function period:seconds"
     },
     {
      "type": "real_fraction",
-     "name": "wobble weight"
+     "name": "wobble weight#a value of 0.0 signifies that the wobble function has no effect; a value of 1.0 signifies that the effect will not be felt when the wobble function's value is zero."
     },
     {
      "type": "useless_pad",
@@ -263,11 +263,11 @@
     },
     {
      "type": "real",
-     "name": "forward velocity"
+     "name": "forward velocity:world units per second"
     },
     {
      "type": "real",
-     "name": "forward radius"
+     "name": "forward radius:world units"
     },
     {
      "type": "real",
@@ -280,11 +280,11 @@
     },
     {
      "type": "real",
-     "name": "outward velocity"
+     "name": "outward velocity:world units per second"
     },
     {
      "type": "real",
-     "name": "outward radius"
+     "name": "outward radius:world units"
     },
     {
      "type": "real",
@@ -294,6 +294,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "damage",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -312,7 +317,7 @@
     },
     {
      "type": "real",
-     "name": "AOE core radius"
+     "name": "AOE core radius:world units#if this is area of effect damage"
     },
     {
      "type": "real",
@@ -333,19 +338,19 @@
     },
     {
      "type": "real",
-     "name": "active camouflage damage"
+     "name": "active camouflage damage:[0,1]#how much more visible this damage makes a player who is active camouflaged"
     },
     {
      "type": "real",
-     "name": "stun"
+     "name": "stun:[0,1]#amount of stun added to damaged unit"
     },
     {
      "type": "real",
-     "name": "maximum stun"
+     "name": "maximum stun:[0,1]#damaged unit's stun will never exceed this amount"
     },
     {
      "type": "real",
-     "name": "stun time"
+     "name": "stun time:seconds#duration of stun due to this damage"
     },
     {
      "type": "useless_pad",
@@ -354,7 +359,7 @@
     },
     {
      "type": "real",
-     "name": "instantaneous acceleration"
+     "name": "instantaneous acceleration:[0,+inf]"
     },
     {
      "type": "useless_pad",
@@ -429,16 +434,21 @@
    "fields": [
     {
      "type": "real_bounds",
-     "name": "radius"
+     "name": "radius:world units"
     },
     {
      "type": "real_fraction",
-     "name": "cutoff scale"
+     "name": "cutoff scale:[0,1]"
     },
     {
      "type": "long_flags",
      "name": "flags",
      "definition": "flags"
+    },
+    {
+     "type": "explanation",
+     "name": "damage",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -457,7 +467,7 @@
     },
     {
      "type": "real",
-     "name": "AOE core radius"
+     "name": "AOE core radius:world units#if this is area of effect damage"
     },
     {
      "type": "real",
@@ -478,19 +488,19 @@
     },
     {
      "type": "real",
-     "name": "active camouflage damage"
+     "name": "active camouflage damage:[0,1]#how much more visible this damage makes a player who is active camouflaged"
     },
     {
      "type": "real",
-     "name": "stun"
+     "name": "stun:[0,1]#amount of stun added to damaged unit"
     },
     {
      "type": "real",
-     "name": "maximum stun"
+     "name": "maximum stun:[0,1]#damaged unit's stun will never exceed this amount"
     },
     {
      "type": "real",
-     "name": "stun time"
+     "name": "stun time:seconds#duration of stun due to this damage"
     },
     {
      "type": "useless_pad",
@@ -499,7 +509,7 @@
     },
     {
      "type": "real",
-     "name": "instantaneous acceleration"
+     "name": "instantaneous acceleration:[0,+inf]"
     },
     {
      "type": "useless_pad",
@@ -538,11 +548,11 @@
     },
     {
      "type": "real",
-     "name": "AI stun radius"
+     "name": "AI stun radius:world units"
     },
     {
      "type": "real_bounds",
-     "name": "AI stun bounds"
+     "name": "AI stun bounds:(0-1)"
     },
     {
      "type": "real",
@@ -558,8 +568,13 @@
      "definition": "damage_effect_player_response_block"
     },
     {
+     "type": "explanation",
+     "name": "temporary camera impulse",
+     "definition": ""
+    },
+    {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds"
     },
     {
      "type": "short_enum",
@@ -573,15 +588,15 @@
     },
     {
      "type": "angle",
-     "name": "rotation"
+     "name": "rotation:degrees"
     },
     {
      "type": "real",
-     "name": "pushback"
+     "name": "pushback:world units"
     },
     {
      "type": "real_bounds",
-     "name": "jitter"
+     "name": "jitter:world units"
     },
     {
      "type": "useless_pad",
@@ -594,12 +609,17 @@
      "definition": 24
     },
     {
+     "type": "explanation",
+     "name": "camera shaking",
+     "definition": "The wobble function and weight affects how the camera shake oscilates over time.\nIf the weight is one, then the wobble function completely scales the translational\nand rotational magnitudes.  The less the weight, the less the effect wobble has.\nIf the wobble weight is 0 then wobble is completely ignored."
+    },
+    {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds#the effect will last for this duration."
     },
     {
      "type": "short_enum",
-     "name": "falloff function",
+     "name": "falloff function#a function to envelope the effect's magnitude over time",
      "definition": "fade function"
     },
     {
@@ -609,11 +629,11 @@
     },
     {
      "type": "real",
-     "name": "random translation"
+     "name": "random translation:world units#random translation in all directions"
     },
     {
      "type": "angle",
-     "name": "random rotation"
+     "name": "random rotation:degrees#random rotation in all directions"
     },
     {
      "type": "useless_pad",
@@ -622,7 +642,7 @@
     },
     {
      "type": "short_enum",
-     "name": "wobble function",
+     "name": "wobble function#a function to perturb the effect's behavior over time",
      "definition": "wobble function"
     },
     {
@@ -632,11 +652,11 @@
     },
     {
      "type": "real",
-     "name": "wobble function period"
+     "name": "wobble function period:seconds"
     },
     {
      "type": "real_fraction",
-     "name": "wobble weight"
+     "name": "wobble weight#a value of 0.0 signifies that the wobble function has no effect; a value of 1.0 signifies that the effect will not be felt when the wobble function's value is zero."
     },
     {
      "type": "useless_pad",
@@ -654,6 +674,11 @@
      "definition": 8
     },
     {
+     "type": "explanation",
+     "name": "sound",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
      "name": "sound"
     },
@@ -663,12 +688,17 @@
      "definition": 112
     },
     {
-     "type": "real",
-     "name": "forward velocity"
+     "type": "explanation",
+     "name": "breaking effect",
+     "definition": "Controls particle velocities when a damage effect shatters a materal.\n\nAll particles created within 'forward radius' will be kicked along the\ndamage direction with a speed equivalent to 'forward velocity' at the\nepicenter of the damage and 0 at the outer radius.  'Forward exponent'\nis used to modify the velocity scale.  A low exponent (like 0.5) means that\nparticles between the epicenter and the radius will be kicked out with a speed\ncloser to 'forward velocity' than if a higher exponent (like 2.0) was used\n\nThe outward fields work in a similar way, except instead of kicking along the\ndamage direction, they get kick away from the damage epicenter."
     },
     {
      "type": "real",
-     "name": "forward radius"
+     "name": "forward velocity:world units per second"
+    },
+    {
+     "type": "real",
+     "name": "forward radius:world units"
     },
     {
      "type": "real",
@@ -681,11 +711,11 @@
     },
     {
      "type": "real",
-     "name": "outward velocity"
+     "name": "outward velocity:world units per second"
     },
     {
      "type": "real",
-     "name": "outward radius"
+     "name": "outward radius:world units"
     },
     {
      "type": "real",
@@ -717,14 +747,29 @@
      "definition": 2
     },
     {
-     "type": "struct",
+     "type": "explanation",
      "name": "screen flash",
-     "definition": "screen_flash_definition_struct_2"
+     "definition": "There are seven screen flash types:\n\nNONE: DST'= DST\nLIGHTEN: DST'= DST(1 - A) + C\nDARKEN: DST'= DST(1 - A) - C\nMAX: DST'= MAX[DST(1 - C), (C - A)(1-DST)]\nMIN: DST'= MIN[DST(1 - C), (C + A)(1-DST)]\nTINT: DST'= DST(1 - C) + (A*PIN[2C - 1, 0, 1] + A)(1-DST)\nINVERT: DST'= DST(1 - C) + A)\n\nIn the above equations C and A represent the color and alpha of the screen flash, DST represents the color in the framebuffer before the screen flash is applied, and DST' represents the color after the screen flash is applied."
     },
     {
      "type": "struct",
+     "name": "screen flash*",
+     "definition": "screen_flash_definition_struct_2"
+    },
+    {
+     "type": "explanation",
      "name": "vibration",
+     "definition": ""
+    },
+    {
+     "type": "struct",
+     "name": "vibration*",
      "definition": "vibration_definition_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "sound effect",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -763,7 +808,7 @@
     },
     {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds"
     },
     {
      "type": "short_enum",
@@ -782,7 +827,7 @@
     },
     {
      "type": "real_fraction",
-     "name": "maximum intensity"
+     "name": "maximum intensity:[0,1]"
     },
     {
      "type": "useless_pad",
@@ -805,9 +850,19 @@
    "size": 32,
    "fields": [
     {
+     "type": "explanation",
+     "name": "low frequency vibration",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "low frequency vibration",
      "definition": "vibration_frequency_definition_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "high frequency vibration",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -832,7 +887,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds"
     },
     {
      "type": "custom",
@@ -974,7 +1029,7 @@
     },
     {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds"
     },
     {
      "type": "custom",

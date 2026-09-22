@@ -49,7 +49,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "reference"
+     "name": "reference^"
     },
     {
      "type": "terminator",
@@ -63,20 +63,20 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "decal type",
+     "name": "decal type^",
      "definition": "scenario_decal_palette_block"
     },
     {
      "type": "char_integer",
-     "name": "yaw[-127,127]"
+     "name": "yaw[-127,127]*"
     },
     {
      "type": "char_integer",
-     "name": "pitch[-127,127]"
+     "name": "pitch[-127,127]*"
     },
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "terminator",

@@ -209,44 +209,44 @@
     },
     {
      "type": "short_enum",
-     "name": "sample rate",
+     "name": "sample rate*",
      "definition": "sample rate"
     },
     {
      "type": "real",
-     "name": "minimum distance"
+     "name": "minimum distance:world units#the distance below which this sound no longer gets louder"
     },
     {
      "type": "real",
-     "name": "maximum distance"
+     "name": "maximum distance:world units#the distance beyond which this sound is no longer audible"
     },
     {
      "type": "real_fraction",
-     "name": "skip fraction"
+     "name": "skip fraction#fraction of requests to play this sound that will be ignored (0 means always play.)"
     },
     {
      "type": "real_bounds",
-     "name": "random pitch bounds"
+     "name": "random pitch bounds:cents#the sound's pitch will be modulated randomly within this range."
     },
     {
      "type": "angle",
-     "name": "inner cone angle"
+     "name": "inner cone angle:degrees#within the cone defined by this angle and the sound's direction, the sound plays with a gain of 1.0."
     },
     {
      "type": "angle",
-     "name": "outer cone angle"
+     "name": "outer cone angle:degrees#outside the cone defined by this angle and the sound's direction, the sound plays with a gain of OUTER CONE GAIN. (0 means the sound does not attenuate with direction.)"
     },
     {
      "type": "real",
-     "name": "outer cone gain"
+     "name": "outer cone gain:dB#the gain to use when the sound is directed away from the listener"
     },
     {
      "type": "real",
-     "name": "gain modifier"
+     "name": "gain modifier:dB"
     },
     {
      "type": "real",
-     "name": "maximum bend per second"
+     "name": "maximum bend per second:cents"
     },
     {
      "type": "short_enum",
@@ -255,7 +255,7 @@
     },
     {
      "type": "short_enum",
-     "name": "import type",
+     "name": "import type*",
      "definition": "import type"
     },
     {
@@ -269,11 +269,11 @@
     },
     {
      "type": "real",
-     "name": "gain modifier"
+     "name": "gain modifier:dB"
     },
     {
      "type": "real",
-     "name": "pitch modifier"
+     "name": "pitch modifier:cents"
     },
     {
      "type": "pad",
@@ -286,11 +286,11 @@
     },
     {
      "type": "real",
-     "name": "gain modifier"
+     "name": "gain modifier:dB"
     },
     {
      "type": "real",
-     "name": "pitch modifier"
+     "name": "pitch modifier:cents"
     },
     {
      "type": "pad",
@@ -299,12 +299,12 @@
     },
     {
      "type": "short_enum",
-     "name": "encoding",
+     "name": "encoding*",
      "definition": "encoding"
     },
     {
      "type": "short_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
@@ -313,7 +313,7 @@
     },
     {
      "type": "short_integer",
-     "name": "promotion count"
+     "name": "promotion count#when there are this many instances of the sound, promote to the new sound."
     },
     {
      "type": "pad",
@@ -327,7 +327,7 @@
     },
     {
      "type": "block",
-     "name": "pitch ranges",
+     "name": "pitch ranges#pitch ranges allow multiple samples to represent the same sound at different pitches",
      "definition": "old_sound_pitch_range_block"
     },
     {
@@ -342,19 +342,24 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name*#the name of the imported pitch range directory"
+    },
+    {
+     "type": "explanation",
+     "name": "pitch control",
+     "definition": "these settings control what pitches this set of samples represents. if there is only one pitch range, all three values are ignored."
     },
     {
      "type": "real",
-     "name": "natural pitch"
+     "name": "natural pitch:cents#the apparent pitch when these samples are played at their recorded pitch."
     },
     {
      "type": "real_bounds",
-     "name": "bend bounds"
+     "name": "bend bounds:cents#the range of pitches that will be represented using this sample. this should always contain the natural pitch."
     },
     {
      "type": "short_integer",
-     "name": "actual permutation count"
+     "name": "actual permutation count*"
     },
     {
      "type": "pad",
@@ -368,7 +373,7 @@
     },
     {
      "type": "block",
-     "name": "permutations",
+     "name": "permutations#permutations represent equivalent variations of this sound.",
      "definition": "old_sound_permutations_block"
     },
     {
@@ -388,24 +393,24 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name*^#name of the file from which this sample was imported"
     },
     {
      "type": "real_fraction",
-     "name": "skip fraction"
+     "name": "skip fraction#fraction of requests to play this permutation that are ignored (a different permutation is selected.)"
     },
     {
      "type": "real",
-     "name": "gain"
+     "name": "gain:dB#fraction of recorded volume to play at."
     },
     {
      "type": "short_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
      "type": "short_integer",
-     "name": "next permutation index"
+     "name": "next permutation index*"
     },
     {
      "type": "pad",
@@ -414,7 +419,7 @@
     },
     {
      "type": "data",
-     "name": "samples",
+     "name": "samples#sampled sound data",
      "definition": "old_sound_samples"
     },
     {
@@ -473,7 +478,7 @@
     },
     {
      "type": "short_enum",
-     "name": "sample rate",
+     "name": "sample rate*",
      "definition": "sample rate"
     },
     {
@@ -483,7 +488,7 @@
     },
     {
      "type": "short_enum",
-     "name": "import type",
+     "name": "import type*",
      "definition": "import type"
     },
     {
@@ -497,13 +502,18 @@
      "definition": "large_sound_scale_modifiers_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "import properties",
+     "definition": ""
+    },
+    {
      "type": "short_enum",
-     "name": "encoding",
+     "name": "encoding*",
      "definition": "encoding"
     },
     {
      "type": "short_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
@@ -518,7 +528,7 @@
     },
     {
      "type": "block",
-     "name": "pitch ranges",
+     "name": "pitch ranges*#pitch ranges allow multiple samples to represent the same sound at different pitches",
      "definition": "large_sound_pitch_range_block"
     },
     {
@@ -538,43 +548,43 @@
    "fields": [
     {
      "type": "real",
-     "name": "minimum distance"
+     "name": "minimum distance:world units#the distance below which this sound no longer gets louder"
     },
     {
      "type": "real",
-     "name": "maximum distance"
+     "name": "maximum distance:world units#the distance beyond which this sound is no longer audible"
     },
     {
      "type": "real_fraction",
-     "name": "skip fraction"
+     "name": "skip fraction#fraction of requests to play this sound that will be ignored (0 means always play.)"
     },
     {
      "type": "real",
-     "name": "maximum bend per second"
+     "name": "maximum bend per second:cents"
     },
     {
      "type": "real",
-     "name": "gain base"
+     "name": "gain base:dB#sound's random gain will start here"
     },
     {
      "type": "real",
-     "name": "gain variance"
+     "name": "gain variance:dB#sound's gain will be randomly modulated within this range"
     },
     {
      "type": "real_bounds",
-     "name": "random pitch bounds"
+     "name": "random pitch bounds:cents#the sound's pitch will be modulated randomly within this range."
     },
     {
      "type": "angle",
-     "name": "inner cone angle"
+     "name": "inner cone angle:degrees#within the cone defined by this angle and the sound's direction, the sound plays with a gain of 1.0."
     },
     {
      "type": "angle",
-     "name": "outer cone angle"
+     "name": "outer cone angle:degrees#outside the cone defined by this angle and the sound's direction, the sound plays with a gain of OUTER CONE GAIN. (0 means the sound does not attenuate with direction.)"
     },
     {
      "type": "real",
-     "name": "outer cone gain"
+     "name": "outer cone gain:dB#the gain to use when the sound is directed away from the listener"
     },
     {
      "type": "terminator",
@@ -589,43 +599,58 @@
    "fields": [
     {
      "type": "real",
-     "name": "minimum distance"
+     "name": "minimum distance:world units#the distance below which this sound no longer gets louder"
     },
     {
      "type": "real",
-     "name": "maximum distance"
+     "name": "maximum distance:world units#the distance beyond which this sound is no longer audible"
     },
     {
      "type": "real_fraction",
-     "name": "skip fraction"
+     "name": "skip fraction#fraction of requests to play this sound that will be ignored (0 means always play.)"
     },
     {
      "type": "real",
-     "name": "maximum bend per second"
+     "name": "maximum bend per second:cents"
+    },
+    {
+     "type": "explanation",
+     "name": "randomization",
+     "definition": "these settings control random variation of volume and pitch.\n the second parameter gets clipped to the first."
     },
     {
      "type": "real",
-     "name": "gain base"
+     "name": "gain base:dB#sound's random gain will start here"
     },
     {
      "type": "real",
-     "name": "gain variance"
+     "name": "gain variance:dB#sound's gain will be randomly modulated within this range"
     },
     {
      "type": "real_bounds",
-     "name": "random pitch bounds"
+     "name": "random pitch bounds:cents#the sound's pitch will be modulated randomly within this range."
+    },
+    {
+     "type": "explanation",
+     "name": "directional sounds",
+     "definition": "these settings allow sounds to be directional, fading as they turn away from the listener"
     },
     {
      "type": "angle",
-     "name": "inner cone angle"
+     "name": "inner cone angle:degrees#within the cone defined by this angle and the sound's direction, the sound plays with a gain of 1.0."
     },
     {
      "type": "angle",
-     "name": "outer cone angle"
+     "name": "outer cone angle:degrees#outside the cone defined by this angle and the sound's direction, the sound plays with a gain of OUTER CONE GAIN. (0 means the sound does not attenuate with direction.)"
     },
     {
      "type": "real",
-     "name": "outer cone gain"
+     "name": "outer cone gain:dB#the gain to use when the sound is directed away from the listener"
+    },
+    {
+     "type": "explanation",
+     "name": "SCRIPTED LOCATION OVERRIDE",
+     "definition": "NOTE: this will only apply when the sound is started via script\nazimuth:\n    0 => front\n    90 => left\n    180 => back\n    270 => right\n"
     },
     {
      "type": "long_flags",
@@ -638,11 +663,11 @@
     },
     {
      "type": "real",
-     "name": "positional gain"
+     "name": "positional gain:dB"
     },
     {
      "type": "real",
-     "name": "first person gain"
+     "name": "first person gain:dB"
     },
     {
      "type": "terminator",
@@ -656,12 +681,17 @@
    "size": 24,
    "fields": [
     {
-     "type": "real_bounds",
-     "name": "gain modifier"
+     "type": "explanation",
+     "name": "scale modifiers",
+     "definition": "as the sound's input scale changes from zero to one, these modifiers move between the two values specified here. the sound will play using the current scale modifier multiplied by the values specified above. (0 values are ignored.)"
     },
     {
      "type": "real_bounds",
-     "name": "pitch modifier"
+     "name": "gain modifier:dB"
+    },
+    {
+     "type": "real_bounds",
+     "name": "pitch modifier:cents"
     },
     {
      "type": "fraction_bounds",
@@ -684,7 +714,7 @@
     },
     {
      "type": "short_integer",
-     "name": "promotion count"
+     "name": "promotion count#when there are this many instances of the sound, promote to the new sound."
     },
     {
      "type": "pad",
@@ -714,20 +744,20 @@
     },
     {
      "type": "block",
-     "name": "runtime timers",
+     "name": "runtime timers!",
      "definition": "sound_promotion_runtime_timer_block"
     },
     {
      "type": "long_integer",
-     "name": "runtime active promotion index"
+     "name": "runtime active promotion index!"
     },
     {
      "type": "long_integer",
-     "name": "runtime last promotion time"
+     "name": "runtime last promotion time!"
     },
     {
      "type": "long_integer",
-     "name": "runtime suppression timeout"
+     "name": "runtime suppression timeout!"
     },
     {
      "type": "terminator",
@@ -742,7 +772,7 @@
    "fields": [
     {
      "type": "custom_short_block_index",
-     "name": "pitch range"
+     "name": "pitch range^"
     },
     {
      "type": "short_integer",
@@ -750,7 +780,7 @@
     },
     {
      "type": "real",
-     "name": "suppression time"
+     "name": "suppression time:seconds#time from when first permutation plays to when another sound from an equal or lower promotion can play"
     },
     {
      "type": "pad",
@@ -783,15 +813,15 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*#the name of the imported pitch range directory"
     },
     {
      "type": "real",
-     "name": "natural pitch"
+     "name": "natural pitch:cents#the apparent pitch when these samples are played at their recorded pitch."
     },
     {
      "type": "real_bounds",
-     "name": "bend bounds"
+     "name": "bend bounds:cents#the range of pitches that will be represented using this sample."
     },
     {
      "type": "real_bounds",
@@ -809,7 +839,7 @@
     },
     {
      "type": "block",
-     "name": "permutations",
+     "name": "permutations*#permutations represent equivalent variations of this sound.",
      "definition": "large_sound_permutations_block"
     },
     {
@@ -933,15 +963,15 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^#name of the file from which this sample was imported"
     },
     {
      "type": "real_fraction",
-     "name": "skip fraction"
+     "name": "skip fraction#fraction of requests to play this permutation that are ignored (a different permutation is selected.)"
     },
     {
      "type": "real",
-     "name": "gain"
+     "name": "gain:dB#additional attenuation when played"
     },
     {
      "type": "data",
@@ -960,7 +990,7 @@
     },
     {
      "type": "short_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
@@ -990,7 +1020,7 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "file offset"
+     "name": "file offset*"
     },
     {
      "type": "short_integer",
@@ -1020,7 +1050,7 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "file offset"
+     "name": "file offset*"
     },
     {
      "type": "long_integer",
@@ -1042,7 +1072,7 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "file offset"
+     "name": "file offset*"
     },
     {
      "type": "long_integer",
@@ -1068,15 +1098,15 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "marker id"
+     "name": "marker id*"
     },
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "long_integer",
-     "name": "sample offset"
+     "name": "sample offset*"
     },
     {
      "type": "custom",
@@ -1165,7 +1195,7 @@
     },
     {
      "type": "real",
-     "name": "gain"
+     "name": "gain:dB"
     },
     {
      "type": "terminator",
@@ -1178,13 +1208,23 @@
    "size": 72,
    "fields": [
     {
+     "type": "explanation",
+     "name": "parameter description",
+     "definition": "DLS2 filtering:\n    resonance gain range: [0, 22.5] dB\n\nparametric EQ:\n    gain range: [-64, 14] dB\n\nfor mono sounds:\n    the left filter controls the DLS 2 parameters\n    the right filter controls the Parametric EQ parameters\n\nfor stereo sounds:\n    both left and right channels must have the same filter\n    i.e., filter type both is invalid"
+    },
+    {
      "type": "long_enum",
      "name": "filter type",
      "definition": "filter type"
     },
     {
      "type": "long_integer",
-     "name": "filter width"
+     "name": "filter width:[0,7]"
+    },
+    {
+     "type": "explanation",
+     "name": "left filter frequency",
+     "definition": "in Hz [0,8000]"
     },
     {
      "type": "struct",
@@ -1192,14 +1232,29 @@
      "definition": "sound_playback_parameter_definition_2"
     },
     {
+     "type": "explanation",
+     "name": "left filter gain",
+     "definition": "in dB"
+    },
+    {
      "type": "struct",
      "name": "left filter gain",
      "definition": "sound_playback_parameter_definition_2"
     },
     {
+     "type": "explanation",
+     "name": "right filter frequency",
+     "definition": "in Hz [0,8000]"
+    },
+    {
      "type": "struct",
      "name": "right filter frequency",
      "definition": "sound_playback_parameter_definition_2"
+    },
+    {
+     "type": "explanation",
+     "name": "right filter gain",
+     "definition": "in dB"
     },
     {
      "type": "struct",
@@ -1236,14 +1291,29 @@
    "size": 48,
    "fields": [
     {
+     "type": "explanation",
+     "name": "delay",
+     "definition": "seconds"
+    },
+    {
      "type": "struct",
      "name": "delay",
      "definition": "sound_playback_parameter_definition_2"
     },
     {
+     "type": "explanation",
+     "name": "frequency",
+     "definition": "Hz[0,43.7]"
+    },
+    {
      "type": "struct",
      "name": "frequency",
      "definition": "sound_playback_parameter_definition_2"
+    },
+    {
+     "type": "explanation",
+     "name": "pitch modulation",
+     "definition": "octaves[-1,1]"
     },
     {
      "type": "struct",
@@ -1261,9 +1331,19 @@
    "size": 64,
    "fields": [
     {
+     "type": "explanation",
+     "name": "delay",
+     "definition": "in seconds"
+    },
+    {
      "type": "struct",
      "name": "delay",
      "definition": "sound_playback_parameter_definition_2"
+    },
+    {
+     "type": "explanation",
+     "name": "frequency",
+     "definition": "in Hz[0,43.7]"
     },
     {
      "type": "struct",
@@ -1271,9 +1351,19 @@
      "definition": "sound_playback_parameter_definition_2"
     },
     {
+     "type": "explanation",
+     "name": "cutoff modulation",
+     "definition": "octaves[-8,8]"
+    },
+    {
      "type": "struct",
      "name": "cutoff modulation",
      "definition": "sound_playback_parameter_definition_2"
+    },
+    {
+     "type": "explanation",
+     "name": "gain modulation",
+     "definition": "dB[-16,16]"
     },
     {
      "type": "struct",
@@ -1346,11 +1436,11 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
     },
     {
      "type": "real",
-     "name": "gain"
+     "name": "gain:dB#additional attenuation to sound"
     },
     {
      "type": "long_flags",
@@ -1422,7 +1512,7 @@
     },
     {
      "type": "real",
-     "name": "time period"
+     "name": "time period: seconds"
     },
     {
      "type": "long_integer",
@@ -1453,12 +1543,12 @@
    "fields": [
     {
      "type": "block",
-     "name": "sound effects",
+     "name": "sound effects*",
      "definition": "platform_sound_effect_block"
     },
     {
      "type": "block",
-     "name": "low frequency input",
+     "name": "low frequency input*",
      "definition": "platform_sound_effect_function_block"
     },
     {
@@ -1521,7 +1611,7 @@
     },
     {
      "type": "real",
-     "name": "time period"
+     "name": "time period: seconds"
     },
     {
      "type": "terminator",
@@ -1591,7 +1681,7 @@
     },
     {
      "type": "short_enum",
-     "name": "sample rate",
+     "name": "sample rate*",
      "definition": "sample rate"
     },
     {
@@ -1601,7 +1691,7 @@
     },
     {
      "type": "short_enum",
-     "name": "import type",
+     "name": "import type*",
      "definition": "import type"
     },
     {
@@ -1615,13 +1705,18 @@
      "definition": "large_sound_scale_modifiers_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "import properties",
+     "definition": ""
+    },
+    {
      "type": "short_enum",
-     "name": "encoding",
+     "name": "encoding*",
      "definition": "encoding"
     },
     {
      "type": "short_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
@@ -1636,7 +1731,7 @@
     },
     {
      "type": "block",
-     "name": "pitch ranges",
+     "name": "pitch ranges*#pitch ranges allow multiple samples to represent the same sound at different pitches",
      "definition": "large_sound_pitch_range_block"
     },
     {
@@ -1670,7 +1765,7 @@
     },
     {
      "type": "short_enum",
-     "name": "sample rate",
+     "name": "sample rate*",
      "definition": "sample rate"
     },
     {
@@ -1680,7 +1775,7 @@
     },
     {
      "type": "short_enum",
-     "name": "import type",
+     "name": "import type*",
      "definition": "import type"
     },
     {
@@ -1694,13 +1789,18 @@
      "definition": "large_sound_scale_modifiers_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "import properties",
+     "definition": ""
+    },
+    {
      "type": "short_enum",
-     "name": "encoding",
+     "name": "encoding*",
      "definition": "encoding"
     },
     {
      "type": "short_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
@@ -1715,7 +1815,7 @@
     },
     {
      "type": "block",
-     "name": "pitch ranges",
+     "name": "pitch ranges*#pitch ranges allow multiple samples to represent the same sound at different pitches",
      "definition": "large_sound_pitch_range_block"
     },
     {
@@ -1745,7 +1845,7 @@
     },
     {
      "type": "short_enum",
-     "name": "sample rate",
+     "name": "sample rate*",
      "definition": "sample rate"
     },
     {
@@ -1755,7 +1855,7 @@
     },
     {
      "type": "short_enum",
-     "name": "import type",
+     "name": "import type*",
      "definition": "import type"
     },
     {
@@ -1769,13 +1869,18 @@
      "definition": "sound_scale_modifiers_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "import properties",
+     "definition": ""
+    },
+    {
      "type": "short_enum",
-     "name": "encoding",
+     "name": "encoding*",
      "definition": "encoding"
     },
     {
      "type": "short_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
@@ -1790,7 +1895,7 @@
     },
     {
      "type": "block",
-     "name": "pitch ranges",
+     "name": "pitch ranges*#pitch ranges allow multiple samples to represent the same sound at different pitches",
      "definition": "sound_pitch_range_block"
     },
     {
@@ -1823,19 +1928,24 @@
     },
     {
      "type": "real",
-     "name": "minimum distance"
+     "name": "minimum distance:world units#the distance below which this sound no longer gets louder"
     },
     {
      "type": "real",
-     "name": "maximum distance"
+     "name": "maximum distance:world units#the distance beyond which this sound is no longer audible"
     },
     {
      "type": "real_fraction",
-     "name": "skip fraction"
+     "name": "skip fraction#fraction of requests to play this sound that will be ignored (0 means always play.)"
     },
     {
      "type": "real",
-     "name": "maximum bend per second"
+     "name": "maximum bend per second:cents"
+    },
+    {
+     "type": "explanation",
+     "name": "randomization",
+     "definition": "these settings control random variation of volume and pitch.\n the second parameter gets clipped to the first."
     },
     {
      "type": "custom",
@@ -1843,27 +1953,37 @@
     },
     {
      "type": "real",
-     "name": "gain base"
+     "name": "gain base:dB#sound's random gain will start here"
     },
     {
      "type": "real",
-     "name": "gain variance"
+     "name": "gain variance:dB#sound's gain will be randomly modulated within this range"
     },
     {
      "type": "short_bounds",
-     "name": "random pitch bounds"
+     "name": "random pitch bounds:cents#the sound's pitch will be modulated randomly within this range."
+    },
+    {
+     "type": "explanation",
+     "name": "directional sounds",
+     "definition": "these settings allow sounds to be directional, fading as they turn away from the listener"
     },
     {
      "type": "angle",
-     "name": "inner cone angle"
+     "name": "inner cone angle:degrees#within the cone defined by this angle and the sound's direction, the sound plays with a gain of 1.0."
     },
     {
      "type": "angle",
-     "name": "outer cone angle"
+     "name": "outer cone angle:degrees#outside the cone defined by this angle and the sound's direction, the sound plays with a gain of OUTER CONE GAIN. (0 means the sound does not attenuate with direction.)"
     },
     {
      "type": "real",
-     "name": "outer cone gain"
+     "name": "outer cone gain:dB#the gain to use when the sound is directed away from the listener"
+    },
+    {
+     "type": "explanation",
+     "name": "SCRIPTED LOCATION OVERRIDE",
+     "definition": "NOTE: this will only apply when the sound is started via script\nazimuth:\n    0 => front\n    90 => left\n    180 => back\n    270 => right\n"
     },
     {
      "type": "custom",
@@ -1880,11 +2000,11 @@
     },
     {
      "type": "real",
-     "name": "positional gain"
+     "name": "positional gain:dB"
     },
     {
      "type": "real",
-     "name": "first person gain"
+     "name": "first person gain:dB"
     },
     {
      "type": "terminator",
@@ -1898,12 +2018,17 @@
    "size": 20,
    "fields": [
     {
+     "type": "explanation",
+     "name": "scale modifiers",
+     "definition": "as the sound's input scale changes from zero to one, these modifiers move between the two values specified here. the sound will play using the current scale modifier multiplied by the values specified above. (0 values are ignored.)"
+    },
+    {
      "type": "real_bounds",
-     "name": "gain modifier"
+     "name": "gain modifier:dB"
     },
     {
      "type": "short_bounds",
-     "name": "pitch modifier"
+     "name": "pitch modifier:cents"
     },
     {
      "type": "fraction_bounds",
@@ -1922,11 +2047,16 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*#the name of the imported pitch range directory"
+    },
+    {
+     "type": "explanation",
+     "name": "pitch control",
+     "definition": "these settings control what pitches this set of samples represents. if there is only one pitch range, all three values are ignored."
     },
     {
      "type": "short_integer",
-     "name": "natural pitch"
+     "name": "natural pitch:cents#the apparent pitch when these samples are played at their recorded pitch."
     },
     {
      "type": "pad",
@@ -1935,7 +2065,7 @@
     },
     {
      "type": "short_bounds",
-     "name": "bend bounds"
+     "name": "bend bounds:cents#the range of pitches that will be represented using this sample."
     },
     {
      "type": "short_bounds",
@@ -1948,7 +2078,7 @@
     },
     {
      "type": "block",
-     "name": "permutations",
+     "name": "permutations*#permutations represent equivalent variations of this sound.",
      "definition": "sound_permutations_block"
     },
     {
@@ -1967,7 +2097,7 @@
     },
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^#name of the file from which this sample was imported"
     },
     {
      "type": "custom",
@@ -1975,7 +2105,7 @@
     },
     {
      "type": "real_fraction",
-     "name": "skip fraction"
+     "name": "skip fraction#fraction of requests to play this permutation that are ignored (a different permutation is selected.)"
     },
     {
      "type": "custom",
@@ -1983,7 +2113,7 @@
     },
     {
      "type": "real",
-     "name": "gain"
+     "name": "gain:dB#additional attenuation when played"
     },
     {
      "type": "long_integer",
@@ -2067,12 +2197,12 @@
     },
     {
      "type": "short_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
      "type": "char_enum",
-     "name": "language",
+     "name": "language*",
      "definition": "language"
     },
     {
@@ -2135,12 +2265,12 @@
     },
     {
      "type": "short_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
      "type": "char_enum",
-     "name": "language",
+     "name": "language*",
      "definition": "language"
     },
     {
@@ -2203,12 +2333,12 @@
     },
     {
      "type": "short_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
      "type": "char_enum",
-     "name": "language",
+     "name": "language*",
      "definition": "language"
     },
     {
@@ -2282,24 +2412,29 @@
    "size": 40,
    "fields": [
     {
-     "type": "long_integer",
-     "name": "block offset"
+     "type": "explanation",
+     "name": "BLOCK INFO",
+     "definition": ""
     },
     {
      "type": "long_integer",
-     "name": "block size"
+     "name": "block offset*"
     },
     {
      "type": "long_integer",
-     "name": "section data size"
+     "name": "block size*"
     },
     {
      "type": "long_integer",
-     "name": "resource data size"
+     "name": "section data size*"
+    },
+    {
+     "type": "long_integer",
+     "name": "resource data size*"
     },
     {
      "type": "block",
-     "name": "resources",
+     "name": "resources*",
      "definition": "global_geometry_block_resource_block"
     },
     {
@@ -2309,7 +2444,7 @@
     },
     {
      "type": "short_integer",
-     "name": "owner tag section offset"
+     "name": "owner tag section offset*"
     },
     {
      "type": "pad",
@@ -2334,7 +2469,7 @@
    "fields": [
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
@@ -2344,19 +2479,19 @@
     },
     {
      "type": "short_integer",
-     "name": "primary locator"
+     "name": "primary locator*"
     },
     {
      "type": "short_integer",
-     "name": "secondary locator"
+     "name": "secondary locator*"
     },
     {
      "type": "long_integer",
-     "name": "resource data size"
+     "name": "resource data size*"
     },
     {
      "type": "long_integer",
-     "name": "resource data offset"
+     "name": "resource data offset*"
     },
     {
      "type": "terminator",
@@ -2380,7 +2515,7 @@
     },
     {
      "type": "char_enum",
-     "name": "sample rate",
+     "name": "sample rate*",
      "definition": "sample rate"
     },
     {
@@ -2390,7 +2525,7 @@
     },
     {
      "type": "char_enum",
-     "name": "import type",
+     "name": "import type*",
      "definition": "import type"
     },
     {
@@ -2404,18 +2539,23 @@
      "definition": "sound_scale_modifiers_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "import properties",
+     "definition": ""
+    },
+    {
      "type": "pad",
      "name": "sizeof(s_game_sound_deterministic_permutation)",
      "definition": 2
     },
     {
      "type": "char_enum",
-     "name": "encoding",
+     "name": "encoding*",
      "definition": "encoding"
     },
     {
      "type": "char_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
@@ -2430,7 +2570,7 @@
     },
     {
      "type": "block",
-     "name": "pitch ranges",
+     "name": "pitch ranges*#pitch ranges allow multiple samples to represent the same sound at different pitches",
      "definition": "sound_pitch_range_block"
     },
     {
@@ -2469,7 +2609,7 @@
     },
     {
      "type": "char_enum",
-     "name": "sample rate",
+     "name": "sample rate*",
      "definition": "sample rate"
     },
     {
@@ -2479,7 +2619,7 @@
     },
     {
      "type": "char_enum",
-     "name": "import type",
+     "name": "import type*",
      "definition": "import type"
     },
     {
@@ -2493,18 +2633,23 @@
      "definition": "sound_scale_modifiers_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "import properties",
+     "definition": ""
+    },
+    {
      "type": "pad",
      "name": "sizeof(s_game_sound_deterministic_permutation)",
      "definition": 2
     },
     {
      "type": "char_enum",
-     "name": "encoding",
+     "name": "encoding*",
      "definition": "encoding"
     },
     {
      "type": "char_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
@@ -2519,7 +2664,7 @@
     },
     {
      "type": "real",
-     "name": "inner_silence_distance"
+     "name": "inner_silence_distance#don't play below this distance"
     },
     {
      "type": "pad",
@@ -2528,7 +2673,7 @@
     },
     {
      "type": "block",
-     "name": "pitch ranges",
+     "name": "pitch ranges*#pitch ranges allow multiple samples to represent the same sound at different pitches",
      "definition": "sound_pitch_range_block"
     },
     {
@@ -2574,15 +2719,15 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "reflection type"
+     "name": "reflection type^#type which is compared with type in current sound_environment tag"
     },
     {
      "type": "tag_reference",
-     "name": "reflection sound"
+     "name": "reflection sound^"
     },
     {
      "type": "long_integer",
-     "name": "reflection sound"
+     "name": "reflection sound:ms"
     },
     {
      "type": "terminator",
@@ -2610,7 +2755,7 @@
     },
     {
      "type": "char_enum",
-     "name": "sample rate",
+     "name": "sample rate*",
      "definition": "sample rate"
     },
     {
@@ -2620,7 +2765,7 @@
     },
     {
      "type": "char_enum",
-     "name": "import type",
+     "name": "import type*",
      "definition": "import type"
     },
     {
@@ -2634,18 +2779,23 @@
      "definition": "sound_scale_modifiers_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "import properties",
+     "definition": ""
+    },
+    {
      "type": "pad",
      "name": "sizeof(s_game_sound_deterministic_permutation)",
      "definition": 2
     },
     {
      "type": "char_enum",
-     "name": "encoding",
+     "name": "encoding*",
      "definition": "encoding"
     },
     {
      "type": "char_enum",
-     "name": "compression",
+     "name": "compression*",
      "definition": "compression"
     },
     {
@@ -2660,7 +2810,7 @@
     },
     {
      "type": "real",
-     "name": "inner_silence_distance"
+     "name": "inner_silence_distance#don't play below this distance"
     },
     {
      "type": "pad",
@@ -2669,7 +2819,7 @@
     },
     {
      "type": "block",
-     "name": "pitch ranges",
+     "name": "pitch ranges*#pitch ranges allow multiple samples to represent the same sound at different pitches",
      "definition": "sound_pitch_range_block"
     },
     {
@@ -2686,6 +2836,11 @@
      "type": "struct",
      "name": "reflections",
      "definition": "sound_reflection_parameters_struct_2"
+    },
+    {
+     "type": "explanation",
+     "name": "low pass filter parameters",
+     "definition": ""
     },
     {
      "type": "struct",

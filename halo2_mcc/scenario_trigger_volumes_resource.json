@@ -63,7 +63,7 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "array",
@@ -87,7 +87,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "parameters"
+     "name": "parameters*!"
     },
     {
      "type": "terminator",
@@ -101,7 +101,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_block_index",
@@ -119,11 +119,11 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "forward"
+     "name": "forward!"
     },
     {
      "type": "real_vector_3d",
-     "name": "up"
+     "name": "up!"
     },
     {
      "type": "real_point_3d",
@@ -140,7 +140,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "kill trigger volume",
+     "name": "kill trigger volume*",
      "definition": "scenario_kill_trigger_volumes_block"
     },
     {
@@ -160,7 +160,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "custom_short_block_index",
@@ -182,7 +182,7 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "trigger volume",
+     "name": "trigger volume^",
      "definition": "scenario_trigger_volume_block"
     },
     {

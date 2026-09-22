@@ -249,7 +249,7 @@
     },
     {
      "type": "block",
-     "name": "postprocess definition",
+     "name": "postprocess definition*",
      "definition": "shader_pass_postprocess_definition_new_block"
     },
     {
@@ -264,7 +264,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "data",
@@ -329,6 +329,11 @@
      "definition": "shader_pass_texture_block"
     },
     {
+     "type": "explanation",
+     "name": "VERTEX SHADER",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
      "name": "vertex shader"
     },
@@ -351,6 +356,11 @@
      "type": "useless_pad",
      "name": null,
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "STATE",
+     "definition": ""
     },
     {
      "type": "short_enum",
@@ -467,7 +477,7 @@
     },
     {
      "type": "short_integer",
-     "name": "input stage"
+     "name": "input stage:[0,3]"
     },
     {
      "type": "pad",
@@ -565,7 +575,7 @@
     },
     {
      "type": "short_integer",
-     "name": "max mipmap index"
+     "name": "max mipmap index#0 means all mipmap levels are used"
     },
     {
      "type": "short_enum",
@@ -651,7 +661,7 @@
     },
     {
      "type": "short_enum",
-     "name": "constant",
+     "name": "constant^",
      "definition": "constant"
     },
     {
@@ -773,7 +783,7 @@
     },
     {
      "type": "short_integer",
-     "name": "alpha-test ref"
+     "name": "alpha-test ref:[0,255]"
     },
     {
      "type": "pad",
@@ -917,7 +927,7 @@
     },
     {
      "type": "short_enum",
-     "name": "constant",
+     "name": "constant^",
      "definition": "constant_2"
     },
     {
@@ -1414,7 +1424,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "parameter name"
+     "name": "parameter name^"
     },
     {
      "type": "char_integer",
@@ -1440,7 +1450,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "parameter name"
+     "name": "parameter name^"
     },
     {
      "type": "pad",

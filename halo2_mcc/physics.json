@@ -34,7 +34,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius#positive uses old inferior physics, negative uses new improved physics"
     },
     {
      "type": "real_fraction",
@@ -46,7 +46,7 @@
     },
     {
      "type": "real_point_3d",
-     "name": "center of mass"
+     "name": "center of mass*"
     },
     {
      "type": "real",
@@ -125,7 +125,7 @@
     },
     {
      "type": "block",
-     "name": "inertial matrix and inverse",
+     "name": "inertial matrix and inverse*",
      "definition": "inertial_matrix_block"
     },
     {
@@ -177,7 +177,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
@@ -229,7 +229,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
@@ -238,7 +238,7 @@
     },
     {
      "type": "short_integer",
-     "name": "model node"
+     "name": "model node*"
     },
     {
      "type": "long_flags",
@@ -251,7 +251,7 @@
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "real",
@@ -259,7 +259,7 @@
     },
     {
      "type": "real",
-     "name": "density"
+     "name": "density*"
     },
     {
      "type": "real_point_3d",

@@ -18,24 +18,29 @@
    "size": 20,
    "fields": [
     {
-     "type": "real",
-     "name": "ground friction scale"
+     "type": "explanation",
+     "name": "vehicle terrain parameters",
+     "definition": "the following fields modify the way a vehicle drives over terrain of this material type."
     },
     {
      "type": "real",
-     "name": "ground friction normal k1 scale"
+     "name": "ground friction scale#fraction of original velocity parallel to the ground after one tick"
     },
     {
      "type": "real",
-     "name": "ground friction normal k0 scale"
+     "name": "ground friction normal k1 scale#cosine of angle at which friction falls off"
     },
     {
      "type": "real",
-     "name": "ground depth scale"
+     "name": "ground friction normal k0 scale#cosine of angle at which friction is zero"
     },
     {
      "type": "real",
-     "name": "ground damp fraction scale"
+     "name": "ground depth scale#depth a point mass rests in the ground"
+    },
+    {
+     "type": "real",
+     "name": "ground damp fraction scale#fraction of original velocity perpendicular to the ground after one tick"
     },
     {
      "type": "terminator",

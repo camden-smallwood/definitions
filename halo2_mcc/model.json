@@ -113,6 +113,11 @@
    "size": 200,
    "fields": [
     {
+     "type": "explanation",
+     "name": "MODEL",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
      "name": "render model"
     },
@@ -133,28 +138,33 @@
      "name": "physics model"
     },
     {
-     "type": "real",
-     "name": "max draw distance"
+     "type": "explanation",
+     "name": "level of detail",
+     "definition": "If a model is further away than the LOD reduction distance, it will be reduced to that LOD.\nSo the L1 reduction distance should be really long and the L5 reduction distance should be really short.\nThis means distances should be in descending order, e.g. 5 4 3 2 1.\n\nNote that if we run out of memory or too many models are on screen at once, the engine may reduce\nmodels to a lower LOD BEFORE they reach the reduction distance for that LOD.\n\nIf a model has a max draw distance, it will disappear when it reaches that distance. The max draw distance\nshould be greater than all of the LOD reduction distances.\n"
     },
     {
      "type": "real",
-     "name": "reduce to L1"
+     "name": "max draw distance:world units"
     },
     {
      "type": "real",
-     "name": "reduce to L2"
+     "name": "reduce to L1:world units (super low)"
     },
     {
      "type": "real",
-     "name": "reduce to L3"
+     "name": "reduce to L2:world units (low)"
     },
     {
      "type": "real",
-     "name": "reduce to L4"
+     "name": "reduce to L3:world units (medium)"
     },
     {
      "type": "real",
-     "name": "reduce to L5"
+     "name": "reduce to L4:world units (high)"
+    },
+    {
+     "type": "real",
+     "name": "reduce to L5:world units (super high)"
     },
     {
      "type": "skip",
@@ -193,12 +203,12 @@
     },
     {
      "type": "block",
-     "name": "runtime regions",
+     "name": "runtime regions!",
      "definition": "model_region_block"
     },
     {
      "type": "block",
-     "name": "runtime nodes",
+     "name": "runtime nodes!",
      "definition": "model_node_block"
     },
     {
@@ -223,7 +233,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "pad",
@@ -265,7 +275,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "region name"
+     "name": "region name^:must match region name in render_model"
     },
     {
      "type": "pad",
@@ -289,7 +299,7 @@
     },
     {
      "type": "short_enum",
-     "name": "sort order",
+     "name": "sort order#negative values mean closer to the camera",
      "definition": "sort order"
     },
     {
@@ -309,7 +319,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "permutation name"
+     "name": "permutation name^"
     },
     {
      "type": "pad",
@@ -328,7 +338,7 @@
     },
     {
      "type": "real",
-     "name": "probability"
+     "name": "probability:(0,+inf)"
     },
     {
      "type": "block",
@@ -366,7 +376,7 @@
     },
     {
      "type": "short_enum",
-     "name": "state",
+     "name": "state^",
      "definition": "state"
     },
     {
@@ -395,12 +405,12 @@
     },
     {
      "type": "short_enum",
-     "name": "state",
+     "name": "state^",
      "definition": "state_2"
     },
     {
      "type": "tag_reference",
-     "name": "looping effect"
+     "name": "looping effect#played while the model is in this state"
     },
     {
      "type": "string_id",
@@ -422,7 +432,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "parent marker"
+     "name": "parent marker^"
     },
     {
      "type": "string_id",
@@ -491,7 +501,7 @@
     },
     {
      "type": "string_id",
-     "name": "global indirect material name"
+     "name": "global indirect material name#absorbes AOE or child damage"
     },
     {
      "type": "real",
@@ -499,11 +509,11 @@
     },
     {
      "type": "real",
-     "name": "body system shock"
+     "name": "body system shock#anything that kills us (body depleted) doing more than this amount of damage also destroys us"
     },
     {
      "type": "real_fraction",
-     "name": "friendly damage resistance"
+     "name": "friendly damage resistance:[0,1]#the fraction of damage caused by friendly units ignored by this object (zero means full damage)"
     },
     {
      "type": "tag_reference",
@@ -511,7 +521,7 @@
     },
     {
      "type": "real",
-     "name": "area damage effect threshold"
+     "name": "area damage effect threshold:[0,1]"
     },
     {
      "type": "tag_reference",
@@ -519,7 +529,7 @@
     },
     {
      "type": "real",
-     "name": "body damaged threshold"
+     "name": "body damaged threshold#when passing this vitality the 'body damaged' effect, below, is created"
     },
     {
      "type": "tag_reference",
@@ -531,7 +541,7 @@
     },
     {
      "type": "real",
-     "name": "body destroyed threshold"
+     "name": "body destroyed threshold#when passing this vitality (usually negative) the object is deleted"
     },
     {
      "type": "tag_reference",
@@ -539,7 +549,7 @@
     },
     {
      "type": "real",
-     "name": "maximum shield vitality"
+     "name": "maximum shield vitality#the default initial and maximum shield vitality of this object"
     },
     {
      "type": "string_id",
@@ -547,15 +557,15 @@
     },
     {
      "type": "real",
-     "name": "minimum stun damage"
+     "name": "minimum stun damage#the minimum damage required to stun this object's shields"
     },
     {
      "type": "real",
-     "name": "stun time"
+     "name": "stun time:seconds#the length of time the shields stay stunned (do not recharge) after taking damage"
     },
     {
      "type": "real",
-     "name": "recharge time"
+     "name": "recharge time:seconds#the length of time it would take for the shields to fully recharge after being completely depleted"
     },
     {
      "type": "real",
@@ -580,7 +590,7 @@
     },
     {
      "type": "block",
-     "name": "nodes",
+     "name": "nodes*",
      "definition": "global_damage_nodes_block"
     },
     {
@@ -610,7 +620,12 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
+    },
+    {
+     "type": "explanation",
+     "name": "damage section flags",
+     "definition": "* absorbs body damage: damage to this section does not count against body vitality\n* headshottable: takes extra headshot damage when shot\n* ignores shields: damage to this section bypasses shields"
     },
     {
      "type": "long_flags",
@@ -619,7 +634,7 @@
     },
     {
      "type": "real_fraction",
-     "name": "vitality percentage"
+     "name": "vitality percentage:[0.1]#percentage of total object vitality"
     },
     {
      "type": "block",
@@ -638,11 +653,11 @@
     },
     {
      "type": "real",
-     "name": "stun time"
+     "name": "stun time:seconds"
     },
     {
      "type": "real",
-     "name": "recharge time"
+     "name": "recharge time:seconds"
     },
     {
      "type": "pad",
@@ -674,9 +689,19 @@
      "definition": "response type"
     },
     {
+     "type": "explanation",
+     "name": "Constraint damage type",
+     "definition": "* if you specify a constraint group name (see lower section of this block)\n  you can specify a constraint damage\n* loosening a constraint takes it out of the rigid state - activates it\n* destroying a constraint sets the attached body free"
+    },
+    {
      "type": "short_enum",
      "name": "constraint damage type",
      "definition": "constraint damage type"
+    },
+    {
+     "type": "explanation",
+     "name": "Damage response flags",
+     "definition": "* kills object: when the response fires the object dies regardless of its current health\n* inhibits <x>: from halo 1 - disallows basic behaviors for a unit\n* forces drop weapon: from halo 1 - makes the unit drop its current weapon\n* kills weapon <x> trigger: destroys the <x> trigger on the unit's current weapon\n* destroys object: when the response fires the object is destroyed"
     },
     {
      "type": "long_flags",
@@ -685,7 +710,7 @@
     },
     {
      "type": "real",
-     "name": "damage threshold"
+     "name": "damage threshold#repsonse fires after crossing this threshold.  1=full health"
     },
     {
      "type": "tag_reference",
@@ -707,7 +732,7 @@
     },
     {
      "type": "short_integer",
-     "name": "runtime region index"
+     "name": "runtime region index*"
     },
     {
      "type": "string_id",
@@ -719,8 +744,13 @@
      "definition": "instantaneous_response_damage_effect_marker_struct_2"
     },
     {
+     "type": "explanation",
+     "name": "Response delay",
+     "definition": "If desired, you can specify a delay until the response fires.This delay is pre-empted if another timed response for the same section fires.The delay effect plays while the timer is counting down"
+    },
+    {
      "type": "real",
-     "name": "response delay"
+     "name": "response delay#in seconds"
     },
     {
      "type": "tag_reference",
@@ -731,20 +761,45 @@
      "name": "delay effect marker name"
     },
     {
+     "type": "explanation",
+     "name": "Constraint destruction",
+     "definition": "- a response can destroy a single constraint by naming it explicitly.\n- alternatively it can randomly destroy a single constraint from a specified group if the \"destroy one group constraint\" flag is set\n- also it can destroy all constraints in a specified group if the \"destroy all group constraints\" flag is set\n"
+    },
+    {
      "type": "string_id",
      "name": "constraint/group name"
+    },
+    {
+     "type": "explanation",
+     "name": "seat ejaculation",
+     "definition": ""
     },
     {
      "type": "string_id",
      "name": "ejecting seat label"
     },
     {
+     "type": "explanation",
+     "name": "skip fraction",
+     "definition": "0.0 always fires, 1.0 never fires"
+    },
+    {
      "type": "real_fraction",
      "name": "skip fraction"
     },
     {
+     "type": "explanation",
+     "name": "destroyed child object marker name",
+     "definition": "when this response fires, any children objects created at the supplied marker name will be destroyed"
+    },
+    {
      "type": "string_id",
      "name": "destroyed child object marker name"
+    },
+    {
+     "type": "explanation",
+     "name": "total damage threshold",
+     "definition": "scale on total damage section vitality"
     },
     {
      "type": "real_fraction",
@@ -858,11 +913,11 @@
     },
     {
      "type": "string_id",
-     "name": "global indirect material name"
+     "name": "global indirect material name#absorbes AOE or child damage"
     },
     {
      "type": "custom_short_block_index",
-     "name": "indirect damage section"
+     "name": "indirect damage section#absorbes AOE or child damage"
     },
     {
      "type": "pad",
@@ -895,29 +950,39 @@
      "definition": 20
     },
     {
+     "type": "explanation",
+     "name": "body",
+     "definition": ""
+    },
+    {
      "type": "real",
      "name": "maximum vitality"
     },
     {
      "type": "real",
-     "name": "minimum stun damage"
+     "name": "minimum stun damage#the minimum damage required to stun this object's health"
     },
     {
      "type": "real",
-     "name": "stun time"
+     "name": "stun time:seconds#the length of time the health stay stunned (do not recharge) after taking damage"
     },
     {
      "type": "real",
-     "name": "recharge time"
+     "name": "recharge time:seconds#the length of time it would take for the shields to fully recharge after being completely depleted"
     },
     {
      "type": "real_fraction",
-     "name": "recharge fraction"
+     "name": "recharge fraction#0 defaults to 1 - to what maximum level the body health will be allowed to recharge"
     },
     {
      "type": "pad",
      "name": "sizeof(long)*16",
      "definition": 64
+    },
+    {
+     "type": "explanation",
+     "name": "shield",
+     "definition": ""
     },
     {
      "type": "tag_reference",
@@ -929,7 +994,7 @@
     },
     {
      "type": "real",
-     "name": "maximum shield vitality"
+     "name": "maximum shield vitality#the default initial and maximum shield vitality of this object"
     },
     {
      "type": "string_id",
@@ -937,15 +1002,15 @@
     },
     {
      "type": "real",
-     "name": "minimum stun damage"
+     "name": "minimum stun damage#the minimum damage required to stun this object's shields"
     },
     {
      "type": "real",
-     "name": "stun time"
+     "name": "stun time:seconds#the length of time the shields stay stunned (do not recharge) after taking damage"
     },
     {
      "type": "real",
-     "name": "recharge time"
+     "name": "recharge time:seconds#the length of time it would take for the shields to fully recharge after being completely depleted"
     },
     {
      "type": "real",
@@ -970,7 +1035,7 @@
     },
     {
      "type": "block",
-     "name": "nodes",
+     "name": "nodes*",
      "definition": "global_damage_nodes_block"
     },
     {
@@ -1004,6 +1069,11 @@
      "definition": "damage_constraint_info_block"
     },
     {
+     "type": "explanation",
+     "name": "overshield",
+     "definition": ""
+    },
+    {
      "type": "tag_reference",
      "name": "overshield first person shader"
     },
@@ -1023,11 +1093,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "seat label"
+     "name": "seat label^"
     },
     {
      "type": "real_fraction",
-     "name": "direct damage scale"
+     "name": "direct damage scale#0==no damage, 1==full damage"
     },
     {
      "type": "real",
@@ -1084,15 +1154,15 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^"
     },
     {
      "type": "char_integer",
-     "name": "collision region index"
+     "name": "collision region index*"
     },
     {
      "type": "char_integer",
-     "name": "physics region index"
+     "name": "physics region index*"
     },
     {
      "type": "pad",
@@ -1101,7 +1171,7 @@
     },
     {
      "type": "block",
-     "name": "permutations",
+     "name": "permutations*",
      "definition": "model_permutation_block"
     },
     {
@@ -1116,16 +1186,16 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^"
     },
     {
      "type": "byte_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_5"
     },
     {
      "type": "char_integer",
-     "name": "collision permutation index"
+     "name": "collision permutation index*"
     },
     {
      "type": "pad",
@@ -1144,21 +1214,21 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name*^"
     },
     {
      "type": "short_block_index",
-     "name": "parent node",
+     "name": "parent node*",
      "definition": "model_node_block"
     },
     {
      "type": "short_block_index",
-     "name": "first child node",
+     "name": "first child node*",
      "definition": "model_node_block"
     },
     {
      "type": "short_block_index",
-     "name": "next sibling node",
+     "name": "next sibling node*",
      "definition": "model_node_block"
     },
     {
@@ -1168,31 +1238,31 @@
     },
     {
      "type": "real_point_3d",
-     "name": "default translation"
+     "name": "default translation*"
     },
     {
      "type": "real_quaternion",
-     "name": "default rotation"
+     "name": "default rotation*"
     },
     {
      "type": "real",
-     "name": "default inverse scale"
+     "name": "default inverse scale*"
     },
     {
      "type": "real_vector_3d",
-     "name": "default inverse forward"
+     "name": "default inverse forward*"
     },
     {
      "type": "real_vector_3d",
-     "name": "default inverse left"
+     "name": "default inverse left*"
     },
     {
      "type": "real_vector_3d",
-     "name": "default inverse up"
+     "name": "default inverse up*"
     },
     {
      "type": "real_point_3d",
-     "name": "default inverse position"
+     "name": "default inverse position*"
     },
     {
      "type": "terminator",
@@ -1206,7 +1276,7 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
@@ -1216,11 +1286,11 @@
     },
     {
      "type": "real_point_3d",
-     "name": "offset"
+     "name": "offset*"
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "terminator",
@@ -1232,6 +1302,11 @@
    "guid": "00000000000000000000000000000000",
    "size": 348,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "MODEL",
+     "definition": ""
+    },
     {
      "type": "custom",
      "name": "MODEL_DEFINITION_TAG"
@@ -1257,12 +1332,17 @@
      "name": "physics_model"
     },
     {
-     "type": "real",
-     "name": "disappear distance"
+     "type": "explanation",
+     "name": "level of detail",
+     "definition": "If a model is further away than the LOD reduction distance, it will be reduced to that LOD.\nSo the L1 reduction distance should be really long and the L5 reduction distance should be really short.\nThis means distances should be in descending order, e.g. 5 4 3 2 1.\n\nNote that if we run out of memory or too many models are on screen at once, the engine may reduce\nmodels to a lower LOD BEFORE they reach the reduction distance for that LOD.\n\nIf a model has a begin fade distance and disappear distance, it will begin fading out at that distance,\nreaching zero alpha and disappearing at the disappear distance. These distances should be greater than all\nof the LOD reduction distances.\n"
     },
     {
      "type": "real",
-     "name": "begin fade distance"
+     "name": "disappear distance:world units"
+    },
+    {
+     "type": "real",
+     "name": "begin fade distance:world units"
     },
     {
      "type": "pad",
@@ -1271,23 +1351,23 @@
     },
     {
      "type": "real",
-     "name": "reduce to L1"
+     "name": "reduce to L1:world units (super low)"
     },
     {
      "type": "real",
-     "name": "reduce to L2"
+     "name": "reduce to L2:world units (low)"
     },
     {
      "type": "real",
-     "name": "reduce to L3"
+     "name": "reduce to L3:world units (medium)"
     },
     {
      "type": "real",
-     "name": "reduce to L4"
+     "name": "reduce to L4:world units (high)"
     },
     {
      "type": "real",
-     "name": "reduce to L5"
+     "name": "reduce to L5:world units (super high)"
     },
     {
      "type": "skip",
@@ -1326,12 +1406,12 @@
     },
     {
      "type": "block",
-     "name": "runtime regions",
+     "name": "runtime regions!",
      "definition": "model_region_block"
     },
     {
      "type": "block",
-     "name": "runtime nodes",
+     "name": "runtime nodes!",
      "definition": "model_node_block"
     },
     {
@@ -1345,12 +1425,17 @@
      "definition": "model_object_data_block"
     },
     {
-     "type": "tag_reference",
-     "name": "default dialogue"
+     "type": "explanation",
+     "name": "more stuff",
+     "definition": ""
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED"
+     "name": "default dialogue#The default dialogue tag for this model (overriden by variants)"
+    },
+    {
+     "type": "tag_reference",
+     "name": "UNUSED*!"
     },
     {
      "type": "long_flags",
@@ -1359,27 +1444,32 @@
     },
     {
      "type": "string_id",
-     "name": "default dialogue effect"
+     "name": "default dialogue effect#The default dialogue tag for this model (overriden by variants)"
     },
     {
      "type": "array",
-     "name": "render-only node flags",
+     "name": "render-only node flags*!",
      "definition": "render-only node flags_array"
     },
     {
      "type": "array",
-     "name": "render-only section flags",
+     "name": "render-only section flags*!",
      "definition": "render-only section flags_array"
     },
     {
      "type": "long_flags",
-     "name": "runtime flags",
+     "name": "runtime flags*!",
      "definition": "runtime flags"
     },
     {
      "type": "block",
      "name": "scenario load parameters",
      "definition": "global_scenario_load_parameters_block"
+    },
+    {
+     "type": "explanation",
+     "name": "HOLOGRAM",
+     "definition": "hologram shader is applied whenever the control function from it's object is non-zero"
     },
     {
      "type": "tag_reference",
@@ -1401,28 +1491,28 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "marker name"
+     "name": "marker name^#multiple markers become multiple spheres of the same radius"
     },
     {
      "type": "real",
-     "name": "size"
+     "name": "size#sphere radius"
     },
     {
      "type": "angle",
-     "name": "cone angle"
+     "name": "cone angle#the target is only visible when viewed within this angle of the marker's x axis"
     },
     {
      "type": "custom_short_block_index",
-     "name": "damage section"
+     "name": "damage section#the target is associated with this damage section"
     },
     {
      "type": "short_block_index",
-     "name": "variant",
+     "name": "variant#the target will only appear with this variant",
      "definition": "model_variant_block"
     },
     {
      "type": "real_fraction",
-     "name": "targeting relevance"
+     "name": "targeting relevance#higher relevances turn into stronger magnetisms"
     },
     {
      "type": "struct",
@@ -1439,6 +1529,11 @@
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "lock-on fields",
+     "definition": ""
+    },
     {
      "type": "long_flags",
      "name": "flags",
@@ -1488,8 +1583,13 @@
    "size": 68,
    "fields": [
     {
+     "type": "explanation",
+     "name": "SCENARIO LOAD PARAMETERS",
+     "definition": "strip-variant <variant-name>\nstrips a given variant out of the model tag\nstrip-dialogue\nstrips all the dialogue for this model i.e. cinematic only"
+    },
+    {
      "type": "tag_reference",
-     "name": "scenario"
+     "name": "scenario^"
     },
     {
      "type": "data",

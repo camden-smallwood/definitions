@@ -63,16 +63,21 @@
     },
     {
      "type": "point_2d",
-     "name": "up-arrows offset"
+     "name": "up-arrows offset:from bot-left of 1st item"
     },
     {
      "type": "point_2d",
-     "name": "down-arrows offset"
+     "name": "down-arrows offset:from bot-left of 1st item"
     },
     {
      "type": "useless_pad",
      "name": null,
      "definition": 32
+    },
+    {
+     "type": "explanation",
+     "name": "Item Animations",
+     "definition": "Animations ordered as follows:\n0) list item focused\n1) list item unfocused\n2) list item ambient\n3) list item hovered\n4) list item unhovered\n5) list item clicked (hovered->focused)\n6) list item unfocused back to hovered state (focused->hovered)\n"
     },
     {
      "type": "block",
@@ -83,6 +88,11 @@
      "type": "block",
      "name": "text blocks",
      "definition": "text_block_reference_block"
+    },
+    {
+     "type": "explanation",
+     "name": "NOTE:",
+     "definition": "the bitmap block top-left is actually bottom-left here in list skin land!"
     },
     {
      "type": "block",
@@ -116,7 +126,7 @@
     },
     {
      "type": "long_integer",
-     "name": "animation period"
+     "name": "animation period:milliseconds"
     },
     {
      "type": "block",

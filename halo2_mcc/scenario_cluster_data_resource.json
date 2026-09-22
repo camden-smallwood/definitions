@@ -109,35 +109,35 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "bsp"
+     "name": "bsp*^"
     },
     {
      "type": "block",
-     "name": "background sounds",
+     "name": "background sounds*",
      "definition": "scenario_cluster_background_sounds_block"
     },
     {
      "type": "block",
-     "name": "sound environments",
+     "name": "sound environments*",
      "definition": "scenario_cluster_sound_environments_block"
     },
     {
      "type": "long_integer",
-     "name": "bsp checksum"
+     "name": "bsp checksum*"
     },
     {
      "type": "block",
-     "name": "cluster centroids",
+     "name": "cluster centroids*",
      "definition": "scenario_cluster_points_block"
     },
     {
      "type": "block",
-     "name": "weather properties",
+     "name": "weather properties*",
      "definition": "scenario_cluster_weather_properties_block"
     },
     {
      "type": "block",
-     "name": "atmospheric fog properties",
+     "name": "atmospheric fog properties*",
      "definition": "scenario_cluster_atmospheric_fog_properties_block"
     },
     {
@@ -152,7 +152,7 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "type",
+     "name": "type^",
      "definition": "structure_bsp_background_sound_palette_block"
     },
     {
@@ -172,7 +172,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "tag_reference",
@@ -180,7 +180,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "inside cluster sound"
+     "name": "inside cluster sound#play this only when the player is inside the cluster"
     },
     {
      "type": "pad",
@@ -210,7 +210,7 @@
     },
     {
      "type": "real",
-     "name": "interpolation speed"
+     "name": "interpolation speed:1/sec"
     },
     {
      "type": "pad",
@@ -229,7 +229,7 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "type",
+     "name": "type^",
      "definition": "structure_bsp_sound_environment_palette_block"
     },
     {
@@ -249,7 +249,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "tag_reference",
@@ -261,7 +261,7 @@
     },
     {
      "type": "real",
-     "name": "interpolation speed"
+     "name": "interpolation speed:1/sec"
     },
     {
      "type": "pad",
@@ -280,7 +280,7 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "centroid"
+     "name": "centroid*"
     },
     {
      "type": "terminator",
@@ -294,7 +294,7 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "type",
+     "name": "type^",
      "definition": "structure_bsp_weather_palette_block"
     },
     {
@@ -314,7 +314,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "tag_reference",
@@ -368,7 +368,7 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "type",
+     "name": "type^",
      "definition": "scenario_atmospheric_fog_palette"
     },
     {
@@ -388,7 +388,12 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
+    },
+    {
+     "type": "explanation",
+     "name": "ATMOSPHERIC FOG",
+     "definition": ""
     },
     {
      "type": "real_rgb_color",
@@ -396,7 +401,7 @@
     },
     {
      "type": "real",
-     "name": "spread distance"
+     "name": "spread distance:world units#how far fog spreads into adjacent clusters - 0 defaults to 1"
     },
     {
      "type": "pad",
@@ -405,15 +410,20 @@
     },
     {
      "type": "real_fraction",
-     "name": "maximum density"
+     "name": "maximum density:[0,1]#fog density is clamped to this value"
     },
     {
      "type": "real",
-     "name": "start distance"
+     "name": "start distance:world units#before this distance there is no fog"
     },
     {
      "type": "real",
-     "name": "opaque distance"
+     "name": "opaque distance:world units#the fog becomes opaque (maximum density) at this distance from the viewer"
+    },
+    {
+     "type": "explanation",
+     "name": "SECONDARY FOG",
+     "definition": ""
     },
     {
      "type": "real_rgb_color",
@@ -426,15 +436,15 @@
     },
     {
      "type": "real_fraction",
-     "name": "maximum density"
+     "name": "maximum density:[0,1]#fog density is clamped to this value"
     },
     {
      "type": "real",
-     "name": "start distance"
+     "name": "start distance:world units#before this distance there is no fog"
     },
     {
      "type": "real",
-     "name": "opaque distance"
+     "name": "opaque distance:world units#the fog becomes opaque (maximum density) at this distance from the viewer"
     },
     {
      "type": "pad",
@@ -442,25 +452,35 @@
      "definition": 4
     },
     {
+     "type": "explanation",
+     "name": "PLANAR FOG OVERRIDE",
+     "definition": "Planar fog, if present, is interpolated towards these values."
+    },
+    {
      "type": "real_rgb_color",
      "name": "planar color"
     },
     {
      "type": "real_fraction",
-     "name": "planar max density"
+     "name": "planar max density:[0,1]"
     },
     {
      "type": "real_fraction",
-     "name": "planar override amount"
+     "name": "planar override amount:[0,1]"
     },
     {
      "type": "real",
-     "name": "planar min distance bias"
+     "name": "planar min distance bias:world units#don't ask"
     },
     {
      "type": "pad",
      "name": "11*sizeof(long)",
      "definition": 44
+    },
+    {
+     "type": "explanation",
+     "name": "PATCHY FOG",
+     "definition": ""
     },
     {
      "type": "real_rgb_color",
@@ -473,11 +493,11 @@
     },
     {
      "type": "fraction_bounds",
-     "name": "patchy density"
+     "name": "patchy density:[0,1]"
     },
     {
      "type": "real_bounds",
-     "name": "patchy distance"
+     "name": "patchy distance:world units"
     },
     {
      "type": "pad",
@@ -494,20 +514,30 @@
      "definition": "scenario_atmospheric_fog_mixer_block"
     },
     {
-     "type": "real_fraction",
-     "name": "amount"
+     "type": "explanation",
+     "name": "BLOOM OVERRIDE",
+     "definition": ""
     },
     {
      "type": "real_fraction",
-     "name": "threshold"
+     "name": "amount:[0,1]"
     },
     {
      "type": "real_fraction",
-     "name": "brightness"
+     "name": "threshold:[0,1]"
+    },
+    {
+     "type": "real_fraction",
+     "name": "brightness:[0,1]"
     },
     {
      "type": "real",
      "name": "gamma power"
+    },
+    {
+     "type": "explanation",
+     "name": "CAMERA IMMERSION OVERRIDE",
+     "definition": ""
     },
     {
      "type": "word_flags",
@@ -536,11 +566,11 @@
     },
     {
      "type": "string_id",
-     "name": "atmospheric fog source"
+     "name": "atmospheric fog source:from scenario atmospheric fog palette"
     },
     {
      "type": "string_id",
-     "name": "interpolator"
+     "name": "interpolator:from scenario interpolators"
     },
     {
      "type": "skip",

@@ -43,12 +43,17 @@
    "size": 124,
    "fields": [
     {
-     "type": "angle",
-     "name": "falloff angle"
+     "type": "explanation",
+     "name": "LENS FLARE",
+     "definition": ""
     },
     {
      "type": "angle",
-     "name": "cutoff angle"
+     "name": "falloff angle:degrees"
+    },
+    {
+     "type": "angle",
+     "name": "cutoff angle:degrees"
     },
     {
      "type": "skip",
@@ -59,10 +64,15 @@
      "type": "skip",
      "name": "sizeof(real)",
      "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "OCCLUSION",
+     "definition": "Occlusion factor affects overall lens flare brightness and can also affect scale. Occlusion never affects rotation."
     },
     {
      "type": "real",
-     "name": "occlusion radius"
+     "name": "occlusion radius:world units#radius of the square used to test occlusion"
     },
     {
      "type": "short_enum",
@@ -76,11 +86,11 @@
     },
     {
      "type": "real",
-     "name": "near fade distance"
+     "name": "near fade distance:world units#distance at which the lens flare brightness is maximum"
     },
     {
      "type": "real",
-     "name": "far fade distance"
+     "name": "far fade distance:world units#distance at which the lens flare brightness is minimum; set to zero to disable distance fading"
     },
     {
      "type": "tag_reference",
@@ -113,7 +123,7 @@
     },
     {
      "type": "angle",
-     "name": "rotation function scale"
+     "name": "rotation function scale:degrees"
     },
     {
      "type": "useless_pad",
@@ -122,7 +132,12 @@
     },
     {
      "type": "real_vector_2d",
-     "name": "corona scale"
+     "name": "corona scale#amount to stretch the corona"
+    },
+    {
+     "type": "explanation",
+     "name": "EFFECT PARAMETERS",
+     "definition": "Only affects lens flares created by effects."
     },
     {
      "type": "short_enum",
@@ -143,6 +158,11 @@
      "type": "block",
      "name": "reflections",
      "definition": "lens_flare_reflection_block"
+    },
+    {
+     "type": "explanation",
+     "name": "ANIMATION",
+     "definition": ""
     },
     {
      "type": "word_flags",
@@ -210,11 +230,11 @@
     },
     {
      "type": "real",
-     "name": "position"
+     "name": "position:along flare axis#0 is on top of light, 1 is opposite light, 0.5 is the center of the screen, etc."
     },
     {
      "type": "real",
-     "name": "rotation offset"
+     "name": "rotation offset:degrees"
     },
     {
      "type": "useless_pad",
@@ -223,7 +243,7 @@
     },
     {
      "type": "real_bounds",
-     "name": "radius"
+     "name": "radius:world units#interpolated by external input"
     },
     {
      "type": "useless_pad",
@@ -232,7 +252,7 @@
     },
     {
      "type": "fraction_bounds",
-     "name": "brightness"
+     "name": "brightness:[0,1]#interpolated by external input"
     },
     {
      "type": "useless_pad",
@@ -240,8 +260,13 @@
      "definition": 4
     },
     {
+     "type": "explanation",
+     "name": "TINT COLOR",
+     "definition": "Tinting and modulating are not the same; 'tinting' a reflection will color the darker regions but leave the highlights, while 'modulating' will color everything uniformly. The modulation factor controls how much the reflection is modulated as opposed to tinted (0 is tinted, 1 is modulated)."
+    },
+    {
      "type": "real_fraction",
-     "name": "modulation factor"
+     "name": "modulation factor:[0,1]"
     },
     {
      "type": "real_rgb_color",

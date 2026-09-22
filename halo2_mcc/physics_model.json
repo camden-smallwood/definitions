@@ -233,102 +233,107 @@
     },
     {
      "type": "block",
-     "name": "rigid bodies",
+     "name": "rigid bodies*",
      "definition": "rigid_bodies_block"
     },
     {
      "type": "block",
-     "name": "materials",
+     "name": "materials*",
      "definition": "materials_block"
     },
     {
      "type": "block",
-     "name": "spheres",
+     "name": "spheres*",
      "definition": "spheres_block"
     },
     {
      "type": "block",
-     "name": "pills",
+     "name": "pills*",
      "definition": "pills_block"
     },
     {
      "type": "block",
-     "name": "boxes",
+     "name": "boxes*",
      "definition": "boxes_block"
     },
     {
      "type": "block",
-     "name": "triangles",
+     "name": "triangles*",
      "definition": "triangles_block"
     },
     {
      "type": "block",
-     "name": "polyhedra",
+     "name": "polyhedra*",
      "definition": "polyhedra_block"
     },
     {
+     "type": "explanation",
+     "name": "ALL THESE WORLDS ARE YOURS, EXCEPT EUROPA...",
+     "definition": "Attempt no landings there.  And you can't edit anything below this point, so why even look at it?"
+    },
+    {
      "type": "block",
-     "name": "polyhedron four vectors",
+     "name": "polyhedron four vectors*",
      "definition": "polyhedron_four_vectors_block"
     },
     {
      "type": "block",
-     "name": "polyhedron plane equations",
+     "name": "polyhedron plane equations*",
      "definition": "polyhedron_plane_equations_block"
     },
     {
      "type": "block",
-     "name": "mass distributions",
+     "name": "mass distributions*",
      "definition": "mass_distributions_block"
     },
     {
      "type": "block",
-     "name": "lists",
+     "name": "lists*",
      "definition": "lists_block"
     },
     {
      "type": "block",
-     "name": "list shapes",
+     "name": "list shapes*",
      "definition": "list_shapes_block"
     },
     {
      "type": "block",
-     "name": "mopps",
+     "name": "mopps*",
      "definition": "mopps_block"
     },
     {
      "type": "data",
-     "name": "mopp codes",
+     "name": "mopp codes*",
      "definition": "mopp_codes_data"
     },
     {
      "type": "block",
-     "name": "hinge constraints",
+     "name": "hinge constraints*",
      "definition": "hinge_constraints_block"
     },
     {
      "type": "block",
-     "name": "ragdoll constraints",
+     "name": "ragdoll constraints*",
      "definition": "ragdoll_constraints_block"
     },
     {
      "type": "block",
-     "name": "regions",
+     "name": "regions*",
      "definition": "regions_block"
     },
     {
      "type": "block",
-     "name": "nodes",
+     "name": "nodes*",
      "definition": "nodes_block"
     },
     {
      "type": "block",
-     "name": "import info",
+     "name": "import info*",
      "definition": "global_tag_import_info_block"
     },
     {
      "type": "block",
-     "name": "errors",
+     "name": "errors*",
      "definition": "global_error_report_categories_block"
     },
     {
@@ -343,17 +348,17 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "node",
+     "name": "node*",
      "definition": "nodes_block"
     },
     {
      "type": "short_block_index",
-     "name": "region",
+     "name": "region*",
      "definition": "regions_block"
     },
     {
      "type": "custom_short_block_index",
-     "name": "permutation"
+     "name": "permutation*"
     },
     {
      "type": "pad",
@@ -377,11 +382,11 @@
     },
     {
      "type": "real",
-     "name": "linear damping"
+     "name": "linear damping#this goes from 0-10 (10 is really, really high)"
     },
     {
      "type": "real",
-     "name": "angular damping"
+     "name": "angular damping#this goes from 0-10 (10 is really, really high)"
     },
     {
      "type": "pointer",
@@ -389,11 +394,11 @@
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass:kg*"
     },
     {
      "type": "real_vector_3d",
-     "name": "center of mass"
+     "name": "center of mass*"
     },
     {
      "type": "skip",
@@ -402,7 +407,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "intertia tensor x"
+     "name": "intertia tensor x*"
     },
     {
      "type": "skip",
@@ -411,7 +416,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "intertia tensor y"
+     "name": "intertia tensor y*"
     },
     {
      "type": "skip",
@@ -420,7 +425,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "intertia tensor z"
+     "name": "intertia tensor z*"
     },
     {
      "type": "skip",
@@ -448,7 +453,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "word_flags",
@@ -457,17 +462,17 @@
     },
     {
      "type": "short_block_index",
-     "name": "parent",
+     "name": "parent*",
      "definition": "nodes_block"
     },
     {
      "type": "short_block_index",
-     "name": "sibling",
+     "name": "sibling*",
      "definition": "nodes_block"
     },
     {
      "type": "short_block_index",
-     "name": "child",
+     "name": "child*",
      "definition": "nodes_block"
     },
     {
@@ -482,7 +487,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "block",
@@ -501,7 +506,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "block",
@@ -520,7 +525,7 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "rigid body",
+     "name": "rigid body^*",
      "definition": "rigid_bodies_block"
     },
     {
@@ -535,17 +540,17 @@
    "fields": [
     {
      "type": "short_block_index",
-     "name": "node",
+     "name": "node*",
      "definition": "nodes_block"
     },
     {
      "type": "short_block_index",
-     "name": "region",
+     "name": "region*",
      "definition": "regions_block"
     },
     {
      "type": "custom_short_block_index",
-     "name": "permutattion"
+     "name": "permutattion*"
     },
     {
      "type": "pad",
@@ -554,11 +559,11 @@
     },
     {
      "type": "real_point_3d",
-     "name": "bouding sphere offset"
+     "name": "bouding sphere offset*"
     },
     {
      "type": "real",
-     "name": "bounding sphere radius"
+     "name": "bounding sphere radius*"
     },
     {
      "type": "word_flags",
@@ -582,15 +587,15 @@
     },
     {
      "type": "real",
-     "name": "inertia tensor scale"
+     "name": "inertia tensor scale#0.0 defaults to 1.0"
     },
     {
      "type": "real",
-     "name": "linear damping"
+     "name": "linear damping#this goes from 0-10 (10 is really, really high)"
     },
     {
      "type": "real",
-     "name": "angular damping"
+     "name": "angular damping#this goes from 0-10 (10 is really, really high)"
     },
     {
      "type": "real_vector_3d",
@@ -602,7 +607,7 @@
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass:kg*"
     },
     {
      "type": "pad",
@@ -611,7 +616,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "center of mass"
+     "name": "center of mass*"
     },
     {
      "type": "skip",
@@ -620,7 +625,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "intertia tensor x"
+     "name": "intertia tensor x*"
     },
     {
      "type": "skip",
@@ -629,7 +634,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "intertia tensor y"
+     "name": "intertia tensor y*"
     },
     {
      "type": "skip",
@@ -638,7 +643,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "intertia tensor z"
+     "name": "intertia tensor z*"
     },
     {
      "type": "skip",
@@ -647,7 +652,7 @@
     },
     {
      "type": "real",
-     "name": "bounding sphere pad"
+     "name": "bounding sphere pad#the bounding sphere for this rigid body will be outset by this much"
     },
     {
      "type": "pad",
@@ -666,7 +671,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "string_id",
@@ -709,11 +714,11 @@
     },
     {
      "type": "string_id",
-     "name": "marker name"
+     "name": "marker name#you don't need this if you're just generating effects.  If empty it defaults to the up of the object"
     },
     {
      "type": "string_id",
-     "name": "alignment marker name"
+     "name": "alignment marker name#you don't need this if you're just generating effects.  If empty it defaults to \"marker name\""
     },
     {
      "type": "pad",
@@ -722,7 +727,12 @@
     },
     {
      "type": "real",
-     "name": "linear dead radius"
+     "name": "linear dead radius#radius from linear motion origin in which acceleration is dead."
+    },
+    {
+     "type": "explanation",
+     "name": "Linear Motion",
+     "definition": "0 - means do nothing\nCENTER: motion towards marker position \nAXIS: motion towards marker axis, such that object is on the axis\nDIRECTION: motion along marker direction"
     },
     {
      "type": "real",
@@ -752,6 +762,16 @@
      "type": "pad",
      "name": "8*sizeof(real)",
      "definition": 32
+    },
+    {
+     "type": "explanation",
+     "name": "Angular Motion",
+     "definition": "0 - means do nothing\nALIGNMENT: algin objects in the phantom with the marker\nSPIN: spin the object about the marker axis"
+    },
+    {
+     "type": "explanation",
+     "name": "ANGULAR ACC NOT YET IMPLEMENTED",
+     "definition": ""
     },
     {
      "type": "real",
@@ -801,11 +821,16 @@
     },
     {
      "type": "string_id",
-     "name": "marker name"
+     "name": "marker name#you don't need this if you're just generating effects.  If empty it defaults to the up of the object"
     },
     {
      "type": "string_id",
-     "name": "alignment marker name"
+     "name": "alignment marker name#you don't need this if you're just generating effects.  If empty it defaults to \"marker name\""
+    },
+    {
+     "type": "explanation",
+     "name": "Linear Motion",
+     "definition": "0 - means do nothing\nCENTER: motion towards marker position \nAXIS: motion towards marker axis, such that object is on the axis\nDIRECTION: motion along marker direction"
     },
     {
      "type": "pad",
@@ -814,11 +839,11 @@
     },
     {
      "type": "real",
-     "name": "hookes law e"
+     "name": "hookes law e#0 if you don't want this to behave like spring.  1 is a good starting point if you do."
     },
     {
      "type": "real",
-     "name": "linear dead radius"
+     "name": "linear dead radius#radius from linear motion origin in which acceleration is dead."
     },
     {
      "type": "real",
@@ -850,8 +875,13 @@
      "definition": 28
     },
     {
+     "type": "explanation",
+     "name": "Angular Motion",
+     "definition": "0 - means do nothing\nALIGNMENT: algin objects in the phantom with the marker\nSPIN: spin the object about the marker axis"
+    },
+    {
      "type": "real",
-     "name": "alignment hookes law e"
+     "name": "alignment hookes law e#0 if you don't want this to behave like spring.  1 is a good starting point if you do."
     },
     {
      "type": "real",
@@ -878,11 +908,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "materials_block"
     },
     {
@@ -904,11 +934,11 @@
     },
     {
      "type": "real",
-     "name": "volume"
+     "name": "volume *"
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "skip",
@@ -917,7 +947,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "phantom",
+     "name": "phantom*",
      "definition": "phantoms_block"
     },
     {
@@ -926,11 +956,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -949,7 +979,7 @@
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "pad",
@@ -962,11 +992,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -989,7 +1019,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation i"
+     "name": "rotation i*"
     },
     {
      "type": "skip",
@@ -998,7 +1028,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation j"
+     "name": "rotation j*"
     },
     {
      "type": "skip",
@@ -1007,7 +1037,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation k"
+     "name": "rotation k*"
     },
     {
      "type": "skip",
@@ -1016,7 +1046,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "translation"
+     "name": "translation*"
     },
     {
      "type": "skip",
@@ -1039,11 +1069,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1074,11 +1104,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1107,11 +1137,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "materials_block"
     },
     {
@@ -1133,11 +1163,11 @@
     },
     {
      "type": "real",
-     "name": "volume"
+     "name": "volume *"
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "skip",
@@ -1146,7 +1176,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "phantom",
+     "name": "phantom*",
      "definition": "phantoms_block"
     },
     {
@@ -1155,11 +1185,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1178,7 +1208,7 @@
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "pad",
@@ -1187,7 +1217,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "bottom"
+     "name": "bottom*"
     },
     {
      "type": "skip",
@@ -1196,7 +1226,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "top"
+     "name": "top*"
     },
     {
      "type": "skip",
@@ -1215,11 +1245,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "materials_block"
     },
     {
@@ -1241,11 +1271,11 @@
     },
     {
      "type": "real",
-     "name": "volume"
+     "name": "volume *"
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "skip",
@@ -1254,7 +1284,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "phantom",
+     "name": "phantom*",
      "definition": "phantoms_block"
     },
     {
@@ -1263,11 +1293,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1286,7 +1316,7 @@
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "pad",
@@ -1295,7 +1325,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "half extents"
+     "name": "half extents*"
     },
     {
      "type": "skip",
@@ -1308,11 +1338,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1335,7 +1365,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation i"
+     "name": "rotation i*"
     },
     {
      "type": "skip",
@@ -1344,7 +1374,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation j"
+     "name": "rotation j*"
     },
     {
      "type": "skip",
@@ -1353,7 +1383,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "rotation k"
+     "name": "rotation k*"
     },
     {
      "type": "skip",
@@ -1362,7 +1392,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "translation"
+     "name": "translation*"
     },
     {
      "type": "skip",
@@ -1381,11 +1411,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "materials_block"
     },
     {
@@ -1407,11 +1437,11 @@
     },
     {
      "type": "real",
-     "name": "volume"
+     "name": "volume *"
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "skip",
@@ -1420,7 +1450,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "phantom",
+     "name": "phantom*",
      "definition": "phantoms_block"
     },
     {
@@ -1429,11 +1459,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1452,7 +1482,7 @@
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "pad",
@@ -1461,7 +1491,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "point a"
+     "name": "point a*"
     },
     {
      "type": "skip",
@@ -1470,7 +1500,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "point b"
+     "name": "point b*"
     },
     {
      "type": "skip",
@@ -1479,7 +1509,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "point c"
+     "name": "point c*"
     },
     {
      "type": "skip",
@@ -1498,11 +1528,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "materials_block"
     },
     {
@@ -1524,11 +1554,11 @@
     },
     {
      "type": "real",
-     "name": "volume"
+     "name": "volume *"
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "skip",
@@ -1537,7 +1567,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "phantom",
+     "name": "phantom*",
      "definition": "phantoms_block"
     },
     {
@@ -1546,11 +1576,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1569,7 +1599,7 @@
     },
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius*"
     },
     {
      "type": "pad",
@@ -1578,7 +1608,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "aabb half extents"
+     "name": "aabb half extents*"
     },
     {
      "type": "skip",
@@ -1587,7 +1617,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "aabb center"
+     "name": "aabb center*"
     },
     {
      "type": "skip",
@@ -1600,11 +1630,11 @@
     },
     {
      "type": "long_integer",
-     "name": "four vectors size"
+     "name": "four vectors size*"
     },
     {
      "type": "long_integer",
-     "name": "four vectors capacity"
+     "name": "four vectors capacity*"
     },
     {
      "type": "pad",
@@ -1613,12 +1643,12 @@
     },
     {
      "type": "array",
-     "name": "four vectors storage",
+     "name": "four vectors storage*",
      "definition": "four vectors storage_array"
     },
     {
      "type": "long_integer",
-     "name": "num vertices"
+     "name": "num vertices*"
     },
     {
      "type": "pad",
@@ -1631,11 +1661,11 @@
     },
     {
      "type": "long_integer",
-     "name": "plane equations size"
+     "name": "plane equations size*"
     },
     {
      "type": "long_integer",
-     "name": "plane equations capacity"
+     "name": "plane equations capacity*"
     },
     {
      "type": "pad",
@@ -1654,7 +1684,7 @@
    "fields": [
     {
      "type": "real_vector_3d",
-     "name": "four vectors x"
+     "name": "four vectors x*"
     },
     {
      "type": "skip",
@@ -1663,7 +1693,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "four vectors y"
+     "name": "four vectors y*"
     },
     {
      "type": "skip",
@@ -1672,7 +1702,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "four vectors z"
+     "name": "four vectors z*"
     },
     {
      "type": "skip",
@@ -1691,7 +1721,7 @@
    "fields": [
     {
      "type": "real_vector_3d",
-     "name": "four vectors x"
+     "name": "four vectors x*"
     },
     {
      "type": "skip",
@@ -1700,7 +1730,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "four vectors y"
+     "name": "four vectors y*"
     },
     {
      "type": "skip",
@@ -1709,7 +1739,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "four vectors z"
+     "name": "four vectors z*"
     },
     {
      "type": "skip",
@@ -1743,7 +1773,7 @@
    "fields": [
     {
      "type": "real_vector_3d",
-     "name": "center of mass"
+     "name": "center of mass*"
     },
     {
      "type": "skip",
@@ -1752,7 +1782,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "inertia tensor i"
+     "name": "inertia tensor i*"
     },
     {
      "type": "skip",
@@ -1761,7 +1791,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "inertia tensor j"
+     "name": "inertia tensor j*"
     },
     {
      "type": "skip",
@@ -1770,7 +1800,7 @@
     },
     {
      "type": "real_vector_3d",
-     "name": "inertia tensor k"
+     "name": "inertia tensor k*"
     },
     {
      "type": "skip",
@@ -1793,11 +1823,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1820,15 +1850,15 @@
     },
     {
      "type": "long_integer",
-     "name": "child shapes size"
+     "name": "child shapes size*"
     },
     {
      "type": "long_integer",
-     "name": "child shapes capacity"
+     "name": "child shapes capacity*"
     },
     {
      "type": "array",
-     "name": "child shapes storage",
+     "name": "child shapes storage*",
      "definition": "child shapes storage_array"
     },
     {
@@ -1895,11 +1925,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -1936,7 +1966,7 @@
    "fields": [
     {
      "type": "struct",
-     "name": "constraint bodies",
+     "name": "constraint bodies*",
      "definition": "constraint_bodies_struct_2"
     },
     {
@@ -1956,61 +1986,61 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "node a",
+     "name": "node a*",
      "definition": "nodes_block"
     },
     {
      "type": "short_block_index",
-     "name": "node b",
+     "name": "node b*",
      "definition": "nodes_block"
     },
     {
      "type": "real",
-     "name": "a scale"
+     "name": "a scale*"
     },
     {
      "type": "real_vector_3d",
-     "name": "a forward"
+     "name": "a forward*"
     },
     {
      "type": "real_vector_3d",
-     "name": "a left"
+     "name": "a left*"
     },
     {
      "type": "real_vector_3d",
-     "name": "a up"
+     "name": "a up*"
     },
     {
      "type": "real_point_3d",
-     "name": "a position"
+     "name": "a position*"
     },
     {
      "type": "real",
-     "name": "b scale"
+     "name": "b scale*"
     },
     {
      "type": "real_vector_3d",
-     "name": "b forward"
+     "name": "b forward*"
     },
     {
      "type": "real_vector_3d",
-     "name": "b left"
+     "name": "b left*"
     },
     {
      "type": "real_vector_3d",
-     "name": "b up"
+     "name": "b up*"
     },
     {
      "type": "real_point_3d",
-     "name": "b position"
+     "name": "b position*"
     },
     {
      "type": "short_block_index",
-     "name": "edge index",
+     "name": "edge index*",
      "definition": "physics_model_node_constraint_edge_block"
     },
     {
@@ -2036,26 +2066,26 @@
     },
     {
      "type": "short_block_index",
-     "name": "node a",
+     "name": "node a*",
      "definition": "nodes_block"
     },
     {
      "type": "short_block_index",
-     "name": "node b",
+     "name": "node b*",
      "definition": "nodes_block"
     },
     {
      "type": "block",
-     "name": "constraints",
+     "name": "constraints*",
      "definition": "physics_model_constraint_edge_constraint_block"
     },
     {
      "type": "string_id",
-     "name": "node a material"
+     "name": "node a material#if you don't fill this out we will pluck the material from the first primitive, of the first rigid body attached to node a"
     },
     {
      "type": "string_id",
-     "name": "node b material"
+     "name": "node b material#if you don't fill this out we will pluck the material from the first primitive, of the first rigid body attached to node b, if node b is none we use whatever material a has"
     },
     {
      "type": "terminator",
@@ -2069,12 +2099,12 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
      "type": "custom_short_block_index",
-     "name": "index"
+     "name": "index*"
     },
     {
      "type": "long_flags",
@@ -2083,7 +2113,7 @@
     },
     {
      "type": "real",
-     "name": "friction"
+     "name": "friction#0 is the default (takes what it was set in max) anything else overrides that value"
     },
     {
      "type": "terminator",
@@ -2097,41 +2127,41 @@
    "fields": [
     {
      "type": "struct",
-     "name": "constraint bodies",
+     "name": "constraint bodies*",
      "definition": "constraint_bodies_struct_2"
     },
     {
      "type": "pad",
-     "name": "sizeof(s_physics_model_ragdoll_constraint",
+     "name": "sizeof(s_physics_model_ragdoll_constraint::c_physics_model_ragdoll_constraint_flags)",
      "definition": 4
     },
     {
      "type": "real",
-     "name": "min twist"
+     "name": "min twist*"
     },
     {
      "type": "real",
-     "name": "max twist"
+     "name": "max twist*"
     },
     {
      "type": "real",
-     "name": "min cone"
+     "name": "min cone*"
     },
     {
      "type": "real",
-     "name": "max cone"
+     "name": "max cone*"
     },
     {
      "type": "real",
-     "name": "min plane"
+     "name": "min plane*"
     },
     {
      "type": "real",
-     "name": "max plane"
+     "name": "max plane*"
     },
     {
      "type": "real",
-     "name": "max friciton torque"
+     "name": "max friciton torque*"
     },
     {
      "type": "terminator",
@@ -2145,19 +2175,19 @@
    "fields": [
     {
      "type": "long_integer",
-     "name": "build"
+     "name": "build*"
     },
     {
      "type": "long_string",
-     "name": "version"
+     "name": "version*"
     },
     {
      "type": "string",
-     "name": "import date"
+     "name": "import date*^"
     },
     {
      "type": "string",
-     "name": "culprit"
+     "name": "culprit*"
     },
     {
      "type": "pad",
@@ -2166,7 +2196,7 @@
     },
     {
      "type": "string",
-     "name": "import time"
+     "name": "import time*"
     },
     {
      "type": "pad",
@@ -2175,7 +2205,7 @@
     },
     {
      "type": "block",
-     "name": "files",
+     "name": "files*",
      "definition": "tag_import_file_block"
     },
     {
@@ -2195,11 +2225,11 @@
    "fields": [
     {
      "type": "long_string",
-     "name": "path"
+     "name": "path*^"
     },
     {
      "type": "string",
-     "name": "modification date"
+     "name": "modification date*"
     },
     {
      "type": "skip",
@@ -2213,15 +2243,15 @@
     },
     {
      "type": "long_integer",
-     "name": "checksum"
+     "name": "checksum*:crc32"
     },
     {
      "type": "long_integer",
-     "name": "size"
+     "name": "size*:bytes"
     },
     {
      "type": "data",
-     "name": "zipped data",
+     "name": "zipped data*",
      "definition": "tag_import_file_zipped_data_definition"
     },
     {
@@ -2241,16 +2271,16 @@
    "fields": [
     {
      "type": "long_string",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_enum",
-     "name": "report type",
+     "name": "report type*",
      "definition": "report type"
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_9"
     },
     {
@@ -2270,7 +2300,7 @@
     },
     {
      "type": "block",
-     "name": "reports",
+     "name": "reports*",
      "definition": "error_reports_block"
     },
     {
@@ -2285,55 +2315,55 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "report type"
     },
     {
      "type": "word_flags",
-     "name": "flags",
+     "name": "flags*",
      "definition": "flags_9"
     },
     {
      "type": "data",
-     "name": "text",
+     "name": "text*",
      "definition": "error_report_string_data"
     },
     {
      "type": "string",
-     "name": "source filename"
+     "name": "source filename*"
     },
     {
      "type": "long_integer",
-     "name": "source line number"
+     "name": "source line number*"
     },
     {
      "type": "block",
-     "name": "vertices",
+     "name": "vertices*",
      "definition": "error_report_vertices_block"
     },
     {
      "type": "block",
-     "name": "vectors",
+     "name": "vectors*",
      "definition": "error_report_vectors_block"
     },
     {
      "type": "block",
-     "name": "lines",
+     "name": "lines*",
      "definition": "error_report_lines_block"
     },
     {
      "type": "block",
-     "name": "triangles",
+     "name": "triangles*",
      "definition": "error_report_triangles_block"
     },
     {
      "type": "block",
-     "name": "quads",
+     "name": "quads*",
      "definition": "error_report_quads_block"
     },
     {
      "type": "block",
-     "name": "comments",
+     "name": "comments*",
      "definition": "error_report_comments_block"
     },
     {
@@ -2343,27 +2373,27 @@
     },
     {
      "type": "long_integer",
-     "name": "report key"
+     "name": "report key*"
     },
     {
      "type": "long_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "real_bounds",
-     "name": "bounds x"
+     "name": "bounds x*"
     },
     {
      "type": "real_bounds",
-     "name": "bounds y"
+     "name": "bounds y*"
     },
     {
      "type": "real_bounds",
-     "name": "bounds z"
+     "name": "bounds z*"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "pad",
@@ -2382,25 +2412,25 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "real",
-     "name": "screen size"
+     "name": "screen size*"
     },
     {
      "type": "terminator",
@@ -2414,7 +2444,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2428,7 +2458,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2442,29 +2472,29 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_2"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_2"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "real_vector_3d",
-     "name": "normal"
+     "name": "normal*"
     },
     {
      "type": "real",
-     "name": "screen length"
+     "name": "screen length*"
     },
     {
      "type": "terminator",
@@ -2478,7 +2508,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2492,7 +2522,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2506,12 +2536,12 @@
    "fields": [
     {
      "type": "array",
-     "name": "points",
+     "name": "points*",
      "definition": "points_array"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -2525,7 +2555,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2539,7 +2569,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2553,16 +2583,16 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_3"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_3"
     },
     {
@@ -2577,12 +2607,12 @@
    "fields": [
     {
      "type": "array",
-     "name": "points",
+     "name": "points*",
      "definition": "points_array_2"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -2596,7 +2626,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2610,7 +2640,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2624,16 +2654,16 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_4"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_4"
     },
     {
@@ -2648,12 +2678,12 @@
    "fields": [
     {
      "type": "array",
-     "name": "points",
+     "name": "points*",
      "definition": "points_array_3"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -2667,7 +2697,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2681,7 +2711,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2695,16 +2725,16 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_5"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_5"
     },
     {
@@ -2719,26 +2749,26 @@
    "fields": [
     {
      "type": "data",
-     "name": "text",
+     "name": "text*",
      "definition": "error_report_string_data"
     },
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "array",
-     "name": "node indices",
+     "name": "node indices*",
      "definition": "node indices_array_6"
     },
     {
      "type": "array",
-     "name": "node weights",
+     "name": "node weights*",
      "definition": "node weights_array_6"
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -2752,7 +2782,7 @@
    "fields": [
     {
      "type": "char_integer",
-     "name": "node index"
+     "name": "node index*"
     },
     {
      "type": "terminator",
@@ -2766,7 +2796,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "node weight"
+     "name": "node weight*"
     },
     {
      "type": "terminator",
@@ -2789,11 +2819,11 @@
     },
     {
      "type": "real",
-     "name": "low freq. deactivation scale"
+     "name": "low freq. deactivation scale#0 is default (1). LESS than 1 deactivates less aggressively. GREATER than 1 is more agressive."
     },
     {
      "type": "real",
-     "name": "high freq. deactivation scale"
+     "name": "high freq. deactivation scale#0 is default (1). LESS than 1 deactivates less aggressively. GREATER than 1 is more agressive."
     },
     {
      "type": "pad",
@@ -2807,142 +2837,147 @@
     },
     {
      "type": "block",
-     "name": "node edges",
+     "name": "node edges*",
      "definition": "physics_model_node_constraint_edge_block"
     },
     {
      "type": "block",
-     "name": "rigid bodies",
+     "name": "rigid bodies*",
      "definition": "rigid_bodies_block"
     },
     {
      "type": "block",
-     "name": "materials",
+     "name": "materials*",
      "definition": "materials_block"
     },
     {
      "type": "block",
-     "name": "spheres",
+     "name": "spheres*",
      "definition": "spheres_block"
     },
     {
      "type": "block",
-     "name": "multi spheres",
+     "name": "multi spheres*",
      "definition": "multi_spheres_block"
     },
     {
      "type": "block",
-     "name": "pills",
+     "name": "pills*",
      "definition": "pills_block"
     },
     {
      "type": "block",
-     "name": "boxes",
+     "name": "boxes*",
      "definition": "boxes_block"
     },
     {
      "type": "block",
-     "name": "triangles",
+     "name": "triangles*",
      "definition": "triangles_block"
     },
     {
      "type": "block",
-     "name": "polyhedra",
+     "name": "polyhedra*",
      "definition": "polyhedra_block"
     },
     {
+     "type": "explanation",
+     "name": "ALL THESE WORLDS ARE YOURS, EXCEPT EUROPA...",
+     "definition": "Attempt no landings there.  And you can't edit anything below this point, so why even look at it?"
+    },
+    {
      "type": "block",
-     "name": "polyhedron four vectors",
+     "name": "polyhedron four vectors*",
      "definition": "polyhedron_four_vectors_block"
     },
     {
      "type": "block",
-     "name": "polyhedron plane equations",
+     "name": "polyhedron plane equations*",
      "definition": "polyhedron_plane_equations_block"
     },
     {
      "type": "block",
-     "name": "mass distributions",
+     "name": "mass distributions*",
      "definition": "mass_distributions_block"
     },
     {
      "type": "block",
-     "name": "lists",
+     "name": "lists*",
      "definition": "lists_block"
     },
     {
      "type": "block",
-     "name": "list shapes",
+     "name": "list shapes*",
      "definition": "list_shapes_block"
     },
     {
      "type": "block",
-     "name": "mopps",
+     "name": "mopps*",
      "definition": "mopps_block"
     },
     {
      "type": "data",
-     "name": "mopp codes",
+     "name": "mopp codes*",
      "definition": "mopp_codes_data"
     },
     {
      "type": "block",
-     "name": "hinge constraints",
+     "name": "hinge constraints*",
      "definition": "hinge_constraints_block"
     },
     {
      "type": "block",
-     "name": "ragdoll constraints",
+     "name": "ragdoll constraints*",
      "definition": "ragdoll_constraints_block"
     },
     {
      "type": "block",
-     "name": "regions",
+     "name": "regions*",
      "definition": "regions_block"
     },
     {
      "type": "block",
-     "name": "nodes",
+     "name": "nodes*",
      "definition": "nodes_block"
     },
     {
      "type": "block",
-     "name": "import info",
+     "name": "import info*",
      "definition": "global_tag_import_info_block"
     },
     {
      "type": "block",
-     "name": "errors",
+     "name": "errors*",
      "definition": "global_error_report_categories_block"
     },
     {
      "type": "block",
-     "name": "point to path curves",
+     "name": "point to path curves*",
      "definition": "point_to_path_curve_block"
     },
     {
      "type": "block",
-     "name": "limited hinge constraints",
+     "name": "limited hinge constraints*",
      "definition": "limited_hinge_constraints_block"
     },
     {
      "type": "block",
-     "name": "ball and socket constraints",
+     "name": "ball and socket constraints*",
      "definition": "ball_and_socket_constraints_block"
     },
     {
      "type": "block",
-     "name": "stiff spring constraints",
+     "name": "stiff spring constraints*",
      "definition": "stiff_spring_constraints_block"
     },
     {
      "type": "block",
-     "name": "prismatic constraints",
+     "name": "prismatic constraints*",
      "definition": "prismatic_constraints_block"
     },
     {
      "type": "block",
-     "name": "phantoms",
+     "name": "phantoms*",
      "definition": "phantoms_block"
     },
     {
@@ -2957,11 +2992,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "material",
+     "name": "material*",
      "definition": "materials_block"
     },
     {
@@ -2983,11 +3018,11 @@
     },
     {
      "type": "real",
-     "name": "volume"
+     "name": "volume *"
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "skip",
@@ -2996,7 +3031,7 @@
     },
     {
      "type": "short_block_index",
-     "name": "phantom",
+     "name": "phantom*",
      "definition": "phantoms_block"
     },
     {
@@ -3005,11 +3040,11 @@
     },
     {
      "type": "short_integer",
-     "name": "size"
+     "name": "size*"
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count*"
     },
     {
      "type": "pad",
@@ -3028,7 +3063,7 @@
     },
     {
      "type": "long_integer",
-     "name": "num spheres"
+     "name": "num spheres*"
     },
     {
      "type": "pad",
@@ -3037,7 +3072,7 @@
     },
     {
      "type": "array",
-     "name": "four vectors storage",
+     "name": "four vectors storage*",
      "definition": "four vectors storage_array_2"
     },
     {
@@ -3052,7 +3087,7 @@
    "fields": [
     {
      "type": "real_vector_3d",
-     "name": "sphere"
+     "name": "sphere*"
     },
     {
      "type": "skip",
@@ -3071,11 +3106,11 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^*"
     },
     {
      "type": "short_block_index",
-     "name": "node index",
+     "name": "node index*",
      "definition": "nodes_block"
     },
     {
@@ -3085,7 +3120,7 @@
     },
     {
      "type": "block",
-     "name": "points",
+     "name": "points*",
      "definition": "point_to_path_curve_point_block"
     },
     {
@@ -3100,11 +3135,11 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "real",
-     "name": "t value"
+     "name": "t value*"
     },
     {
      "type": "terminator",
@@ -3118,7 +3153,7 @@
    "fields": [
     {
      "type": "struct",
-     "name": "constraint bodies",
+     "name": "constraint bodies*",
      "definition": "constraint_bodies_struct_2"
     },
     {
@@ -3128,15 +3163,15 @@
     },
     {
      "type": "real",
-     "name": "limit friction"
+     "name": "limit friction*"
     },
     {
      "type": "real",
-     "name": "limit min angle"
+     "name": "limit min angle*"
     },
     {
      "type": "real",
-     "name": "limit max angle"
+     "name": "limit max angle*"
     },
     {
      "type": "terminator",
@@ -3150,7 +3185,7 @@
    "fields": [
     {
      "type": "struct",
-     "name": "constraint bodies",
+     "name": "constraint bodies*",
      "definition": "constraint_bodies_struct_2"
     },
     {
@@ -3170,7 +3205,7 @@
    "fields": [
     {
      "type": "struct",
-     "name": "constraint bodies",
+     "name": "constraint bodies*",
      "definition": "constraint_bodies_struct_2"
     },
     {
@@ -3180,7 +3215,7 @@
     },
     {
      "type": "real",
-     "name": "spring_length"
+     "name": "spring_length*"
     },
     {
      "type": "terminator",
@@ -3194,7 +3229,7 @@
    "fields": [
     {
      "type": "struct",
-     "name": "constraint bodies",
+     "name": "constraint bodies*",
      "definition": "constraint_bodies_struct_2"
     },
     {
@@ -3204,15 +3239,15 @@
     },
     {
      "type": "real",
-     "name": "min_limit"
+     "name": "min_limit*"
     },
     {
      "type": "real",
-     "name": "max_limit"
+     "name": "max_limit*"
     },
     {
      "type": "real",
-     "name": "max_friction_force"
+     "name": "max_friction_force*"
     },
     {
      "type": "terminator",
@@ -3235,11 +3270,11 @@
     },
     {
      "type": "real",
-     "name": "low freq. deactivation scale"
+     "name": "low freq. deactivation scale#0 is default (1). LESS than 1 deactivates less aggressively. GREATER than 1 is more agressive."
     },
     {
      "type": "real",
-     "name": "high freq. deactivation scale"
+     "name": "high freq. deactivation scale#0 is default (1). LESS than 1 deactivates less aggressively. GREATER than 1 is more agressive."
     },
     {
      "type": "pad",
@@ -3253,142 +3288,147 @@
     },
     {
      "type": "block",
-     "name": "node edges",
+     "name": "node edges*",
      "definition": "physics_model_node_constraint_edge_block"
     },
     {
      "type": "block",
-     "name": "rigid bodies",
+     "name": "rigid bodies*",
      "definition": "rigid_bodies_block"
     },
     {
      "type": "block",
-     "name": "materials",
+     "name": "materials*",
      "definition": "materials_block"
     },
     {
      "type": "block",
-     "name": "spheres",
+     "name": "spheres*",
      "definition": "spheres_block"
     },
     {
      "type": "block",
-     "name": "multi spheres",
+     "name": "multi spheres*",
      "definition": "multi_spheres_block"
     },
     {
      "type": "block",
-     "name": "pills",
+     "name": "pills*",
      "definition": "pills_block"
     },
     {
      "type": "block",
-     "name": "boxes",
+     "name": "boxes*",
      "definition": "boxes_block"
     },
     {
      "type": "block",
-     "name": "triangles",
+     "name": "triangles*",
      "definition": "triangles_block"
     },
     {
      "type": "block",
-     "name": "polyhedra",
+     "name": "polyhedra*",
      "definition": "polyhedra_block"
     },
     {
+     "type": "explanation",
+     "name": "ALL THESE WORLDS ARE YOURS, EXCEPT EUROPA...",
+     "definition": "Attempt no landings there.  And you can't edit anything below this point, so why even look at it?"
+    },
+    {
      "type": "block",
-     "name": "polyhedron four vectors",
+     "name": "polyhedron four vectors*",
      "definition": "polyhedron_four_vectors_block"
     },
     {
      "type": "block",
-     "name": "polyhedron plane equations",
+     "name": "polyhedron plane equations*",
      "definition": "polyhedron_plane_equations_block"
     },
     {
      "type": "block",
-     "name": "mass distributions",
+     "name": "mass distributions*",
      "definition": "mass_distributions_block"
     },
     {
      "type": "block",
-     "name": "lists",
+     "name": "lists*",
      "definition": "lists_block"
     },
     {
      "type": "block",
-     "name": "list shapes",
+     "name": "list shapes*",
      "definition": "list_shapes_block"
     },
     {
      "type": "block",
-     "name": "mopps",
+     "name": "mopps*",
      "definition": "mopps_block"
     },
     {
      "type": "data",
-     "name": "mopp codes",
+     "name": "mopp codes*",
      "definition": "mopp_codes_data"
     },
     {
      "type": "block",
-     "name": "hinge constraints",
+     "name": "hinge constraints*",
      "definition": "hinge_constraints_block"
     },
     {
      "type": "block",
-     "name": "ragdoll constraints",
+     "name": "ragdoll constraints*",
      "definition": "ragdoll_constraints_block"
     },
     {
      "type": "block",
-     "name": "regions",
+     "name": "regions*",
      "definition": "regions_block"
     },
     {
      "type": "block",
-     "name": "nodes",
+     "name": "nodes*",
      "definition": "nodes_block"
     },
     {
      "type": "block",
-     "name": "import info",
+     "name": "import info*",
      "definition": "global_tag_import_info_block"
     },
     {
      "type": "block",
-     "name": "errors",
+     "name": "errors*",
      "definition": "global_error_report_categories_block"
     },
     {
      "type": "block",
-     "name": "point to path curves",
+     "name": "point to path curves*",
      "definition": "point_to_path_curve_block"
     },
     {
      "type": "block",
-     "name": "limited hinge constraints",
+     "name": "limited hinge constraints*",
      "definition": "limited_hinge_constraints_block"
     },
     {
      "type": "block",
-     "name": "ball and socket constraints",
+     "name": "ball and socket constraints*",
      "definition": "ball_and_socket_constraints_block"
     },
     {
      "type": "block",
-     "name": "stiff spring constraints",
+     "name": "stiff spring constraints*",
      "definition": "stiff_spring_constraints_block"
     },
     {
      "type": "block",
-     "name": "prismatic constraints",
+     "name": "prismatic constraints*",
      "definition": "prismatic_constraints_block"
     },
     {
      "type": "block",
-     "name": "phantoms",
+     "name": "phantoms*",
      "definition": "phantoms_block"
     },
     {

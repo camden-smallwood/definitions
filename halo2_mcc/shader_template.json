@@ -87,6 +87,11 @@
      "name": "default material name"
     },
     {
+     "type": "explanation",
+     "name": "FLAGS",
+     "definition": "* Force active-camo: Should be used WITH CAUTION as this causes a backbuffer copy when this shader is rendered.\n* Water: ???\n* Foliage: Used with lightmapped foliage (two-sided lighting) shaders, affects importing but not rendering."
+    },
+    {
      "type": "pad",
      "name": "sizeof(word)",
      "definition": 2
@@ -107,6 +112,11 @@
      "definition": "shader_template_category_block"
     },
     {
+     "type": "explanation",
+     "name": "LIGHT RESPONSE",
+     "definition": "Not used anymore."
+    },
+    {
      "type": "tag_reference",
      "name": "light response"
     },
@@ -124,6 +134,11 @@
      "type": "block",
      "name": null,
      "definition": "shader_template_runtime_external_light_response_index_block"
+    },
+    {
+     "type": "explanation",
+     "name": "RECURSIVE RENDERING",
+     "definition": "Really cool stuff, ask Bernie."
     },
     {
      "type": "tag_reference",
@@ -155,7 +170,7 @@
     },
     {
      "type": "block",
-     "name": "postprocess definition",
+     "name": "postprocess definition*",
      "definition": "shader_template_postprocess_definition_new_block"
     },
     {
@@ -170,7 +185,7 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "property",
+     "name": "property^",
      "definition": "property"
     },
     {
@@ -194,7 +209,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "block",
@@ -213,7 +228,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "data",
@@ -278,7 +293,7 @@
    "fields": [
     {
      "type": "real",
-     "name": "projected diameter"
+     "name": "projected diameter:pixels"
     },
     {
      "type": "block",
@@ -307,7 +322,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "pass"
+     "name": "pass^"
     },
     {
      "type": "pad",

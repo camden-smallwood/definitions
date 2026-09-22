@@ -64,7 +64,7 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "real_point_3d",
@@ -101,7 +101,7 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "custom",
@@ -142,19 +142,19 @@
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "char_integer",
-     "name": "version"
+     "name": "version*"
     },
     {
      "type": "char_integer",
-     "name": "raw animation data"
+     "name": "raw animation data*"
     },
     {
      "type": "char_integer",
-     "name": "unit control data version"
+     "name": "unit control data version*"
     },
     {
      "type": "pad",
@@ -163,7 +163,7 @@
     },
     {
      "type": "short_integer",
-     "name": "length of animation"
+     "name": "length of animation*:ticks"
     },
     {
      "type": "pad",
@@ -177,7 +177,7 @@
     },
     {
      "type": "data",
-     "name": "recorded animation event stream",
+     "name": "recorded animation event stream*",
      "definition": "recorded_animation_event_stream_data"
     },
     {

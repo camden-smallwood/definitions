@@ -236,6 +236,11 @@
      "name": "sequence count"
     },
     {
+     "type": "explanation",
+     "name": "Shader Parameters",
+     "definition": ""
+    },
+    {
      "type": "custom",
      "name": "shader"
     },
@@ -257,9 +262,19 @@
      "name": "END_HIDE_GROUP_ID"
     },
     {
+     "type": "explanation",
+     "name": "Color",
+     "definition": "controls how the color of the particle changes as\na function of its input"
+    },
+    {
      "type": "struct",
      "name": "color",
      "definition": "particle_property_color_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "Alpha",
+     "definition": "seperate from color, controls how the particle fades\nas a function of its input"
     },
     {
      "type": "struct",
@@ -267,9 +282,19 @@
      "definition": "particle_property_scalar_struct_new_2"
     },
     {
+     "type": "explanation",
+     "name": "Scale",
+     "definition": "controls how the size of a particle changes as\na function of its input"
+    },
+    {
      "type": "struct",
      "name": "scale",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "Rotation",
+     "definition": "controls how the particle rotates. 0= 0 degrees, .5= 180 degrees, 1.0= 360 degrees"
     },
     {
      "type": "struct",
@@ -277,17 +302,32 @@
      "definition": "particle_property_scalar_struct_new_2"
     },
     {
+     "type": "explanation",
+     "name": "Frame index",
+     "definition": "provides finer grain control over how the animation\nhappens.  a output of 0.25 means that when that input\nis fed in, the particle will be 25% of the way through\nits animation."
+    },
+    {
      "type": "struct",
      "name": "frame index",
      "definition": "particle_property_scalar_struct_new_2"
     },
     {
-     "type": "tag_reference",
-     "name": "collision effect"
+     "type": "explanation",
+     "name": "Spawned Effects",
+     "definition": "collision occurs when particle physics has collision, death spawned when particle dies"
     },
     {
      "type": "tag_reference",
-     "name": "death effect"
+     "name": "collision effect#effect, material effect or sound spawned when this particle collides with something"
+    },
+    {
+     "type": "tag_reference",
+     "name": "death effect#effect, material effect or sound spawned when this particle dies"
+    },
+    {
+     "type": "explanation",
+     "name": "Attached Particle Systems",
+     "definition": "Locations:\nup - particles shoot straight up\ngravity - particles shoot straight down\nNONE - opposite of particle direction"
     },
     {
      "type": "block",
@@ -331,7 +371,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "short_enum",
@@ -372,7 +412,7 @@
    "fields": [
     {
      "type": "short_enum",
-     "name": "type",
+     "name": "type^",
      "definition": "type_2"
     },
     {
@@ -390,7 +430,12 @@
     },
     {
      "type": "real",
-     "name": "time period"
+     "name": "time period:seconds"
+    },
+    {
+     "type": "explanation",
+     "name": "FUNCTION",
+     "definition": ""
     },
     {
      "type": "custom",
@@ -601,8 +646,13 @@
    "size": 4,
    "fields": [
     {
+     "type": "explanation",
+     "name": "MARKER NAMES",
+     "definition": "In addition to the marker in the render model there are several special marker names:\n\nreplace\nReplace allows you to use the same effect with different markers. Damage transition effects support this for example.\n\ngravity, up\nThe direction of gravity (down) and the opposite direction (up).  Always supplied\n\nnormal\nVector pointing directly away from the surface you collided with. Supplied for effects from collision.\n\nforward\nThe 'negative incident' vector i.e. the direction the object is moving in. Most commonly used to generated decals. Supplied for effects from collision.\n\nbackward\nThe 'incident' vector i.e. the opposite of the direction the object is moving in. Supplied for effects from collision.\n\nreflection\nThe way the effect would reflect off the surface it hit. Supplied for effects from collision.\n\nroot\nThe object root (pivot). These can used for all effects which are associated with an object.\n\nimpact\nThe location of a havok impact.\n\n"
+    },
+    {
      "type": "old_string_id",
-     "name": "marker name"
+     "name": "marker name^"
     },
     {
      "type": "terminator",
@@ -645,7 +695,7 @@
     },
     {
      "type": "short_integer",
-     "name": "sort bias"
+     "name": "sort bias#use values between -10 and 10 to move closer and farther from camera (positive is closer)"
     },
     {
      "type": "word_flags",
@@ -672,9 +722,19 @@
      "name": "particle physics"
     },
     {
+     "type": "explanation",
+     "name": "particle emission rate (particles/tick)",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "particle emission rate",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "particle lifespan(seconds)",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -682,9 +742,19 @@
      "definition": "particle_property_scalar_struct_new_2"
     },
     {
+     "type": "explanation",
+     "name": "particle velocity(world units/second)",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "particle velocity",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "particle angular velocity(degrees/second)",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -692,9 +762,19 @@
      "definition": "particle_property_scalar_struct_new_2"
     },
     {
+     "type": "explanation",
+     "name": "particle size(world units)",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "particle size",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "particle tint",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -702,9 +782,19 @@
      "definition": "particle_property_color_struct_new_2"
     },
     {
+     "type": "explanation",
+     "name": "particle alpha",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "particle alpha",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "EMISSION SETTINGS",
+     "definition": ""
     },
     {
      "type": "long_enum",
@@ -712,9 +802,19 @@
      "definition": "emission shape"
     },
     {
+     "type": "explanation",
+     "name": "emission radius(world units)",
+     "definition": ""
+    },
+    {
      "type": "struct",
      "name": "emission radius",
      "definition": "particle_property_scalar_struct_new_2"
+    },
+    {
+     "type": "explanation",
+     "name": "emission angle(degrees)",
+     "definition": ""
     },
     {
      "type": "struct",
@@ -727,7 +827,7 @@
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "relative direction"
+     "name": "relative direction#particle initial velocity direction relative to the location's forward"
     },
     {
      "type": "pad",
@@ -775,7 +875,7 @@
     },
     {
      "type": "short_integer",
-     "name": "sort bias"
+     "name": "sort bias#use values between -10 and 10 to move closer and farther from camera (positive is closer)"
     },
     {
      "type": "word_flags",
@@ -784,11 +884,11 @@
     },
     {
      "type": "real",
-     "name": "LOD in distance"
+     "name": "LOD in distance#defaults to 0.0"
     },
     {
      "type": "real",
-     "name": "LOD feather in delta"
+     "name": "LOD feather in delta#defaults to 0.0"
     },
     {
      "type": "skip",
@@ -797,11 +897,11 @@
     },
     {
      "type": "real",
-     "name": "LOD out distance"
+     "name": "LOD out distance#defaults to 30.0"
     },
     {
      "type": "real",
-     "name": "LOD feather out delta"
+     "name": "LOD feather out delta#defaults to 10.0"
     },
     {
      "type": "skip",

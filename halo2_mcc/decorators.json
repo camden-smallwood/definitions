@@ -112,12 +112,12 @@
    "fields": [
     {
      "type": "struct",
-     "name": "geometry block info",
+     "name": "geometry block info*",
      "definition": "global_geometry_block_info_struct_2"
     },
     {
      "type": "block",
-     "name": "cache block data",
+     "name": "cache block data*",
      "definition": "decorator_cache_block_data_block"
     },
     {
@@ -141,24 +141,29 @@
    "size": 40,
    "fields": [
     {
-     "type": "long_integer",
-     "name": "block offset"
+     "type": "explanation",
+     "name": "BLOCK INFO",
+     "definition": ""
     },
     {
      "type": "long_integer",
-     "name": "block size"
+     "name": "block offset*"
     },
     {
      "type": "long_integer",
-     "name": "section data size"
+     "name": "block size*"
     },
     {
      "type": "long_integer",
-     "name": "resource data size"
+     "name": "section data size*"
+    },
+    {
+     "type": "long_integer",
+     "name": "resource data size*"
     },
     {
      "type": "block",
-     "name": "resources",
+     "name": "resources*",
      "definition": "global_geometry_block_resource_block"
     },
     {
@@ -168,7 +173,7 @@
     },
     {
      "type": "short_integer",
-     "name": "owner tag section offset"
+     "name": "owner tag section offset*"
     },
     {
      "type": "pad",
@@ -193,7 +198,7 @@
    "fields": [
     {
      "type": "char_enum",
-     "name": "type",
+     "name": "type*",
      "definition": "type"
     },
     {
@@ -203,19 +208,19 @@
     },
     {
      "type": "short_integer",
-     "name": "primary locator"
+     "name": "primary locator*"
     },
     {
      "type": "short_integer",
-     "name": "secondary locator"
+     "name": "secondary locator*"
     },
     {
      "type": "long_integer",
-     "name": "resource data size"
+     "name": "resource data size*"
     },
     {
      "type": "long_integer",
-     "name": "resource data offset"
+     "name": "resource data offset*"
     },
     {
      "type": "terminator",
@@ -286,22 +291,22 @@
    "fields": [
     {
      "type": "block",
-     "name": "placements",
+     "name": "placements*",
      "definition": "decorator_placement_block"
     },
     {
      "type": "block",
-     "name": "decal vertices",
+     "name": "decal vertices*",
      "definition": "decal_vertices_block"
     },
     {
      "type": "block",
-     "name": "decal indices",
+     "name": "decal indices*",
      "definition": "indices_block"
     },
     {
      "type": "vertex_buffer",
-     "name": "decal vertex buffer"
+     "name": "decal vertex buffer*"
     },
     {
      "type": "pad",
@@ -310,17 +315,17 @@
     },
     {
      "type": "block",
-     "name": "sprite vertices",
+     "name": "sprite vertices*",
      "definition": "sprite_vertices_block"
     },
     {
      "type": "block",
-     "name": "sprite indices",
+     "name": "sprite indices*",
      "definition": "indices_block"
     },
     {
      "type": "vertex_buffer",
-     "name": "sprite vertex buffer"
+     "name": "sprite vertex buffer*"
     },
     {
      "type": "pad",
@@ -339,19 +344,19 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "real_point_2d",
-     "name": "texcoord 0"
+     "name": "texcoord 0*"
     },
     {
      "type": "real_point_2d",
-     "name": "texcoord 1"
+     "name": "texcoord 1*"
     },
     {
      "type": "rgb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -365,7 +370,7 @@
    "fields": [
     {
      "type": "short_integer",
-     "name": "index"
+     "name": "index*"
     },
     {
      "type": "terminator",
@@ -379,23 +384,23 @@
    "fields": [
     {
      "type": "real_point_3d",
-     "name": "position"
+     "name": "position*"
     },
     {
      "type": "real_vector_3d",
-     "name": "offset"
+     "name": "offset*"
     },
     {
      "type": "real_vector_3d",
-     "name": "axis"
+     "name": "axis*"
     },
     {
      "type": "real_point_2d",
-     "name": "texcoord"
+     "name": "texcoord*"
     },
     {
      "type": "rgb_color",
-     "name": "color"
+     "name": "color*"
     },
     {
      "type": "terminator",
@@ -409,58 +414,58 @@
    "fields": [
     {
      "type": "char_block_index",
-     "name": "decorator set",
+     "name": "decorator set*",
      "definition": "scenario_decorator_set_palette_entry_block"
     },
     {
      "type": "char_enum",
-     "name": "decorator_type",
+     "name": "decorator_type*",
      "definition": "decorator_type"
     },
     {
      "type": "char_integer",
-     "name": "shader index"
+     "name": "shader index*"
     },
     {
      "type": "char_integer",
-     "name": "compressed radius"
+     "name": "compressed radius*"
     },
     {
      "type": "short_integer",
-     "name": "cluster"
+     "name": "cluster*"
     },
     {
      "type": "short_block_index",
-     "name": "cache block",
+     "name": "cache block*",
      "definition": "decorator_cache_block_block"
     },
     {
      "type": "short_integer",
-     "name": "decorator start index"
+     "name": "decorator start index*"
     },
     {
      "type": "short_integer",
-     "name": "decorator count"
+     "name": "decorator count*"
     },
     {
      "type": "short_integer",
-     "name": "vertex start offset"
+     "name": "vertex start offset*"
     },
     {
      "type": "short_integer",
-     "name": "vertex count"
+     "name": "vertex count*"
     },
     {
      "type": "short_integer",
-     "name": "index start offset"
+     "name": "index start offset*"
     },
     {
      "type": "short_integer",
-     "name": "index count"
+     "name": "index count*"
     },
     {
      "type": "long_integer",
-     "name": "compressed bounding center"
+     "name": "compressed bounding center*"
     },
     {
      "type": "terminator",
@@ -474,7 +479,7 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "decorator set"
+     "name": "decorator set^"
     },
     {
      "type": "terminator",

@@ -24,7 +24,7 @@
    "fields": [
     {
      "type": "old_string_id",
-     "name": "attachment marker name"
+     "name": "attachment marker name#the marker name where the antenna should be attached"
     },
     {
      "type": "tag_reference",
@@ -41,7 +41,7 @@
     },
     {
      "type": "real_fraction",
-     "name": "spring strength coefficient"
+     "name": "spring strength coefficient#strength of the spring (larger values make the spring stronger)"
     },
     {
      "type": "real",
@@ -73,7 +73,7 @@
    "fields": [
     {
      "type": "real_fraction",
-     "name": "spring strength coefficient"
+     "name": "spring strength coefficient#strength of the spring (larger values make the spring stronger)"
     },
     {
      "type": "pad",
@@ -82,15 +82,15 @@
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "angles"
+     "name": "angles#direction toward next vertex"
     },
     {
      "type": "real",
-     "name": "length"
+     "name": "length:world units#distance between this vertex and the next"
     },
     {
      "type": "short_integer",
-     "name": "sequence index"
+     "name": "sequence index#bitmap group sequence index for this vertex's texture"
     },
     {
      "type": "pad",
@@ -99,11 +99,11 @@
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color#color at this vertex"
     },
     {
      "type": "real_argb_color",
-     "name": "LOD color"
+     "name": "LOD color#color at this vertex for the low-LOD line primitives"
     },
     {
      "type": "pad",

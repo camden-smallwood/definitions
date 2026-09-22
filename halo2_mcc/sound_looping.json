@@ -33,6 +33,11 @@
      "definition": "flags"
     },
     {
+     "type": "explanation",
+     "name": "when scale is ZERO",
+     "definition": "as the sound's input scale changes from zero to one, these modifiers move between the two values specified here. the sound will play using the current scale modifier multiplied by the value specified below. (0 values are ignored.)"
+    },
+    {
      "type": "real",
      "name": "detail sound period"
     },
@@ -40,6 +45,11 @@
      "type": "pad",
      "name": "2*sizeof(long)",
      "definition": 8
+    },
+    {
+     "type": "explanation",
+     "name": "when scale is ONE",
+     "definition": "as the sound's input scale changes from zero to one, these modifiers move between the two values specified here. the sound will play using the current scale modifier multiplied by the value specified below. (0 values are ignored.)"
     },
     {
      "type": "real",
@@ -61,12 +71,12 @@
     },
     {
      "type": "block",
-     "name": "tracks",
+     "name": "tracks#tracks play in parallel and loop continuously for the duration of the looping sound.",
      "definition": "looping_sound_track_block"
     },
     {
      "type": "block",
-     "name": "detail sounds",
+     "name": "detail sounds#detail sounds play at random throughout the duration of the looping sound.",
      "definition": "looping_sound_detail_block"
     },
     {
@@ -86,15 +96,15 @@
     },
     {
      "type": "real",
-     "name": "gain"
+     "name": "gain:dB"
     },
     {
      "type": "real",
-     "name": "fade in duration"
+     "name": "fade in duration:seconds"
     },
     {
      "type": "real",
-     "name": "fade out duration"
+     "name": "fade out duration:seconds"
     },
     {
      "type": "pad",
@@ -107,7 +117,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "loop"
+     "name": "loop^"
     },
     {
      "type": "tag_reference",
@@ -138,7 +148,7 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
@@ -147,15 +157,15 @@
     },
     {
      "type": "real",
-     "name": "gain"
+     "name": "gain:dB"
     },
     {
      "type": "real",
-     "name": "fade in duration"
+     "name": "fade in duration:seconds"
     },
     {
      "type": "real",
-     "name": "fade out duration"
+     "name": "fade out duration:seconds"
     },
     {
      "type": "tag_reference",
@@ -202,11 +212,11 @@
     },
     {
      "type": "real",
-     "name": "alt crossfade duration"
+     "name": "alt crossfade duration:seconds"
     },
     {
      "type": "real",
-     "name": "alt fade out duration"
+     "name": "alt fade out duration:seconds"
     },
     {
      "type": "terminator",
@@ -220,15 +230,20 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound^"
+    },
+    {
+     "type": "explanation",
+     "name": "frequency of play",
+     "definition": ""
     },
     {
      "type": "real_bounds",
-     "name": "random period bounds"
+     "name": "random period bounds:seconds#the time between successive playings of this sound will be randomly selected from this range."
     },
     {
      "type": "real",
-     "name": "gain"
+     "name": "gain:dB"
     },
     {
      "type": "long_flags",
@@ -241,16 +256,21 @@
      "definition": 48
     },
     {
-     "type": "angle_bounds",
-     "name": "yaw bounds"
+     "type": "explanation",
+     "name": "random spatialization",
+     "definition": "if the sound specified above is not stereo it will be randomly spatialized according to the following constraints. if both lower and upper bounds are zero for any of the following fields, the sound's position will be randomly selected from all possible directions or distances."
     },
     {
      "type": "angle_bounds",
-     "name": "pitch bounds"
+     "name": "yaw bounds:degrees#the sound's position along the horizon will be randomly selected from this range."
+    },
+    {
+     "type": "angle_bounds",
+     "name": "pitch bounds:degrees#the sound's position above (positive values) or below (negative values) the horizon will be randomly selected from this range."
     },
     {
      "type": "real_bounds",
-     "name": "distance bounds"
+     "name": "distance bounds:world units#the sound's distance (from its spatialized looping sound or from the listener if the looping sound is stereo) will be randomly selected from this range."
     },
     {
      "type": "terminator",
@@ -264,15 +284,20 @@
    "fields": [
     {
      "type": "string_id",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "tag_reference",
      "name": "sound"
     },
     {
+     "type": "explanation",
+     "name": "frequency of play",
+     "definition": ""
+    },
+    {
      "type": "real_bounds",
-     "name": "random period bounds"
+     "name": "random period bounds:seconds#the time between successive playings of this sound will be randomly selected from this range."
     },
     {
      "type": "real",
@@ -284,16 +309,21 @@
      "definition": "flags_3"
     },
     {
-     "type": "angle_bounds",
-     "name": "yaw bounds"
+     "type": "explanation",
+     "name": "random spatialization",
+     "definition": "if the sound specified above is not stereo it will be randomly spatialized according to the following constraints. if both lower and upper bounds are zero for any of the following fields, the sound's position will be randomly selected from all possible directions or distances."
     },
     {
      "type": "angle_bounds",
-     "name": "pitch bounds"
+     "name": "yaw bounds:degrees#the sound's position along the horizon will be randomly selected from this range."
+    },
+    {
+     "type": "angle_bounds",
+     "name": "pitch bounds:degrees#the sound's position above (positive values) or below (negative values) the horizon will be randomly selected from this range."
     },
     {
      "type": "real_bounds",
-     "name": "distance bounds"
+     "name": "distance bounds:world units#the sound's distance (from its spatialized looping sound or from the listener if the looping sound is stereo) will be randomly selected from this range."
     },
     {
      "type": "terminator",
@@ -312,7 +342,7 @@
     },
     {
      "type": "real",
-     "name": "marty's music time"
+     "name": "marty's music time: seconds"
     },
     {
      "type": "real",
@@ -329,12 +359,12 @@
     },
     {
      "type": "block",
-     "name": "tracks",
+     "name": "tracks#tracks play in parallel and loop continuously for the duration of the looping sound.",
      "definition": "looping_sound_track_block"
     },
     {
      "type": "block",
-     "name": "detail sounds",
+     "name": "detail sounds#detail sounds play at random throughout the duration of the looping sound.",
      "definition": "looping_sound_detail_block"
     },
     {
@@ -354,7 +384,7 @@
     },
     {
      "type": "real",
-     "name": "marty's music time"
+     "name": "marty's music time: seconds"
     },
     {
      "type": "real",
@@ -371,12 +401,12 @@
     },
     {
      "type": "block",
-     "name": "tracks",
+     "name": "tracks#tracks play in parallel and loop continuously for the duration of the looping sound.",
      "definition": "looping_sound_track_block"
     },
     {
      "type": "block",
-     "name": "detail sounds",
+     "name": "detail sounds#detail sounds play at random throughout the duration of the looping sound.",
      "definition": "looping_sound_detail_block"
     },
     {
@@ -400,7 +430,7 @@
     },
     {
      "type": "real",
-     "name": "marty's music time"
+     "name": "marty's music time: seconds"
     },
     {
      "type": "real",
@@ -417,12 +447,12 @@
     },
     {
      "type": "block",
-     "name": "tracks",
+     "name": "tracks#tracks play in parallel and loop continuously for the duration of the looping sound.",
      "definition": "looping_sound_track_block"
     },
     {
      "type": "block",
-     "name": "detail sounds",
+     "name": "detail sounds#detail sounds play at random throughout the duration of the looping sound.",
      "definition": "looping_sound_detail_block"
     },
     {

@@ -2,13 +2,13 @@
  "name": "dialogue",
  "tag": "udlg",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "dialogue_block",
  "blocks": {
   "dialogue_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "dialogue_block_struct"
+   "struct": "dialogue_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -17,902 +17,967 @@
    "size": 4112,
    "fields": [
     {
-     "type": "pad",
-     "name": "pad",
+     "type": "skip",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
-     "type": "tag_reference",
-     "name": "idle noncombat"
+     "type": "explanation",
+     "name": "idle",
+     "definition": "vocalizations generated at intervals when nothing else is happening."
     },
     {
      "type": "tag_reference",
-     "name": "idle combat"
+     "name": "idle noncombat#played randomly and intermittently whenever we aren't in combat"
     },
     {
      "type": "tag_reference",
-     "name": "idle flee"
+     "name": "idle combat#played randomly and intermittently whenever we're in combat"
+    },
+    {
+     "type": "tag_reference",
+     "name": "idle flee#played continuously while we are fleeing"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
-     "type": "tag_reference",
-     "name": "pain body minor"
+     "type": "explanation",
+     "name": "involuntary",
+     "definition": "vocalizations generated automatically when damaged; interrupt everything except scripted dialogue."
     },
     {
      "type": "tag_reference",
-     "name": "pain body major"
+     "name": "pain body minor#took body damage"
     },
     {
      "type": "tag_reference",
-     "name": "pain shield"
+     "name": "pain body major#took a significant amount of body damage"
     },
     {
      "type": "tag_reference",
-     "name": "pain falling"
+     "name": "pain shield#took shield damage"
     },
     {
      "type": "tag_reference",
-     "name": "scream fear"
+     "name": "pain falling#took damage from falling"
     },
     {
      "type": "tag_reference",
-     "name": "scream pain"
+     "name": "scream fear#screaming in fear (falling to your death, explosive stuck to you)"
     },
     {
      "type": "tag_reference",
-     "name": "maimed limb"
+     "name": "scream pain#screaming in pain (being flamed)"
     },
     {
      "type": "tag_reference",
-     "name": "maimed head"
+     "name": "maimed limb#limb body part (arm or leg) was destroyed"
     },
     {
      "type": "tag_reference",
-     "name": "death quiet"
+     "name": "maimed head#head body part was destroyed"
     },
     {
      "type": "tag_reference",
-     "name": "death violent"
+     "name": "death quiet#died from minor damage, or was unprepared"
     },
     {
      "type": "tag_reference",
-     "name": "death falling"
+     "name": "death violent#died from violent trauma"
     },
     {
      "type": "tag_reference",
-     "name": "death agonizing"
+     "name": "death falling#died from falling"
     },
     {
      "type": "tag_reference",
-     "name": "death instant"
+     "name": "death agonizing#died in a horribly painful fashion (burnt to death)"
     },
     {
      "type": "tag_reference",
-     "name": "death flying"
+     "name": "death instant#died instantly"
+    },
+    {
+     "type": "tag_reference",
+     "name": "death flying#died and was blown up into the air"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
-     "type": "tag_reference",
-     "name": "damaged friend"
+     "type": "explanation",
+     "name": "hurting people",
+     "definition": ""
     },
     {
      "type": "tag_reference",
-     "name": "damaged friend player"
+     "name": "damaged friend#hurt a friendly AI"
     },
     {
      "type": "tag_reference",
-     "name": "damaged enemy"
+     "name": "damaged friend player#hurt a friendly player"
     },
     {
      "type": "tag_reference",
-     "name": "damaged enemy cm"
+     "name": "damaged enemy#hurt an enemy"
+    },
+    {
+     "type": "tag_reference",
+     "name": "damaged enemy cm#hurt an enemy: comment to friend"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt friend"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt friend re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt friend player"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy bullet"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy needler"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy plasma"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy sniper"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy grenade"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy explosion"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy melee"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy flame"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy shotgun"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy vehicle"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hurt enemy mountedweapon"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed friend"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed friend cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed friend player"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed friend player cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy player"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy player cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy covenant"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy covenant cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy floodcombat"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy floodcombat cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy floodcarrier"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy floodcarrier cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy sentinel"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy sentinel cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy bullet"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy needler"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy plasma"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy sniper"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy grenade"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy explosion"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy melee"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy flame"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy shotgun"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy vehicle"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killed enemy mountedweapon"
-    },
-    {
-     "type": "tag_reference",
-     "name": "killing spree"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "being hurt",
+     "definition": ""
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt friend#hurt by a friendly AI"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt friend re#hurt by a friendly AI: response from that friend"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt friend player#hurt by a friendly player"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy#hurt by an enemy"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy re#hurt by an enemy: response from the enemy that hurt us ('you like that?')"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy cm#hurt by an enemy: comment from a friend of ours"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy bullet#hurt by an enemy with bullets"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy needler#hurt by an enemy with needles"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy plasma#hurt by an enemy with a plasma bolt"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy sniper#hurt by an enemy with a sniper weapon"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy grenade#a grenade is stuck to us"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy explosion#hurt by an enemy with an explosive weapon"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy melee#hurt by an enemy with a melee weapon"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy flame#hurt by an enemy with flamethrower"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy shotgun#hurt by an enemy with a shotgun"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy vehicle#hurt by an enemy with a vehicle"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hurt enemy mountedweapon#hurt by an enemy with a fixed weapon"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill bullet cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill needler cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill plasma cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill sniper cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "anyone kill grenade cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill explosion cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill melee cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill flame cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill shotgun cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill vehicle cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player kill mountedweapon cm"
-    },
-    {
-     "type": "tag_reference",
-     "name": "player killling spree cm"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "killing people",
+     "definition": ""
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed friend#killed a friendly AI"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed friend cm#killed a friendly AI: comment from a friend"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed friend player#killed a friendly player"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed friend player cm#killed a friendly player: comment from a friend"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy#killed an enemy"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy cm#killed an enemy: comment from a friend"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy player#killed an enemy player"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy player cm#killed an enemy player: comment from a friend"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy covenant#killed an enemy covenant"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy covenant cm#killed an enemy covenant: comment from a friend"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy floodcombat#killed an enemy flood combat form"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy floodcombat cm#killed an enemy flood combat form: comment from a friend"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy floodcarrier#killed an enemy flood carrier form"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy floodcarrier cm#killed an enemy flood carrier form: comment from a friend"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy sentinel#killed an enemy sentinel"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy sentinel cm#killed an enemy sentinel: comment from a friend"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy bullet#killed an enemy with bullets"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy needler#killed an enemy with needles"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy plasma#killed an enemy with a plasma bolt"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy sniper#killed an enemy with a sniper weapon"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy grenade#killed an enemy with a grenade"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy explosion#killed an enemy with an explosive weapon"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy melee#killed an enemy with a melee weapon"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy flame#killed an enemy with flamethrower"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy shotgun#killed an enemy with a shotgun"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy vehicle#killed an enemy by hitting them with a vehicle"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killed enemy mountedweapon#killed an enemy with a fixed weapon"
+    },
+    {
+     "type": "tag_reference",
+     "name": "killing spree#we are on a killing spree"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "friend died"
-    },
-    {
-     "type": "tag_reference",
-     "name": "friend player died"
-    },
-    {
-     "type": "tag_reference",
-     "name": "friend killed by friend"
-    },
-    {
-     "type": "tag_reference",
-     "name": "friend killed by friendly player"
-    },
-    {
-     "type": "tag_reference",
-     "name": "friend killed by enemy"
-    },
-    {
-     "type": "tag_reference",
-     "name": "friend killed by enemy player"
-    },
-    {
-     "type": "tag_reference",
-     "name": "friend killed by covenant"
-    },
-    {
-     "type": "tag_reference",
-     "name": "friend killed by flood"
-    },
-    {
-     "type": "tag_reference",
-     "name": "friend killed by sentinel"
-    },
-    {
-     "type": "tag_reference",
-     "name": "friend betrayed"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
-     "type": "tag_reference",
-     "name": "new combat alone"
+     "type": "explanation",
+     "name": "player kill responses",
+     "definition": "responses to a friendly player killing an enemy nearby"
     },
     {
      "type": "tag_reference",
-     "name": "new enemy recent combat"
+     "name": "player kill cm#response to the player killing an enemy"
     },
     {
      "type": "tag_reference",
-     "name": "old enemy sighted"
+     "name": "player kill bullet cm#response to the player killing an enemy with bullets"
     },
     {
      "type": "tag_reference",
-     "name": "unexpected enemy"
+     "name": "player kill needler cm#response to the player killing an enemy with needles"
     },
     {
      "type": "tag_reference",
-     "name": "dead friend found"
+     "name": "player kill plasma cm#response to the player killing an enemy with a plasma bolt"
     },
     {
      "type": "tag_reference",
-     "name": "alliance broken"
+     "name": "player kill sniper cm#response to the player killing an enemy with a sniper weapon"
     },
     {
      "type": "tag_reference",
-     "name": "alliance reformed"
+     "name": "anyone kill grenade cm#response to _anyone_ killing an enemy with a grenade"
     },
     {
      "type": "tag_reference",
-     "name": "grenade throwing"
+     "name": "player kill explosion cm#response to the player killing an enemy with an explosive weapon"
     },
     {
      "type": "tag_reference",
-     "name": "grenade sighted"
+     "name": "player kill melee cm#response to the player killing an enemy with a melee weapon"
     },
     {
      "type": "tag_reference",
-     "name": "grenade startle"
+     "name": "player kill flame cm#response to the player killing an enemy with flamethrower"
     },
     {
      "type": "tag_reference",
-     "name": "grenade danger enemy"
+     "name": "player kill shotgun cm#response to the player killing an enemy with a shotgun"
     },
     {
      "type": "tag_reference",
-     "name": "grenade danger self"
+     "name": "player kill vehicle cm#response to the player killing an enemy by hitting them with a vehicle"
     },
     {
      "type": "tag_reference",
-     "name": "grenade danger friend"
+     "name": "player kill mountedweapon cm#response to the player killing an enemy with a fixed weapon"
+    },
+    {
+     "type": "tag_reference",
+     "name": "player killling spree cm#response to the player going on a killing spree"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "new combat group re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "new combat nearby re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "alert friend"
-    },
-    {
-     "type": "tag_reference",
-     "name": "alert friend re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "alert lost contact"
-    },
-    {
-     "type": "tag_reference",
-     "name": "alert lost contact re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "blocked"
-    },
-    {
-     "type": "tag_reference",
-     "name": "blocked re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "search start"
-    },
-    {
-     "type": "tag_reference",
-     "name": "search query"
-    },
-    {
-     "type": "tag_reference",
-     "name": "search query re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "search report"
-    },
-    {
-     "type": "tag_reference",
-     "name": "search abandon"
-    },
-    {
-     "type": "tag_reference",
-     "name": "search group abandon"
-    },
-    {
-     "type": "tag_reference",
-     "name": "group uncover"
-    },
-    {
-     "type": "tag_reference",
-     "name": "group uncover re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "advance"
-    },
-    {
-     "type": "tag_reference",
-     "name": "advance re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "retreat"
-    },
-    {
-     "type": "tag_reference",
-     "name": "retreat re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "cover"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "friends dying",
+     "definition": ""
+    },
+    {
+     "type": "tag_reference",
+     "name": "friend died#a friendly AI died"
+    },
+    {
+     "type": "tag_reference",
+     "name": "friend player died#a friendly player died"
+    },
+    {
+     "type": "tag_reference",
+     "name": "friend killed by friend#a friend died from friendly fire"
+    },
+    {
+     "type": "tag_reference",
+     "name": "friend killed by friendly player# friend died from player's friendly fire"
+    },
+    {
+     "type": "tag_reference",
+     "name": "friend killed by enemy#a friend died from enemy fire"
+    },
+    {
+     "type": "tag_reference",
+     "name": "friend killed by enemy player# friend died from an enemy player"
+    },
+    {
+     "type": "tag_reference",
+     "name": "friend killed by covenant#a friend died from covenant fire"
+    },
+    {
+     "type": "tag_reference",
+     "name": "friend killed by flood#a friend died from the flood"
+    },
+    {
+     "type": "tag_reference",
+     "name": "friend killed by sentinel#a friend died from sentinel fire"
+    },
+    {
+     "type": "tag_reference",
+     "name": "friend betrayed#a friend was deliberately killed by an ally that we don't trust (e.g. player killed a marine)"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
-     "type": "tag_reference",
-     "name": "sighted friend player"
+     "type": "explanation",
+     "name": "shouting",
+     "definition": "vocalizations that can be played even if a friend is talking"
     },
     {
      "type": "tag_reference",
-     "name": "shooting"
+     "name": "new combat alone#see an enemy and we have not previously been in combat"
     },
     {
      "type": "tag_reference",
-     "name": "shooting vehicle"
+     "name": "new enemy recent combat#see a new enemy and we have recently been in combat"
     },
     {
      "type": "tag_reference",
-     "name": "shooting berserk"
+     "name": "old enemy sighted#see an enemy that we are currently looking for"
     },
     {
      "type": "tag_reference",
-     "name": "shooting group"
+     "name": "unexpected enemy#unexpectedly encounters enemy (behind or to the side)"
     },
     {
      "type": "tag_reference",
-     "name": "shooting traitor"
+     "name": "dead friend found#unexpectedly finds a dead body of a friend"
     },
     {
      "type": "tag_reference",
-     "name": "taunt"
+     "name": "alliance broken#we decide that a former ally is now a traitor"
     },
     {
      "type": "tag_reference",
-     "name": "taunt re"
+     "name": "alliance reformed#we forgive a traitor and make him our friend again"
     },
     {
      "type": "tag_reference",
-     "name": "flee"
+     "name": "grenade throwing#throwing a grenade"
     },
     {
      "type": "tag_reference",
-     "name": "flee re"
+     "name": "grenade sighted#see an enemy grenade"
     },
     {
      "type": "tag_reference",
-     "name": "flee leader died"
+     "name": "grenade startle#alerted by a grenade bouncing near us"
     },
     {
      "type": "tag_reference",
-     "name": "attempted flee"
+     "name": "grenade danger enemy#in danger from an enemy grenade"
     },
     {
      "type": "tag_reference",
-     "name": "attempted flee re"
+     "name": "grenade danger self#in danger from your own grenade"
     },
     {
      "type": "tag_reference",
-     "name": "lost contact"
-    },
-    {
-     "type": "tag_reference",
-     "name": "hiding finished"
-    },
-    {
-     "type": "tag_reference",
-     "name": "vehicle entry"
-    },
-    {
-     "type": "tag_reference",
-     "name": "vehicle exit"
-    },
-    {
-     "type": "tag_reference",
-     "name": "vehicle woohoo"
-    },
-    {
-     "type": "tag_reference",
-     "name": "vehicle scared"
-    },
-    {
-     "type": "tag_reference",
-     "name": "vehicle collision"
-    },
-    {
-     "type": "tag_reference",
-     "name": "partially sighted"
-    },
-    {
-     "type": "tag_reference",
-     "name": "nothing there"
-    },
-    {
-     "type": "tag_reference",
-     "name": "pleading"
+     "name": "grenade danger friend#in danger from a friendly grenade (not our own)"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "group communication",
+     "definition": "vocalizations that require friends"
+    },
+    {
+     "type": "tag_reference",
+     "name": "new combat group re#reply to a nearby friend who alerted us to an enemy"
+    },
+    {
+     "type": "tag_reference",
+     "name": "new combat nearby re#reply to a distant friend who alerted us to an enemy"
+    },
+    {
+     "type": "tag_reference",
+     "name": "alert friend#alert a friend who is in a noncombat state"
+    },
+    {
+     "type": "tag_reference",
+     "name": "alert friend re#alerted by a friend when in a noncombat state"
+    },
+    {
+     "type": "tag_reference",
+     "name": "alert lost contact#alert friends that target was not at expected location"
+    },
+    {
+     "type": "tag_reference",
+     "name": "alert lost contact re#alert friends that target was not at expected location: response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "blocked#friend is blocking us from moving or firing"
+    },
+    {
+     "type": "tag_reference",
+     "name": "blocked re#friend is blocking us from moving or firing: response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "search start#starting to search"
+    },
+    {
+     "type": "tag_reference",
+     "name": "search query#asking searchers whether they have found anything"
+    },
+    {
+     "type": "tag_reference",
+     "name": "search query re#asking searchers whether they have found anything: response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "search report#searcher reporting that an area is clear"
+    },
+    {
+     "type": "tag_reference",
+     "name": "search abandon#searcher giving up on search"
+    },
+    {
+     "type": "tag_reference",
+     "name": "search group abandon#search coordinator giving up on search"
+    },
+    {
+     "type": "tag_reference",
+     "name": "group uncover#starting to uncover target with friend"
+    },
+    {
+     "type": "tag_reference",
+     "name": "group uncover re#starting to uncover target: response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "advance#our platoon starts to attack or advance"
+    },
+    {
+     "type": "tag_reference",
+     "name": "advance re#our platoon starts to attack or advance: response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "retreat#our platoon starts to defend or retreat"
+    },
+    {
+     "type": "tag_reference",
+     "name": "retreat re#our platoon starts to defend or retreat: response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "cover#telling friends to seek cover"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "actions",
+     "definition": "vocalizations that don't require friends"
+    },
+    {
+     "type": "tag_reference",
+     "name": "sighted friend player#sighted a new friendly player"
+    },
+    {
+     "type": "tag_reference",
+     "name": "shooting#shooting at an enemy"
+    },
+    {
+     "type": "tag_reference",
+     "name": "shooting vehicle#shooting from a vehicle at an enemy"
+    },
+    {
+     "type": "tag_reference",
+     "name": "shooting berserk#shooting at an enemy while berserk"
+    },
+    {
+     "type": "tag_reference",
+     "name": "shooting group#shooting at a group of enemies"
+    },
+    {
+     "type": "tag_reference",
+     "name": "shooting traitor#shooting at a traitorous player"
+    },
+    {
+     "type": "tag_reference",
+     "name": "taunt#taunting the enemy"
+    },
+    {
+     "type": "tag_reference",
+     "name": "taunt re#taunted by an enemy: response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "flee#fleeing in panic"
+    },
+    {
+     "type": "tag_reference",
+     "name": "flee re#fleeing in panic: response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "flee leader died#fleeing in panic because our leaders are all dead"
+    },
+    {
+     "type": "tag_reference",
+     "name": "attempted flee#unable to flee because a leader is nearby"
+    },
+    {
+     "type": "tag_reference",
+     "name": "attempted flee re#unable to flee because a leader is nearby - response"
+    },
+    {
+     "type": "tag_reference",
+     "name": "lost contact#target was not at expected location"
+    },
+    {
+     "type": "tag_reference",
+     "name": "hiding finished#stops hiding and pursues target"
+    },
+    {
+     "type": "tag_reference",
+     "name": "vehicle entry#enters vehicle"
+    },
+    {
+     "type": "tag_reference",
+     "name": "vehicle exit#exits vehicle"
+    },
+    {
+     "type": "tag_reference",
+     "name": "vehicle woohoo#excited while in vehicle (big air, etc)"
+    },
+    {
+     "type": "tag_reference",
+     "name": "vehicle scared#scared while in vehicle (imminent crash)"
+    },
+    {
+     "type": "tag_reference",
+     "name": "vehicle collision#riding in a vehicle and the driver collides with something"
+    },
+    {
+     "type": "tag_reference",
+     "name": "partially sighted#saw something suspicious but not sure it was an enemy"
+    },
+    {
+     "type": "tag_reference",
+     "name": "nothing there#decided that a suspicious sighting was nothing after all"
+    },
+    {
+     "type": "tag_reference",
+     "name": "pleading#pleading for the player to spare our pitiable lives"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "surprise"
-    },
-    {
-     "type": "tag_reference",
-     "name": "berserk"
-    },
-    {
-     "type": "tag_reference",
-     "name": "melee attack"
-    },
-    {
-     "type": "tag_reference",
-     "name": "dive"
-    },
-    {
-     "type": "tag_reference",
-     "name": "uncover exclamation"
-    },
-    {
-     "type": "tag_reference",
-     "name": "leap attack"
-    },
-    {
-     "type": "tag_reference",
-     "name": "resurrection"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "celebration"
-    },
-    {
-     "type": "tag_reference",
-     "name": "check body enemy"
-    },
-    {
-     "type": "tag_reference",
-     "name": "check body friend"
-    },
-    {
-     "type": "tag_reference",
-     "name": "shooting dead enemy"
-    },
-    {
-     "type": "tag_reference",
-     "name": "shooting dead enemy player"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "exclamations",
+     "definition": "vocalizations that interrupt our talking"
+    },
+    {
+     "type": "tag_reference",
+     "name": "surprise#surprised by an enemy, noise, body or weapon impact"
+    },
+    {
+     "type": "tag_reference",
+     "name": "berserk#went berserk"
+    },
+    {
+     "type": "tag_reference",
+     "name": "melee attack#attacked an enemy in melee"
+    },
+    {
+     "type": "tag_reference",
+     "name": "dive#dove away from danger or into cover"
+    },
+    {
+     "type": "tag_reference",
+     "name": "uncover exclamation#leapt out of corner to uncover a suspected target"
+    },
+    {
+     "type": "tag_reference",
+     "name": "leap attack#begin a leap attack"
+    },
+    {
+     "type": "tag_reference",
+     "name": "resurrection#arise and return to life"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "tag_reference",
-     "name": "alone"
-    },
-    {
-     "type": "tag_reference",
-     "name": "unscathed"
-    },
-    {
-     "type": "tag_reference",
-     "name": "seriously wounded"
-    },
-    {
-     "type": "tag_reference",
-     "name": "seriously wounded re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "massacre"
-    },
-    {
-     "type": "tag_reference",
-     "name": "massacre re"
-    },
-    {
-     "type": "tag_reference",
-     "name": "rout"
-    },
-    {
-     "type": "tag_reference",
-     "name": "rout re"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "post-combat actions",
+     "definition": "vocalizations that immediately follow combat"
+    },
+    {
+     "type": "tag_reference",
+     "name": "celebration#all enemies defeated"
+    },
+    {
+     "type": "tag_reference",
+     "name": "check body enemy#post-combat checking an enemy's dead body"
+    },
+    {
+     "type": "tag_reference",
+     "name": "check body friend#post-combat checking a friend's dead body"
+    },
+    {
+     "type": "tag_reference",
+     "name": "shooting dead enemy#post-combat shooting an enemy's dead body"
+    },
+    {
+     "type": "tag_reference",
+     "name": "shooting dead enemy player#post-combat shooting an enemy player's dead body"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "explanation",
+     "name": "post-combat chatter",
+     "definition": "vocalizations that immediately follow combat"
+    },
+    {
+     "type": "tag_reference",
+     "name": "alone#post-combat all friends killed"
+    },
+    {
+     "type": "tag_reference",
+     "name": "unscathed#post-combat we were not hurt"
+    },
+    {
+     "type": "tag_reference",
+     "name": "seriously wounded#post-combat we were badly hurt"
+    },
+    {
+     "type": "tag_reference",
+     "name": "seriously wounded re#post-combat replying to a friend who was badly hurt"
+    },
+    {
+     "type": "tag_reference",
+     "name": "massacre#post-combat our friends took heavy casualties"
+    },
+    {
+     "type": "tag_reference",
+     "name": "massacre re#post-combat reply: our friends took heavy casualties"
+    },
+    {
+     "type": "tag_reference",
+     "name": "rout#post-combat our friends kicked alien BLAM!"
+    },
+    {
+     "type": "tag_reference",
+     "name": "rout re#post-combat reply: our friends kicked alien BLAM!"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "pad",
+     "name": "(MAXIMUM_NUMBER_OF_VOCALIZATION_TYPES - NUMBER_OF_VOCALIZATION_TYPES)*sizeof(struct tag_reference)",
      "definition": 752
     },
     {
@@ -921,10 +986,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

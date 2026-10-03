@@ -7,13 +7,13 @@
  "blocks": {
   "tag_collection_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "tag_collection_block_struct"
+   "struct": "tag_collection_block_struct",
+   "max_count_string": "1"
   },
-  "tags_block": {
+  "tag_collection_tag_reference_block": {
    "max_count": 200,
-   "max_count_string": "200",
-   "struct": "tags_block_struct"
+   "struct": "tag_collection_tag_reference_block_struct",
+   "max_count_string": "MAXIMUM_TAGS_PER_TAG_COLLECTION"
   }
  },
  "structs": {
@@ -23,8 +23,8 @@
    "fields": [
     {
      "type": "block",
-     "name": "tags",
-     "definition": "tags_block"
+     "name": "tag references",
+     "definition": "tag_collection_tag_reference_block"
     },
     {
      "type": "terminator",
@@ -32,13 +32,13 @@
     }
    ]
   },
-  "tags_block_struct": {
+  "tag_collection_tag_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "tag_reference",
-     "name": "reference"
+     "name": "tag"
     },
     {
      "type": "terminator",
@@ -46,10 +46,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

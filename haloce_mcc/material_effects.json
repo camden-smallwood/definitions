@@ -2,23 +2,23 @@
  "name": "material_effects",
  "tag": "foot",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "material_effects_block",
  "blocks": {
   "material_effects_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "material_effects_block_struct"
+   "struct": "material_effects_block_struct",
+   "max_count_string": "1"
   },
-  "effects_block": {
+  "material_effect_block": {
    "max_count": 13,
-   "max_count_string": "13",
-   "struct": "effects_block_struct"
+   "struct": "material_effect_block_struct",
+   "max_count_string": "NUMBER_OF_MATERIAL_EFFECT_TYPES"
   },
-  "materials_block": {
+  "material_effect_material_block": {
    "max_count": 33,
-   "max_count_string": "33",
-   "struct": "materials_block_struct"
+   "struct": "material_effect_material_block_struct",
+   "max_count_string": "NUMBER_OF_MATERIAL_TYPES"
   }
  },
  "structs": {
@@ -29,11 +29,11 @@
     {
      "type": "block",
      "name": "effects",
-     "definition": "effects_block"
+     "definition": "material_effect_block"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "32*sizeof(long)",
      "definition": 128
     },
     {
@@ -42,18 +42,18 @@
     }
    ]
   },
-  "effects_block_struct": {
+  "material_effect_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
     {
      "type": "block",
      "name": "materials",
-     "definition": "materials_block"
+     "definition": "material_effect_material_block"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -62,7 +62,7 @@
     }
    ]
   },
-  "materials_block_struct": {
+  "material_effect_material_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 48,
    "fields": [
@@ -76,7 +76,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -85,10 +85,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

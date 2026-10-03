@@ -7,13 +7,13 @@
  "blocks": {
   "virtual_keyboard_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "virtual_keyboard_block_struct"
+   "struct": "virtual_keyboard_block_struct",
+   "max_count_string": "1"
   },
-  "virtual_keys_block": {
+  "virtual_key_block": {
    "max_count": 44,
-   "max_count_string": "44",
-   "struct": "virtual_keys_block_struct"
+   "struct": "virtual_key_block_struct",
+   "max_count_string": "NUMBER_OF_VIRTUAL_KEYS"
   }
  },
  "structs": {
@@ -36,7 +36,7 @@
     {
      "type": "block",
      "name": "virtual keys",
-     "definition": "virtual_keys_block"
+     "definition": "virtual_key_block"
     },
     {
      "type": "terminator",
@@ -44,14 +44,19 @@
     }
    ]
   },
-  "virtual_keys_block_struct": {
+  "virtual_key_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 80,
    "fields": [
     {
      "type": "short_enum",
      "name": "keyboard key",
-     "definition": "keyboard_key_enum"
+     "definition": "keyboard key"
+    },
+    {
+     "type": "explanation",
+     "name": "key codes",
+     "definition": "enter unicode character values as integer numbers"
     },
     {
      "type": "short_integer",
@@ -71,15 +76,15 @@
     },
     {
      "type": "short_integer",
-     "name": "shift caps character"
+     "name": "shift+caps character"
     },
     {
      "type": "short_integer",
-     "name": "shift symbols character"
+     "name": "shift+symbols character"
     },
     {
      "type": "short_integer",
-     "name": "caps symbols character"
+     "name": "caps+symbols character"
     },
     {
      "type": "tag_reference",
@@ -104,9 +109,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "keyboard_key_enum": {
+  "keyboard key": {
    "options": [
     "1",
     "2",
@@ -118,44 +122,41 @@
     "8",
     "9",
     "0",
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "w",
-    "x",
-    "y",
-    "z",
-    "done",
-    "shift",
-    "caps lock",
-    "symbols",
-    "backspace",
-    "left",
-    "right",
-    "space"
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+    "DONE",
+    "SHIFT",
+    "CAPS LOCK",
+    "SYMBOLS",
+    "BACKSPACE",
+    "LEFT",
+    "RIGHT",
+    "SPACE"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

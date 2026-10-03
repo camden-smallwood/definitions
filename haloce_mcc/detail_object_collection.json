@@ -2,18 +2,18 @@
  "name": "detail_object_collection",
  "tag": "dobc",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "detail_object_collection_block",
  "blocks": {
   "detail_object_collection_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "detail_object_collection_block_struct"
+   "struct": "detail_object_collection_block_struct",
+   "max_count_string": "1"
   },
-  "types_block": {
+  "detail_object_type_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "types_block_struct"
+   "struct": "detail_object_type_block_struct",
+   "max_count_string": "MAXIMUM_DETAIL_OBJECT_TYPES_PER_COLLECTION"
   }
  },
  "structs": {
@@ -24,20 +24,20 @@
     {
      "type": "short_enum",
      "name": "collection type",
-     "definition": "collection_type_enum"
+     "definition": "collection type"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "global z offset"
+     "name": "global z offset:applied to all detail objects of in this collection so they don't float above the ground"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(long)*11",
      "definition": 44
     },
     {
@@ -47,11 +47,11 @@
     {
      "type": "block",
      "name": "types",
-     "definition": "types_block"
+     "definition": "detail_object_type_block"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(long)*12",
      "definition": 48
     },
     {
@@ -60,72 +60,69 @@
     }
    ]
   },
-  "types_block_struct": {
+  "detail_object_type_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 96,
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "char_integer",
-     "name": "sequence index"
+     "name": "sequence index:[0,15]"
     },
     {
      "type": "byte_flags",
-     "name": "flags",
-     "definition": "flags_flags"
-    },
-    {
-     "type": "char_integer",
-     "name": "first sprite index"
-    },
-    {
-     "type": "char_integer",
-     "name": "sprite count"
-    },
-    {
-     "type": "real",
-     "name": "color override factor"
+     "name": "type flags",
+     "definition": "type flags"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(byte)*2",
+     "definition": 2
+    },
+    {
+     "type": "real_fraction",
+     "name": "color override factor#fraction of detail object color to use instead of the base map color in the environment:[0,1]"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(long)*2",
      "definition": 8
     },
     {
      "type": "real",
-     "name": "near fade distance"
+     "name": "near fade distance:world units"
     },
     {
      "type": "real",
-     "name": "far fade distance"
+     "name": "far fade distance:world units"
     },
     {
      "type": "real",
-     "name": "size"
+     "name": "size:world units per pixel"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "real_rgb_color",
-     "name": "minimum color"
+     "name": "minimum color:[0,1]"
     },
     {
      "type": "real_rgb_color",
-     "name": "maximum color"
+     "name": "maximum color:[0,1]"
     },
     {
      "type": "argb_color",
-     "name": "ambient color"
+     "name": "ambient color:[0,255]"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(long)*1",
      "definition": 4
     },
     {
@@ -135,24 +132,20 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "collection_type_enum": {
+  "collection type": {
    "options": [
-    "screen facing",
-    "viewer facing"
+    "screen-facing",
+    "viewer-facing"
    ]
   },
-  "flags_flags": {
+  "type flags": {
    "options": [
-    "unused",
-    "unused1",
+    "unused0!",
+    "unused1!",
     "interpolate color in hsv",
-    "more colors"
+    "...more colors"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

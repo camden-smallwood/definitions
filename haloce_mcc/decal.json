@@ -2,13 +2,13 @@
  "name": "decal",
  "tag": "deca",
  "version": 1,
- "flags": 0,
+ "flags": 9,
  "block": "decal_block",
  "blocks": {
   "decal_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "decal_block_struct"
+   "struct": "decal_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -17,67 +17,28 @@
    "size": 268,
    "fields": [
     {
-     "type": "struct",
-     "name": "properties",
-     "definition": "decal_properties_struct"
+     "type": "explanation",
+     "name": "decal",
+     "definition": "A 'compound decal' is a chain of decals which are instantiated simultaneously. Compound decals are created by choosing a <next_decal_in_chain> below. NOTE: Do not attempt to create a circularly linked decal chain, i.e. A->B->C->A! Also, do not reference a decal from an effect if it is not the 'head' of the chain; for example an effect should not instantiate decal B if the chain was A->B->C. Compound decals can have seperate bitmaps, seperate framebuffer blend functions, and can be drawn in seperate layers. In addition, each decal in the chain can either inherit its parent's <radius>, rotation, <color>, <fade>, and <sequence> - or it can randomly choose its own. This behavior is controlled by the 'geometry_inherited_by_next_decal_in_chain' flag, below. \n\nThe decal <type> (or layer) determines the drawing order of the decal with respect to the rest of the environment. Decals in the primary layer are drawn after the environment diffuse texture, hence they affect the already-lit texture of the surface. Decals in the secondary layer are drawn immediately after decals in the primary layer, so they 'cover up' the primary decals. Decals in the 'light' layer are drawn before the environment diffuse texture, hence they affect the accumulated diffuse light and only indirectly affect the lit texture."
     },
-    {
-     "type": "struct",
-     "name": "appearance",
-     "definition": "decal_appearance_struct"
-    },
-    {
-     "type": "struct",
-     "name": "animation",
-     "definition": "decal_animation_struct"
-    },
-    {
-     "type": "struct",
-     "name": "shader",
-     "definition": "decal_shader_struct"
-    },
-    {
-     "type": "real",
-     "name": "maximum sprite extent"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 8
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "decal_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 24,
-   "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_enum",
-     "name": "type",
-     "definition": "type_enum"
+     "name": "type#controls how the decal wraps onto surface geometry",
+     "definition": "type"
     },
     {
      "type": "short_enum",
      "name": "layer",
-     "definition": "layer_enum"
+     "definition": "layer"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -85,115 +46,100 @@
      "name": "next decal in chain"
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "decal_appearance_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 64,
-   "fields": [
-    {
-     "type": "real_bounds",
-     "name": "radius"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 12
+     "type": "explanation",
+     "name": "radius and color",
+     "definition": ""
     },
     {
      "type": "real_bounds",
-     "name": "intensity"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color lower bound"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color upper bound"
+     "name": "radius:world units#0 defaults to 0.125"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "decal_animation_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 104,
-   "fields": [
+     "type": "fraction_bounds",
+     "name": "intensity:[0,1]#1 is fully visible, 0 is invisible"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color lower bounds"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "color upper bounds"
+    },
+    {
+     "type": "pad",
+     "name": "3*sizeof(long)",
+     "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "animation",
+     "definition": ""
+    },
     {
      "type": "short_integer",
      "name": "animation loop frame"
     },
     {
      "type": "short_integer",
-     "name": "animation speed"
+     "name": "animation speed:[1,120] ticks per frame"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
      "type": "real_bounds",
-     "name": "lifetime"
+     "name": "lifetime:seconds"
     },
     {
      "type": "real_bounds",
-     "name": "decay time"
+     "name": "decay time:seconds"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
+     "type": "explanation",
+     "name": "shader",
+     "definition": ""
+    },
+    {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct _shader)",
      "definition": 40
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "decal_shader_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 60,
-   "fields": [
     {
      "type": "short_enum",
      "name": "framebuffer blend function",
-     "definition": "framebuffer_blend_function_enum"
+     "definition": "framebuffer blend function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
@@ -202,8 +148,27 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "5*sizeof(long)",
      "definition": 20
+    },
+    {
+     "type": "explanation",
+     "name": "sprite info",
+     "definition": ""
+    },
+    {
+     "type": "real",
+     "name": "maximum sprite extent:pixels*"
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(word)",
+     "definition": 4
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(long)",
+     "definition": 8
     },
     {
      "type": "terminator",
@@ -212,23 +177,22 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "geometry inherited by next decal in chain",
     "interpolate color in hsv",
-    "more colors",
+    "...more colors",
     "no random rotation",
     "water effect",
-    "editor snap to axis",
-    "editor incremental counter",
+    "SAPIEN- snap to axis",
+    "SAPIEN- incremental counter",
     "animation loop",
     "preserve aspect",
-    "disabled by blood setting"
+    "disabled in remastered by blood setting#In MCC, when the 'blood' setting is switched to off, this will not render in remastered mode"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "scratch",
     "splatter",
@@ -236,16 +200,16 @@
     "painted sign"
    ]
   },
-  "layer_enum": {
+  "layer": {
    "options": [
     "primary",
     "secondary",
     "light",
-    "alpha tested",
+    "alpha-tested",
     "water"
    ]
   },
-  "framebuffer_blend_function_enum": {
+  "framebuffer blend function": {
    "options": [
     "alpha blend",
     "multiply",
@@ -254,11 +218,8 @@
     "subtract",
     "component min",
     "component max",
-    "alpha multiply add"
+    "alpha-multiply add"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

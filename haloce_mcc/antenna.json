@@ -2,18 +2,18 @@
  "name": "antenna",
  "tag": "ant!",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "antenna_block",
  "blocks": {
   "antenna_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "antenna_block_struct"
+   "struct": "antenna_block_struct",
+   "max_count_string": "1"
   },
-  "vertices_block": {
+  "antenna_vertex_block": {
    "max_count": 20,
-   "max_count_string": "20",
-   "struct": "vertices_block_struct"
+   "struct": "antenna_vertex_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_ANTENNA_VERTICES"
   }
  },
  "structs": {
@@ -23,7 +23,7 @@
    "fields": [
     {
      "type": "string",
-     "name": "attachment marker name"
+     "name": "attachment marker name#the marker name where the antenna should be attached"
     },
     {
      "type": "tag_reference",
@@ -35,12 +35,12 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "20*sizeof(long)",
      "definition": 80
     },
     {
-     "type": "real",
-     "name": "spring strength coefficient"
+     "type": "real_fraction",
+     "name": "spring strength coefficient#strength of the spring (larger values make the spring stronger)"
     },
     {
      "type": "real",
@@ -51,18 +51,14 @@
      "name": "cutoff pixels"
     },
     {
-     "type": "real",
-     "name": "length"
-    },
-    {
      "type": "pad",
-     "name": "pad",
-     "definition": 36
+     "name": "10*sizeof(long)",
+     "definition": 40
     },
     {
      "type": "block",
      "name": "vertices",
-     "definition": "vertices_block"
+     "definition": "antenna_vertex_block"
     },
     {
      "type": "terminator",
@@ -70,52 +66,53 @@
     }
    ]
   },
-  "vertices_block_struct": {
+  "antenna_vertex_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
     {
-     "type": "real",
-     "name": "spring strength coefficient"
+     "type": "real_fraction",
+     "name": "spring strength coefficient#strength of the spring (larger values make the spring stronger)"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "angles"
+     "name": "angles#direction toward next vertex"
     },
     {
      "type": "real",
-     "name": "length"
+     "name": "length:world units#distance between this vertex and the next"
     },
     {
      "type": "short_integer",
-     "name": "sequence index"
+     "name": "sequence index#bitmap group sequence index for this vertex's texture"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "real_argb_color",
-     "name": "color"
+     "name": "color#color at this vertex"
     },
     {
      "type": "real_argb_color",
-     "name": "lod color"
+     "name": "LOD color#color at this vertex for the low-LOD line primitives"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "10*sizeof(long)",
      "definition": 40
     },
     {
-     "type": "real_vector_3d",
-     "name": "offset"
+     "type": "pad",
+     "name": "sizeof(real_vector3d)",
+     "definition": 12
     },
     {
      "type": "terminator",
@@ -123,10 +120,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

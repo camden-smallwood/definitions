@@ -2,13 +2,13 @@
  "name": "damage_effect",
  "tag": "jpt!",
  "version": 6,
- "flags": 0,
+ "flags": 8,
  "block": "damage_effect_block",
  "blocks": {
   "damage_effect_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "damage_effect_block_struct"
+   "struct": "damage_effect_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -18,162 +18,68 @@
    "fields": [
     {
      "type": "real_bounds",
-     "name": "radius"
+     "name": "radius:world units"
     },
     {
-     "type": "real",
-     "name": "cutoff scale"
+     "type": "real_fraction",
+     "name": "cutoff scale:[0,1]"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 16
+     "name": "5*sizeof(long)",
+     "definition": 20
     },
     {
-     "type": "pad",
-     "name": "pad",
-     "definition": 4
-    },
-    {
-     "type": "struct",
+     "type": "explanation",
      "name": "screen flash",
-     "definition": "damage_effect_screen_flash_struct"
+     "definition": "There are seven screen flash types:\n\nNONE: DST'= DST\nLIGHTEN: DST'= DST(1 - A) + C\nDARKEN: DST'= DST(1 - A) - C\nMAX: DST'= MAX[DST(1 - C), (C - A)(1-DST)]\nMIN: DST'= MIN[DST(1 - C), (C + A)(1-DST)]\nTINT: DST'= DST(1 - C) + (A*PIN[2C - 1, 0, 1] + A)(1-DST)\nINVERT: DST'= DST(1 - C) + A)\n\nIn the above equations C and A represent the color and alpha of the screen flash, DST represents the color in the framebuffer before the screen flash is applied, and DST' represents the color after the screen flash is applied."
     },
-    {
-     "type": "struct",
-     "name": "low frequency vibrate",
-     "definition": "damage_effect_vibrate_struct"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 8
-    },
-    {
-     "type": "struct",
-     "name": "high frequency vibrate",
-     "definition": "damage_effect_vibrate_struct_2"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 8
-    },
-    {
-     "type": "struct",
-     "name": "temporary camera impulse",
-     "definition": "damage_effect_temporary_camera_impulse_struct"
-    },
-    {
-     "type": "struct",
-     "name": "permanent camera impulse",
-     "definition": "damage_effect_permanent_camera_impulse_struct"
-    },
-    {
-     "type": "struct",
-     "name": "camera shaking",
-     "definition": "damage_effect_camera_shaking_struct"
-    },
-    {
-     "type": "tag_reference",
-     "name": "sound"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 108
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 4
-    },
-    {
-     "type": "struct",
-     "name": "breaking effect",
-     "definition": "damage_effect_breaking_effect_struct"
-    },
-    {
-     "type": "struct",
-     "name": "damage",
-     "definition": "damage_effect_damage_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "damage_effect_screen_flash_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 56,
-   "fields": [
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type"
     },
     {
      "type": "short_enum",
      "name": "priority",
-     "definition": "priority_enum"
+     "definition": "priority"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 8
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 4
+     "name": "3*sizeof(long)",
+     "definition": 12
     },
     {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds"
     },
     {
      "type": "short_enum",
      "name": "fade function",
-     "definition": "fade_function_enum"
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 4
+     "name": "2*sizeof(long)",
+     "definition": 8
+    },
+    {
+     "type": "real_fraction",
+     "name": "maximum intensity:[0,1]"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 4
-    },
-    {
-     "type": "real",
-     "name": "maximum intensity"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -181,218 +87,222 @@
      "name": "color"
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "damage_effect_vibrate_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 12,
-   "fields": [
+     "type": "explanation",
+     "name": "low frequency vibrate",
+     "definition": ""
+    },
     {
-     "type": "real",
-     "name": "frequency"
+     "type": "real_fraction",
+     "name": "frequency:[0,1]"
     },
     {
      "type": "real",
-     "name": "duration"
+     "name": "duration:seconds"
     },
     {
      "type": "short_enum",
      "name": "fade function",
-     "definition": "fade_function_enum"
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "damage_effect_vibrate_struct_2": {
-   "guid": "00000000000000000000000000000000",
-   "size": 12,
-   "fields": [
-    {
-     "type": "real",
-     "name": "frequency"
-    },
-    {
-     "type": "real",
-     "name": "duration"
-    },
-    {
-     "type": "short_enum",
-     "name": "fade function",
-     "definition": "fade_function_enum"
-    },
-    {
      "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "damage_effect_temporary_camera_impulse_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "real",
-     "name": "duration"
-    },
-    {
-     "type": "short_enum",
-     "name": "fade function",
-     "definition": "fade_function_enum"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "angle",
-     "name": "rotation"
-    },
-    {
-     "type": "real",
-     "name": "pushback"
-    },
-    {
-     "type": "real_bounds",
-     "name": "jitter"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "damage_effect_permanent_camera_impulse_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 20,
-   "fields": [
+     "type": "explanation",
+     "name": "high frequency vibrate",
+     "definition": ""
+    },
     {
-     "type": "angle",
-     "name": "angle"
+     "type": "real_fraction",
+     "name": "frequency:[0,1]"
+    },
+    {
+     "type": "real",
+     "name": "duration:seconds"
+    },
+    {
+     "type": "short_enum",
+     "name": "fade function",
+     "definition": "fade function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(long)",
+     "definition": 8
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 12
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "damage_effect_camera_shaking_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 72,
-   "fields": [
-    {
-     "type": "real",
-     "name": "duration"
-    },
-    {
-     "type": "short_enum",
-     "name": "falloff function",
-     "definition": "fade_function_enum"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "real",
-     "name": "random translation"
-    },
-    {
-     "type": "angle",
-     "name": "random rotation"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 8
-    },
-    {
-     "type": "short_enum",
-     "name": "wobble function",
-     "definition": "wobble_function_enum"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "real",
-     "name": "wobble period"
-    },
-    {
-     "type": "real",
-     "name": "wobble weight"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 12
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
+     "type": "explanation",
+     "name": "temporary camera impulse",
+     "definition": ""
+    },
+    {
+     "type": "real",
+     "name": "duration:seconds"
+    },
+    {
+     "type": "short_enum",
+     "name": "fade function",
+     "definition": "fade function"
+    },
+    {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "angle",
+     "name": "rotation:degrees"
+    },
+    {
+     "type": "real",
+     "name": "pushback:world units"
+    },
+    {
+     "type": "real_bounds",
+     "name": "jitter:world units"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "damage_effect_breaking_effect_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 48,
-   "fields": [
+     "type": "pad",
+     "name": "1*sizeof(long)",
+     "definition": 4
+    },
     {
-     "type": "real",
-     "name": "forward velocity"
+     "type": "explanation",
+     "name": "permanent camera impulse",
+     "definition": ""
+    },
+    {
+     "type": "angle",
+     "name": "angle:degrees"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)",
+     "definition": 4
+    },
+    {
+     "type": "pad",
+     "name": "3*sizeof(long)",
+     "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "camera shaking",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "forward radius"
+     "name": "duration:seconds#the effect will last for this duration."
+    },
+    {
+     "type": "short_enum",
+     "name": "falloff function#a function to envelope the effect's magnitude over time",
+     "definition": "fade function"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "real",
+     "name": "random translation:world units#random translation in all directions"
+    },
+    {
+     "type": "angle",
+     "name": "random rotation:degrees#random rotation in all directions"
+    },
+    {
+     "type": "pad",
+     "name": "3*sizeof(long)",
+     "definition": 12
+    },
+    {
+     "type": "short_enum",
+     "name": "wobble function#a function to perturb the effect's behavior over time",
+     "definition": "wobble function"
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
+    },
+    {
+     "type": "real",
+     "name": "wobble function period:seconds"
+    },
+    {
+     "type": "real_fraction",
+     "name": "wobble weight#a value of 0.0 signifies that the wobble function has no effect; a value of 1.0 signifies that the effect will not be felt when the wobble function's value is zero."
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(real)",
+     "definition": 4
+    },
+    {
+     "type": "pad",
+     "name": "5*sizeof(long)",
+     "definition": 20
+    },
+    {
+     "type": "pad",
+     "name": "2*sizeof(long)",
+     "definition": 8
+    },
+    {
+     "type": "explanation",
+     "name": "sound",
+     "definition": ""
+    },
+    {
+     "type": "tag_reference",
+     "name": "sound"
+    },
+    {
+     "type": "pad",
+     "name": "28*sizeof(long)",
+     "definition": 112
+    },
+    {
+     "type": "explanation",
+     "name": "breaking effect",
+     "definition": "Controls particle velocities when a damage effect shatters a materal."
+    },
+    {
+     "type": "real",
+     "name": "forward velocity:world units per second"
+    },
+    {
+     "type": "real",
+     "name": "forward radius:world units"
     },
     {
      "type": "real",
@@ -400,21 +310,16 @@
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 8
+     "name": "3*sizeof(long)",
+     "definition": 12
     },
     {
      "type": "real",
-     "name": "outward velocity"
+     "name": "outward velocity:world units per second"
     },
     {
      "type": "real",
-     "name": "outward radius"
+     "name": "outward radius:world units"
     },
     {
      "type": "real",
@@ -422,230 +327,215 @@
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 8
+     "name": "3*sizeof(long)",
+     "definition": 12
     },
     {
-     "type": "pad",
-     "name": "pad",
-     "definition": 4
+     "type": "explanation",
+     "name": "damage",
+     "definition": ""
     },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "damage_effect_damage_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 220,
-   "fields": [
     {
      "type": "short_enum",
      "name": "side effect",
-     "definition": "side_effect_enum"
+     "definition": "side effect"
     },
     {
      "type": "short_enum",
      "name": "category",
-     "definition": "category_enum"
+     "definition": "category"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real",
-     "name": "AOE core radius"
+     "name": "AOE core radius:world units#if this is area of effect damage"
     },
     {
      "type": "real",
-     "name": "lower bound"
+     "name": "damage lower bound"
     },
     {
      "type": "real_bounds",
-     "name": "upper bound"
+     "name": "damage upper bound"
     },
     {
      "type": "real",
-     "name": "vehicle passthrough penalty"
+     "name": "vehicle passthrough penalty:[0,1]#zero damages passengers in vehicles, one does not"
     },
     {
      "type": "real",
-     "name": "active camouflage damage"
+     "name": "active camouflage damage:[0,1]#how much more visible this damage makes a player who is active camouflaged"
     },
     {
      "type": "real",
-     "name": "stun"
+     "name": "stun:[0,1]#amount of stun added to damaged unit"
     },
     {
      "type": "real",
-     "name": "maximum stun"
+     "name": "maximum stun:[0,1]#damaged unit's stun will never exceed this amount"
     },
     {
      "type": "real",
-     "name": "stun time"
+     "name": "stun time:seconds#duration of stun due to this damage"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
+     "type": "explanation",
+     "name": "scalar vs 3d",
+     "definition": "If you do not enable \"use 3d instantaneous acceleration\", the legacy behavior will be exercised where only the 'i' component is used. However, for determining when to generate involuntary sounds for units, the legacy behavior of only checking 'i' >= 2.0 (UNIT_DAMAGE_FLYING_ACCELERATION) is used for determining if the unit was sent 'flying'. \n\nEnable \"allow any non-zero acceleration value\" to allow negative acceleration values. \n\tNOTE this won't be compatible with 'item' objects and Gearbox networking"
+    },
+    {
      "type": "real_vector_3d",
-     "name": "instantaneous acceleration"
+     "name": "instantaneous acceleration:[0,+inf]"
     },
     {
-     "type": "struct",
-     "name": "modifiers",
-     "definition": "damage_effect_material_modifier_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "damage_effect_material_modifier_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 160,
-   "fields": [
-    {
-     "type": "real",
-     "name": "dirt"
+     "type": "explanation",
+     "name": "damage modifiers",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "sand"
+     "name": "dirt:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "stone"
+     "name": "sand:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "snow"
+     "name": "stone:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "wood"
+     "name": "snow:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "metal hollow"
+     "name": "wood:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "metal thin"
+     "name": "metal (hollow):[0,+inf]"
     },
     {
      "type": "real",
-     "name": "metal thick"
+     "name": "metal (thin):[0,+inf]"
     },
     {
      "type": "real",
-     "name": "rubber"
+     "name": "metal (thick):[0,+inf]"
     },
     {
      "type": "real",
-     "name": "glass"
+     "name": "rubber:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "force field"
+     "name": "glass:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "grunt"
+     "name": "force field:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "hunter armor"
+     "name": "grunt:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "hunter skin"
+     "name": "hunter armor:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "elite"
+     "name": "hunter skin:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "jackal"
+     "name": "elite:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "jackal energy shield"
+     "name": "jackal:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "engineer skin"
+     "name": "jackal energy shield:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "engineer force field"
+     "name": "engineer:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "flood combat form"
+     "name": "engineer force field:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "flood carrier form"
+     "name": "flood combat form:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "cyborg armor"
+     "name": "flood carrier form:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "cyborg energy shield"
+     "name": "cyborg:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "human armor"
+     "name": "cyborg energy shield:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "human skin"
+     "name": "armored human:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "sentinel"
+     "name": "human:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "monitor"
+     "name": "sentinel:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "plastic"
+     "name": "monitor:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "water"
+     "name": "plastic:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "leaves"
+     "name": "water:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "elite energy shield"
+     "name": "leaves:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "ice"
+     "name": "elite energy shield:[0,+inf]"
     },
     {
      "type": "real",
-     "name": "hunter shield"
+     "name": "ice:[0,+inf]"
+    },
+    {
+     "type": "real",
+     "name": "hunter shield:[0,+inf]"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "(MAXIMUM_NUMBER_OF_MATERIAL_TYPES-NUMBER_OF_MATERIAL_TYPES)*sizeof(real)",
      "definition": 28
     },
     {
@@ -655,14 +545,13 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
-    "do not scale damage by distance"
+    "don't scale damage by distance"
    ]
   },
-  "type_enum": {
+  "type": {
    "options": [
     "none",
     "lighten",
@@ -673,14 +562,14 @@
     "tint"
    ]
   },
-  "priority_enum": {
+  "priority": {
    "options": [
     "low",
     "medium",
     "high"
    ]
   },
-  "fade_function_enum": {
+  "fade function": {
    "options": [
     "linear",
     "early",
@@ -690,23 +579,23 @@
     "cosine"
    ]
   },
-  "wobble_function_enum": {
+  "wobble function": {
    "options": [
     "one",
     "zero",
     "cosine",
-    "cosine variable period",
+    "cosine (variable period)",
     "diagonal wave",
-    "diagonal wave variable period",
+    "diagonal wave (variable period)",
     "slide",
-    "slide variable period",
+    "slide (variable period)",
     "noise",
     "jitter",
     "wander",
     "spark"
    ]
   },
-  "side_effect_enum": {
+  "side effect": {
    "options": [
     "none",
     "harmless",
@@ -714,7 +603,7 @@
     "emp"
    ]
   },
-  "category_enum": {
+  "category": {
    "options": [
     "none",
     "falling",
@@ -731,7 +620,7 @@
     "shotgun"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "does not hurt owner",
     "can cause headshots",
@@ -746,15 +635,12 @@
     "only hurts one infection form",
     "can cause multiplayer headshots",
     "infection form pop",
-    "ignore seat scale for dir dmg",
+    "ignore seat scale for dir. dmg*#NOT YET BACKPORTED from H2",
     "forces hard ping",
-    "does not hurt players",
+    "does not hurt players#campaign only",
     "use 3d instantaneous acceleration",
-    "allow any non-zero acceleration value"
+    "allow any non-zero acceleration value#overrides the legacy behavior which only applied accelerations >0.0"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

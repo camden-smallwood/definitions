@@ -2,43 +2,43 @@
  "name": "object",
  "tag": "obje",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "object_block",
  "blocks": {
   "object_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "object_block_struct"
+   "struct": "object_block_struct",
+   "max_count_string": "1"
   },
-  "attachments_block": {
+  "object_attachment_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "attachments_block_struct"
+   "struct": "object_attachment_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_ATTACHMENTS_PER_OBJECT"
   },
-  "widgets_block": {
+  "object_widget_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "widgets_block_struct"
+   "struct": "object_widget_block_struct",
+   "max_count_string": "MAXIMUM_WIDGETS_PER_OBJECT"
   },
-  "functions_block": {
+  "object_function_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "functions_block_struct"
+   "struct": "object_function_block_struct",
+   "max_count_string": "NUMBER_OF_OUTGOING_OBJECT_FUNCTIONS"
   },
-  "change_colors_block": {
+  "object_change_colors": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "change_colors_block_struct"
+   "struct": "object_change_colors_struct",
+   "max_count_string": "NUMBER_OF_OBJECT_CHANGE_COLORS"
   },
-  "permutations_block": {
+  "object_change_color_permutations": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "permutations_block_struct"
+   "struct": "object_change_color_permutations_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_OBJECT_CHANGE_COLOR_PERMUTATIONS"
   },
-  "predicted_resources_block": {
+  "predicted_resource_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "predicted_resources_block_struct"
+   "struct": "predicted_resource_block_struct",
+   "max_count_string": "MAXIMUM_PREDICTED_RESOURCES_PER_LIST"
   }
  },
  "structs": {
@@ -47,35 +47,35 @@
    "size": 380,
    "fields": [
     {
-     "type": "short_enum",
-     "name": "type",
-     "definition": "type_enum"
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
-     "name": "bounding radius"
+     "name": "bounding radius:world units"
     },
     {
-     "type": "real_vector_3d",
+     "type": "real_point_3d",
      "name": "bounding offset"
     },
     {
-     "type": "real_vector_3d",
+     "type": "real_point_3d",
      "name": "origin offset"
     },
     {
      "type": "real",
-     "name": "acceleration scale"
+     "name": "acceleration scale:[0,+inf]#marine 1.0, grunt 1.4, elite 0.9, hunter 0.5, etc."
     },
     {
-     "type": "long_flags",
-     "name": "runtime flags",
-     "definition": "runtime_flags_flags"
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
     },
     {
      "type": "tag_reference",
@@ -87,7 +87,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "40",
      "definition": 40
     },
     {
@@ -108,36 +108,41 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "21*sizeof(long)",
      "definition": 84
     },
     {
      "type": "real",
-     "name": "render bounding radius"
+     "name": "render bounding radius:world units#if set, this radius is used to determine if the object is visible. set it for the pelican."
+    },
+    {
+     "type": "explanation",
+     "name": "export to functions",
+     "definition": ""
     },
     {
      "type": "short_enum",
-     "name": "a in",
-     "definition": "a_in_enum"
+     "name": "A in",
+     "definition": "A in"
     },
     {
      "type": "short_enum",
-     "name": "b in",
-     "definition": "a_in_enum"
+     "name": "B in",
+     "definition": "A in"
     },
     {
      "type": "short_enum",
-     "name": "c in",
-     "definition": "a_in_enum"
+     "name": "C in",
+     "definition": "A in"
     },
     {
      "type": "short_enum",
-     "name": "d in",
-     "definition": "a_in_enum"
+     "name": "D in",
+     "definition": "A in"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "11*sizeof(long)",
      "definition": 44
     },
     {
@@ -151,27 +156,27 @@
     {
      "type": "block",
      "name": "attachments",
-     "definition": "attachments_block"
+     "definition": "object_attachment_block"
     },
     {
      "type": "block",
      "name": "widgets",
-     "definition": "widgets_block"
+     "definition": "object_widget_block"
     },
     {
      "type": "block",
      "name": "functions",
-     "definition": "functions_block"
+     "definition": "object_function_block"
     },
     {
      "type": "block",
      "name": "change colors",
-     "definition": "change_colors_block"
+     "definition": "object_change_colors"
     },
     {
      "type": "block",
-     "name": "predicted resources",
-     "definition": "predicted_resources_block"
+     "name": "predicted resources*!",
+     "definition": "predicted_resource_block"
     },
     {
      "type": "terminator",
@@ -179,13 +184,13 @@
     }
    ]
   },
-  "attachments_block_struct": {
+  "object_attachment_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 72,
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "string",
@@ -194,26 +199,26 @@
     {
      "type": "short_enum",
      "name": "primary scale",
-     "definition": "primary_scale_enum"
+     "definition": "primary scale"
     },
     {
      "type": "short_enum",
      "name": "secondary scale",
-     "definition": "primary_scale_enum"
+     "definition": "primary scale"
     },
     {
      "type": "short_enum",
      "name": "change color",
-     "definition": "change_color_enum"
+     "definition": "change color"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -222,17 +227,17 @@
     }
    ]
   },
-  "widgets_block_struct": {
+  "object_widget_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 32,
    "fields": [
     {
      "type": "tag_reference",
-     "name": "reference"
+     "name": "reference^"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -241,121 +246,111 @@
     }
    ]
   },
-  "functions_block_struct": {
+  "object_function_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 360,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real",
-     "name": "period"
+     "name": "period:seconds#this is the period for the above function (lower values make the function oscillate quickly, higher values make it oscillate slowly)"
     },
     {
      "type": "short_enum",
-     "name": "scale period by",
-     "definition": "scale_period_by_enum"
+     "name": "scale period by#multiply this function by the above period",
+     "definition": "scale period by"
     },
     {
      "type": "short_enum",
      "name": "function",
-     "definition": "function_enum"
+     "definition": "function"
     },
     {
      "type": "short_enum",
-     "name": "scale function by",
-     "definition": "scale_period_by_enum"
+     "name": "scale function by#multiply this function by the result of the above function",
+     "definition": "scale period by"
     },
     {
      "type": "short_enum",
-     "name": "wobble function",
-     "definition": "function_enum"
+     "name": "wobble function#the curve used for the wobble",
+     "definition": "function"
     },
     {
      "type": "real",
-     "name": "wobble period"
+     "name": "wobble period:seconds#the length of time it takes for the magnitude of this function to complete a wobble"
     },
     {
      "type": "real",
-     "name": "wobble magnitude"
+     "name": "wobble magnitude:percent#the amount of random wobble in the magnitude"
     },
     {
-     "type": "real",
-     "name": "square wave threshold"
+     "type": "real_fraction",
+     "name": "square wave threshold#if non-zero, all values above the square wave threshold are snapped to 1.0, and all values below it are snapped to 0.0 to create a square wave."
     },
     {
      "type": "short_integer",
-     "name": "step count"
+     "name": "step count#the number of discrete values to snap to (e.g., a step count of 5 would snap the function to 0.00,0.25,0.50,0.75 or 1.00)"
     },
     {
      "type": "short_enum",
      "name": "map to",
-     "definition": "map_to_enum"
+     "definition": "map to"
     },
     {
      "type": "short_integer",
-     "name": "sawtooth count"
+     "name": "sawtooth count#the number of times this function should repeat (e.g., a sawtooth count of 5 would give the function a value of 1.0 at each of 0.25,0.50,0.75 as well as at 1.0"
     },
     {
      "type": "short_enum",
-     "name": "add",
-     "definition": "scale_period_by_enum"
+     "name": "add#add this function to the final result of all of the above math",
+     "definition": "scale period by"
     },
     {
      "type": "short_enum",
-     "name": "scale result by",
-     "definition": "scale_period_by_enum"
+     "name": "scale result by#multiply this function (from a weapon, vehicle, etc.) final result of all of the above math",
+     "definition": "scale period by"
     },
     {
      "type": "short_enum",
-     "name": "bounds mode",
-     "definition": "bounds_mode_enum"
+     "name": "bounds mode#controls how the bounds, below, are used",
+     "definition": "bounds mode"
     },
     {
-     "type": "real_bounds",
+     "type": "fraction_bounds",
      "name": "bounds"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "turn off with"
+     "type": "short_block_index",
+     "name": "turn off with#if the specified function is off, so is this function",
+     "definition": "object_function_block"
     },
     {
      "type": "real",
-     "name": "scale by"
+     "name": "scale by#applied before clip, ignored if zero"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "63*sizeof(long)",
      "definition": 252
     },
     {
-     "type": "real",
-     "name": "inverse bounds"
-    },
-    {
-     "type": "real",
-     "name": "inverse sawtooth"
-    },
-    {
-     "type": "real",
-     "name": "inverse step"
-    },
-    {
-     "type": "real",
-     "name": "inverse period"
+     "type": "pad",
+     "name": "4*sizeof(real)",
+     "definition": 16
     },
     {
      "type": "string",
@@ -367,24 +362,24 @@
     }
    ]
   },
-  "change_colors_block_struct": {
+  "object_change_colors_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 44,
    "fields": [
     {
      "type": "short_enum",
      "name": "darken by",
-     "definition": "scale_period_by_enum"
+     "definition": "scale period by"
     },
     {
      "type": "short_enum",
      "name": "scale by",
-     "definition": "scale_period_by_enum"
+     "definition": "scale period by"
     },
     {
      "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_3"
+     "name": "scale flags",
+     "definition": "scale flags"
     },
     {
      "type": "real_rgb_color",
@@ -397,7 +392,7 @@
     {
      "type": "block",
      "name": "permutations",
-     "definition": "permutations_block"
+     "definition": "object_change_color_permutations"
     },
     {
      "type": "terminator",
@@ -405,7 +400,7 @@
     }
    ]
   },
-  "permutations_block_struct": {
+  "object_change_color_permutations_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
@@ -427,14 +422,14 @@
     }
    ]
   },
-  "predicted_resources_block_struct": {
+  "predicted_resource_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 8,
    "fields": [
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum_2"
+     "definition": "type"
     },
     {
      "type": "short_integer",
@@ -442,7 +437,7 @@
     },
     {
      "type": "long_integer",
-     "name": "tag"
+     "name": "tag index"
     },
     {
      "type": "terminator",
@@ -451,41 +446,19 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "type_enum": {
-   "options": [
-    "biped",
-    "vehicle",
-    "weapon",
-    "equipment",
-    "garbage",
-    "projectile",
-    "scenery",
-    "device machine",
-    "device control",
-    "device light fixture",
-    "placeholder",
-    "sound scenery"
-   ]
-  },
-  "flags_flags": {
+  "flags": {
    "options": [
     "does not cast shadow",
-    "transparent self occlusion",
+    "transparent self-occlusion",
     "brighter than it should be",
     "not a pathfinding obstacle",
-    "extension of parent",
+    "extension of parent*#NOT YET BACKPORTED from H2",
     "cast shadow by default",
-    "does not have anniversary geometry"
+    "does not have remastered geometry"
    ]
   },
-  "runtime_flags_flags": {
-   "options": [
-    "functions control color scale"
-   ]
-  },
-  "a_in_enum": {
+  "A in": {
    "options": [
     "none",
     "body vitality",
@@ -497,73 +470,73 @@
     "shield stun",
     "recent umbrella shield vitality",
     "umbrella shield stun",
-    "region",
-    "region 1",
-    "region 2",
-    "region 3",
-    "region 4",
-    "region 5",
-    "region 6",
-    "region 7",
+    "region #00 damage",
+    "region #01 damage",
+    "region #02 damage",
+    "region #03 damage",
+    "region #04 damage",
+    "region #05 damage",
+    "region #06 damage",
+    "region #07 damage",
     "alive",
     "compass"
    ]
   },
-  "primary_scale_enum": {
+  "primary scale": {
    "options": [
     "none",
-    "a out",
-    "b out",
-    "c out",
-    "d out"
+    "A out",
+    "B out",
+    "C out",
+    "D out"
    ]
   },
-  "change_color_enum": {
+  "change color": {
    "options": [
     "none",
-    "a",
-    "b",
-    "c",
-    "d"
+    "A",
+    "B",
+    "C",
+    "D"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
-    "invert",
+    "invert#result of function is one minus actual result",
     "additive",
-    "always active"
+    "always active#function does not deactivate when at or below lower bound"
    ]
   },
-  "scale_period_by_enum": {
+  "scale period by": {
    "options": [
     "none",
-    "a in",
-    "b in",
-    "c in",
-    "d in",
-    "a out",
-    "b out",
-    "c out",
-    "d out"
+    "A in",
+    "B in",
+    "C in",
+    "D in",
+    "A out",
+    "B out",
+    "C out",
+    "D out"
    ]
   },
-  "function_enum": {
+  "function": {
    "options": [
     "one",
     "zero",
     "cosine",
-    "cosine variable period",
+    "cosine (variable period)",
     "diagonal wave",
-    "diagonal wave variable period",
+    "diagonal wave (variable period)",
     "slide",
-    "slide variable period",
+    "slide (variable period)",
     "noise",
     "jitter",
     "wander",
     "spark"
    ]
   },
-  "map_to_enum": {
+  "map to": {
    "options": [
     "linear",
     "early",
@@ -573,27 +546,24 @@
     "cosine"
    ]
   },
-  "bounds_mode_enum": {
+  "bounds mode": {
    "options": [
     "clip",
     "clip and normalize",
     "scale to fit"
    ]
   },
-  "flags_flags_3": {
+  "scale flags": {
    "options": [
-    "blend in hsv",
-    "more colors"
+    "blend in hsv#blends colors in hsv rather than rgb space",
+    "...more colors#blends colors through more hues (goes the long way around the color wheel)"
    ]
   },
-  "type_enum_2": {
+  "type": {
    "options": [
     "bitmap",
     "sound"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

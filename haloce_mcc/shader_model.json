@@ -2,13 +2,14 @@
  "name": "shader_model",
  "tag": "soso",
  "version": 2,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": "shdr",
  "block": "shader_model_block",
  "blocks": {
   "shader_model_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "shader_model_block_struct"
+   "struct": "shader_model_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -18,202 +19,86 @@
    "fields": [
     {
      "type": "struct",
-     "name": "radiosity",
-     "definition": "shader_radiosity_properties_struct"
+     "name": "shader",
+     "definition": "shader_block_struct"
     },
     {
-     "type": "struct",
-     "name": "physics",
-     "definition": "shader_physics_properties_struct"
+     "type": "explanation",
+     "name": "model shader",
+     "definition": "Setting <true atmospheric fog> enables per-pixel atmospheric fog but disables point/spot lights, planar fog, and the ability to control the atmospheric fog density for this shader."
     },
-    {
-     "type": "struct",
-     "name": "properties",
-     "definition": "shader_model_properties_struct"
-    },
-    {
-     "type": "struct",
-     "name": "change color",
-     "definition": "shader_model_change_color_struct"
-    },
-    {
-     "type": "struct",
-     "name": "self-illumination",
-     "definition": "shader_model_self_illumination_struct"
-    },
-    {
-     "type": "struct",
-     "name": "maps",
-     "definition": "shader_model_maps_struct"
-    },
-    {
-     "type": "struct",
-     "name": "texture scrolling animation",
-     "definition": "shader_model_texture_scrolling_animation_struct"
-    },
-    {
-     "type": "struct",
-     "name": "reflection",
-     "definition": "shader_model_reflection_struct"
-    },
-    {
-     "type": "struct",
-     "name": "bullshit",
-     "definition": "shader_model_bullshit_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_radiosity_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
-    },
-    {
-     "type": "short_enum",
-     "name": "detail level",
-     "definition": "detail_level_enum"
-    },
-    {
-     "type": "real",
-     "name": "power"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color of emitted light"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "tint color"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_physics_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "short_enum",
-     "name": "material type",
-     "definition": "material_type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "type"
+     "definition": "flags_3"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_model_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 36,
-   "fields": [
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags_2"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
-     "type": "real",
-     "name": "translucency"
+     "type": "real_fraction",
+     "name": "translucency#amount of light that can illuminate the shader from behind"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_model_change_color_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
+     "type": "explanation",
+     "name": "change color",
+     "definition": "Change color is used to recolor the diffuse map, it affects pixels based on the BLUE channel of the multipurpose map."
+    },
     {
      "type": "short_enum",
      "name": "change color source",
-     "definition": "change_color_source_enum"
+     "definition": "change color source"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_model_self_illumination_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 48,
-   "fields": [
+     "type": "explanation",
+     "name": "self-illumination",
+     "definition": "Self-illumination adds diffuse light to pixels based on the GREEN channel of the multipurpose map. The external self-illumination color referenced by <color source> is modulated by the self-illumination animation."
+    },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_4"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "short_enum",
      "name": "color source",
-     "definition": "change_color_source_enum"
+     "definition": "change color source"
     },
     {
      "type": "short_enum",
      "name": "animation function",
-     "definition": "animation_function_enum"
+     "definition": "animation function"
     },
     {
      "type": "real",
-     "name": "animation period"
+     "name": "animation period:seconds"
     },
     {
      "type": "real_rgb_color",
@@ -225,26 +110,21 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_model_maps_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 96,
-   "fields": [
-    {
-     "type": "real",
-     "name": "map u scale"
+     "type": "explanation",
+     "name": "maps|AABBCC",
+     "definition": "Base map alpha is used for alpha-testing.\n\nMultipurpose map is used for the following:\n* BLUE: specular reflection mask (modulates reflections)\n* GREEN: self-illumination mask (adds to diffuse light)\n* ALPHA: primary change color mask (recolors diffuse map)\n* RED: auxiliary mask\n\nMultipurpose map is used for the following (if <OG Xbox channel order> flag is set):\n* RED: specular reflection mask (modulates reflections)\n* GREEN: self-illumination mask (adds to diffuse light)\n* BLUE: primary change color mask (recolors diffuse map)\n* ALPHA: auxiliary mask\n\nNote that when DXT1 compressed color-key textures are used for the multipurpose map (as they should be normally), the alpha channel is 1-bit and any non-zero alpha pixels must have zero-color, therefore the secondary change color mask cannot affect pixels already affected by any of the other channels.\n\nDetail map affects diffuse map, and optionally affects reflection if <detail after reflection> flag is set."
     },
     {
      "type": "real",
-     "name": "map v scale"
+     "name": "map u-scale#0 defaults to 1; scales all 2D maps simultaneously"
+    },
+    {
+     "type": "real",
+     "name": "map v-scale#0 defaults to 1; scales all 2D maps simultaneously"
     },
     {
      "type": "tag_reference",
@@ -252,7 +132,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -261,22 +141,22 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
      "type": "short_enum",
-     "name": "detail function",
-     "definition": "detail_function_enum"
+     "name": "detail function#controls how detail map is applied to diffuse map",
+     "definition": "detail function"
     },
     {
      "type": "short_enum",
-     "name": "detail mask",
-     "definition": "detail_mask_enum"
+     "name": "detail mask#controls how detail map is masked",
+     "definition": "detail mask"
     },
     {
      "type": "real",
-     "name": "detail map scale"
+     "name": "detail map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -284,178 +164,144 @@
     },
     {
      "type": "real",
-     "name": "detail map v scale"
+     "name": "detail map v-scale#0 defaults to 1 (applied on top of detail map scale above)"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_model_texture_scrolling_animation_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 64,
-   "fields": [
-    {
-     "type": "short_enum",
-     "name": "u animation source",
-     "definition": "u_animation_source_enum"
+     "type": "explanation",
+     "name": "texture scrolling animation",
+     "definition": "Scrolls all 2D maps simultaneously."
     },
     {
      "type": "short_enum",
-     "name": "u animation function",
-     "definition": "animation_function_enum"
-    },
-    {
-     "type": "real",
-     "name": "u animation period"
-    },
-    {
-     "type": "real",
-     "name": "u animation phase"
-    },
-    {
-     "type": "real",
-     "name": "u animation scale"
+     "name": "u-animation source",
+     "definition": "u-animation source"
     },
     {
      "type": "short_enum",
-     "name": "v animation source",
-     "definition": "u_animation_source_enum"
+     "name": "u-animation function",
+     "definition": "animation function"
+    },
+    {
+     "type": "real",
+     "name": "u-animation period:seconds#0 defaults to 1"
+    },
+    {
+     "type": "real",
+     "name": "u-animation phase"
+    },
+    {
+     "type": "real",
+     "name": "u-animation scale:repeats#0 defaults to 1"
     },
     {
      "type": "short_enum",
-     "name": "v animation function",
-     "definition": "animation_function_enum"
-    },
-    {
-     "type": "real",
-     "name": "v animation period"
-    },
-    {
-     "type": "real",
-     "name": "v animation phase"
-    },
-    {
-     "type": "real",
-     "name": "v animation scale"
+     "name": "v-animation source",
+     "definition": "u-animation source"
     },
     {
      "type": "short_enum",
-     "name": "rotation animation source",
-     "definition": "u_animation_source_enum"
+     "name": "v-animation function",
+     "definition": "animation function"
+    },
+    {
+     "type": "real",
+     "name": "v-animation period:seconds#0 defaults to 1"
+    },
+    {
+     "type": "real",
+     "name": "v-animation phase"
+    },
+    {
+     "type": "real",
+     "name": "v-animation scale:repeats#0 defaults to 1"
     },
     {
      "type": "short_enum",
-     "name": "rotation animation function",
-     "definition": "animation_function_enum"
+     "name": "rotation-animation source",
+     "definition": "u-animation source"
+    },
+    {
+     "type": "short_enum",
+     "name": "rotation-animation function",
+     "definition": "animation function"
     },
     {
      "type": "real",
-     "name": "rotation animation period"
+     "name": "rotation-animation period:seconds#0 defaults to 1"
     },
     {
      "type": "real",
-     "name": "rotation animation phase"
+     "name": "rotation-animation phase"
     },
     {
      "type": "real",
-     "name": "rotation animation scale"
+     "name": "rotation-animation scale:degrees#0 defaults to 360"
     },
     {
      "type": "real_point_2d",
-     "name": "rotation animation center"
+     "name": "rotation-animation center"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_model_reflection_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 72,
-   "fields": [
-    {
-     "type": "real",
-     "name": "falloff distance"
+     "type": "explanation",
+     "name": "reflection properties",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "cutoff distance"
+     "name": "reflection falloff distance:world units#distance at which the reflection begins to fade out"
     },
     {
-     "type": "struct",
-     "name": "cube map properties",
-     "definition": "shader_specular_properties_struct"
+     "type": "real",
+     "name": "reflection cutoff distance:world units#distance at which the reflection fades out entirely (0 means no cutoff)"
+    },
+    {
+     "type": "real_fraction",
+     "name": "perpendicular brightness:[0,1]#reflection brightness when viewed perpendicularly"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "perpendicular tint color#reflection tint color when viewed perpendicularly"
+    },
+    {
+     "type": "real_fraction",
+     "name": "parallel brightness:[0,1]#reflection brightness when viewed at a glancing angle"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "parallel tint color#reflection tint color when viewed at a glancing angle"
     },
     {
      "type": "tag_reference",
-     "name": "cube map"
+     "name": "reflection cube map"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_specular_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "real",
-     "name": "perpendicular brightness"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "perpendicular tint color"
-    },
-    {
-     "type": "real",
-     "name": "parallel brightness"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "parallel tint color"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_model_bullshit_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 52,
-   "fields": [
-    {
-     "type": "real",
-     "name": "bullshit"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real)",
+     "definition": 4
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
+    },
+    {
+     "type": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -465,132 +311,76 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
-   "options": [
-    "simple parameterization",
-    "ignore normals",
-    "transparent lit"
-   ]
-  },
-  "detail_level_enum": {
-   "options": [
-    "high",
-    "medium",
-    "low",
-    "turd"
-   ]
-  },
-  "material_type_enum": {
-   "options": [
-    "dirt",
-    "sand",
-    "stone",
-    "snow",
-    "wood",
-    "metal hollow",
-    "metal thin",
-    "metal thick",
-    "rubber",
-    "glass",
-    "force field",
-    "grunt",
-    "hunter armor",
-    "hunter skin",
-    "elite",
-    "jackal",
-    "jackal energy shield",
-    "engineer skin",
-    "engineer force field",
-    "flood combat form",
-    "flood carrier form",
-    "cyborg armor",
-    "cyborg energy shield",
-    "human armor",
-    "human skin",
-    "sentinel",
-    "monitor",
-    "plastic",
-    "water",
-    "leaves",
-    "elite energy shield",
-    "ice",
-    "hunter shield"
-   ]
-  },
-  "flags_flags_2": {
+  "flags_3": {
    "options": [
     "detail after reflection",
-    "two sided",
-    "not alpha tested",
-    "alpha blended decal",
+    "two-sided",
+    "not alpha-tested",
+    "alpha-blended decal",
     "true atmospheric fog",
-    "disable two sided culling",
-    "use xbox multipurpose channel order"
+    "disable two-sided culling",
+    "multipurpose map uses OG Xbox channel order"
    ]
   },
-  "change_color_source_enum": {
+  "change color source": {
    "options": [
     "none",
-    "a",
-    "b",
-    "c",
-    "d"
+    "A",
+    "B",
+    "C",
+    "D"
    ]
   },
-  "flags_flags_3": {
+  "flags_4": {
    "options": [
     "no random phase"
    ]
   },
-  "animation_function_enum": {
+  "animation function": {
    "options": [
     "one",
     "zero",
     "cosine",
-    "cosine variable period",
+    "cosine (variable period)",
     "diagonal wave",
-    "diagonal wave variable period",
+    "diagonal wave (variable period)",
     "slide",
-    "slide variable period",
+    "slide (variable period)",
     "noise",
     "jitter",
     "wander",
     "spark"
    ]
   },
-  "detail_function_enum": {
+  "detail function": {
    "options": [
-    "double biased multiply",
+    "double/biased multiply",
     "multiply",
-    "double biased add"
+    "double/biased add"
    ]
   },
-  "detail_mask_enum": {
+  "detail mask": {
    "options": [
     "none",
     "reflection mask inverse",
     "reflection mask",
-    "self illumination mask inverse",
-    "self illumination mask",
-    "change color mask inverse",
-    "change color mask",
-    "auxiliary mask inverse",
-    "auxiliary mask"
+    "self-illumination mask inverse",
+    "self-illumination mask",
+    "change-color mask inverse",
+    "change-color mask",
+    "multipurpose map alpha inverse",
+    "multipurpose map alpha"
    ]
   },
-  "u_animation_source_enum": {
+  "u-animation source": {
    "options": [
     "none",
-    "a out",
-    "b out",
-    "c out",
-    "d out"
+    "A out",
+    "B out",
+    "C out",
+    "D out"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

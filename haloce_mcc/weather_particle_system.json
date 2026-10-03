@@ -2,18 +2,18 @@
  "name": "weather_particle_system",
  "tag": "rain",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "weather_particle_system_block",
  "blocks": {
   "weather_particle_system_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "weather_particle_system_block_struct"
+   "struct": "weather_particle_system_block_struct",
+   "max_count_string": "1"
   },
-  "particle_types_block": {
+  "weather_particle_type_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "particle_types_block_struct"
+   "struct": "weather_particle_type_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_WEATHER_PARTICLE_TYPES"
   }
  },
  "structs": {
@@ -24,17 +24,17 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
      "type": "block",
      "name": "particle types",
-     "definition": "particle_types_block"
+     "definition": "weather_particle_type_block"
     },
     {
      "type": "terminator",
@@ -42,59 +42,59 @@
     }
    ]
   },
-  "particle_types_block_struct": {
+  "weather_particle_type_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 604,
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real",
-     "name": "fade in start distance"
+     "name": "fade-in start distance:world units#Particles begin to fade into visibility beyond this distance"
     },
     {
      "type": "real",
-     "name": "fade in end distance"
+     "name": "fade-in end distance:world units#Particles become fully visible beyond this distance"
     },
     {
      "type": "real",
-     "name": "fade out start distance"
+     "name": "fade-out start distance:world units#Particles begin to fade out of visibility beyond this distance"
     },
     {
      "type": "real",
-     "name": "fade out end distance"
+     "name": "fade-out end distance:world units#Particles become fully invisible beyond this distance"
     },
     {
      "type": "real",
-     "name": "fade in start height"
+     "name": "fade-in start height:world units#Particles begin to fade into visibility above this height"
     },
     {
      "type": "real",
-     "name": "fade in end height"
+     "name": "fade-in end height:world units#Particles become fully visible above this height"
     },
     {
      "type": "real",
-     "name": "fade out start height"
+     "name": "fade-out start height:world units#Particles begin to fade out of visibility above this height"
     },
     {
      "type": "real",
-     "name": "fade out end height"
+     "name": "fade-out end height:world units#Particles become fully invisible above this height"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "24*sizeof(long)",
      "definition": 96
     },
     {
      "type": "real_bounds",
-     "name": "particle count"
+     "name": "particle count:particles per cubic world unit"
     },
     {
      "type": "tag_reference",
@@ -102,7 +102,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -110,7 +110,7 @@
      "name": "acceleration magnitude"
     },
     {
-     "type": "real",
+     "type": "real_fraction",
      "name": "acceleration turning rate"
     },
     {
@@ -119,24 +119,24 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
      "type": "real_bounds",
-     "name": "particle radius"
+     "name": "particle radius:world units"
     },
     {
      "type": "real_bounds",
-     "name": "animation rate"
+     "name": "animation rate:frames per second"
     },
     {
      "type": "angle_bounds",
-     "name": "rotation rate"
+     "name": "rotation rate:degrees per second"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -148,13 +148,14 @@
      "name": "color upper bound"
     },
     {
-     "type": "real",
-     "name": "sprite size"
+     "type": "pad",
+     "name": "16*sizeof(long)",
+     "definition": 64
     },
     {
-     "type": "pad",
-     "name": "pad",
-     "definition": 60
+     "type": "explanation",
+     "name": "SHADER",
+     "definition": ""
     },
     {
      "type": "tag_reference",
@@ -163,169 +164,48 @@
     {
      "type": "short_enum",
      "name": "render mode",
-     "definition": "render_mode_enum"
+     "definition": "render mode"
     },
     {
      "type": "short_enum",
-     "name": "render direction source",
-     "definition": "render_direction_source_enum"
+     "name": "render direction source#Render modes that depend on an direction will use this vector.",
+     "definition": "render direction source"
     },
     {
-     "type": "struct",
-     "name": "shader",
-     "definition": "shader_effect_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_effect_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 180,
-   "fields": [
-    {
-     "type": "struct",
-     "name": "shader properties",
-     "definition": "shader_effect_properties_struct"
-    },
-    {
-     "type": "struct",
-     "name": "secondary map",
-     "definition": "shader_effect_secondary_map_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_effect_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 76,
-   "fields": [
-    {
-     "type": "struct",
-     "name": "shader",
-     "definition": "shader_struct"
+     "type": "pad",
+     "name": "sizeof(struct _shader)",
+     "definition": 40
     },
     {
      "type": "word_flags",
      "name": "shader flags",
-     "definition": "shader_flags_flags"
+     "definition": "shader flags"
     },
     {
      "type": "short_enum",
      "name": "framebuffer blend function",
-     "definition": "framebuffer_blend_function_enum"
+     "definition": "framebuffer blend function"
     },
     {
      "type": "short_enum",
      "name": "framebuffer fade mode",
-     "definition": "framebuffer_fade_mode_enum"
+     "definition": "framebuffer fade mode"
     },
     {
      "type": "word_flags",
      "name": "map flags",
-     "definition": "map_flags_flags"
+     "definition": "map flags"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 40,
-   "fields": [
-    {
-     "type": "struct",
-     "name": "radiosity",
-     "definition": "shader_radiosity_properties_struct"
+     "type": "explanation",
+     "name": "Secondary Map",
+     "definition": "Optional multitextured second map"
     },
-    {
-     "type": "struct",
-     "name": "physics",
-     "definition": "shader_physics_properties_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_radiosity_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags_3"
-    },
-    {
-     "type": "short_enum",
-     "name": "detail level",
-     "definition": "detail_level_enum"
-    },
-    {
-     "type": "real",
-     "name": "power"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color of emitted light"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "tint color"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_physics_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "short_enum",
-     "name": "material type",
-     "definition": "material_type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "type"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_effect_secondary_map_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 104,
-   "fields": [
     {
      "type": "tag_reference",
      "name": "bitmap"
@@ -333,86 +213,86 @@
     {
      "type": "short_enum",
      "name": "anchor",
-     "definition": "anchor_enum"
+     "definition": "anchor"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "map_flags_flags"
+     "definition": "map flags"
     },
     {
      "type": "short_enum",
-     "name": "u animation source",
-     "definition": "u_animation_source_enum"
+     "name": "u-animation source",
+     "definition": "u-animation source"
     },
     {
      "type": "short_enum",
-     "name": "u animation function",
-     "definition": "u_animation_function_enum"
+     "name": "u-animation function",
+     "definition": "u-animation function"
     },
     {
      "type": "real",
-     "name": "u animation period"
+     "name": "u-animation period:seconds#0 defaults to 1"
     },
     {
      "type": "real",
-     "name": "u animation phase"
+     "name": "u-animation phase"
     },
     {
      "type": "real",
-     "name": "u animation scale"
+     "name": "u-animation scale:repeats#0 defaults to 1"
     },
     {
      "type": "short_enum",
-     "name": "v animation source",
-     "definition": "u_animation_source_enum"
+     "name": "v-animation source",
+     "definition": "u-animation source"
     },
     {
      "type": "short_enum",
-     "name": "v animation function",
-     "definition": "u_animation_function_enum"
+     "name": "v-animation function",
+     "definition": "u-animation function"
     },
     {
      "type": "real",
-     "name": "v animation period"
+     "name": "v-animation period:seconds#0 defaults to 1"
     },
     {
      "type": "real",
-     "name": "v animation phase"
+     "name": "v-animation phase"
     },
     {
      "type": "real",
-     "name": "v animation scale"
+     "name": "v-animation scale:repeats#0 defaults to 1"
     },
     {
      "type": "short_enum",
-     "name": "rotation animation source",
-     "definition": "u_animation_source_enum"
+     "name": "rotation-animation source",
+     "definition": "u-animation source"
     },
     {
      "type": "short_enum",
-     "name": "rotation animation function",
-     "definition": "u_animation_function_enum"
+     "name": "rotation-animation function",
+     "definition": "u-animation function"
     },
     {
      "type": "real",
-     "name": "rotation animation period"
+     "name": "rotation-animation period:seconds#0 defaults to 1"
     },
     {
      "type": "real",
-     "name": "rotation animation phase"
+     "name": "rotation-animation phase"
     },
     {
      "type": "real",
-     "name": "rotation animation scale"
+     "name": "rotation-animation scale:degrees#0 defaults to 360"
     },
     {
      "type": "real_point_2d",
-     "name": "rotation animation center"
+     "name": "rotation-animation center"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -421,7 +301,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
@@ -431,93 +311,38 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
-   "options": [
-    "unused"
-   ]
+  "flags": {
+   "options": []
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "interpolate colors in hsv",
-    "along long hue path",
+    "... along long hue path",
     "random rotation"
    ]
   },
-  "render_mode_enum": {
+  "render mode": {
    "options": [
     "screen facing",
     "parallel to direction",
     "perpendicular to direction"
    ]
   },
-  "render_direction_source_enum": {
+  "render direction source": {
    "options": [
     "from velocity",
     "from acceleration"
    ]
   },
-  "flags_flags_3": {
-   "options": [
-    "simple parameterization",
-    "ignore normals",
-    "transparent lit"
-   ]
-  },
-  "detail_level_enum": {
-   "options": [
-    "high",
-    "medium",
-    "low",
-    "turd"
-   ]
-  },
-  "material_type_enum": {
-   "options": [
-    "dirt",
-    "sand",
-    "stone",
-    "snow",
-    "wood",
-    "metal hollow",
-    "metal thin",
-    "metal thick",
-    "rubber",
-    "glass",
-    "force field",
-    "grunt",
-    "hunter armor",
-    "hunter skin",
-    "elite",
-    "jackal",
-    "jackal energy shield",
-    "engineer skin",
-    "engineer force field",
-    "flood combat form",
-    "flood carrier form",
-    "cyborg armor",
-    "cyborg energy shield",
-    "human armor",
-    "human skin",
-    "sentinel",
-    "monitor",
-    "plastic",
-    "water",
-    "leaves",
-    "elite energy shield",
-    "ice",
-    "hunter shield"
-   ]
-  },
-  "shader_flags_flags": {
+  "shader flags": {
    "options": [
     "sort bias",
     "nonlinear tint",
-    "dont overdraw fp weapon"
+    "don't overdraw fp weapon"
    ]
   },
-  "framebuffer_blend_function_enum": {
+  "framebuffer blend function": {
    "options": [
     "alpha blend",
     "multiply",
@@ -526,55 +351,52 @@
     "subtract",
     "component min",
     "component max",
-    "alpha multiply add"
+    "alpha-multiply add"
    ]
   },
-  "framebuffer_fade_mode_enum": {
+  "framebuffer fade mode": {
    "options": [
     "none",
     "fade when perpendicular",
     "fade when parallel"
    ]
   },
-  "map_flags_flags": {
+  "map flags": {
    "options": [
     "unfiltered"
    ]
   },
-  "anchor_enum": {
+  "anchor": {
    "options": [
     "with primary",
     "with screen space",
     "zsprite"
    ]
   },
-  "u_animation_source_enum": {
+  "u-animation source": {
    "options": [
     "none",
-    "a out",
-    "b out",
-    "c out",
-    "d out"
+    "A out",
+    "B out",
+    "C out",
+    "D out"
    ]
   },
-  "u_animation_function_enum": {
+  "u-animation function": {
    "options": [
     "one",
     "zero",
     "cosine",
-    "cosine variable period",
+    "cosine (variable period)",
     "diagonal wave",
-    "diagonal wave variable period",
+    "diagonal wave (variable period)",
     "slide",
-    "slide variable period",
+    "slide (variable period)",
     "noise",
     "jitter",
     "wander",
     "spark"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

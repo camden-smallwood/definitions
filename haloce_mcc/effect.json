@@ -2,33 +2,33 @@
  "name": "effect",
  "tag": "effe",
  "version": 4,
- "flags": 0,
+ "flags": 9,
  "block": "effect_block",
  "blocks": {
   "effect_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "effect_block_struct"
+   "struct": "effect_block_struct",
+   "max_count_string": "1"
   },
-  "locations_block": {
+  "effect_event_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "locations_block_struct"
+   "struct": "effect_event_block_struct",
+   "max_count_string": "MAXIMUM_EFFECT_EVENTS"
   },
-  "events_block": {
+  "effect_part_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "events_block_struct"
+   "struct": "effect_part_block_struct",
+   "max_count_string": "MAXIMUM_EFFECT_PARTS_PER_EVENT"
   },
-  "parts_block": {
+  "effect_locations_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "parts_block_struct"
+   "struct": "effect_locations_block_struct",
+   "max_count_string": "MAXIMUM_EFFECT_LOCATIONS"
   },
-  "particles_block": {
+  "effect_particles_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "particles_block_struct"
+   "struct": "effect_particles_block_struct",
+   "max_count_string": "MAXIMUM_EFFECT_PARTICLES_PER_EVENT"
   }
  },
  "structs": {
@@ -39,34 +39,32 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
-     "type": "short_integer",
-     "name": "loop start event"
+     "type": "short_block_index",
+     "name": "loop start event",
+     "definition": "effect_event_block"
     },
     {
-     "type": "short_integer",
-     "name": "loop stop event"
-    },
-    {
-     "type": "real",
-     "name": "maximum damage radius"
+     "type": "short_block_index",
+     "name": "loop stop event",
+     "definition": "effect_event_block"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 28
+     "name": "8*sizeof(real)",
+     "definition": 32
     },
     {
      "type": "block",
      "name": "locations",
-     "definition": "locations_block"
+     "definition": "effect_locations_block"
     },
     {
      "type": "block",
      "name": "events",
-     "definition": "events_block"
+     "definition": "effect_event_block"
     },
     {
      "type": "terminator",
@@ -74,55 +72,41 @@
     }
    ]
   },
-  "locations_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "string",
-     "name": "marker name"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "events_block_struct": {
+  "effect_event_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
-     "type": "real",
-     "name": "skip fraction"
+     "type": "real_fraction",
+     "name": "skip fraction#chance that this event will be skipped entirely"
     },
     {
      "type": "real_bounds",
-     "name": "delay bounds"
+     "name": "delay bounds:seconds#delay before this event takes place"
     },
     {
      "type": "real_bounds",
-     "name": "duration bounds"
+     "name": "duration bounds:seconds#duration of this event"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "5*sizeof(real)",
      "definition": 20
     },
     {
      "type": "block",
      "name": "parts",
-     "definition": "parts_block"
+     "definition": "effect_part_block"
     },
     {
      "type": "block",
      "name": "particles",
-     "definition": "particles_block"
+     "definition": "effect_particles_block"
     },
     {
      "type": "terminator",
@@ -130,58 +114,55 @@
     }
    ]
   },
-  "parts_block_struct": {
+  "effect_part_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 104,
    "fields": [
     {
      "type": "short_enum",
      "name": "create in",
-     "definition": "create_in_enum"
+     "definition": "create in"
     },
     {
      "type": "short_enum",
      "name": "violence mode",
-     "definition": "violence_mode_enum"
+     "definition": "violence mode"
     },
     {
-     "type": "short_integer",
-     "name": "location"
+     "type": "short_block_index",
+     "name": "location",
+     "definition": "effect_locations_block"
     },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 12
-    },
-    {
-     "type": "tag",
-     "name": "type identifier"
+     "name": "4*sizeof(long)",
+     "definition": 16
     },
     {
      "type": "tag_reference",
-     "name": "type"
+     "name": "type^"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
      "type": "real_bounds",
-     "name": "velocity bounds"
+     "name": "velocity bounds:world units per second#initial velocity along the location's forward"
     },
     {
      "type": "angle",
-     "name": "velocity cone angle"
+     "name": "velocity cone angle:degrees#initial velocity will be inside the cone defined by this angle."
     },
     {
      "type": "angle_bounds",
-     "name": "angular velocity bounds"
+     "name": "angular velocity bounds:degrees per second"
     },
     {
      "type": "real_bounds",
@@ -189,18 +170,23 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
-     "type": "long_flags",
-     "name": "a scales values",
-     "definition": "a_scales_values_flags"
+     "type": "explanation",
+     "name": "SCALE MODIFIERS",
+     "definition": ""
     },
     {
      "type": "long_flags",
-     "name": "b scales values",
-     "definition": "a_scales_values_flags"
+     "name": "A scales values:",
+     "definition": "A scales values"
+    },
+    {
+     "type": "long_flags",
+     "name": "B scales values:",
+     "definition": "A scales values"
     },
     {
      "type": "terminator",
@@ -208,112 +194,128 @@
     }
    ]
   },
-  "particles_block_struct": {
+  "effect_locations_block_struct": {
+   "guid": "00000000000000000000000000000000",
+   "size": 32,
+   "fields": [
+    {
+     "type": "string",
+     "name": "marker name^"
+    },
+    {
+     "type": "terminator",
+     "name": null
+    }
+   ]
+  },
+  "effect_particles_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 232,
    "fields": [
     {
      "type": "short_enum",
      "name": "create in",
-     "definition": "create_in_enum"
+     "definition": "create in"
     },
     {
      "type": "short_enum",
      "name": "violence mode",
-     "definition": "violence_mode_enum"
+     "definition": "violence mode"
     },
     {
      "type": "short_enum",
      "name": "create",
-     "definition": "create_enum"
+     "definition": "create"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
-     "type": "short_integer",
-     "name": "location"
+     "type": "short_block_index",
+     "name": "location",
+     "definition": "effect_locations_block"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "real_euler_angles_2d",
-     "name": "relative direction"
+     "name": "relative direction#particle initial velocity direction relative to the location's forward"
     },
     {
      "type": "real_vector_3d",
-     "name": "relative offset"
-    },
-    {
-     "type": "real_vector_3d",
-     "name": "relative direction vector"
+     "name": "relative offset#particle initial position offset relative to the locatin's forward"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real_vector3d)",
+     "definition": 12
+    },
+    {
+     "type": "pad",
+     "name": "10*sizeof(long)",
      "definition": 40
     },
     {
      "type": "tag_reference",
-     "name": "particle type"
+     "name": "particle type^"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_3"
     },
     {
      "type": "short_enum",
-     "name": "distribution function",
-     "definition": "distribution_function_enum"
+     "name": "distribution function#describes how the part creations are distributed over the event duration",
+     "definition": "distribution function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "short_bounds",
-     "name": "count"
+     "name": "count#number of particles created"
     },
     {
      "type": "real_bounds",
-     "name": "distribution radius"
+     "name": "distribution radius:world units#initial distance from the location's origin"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
      "type": "real_bounds",
-     "name": "velocity"
+     "name": "velocity:world units per second#initial velocity along the specified direction"
     },
     {
      "type": "angle",
-     "name": "velocity cone angle"
+     "name": "velocity cone angle:degrees#particle initial velocities will be inside the cone defined by this angle and the specified direction"
     },
     {
      "type": "angle_bounds",
-     "name": "angular velocity"
+     "name": "angular velocity:degrees per second"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
      "type": "real_bounds",
-     "name": "radius"
+     "name": "radius:world units#particle radius"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -326,18 +328,23 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
-     "type": "long_flags",
-     "name": "a scales values",
-     "definition": "a_scales_values_flags_2"
+     "type": "explanation",
+     "name": "SCALE MODIFIERS",
+     "definition": ""
     },
     {
      "type": "long_flags",
-     "name": "b scales values",
-     "definition": "a_scales_values_flags_2"
+     "name": "A scales values:",
+     "definition": "A scales values_2"
+    },
+    {
+     "type": "long_flags",
+     "name": "B scales values:",
+     "definition": "A scales values_2"
     },
     {
      "type": "terminator",
@@ -346,17 +353,16 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "deleted when attachment deactivates",
-    "must be deterministic xbox",
-    "must be deterministic pc",
-    "disabled in anniversary by blood setting"
+    "required for gameplay (cannot optimize out)!",
+    "must_be_deterministic#set automagically by postprocessing*",
+    "disabled in remastered by blood setting#In MCC, when the 'blood' setting is switched to off, this will not render in remastered mode"
    ]
   },
-  "create_in_enum": {
+  "create in": {
    "options": [
     "any environment",
     "air only",
@@ -364,31 +370,29 @@
     "space only"
    ]
   },
-  "violence_mode_enum": {
+  "violence mode": {
    "options": [
     "either mode",
     "violent mode only",
     "nonviolent mode only"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
-    "face down regardless of location decals",
-    "unused",
-    "make effect work"
+    "face down regardless of location (decals)"
    ]
   },
-  "a_scales_values_flags": {
+  "A scales values": {
    "options": [
     "velocity",
     "velocity delta",
     "velocity cone angle",
     "angular velocity",
     "angular velocity delta",
-    "type specific scale"
+    "type-specific scale"
    ]
   },
-  "create_enum": {
+  "create": {
    "options": [
     "independent of camera mode",
     "only in first person",
@@ -396,16 +400,16 @@
     "in first person if possible"
    ]
   },
-  "flags_flags_3": {
+  "flags_3": {
    "options": [
     "stay attached to marker",
     "random initial angle",
     "tint from object color",
-    "interpolate tint as hsv",
-    "across the long hue path"
+    "interpolate tint as HSV",
+    "... across the long hue path"
    ]
   },
-  "distribution_function_enum": {
+  "distribution function": {
    "options": [
     "start",
     "end",
@@ -415,7 +419,7 @@
     "buildup and falloff"
    ]
   },
-  "a_scales_values_flags_2": {
+  "A scales values_2": {
    "options": [
     "velocity",
     "velocity delta",
@@ -431,8 +435,5 @@
     "tint"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

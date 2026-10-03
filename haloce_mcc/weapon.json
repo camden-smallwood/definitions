@@ -2,68 +2,34 @@
  "name": "weapon",
  "tag": "weap",
  "version": 2,
- "flags": 0,
+ "flags": 9,
+ "parent_tag": "item",
  "block": "weapon_block",
  "blocks": {
   "weapon_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "weapon_block_struct"
+   "struct": "weapon_block_struct",
+   "max_count_string": "1"
   },
-  "attachments_block": {
-   "max_count": 8,
-   "max_count_string": "8",
-   "struct": "attachments_block_struct"
-  },
-  "widgets_block": {
-   "max_count": 4,
-   "max_count_string": "4",
-   "struct": "widgets_block_struct"
-  },
-  "functions_block": {
-   "max_count": 4,
-   "max_count_string": "4",
-   "struct": "functions_block_struct"
-  },
-  "change_colors_block": {
-   "max_count": 4,
-   "max_count_string": "4",
-   "struct": "change_colors_block_struct"
-  },
-  "permutations_block": {
-   "max_count": 8,
-   "max_count_string": "8",
-   "struct": "permutations_block_struct"
-  },
-  "predicted_resources_block": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "predicted_resources_block_struct"
-  },
-  "more_predicted_resources_block": {
-   "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "more_predicted_resources_block_struct"
-  },
-  "magazines_block": {
+  "magazines": {
    "max_count": 2,
-   "max_count_string": "2",
-   "struct": "magazines_block_struct"
+   "struct": "magazines_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINES_PER_WEAPON"
   },
-  "magazine_objects_block": {
+  "magazine_objects": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "magazine_objects_block_struct"
+   "struct": "magazine_objects_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINE_OBJECTS_PER_MAGAZINE"
   },
-  "triggers_block": {
+  "triggers": {
    "max_count": 2,
-   "max_count_string": "2",
-   "struct": "triggers_block_struct"
+   "struct": "triggers_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_TRIGGERS_PER_WEAPON"
   },
-  "firing_effects_block": {
+  "trigger_firing_effect_block": {
    "max_count": 8,
-   "max_count_string": "8",
-   "struct": "firing_effects_block_struct"
+   "struct": "trigger_firing_effect_block_struct",
+   "max_count_string": "MAXIMUM_FIRING_EFFECTS_PER_TRIGGER"
   }
  },
  "structs": {
@@ -72,286 +38,98 @@
    "size": 1288,
    "fields": [
     {
-     "type": "short_enum",
-     "name": "type",
-     "definition": "type_enum"
+     "type": "struct",
+     "name": "item",
+     "definition": "item_block_struct"
     },
     {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags"
-    },
-    {
-     "type": "real",
-     "name": "bounding radius"
-    },
-    {
-     "type": "real_vector_3d",
-     "name": "bounding offset"
-    },
-    {
-     "type": "real_vector_3d",
-     "name": "origin offset"
-    },
-    {
-     "type": "real",
-     "name": "acceleration scale"
-    },
-    {
-     "type": "long_flags",
-     "name": "runtime flags",
-     "definition": "runtime_flags_flags"
-    },
-    {
-     "type": "tag_reference",
-     "name": "model"
-    },
-    {
-     "type": "tag_reference",
-     "name": "animation graph"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 40
-    },
-    {
-     "type": "tag_reference",
-     "name": "collision model"
-    },
-    {
-     "type": "tag_reference",
-     "name": "physics"
-    },
-    {
-     "type": "tag_reference",
-     "name": "modifier shader"
-    },
-    {
-     "type": "tag_reference",
-     "name": "creation effect"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 84
-    },
-    {
-     "type": "real",
-     "name": "render bounding radius"
-    },
-    {
-     "type": "short_enum",
-     "name": "a in",
-     "definition": "a_in_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "b in",
-     "definition": "a_in_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "c in",
-     "definition": "a_in_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "d in",
-     "definition": "a_in_enum"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 44
-    },
-    {
-     "type": "short_integer",
-     "name": "hud text message index"
-    },
-    {
-     "type": "short_integer",
-     "name": "forced shader permutation index"
-    },
-    {
-     "type": "block",
-     "name": "attachments",
-     "definition": "attachments_block"
-    },
-    {
-     "type": "block",
-     "name": "widgets",
-     "definition": "widgets_block"
-    },
-    {
-     "type": "block",
-     "name": "functions",
-     "definition": "functions_block"
-    },
-    {
-     "type": "block",
-     "name": "change colors",
-     "definition": "change_colors_block"
-    },
-    {
-     "type": "block",
-     "name": "predicted resources",
-     "definition": "predicted_resources_block"
+     "type": "explanation",
+     "name": "$$$ WEAPON $$$",
+     "definition": "All weapons should have 'primary trigger' and 'secondary trigger' markers as appropriate.\nBlurred permutations are called '$primary-blur' and '$secondary-blur'."
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
-    },
-    {
-     "type": "short_integer",
-     "name": "pickup text index"
-    },
-    {
-     "type": "short_integer",
-     "name": "sort order"
-    },
-    {
-     "type": "real",
-     "name": "scale"
-    },
-    {
-     "type": "short_integer",
-     "name": "hud message value scale"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "short_enum",
-     "name": "a in",
-     "definition": "a_in_enum_2"
-    },
-    {
-     "type": "short_enum",
-     "name": "b in",
-     "definition": "a_in_enum_2"
-    },
-    {
-     "type": "short_enum",
-     "name": "c in",
-     "definition": "a_in_enum_2"
-    },
-    {
-     "type": "short_enum",
-     "name": "d in",
-     "definition": "a_in_enum_2"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 164
-    },
-    {
-     "type": "tag_reference",
-     "name": "material effects"
-    },
-    {
-     "type": "tag_reference",
-     "name": "collision sound"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 120
-    },
-    {
-     "type": "real_bounds",
-     "name": "detonation delay"
-    },
-    {
-     "type": "tag_reference",
-     "name": "detonating effect"
-    },
-    {
-     "type": "tag_reference",
-     "name": "detonation effect"
-    },
-    {
-     "type": "long_flags",
-     "name": "weapon flags",
-     "definition": "weapon_flags_flags"
+     "definition": "flags_4"
     },
     {
      "type": "string",
-     "name": "label"
+     "name": "label#the string used to match this weapon to an animation mode in the unit carrying it"
     },
     {
      "type": "short_enum",
      "name": "secondary trigger mode",
-     "definition": "secondary_trigger_mode_enum"
+     "definition": "secondary trigger mode"
     },
     {
      "type": "short_integer",
-     "name": "maximum alternate shots loaded"
+     "name": "maximum alternate shots loaded#if the second trigger loads alternate ammunition, this is the maximum number of shots that can be loaded at a time"
+    },
+    {
+     "type": "explanation",
+     "name": "export to functions",
+     "definition": ""
     },
     {
      "type": "short_enum",
-     "name": "weapon a in",
-     "definition": "weapon_a_in_enum"
+     "name": "A in",
+     "definition": "A in_3"
     },
     {
      "type": "short_enum",
-     "name": "weapon b in",
-     "definition": "weapon_a_in_enum"
+     "name": "B in",
+     "definition": "A in_3"
     },
     {
      "type": "short_enum",
-     "name": "weapon c in",
-     "definition": "weapon_a_in_enum"
+     "name": "C in",
+     "definition": "A in_3"
     },
     {
      "type": "short_enum",
-     "name": "weapon d in",
-     "definition": "weapon_a_in_enum"
+     "name": "D in",
+     "definition": "A in_3"
     },
     {
      "type": "real",
-     "name": "ready time"
+     "name": "ready time:seconds"
     },
     {
      "type": "tag_reference",
      "name": "ready effect"
     },
     {
-     "type": "real",
-     "name": "heat recovery threshold"
+     "type": "explanation",
+     "name": "heat",
+     "definition": ""
     },
     {
-     "type": "real",
-     "name": "overheated threshold"
+     "type": "real_fraction",
+     "name": "heat recovery threshold:[0,1]#the heat value a weapon must return to before leaving the overheated state, once it has become overheated in the first place"
     },
     {
-     "type": "real",
-     "name": "heat detonation threshold"
+     "type": "real_fraction",
+     "name": "overheated threshold:[0,1]#the heat value over which a weapon first becomes overheated (should be greater than the heat recovery threshold)"
     },
     {
-     "type": "real",
-     "name": "heat detonation fraction"
+     "type": "real_fraction",
+     "name": "heat detonation threshold:[0,1]#the heat value above which the weapon has a chance of exploding each time it is fired"
     },
     {
-     "type": "real",
-     "name": "heat loss rate"
+     "type": "real_fraction",
+     "name": "heat detonation fraction:[0,1]#the percent chance (between 0.0 and 1.0) the weapon will explode when fired over the heat detonation threshold"
     },
     {
-     "type": "real",
-     "name": "heat illumination"
+     "type": "real_fraction",
+     "name": "heat loss per second:[0,1]#the amount of heat lost each second when the weapon is not being fired"
+    },
+    {
+     "type": "real_fraction",
+     "name": "heat illumination:[0,1]#the amount of illumination given off when the weapon is overheated"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -360,7 +138,7 @@
     },
     {
      "type": "tag_reference",
-     "name": "overheat detonation"
+     "name": "detonation"
     },
     {
      "type": "tag_reference",
@@ -372,135 +150,175 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(long)",
      "definition": 8
+    },
+    {
+     "type": "explanation",
+     "name": "actor firing parameters",
+     "definition": "an optional actor variant that specifies the burst geometry and firing patterns to be used with this weapon"
     },
     {
      "type": "tag_reference",
      "name": "actor firing parameters"
     },
     {
-     "type": "real",
-     "name": "near reticle range"
+     "type": "explanation",
+     "name": "reticle",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "far reticle range"
+     "name": "near reticle range:world units#the range at which the closer of the two static target reticles will be drawn"
     },
     {
      "type": "real",
-     "name": "intersection reticle range"
+     "name": "far reticle range:world units#the range at which the farther of the two static target reticles will be drawn"
+    },
+    {
+     "type": "real",
+     "name": "intersection reticle range#the maximum range at which the dynamic target reticle will be drawn"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
+     "type": "explanation",
+     "name": "zoom",
+     "definition": ""
+    },
+    {
      "type": "short_integer",
-     "name": "zoom levels"
+     "name": "magnification levels#the number of magnification levels this weapon allows"
     },
     {
      "type": "real_bounds",
-     "name": "zoom magnification range"
+     "name": "magnification range"
+    },
+    {
+     "type": "explanation",
+     "name": "aim assist",
+     "definition": ""
     },
     {
      "type": "angle",
-     "name": "autoaim angle"
+     "name": "autoaim angle:degrees#the maximum angle that autoaim works at full strength"
     },
     {
      "type": "real",
-     "name": "autoaim range"
+     "name": "autoaim range:world units#the maximum distance that autoaim works at full strength"
     },
     {
      "type": "angle",
-     "name": "magnetism angle"
+     "name": "magnetism angle:degrees#the maximum angle that magnetism works at full strength"
     },
     {
      "type": "real",
-     "name": "magnetism range"
+     "name": "magnetism range:world units#the maximum distance that magnetism works at full strength"
     },
     {
      "type": "angle",
-     "name": "deviation angle"
+     "name": "deviation angle:degrees#the maximum angle that a projectile is allowed to deviate from the gun barrel"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(long)",
      "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "movement",
+     "definition": ""
     },
     {
      "type": "short_enum",
      "name": "movement penalized",
-     "definition": "movement_penalized_enum"
+     "definition": "movement penalized"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "forward movement penalty"
+     "name": "forward movement penalty#percent slowdown to forward movement for units carrying this weapon"
     },
     {
      "type": "real",
-     "name": "sideways movement penalty"
+     "name": "sideways movement penalty#percent slowdown to sideways and backward movement for units carrying this weapon"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
-     "type": "real",
-     "name": "minimum target range"
+     "type": "explanation",
+     "name": "AI targeting parameters",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "looking time modifier"
+     "name": "minimum target range#minimum range that actors using this weapon will try and target stuff at"
+    },
+    {
+     "type": "real",
+     "name": "looking time modifier#how much faster actors look around idly using this weapon (zero is unchanged)"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
-     "type": "real",
-     "name": "light power on time"
+     "type": "explanation",
+     "name": "miscellaneous",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "light power off time"
+     "name": "light power-on time:seconds"
+    },
+    {
+     "type": "real",
+     "name": "light power-off time:seconds"
     },
     {
      "type": "tag_reference",
-     "name": "light power on effect"
+     "name": "light power-on effect"
     },
     {
      "type": "tag_reference",
-     "name": "light power off effect"
+     "name": "light power-off effect"
     },
     {
      "type": "real",
-     "name": "age heat recovery penalty"
+     "name": "age heat recovery penalty#how much the weapon's heat recovery is penalized as it ages"
     },
     {
      "type": "real",
-     "name": "age rate of fire penalty"
+     "name": "age rate of fire penalty#how much the weapon's rate of fire is penalized as it ages"
     },
     {
-     "type": "real",
-     "name": "age misfire start"
+     "type": "real_fraction",
+     "name": "age misfire start:[0,1]#the age threshold when the weapon begins to misfire"
     },
     {
-     "type": "real",
-     "name": "age misfire chance"
+     "type": "real_fraction",
+     "name": "age misfire chance:[0,1]#at age 1.0, the misfire chance per shot"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
+    },
+    {
+     "type": "explanation",
+     "name": "interface",
+     "definition": ""
     },
     {
      "type": "tag_reference",
@@ -512,7 +330,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
@@ -525,54 +343,59 @@
     },
     {
      "type": "tag_reference",
-     "name": "zoom in sound"
+     "name": "zoom-in sound"
     },
     {
      "type": "tag_reference",
-     "name": "zoom out sound"
+     "name": "zoom-out sound"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_block)",
      "definition": 12
     },
     {
      "type": "real",
-     "name": "active camo ding"
+     "name": "active camo ding#how much to decrease active camo when a round is fired"
     },
     {
      "type": "real",
-     "name": "active camo regrowth rate"
+     "name": "active camo regrowth rate#how fast to increase active camo (per tick) when a round is fired"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
+    },
+    {
+     "type": "explanation",
+     "name": "more miscellaneous",
+     "definition": ""
     },
     {
      "type": "short_enum",
      "name": "weapon type",
-     "definition": "weapon_type_enum"
+     "definition": "weapon type"
     },
     {
      "type": "block",
-     "name": "more predicted resources",
-     "definition": "more_predicted_resources_block"
+     "name": "predicted resources!",
+     "definition": "predicted_resource_block"
     },
     {
      "type": "block",
      "name": "magazines",
-     "definition": "magazines_block"
+     "definition": "magazines"
     },
     {
      "type": "block",
      "name": "triggers",
-     "definition": "triggers_block"
+     "definition": "triggers"
     },
     {
      "type": "terminator",
@@ -580,312 +403,18 @@
     }
    ]
   },
-  "attachments_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 72,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "type"
-    },
-    {
-     "type": "string",
-     "name": "marker"
-    },
-    {
-     "type": "short_enum",
-     "name": "primary scale",
-     "definition": "primary_scale_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "secondary scale",
-     "definition": "primary_scale_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "change color",
-     "definition": "change_color_enum"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "widgets_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "reference"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 16
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "functions_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 360,
-   "fields": [
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_2"
-    },
-    {
-     "type": "real",
-     "name": "period"
-    },
-    {
-     "type": "short_enum",
-     "name": "scale period by",
-     "definition": "scale_period_by_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "function",
-     "definition": "function_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "scale function by",
-     "definition": "scale_period_by_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "wobble function",
-     "definition": "function_enum"
-    },
-    {
-     "type": "real",
-     "name": "wobble period"
-    },
-    {
-     "type": "real",
-     "name": "wobble magnitude"
-    },
-    {
-     "type": "real",
-     "name": "square wave threshold"
-    },
-    {
-     "type": "short_integer",
-     "name": "step count"
-    },
-    {
-     "type": "short_enum",
-     "name": "map to",
-     "definition": "map_to_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "sawtooth count"
-    },
-    {
-     "type": "short_enum",
-     "name": "add",
-     "definition": "scale_period_by_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "scale result by",
-     "definition": "scale_period_by_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "bounds mode",
-     "definition": "bounds_mode_enum"
-    },
-    {
-     "type": "real_bounds",
-     "name": "bounds"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 4
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "short_integer",
-     "name": "turn off with"
-    },
-    {
-     "type": "real",
-     "name": "scale by"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 252
-    },
-    {
-     "type": "real",
-     "name": "inverse bounds"
-    },
-    {
-     "type": "real",
-     "name": "inverse sawtooth"
-    },
-    {
-     "type": "real",
-     "name": "inverse step"
-    },
-    {
-     "type": "real",
-     "name": "inverse period"
-    },
-    {
-     "type": "string",
-     "name": "usage"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "change_colors_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 44,
-   "fields": [
-    {
-     "type": "short_enum",
-     "name": "darken by",
-     "definition": "scale_period_by_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "scale by",
-     "definition": "scale_period_by_enum"
-    },
-    {
-     "type": "long_flags",
-     "name": "flags",
-     "definition": "flags_flags_3"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color lower bound"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color upper bound"
-    },
-    {
-     "type": "block",
-     "name": "permutations",
-     "definition": "permutations_block"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "permutations_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 28,
-   "fields": [
-    {
-     "type": "real",
-     "name": "weight"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color lower bound"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color upper bound"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "predicted_resources_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
-    {
-     "type": "short_enum",
-     "name": "type",
-     "definition": "type_enum_2"
-    },
-    {
-     "type": "short_integer",
-     "name": "resource index"
-    },
-    {
-     "type": "long_integer",
-     "name": "tag"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "more_predicted_resources_block_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
-    {
-     "type": "short_enum",
-     "name": "type",
-     "definition": "type_enum_2"
-    },
-    {
-     "type": "short_integer",
-     "name": "resource index"
-    },
-    {
-     "type": "long_integer",
-     "name": "tag"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "magazines_block_struct": {
+  "magazines_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 112,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_5"
+     "definition": "flags_5"
     },
     {
      "type": "short_integer",
-     "name": "rounds recharged"
+     "name": "rounds recharged:per second"
     },
     {
      "type": "short_integer",
@@ -893,7 +422,7 @@
     },
     {
      "type": "short_integer",
-     "name": "rounds reserved maximum"
+     "name": "rounds total maximum"
     },
     {
      "type": "short_integer",
@@ -901,12 +430,12 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(short)",
      "definition": 8
     },
     {
      "type": "real",
-     "name": "reload time"
+     "name": "reload time:seconds#the length of time it takes to load a single magazine into the weapon"
     },
     {
      "type": "short_integer",
@@ -914,21 +443,21 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "chamber time"
+     "name": "chamber time:seconds#the length of time it takes to chamber the next round"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(rectangle2d)",
      "definition": 16
     },
     {
@@ -941,13 +470,13 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
      "type": "block",
-     "name": "magazine objects",
-     "definition": "magazine_objects_block"
+     "name": "magazines",
+     "definition": "magazine_objects"
     },
     {
      "type": "terminator",
@@ -955,7 +484,7 @@
     }
    ]
   },
-  "magazine_objects_block_struct": {
+  "magazine_objects_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 28,
    "fields": [
@@ -965,12 +494,12 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "5*sizeof(word)",
      "definition": 10
     },
     {
      "type": "tag_reference",
-     "name": "equipment"
+     "name": "equipment^"
     },
     {
      "type": "terminator",
@@ -978,118 +507,144 @@
     }
    ]
   },
-  "triggers_block_struct": {
+  "triggers_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 276,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_6"
+     "definition": "flags_6"
+    },
+    {
+     "type": "explanation",
+     "name": "firing",
+     "definition": ""
     },
     {
      "type": "real_bounds",
-     "name": "maximum rate of fire"
+     "name": "rounds per second#the number of firing effects created per second"
     },
     {
      "type": "real",
-     "name": "acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final rounds per second"
     },
     {
      "type": "real",
-     "name": "deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return from its final rounds per second to its initial"
     },
     {
-     "type": "real",
-     "name": "blurred rate of fire"
+     "type": "real_fraction",
+     "name": "blurred rate of fire#a percentage between 0 and 1 which controls how soon in its firing animation the weapon blurs"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(real)",
      "definition": 8
     },
     {
-     "type": "short_integer",
-     "name": "magazine"
+     "type": "short_block_index",
+     "name": "magazine#the magazine from which this trigger draws its ammunition",
+     "definition": "magazines"
     },
     {
      "type": "short_integer",
-     "name": "rounds per shot"
+     "name": "rounds per shot#the number of rounds expended to create a single firing effect"
     },
     {
      "type": "short_integer",
-     "name": "minimum rounds loaded"
+     "name": "minimum rounds loaded#the minimum number of rounds necessary to fire the weapon"
     },
     {
      "type": "short_integer",
-     "name": "projectiles between contrails"
+     "name": "rounds between tracers#the number of non-tracer rounds fired between tracers"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(short)",
      "definition": 4
+    },
+    {
+     "type": "explanation",
+     "name": "prediction properties",
+     "definition": "what the behavior of this barrel is in a predicted network game"
     },
     {
      "type": "short_enum",
      "name": "prediction type",
-     "definition": "prediction_type_enum"
+     "definition": "prediction type"
     },
     {
      "type": "short_enum",
-     "name": "firing noise",
-     "definition": "firing_noise_enum"
+     "name": "firing noise#how loud this weapon appears to the AI",
+     "definition": "firing noise"
+    },
+    {
+     "type": "explanation",
+     "name": "error",
+     "definition": ""
     },
     {
      "type": "real_bounds",
-     "name": "error"
+     "name": "error#the accuracy (between 0.0 and 1.0) of the weapon during firing"
     },
     {
      "type": "real",
-     "name": "error acceleration time"
+     "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final error"
     },
     {
      "type": "real",
-     "name": "error deceleration time"
+     "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return to its initial error"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(real)",
      "definition": 8
     },
     {
-     "type": "real",
-     "name": "charging time"
+     "type": "explanation",
+     "name": "charging",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "charged time"
+     "name": "charging time:seconds#the amount of time it takes for this trigger to become fully charged"
+    },
+    {
+     "type": "real",
+     "name": "charged time:seconds#the amount of time this trigger can be charged before becoming overcharged"
     },
     {
      "type": "short_enum",
      "name": "overcharged action",
-     "definition": "overcharged_action_enum"
+     "definition": "overcharged action"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "charged illumination"
+     "name": "charged illumination:[0,1]#the amount of illumination given off when the weapon is fully charged"
     },
     {
      "type": "real",
-     "name": "spew time"
+     "name": "spew time:seconds#length of time the weapon will spew (fire continuously) while discharging"
     },
     {
      "type": "tag_reference",
-     "name": "charging effect"
+     "name": "charging effect#the charging effect is created once when the trigger begins to charge"
+    },
+    {
+     "type": "explanation",
+     "name": "projectile",
+     "definition": ""
     },
     {
      "type": "short_enum",
      "name": "distribution function",
-     "definition": "distribution_function_enum"
+     "definition": "distribution function"
     },
     {
      "type": "short_integer",
@@ -1097,28 +652,28 @@
     },
     {
      "type": "angle",
-     "name": "distribution angle"
+     "name": "distribution angle:degrees"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "1*sizeof(real)",
      "definition": 4
     },
     {
      "type": "angle",
-     "name": "minimum error"
+     "name": "minimum error:degrees"
     },
     {
      "type": "angle_bounds",
-     "name": "error angle"
+     "name": "error angle:degrees"
     },
     {
-     "type": "real_vector_3d",
-     "name": "first person offset"
+     "type": "real_point_3d",
+     "name": "first person offset:world units#+x is forward, +z is up, +y is left"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
@@ -1126,73 +681,59 @@
      "name": "projectile"
     },
     {
-     "type": "real",
-     "name": "ejection port recovery time"
+     "type": "explanation",
+     "name": "misc",
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "illumination recovery time"
+     "name": "ejection port recovery time#the amount of time (in seconds) it takes for the ejection port to transition from 1.0 (open) to 0.0 (closed) after a shot has been fired"
+    },
+    {
+     "type": "real",
+     "name": "illumination recovery time#the amount of time (in seconds) it takes the illumination function to transition from 1.0 (bright) to 0.0 (dark) after a shot has been fired"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
-     "type": "real",
-     "name": "heat generated per round"
+     "type": "real_fraction",
+     "name": "heat generated per round:[0,1]#the amount of heat generated each time the trigger is fired"
     },
     {
-     "type": "real",
-     "name": "age generated per round"
+     "type": "real_fraction",
+     "name": "age generated per round:[0,1]#the amount the weapon ages each time the trigger is fired"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "1*sizeof(long)",
      "definition": 4
     },
     {
      "type": "real",
-     "name": "overload time"
+     "name": "overload time:seconds#the next trigger fires this often while holding down this trigger"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(real)",
      "definition": 8
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
-     "type": "real",
-     "name": "illumination recovery rate"
-    },
-    {
-     "type": "real",
-     "name": "ejection port recovery rate"
-    },
-    {
-     "type": "real",
-     "name": "firing acceleration rate"
-    },
-    {
-     "type": "real",
-     "name": "firing deceleration rate"
-    },
-    {
-     "type": "real",
-     "name": "error acceleration rate"
-    },
-    {
-     "type": "real",
-     "name": "error deceleration rate"
+     "type": "pad",
+     "name": "6*sizeof(real)",
+     "definition": 24
     },
     {
      "type": "block",
-     "name": "firing effects",
-     "definition": "firing_effects_block"
+     "name": "firing effects#firing effects determine what happens when this trigger is fired",
+     "definition": "trigger_firing_effect_block"
     },
     {
      "type": "terminator",
@@ -1200,42 +741,46 @@
     }
    ]
   },
-  "firing_effects_block_struct": {
+  "trigger_firing_effect_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 132,
    "fields": [
     {
-     "type": "short_bounds",
-     "name": "shot count"
+     "type": "short_integer",
+     "name": "shot count lower bound#the minimum number of times this firing effect will be used, once it has been chosen"
+    },
+    {
+     "type": "short_integer",
+     "name": "shot count upper bound#the maximum number of times this firing effect will be used, once it has been chosen"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
      "type": "tag_reference",
-     "name": "firing effect"
+     "name": "firing effect^#this effect is used when the weapon is loaded and fired normally"
     },
     {
      "type": "tag_reference",
-     "name": "misfire effect"
+     "name": "misfire effect#this effect is used when the weapon is loaded but fired while overheated"
     },
     {
      "type": "tag_reference",
-     "name": "empty effect"
+     "name": "empty effect#this effect is used when the weapon is not loaded"
     },
     {
      "type": "tag_reference",
-     "name": "firing damage"
+     "name": "firing damage#this effect is used when the weapon is loaded and fired normally"
     },
     {
      "type": "tag_reference",
-     "name": "misfire damage"
+     "name": "misfire damage#this effect is used when the weapon is loaded but fired while overheated"
     },
     {
      "type": "tag_reference",
-     "name": "empty damage"
+     "name": "empty damage#this effect is used when the weapon is not loaded"
     },
     {
      "type": "terminator",
@@ -1244,182 +789,30 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "type_enum": {
+  "flags_4": {
    "options": [
-    "biped",
-    "vehicle",
-    "weapon",
-    "equipment",
-    "garbage",
-    "projectile",
-    "scenery",
-    "device machine",
-    "device control",
-    "device light fixture",
-    "placeholder",
-    "sound scenery"
-   ]
-  },
-  "flags_flags": {
-   "options": [
-    "does not cast shadow",
-    "transparent self occlusion",
-    "brighter than it should be",
-    "not a pathfinding obstacle",
-    "extension of parent",
-    "cast shadow by default",
-    "does not have anniversary geometry"
-   ]
-  },
-  "runtime_flags_flags": {
-   "options": [
-    "functions control color scale"
-   ]
-  },
-  "a_in_enum": {
-   "options": [
-    "none",
-    "body vitality",
-    "shield vitality",
-    "recent body damage",
-    "recent shield damage",
-    "random constant",
-    "umbrella shield vitality",
-    "shield stun",
-    "recent umbrella shield vitality",
-    "umbrella shield stun",
-    "region",
-    "region 1",
-    "region 2",
-    "region 3",
-    "region 4",
-    "region 5",
-    "region 6",
-    "region 7",
-    "alive",
-    "compass"
-   ]
-  },
-  "primary_scale_enum": {
-   "options": [
-    "none",
-    "a out",
-    "b out",
-    "c out",
-    "d out"
-   ]
-  },
-  "change_color_enum": {
-   "options": [
-    "none",
-    "a",
-    "b",
-    "c",
-    "d"
-   ]
-  },
-  "flags_flags_2": {
-   "options": [
-    "invert",
-    "additive",
-    "always active"
-   ]
-  },
-  "scale_period_by_enum": {
-   "options": [
-    "none",
-    "a in",
-    "b in",
-    "c in",
-    "d in",
-    "a out",
-    "b out",
-    "c out",
-    "d out"
-   ]
-  },
-  "function_enum": {
-   "options": [
-    "one",
-    "zero",
-    "cosine",
-    "cosine variable period",
-    "diagonal wave",
-    "diagonal wave variable period",
-    "slide",
-    "slide variable period",
-    "noise",
-    "jitter",
-    "wander",
-    "spark"
-   ]
-  },
-  "map_to_enum": {
-   "options": [
-    "linear",
-    "early",
-    "very early",
-    "late",
-    "very late",
-    "cosine"
-   ]
-  },
-  "bounds_mode_enum": {
-   "options": [
-    "clip",
-    "clip and normalize",
-    "scale to fit"
-   ]
-  },
-  "flags_flags_3": {
-   "options": [
-    "blend in hsv",
-    "more colors"
-   ]
-  },
-  "type_enum_2": {
-   "options": [
-    "bitmap",
-    "sound"
-   ]
-  },
-  "flags_flags_4": {
-   "options": [
-    "always maintains z up",
-    "destroyed by explosions",
-    "unaffected by gravity"
-   ]
-  },
-  "a_in_enum_2": {
-   "options": [
-    "none"
-   ]
-  },
-  "weapon_flags_flags": {
-   "options": [
-    "vertical heat display",
-    "mutually exclusive triggers",
-    "attacks automatically on bump",
+    "unused0!",
+    "unused1!",
+    "unused2!",
     "must be readied",
-    "doesnt count toward maximum",
+    "doesn't count toward maximum",
     "aim assists only when zoomed",
     "prevents grenade throwing",
-    "must be picked up",
-    "holds triggers when dropped",
+    "unused7!",
+    "unused8!",
     "prevents melee attack",
     "detonates when dropped",
     "cannot fire at maximum age",
     "secondary trigger overrides grenades",
-    "does not depower active camo in multiplayer",
+    "unused13!",
     "enables integrated night vision",
-    "ais use weapon melee damage",
-    "prevents crouching",
+    "AIs use weapon melee damage",
+    "prevents crouching*#NOT YET BACKPORTED from H3",
     "uses 3rd person camera"
    ]
   },
-  "secondary_trigger_mode_enum": {
+  "secondary trigger mode": {
    "options": [
     "normal",
     "slaved to primary",
@@ -1428,7 +821,7 @@
     "loads multiple primary ammunition"
    ]
   },
-  "weapon_a_in_enum": {
+  "A in_3": {
    "options": [
     "none",
     "heat",
@@ -1451,14 +844,14 @@
     "secondary firing on"
    ]
   },
-  "movement_penalized_enum": {
+  "movement penalized": {
    "options": [
     "always",
     "when zoomed",
     "when zoomed or reloading"
    ]
   },
-  "weapon_type_enum": {
+  "weapon type": {
    "options": [
     "undefined",
     "shotgun",
@@ -1468,39 +861,39 @@
     "rocket launcher"
    ]
   },
-  "flags_flags_5": {
+  "flags_5": {
    "options": [
     "wastes rounds when reloaded",
     "every round must be chambered"
    ]
   },
-  "flags_flags_6": {
+  "flags_6": {
    "options": [
-    "tracks fired projectile",
-    "random firing effects",
-    "can fire with partial ammo",
-    "does not repeat automatically",
-    "locks in on off state",
-    "projectiles use weapon origin",
-    "sticks when dropped",
-    "ejects during chamber",
+    "tracks fired projectile#eep eep ac ac oop oop",
+    "random firing effects#rather than being chosen sequentially, firing effects are picked randomly",
+    "can fire with partial ammo#allows a weapon to be fired as long as there is a non-zero amount of ammunition loaded",
+    "does not repeat automatically#once fired, this trigger must be released and pressed to fire again",
+    "locks in on/off state#once depressed, this trigger must be released and pressed again to turn it off (and likewise to turn it back on)",
+    "projectiles use weapon origin#instead of coming out of the magic first person camera origin, the projectiles for this weapon actually come out of the gun",
+    "sticks when dropped#if this trigger is pressed when its owner drops the weapon (for whatever reason) this trigger stays down",
+    "ejects during chamber#this trigger's ejection port is started during the key frame of its chamber animation",
     "discharging spews",
     "analog rate of fire",
     "use error when unzoomed",
-    "projectile vector cannot be adjusted",
+    "projectile vector cannot be adjusted#projectiles fired by this weapon cannot have their direction adjusted by the AI to hit the target",
     "projectiles have identical error",
-    "projectile is client side only",
-    "use original unit adjust projectile ray"
+    "projectile is client-side only",
+    "use_unit_adjust_projectile_ray_from_halo1#by default, the engine now uses the logic found in later Halos to address projectile bugs. This flag forces the original H1 behavior"
    ]
   },
-  "prediction_type_enum": {
+  "prediction type": {
    "options": [
     "none",
     "continuous",
     "instant"
    ]
   },
-  "firing_noise_enum": {
+  "firing noise": {
    "options": [
     "silent",
     "medium",
@@ -1509,21 +902,18 @@
     "quiet"
    ]
   },
-  "overcharged_action_enum": {
+  "overcharged action": {
    "options": [
     "none",
     "explode",
     "discharge"
    ]
   },
-  "distribution_function_enum": {
+  "distribution function": {
    "options": [
     "point",
     "horizontal fan"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

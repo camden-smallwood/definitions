@@ -7,13 +7,13 @@
  "blocks": {
   "flag_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "flag_block_struct"
+   "struct": "flag_block_struct",
+   "max_count_string": "1"
   },
-  "attachment_points_block": {
+  "flag_attachment_point_block": {
    "max_count": 5,
-   "max_count_string": "5",
-   "struct": "attachment_points_block_struct"
+   "struct": "flag_attachment_point_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_ATTACHMENT_POINTS"
   }
  },
  "structs": {
@@ -24,46 +24,46 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_enum",
      "name": "trailing edge shape",
-     "definition": "trailing_edge_shape_enum"
+     "definition": "trailing edge shape"
     },
     {
      "type": "short_integer",
-     "name": "trailing edge shape offset"
+     "name": "trailing edge shape offset:vertices#zero places the shape exactly on the trailing edge, positive numbers push it off the edge"
     },
     {
      "type": "short_enum",
      "name": "attached edge shape",
-     "definition": "attached_edge_shape_enum"
+     "definition": "attached edge shape"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "short_integer",
-     "name": "width"
+     "name": "width:vertices#flag size from attached to trailing edge"
     },
     {
      "type": "short_integer",
-     "name": "height"
+     "name": "height:vertices#flag size along the direction of attachment (should be odd)"
     },
     {
      "type": "real",
-     "name": "cell width"
+     "name": "cell width:world units#width of the cell between each pair of vertices"
     },
     {
      "type": "real",
-     "name": "cell height"
+     "name": "cell height:world units#height of the cell between each pair of vertices"
     },
     {
      "type": "tag_reference",
-     "name": "red flag shader"
+     "name": "red flag shader^"
     },
     {
      "type": "tag_reference",
@@ -71,21 +71,21 @@
     },
     {
      "type": "real",
-     "name": "wind noise"
+     "name": "wind noise:world units per second^2"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
      "type": "tag_reference",
-     "name": "blue flag shader"
+     "name": "blue flag shader^"
     },
     {
      "type": "block",
-     "name": "attachment points",
-     "definition": "attachment_points_block"
+     "name": "attachment points#attachment points determine where the flag is attached",
+     "definition": "flag_attachment_point_block"
     },
     {
      "type": "terminator",
@@ -93,27 +93,27 @@
     }
    ]
   },
-  "attachment_points_block_struct": {
+  "flag_attachment_point_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 52,
    "fields": [
     {
      "type": "short_integer",
-     "name": "height to next attachment"
+     "name": "height_to_next_attachment:vertices#flag vertices between this attachment point and the next"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "string",
-     "name": "marker name"
+     "name": "marker name^"
     },
     {
      "type": "terminator",
@@ -122,30 +122,24 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
-   "options": [
-    "unused"
-   ]
+  "flags": {
+   "options": []
   },
-  "trailing_edge_shape_enum": {
+  "trailing edge shape": {
    "options": [
     "flat",
     "concave triangular",
     "convex triangular",
-    "trapezoid short top",
-    "trapezoid short bottom"
+    "trapezoid, short top",
+    "trapezoid, short bottom"
    ]
   },
-  "attached_edge_shape_enum": {
+  "attached edge shape": {
    "options": [
     "flat",
     "concave triangular"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

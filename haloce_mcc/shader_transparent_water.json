@@ -2,18 +2,19 @@
  "name": "shader_transparent_water",
  "tag": "swat",
  "version": 2,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": "shdr",
  "block": "shader_transparent_water_block",
  "blocks": {
   "shader_transparent_water_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "shader_transparent_water_block_struct"
+   "struct": "shader_transparent_water_block_struct",
+   "max_count_string": "1"
   },
-  "ripples_block": {
+  "shader_transparent_water_ripple_block": {
    "max_count": 4,
-   "max_count_string": "4",
-   "struct": "ripples_block_struct"
+   "struct": "shader_transparent_water_ripple_block_struct",
+   "max_count_string": "MAXIMUM_RIPPLES_PER_SHADER_TRANSPARENT_WATER"
   }
  },
  "structs": {
@@ -23,220 +24,114 @@
    "fields": [
     {
      "type": "struct",
-     "name": "radiosity",
-     "definition": "shader_radiosity_properties_struct"
+     "name": "shader",
+     "definition": "shader_block_struct"
     },
     {
-     "type": "struct",
-     "name": "physics",
-     "definition": "shader_physics_properties_struct"
+     "type": "explanation",
+     "name": "water shader",
+     "definition": "Base map color modulates the background, while base map alpha modulates reflection brightness. Both of these effects can be independently enables and disabled. Note that if the <base map alpha modulates reflection> flag is not set, then the perpendicular/parallel brightness has no effect (but the perpendicular/parallel tint color DOES has an effect)."
     },
-    {
-     "type": "struct",
-     "name": "properties",
-     "definition": "shader_transparent_water_properties_struct"
-    },
-    {
-     "type": "struct",
-     "name": "ripples",
-     "definition": "shader_transparent_water_ripples_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_radiosity_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
-    },
-    {
-     "type": "short_enum",
-     "name": "detail level",
-     "definition": "detail_level_enum"
-    },
-    {
-     "type": "real",
-     "name": "power"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color of emitted light"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "tint color"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_physics_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "short_enum",
-     "name": "material type",
-     "definition": "material_type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "type"
+     "definition": "flags_3"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_transparent_water_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 148,
-   "fields": [
-    {
-     "type": "word_flags",
-     "name": "water flags",
-     "definition": "water_flags_flags"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
      "type": "tag_reference",
-     "name": "base map"
+     "name": "base map#controls reflection brightness and background tint"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
-     "type": "struct",
-     "name": "reflection map properties",
-     "definition": "shader_specular_properties_struct"
+     "type": "real_fraction",
+     "name": "view perpendicular brightness:[0,1]"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "view perpendicular tint color"
+    },
+    {
+     "type": "real_fraction",
+     "name": "view parallel brightness:[0,1]#0 defaults to 1"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "view parallel tint color"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "tag_reference",
-     "name": "reflection map"
+     "name": "reflection map:[0,1]"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_specular_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "real",
-     "name": "perpendicular brightness"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "perpendicular tint color"
-    },
-    {
-     "type": "real",
-     "name": "parallel brightness"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "parallel tint color"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_transparent_water_ripples_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 132,
-   "fields": [
     {
      "type": "angle",
-     "name": "animation angle"
+     "name": "ripple animation angle:[0,360]"
     },
     {
      "type": "real",
-     "name": "animation velocity"
+     "name": "ripple animation velocity"
     },
     {
      "type": "real",
-     "name": "scale"
+     "name": "ripple scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
-     "name": "maps"
+     "name": "ripple maps"
     },
     {
      "type": "short_integer",
-     "name": "mipmap levels"
+     "name": "ripple mipmap levels#0 defaults to 1"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
-     "type": "real",
-     "name": "mipmap fade factor"
+     "type": "real_fraction",
+     "name": "ripple mipmap fade factor:[0,1]#flatness of last mipmap"
     },
     {
      "type": "real",
-     "name": "mipmap detail bias"
+     "name": "ripple mipmap detail bias"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "16*sizeof(long)",
      "definition": 64
     },
     {
      "type": "block",
      "name": "ripples",
-     "definition": "ripples_block"
+     "definition": "shader_transparent_water_ripple_block"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -245,52 +140,52 @@
     }
    ]
   },
-  "ripples_block_struct": {
+  "shader_transparent_water_ripple_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 76,
    "fields": [
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
-     "type": "real",
-     "name": "contribution factor"
+     "type": "real_fraction",
+     "name": "contribution factor:[0,1]#0 defaults to 1"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
      "type": "angle",
-     "name": "animation angle"
+     "name": "animation angle:[0,360]"
     },
     {
      "type": "real",
      "name": "animation velocity"
     },
     {
-     "type": "real_point_2d",
+     "type": "real_vector_2d",
      "name": "map offset"
     },
     {
      "type": "short_integer",
-     "name": "map repeats"
+     "name": "map repeats#0 defaults to 1"
     },
     {
      "type": "short_integer",
-     "name": "map index"
+     "name": "map index#index into ripple maps"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -300,61 +195,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
-   "options": [
-    "simple parameterization",
-    "ignore normals",
-    "transparent lit"
-   ]
-  },
-  "detail_level_enum": {
-   "options": [
-    "high",
-    "medium",
-    "low",
-    "turd"
-   ]
-  },
-  "material_type_enum": {
-   "options": [
-    "dirt",
-    "sand",
-    "stone",
-    "snow",
-    "wood",
-    "metal hollow",
-    "metal thin",
-    "metal thick",
-    "rubber",
-    "glass",
-    "force field",
-    "grunt",
-    "hunter armor",
-    "hunter skin",
-    "elite",
-    "jackal",
-    "jackal energy shield",
-    "engineer skin",
-    "engineer force field",
-    "flood combat form",
-    "flood carrier form",
-    "cyborg armor",
-    "cyborg energy shield",
-    "human armor",
-    "human skin",
-    "sentinel",
-    "monitor",
-    "plastic",
-    "water",
-    "leaves",
-    "elite energy shield",
-    "ice",
-    "hunter shield"
-   ]
-  },
-  "water_flags_flags": {
+  "flags_3": {
    "options": [
     "base map alpha modulates reflection",
     "base map color modulates background",
@@ -362,8 +204,5 @@
     "draw before fog"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

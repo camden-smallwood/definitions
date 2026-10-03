@@ -2,38 +2,38 @@
  "name": "ui_widget_definition",
  "tag": "DeLa",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "ui_widget_definition_block",
  "blocks": {
   "ui_widget_definition_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "ui_widget_definition_block_struct"
+   "struct": "ui_widget_definition_block_struct",
+   "max_count_string": "1"
   },
-  "game_data_inputs_block": {
+  "game_data_input_references_block": {
    "max_count": 64,
-   "max_count_string": "64",
-   "struct": "game_data_inputs_block_struct"
+   "struct": "game_data_input_references_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_GAME_DATA_INPUT_REFERENCES"
   },
-  "event_handlers_block": {
+  "event_handler_references_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "event_handlers_block_struct"
+   "struct": "event_handler_references_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_EVENT_HANDLER_REFERENCES"
   },
-  "search_and_replace_functions_block": {
+  "search_and_replace_reference_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "search_and_replace_functions_block_struct"
+   "struct": "search_and_replace_reference_block_struct",
+   "max_count_string": "MAXIMUM_SEARCH_AND_REPLACE_REFERENCES"
   },
-  "conditional_widgets_block": {
+  "conditional_widget_reference_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "conditional_widgets_block_struct"
+   "struct": "conditional_widget_reference_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_CHILD_WIDGET_REFERENCES"
   },
-  "child_widgets_block": {
+  "child_widget_reference_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "child_widgets_block_struct"
+   "struct": "child_widget_reference_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_CHILD_WIDGET_REFERENCES"
   }
  },
  "structs": {
@@ -44,12 +44,12 @@
     {
      "type": "short_enum",
      "name": "widget type",
-     "definition": "widget_type_enum"
+     "definition": "widget type"
     },
     {
      "type": "short_enum",
      "name": "controller index",
-     "definition": "controller_index_enum"
+     "definition": "controller index"
     },
     {
      "type": "string",
@@ -62,39 +62,59 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "long_integer",
-     "name": "milliseconds to auto close"
+     "name": "milliseconds to auto close#<=0 to never auto-close"
     },
     {
      "type": "long_integer",
-     "name": "milliseconds auto close fade time"
+     "name": "milliseconds auto close fade time#<= 0 for immediate close"
     },
     {
      "type": "tag_reference",
      "name": "background bitmap"
     },
     {
+     "type": "explanation",
+     "name": "game data input fxns",
+     "definition": "These functions use current game data to modify the appearance of\nthe widget. These functions are called every time the widget is\nrendered."
+    },
+    {
      "type": "block",
      "name": "game data inputs",
-     "definition": "game_data_inputs_block"
+     "definition": "game_data_input_references_block"
+    },
+    {
+     "type": "explanation",
+     "name": "event handlers",
+     "definition": "These allow actions to be tied to certain ui events.\nThe event handler is run every time the widget receives the specified event.\nBy default, the 'back' and 'B' buttons will take you to the previous screen."
     },
     {
      "type": "block",
      "name": "event handlers",
-     "definition": "event_handlers_block"
+     "definition": "event_handler_references_block"
+    },
+    {
+     "type": "explanation",
+     "name": "search-and-replace",
+     "definition": "These are used to run a search-and-replace on the specified\nword in the text-box text, replacing all occurrences of the word\nwith the output of the replace-function. These are invoked each\ntime the text box is rendered (after any game data input functions\nhave been run). The searching is case-sensitive."
     },
     {
      "type": "block",
      "name": "search and replace functions",
-     "definition": "search_and_replace_functions_block"
+     "definition": "search_and_replace_reference_block"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "32*sizeof(long)",
      "definition": 128
+    },
+    {
+     "type": "explanation",
+     "name": "text box",
+     "definition": "parameters specific to text box widgets\nNOTE: the string list tag can also be used for lists whose items come from a string list tag"
     },
     {
      "type": "tag_reference",
@@ -111,44 +131,59 @@
     {
      "type": "short_enum",
      "name": "justification",
-     "definition": "justification_enum"
+     "definition": "justification"
     },
     {
      "type": "long_flags",
-     "name": "flags 1",
-     "definition": "flags_1_flags"
+     "name": "flags",
+     "definition": "flags_3"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(struct tag_block)",
      "definition": 12
     },
     {
-     "type": "short_integer",
-     "name": "string list index"
+     "type": "explanation",
+     "name": "more text box parameters",
+     "definition": "blah blah blah"
     },
     {
      "type": "short_integer",
-     "name": "horiz offset"
+     "name": "string list index#default is 0"
     },
     {
      "type": "short_integer",
-     "name": "vert offset"
+     "name": "horiz offset#offsets text position in its bounding area"
+    },
+    {
+     "type": "short_integer",
+     "name": "vert offset#offsets the text position in its bounding area"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "1*sizeof(short)+6*sizeof(long)",
      "definition": 26
     },
     {
+     "type": "explanation",
+     "name": "list items",
+     "definition": "These options affect list items for both spinner and column lists\n* child widgets are used to define the visible list items\n* for lists with code-generated list items, the child widgets are used\n  as templated for visible list item placement\nIMPORTANT: for list widgets, the ONLY thing you can have as child widgets are the list item widgets!"
+    },
+    {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "long_flags",
-     "name": "flags 2",
-     "definition": "flags_2_flags"
+     "name": "flags",
+     "definition": "flags_4"
+    },
+    {
+     "type": "explanation",
+     "name": "spinner list",
+     "definition": "parameters specific to spinner list widgets\nchild widgets are the list items"
     },
     {
      "type": "tag_reference",
@@ -168,8 +203,13 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
+    },
+    {
+     "type": "explanation",
+     "name": "column list",
+     "definition": "parameters specific to column list widgets\nchild widgets are the list items"
     },
     {
      "type": "tag_reference",
@@ -177,33 +217,43 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "64*sizeof(long)",
      "definition": 256
+    },
+    {
+     "type": "explanation",
+     "name": "conditional widgets",
+     "definition": "use this to attach widgets that are loaded only\nif some internal criteria is met while processing a widget event"
     },
     {
      "type": "block",
      "name": "conditional widgets",
-     "definition": "conditional_widgets_block"
+     "definition": "conditional_widget_reference_block"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "32*sizeof(long)",
      "definition": 128
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "32*sizeof(long)",
      "definition": 128
+    },
+    {
+     "type": "explanation",
+     "name": "child widgets",
+     "definition": "use this to attach widgets that are loaded as 'children'\nof this widget (children are always loaded as part of the parent widget)"
     },
     {
      "type": "block",
      "name": "child widgets",
-     "definition": "child_widgets_block"
+     "definition": "child_widget_reference_block"
     },
     {
      "type": "terminator",
@@ -211,23 +261,23 @@
     }
    ]
   },
-  "game_data_inputs_block_struct": {
+  "game_data_input_references_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
      "type": "short_enum",
      "name": "function",
-     "definition": "function_enum"
+     "definition": "function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "1*sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -236,24 +286,24 @@
     }
    ]
   },
-  "event_handlers_block_struct": {
+  "event_handler_references_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 72,
    "fields": [
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "short_enum",
      "name": "event type",
-     "definition": "event_type_enum"
+     "definition": "event type"
     },
     {
      "type": "short_enum",
      "name": "function",
-     "definition": "function_enum_2"
+     "definition": "function_2"
     },
     {
      "type": "tag_reference",
@@ -273,7 +323,7 @@
     }
    ]
   },
-  "search_and_replace_functions_block_struct": {
+  "search_and_replace_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 34,
    "fields": [
@@ -284,7 +334,7 @@
     {
      "type": "short_enum",
      "name": "replace function",
-     "definition": "replace_function_enum"
+     "definition": "replace function"
     },
     {
      "type": "terminator",
@@ -292,7 +342,7 @@
     }
    ]
   },
-  "conditional_widgets_block_struct": {
+  "conditional_widget_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 80,
    "fields": [
@@ -302,20 +352,20 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name (unused)"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_5"
     },
     {
      "type": "short_integer",
-     "name": "custom controller index"
+     "name": "custom controller index (unused)"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "1*sizeof(short)+6*sizeof(long)",
      "definition": 26
     },
     {
@@ -324,7 +374,7 @@
     }
    ]
   },
-  "child_widgets_block_struct": {
+  "child_widget_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 80,
    "fields": [
@@ -334,12 +384,12 @@
     },
     {
      "type": "string",
-     "name": "name"
+     "name": "name (unused)"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_6"
     },
     {
      "type": "short_integer",
@@ -355,7 +405,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "1*sizeof(short)+5*sizeof(long)",
      "definition": 22
     },
     {
@@ -365,20 +415,19 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "widget_type_enum": {
+  "widget type": {
    "options": [
     "container",
     "text box",
     "spinner list",
     "column list",
-    "game model not implemented",
-    "movie not implemented",
-    "custom not implemented"
+    "game model (not implemented)",
+    "movie (not implemented)",
+    "custom (not implemented)"
    ]
   },
-  "controller_index_enum": {
+  "controller index": {
    "options": [
     "player 1",
     "player 2",
@@ -387,15 +436,15 @@
     "any player"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "pass unhandled events to focused child",
     "pause game time",
     "flash background bitmap",
-    "dpad up down tabs thru children",
-    "dpad left right tabs thru children",
-    "dpad up down tabs thru list items",
-    "dpad left right tabs thru list items",
+    "dpad up/down tabs thru children",
+    "dpad left/right tabs thru children",
+    "dpad up/down tabs thru list items",
+    "dpad left/right tabs thru list items",
     "dont focus a specific child widget",
     "pass unhandled events to all children",
     "render regardless of controller index",
@@ -403,13 +452,13 @@
     "return to main menu if no history",
     "always use tag controller index",
     "always use nifty render fx",
-    "dont push history",
+    "don't push history",
     "force handle mouse"
    ]
   },
-  "function_enum": {
+  "function": {
    "options": [
-    "null",
+    "NULL",
     "player settings menu update desc",
     "unused",
     "playlist settings menu update desc",
@@ -417,14 +466,14 @@
     "multiplayer type menu update desc",
     "solo level select update",
     "difficulty menu update desc",
-    "build number textbox only",
+    "build number (textbox only)",
     "server list update",
     "network pregame status update",
     "splitscreen pregame status update",
-    "net splitscreen prejoin players",
+    "net/splitscreen prejoin players",
     "mp profile list update",
     "3wide player profile list update",
-    "plyr prof edit select menu upd8",
+    "plyr prof edit-select menu upd8",
     "player profile small menu update",
     "game settings lists text update",
     "solo game objective text",
@@ -443,12 +492,12 @@
     "mp set textbox score limit type",
     "mp set bitmap for map",
     "mp set bitmap for ruleset",
-    "mp set textbox",
+    "mp set textbox # of players",
     "mp edit profile set rule text",
     "system link status check",
     "mp game directions",
-    "teams no teams bitmap update",
-    "warn if diff will nuke saved game",
+    "teams/no teams bitmap update",
+    "warn if diff. will nuke saved game",
     "dim if no net cable",
     "pause game set textbox inverted",
     "dim unless two controllers",
@@ -458,7 +507,7 @@
     "common button bar update",
     "gamepad update menu",
     "server settings update",
-    "audio menu update",
+    "audio_menu_update",
     "mp prof vehicles update",
     "solo map list update",
     "mp map list update",
@@ -470,7 +519,7 @@
     "network settings update"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "close current widget",
     "close other widget",
@@ -480,18 +529,18 @@
     "reload other widget",
     "give focus to widget",
     "run function",
-    "replace self w widget",
+    "replace self w/ widget",
     "go back to previous widget",
     "run scenario script",
     "try to branch on failure"
    ]
   },
-  "event_type_enum": {
+  "event type": {
    "options": [
-    "a button",
-    "b button",
-    "x button",
-    "y button",
+    "A button",
+    "B button",
+    "X button",
+    "Y button",
     "black button",
     "white button",
     "left trigger",
@@ -508,7 +557,7 @@
     "left analog stick down",
     "left analog stick left",
     "left analog stick right",
-    "left analog stick up 1",
+    "left analog stick up",
     "right analog stick down",
     "right analog stick left",
     "right analog stick right",
@@ -521,16 +570,16 @@
     "right mouse",
     "double click",
     "custom activation",
-    "post render"
+    "post-render"
    ]
   },
-  "function_enum_2": {
+  "function_2": {
    "options": [
-    "null",
+    "NULL",
     "list goto next item",
     "list goto previous item",
     "unused",
-    "unused1",
+    "unused",
     "initialize sp level list solo",
     "initialize sp level list coop",
     "dispose sp level list",
@@ -605,8 +654,8 @@
     "final del player profile",
     "final del playlist profile",
     "cancel profile delete",
-    "create edit playlist profile",
-    "create edit player profile",
+    "create&edit playlist profile",
+    "create&edit player profile",
     "net game speed start",
     "net game delay start",
     "net server accept conx",
@@ -634,10 +683,10 @@
     "pause game invert spinner get",
     "pause game invert spinner set",
     "main menu quit game",
-    "mouse emit accept event",
-    "mouse emit back event",
-    "mouse emit dpad left event",
-    "mouse emit dpad right event",
+    "mouse - emit ACCEPT event",
+    "mouse - emit BACK event",
+    "mouse - emit DPAD LEFT event",
+    "mouse - emit DPAD RIGHT event",
     "mouse spinner 3wide click",
     "controls screen init",
     "video screen init",
@@ -654,7 +703,7 @@
     "plr prof change video set",
     "controls screen dispose",
     "controls screen change set",
-    "mouse emit x event",
+    "mouse - emit X event",
     "gamepad screen init",
     "gamepad screen dispose",
     "gamepad screen change gamepads",
@@ -718,30 +767,30 @@
     "load game menu delete finish"
    ]
   },
-  "replace_function_enum": {
+  "replace function": {
    "options": [
-    "null",
-    "widget s controller",
+    "NULL",
+    "widget's controller",
     "build number",
     "pid"
    ]
   },
-  "justification_enum": {
+  "justification": {
    "options": [
     "left justify",
     "right justify",
     "center justify"
    ]
   },
-  "flags_1_flags": {
+  "flags_3": {
    "options": [
     "editable",
     "password",
     "flashing",
-    "dont do that weird focus test"
+    "don't do that weird focus test"
    ]
   },
-  "flags_2_flags": {
+  "flags_4": {
    "options": [
     "list items generated in code",
     "list items from string list tag",
@@ -749,18 +798,15 @@
     "list single preview no scroll"
    ]
   },
-  "flags_flags_3": {
+  "flags_5": {
    "options": [
     "load if event handler function fails"
    ]
   },
-  "flags_flags_4": {
+  "flags_6": {
    "options": [
     "use custom controller index"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

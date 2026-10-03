@@ -2,13 +2,14 @@
  "name": "shader_transparent_meter",
  "tag": "smet",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": "shdr",
  "block": "shader_transparent_meter_block",
  "blocks": {
   "shader_transparent_meter_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "shader_transparent_meter_block_struct"
+   "struct": "shader_transparent_meter_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -18,113 +19,27 @@
    "fields": [
     {
      "type": "struct",
-     "name": "radiosity",
-     "definition": "shader_radiosity_properties_struct"
+     "name": "shader",
+     "definition": "shader_block_struct"
     },
     {
-     "type": "struct",
-     "name": "physics",
-     "definition": "shader_physics_properties_struct"
+     "type": "explanation",
+     "name": "meter shader",
+     "definition": ""
     },
-    {
-     "type": "struct",
-     "name": "properties",
-     "definition": "shader_transparent_meter_properties_struct"
-    },
-    {
-     "type": "struct",
-     "name": "colors",
-     "definition": "shader_transparent_meter_colors_struct"
-    },
-    {
-     "type": "struct",
-     "name": "external function sources",
-     "definition": "shader_transparent_meter_external_function_sources_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_radiosity_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
-    },
-    {
-     "type": "short_enum",
-     "name": "detail level",
-     "definition": "detail_level_enum"
-    },
-    {
-     "type": "real",
-     "name": "power"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color of emitted light"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "tint color"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_physics_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "short_enum",
-     "name": "material type",
-     "definition": "material_type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "type"
+     "definition": "flags_3"
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_transparent_meter_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 84,
-   "fields": [
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags_2"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -133,19 +48,14 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_transparent_meter_colors_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 92,
-   "fields": [
+     "type": "explanation",
+     "name": "colors",
+     "definition": ""
+    },
     {
      "type": "real_rgb_color",
      "name": "gradient min color"
@@ -164,64 +74,59 @@
     },
     {
      "type": "real_rgb_color",
-     "name": "meter tint color"
+     "name": "tint color#modulates framebuffer color unless map alpha is zero"
     },
     {
-     "type": "real",
-     "name": "meter transparency"
+     "type": "real_fraction",
+     "name": "meter transparency:[0,1]#used only when 'tint mode-2' is set"
     },
     {
-     "type": "real",
-     "name": "background transparency"
+     "type": "real_fraction",
+     "name": "background transparency:[0,1]#used only when 'tint mode-2' is set"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_transparent_meter_external_function_sources_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 44,
-   "fields": [
-    {
-     "type": "short_enum",
-     "name": "meter brightness source",
-     "definition": "meter_brightness_source_enum"
+     "type": "explanation",
+     "name": "external function sources",
+     "definition": ""
     },
     {
      "type": "short_enum",
-     "name": "flash brightness source",
-     "definition": "meter_brightness_source_enum"
+     "name": "meter brightness source#overall meter brightness (default is 1)",
+     "definition": "meter brightness source"
     },
     {
      "type": "short_enum",
-     "name": "value source",
-     "definition": "meter_brightness_source_enum"
+     "name": "flash brightness source#brightness of flash (default is 1)",
+     "definition": "meter brightness source"
     },
     {
      "type": "short_enum",
-     "name": "gradient source",
-     "definition": "meter_brightness_source_enum"
+     "name": "value source#position of flash leading edge (default is 1)",
+     "definition": "meter brightness source"
     },
     {
      "type": "short_enum",
-     "name": "flash extension source",
-     "definition": "meter_brightness_source_enum"
+     "name": "gradient source#high color leading edge (default is 1)",
+     "definition": "meter brightness source"
+    },
+    {
+     "type": "short_enum",
+     "name": "flash-extension source#position of flash extension leading edge (default is 1)",
+     "definition": "meter brightness source"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -231,80 +136,24 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
-   "options": [
-    "simple parameterization",
-    "ignore normals",
-    "transparent lit"
-   ]
-  },
-  "detail_level_enum": {
-   "options": [
-    "high",
-    "medium",
-    "low",
-    "turd"
-   ]
-  },
-  "material_type_enum": {
-   "options": [
-    "dirt",
-    "sand",
-    "stone",
-    "snow",
-    "wood",
-    "metal hollow",
-    "metal thin",
-    "metal thick",
-    "rubber",
-    "glass",
-    "force field",
-    "grunt",
-    "hunter armor",
-    "hunter skin",
-    "elite",
-    "jackal",
-    "jackal energy shield",
-    "engineer skin",
-    "engineer force field",
-    "flood combat form",
-    "flood carrier form",
-    "cyborg armor",
-    "cyborg energy shield",
-    "human armor",
-    "human skin",
-    "sentinel",
-    "monitor",
-    "plastic",
-    "water",
-    "leaves",
-    "elite energy shield",
-    "ice",
-    "hunter shield"
-   ]
-  },
-  "flags_flags_2": {
+  "flags_3": {
    "options": [
     "decal",
-    "two sided",
+    "two-sided",
     "flash color is negative",
-    "tint mode 2",
+    "tint mode-2",
     "unfiltered"
    ]
   },
-  "meter_brightness_source_enum": {
+  "meter brightness source": {
    "options": [
     "none",
-    "a out",
-    "b out",
-    "c out",
-    "d out"
+    "A out",
+    "B out",
+    "C out",
+    "D out"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

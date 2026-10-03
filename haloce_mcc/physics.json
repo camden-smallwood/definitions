@@ -2,28 +2,28 @@
  "name": "physics",
  "tag": "phys",
  "version": 4,
- "flags": 0,
+ "flags": 9,
  "block": "physics_block",
  "blocks": {
   "physics_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "physics_block_struct"
+   "struct": "physics_block_struct",
+   "max_count_string": "1"
   },
-  "inertial_matrix_and_inverse_block": {
-   "max_count": 0,
-   "max_count_string": "0",
-   "struct": "inertial_matrix_and_inverse_block_struct"
+  "inertial_matrix_block": {
+   "max_count": 2,
+   "struct": "inertial_matrix_block_struct",
+   "max_count_string": "MAXIMUM_PHYSICS_INERTIAL_MATRICES"
   },
-  "powered_mass_points_block": {
+  "powered_mass_point_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "powered_mass_points_block_struct"
+   "struct": "powered_mass_point_block_struct",
+   "max_count_string": "MAXIMUM_POWERED_MASS_POINTS_PER_PHYSICS"
   },
-  "mass_points_block": {
+  "mass_point_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "mass_points_block_struct"
+   "struct": "mass_point_block_struct",
+   "max_count_string": "MAXIMUM_MASS_POINTS_PER_PHYSICS"
   }
  },
  "structs": {
@@ -33,10 +33,10 @@
    "fields": [
     {
      "type": "real",
-     "name": "radius"
+     "name": "radius#positive uses old inferior physics, negative uses new improved physics"
     },
     {
-     "type": "real",
+     "type": "real_fraction",
      "name": "moment scale"
     },
     {
@@ -44,8 +44,8 @@
      "name": "mass"
     },
     {
-     "type": "real_vector_3d",
-     "name": "center of mass"
+     "type": "real_point_3d",
+     "name": "center of mass*"
     },
     {
      "type": "real",
@@ -64,7 +64,7 @@
      "name": "ground depth"
     },
     {
-     "type": "real",
+     "type": "real_fraction",
      "name": "ground damp fraction"
     },
     {
@@ -77,7 +77,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -94,16 +94,16 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
-     "type": "real",
+     "type": "real_fraction",
      "name": "air friction"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(real)",
      "definition": 4
     },
     {
@@ -120,18 +120,18 @@
     },
     {
      "type": "block",
-     "name": "inertial matrix and inverse",
-     "definition": "inertial_matrix_and_inverse_block"
+     "name": "inertial matrix and inverse*",
+     "definition": "inertial_matrix_block"
     },
     {
      "type": "block",
      "name": "powered mass points",
-     "definition": "powered_mass_points_block"
+     "definition": "powered_mass_point_block"
     },
     {
      "type": "block",
      "name": "mass points",
-     "definition": "mass_points_block"
+     "definition": "mass_point_block"
     },
     {
      "type": "terminator",
@@ -139,13 +139,21 @@
     }
    ]
   },
-  "inertial_matrix_and_inverse_block_struct": {
+  "inertial_matrix_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 36,
    "fields": [
     {
-     "type": "real_matrix_3x3",
-     "name": "matrix"
+     "type": "real_vector_3d",
+     "name": "yy+zz    -xy     -zx"
+    },
+    {
+     "type": "real_vector_3d",
+     "name": " -xy    zz+xx    -yz"
+    },
+    {
+     "type": "real_vector_3d",
+     "name": " -zx     -yz    xx+yy"
     },
     {
      "type": "terminator",
@@ -153,18 +161,18 @@
     }
    ]
   },
-  "powered_mass_points_block_struct": {
+  "powered_mass_point_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "real",
@@ -192,7 +200,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "17*sizeof(real)",
      "definition": 68
     },
     {
@@ -201,26 +209,27 @@
     }
    ]
   },
-  "mass_points_block_struct": {
+  "mass_point_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 128,
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name^*"
+    },
+    {
+     "type": "short_block_index",
+     "name": "powered mass point",
+     "definition": "powered_mass_point_block"
     },
     {
      "type": "short_integer",
-     "name": "powered mass point"
-    },
-    {
-     "type": "short_integer",
-     "name": "model node"
+     "name": "model node*"
     },
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags_2"
+     "definition": "flags_2"
     },
     {
      "type": "real",
@@ -228,7 +237,7 @@
     },
     {
      "type": "real",
-     "name": "mass"
+     "name": "mass*"
     },
     {
      "type": "real",
@@ -236,10 +245,10 @@
     },
     {
      "type": "real",
-     "name": "density"
+     "name": "density*"
     },
     {
-     "type": "real_vector_3d",
+     "type": "real_point_3d",
      "name": "position"
     },
     {
@@ -253,11 +262,11 @@
     {
      "type": "short_enum",
      "name": "friction type",
-     "definition": "friction_type_enum"
+     "definition": "friction type"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -274,7 +283,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "5*sizeof(real)",
      "definition": 20
     },
     {
@@ -284,9 +293,8 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
     "ground friction",
     "water friction",
@@ -297,12 +305,12 @@
     "antigrav"
    ]
   },
-  "flags_flags_2": {
+  "flags_2": {
    "options": [
     "metallic"
    ]
   },
-  "friction_type_enum": {
+  "friction type": {
    "options": [
     "point",
     "forward",
@@ -310,8 +318,5 @@
     "up"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

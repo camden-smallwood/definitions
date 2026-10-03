@@ -2,13 +2,13 @@
  "name": "sound_environment",
  "tag": "snde",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "sound_environment_block",
  "blocks": {
   "sound_environment_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "sound_environment_block_struct"
+   "struct": "sound_environment_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -17,53 +17,54 @@
    "size": 72,
    "fields": [
     {
-     "type": "long_integer",
-     "name": "unknown"
+     "type": "pad",
+     "name": "sizeof(long)",
+     "definition": 4
     },
     {
      "type": "short_integer",
-     "name": "priority"
+     "name": "priority#when multiple listeners are in different sound environments in split screen, the combined environment will be the one with the highest priority."
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
-     "type": "real",
-     "name": "room intensity"
+     "type": "real_fraction",
+     "name": "room intensity#intensity of the room effect"
+    },
+    {
+     "type": "real_fraction",
+     "name": "room intensity hf#intensity of the room effect above the reference high frequency"
     },
     {
      "type": "real",
-     "name": "room intensity hf"
+     "name": "room rolloff (0 to 10)#how quickly the room effect rolls off, from 0.0 to 10.0"
     },
     {
      "type": "real",
-     "name": "room rolloff"
+     "name": "decay time (.1 to 20):seconds"
     },
     {
      "type": "real",
-     "name": "decay time"
+     "name": "decay hf ratio (.1 to 2)"
     },
     {
-     "type": "real",
-     "name": "decay hf ratio"
-    },
-    {
-     "type": "real",
+     "type": "real_fraction",
      "name": "reflections intensity"
     },
     {
      "type": "real",
-     "name": "reflections delay"
+     "name": "reflections delay (0 to .3):seconds"
     },
     {
-     "type": "real",
+     "type": "real_fraction",
      "name": "reverb intensity"
     },
     {
      "type": "real",
-     "name": "reverb delay"
+     "name": "reverb delay (0 to .1):seconds"
     },
     {
      "type": "real",
@@ -75,11 +76,11 @@
     },
     {
      "type": "real",
-     "name": "hf reference"
+     "name": "hf reference(20 to 20,000):Hz#for hf values, what frequency defines hf, from 20 to 20,000"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -88,10 +89,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

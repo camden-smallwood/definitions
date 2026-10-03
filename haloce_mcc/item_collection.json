@@ -2,18 +2,18 @@
  "name": "item_collection",
  "tag": "itmc",
  "version": 0,
- "flags": 0,
+ "flags": 9,
  "block": "item_collection_block",
  "blocks": {
   "item_collection_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "item_collection_block_struct"
+   "struct": "item_collection_block_struct",
+   "max_count_string": "1"
   },
-  "permutations_block": {
+  "item_permutation": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "permutations_block_struct"
+   "struct": "item_permutation_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_PERMUTATIONS_PER_ITEM_GROUP"
   }
  },
  "structs": {
@@ -23,21 +23,21 @@
    "fields": [
     {
      "type": "block",
-     "name": "permutations",
-     "definition": "permutations_block"
+     "name": "item permutations",
+     "definition": "item_permutation"
     },
     {
      "type": "short_integer",
-     "name": "default spawn time"
+     "name": "spawn time (in seconds, 0 = default)"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "1 * sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "19 * sizeof(long)",
      "definition": 76
     },
     {
@@ -46,26 +46,26 @@
     }
    ]
   },
-  "permutations_block_struct": {
+  "item_permutation_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 84,
    "fields": [
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8 * sizeof(long)",
      "definition": 32
     },
     {
      "type": "real",
-     "name": "weight"
+     "name": "weight#relatively how likely this item will be chosen"
     },
     {
      "type": "tag_reference",
-     "name": "item"
+     "name": "item^#which item to "
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8 * sizeof(long)",
      "definition": 32
     },
     {
@@ -74,10 +74,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

@@ -2,13 +2,13 @@
  "name": "preferences_network_game",
  "tag": "ngpr",
  "version": 2,
- "flags": 0,
+ "flags": 2,
  "block": "preferences_network_game_block",
  "blocks": {
   "preferences_network_game_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "preferences_network_game_block_struct"
+   "struct": "preferences_network_game_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -34,11 +34,11 @@
     },
     {
      "type": "short_integer",
-     "name": "pattern bitmap index"
+     "name": "bitmap index"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -47,16 +47,16 @@
     },
     {
      "type": "short_integer",
-     "name": "decal bitmap index"
+     "name": "bitmap index"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "200*sizeof(long)",
      "definition": 800
     },
     {
@@ -65,10 +65,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

@@ -7,23 +7,23 @@
  "blocks": {
   "font_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "font_block_struct"
+   "struct": "font_block_struct",
+   "max_count_string": "1"
   },
-  "character_tables_block": {
+  "font_character_tables": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "character_tables_block_struct"
+   "struct": "font_character_tables_struct",
+   "max_count_string": "UNSIGNED_CHAR_MAX+1"
   },
-  "character_table_block": {
+  "font_character_table": {
    "max_count": 256,
-   "max_count_string": "256",
-   "struct": "character_table_block_struct"
+   "struct": "font_character_table_struct",
+   "max_count_string": "UNSIGNED_CHAR_MAX+1"
   },
-  "characters_block": {
+  "font_character_block": {
    "max_count": 32000,
-   "max_count_string": "32000",
-   "struct": "characters_block_struct"
+   "struct": "font_character_block_struct",
+   "max_count_string": "MAXIMUM_CHARACTERS_PER_FONT"
   }
  },
  "structs": {
@@ -34,7 +34,7 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_integer",
@@ -53,23 +53,14 @@
      "name": "leading width"
     },
     {
-     "type": "short_enum",
-     "name": "encoding type",
-     "definition": "encoding_type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "character offset"
-    },
-    {
      "type": "pad",
-     "name": "pad",
-     "definition": 32
+     "name": "9*sizeof(long)",
+     "definition": 36
     },
     {
      "type": "block",
      "name": "character tables",
-     "definition": "character_tables_block"
+     "definition": "font_character_tables"
     },
     {
      "type": "tag_reference",
@@ -90,12 +81,12 @@
     {
      "type": "block",
      "name": "characters",
-     "definition": "characters_block"
+     "definition": "font_character_block"
     },
     {
      "type": "data",
      "name": "pixels",
-     "definition": "pixels_data"
+     "definition": "font_pixels_definition"
     },
     {
      "type": "terminator",
@@ -103,14 +94,14 @@
     }
    ]
   },
-  "character_tables_block_struct": {
+  "font_character_tables_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 12,
    "fields": [
     {
      "type": "block",
      "name": "character table",
-     "definition": "character_table_block"
+     "definition": "font_character_table"
     },
     {
      "type": "terminator",
@@ -118,13 +109,14 @@
     }
    ]
   },
-  "character_table_block_struct": {
+  "font_character_table_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
     {
-     "type": "short_integer",
-     "name": "character index"
+     "type": "short_block_index",
+     "name": "character index",
+     "definition": "font_character_block"
     },
     {
      "type": "terminator",
@@ -132,13 +124,13 @@
     }
    ]
   },
-  "characters_block_struct": {
+  "font_character_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "short_integer",
-     "name": "character"
+     "name": "character*"
     },
     {
      "type": "short_integer",
@@ -146,11 +138,11 @@
     },
     {
      "type": "short_integer",
-     "name": "bitmap width"
+     "name": "bitmap width*"
     },
     {
      "type": "short_integer",
-     "name": "bitmap height"
+     "name": "bitmap height*"
     },
     {
      "type": "short_integer",
@@ -162,15 +154,16 @@
     },
     {
      "type": "short_integer",
-     "name": "hardware character index"
+     "name": "hardware character index*"
     },
     {
-     "type": "short_integer",
-     "name": "draw generation"
+     "type": "pad",
+     "name": "sizeof(word)",
+     "definition": 2
     },
     {
      "type": "long_integer",
-     "name": "pixels offset"
+     "name": "pixels offset*"
     },
     {
      "type": "terminator",
@@ -179,28 +172,17 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
-    "disable mcc font override"
-   ]
-  },
-  "encoding_type_enum": {
-   "options": [
-    "ucs-2",
-    "extended"
+    "never override with remastered font under MCC#If the engine considers this a 'default' font then, when rendered in MCC, never attempt to override character rendering via the new remastered font"
    ]
   }
  },
  "datas": {
-  "pixels_data": {
-   "alignment": 4,
+  "font_pixels_definition": {
    "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
+   "max_size": 8388608
   }
- },
- "resources": {},
- "interops": {}
+ }
 }

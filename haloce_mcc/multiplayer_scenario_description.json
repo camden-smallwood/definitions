@@ -7,13 +7,13 @@
  "blocks": {
   "multiplayer_scenario_description_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "multiplayer_scenario_description_block_struct"
+   "struct": "multiplayer_scenario_description_block_struct",
+   "max_count_string": "1"
   },
-  "multiplayer_scenarios_block": {
+  "scenario_description_block": {
    "max_count": 32,
-   "max_count_string": "32",
-   "struct": "multiplayer_scenarios_block_struct"
+   "struct": "scenario_description_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_MULTIPLAYER_SCENARIOS"
   }
  },
  "structs": {
@@ -24,7 +24,7 @@
     {
      "type": "block",
      "name": "multiplayer scenarios",
-     "definition": "multiplayer_scenarios_block"
+     "definition": "scenario_description_block"
     },
     {
      "type": "terminator",
@@ -32,10 +32,15 @@
     }
    ]
   },
-  "multiplayer_scenarios_block_struct": {
+  "scenario_description_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 68,
    "fields": [
+    {
+     "type": "explanation",
+     "name": "net map info",
+     "definition": "these provide the info required by the UI to load a net map"
+    },
     {
      "type": "tag_reference",
      "name": "descriptive bitmap"
@@ -46,11 +51,11 @@
     },
     {
      "type": "string",
-     "name": "scenario tag directory path"
+     "name": "scenario tag directory path#this is the path to the directory containing the scenario tag file of the same name"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(short)",
      "definition": 4
     },
     {
@@ -59,10 +64,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

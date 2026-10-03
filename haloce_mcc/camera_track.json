@@ -7,13 +7,13 @@
  "blocks": {
   "camera_track_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "camera_track_block_struct"
+   "struct": "camera_track_block_struct",
+   "max_count_string": "1"
   },
-  "control_points_block": {
+  "camera_track_control_point_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "control_points_block_struct"
+   "struct": "camera_track_control_point_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_CAMERA_TRACK_CONTROL_POINTS"
   }
  },
  "structs": {
@@ -24,16 +24,16 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "block",
      "name": "control points",
-     "definition": "control_points_block"
+     "definition": "camera_track_control_point_block"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -42,7 +42,7 @@
     }
    ]
   },
-  "control_points_block_struct": {
+  "camera_track_control_point_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 60,
    "fields": [
@@ -56,7 +56,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "8*sizeof(long)",
      "definition": 32
     },
     {
@@ -66,15 +66,9 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
-   "options": [
-    "unused"
-   ]
+  "flags": {
+   "options": []
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

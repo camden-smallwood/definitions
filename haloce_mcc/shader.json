@@ -2,13 +2,13 @@
  "name": "shader",
  "tag": "shdr",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "shader_block",
  "blocks": {
   "shader_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "shader_block_struct"
+   "struct": "shader_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -17,38 +17,23 @@
    "size": 40,
    "fields": [
     {
-     "type": "struct",
-     "name": "radiosity",
-     "definition": "shader_radiosity_properties_struct"
+     "type": "explanation",
+     "name": "radiosity properties",
+     "definition": ""
     },
-    {
-     "type": "struct",
-     "name": "physics",
-     "definition": "shader_physics_properties_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_radiosity_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "short_enum",
-     "name": "detail level",
-     "definition": "detail_level_enum"
+     "name": "detail level#affects the density of tesselation (high means slow).",
+     "definition": "detail level"
     },
     {
      "type": "real",
-     "name": "power"
+     "name": "power#power of emitted light from 0 to infinity"
     },
     {
      "type": "real_rgb_color",
@@ -56,35 +41,31 @@
     },
     {
      "type": "real_rgb_color",
-     "name": "tint color"
+     "name": "tint color#light passing through this surface (if it's transparent) will be tinted this color."
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_physics_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
+     "type": "explanation",
+     "name": "physics properties",
+     "definition": "only relevant in structure bsp uses"
+    },
     {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
+     "type": "word_flags",
+     "name": "flags",
+     "definition": "flags_2"
     },
     {
      "type": "short_enum",
      "name": "material type",
-     "definition": "material_type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "type"
+     "definition": "material type"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
+     "definition": 2
+    },
+    {
+     "type": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
@@ -94,16 +75,15 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags": {
    "options": [
-    "simple parameterization",
-    "ignore normals",
-    "transparent lit"
+    "simple parameterization#lightmap texture parametrization should correspond to diffuse texture parametrization",
+    "ignore normals#light independent of normals (trees)",
+    "transparent lit#use lit vertex shader permutation. Only for transparent chicago (extended) and generic"
    ]
   },
-  "detail_level_enum": {
+  "detail level": {
    "options": [
     "high",
     "medium",
@@ -111,16 +91,19 @@
     "turd"
    ]
   },
-  "material_type_enum": {
+  "flags_2": {
+   "options": []
+  },
+  "material type": {
    "options": [
     "dirt",
     "sand",
     "stone",
     "snow",
     "wood",
-    "metal hollow",
-    "metal thin",
-    "metal thick",
+    "metal (hollow)",
+    "metal (thin)",
+    "metal (thick)",
     "rubber",
     "glass",
     "force field",
@@ -148,8 +131,5 @@
     "hunter shield"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

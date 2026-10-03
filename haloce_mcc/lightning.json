@@ -2,23 +2,23 @@
  "name": "lightning",
  "tag": "elec",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "lightning_block",
  "blocks": {
   "lightning_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "lightning_block_struct"
+   "struct": "lightning_block_struct",
+   "max_count_string": "1"
   },
-  "markers_block": {
+  "lightning_marker_block": {
    "max_count": 16,
-   "max_count_string": "16",
-   "struct": "markers_block_struct"
+   "struct": "lightning_marker_block_struct",
+   "max_count_string": "MAXIMUM_MARKERS_PER_LIGHTNING"
   },
-  "shader_block": {
+  "lightning_shader_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "shader_block_struct"
+   "struct": "lightning_shader_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -27,51 +27,56 @@
    "size": 264,
    "fields": [
     {
+     "type": "explanation",
+     "name": "lightning",
+     "definition": ""
+    },
+    {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "short_integer",
-     "name": "count"
+     "name": "count#number of overlapping lightning effects to render; 0 defaults to 1"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "real",
-     "name": "near fade distance"
+     "name": "near fade distance:world units#distance at which lightning is at full brightness"
     },
     {
      "type": "real",
-     "name": "far fade distance"
+     "name": "far fade distance:world units#distance at which lightning is at zero brightness"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "short_enum",
      "name": "jitter scale source",
-     "definition": "jitter_scale_source_enum"
+     "definition": "jitter scale source"
     },
     {
      "type": "short_enum",
      "name": "thickness scale source",
-     "definition": "jitter_scale_source_enum"
+     "definition": "jitter scale source"
     },
     {
      "type": "short_enum",
      "name": "tint modulation source",
-     "definition": "tint_modulation_source_enum"
+     "definition": "tint modulation source"
     },
     {
      "type": "short_enum",
      "name": "brightness scale source",
-     "definition": "jitter_scale_source_enum"
+     "definition": "jitter scale source"
     },
     {
      "type": "tag_reference",
@@ -79,22 +84,22 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "21*sizeof(long)",
      "definition": 84
     },
     {
      "type": "block",
      "name": "markers",
-     "definition": "markers_block"
+     "definition": "lightning_marker_block"
     },
     {
      "type": "block",
      "name": "shader",
-     "definition": "shader_block"
+     "definition": "lightning_shader_block"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "22*sizeof(long)",
      "definition": 88
     },
     {
@@ -103,7 +108,7 @@
     }
    ]
   },
-  "markers_block_struct": {
+  "lightning_marker_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 228,
    "fields": [
@@ -114,11 +119,11 @@
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
@@ -127,33 +132,33 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "19*sizeof(long)",
      "definition": 76
     },
     {
      "type": "real_vector_3d",
-     "name": "random position bounds"
+     "name": "random position bounds:world units"
     },
     {
      "type": "real",
-     "name": "random jitter"
+     "name": "random jitter:world units"
     },
     {
      "type": "real",
-     "name": "thickness"
+     "name": "thickness:world units"
     },
     {
      "type": "real_argb_color",
-     "name": "tint"
+     "name": "tint#alpha is brightness"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "19*sizeof(long)",
      "definition": 76
     },
     {
@@ -162,248 +167,64 @@
     }
    ]
   },
-  "shader_block_struct": {
+  "lightning_shader_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 180,
    "fields": [
     {
-     "type": "struct",
-     "name": "shader properties",
-     "definition": "shader_effect_properties_struct"
-    },
-    {
-     "type": "struct",
-     "name": "secondary map",
-     "definition": "shader_effect_secondary_map_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_effect_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 76,
-   "fields": [
-    {
-     "type": "struct",
-     "name": "shader",
-     "definition": "shader_struct"
+     "type": "pad",
+     "name": "sizeof(struct _shader)",
+     "definition": 40
     },
     {
      "type": "word_flags",
      "name": "shader flags",
-     "definition": "shader_flags_flags"
+     "definition": "shader flags"
     },
     {
      "type": "short_enum",
      "name": "framebuffer blend function",
-     "definition": "framebuffer_blend_function_enum"
+     "definition": "framebuffer blend function"
     },
     {
      "type": "short_enum",
      "name": "framebuffer fade mode",
-     "definition": "framebuffer_fade_mode_enum"
+     "definition": "framebuffer fade mode"
     },
     {
      "type": "word_flags",
      "name": "map flags",
-     "definition": "map_flags_flags"
+     "definition": "map flags"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 40,
-   "fields": [
-    {
-     "type": "struct",
-     "name": "radiosity",
-     "definition": "shader_radiosity_properties_struct"
+     "type": "pad",
+     "name": "sizeof(struct tag_reference)",
+     "definition": 16
     },
-    {
-     "type": "struct",
-     "name": "physics",
-     "definition": "shader_physics_properties_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_radiosity_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags_2"
-    },
-    {
-     "type": "short_enum",
-     "name": "detail level",
-     "definition": "detail_level_enum"
-    },
-    {
-     "type": "real",
-     "name": "power"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color of emitted light"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "tint color"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_physics_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
-     "type": "short_enum",
-     "name": "material type",
-     "definition": "material_type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "type"
-    },
-    {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_effect_secondary_map_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 104,
-   "fields": [
-    {
-     "type": "tag_reference",
-     "name": "bitmap"
-    },
-    {
-     "type": "short_enum",
-     "name": "anchor",
-     "definition": "anchor_enum"
-    },
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "map_flags_flags"
-    },
-    {
-     "type": "short_enum",
-     "name": "u animation source",
-     "definition": "jitter_scale_source_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "u animation function",
-     "definition": "u_animation_function_enum"
-    },
-    {
-     "type": "real",
-     "name": "u animation period"
-    },
-    {
-     "type": "real",
-     "name": "u animation phase"
-    },
-    {
-     "type": "real",
-     "name": "u animation scale"
-    },
-    {
-     "type": "short_enum",
-     "name": "v animation source",
-     "definition": "jitter_scale_source_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "v animation function",
-     "definition": "u_animation_function_enum"
-    },
-    {
-     "type": "real",
-     "name": "v animation period"
-    },
-    {
-     "type": "real",
-     "name": "v animation phase"
-    },
-    {
-     "type": "real",
-     "name": "v animation scale"
-    },
-    {
-     "type": "short_enum",
-     "name": "rotation animation source",
-     "definition": "jitter_scale_source_enum"
-    },
-    {
-     "type": "short_enum",
-     "name": "rotation animation function",
-     "definition": "u_animation_function_enum"
-    },
-    {
-     "type": "real",
-     "name": "rotation animation period"
-    },
-    {
-     "type": "real",
-     "name": "rotation animation phase"
-    },
-    {
-     "type": "real",
-     "name": "rotation animation scale"
-    },
-    {
-     "type": "real_point_2d",
-     "name": "rotation animation center"
+     "type": "pad",
+     "name": "sizeof(struct shader_texture_animation)",
+     "definition": 56
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 4
-    },
-    {
-     "type": "real",
-     "name": "zsprite radius scale"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 20
+     "name": "7*sizeof(real)",
+     "definition": 28
     },
     {
      "type": "terminator",
@@ -412,91 +233,38 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "jitter_scale_source_enum": {
+  "jitter scale source": {
    "options": [
     "none",
-    "a out",
-    "b out",
-    "c out",
-    "d out"
+    "A out",
+    "B out",
+    "C out",
+    "D out"
    ]
   },
-  "tint_modulation_source_enum": {
+  "tint modulation source": {
    "options": [
     "none",
-    "a",
-    "b",
-    "c",
-    "d"
+    "A",
+    "B",
+    "C",
+    "D"
    ]
   },
-  "flags_flags": {
+  "flags": {
    "options": [
     "not connected to next marker"
    ]
   },
-  "flags_flags_2": {
-   "options": [
-    "simple parameterization",
-    "ignore normals",
-    "transparent lit"
-   ]
-  },
-  "detail_level_enum": {
-   "options": [
-    "high",
-    "medium",
-    "low",
-    "turd"
-   ]
-  },
-  "material_type_enum": {
-   "options": [
-    "dirt",
-    "sand",
-    "stone",
-    "snow",
-    "wood",
-    "metal hollow",
-    "metal thin",
-    "metal thick",
-    "rubber",
-    "glass",
-    "force field",
-    "grunt",
-    "hunter armor",
-    "hunter skin",
-    "elite",
-    "jackal",
-    "jackal energy shield",
-    "engineer skin",
-    "engineer force field",
-    "flood combat form",
-    "flood carrier form",
-    "cyborg armor",
-    "cyborg energy shield",
-    "human armor",
-    "human skin",
-    "sentinel",
-    "monitor",
-    "plastic",
-    "water",
-    "leaves",
-    "elite energy shield",
-    "ice",
-    "hunter shield"
-   ]
-  },
-  "shader_flags_flags": {
+  "shader flags": {
    "options": [
     "sort bias",
     "nonlinear tint",
-    "dont overdraw fp weapon"
+    "don't overdraw fp weapon"
    ]
   },
-  "framebuffer_blend_function_enum": {
+  "framebuffer blend function": {
    "options": [
     "alpha blend",
     "multiply",
@@ -505,46 +273,20 @@
     "subtract",
     "component min",
     "component max",
-    "alpha multiply add"
+    "alpha-multiply add"
    ]
   },
-  "framebuffer_fade_mode_enum": {
+  "framebuffer fade mode": {
    "options": [
     "none",
     "fade when perpendicular",
     "fade when parallel"
    ]
   },
-  "map_flags_flags": {
+  "map flags": {
    "options": [
     "unfiltered"
    ]
-  },
-  "anchor_enum": {
-   "options": [
-    "with primary",
-    "with screen space",
-    "zsprite"
-   ]
-  },
-  "u_animation_function_enum": {
-   "options": [
-    "one",
-    "zero",
-    "cosine",
-    "cosine variable period",
-    "diagonal wave",
-    "diagonal wave variable period",
-    "slide",
-    "slide variable period",
-    "noise",
-    "jitter",
-    "wander",
-    "spark"
-   ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

@@ -7,13 +7,13 @@
  "blocks": {
   "ui_widget_collection_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "ui_widget_collection_block_struct"
+   "struct": "ui_widget_collection_block_struct",
+   "max_count_string": "1"
   },
-  "tags_block": {
-   "max_count": 200,
-   "max_count_string": "200",
-   "struct": "tags_block_struct"
+  "ui_widget_references_block": {
+   "max_count": 32,
+   "struct": "ui_widget_references_block_struct",
+   "max_count_string": "MAXIMUM_NUMBER_OF_UI_WIDGETS_PER_COLLECTION"
   }
  },
  "structs": {
@@ -23,8 +23,8 @@
    "fields": [
     {
      "type": "block",
-     "name": "tags",
-     "definition": "tags_block"
+     "name": "ui widget definitions",
+     "definition": "ui_widget_references_block"
     },
     {
      "type": "terminator",
@@ -32,13 +32,13 @@
     }
    ]
   },
-  "tags_block_struct": {
+  "ui_widget_references_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 16,
    "fields": [
     {
      "type": "tag_reference",
-     "name": "reference"
+     "name": "ui_widget_definition"
     },
     {
      "type": "terminator",
@@ -46,10 +46,5 @@
     }
    ]
   }
- },
- "arrays": {},
- "enums_flags": {},
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

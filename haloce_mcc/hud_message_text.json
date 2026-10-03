@@ -2,23 +2,23 @@
  "name": "hud_message_text",
  "tag": "hmt ",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "hud_message_text_block",
  "blocks": {
   "hud_message_text_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "hud_message_text_block_struct"
+   "struct": "hud_message_text_block_struct",
+   "max_count_string": "1"
   },
-  "message_elements_block": {
+  "hud_message_elements_block": {
    "max_count": 8192,
-   "max_count_string": "8192",
-   "struct": "message_elements_block_struct"
+   "struct": "hud_message_elements_block_struct",
+   "max_count_string": "MAX_STATE_MESSAGES*MAX_STATE_TEXT_PANELS"
   },
-  "messages_block": {
+  "hud_messages_block": {
    "max_count": 1024,
-   "max_count_string": "1024",
-   "struct": "messages_block_struct"
+   "struct": "hud_messages_block_struct",
+   "max_count_string": "MAX_STATE_MESSAGES"
   }
  },
  "structs": {
@@ -28,22 +28,22 @@
    "fields": [
     {
      "type": "data",
-     "name": "text data",
-     "definition": "text_data_data"
+     "name": "text data*",
+     "definition": "string data"
     },
     {
      "type": "block",
-     "name": "message elements",
-     "definition": "message_elements_block"
+     "name": "message elements*",
+     "definition": "hud_message_elements_block"
     },
     {
      "type": "block",
-     "name": "messages",
-     "definition": "messages_block"
+     "name": "messages*",
+     "definition": "hud_messages_block"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "21*sizeof(long)",
      "definition": 84
     },
     {
@@ -52,17 +52,17 @@
     }
    ]
   },
-  "message_elements_block_struct": {
+  "hud_message_elements_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 2,
    "fields": [
     {
      "type": "char_integer",
-     "name": "type"
+     "name": "type*"
     },
     {
      "type": "char_integer",
-     "name": "data"
+     "name": "data*"
     },
     {
      "type": "terminator",
@@ -70,34 +70,34 @@
     }
    ]
   },
-  "messages_block_struct": {
+  "hud_messages_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 64,
    "fields": [
     {
      "type": "string",
-     "name": "name"
+     "name": "name*"
     },
     {
      "type": "short_integer",
-     "name": "start index into text blob"
+     "name": "start index into text blob*"
     },
     {
      "type": "short_integer",
-     "name": "start index of message block"
+     "name": "start index of message block*"
     },
     {
      "type": "char_integer",
-     "name": "panel count"
+     "name": "panel count*"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3",
      "definition": 3
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(long)*6",
      "definition": 24
     },
     {
@@ -107,16 +107,10 @@
    ]
   }
  },
- "arrays": {},
- "enums_flags": {},
  "datas": {
-  "text_data_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
+  "string data": {
+   "flags": 2,
+   "max_size": 65536
   }
- },
- "resources": {},
- "interops": {}
+ }
 }

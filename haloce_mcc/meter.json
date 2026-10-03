@@ -2,13 +2,13 @@
  "name": "meter",
  "tag": "metr",
  "version": 1,
- "flags": 0,
+ "flags": 8,
  "block": "meter_block",
  "blocks": {
   "meter_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "meter_block_struct"
+   "struct": "meter_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -19,15 +19,15 @@
     {
      "type": "long_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags"
     },
     {
      "type": "tag_reference",
-     "name": "stencil bitmaps"
+     "name": "stencil bitmaps#two bitmaps specifying the mask and the meter levels"
     },
     {
      "type": "tag_reference",
-     "name": "source bitmap"
+     "name": "source bitmap#optional bitmap to draw into the unmasked regions of the meter (modulated by the colors below)"
     },
     {
      "type": "short_integer",
@@ -39,27 +39,27 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(long)",
      "definition": 4
     },
     {
      "type": "short_enum",
-     "name": "interpolate colors",
-     "definition": "interpolate_colors_enum"
+     "name": "interpolate colors...",
+     "definition": "interpolate colors..."
     },
     {
      "type": "short_enum",
-     "name": "anchor colors",
-     "definition": "anchor_colors_enum"
+     "name": "anchor colors...",
+     "definition": "anchor colors..."
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(long)",
      "definition": 8
     },
     {
@@ -72,26 +72,26 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
      "type": "real",
-     "name": "unmask distance"
+     "name": "unmask distance:meter units#fade from fully masked to fully unmasked this distance beyond full (and below empty)"
     },
     {
      "type": "real",
-     "name": "mask distance"
+     "name": "mask distance:meter units#fade from fully unmasked to fully masked this distance below full (and beyond empty)"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
      "type": "data",
      "name": "encoded stencil",
-     "definition": "encoded_stencil_data"
+     "definition": "meter_stencil_data_definition"
     },
     {
      "type": "terminator",
@@ -100,14 +100,11 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
-   "options": [
-    "unused"
-   ]
+  "flags": {
+   "options": []
   },
-  "interpolate_colors_enum": {
+  "interpolate colors...": {
    "options": [
     "linearly",
     "faster near empty",
@@ -115,7 +112,7 @@
     "through random noise"
    ]
   },
-  "anchor_colors_enum": {
+  "anchor colors...": {
    "options": [
     "at both ends",
     "at empty",
@@ -124,13 +121,9 @@
   }
  },
  "datas": {
-  "encoded_stencil_data": {
-   "alignment": 4,
+  "meter_stencil_data_definition": {
    "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
+   "max_size": 65536
   }
- },
- "resources": {},
- "interops": {}
+ }
 }

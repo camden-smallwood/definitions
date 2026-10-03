@@ -7,13 +7,13 @@
  "blocks": {
   "string_list_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "string_list_block_struct"
+   "struct": "string_list_block_struct",
+   "max_count_string": "1"
   },
-  "strings_block": {
+  "string_list_string_reference_block": {
    "max_count": 800,
-   "max_count_string": "800",
-   "struct": "strings_block_struct"
+   "struct": "string_list_string_reference_block_struct",
+   "max_count_string": "MAXIMUM_STRINGS_PER_STRING_LIST"
   }
  },
  "structs": {
@@ -23,8 +23,8 @@
    "fields": [
     {
      "type": "block",
-     "name": "strings",
-     "definition": "strings_block"
+     "name": "string references",
+     "definition": "string_list_string_reference_block"
     },
     {
      "type": "terminator",
@@ -32,14 +32,14 @@
     }
    ]
   },
-  "strings_block_struct": {
+  "string_list_string_reference_block_struct": {
    "guid": "00000000000000000000000000000000",
    "size": 20,
    "fields": [
     {
      "type": "data",
      "name": "string",
-     "definition": "string_data"
+     "definition": "string data"
     },
     {
      "type": "terminator",
@@ -48,16 +48,10 @@
    ]
   }
  },
- "arrays": {},
- "enums_flags": {},
  "datas": {
-  "string_data": {
-   "alignment": 4,
-   "flags": 0,
-   "max_size": 0,
-   "max_size_string": "0"
+  "string data": {
+   "flags": 2,
+   "max_size": 4096
   }
- },
- "resources": {},
- "interops": {}
+ }
 }

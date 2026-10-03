@@ -2,13 +2,14 @@
  "name": "shader_environment",
  "tag": "senv",
  "version": 2,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": "shdr",
  "block": "shader_environment_block",
  "blocks": {
   "shader_environment_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "shader_environment_block_struct"
+   "struct": "shader_environment_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -18,181 +19,65 @@
    "fields": [
     {
      "type": "struct",
-     "name": "radiosity",
-     "definition": "shader_radiosity_properties_struct"
+     "name": "shader",
+     "definition": "shader_block_struct"
     },
     {
-     "type": "struct",
-     "name": "physics",
-     "definition": "shader_physics_properties_struct"
+     "type": "explanation",
+     "name": "environment shader",
+     "definition": "Setting <true atmospheric fog> enables per-pixel atmospheric fog (for models) but disables point/spot lights, planar fog, and the ability to control the atmospheric fog density for this shader."
     },
     {
-     "type": "struct",
-     "name": "properties",
-     "definition": "shader_environment_properties_struct"
+     "type": "word_flags",
+     "name": "flags",
+     "definition": "flags_3"
     },
     {
-     "type": "struct",
+     "type": "explanation",
+     "name": "environment shader type",
+     "definition": "Controls how diffuse maps are combined:\n\nNORMAL:\nSecondary detail map alpha controls blend between primary and secondary detail map. Specular mask is alpha of blended primary and secondary detail map alpha multiplied by alpha of micro detail map.\n\nBLENDED:\nBase map alpha controls blend between primary and secondary detail map. Specular mask is alpha of blended primary and secondary detail map alpha multiplied by alpha of micro detail map.\n\nBLENDED BASE SPECULAR:\nSame as BLENDED, except specular mask is alpha is base map times alpha of micro detail map."
+    },
+    {
+     "type": "short_enum",
+     "name": "type",
+     "definition": "type"
+    },
+    {
+     "type": "explanation",
      "name": "lens flares",
-     "definition": "shader_lens_flares_struct"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 44
-    },
-    {
-     "type": "struct",
-     "name": "diffuse",
-     "definition": "shader_environment_diffuse_struct"
-    },
-    {
-     "type": "struct",
-     "name": "bump",
-     "definition": "shader_environment_bump_struct"
-    },
-    {
-     "type": "struct",
-     "name": "texture scrolling animation",
-     "definition": "shader_environment_texture_scrolling_animation_struct"
-    },
-    {
-     "type": "struct",
-     "name": "self-illumination",
-     "definition": "shader_environment_self_illumination_struct"
-    },
-    {
-     "type": "struct",
-     "name": "specular",
-     "definition": "shader_environment_specular_struct"
-    },
-    {
-     "type": "struct",
-     "name": "reflection",
-     "definition": "shader_environment_reflection_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_radiosity_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags"
-    },
-    {
-     "type": "short_enum",
-     "name": "detail level",
-     "definition": "detail_level_enum"
+     "definition": ""
     },
     {
      "type": "real",
-     "name": "power"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color of emitted light"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "tint color"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_physics_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "short_enum",
-     "name": "material type",
-     "definition": "material_type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "type"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_environment_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 4,
-   "fields": [
-    {
-     "type": "word_flags",
-     "name": "flags",
-     "definition": "flags_flags_2"
-    },
-    {
-     "type": "short_enum",
-     "name": "shader environment type",
-     "definition": "shader_environment_type_enum"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_lens_flares_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 20,
-   "fields": [
-    {
-     "type": "real",
-     "name": "lens flare spacing"
+     "name": "lens flare spacing:world units#0 places a single lens flare"
     },
     {
      "type": "tag_reference",
      "name": "lens flare"
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_environment_diffuse_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 184,
-   "fields": [
+     "type": "pad",
+     "name": "11*sizeof(long)",
+     "definition": 44
+    },
+    {
+     "type": "explanation",
+     "name": "diffuse properties",
+     "definition": ""
+    },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_3"
+     "definition": "flags_4"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
@@ -201,22 +86,22 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
      "type": "short_enum",
-     "name": "detail map function",
-     "definition": "detail_map_function_enum"
+     "name": "detail map function#affects primary and secondary detail maps",
+     "definition": "detail map function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "primary detail map scale"
+     "name": "primary detail map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -224,7 +109,7 @@
     },
     {
      "type": "real",
-     "name": "secondary detail map scale"
+     "name": "secondary detail map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -232,22 +117,22 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
      "type": "short_enum",
      "name": "micro detail map function",
-     "definition": "detail_map_function_enum"
+     "definition": "detail map function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "micro detail map scale"
+     "name": "micro detail map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -255,23 +140,18 @@
     },
     {
      "type": "real_rgb_color",
-     "name": "material color"
+     "name": "material color#modulates incoming diffuse light, including lightmaps, but excluding self-illumination and specular effects"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "3*sizeof(long)",
      "definition": 12
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_environment_bump_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 44,
-   "fields": [
+     "type": "explanation",
+     "name": "bump properties",
+     "definition": "Perforated (alpha-tested) shaders use alpha in bump map."
+    },
     {
      "type": "real",
      "name": "bump map scale"
@@ -281,88 +161,79 @@
      "name": "bump map"
     },
     {
-     "type": "real_point_2d",
-     "name": "bump map scale xy"
+     "type": "pad",
+     "name": "sizeof(real_vector2d)",
+     "definition": 8
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_environment_texture_scrolling_animation_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 48,
-   "fields": [
+     "type": "explanation",
+     "name": "texture scrolling animation",
+     "definition": "Scrolls all 2D maps simultaneously."
+    },
     {
      "type": "short_enum",
-     "name": "u animation function",
-     "definition": "u_animation_function_enum"
+     "name": "u-animation function",
+     "definition": "u-animation function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "u animation period"
+     "name": "u-animation period:seconds"
     },
     {
      "type": "real",
-     "name": "u animation scale"
+     "name": "u-animation scale:base map repeats"
     },
     {
      "type": "short_enum",
-     "name": "v animation function",
-     "definition": "u_animation_function_enum"
+     "name": "v-animation function",
+     "definition": "u-animation function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "v animation period"
+     "name": "v-animation period:seconds"
     },
     {
      "type": "real",
-     "name": "v animation scale"
+     "name": "v-animation scale:base map repeats"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_environment_self_illumination_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 252,
-   "fields": [
+     "type": "explanation",
+     "name": "self-illumination properties",
+     "definition": "There are three self-illumination effects which are added together. Each effect has an <on color>, used when the shader is active, and an <off color>, used when the shader is not active. The self-illumination map is used as follows:\n* RED: primary mask\n* GREEN: secondary mask\n* BLUE: plasma mask\n* ALPHA: plasma animation reference\n\nEach effect also has an animation <function>, <period> and <phase>, used when the shader is active. The primary and secondary effects simply modulate the <on color> by the animation value to produce an animation color, and then blend between the animation color and the <off color> based on the shader's activation level, and finally modulate by the mask.\n\nThe plasma shader compares the animation value with the alpha channel of the map (the plasma animation reference) and produces a high value when they are similar and a dark value when they are different. This value modulates the <plasma on color> to produce a plasma animation color, and the rest proceeds just like the primary and secondary effects."
+    },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_4"
+     "definition": "flags_5"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
@@ -376,24 +247,24 @@
     {
      "type": "short_enum",
      "name": "primary animation function",
-     "definition": "u_animation_function_enum"
+     "definition": "u-animation function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "primary animation period"
+     "name": "primary animation period:seconds#0 defaults to 1"
     },
     {
      "type": "real",
-     "name": "primary animation phase"
+     "name": "primary animation phase:seconds"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
@@ -407,24 +278,24 @@
     {
      "type": "short_enum",
      "name": "secondary animation function",
-     "definition": "u_animation_function_enum"
+     "definition": "u-animation function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "secondary animation period"
+     "name": "secondary animation period:seconds#0 defaults to 1"
     },
     {
      "type": "real",
-     "name": "secondary animation phase"
+     "name": "secondary animation phase:seconds"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
@@ -438,29 +309,29 @@
     {
      "type": "short_enum",
      "name": "plasma animation function",
-     "definition": "u_animation_function_enum"
+     "definition": "u-animation function"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "real",
-     "name": "plasma animation period"
+     "name": "plasma animation period:seconds#0 defaults to 1"
     },
     {
      "type": "real",
-     "name": "plasma animation phase"
+     "name": "plasma animation phase:seconds"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
      "type": "real",
-     "name": "map scale"
+     "name": "map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -468,106 +339,96 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "6*sizeof(long)",
      "definition": 24
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_environment_specular_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 84,
-   "fields": [
+     "type": "explanation",
+     "name": "specular properties",
+     "definition": "Controls dynamic specular highlights. The highlight is modulated by <brightness> as well as a blend between <perpendicular color> and <parallel color>.\n\nSet <brightness> to zero to disable."
+    },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_5"
+     "definition": "flags_6"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
-     "type": "real",
-     "name": "brightness"
+     "type": "real_fraction",
+     "name": "brightness:[0,1]#0 is no specular hilights"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
      "type": "real_rgb_color",
-     "name": "perpendicular color"
+     "name": "perpendicular color#hilight color when viewed perpendicularly"
     },
     {
      "type": "real_rgb_color",
-     "name": "parallel color"
+     "name": "parallel color#hilight color when viewed at a glancing angle"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_environment_reflection_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 116,
-   "fields": [
+     "type": "explanation",
+     "name": "reflection properties",
+     "definition": "Controls environment cube map reflections. The color of the cube map is \"tinted\" by a blend between <perpendicular color> and <parallel color> from the SPECULAR PROPERTIES above, and then modulated by a blend between <perpendicular brightness> and <parallel brightness>.\n\nBUMPED CUBE MAP:\nThis type of reflection uses the shader's bump map (if it exists) to affect the reflection, as well as the perpendicular and parallel brightness (i.e. the \"fresnel\" effect).\n\nFLAT CUBE MAP:\nThis is the fastest type of reflection. The bump map is used to attenuate the fresnel effect, but the reflection image itself is not bumped.\n\nClear <reflection cube map> or set both <perpendicular brightness> and <parallel brightness> to zero to disable."
+    },
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags_6"
+     "definition": "flags_7"
     },
     {
      "type": "short_enum",
      "name": "type",
-     "definition": "type_enum"
+     "definition": "type_2"
     },
     {
-     "type": "real",
-     "name": "lightmap brightness scale"
+     "type": "real_fraction",
+     "name": "lightmap brightness scale:[0,1]#reflection brightness when lightmap brightness is 1"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
-     "type": "real",
-     "name": "perpendicular brightness"
+     "type": "real_fraction",
+     "name": "perpendicular brightness:[0,1]#brightness when viewed perpendicularly"
     },
     {
-     "type": "real",
-     "name": "parallel brightness"
+     "type": "real_fraction",
+     "name": "parallel brightness:[0,1]#brightness when viewed at a glancing angle"
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(real)",
      "definition": 8
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -576,7 +437,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "4*sizeof(long)",
      "definition": 16
     },
     {
@@ -586,130 +447,74 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags_3": {
    "options": [
-    "simple parameterization",
-    "ignore normals",
-    "transparent lit"
-   ]
-  },
-  "detail_level_enum": {
-   "options": [
-    "high",
-    "medium",
-    "low",
-    "turd"
-   ]
-  },
-  "material_type_enum": {
-   "options": [
-    "dirt",
-    "sand",
-    "stone",
-    "snow",
-    "wood",
-    "metal hollow",
-    "metal thin",
-    "metal thick",
-    "rubber",
-    "glass",
-    "force field",
-    "grunt",
-    "hunter armor",
-    "hunter skin",
-    "elite",
-    "jackal",
-    "jackal energy shield",
-    "engineer skin",
-    "engineer force field",
-    "flood combat form",
-    "flood carrier form",
-    "cyborg armor",
-    "cyborg energy shield",
-    "human armor",
-    "human skin",
-    "sentinel",
-    "monitor",
-    "plastic",
-    "water",
-    "leaves",
-    "elite energy shield",
-    "ice",
-    "hunter shield"
-   ]
-  },
-  "flags_flags_2": {
-   "options": [
-    "alpha tested",
+    "alpha-tested",
     "bump map is specular mask",
     "true atmospheric fog",
-    "use alternate bump attenuation"
+    "use variant 2 for calculation bump attention"
    ]
   },
-  "shader_environment_type_enum": {
+  "type": {
    "options": [
     "normal",
     "blended",
     "blended base specular"
    ]
   },
-  "flags_flags_3": {
+  "flags_4": {
    "options": [
     "rescale detail maps",
     "rescale bump map"
    ]
   },
-  "detail_map_function_enum": {
+  "detail map function": {
    "options": [
-    "double biased multiply",
+    "double/biased multiply",
     "multiply",
-    "double biased add"
+    "double/biased add"
    ]
   },
-  "u_animation_function_enum": {
+  "u-animation function": {
    "options": [
     "one",
     "zero",
     "cosine",
-    "cosine variable period",
+    "cosine (variable period)",
     "diagonal wave",
-    "diagonal wave variable period",
+    "diagonal wave (variable period)",
     "slide",
-    "slide variable period",
+    "slide (variable period)",
     "noise",
     "jitter",
     "wander",
     "spark"
    ]
   },
-  "flags_flags_4": {
+  "flags_5": {
    "options": [
     "unfiltered"
    ]
   },
-  "flags_flags_5": {
+  "flags_6": {
    "options": [
     "overbright",
-    "extra shiny",
+    "extra-shiny",
     "lightmap is specular"
    ]
   },
-  "flags_flags_6": {
+  "flags_7": {
    "options": [
     "dynamic mirror"
    ]
   },
-  "type_enum": {
+  "type_2": {
    "options": [
-    "bumped cube map",
-    "flat cube map",
+    "bumped cube-map",
+    "flat cube-map",
     "bumped radiosity"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

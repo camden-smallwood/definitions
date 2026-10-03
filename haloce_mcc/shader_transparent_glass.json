@@ -2,13 +2,14 @@
  "name": "shader_transparent_glass",
  "tag": "sgla",
  "version": 1,
- "flags": 0,
+ "flags": 8,
+ "parent_tag": "shdr",
  "block": "shader_transparent_glass_block",
  "blocks": {
   "shader_transparent_glass_block": {
    "max_count": 1,
-   "max_count_string": "1",
-   "struct": "shader_transparent_glass_block_struct"
+   "struct": "shader_transparent_glass_block_struct",
+   "max_count_string": "1"
   }
  },
  "structs": {
@@ -18,142 +19,41 @@
    "fields": [
     {
      "type": "struct",
-     "name": "radiosity",
-     "definition": "shader_radiosity_properties_struct"
+     "name": "shader",
+     "definition": "shader_block_struct"
     },
     {
-     "type": "struct",
-     "name": "physics",
-     "definition": "shader_physics_properties_struct"
+     "type": "explanation",
+     "name": "glass shader",
+     "definition": ""
     },
-    {
-     "type": "struct",
-     "name": "properties",
-     "definition": "shader_transparent_glass_base_struct"
-    },
-    {
-     "type": "struct",
-     "name": "background tint",
-     "definition": "shader_transparent_glass_background_tint_struct"
-    },
-    {
-     "type": "struct",
-     "name": "reflection",
-     "definition": "shader_transparent_glass_reflection_struct"
-    },
-    {
-     "type": "struct",
-     "name": "diffuse",
-     "definition": "shader_transparent_glass_diffuse_struct"
-    },
-    {
-     "type": "struct",
-     "name": "specular",
-     "definition": "shader_transparent_glass_specular_struct"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_radiosity_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
     {
      "type": "word_flags",
      "name": "flags",
-     "definition": "flags_flags"
+     "definition": "flags_3"
     },
-    {
-     "type": "short_enum",
-     "name": "detail level",
-     "definition": "detail_level_enum"
-    },
-    {
-     "type": "real",
-     "name": "power"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "color of emitted light"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "tint color"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_physics_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 8,
-   "fields": [
     {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(short)",
      "definition": 2
     },
     {
-     "type": "short_enum",
-     "name": "material type",
-     "definition": "material_type_enum"
-    },
-    {
-     "type": "short_integer",
-     "name": "type"
+     "type": "explanation",
+     "name": "background tint properties",
+     "definition": "Background pixels are multiplied by the tint map and constant tint color."
     },
     {
      "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_transparent_glass_base_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 44,
-   "fields": [
-    {
-     "type": "word_flags",
-     "name": "shader transparent glass flags",
-     "definition": "shader_transparent_glass_flags_flags"
-    },
-    {
-     "type": "pad",
-     "name": "pad",
-     "definition": 2
-    },
-    {
-     "type": "pad",
-     "name": "pad",
+     "name": "10*sizeof(long)",
      "definition": 40
     },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_transparent_glass_background_tint_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 54,
-   "fields": [
     {
      "type": "real_rgb_color",
      "name": "background tint color"
     },
     {
      "type": "real",
-     "name": "background tint map scale"
+     "name": "background tint map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -161,33 +61,39 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "5*sizeof(long)",
      "definition": 20
     },
     {
+     "type": "explanation",
+     "name": "reflection properties",
+     "definition": "Reflection maps are multiplied by fresnel terms (glancing angles cause reflections to disappear) and then added to the background. The primary reflection map is textured normally, while the secondary reflection map is magnified."
+    },
+    {
      "type": "pad",
-     "name": "pad",
+     "name": "sizeof(word)",
      "definition": 2
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_transparent_glass_reflection_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 202,
-   "fields": [
-    {
      "type": "short_enum",
      "name": "reflection type",
-     "definition": "reflection_type_enum"
+     "definition": "reflection type"
     },
     {
-     "type": "struct",
-     "name": "reflection map properties",
-     "definition": "shader_specular_properties_struct"
+     "type": "real_fraction",
+     "name": "perpendicular brightness:[0,1]"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "perpendicular tint color"
+    },
+    {
+     "type": "real_fraction",
+     "name": "parallel brightness:[0,1]"
+    },
+    {
+     "type": "real_rgb_color",
+     "name": "parallel tint color"
     },
     {
      "type": "tag_reference",
@@ -203,53 +109,22 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "32*sizeof(long)",
      "definition": 128
     },
     {
+     "type": "explanation",
+     "name": "diffuse properties",
+     "definition": "Diffuse lights are accumulated in monochrome and then alpha-blended with diffuse map and diffuse detail map. The color is determined by double-multiplying both maps and multiplying with the accumulated light, the result being alpha-blended into the framebuffer. The opacity is determined by multiplying both map's alpha channels. Since this effect is alpha-blended, it covers up tinting and reflection on pixels with high opacity."
+    },
+    {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(word)",
      "definition": 4
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_specular_properties_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 32,
-   "fields": [
-    {
      "type": "real",
-     "name": "perpendicular brightness"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "perpendicular tint color"
-    },
-    {
-     "type": "real",
-     "name": "parallel brightness"
-    },
-    {
-     "type": "real_rgb_color",
-     "name": "parallel tint color"
-    },
-    {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_transparent_glass_diffuse_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 72,
-   "fields": [
-    {
-     "type": "real",
-     "name": "diffuse map scale"
+     "name": "diffuse map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -257,7 +132,7 @@
     },
     {
      "type": "real",
-     "name": "diffuse detail map scale"
+     "name": "diffuse detail map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -265,27 +140,22 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
+     "type": "explanation",
+     "name": "specular properties",
+     "definition": "Specular lights are accumulated in monochrome and then alpha-blended with diffuse map and diffuse detail map. The color is determined by double-multiplying both maps and multiplying with the accumulated light, the result being alpha-blended into the framebuffer. The opacity is determined by multiplying both map's alpha channels. Since this effect is alpha-blended, it covers up tinting, reflection and diffuse texture on pixels with high opacity."
+    },
+    {
      "type": "pad",
-     "name": "pad",
+     "name": "2*sizeof(word)",
      "definition": 4
     },
     {
-     "type": "terminator",
-     "name": null
-    }
-   ]
-  },
-  "shader_transparent_glass_specular_struct": {
-   "guid": "00000000000000000000000000000000",
-   "size": 68,
-   "fields": [
-    {
      "type": "real",
-     "name": "specular map scale"
+     "name": "specular map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -293,7 +163,7 @@
     },
     {
      "type": "real",
-     "name": "specular detail map scale"
+     "name": "specular detail map scale#0 defaults to 1"
     },
     {
      "type": "tag_reference",
@@ -301,7 +171,7 @@
     },
     {
      "type": "pad",
-     "name": "pad",
+     "name": "7*sizeof(long)",
      "definition": 28
     },
     {
@@ -311,77 +181,21 @@
    ]
   }
  },
- "arrays": {},
  "enums_flags": {
-  "flags_flags": {
+  "flags_3": {
    "options": [
-    "simple parameterization",
-    "ignore normals",
-    "transparent lit"
-   ]
-  },
-  "detail_level_enum": {
-   "options": [
-    "high",
-    "medium",
-    "low",
-    "turd"
-   ]
-  },
-  "material_type_enum": {
-   "options": [
-    "dirt",
-    "sand",
-    "stone",
-    "snow",
-    "wood",
-    "metal hollow",
-    "metal thin",
-    "metal thick",
-    "rubber",
-    "glass",
-    "force field",
-    "grunt",
-    "hunter armor",
-    "hunter skin",
-    "elite",
-    "jackal",
-    "jackal energy shield",
-    "engineer skin",
-    "engineer force field",
-    "flood combat form",
-    "flood carrier form",
-    "cyborg armor",
-    "cyborg energy shield",
-    "human armor",
-    "human skin",
-    "sentinel",
-    "monitor",
-    "plastic",
-    "water",
-    "leaves",
-    "elite energy shield",
-    "ice",
-    "hunter shield"
-   ]
-  },
-  "shader_transparent_glass_flags_flags": {
-   "options": [
-    "alpha tested",
+    "alpha-tested",
     "decal",
-    "two sided",
+    "two-sided",
     "bump map is specular mask"
    ]
   },
-  "reflection_type_enum": {
+  "reflection type": {
    "options": [
-    "bumped cube map",
-    "flat cube map",
+    "bumped cube-map",
+    "flat cube-map",
     "dynamic mirror"
    ]
   }
- },
- "datas": {},
- "resources": {},
- "interops": {}
+ }
 }

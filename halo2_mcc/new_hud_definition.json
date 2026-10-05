@@ -48,7 +48,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "DO NOT USE"
+     "name": "DO NOT USE",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "nhdt"
+      ]
+     }
     },
     {
      "type": "block",
@@ -106,11 +112,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "bitmap"
+     "name": "bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shader"
+     "name": "shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "char_integer",
@@ -561,7 +579,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "shader"
+     "name": "shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -695,11 +719,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "bitmap"
+     "name": "bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "fullscreen screen effect"
+     "name": "fullscreen screen effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "egor"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -758,11 +794,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "halfscreen screen effect"
+     "name": "halfscreen screen effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "egor"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "quarterscreen screen effect"
+     "name": "quarterscreen screen effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "egor"
+      ]
+     }
     },
     {
      "type": "terminator",

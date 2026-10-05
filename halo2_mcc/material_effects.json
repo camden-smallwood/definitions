@@ -83,11 +83,24 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "effect"
+     "name": "effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!",
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -170,11 +183,24 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "effect"
+     "name": "effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!",
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -212,7 +238,15 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "tag (effect or sound)"
+     "name": "tag (effect or sound)",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!",
+       "lsnd",
+       "effe"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -245,11 +279,27 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "tag (effect or sound)"
+     "name": "tag (effect or sound)",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!",
+       "lsnd",
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "secondary tag (effect or sound)"
+     "name": "secondary tag (effect or sound)",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!",
+       "lsnd",
+       "effe"
+      ]
+     }
     },
     {
      "type": "string_id",

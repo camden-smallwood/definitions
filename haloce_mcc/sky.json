@@ -33,11 +33,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "model"
+     "name": "model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "mod2"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "animation_graph"
+     "name": "animation_graph",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "antr"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -104,7 +116,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "indoor fog screen#used for FOG SCREEN only; not used for planar fog"
+     "name": "indoor fog screen#used for FOG SCREEN only; not used for planar fog",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "fog "
+      ]
+     }
     },
     {
      "type": "pad",
@@ -190,7 +208,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "lens flare"
+     "name": "lens flare",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "lens"
+      ]
+     }
     },
     {
      "type": "string",

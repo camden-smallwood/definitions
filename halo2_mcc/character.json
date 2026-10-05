@@ -163,15 +163,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "parent character"
+     "name": "parent character",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "char"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "unit"
+     "name": "unit",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unit"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "style"
+     "name": "style",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "styl"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -180,7 +198,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "major character"
+     "name": "major character",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "char"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -739,7 +763,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "backup weapon#If I want to flee and I don't have flee animations with my current weapon, throw it away and try a ..."
+     "name": "backup weapon#If I want to flee and I don't have flee animations with my current weapon, throw it away and try a ...",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "weap"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1156,7 +1186,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "weapon^"
+     "name": "weapon^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "weap"
+      ]
+     }
     },
     {
      "type": "real",
@@ -1357,7 +1393,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "weapon^"
+     "name": "weapon^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "weap"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -1572,7 +1614,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "weapon melee damage"
+     "name": "weapon melee damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1967,7 +2015,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "berserk weapon#when I berserk, I pull out a ..."
+     "name": "berserk weapon#when I berserk, I pull out a ...",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "weap"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1995,7 +2049,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "unit^"
+     "name": "unit^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "unit"
+      ]
+     }
     },
     {
      "type": "long_flags",
@@ -2183,11 +2243,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "unit^"
+     "name": "unit^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "unit"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "style^"
+     "name": "style^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "styl"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -2482,15 +2554,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "parent character"
+     "name": "parent character",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "char"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "unit"
+     "name": "unit",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unit"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "style"
+     "name": "style",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "styl"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -2499,7 +2589,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "major character"
+     "name": "major character",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "char"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -2507,7 +2603,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "creature#Creature reference for swarm characters ONLY"
+     "name": "creature#Creature reference for swarm characters ONLY",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "crea"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -2740,7 +2842,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "weapon^"
+     "name": "weapon^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "weap"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -2774,19 +2882,43 @@
     },
     {
      "type": "tag_reference",
-     "name": "parent character"
+     "name": "parent character",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "char"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "unit"
+     "name": "unit",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unit"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "creature#Creature reference for swarm characters ONLY"
+     "name": "creature#Creature reference for swarm characters ONLY",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "crea"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "style"
+     "name": "style",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "styl"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -2795,7 +2927,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "major character"
+     "name": "major character",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "char"
+      ]
+     }
     },
     {
      "type": "useless_pad",

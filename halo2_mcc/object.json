@@ -137,11 +137,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "model"
+     "name": "model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "hlmt"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "crate object"
+     "name": "crate object",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bloc"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -150,15 +162,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "modifier shader"
+     "name": "modifier shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "creation effect"
+     "name": "creation effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "material effects"
+     "name": "material effects",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "foot"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -469,7 +499,19 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type^"
+     "name": "type^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "ligh",
+       "MGS2",
+       "tdtl",
+       "cont",
+       "effe",
+       "lsnd",
+       "lens"
+      ]
+     }
     },
     {
      "type": "old_string_id",
@@ -515,7 +557,18 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type^"
+     "name": "type^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "ant!",
+       "clwd",
+       "devo",
+       "whip",
+       "BooM",
+       "tdtl"
+      ]
+     }
     },
     {
      "type": "useless_pad",

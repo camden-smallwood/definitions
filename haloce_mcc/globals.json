@@ -203,7 +203,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -217,7 +223,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "default unit camera track"
+     "name": "default unit camera track",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "trak"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -827,19 +839,43 @@
     },
     {
      "type": "tag_reference",
-     "name": "throwing effect"
+     "name": "throwing effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "hud interface"
+     "name": "hud interface",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "grhi"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "equipment"
+     "name": "equipment",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "eqip"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "projectile"
+     "name": "projectile",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "proj"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -858,31 +894,73 @@
     },
     {
      "type": "tag_reference",
-     "name": "distance attenuation"
+     "name": "distance attenuation",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "vector normalization"
+     "name": "vector normalization",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "atmospheric fog density"
+     "name": "atmospheric fog density",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "planar fog density"
+     "name": "planar fog density",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "linear corner fade#used for shadows"
+     "name": "linear corner fade#used for shadows",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "active camouflage distortion"
+     "name": "active camouflage distortion",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "glow"
+     "name": "glow",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -896,15 +974,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "default 2D"
+     "name": "default 2D",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "default 3D"
+     "name": "default 3D",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "default cube map"
+     "name": "default cube map",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -913,19 +1009,43 @@
     },
     {
      "type": "tag_reference",
-     "name": "test 0!"
+     "name": "test 0!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "test 1!"
+     "name": "test 1!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "test 2!"
+     "name": "test 2!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "test 3!"
+     "name": "test 3!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -934,11 +1054,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "video scanline map"
+     "name": "video scanline map",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "video noise map"
+     "name": "video noise map",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -996,7 +1128,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "distance attenuation 2D#the pc can't use 3d textures, so we use this instead"
+     "name": "distance attenuation 2D#the pc can't use 3d textures, so we use this instead",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1010,67 +1148,163 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "font system"
+     "name": "font system",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "font"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "font terminal"
+     "name": "font terminal",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "font"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "screen color table"
+     "name": "screen color table",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "colo"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "hud color table"
+     "name": "hud color table",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "colo"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "editor color table"
+     "name": "editor color table",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "colo"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "dialog color table"
+     "name": "dialog color table",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "colo"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "hud globals"
+     "name": "hud globals",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "hudg"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "motion sensor sweep bitmap"
+     "name": "motion sensor sweep bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "motion sensor sweep bitmap mask"
+     "name": "motion sensor sweep bitmap mask",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "multiplayer hud bitmap"
+     "name": "multiplayer hud bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "localization"
+     "name": "localization",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "str#"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "hud digits definition"
+     "name": "hud digits definition",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "hud#"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "motion sensor blip bitmap"
+     "name": "motion sensor blip bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "interface goo map1"
+     "name": "interface goo map1",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "interface goo map2"
+     "name": "interface goo map2",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "interface goo map3"
+     "name": "interface goo map3",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1089,7 +1323,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "weapon^"
+     "name": "weapon^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1103,7 +1343,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "powerup^"
+     "name": "powerup^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "eqip"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1117,11 +1363,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "flag"
+     "name": "flag",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "unit"
+     "name": "unit",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unit"
+      ]
+     }
     },
     {
      "type": "block",
@@ -1130,15 +1388,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "hill shader"
+     "name": "hill shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shdr"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "flag shader"
+     "name": "flag shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shdr"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "ball"
+     "name": "ball",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "block",
@@ -1162,7 +1438,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "vehicle^"
+     "name": "vehicle^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "vehi"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1176,7 +1458,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1190,7 +1478,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "unit"
+     "name": "unit",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unit"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1299,7 +1593,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "coop respawn effect"
+     "name": "coop respawn effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1318,15 +1618,33 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "first person hands"
+     "name": "first person hands",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "mod2"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "base bitmap"
+     "name": "base bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shield meter"
+     "name": "shield meter",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "metr"
+      ]
+     }
     },
     {
      "type": "point_2d",
@@ -1334,7 +1652,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "body meter"
+     "name": "body meter",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "metr"
+      ]
+     }
     },
     {
      "type": "point_2d",
@@ -1342,11 +1666,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "night-vision OFF->ON effect"
+     "name": "night-vision OFF->ON effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "night-vision ON->OFF effect"
+     "name": "night-vision ON->OFF effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1374,7 +1710,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "falling damage"
+     "name": "falling damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1387,23 +1729,53 @@
     },
     {
      "type": "tag_reference",
-     "name": "distance damage"
+     "name": "distance damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "vehicle environment collision damage effect"
+     "name": "vehicle environment collision damage effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "vehicle killed unit damage effect"
+     "name": "vehicle killed unit damage effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "vehicle collision damage"
+     "name": "vehicle collision damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "flaming death damage"
+     "name": "flaming death damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1486,11 +1858,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "effect"
+     "name": "effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1509,7 +1893,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "melee hit sound"
+     "name": "melee hit sound",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1523,7 +1913,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "particle type^"
+     "name": "particle type^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "part"
+      ]
+     }
     },
     {
      "type": "long_flags",

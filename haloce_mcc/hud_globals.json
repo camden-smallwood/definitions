@@ -85,11 +85,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "fullscreen font"
+     "name": "fullscreen font",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "font"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "splitscreen font"
+     "name": "splitscreen font",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "font"
+      ]
+     }
     },
     {
      "type": "real",
@@ -113,15 +125,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "item message text"
+     "name": "item message text",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "ustr"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "icon bitmap"
+     "name": "icon bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "alternate icon text"
+     "name": "alternate icon text",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "ustr"
+      ]
+     }
     },
     {
      "type": "block",
@@ -178,7 +208,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "hud messages"
+     "name": "hud messages",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "hmt "
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -254,7 +290,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "arrow bitmap"
+     "name": "arrow bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "block",
@@ -287,7 +329,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "default weapon hud"
+     "name": "default weapon hud",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "wphi"
+      ]
+     }
     },
     {
      "type": "real",
@@ -338,7 +386,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "indicator bitmap"
+     "name": "indicator bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "short_integer",
@@ -455,7 +509,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "carnage report bitmap"
+     "name": "carnage report bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -480,7 +540,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "checkpoint sound"
+     "name": "checkpoint sound",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -611,7 +677,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "original bitmap^"
+     "name": "original bitmap^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "block",
@@ -630,7 +702,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "target bitmap^"
+     "name": "target bitmap^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "short_enum",

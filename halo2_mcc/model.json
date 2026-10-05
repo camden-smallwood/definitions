@@ -118,23 +118,53 @@
     },
     {
      "type": "tag_reference",
-     "name": "render model"
+     "name": "render model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "mode"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "collision model"
+     "name": "collision model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "coll"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "animation"
+     "name": "animation",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jmad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "physics"
+     "name": "physics",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "phys"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "physics model"
+     "name": "physics model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "phmo"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -260,7 +290,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "dialogue"
+     "name": "dialogue",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "udlg"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -409,7 +445,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "looping effect#played while the model is in this state"
+     "name": "looping effect#played while the model is in this state",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -439,7 +481,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "child object"
+     "name": "child object",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "obje"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -516,7 +564,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "localized damage effect"
+     "name": "localized damage effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "real",
@@ -524,7 +578,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "area damage effect"
+     "name": "area damage effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "real",
@@ -532,11 +592,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "body damaged effect"
+     "name": "body damaged effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "body depleted effect"
+     "name": "body depleted effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "real",
@@ -544,7 +616,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "body destroyed effect"
+     "name": "body destroyed effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "real",
@@ -572,15 +650,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "shield damaged effect"
+     "name": "shield damaged effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shield depleted effect"
+     "name": "shield depleted effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shield recharging effect"
+     "name": "shield recharging effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "block",
@@ -713,7 +809,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "transition effect"
+     "name": "transition effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -753,7 +855,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "delay effect"
+     "name": "delay effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -827,7 +935,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "transition damage effect"
+     "name": "transition damage effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -985,11 +1099,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "shield damaged first person shader"
+     "name": "shield damaged first person shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shield damaged shader"
+     "name": "shield damaged shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "real",
@@ -1017,15 +1143,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "shield damaged effect"
+     "name": "shield damaged effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shield depleted effect"
+     "name": "shield depleted effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shield recharging effect"
+     "name": "shield recharging effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "block",
@@ -1074,11 +1218,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "overshield first person shader"
+     "name": "overshield first person shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "overshield shader"
+     "name": "overshield shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1312,23 +1468,53 @@
     },
     {
      "type": "tag_reference",
-     "name": "render model"
+     "name": "render model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "mode"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "collision model"
+     "name": "collision model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "coll"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "animation"
+     "name": "animation",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jmad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "physics"
+     "name": "physics",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "phys"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "physics_model"
+     "name": "physics_model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "phmo"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -1430,11 +1616,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "default dialogue#The default dialogue tag for this model (overriden by variants)"
+     "name": "default dialogue#The default dialogue tag for this model (overriden by variants)",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "udlg"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED*!"
+     "name": "UNUSED*!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "long_flags",
@@ -1472,7 +1670,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "hologram shader"
+     "name": "hologram shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -1588,7 +1792,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "scenario^"
+     "name": "scenario^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "scnr"
+      ]
+     }
     },
     {
      "type": "data",

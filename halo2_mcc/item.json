@@ -105,11 +105,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "UNUSED*"
+     "name": "UNUSED*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "foot"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "collision sound"
+     "name": "collision sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "block",
@@ -123,7 +135,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "detonation damage effect"
+     "name": "detonation damage effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "real_bounds",
@@ -131,11 +149,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "detonating effect"
+     "name": "detonating effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "detonation effect"
+     "name": "detonation effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -149,7 +179,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "bitmap^"
+     "name": "bitmap^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "terminator",

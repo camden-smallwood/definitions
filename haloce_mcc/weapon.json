@@ -96,7 +96,14 @@
     },
     {
      "type": "tag_reference",
-     "name": "ready effect"
+     "name": "ready effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -134,19 +141,45 @@
     },
     {
      "type": "tag_reference",
-     "name": "overheated"
+     "name": "overheated",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "detonation"
+     "name": "detonation",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "player melee damage"
+     "name": "player melee damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "player melee response"
+     "name": "player melee response",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -160,7 +193,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "actor firing parameters"
+     "name": "actor firing parameters",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "actv"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -288,11 +327,25 @@
     },
     {
      "type": "tag_reference",
-     "name": "light power-on effect"
+     "name": "light power-on effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "light power-off effect"
+     "name": "light power-off effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "real",
@@ -322,11 +375,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "first person model"
+     "name": "first person model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "mod2"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "first person animations"
+     "name": "first person animations",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "antr"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -335,19 +400,43 @@
     },
     {
      "type": "tag_reference",
-     "name": "hud interface"
+     "name": "hud interface",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "wphi"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "pickup sound"
+     "name": "pickup sound",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "zoom-in sound"
+     "name": "zoom-in sound",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "zoom-out sound"
+     "name": "zoom-out sound",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -462,11 +551,25 @@
     },
     {
      "type": "tag_reference",
-     "name": "reloading effect"
+     "name": "reloading effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "chambering effect"
+     "name": "chambering effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -499,7 +602,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "equipment^"
+     "name": "equipment^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "eqip"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -634,7 +743,14 @@
     },
     {
      "type": "tag_reference",
-     "name": "charging effect#the charging effect is created once when the trigger begins to charge"
+     "name": "charging effect#the charging effect is created once when the trigger begins to charge",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -678,7 +794,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "projectile"
+     "name": "projectile",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "proj"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -760,27 +882,66 @@
     },
     {
      "type": "tag_reference",
-     "name": "firing effect^#this effect is used when the weapon is loaded and fired normally"
+     "name": "firing effect^#this effect is used when the weapon is loaded and fired normally",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "misfire effect#this effect is used when the weapon is loaded but fired while overheated"
+     "name": "misfire effect#this effect is used when the weapon is loaded but fired while overheated",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "empty effect#this effect is used when the weapon is not loaded"
+     "name": "empty effect#this effect is used when the weapon is not loaded",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "firing damage#this effect is used when the weapon is loaded and fired normally"
+     "name": "firing damage#this effect is used when the weapon is loaded and fired normally",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "misfire damage#this effect is used when the weapon is loaded but fired while overheated"
+     "name": "misfire damage#this effect is used when the weapon is loaded but fired while overheated",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "empty damage#this effect is used when the weapon is not loaded"
+     "name": "empty damage#this effect is used when the weapon is not loaded",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "terminator",

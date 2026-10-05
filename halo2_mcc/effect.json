@@ -103,7 +103,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "looping sound"
+     "name": "looping sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "short_block_index",
@@ -212,7 +218,22 @@
     },
     {
      "type": "tag_reference",
-     "name": "type^"
+     "name": "type^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!",
+       "obje",
+       "snd!",
+       "deca",
+       "coln",
+       "ligh",
+       "MGS2",
+       "tdtl",
+       "lens",
+       "char"
+      ]
+     }
     },
     {
      "type": "real_bounds",
@@ -276,7 +297,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "shader"
+     "name": "shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "short_block_index",
@@ -551,7 +578,14 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "particle"
+     "name": "particle",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "prt3",
+       "PRTM"
+      ]
+     }
     },
     {
      "type": "long_block_index",
@@ -604,7 +638,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "particle physics"
+     "name": "particle physics",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "pmov"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -811,7 +851,14 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "particle"
+     "name": "particle",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "prt3",
+       "PRTM"
+      ]
+     }
     },
     {
      "type": "long_block_index",

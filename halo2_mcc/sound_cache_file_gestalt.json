@@ -873,7 +873,13 @@
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "<fx>"
+      ]
+     }
     },
     {
      "type": "block",
@@ -908,7 +914,14 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "lsnd",
+       "snd!"
+      ]
+     }
     },
     {
      "type": "real",
@@ -1238,7 +1251,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "reflection sound"
+     "name": "reflection sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "long_integer",
@@ -1299,7 +1318,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "remastered sound^"
+     "name": "remastered sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1435,7 +1460,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "promotion sound"
+     "name": "promotion sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "short_integer",

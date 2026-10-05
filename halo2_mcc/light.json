@@ -188,7 +188,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "gel map#must be a cubemap for spherical light and a 2d texture for frustum light"
+     "name": "gel map#must be a cubemap for spherical light and a 2d texture for frustum light",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "short_enum",
@@ -272,7 +278,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "lens flare"
+     "name": "lens flare",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "lens"
+      ]
+     }
     },
     {
      "type": "real",
@@ -280,7 +292,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "light volume"
+     "name": "light volume",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "MGS2"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -406,7 +424,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "shader"
+     "name": "shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "terminator",

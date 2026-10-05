@@ -145,7 +145,18 @@
     },
     {
      "type": "tag_reference",
-     "name": "type^"
+     "name": "type^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!",
+       "obje",
+       "pctl",
+       "snd!",
+       "deca",
+       "ligh"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -262,7 +273,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "particle type^"
+     "name": "particle type^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "part"
+      ]
+     }
     },
     {
      "type": "long_flags",

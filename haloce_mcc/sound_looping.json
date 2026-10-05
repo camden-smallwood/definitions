@@ -66,7 +66,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "continuous damage effect"
+     "name": "continuous damage effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "cdmg"
+      ]
+     }
     },
     {
      "type": "block",
@@ -112,15 +118,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "start"
+     "name": "start",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "loop^"
+     "name": "loop^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "end"
+     "name": "end",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -129,11 +153,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "alternate loop"
+     "name": "alternate loop",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "alternate end"
+     "name": "alternate end",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "custom",
@@ -152,7 +188,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "explanation",

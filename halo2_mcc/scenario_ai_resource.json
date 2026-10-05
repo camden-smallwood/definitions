@@ -368,7 +368,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "reference^"
+     "name": "reference^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "styl"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -604,7 +610,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "initial weapon (DO NOT USE)*"
+     "name": "initial weapon (DO NOT USE)*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "weap"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -653,7 +665,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "reference^"
+     "name": "reference^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "char"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1161,7 +1179,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "structure bsp^"
+     "name": "structure bsp^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "sbsp"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1180,11 +1204,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "structure bsp^"
+     "name": "structure bsp^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "sbsp"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "structure lightmap^"
+     "name": "structure lightmap^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "ltmp"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1245,7 +1281,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sky^"
+     "name": "sky^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "sky "
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1292,7 +1334,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "weapon reference (DO NOT USE)*"
+     "name": "weapon reference (DO NOT USE)*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "weap"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1321,7 +1369,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "name^"
+     "name": "name^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "weap"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1417,7 +1471,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "name^"
+     "name": "name^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "vehi"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -2457,7 +2517,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "animation graph#leave this blank to use the unit's normal animation graph"
+     "name": "animation graph#leave this blank to use the unit's normal animation graph",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jmad"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -3619,27 +3685,63 @@
     },
     {
      "type": "tag_reference",
-     "name": "variant 1"
+     "name": "variant 1",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "variant 2"
+     "name": "variant 2",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "variant 3"
+     "name": "variant 3",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "variant 4"
+     "name": "variant 4",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "variant 5"
+     "name": "variant 5",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "variant 6"
+     "name": "variant 6",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -3965,7 +4067,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "creature^"
+     "name": "creature^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "crea"
+      ]
+     }
     },
     {
      "type": "short_bounds",

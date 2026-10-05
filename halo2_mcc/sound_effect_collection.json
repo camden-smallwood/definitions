@@ -389,7 +389,13 @@
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "<fx>"
+      ]
+     }
     },
     {
      "type": "block",
@@ -424,7 +430,14 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "lsnd",
+       "snd!"
+      ]
+     }
     },
     {
      "type": "real",

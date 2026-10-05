@@ -23,11 +23,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "stencil bitmaps#two bitmaps specifying the mask and the meter levels"
+     "name": "stencil bitmaps#two bitmaps specifying the mask and the meter levels",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "source bitmap#optional bitmap to draw into the unmasked regions of the meter (modulated by the colors below)"
+     "name": "source bitmap#optional bitmap to draw into the unmasked regions of the meter (modulated by the colors below)",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "short_integer",

@@ -130,11 +130,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "background sound"
+     "name": "background sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "sound environment"
+     "name": "sound environment",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snde"
+      ]
+     }
     },
     {
      "type": "real",
@@ -146,11 +158,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "enter sound"
+     "name": "enter sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "exit sound"
+     "name": "exit sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -200,7 +224,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "patchy fog"
+     "name": "patchy fog",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "fpch"
+      ]
+     }
     },
     {
      "type": "terminator",

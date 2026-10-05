@@ -69,7 +69,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "super detonation"
+     "name": "super detonation",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "real",
@@ -94,7 +100,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "effect"
+     "name": "effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "real_bounds",
@@ -153,19 +165,43 @@
     },
     {
      "type": "tag_reference",
-     "name": "detonation started"
+     "name": "detonation started",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "flyby sound"
+     "name": "flyby sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "attached detonation damage"
+     "name": "attached detonation damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "impact damage"
+     "name": "impact damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -184,11 +220,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "impact effect"
+     "name": "impact effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "detonation damage"
+     "name": "detonation damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -217,7 +265,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "DO NOT USE (OLD effect)"
+     "name": "DO NOT USE (OLD effect)",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -262,7 +316,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "DO NOT USE (OLD effect)"
+     "name": "DO NOT USE (OLD effect)",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -294,7 +354,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "DO NOT USE (OLD detonation effect)"
+     "name": "DO NOT USE (OLD detonation effect)",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -411,27 +477,63 @@
     },
     {
      "type": "tag_reference",
-     "name": "detonation started"
+     "name": "detonation started",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "detonation effect (airborne)"
+     "name": "detonation effect (airborne)",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "detonation effect (ground)"
+     "name": "detonation effect (ground)",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "detonation damage"
+     "name": "detonation damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "attached detonation damage"
+     "name": "attached detonation damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "super detonation"
+     "name": "super detonation",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -440,7 +542,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "detonation sound"
+     "name": "detonation sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "char_enum",
@@ -454,7 +562,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "super attached detonation damage"
+     "name": "super attached detonation damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -472,15 +586,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "flyby sound"
+     "name": "flyby sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "impact effect"
+     "name": "impact effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "impact damage"
+     "name": "impact damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -493,11 +625,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "boarding detonation damage"
+     "name": "boarding detonation damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "boarding attached detonation damage"
+     "name": "boarding attached detonation damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -588,7 +732,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "super detonation damage"
+     "name": "super detonation damage",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "terminator",

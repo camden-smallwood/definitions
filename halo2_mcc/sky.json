@@ -63,11 +63,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "render model"
+     "name": "render model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "mode"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "animation graph"
+     "name": "animation graph",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jmad"
+      ]
+     }
     },
     {
      "type": "long_flags",
@@ -205,7 +217,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "cubemap reference^"
+     "name": "cubemap reference^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "real",
@@ -289,7 +307,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "patchy fog"
+     "name": "patchy fog",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "fpch"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -311,7 +335,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "lens flare"
+     "name": "lens flare",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "lens"
+      ]
+     }
     },
     {
      "type": "block",

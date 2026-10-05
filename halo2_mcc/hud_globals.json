@@ -100,11 +100,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "obsolete1!"
+     "name": "obsolete1!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "obsolete2!"
+     "name": "obsolete2!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "real",
@@ -128,15 +140,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "item message text!"
+     "name": "item message text!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unic"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "icon bitmap!"
+     "name": "icon bitmap!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "alternate icon text!"
+     "name": "alternate icon text!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unic"
+      ]
+     }
     },
     {
      "type": "block",
@@ -193,7 +223,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "hud messages!"
+     "name": "hud messages!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "hmt "
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -269,7 +305,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "arrow bitmap"
+     "name": "arrow bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "block",
@@ -354,7 +396,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "indicator bitmap!"
+     "name": "indicator bitmap!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "short_integer",
@@ -471,7 +519,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "carnage report bitmap!"
+     "name": "carnage report bitmap!",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -496,7 +550,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "checkpoint sound"
+     "name": "checkpoint sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -622,7 +682,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "hud text"
+     "name": "hud text",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unic"
+      ]
+     }
     },
     {
      "type": "block",
@@ -667,11 +733,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "bitmap"
+     "name": "bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shader"
+     "name": "shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "short_integer",
@@ -684,7 +762,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -698,11 +782,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "bitmap"
+     "name": "bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shader"
+     "name": "shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "short_integer",
@@ -723,7 +819,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "border bitmap"
+     "name": "border bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -737,11 +839,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "bitmap"
+     "name": "bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shader"
+     "name": "shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "short_integer",
@@ -772,7 +886,14 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "chief sound^"
+     "name": "chief sound^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "long_flags",
@@ -785,7 +906,14 @@
     },
     {
      "type": "tag_reference",
-     "name": "dervish sound"
+     "name": "dervish sound",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -851,11 +979,25 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "primary message sound"
+     "name": "primary message sound",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "secondary message sound"
+     "name": "secondary message sound",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -867,39 +1009,93 @@
     },
     {
      "type": "tag_reference",
-     "name": "training shader"
+     "name": "training shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "human training top right"
+     "name": "human training top right",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "human training top center"
+     "name": "human training top center",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "human training top left"
+     "name": "human training top left",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "human training middle"
+     "name": "human training middle",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "elite training top right"
+     "name": "elite training top right",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "elite training top center"
+     "name": "elite training top center",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "elite training top left"
+     "name": "elite training top left",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "elite training middle"
+     "name": "elite training middle",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "terminator",

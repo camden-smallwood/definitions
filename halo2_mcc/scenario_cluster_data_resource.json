@@ -108,7 +108,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "bsp*^"
+     "name": "bsp*^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "sbsp"
+      ]
+     }
     },
     {
      "type": "block",
@@ -175,11 +181,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "background sound"
+     "name": "background sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "inside cluster sound#play this only when the player is inside the cluster"
+     "name": "inside cluster sound#play this only when the player is inside the cluster",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -252,7 +270,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound environment"
+     "name": "sound environment",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snde"
+      ]
+     }
     },
     {
      "type": "real",
@@ -317,7 +341,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "weather system"
+     "name": "weather system",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "weat"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -336,7 +366,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "wind"
+     "name": "wind",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "wind"
+      ]
+     }
     },
     {
      "type": "real_vector_3d",
@@ -505,7 +541,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "patchy fog"
+     "name": "patchy fog",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "fpch"
+      ]
+     }
     },
     {
      "type": "block",

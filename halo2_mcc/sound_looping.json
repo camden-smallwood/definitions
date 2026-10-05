@@ -66,7 +66,11 @@
     },
     {
      "type": "tag_reference",
-     "name": "continuous damage effect"
+     "name": "continuous damage effect",
+     "definition": {
+      "flags": 0,
+      "allowed": []
+     }
     },
     {
      "type": "block",
@@ -112,15 +116,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "start"
+     "name": "start",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "loop^"
+     "name": "loop^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "end"
+     "name": "end",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -129,11 +151,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "alternate loop"
+     "name": "alternate loop",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "alternate end"
+     "name": "alternate end",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -168,23 +202,53 @@
     },
     {
      "type": "tag_reference",
-     "name": "in"
+     "name": "in",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "loop"
+     "name": "loop",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "out"
+     "name": "out",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "alt loop"
+     "name": "alt loop",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "alt out"
+     "name": "alt out",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "useless_pad",
@@ -203,11 +267,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "alt trans in"
+     "name": "alt trans in",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "alt trans out"
+     "name": "alt trans out",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "real",
@@ -229,7 +305,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -287,7 +369,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -354,7 +442,11 @@
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": []
+     }
     },
     {
      "type": "block",
@@ -396,7 +488,11 @@
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": []
+     }
     },
     {
      "type": "block",
@@ -420,7 +516,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "remastered looping sound"
+     "name": "remastered looping sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "long_flags",
@@ -442,7 +544,11 @@
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": []
+     }
     },
     {
      "type": "block",

@@ -213,7 +213,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "template"
+     "name": "template",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "stem"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -261,7 +267,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "light response"
+     "name": "light response",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "slit"
+      ]
+     }
     },
     {
      "type": "short_enum",
@@ -316,11 +328,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "diffuse map*"
+     "name": "diffuse map*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "lightmap emissive map*"
+     "name": "lightmap emissive map*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "real_rgb_color",
@@ -344,11 +368,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "alphatest map*"
+     "name": "alphatest map*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "translucent map*"
+     "name": "translucent map*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "real_rgb_color",
@@ -388,7 +424,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "bitmap"
+     "name": "bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "real",
@@ -1035,7 +1077,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "shader pass"
+     "name": "shader pass",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "spas"
+      ]
+     }
     },
     {
      "type": "struct",

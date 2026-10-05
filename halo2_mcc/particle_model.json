@@ -83,7 +83,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "shader"
+     "name": "shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -132,11 +138,27 @@
     },
     {
      "type": "tag_reference",
-     "name": "collision effect#effect, material effect or sound spawned when this particle collides with something"
+     "name": "collision effect#effect, material effect or sound spawned when this particle collides with something",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe",
+       "snd!",
+       "foot"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "death effect#effect, material effect or sound spawned when this particle dies"
+     "name": "death effect#effect, material effect or sound spawned when this particle dies",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe",
+       "snd!",
+       "foot"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -373,7 +395,14 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "particle"
+     "name": "particle",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "prt3",
+       "PRTM"
+      ]
+     }
     },
     {
      "type": "long_block_index",
@@ -426,7 +455,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "particle physics"
+     "name": "particle physics",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "pmov"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -593,7 +628,14 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "particle"
+     "name": "particle",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "prt3",
+       "PRTM"
+      ]
+     }
     },
     {
      "type": "long_block_index",

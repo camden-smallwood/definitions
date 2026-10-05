@@ -169,7 +169,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "structure bsp^"
+     "name": "structure bsp^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "sbsp"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -188,11 +194,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "structure bsp^"
+     "name": "structure bsp^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "sbsp"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "structure lightmap^"
+     "name": "structure lightmap^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "ltmp"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -253,7 +271,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sky^"
+     "name": "sky^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "sky "
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -267,7 +291,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "name^"
+     "name": "name^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "eqip"
+      ]
+     }
     },
     {
      "type": "pad",

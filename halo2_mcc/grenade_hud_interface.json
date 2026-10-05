@@ -94,7 +94,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "interface bitmap"
+     "name": "interface bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "argb_color",
@@ -187,7 +193,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "interface bitmap"
+     "name": "interface bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "argb_color",
@@ -355,7 +367,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "Overlay bitmap"
+     "name": "Overlay bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "block",
@@ -526,15 +544,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "primary"
+     "name": "primary",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "secondary"
+     "name": "secondary",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "tertiary"
+     "name": "tertiary",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "short_enum",
@@ -785,7 +821,14 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snd!",
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "long_flags",

@@ -1046,7 +1046,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "decorators"
+     "name": "decorators",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "DECP"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -1186,7 +1192,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "old shader*"
+     "name": "old shader*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -1200,7 +1212,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "new shader*"
+     "name": "new shader*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -2004,7 +2022,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "weather system"
+     "name": "weather system",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "weat"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -2023,7 +2047,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "wind"
+     "name": "wind",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "wind"
+      ]
+     }
     },
     {
      "type": "real_vector_3d",
@@ -2746,11 +2776,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "old shader*"
+     "name": "old shader*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "shader^*"
+     "name": "shader^*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "block",
@@ -3193,11 +3235,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "background sound"
+     "name": "background sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "inside cluster sound#play this only when the player is inside the cluster"
+     "name": "inside cluster sound#play this only when the player is inside the cluster",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -3250,7 +3304,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound environment"
+     "name": "sound environment",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "snde"
+      ]
+     }
     },
     {
      "type": "real",
@@ -4417,7 +4477,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "lightmap bitmap*"
+     "name": "lightmap bitmap*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "long_integer",
@@ -4871,7 +4937,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "lightmap bitmap*"
+     "name": "lightmap bitmap*",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "long_integer",
@@ -6294,11 +6366,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "definition"
+     "name": "definition",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "scen"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "model"
+     "name": "model",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "mode"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -6361,7 +6445,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "bitmap group"
+     "name": "bitmap group",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -7482,7 +7572,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "shader"
+     "name": "shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "block",
@@ -7679,7 +7775,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "structure bsp^"
+     "name": "structure bsp^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "sbsp"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -7698,11 +7800,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "structure bsp^"
+     "name": "structure bsp^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "sbsp"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "structure lightmap^"
+     "name": "structure lightmap^",
+     "definition": {
+      "flags": 2,
+      "allowed": [
+       "ltmp"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -7763,7 +7877,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sky^"
+     "name": "sky^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "sky "
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -8289,7 +8409,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "decorator set^"
+     "name": "decorator set^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "DECR"
+      ]
+     }
     },
     {
      "type": "terminator",

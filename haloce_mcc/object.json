@@ -79,11 +79,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "model"
+     "name": "model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "mod2"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "animation graph"
+     "name": "animation graph",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "antr"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -92,19 +104,43 @@
     },
     {
      "type": "tag_reference",
-     "name": "collision model"
+     "name": "collision model",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "coll"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "physics"
+     "name": "physics",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "phys"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "modifier shader"
+     "name": "modifier shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shdr"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "creation effect"
+     "name": "creation effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -190,7 +226,18 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "type^"
+     "name": "type^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "ligh",
+       "mgs2",
+       "cont",
+       "pctl",
+       "effe",
+       "lsnd"
+      ]
+     }
     },
     {
      "type": "string",
@@ -233,7 +280,17 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "reference^"
+     "name": "reference^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "flag",
+       "ant!",
+       "glw!",
+       "mgs2",
+       "elec"
+      ]
+     }
     },
     {
      "type": "pad",

@@ -47,11 +47,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "effect"
+     "name": "effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "sound"
+     "name": "sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "block",
@@ -74,7 +86,14 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "particle"
+     "name": "particle",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "prt3",
+       "PRTM"
+      ]
+     }
     },
     {
      "type": "long_block_index",
@@ -146,7 +165,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "particle physics"
+     "name": "particle physics",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "pmov"
+      ]
+     }
     },
     {
      "type": "explanation",
@@ -462,7 +487,14 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "particle"
+     "name": "particle",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "prt3",
+       "PRTM"
+      ]
+     }
     },
     {
      "type": "long_block_index",

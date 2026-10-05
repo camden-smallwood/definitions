@@ -163,11 +163,23 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "random player names"
+     "name": "random player names",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unic"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "team names"
+     "name": "team names",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unic"
+      ]
+     }
     },
     {
      "type": "block",
@@ -176,7 +188,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "multiplayer text"
+     "name": "multiplayer text",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unic"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -204,23 +222,53 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "flag"
+     "name": "flag",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "ball"
+     "name": "ball",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "unit"
+     "name": "unit",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unit"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "flag shader"
+     "name": "flag shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "hill shader"
+     "name": "hill shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "block",
@@ -234,7 +282,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "in game text"
+     "name": "in game text",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unic"
+      ]
+     }
     },
     {
      "type": "block",
@@ -273,11 +327,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "default item collection 1"
+     "name": "default item collection 1",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "itmc"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "default item collection 2"
+     "name": "default item collection 2",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "itmc"
+      ]
+     }
     },
     {
      "type": "long_integer",
@@ -569,7 +635,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "weapon^"
+     "name": "weapon^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -583,7 +655,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "vehicle^"
+     "name": "vehicle^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "vehi"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -597,7 +675,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -686,7 +770,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -731,35 +821,83 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "japanese sound"
+     "name": "japanese sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "german sound"
+     "name": "german sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "french sound"
+     "name": "french sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "spanish sound"
+     "name": "spanish sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "italian sound"
+     "name": "italian sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "korean sound"
+     "name": "korean sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "chinese sound"
+     "name": "chinese sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "portuguese sound"
+     "name": "portuguese sound",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -784,7 +922,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "english sound^"
+     "name": "english sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -882,7 +1026,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -991,7 +1141,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -1100,7 +1256,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -1209,7 +1371,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -1243,55 +1411,123 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "flag"
+     "name": "flag",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "ball"
+     "name": "ball",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "unit"
+     "name": "unit",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unit"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "flag shader"
+     "name": "flag shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "hill shader"
+     "name": "hill shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "head"
+     "name": "head",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "juggernaut powerup"
+     "name": "juggernaut powerup",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "da bomb"
+     "name": "da bomb",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "item"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": []
+     }
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": []
+     }
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": []
+     }
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": []
+     }
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": []
+     }
     },
     {
      "type": "block",
@@ -1310,7 +1546,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "in game text"
+     "name": "in game text",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "unic"
+      ]
+     }
     },
     {
      "type": "block",
@@ -1394,11 +1636,23 @@
     },
     {
      "type": "tag_reference",
-     "name": "default item collection 1"
+     "name": "default item collection 1",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "itmc"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "default item collection 2"
+     "name": "default item collection 2",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "itmc"
+      ]
+     }
     },
     {
      "type": "long_integer",
@@ -1739,23 +1993,53 @@
     },
     {
      "type": "tag_reference",
-     "name": "scoreboard hud definition"
+     "name": "scoreboard hud definition",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "nhdt"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "scoreboard emblem shader"
+     "name": "scoreboard emblem shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "scoreboard emblem bitmap"
+     "name": "scoreboard emblem bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "scoreboard dead emblem shader"
+     "name": "scoreboard dead emblem shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "scoreboard dead emblem bitmap"
+     "name": "scoreboard dead emblem bitmap",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "bitm"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1801,7 +2085,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "grenade^"
+     "name": "grenade^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "eqip"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1815,7 +2105,13 @@
    "fields": [
     {
      "type": "tag_reference",
-     "name": "equipment^"
+     "name": "equipment^",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "eqip"
+      ]
+     }
     },
     {
      "type": "terminator",
@@ -1904,7 +2200,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -2013,7 +2315,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -2122,7 +2430,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -2231,7 +2545,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -2340,7 +2660,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -2449,7 +2775,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -2558,7 +2890,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -2667,7 +3005,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "sound^"
+     "name": "sound^",
+     "definition": {
+      "flags": 4,
+      "allowed": [
+       "snd!"
+      ]
+     }
     },
     {
      "type": "struct",
@@ -2774,7 +3118,13 @@
     },
     {
      "type": "tag_reference",
-     "name": "hill shader"
+     "name": "hill shader",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "shad"
+      ]
+     }
     },
     {
      "type": "pad",
@@ -2787,15 +3137,33 @@
     },
     {
      "type": "tag_reference",
-     "name": "bomb explode effect"
+     "name": "bomb explode effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "bomb explode dmg effect"
+     "name": "bomb explode dmg effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "jpt!"
+      ]
+     }
     },
     {
      "type": "tag_reference",
-     "name": "bomb defuse effect"
+     "name": "bomb defuse effect",
+     "definition": {
+      "flags": 0,
+      "allowed": [
+       "effe"
+      ]
+     }
     },
     {
      "type": "string_id",
@@ -2865,7 +3233,11 @@
     },
     {
      "type": "tag_reference",
-     "name": null
+     "name": null,
+     "definition": {
+      "flags": 0,
+      "allowed": []
+     }
     },
     {
      "type": "pad",

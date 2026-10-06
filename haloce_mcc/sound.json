@@ -14,7 +14,21 @@
   "sound_pitch_range_block": {
    "max_count": 8,
    "struct": "sound_pitch_range_block_struct",
-   "max_count_string": "MAXIMUM_PITCH_RANGES_PER_SOUND"
+   "max_count_string": "MAXIMUM_PITCH_RANGES_PER_SOUND",
+   "element_label": {
+    "source": "tool.exe 0x49E680",
+    "label": [
+     {
+      "when": "{#count} == 1",
+      "format": "always played"
+     },
+     {
+      "when": "1",
+      "format": "{name}:{bend bounds[0]:.2f} to {bend bounds[1]:.2f}"
+     }
+    ]
+   },
+   "element_label_callback": "tool.exe 0x49E680"
   },
   "sound_permutations_block": {
    "max_count": 256,

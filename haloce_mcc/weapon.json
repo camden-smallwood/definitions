@@ -15,17 +15,62 @@
   "magazines": {
    "max_count": 2,
    "struct": "magazines_struct",
-   "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINES_PER_WEAPON"
+   "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINES_PER_WEAPON",
+   "element_label": {
+    "source": "tool.exe 0x4A58D0",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "primary",
+       "secondary"
+      ]
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A58D0"
   },
   "magazine_objects": {
    "max_count": 8,
    "struct": "magazine_objects_struct",
-   "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINE_OBJECTS_PER_MAGAZINE"
+   "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINE_OBJECTS_PER_MAGAZINE",
+   "element_label": {
+    "source": "tool.exe 0x4A58D0",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "primary",
+       "secondary"
+      ]
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A58D0"
   },
   "triggers": {
    "max_count": 2,
    "struct": "triggers_struct",
-   "max_count_string": "MAXIMUM_NUMBER_OF_TRIGGERS_PER_WEAPON"
+   "max_count_string": "MAXIMUM_NUMBER_OF_TRIGGERS_PER_WEAPON",
+   "element_label": {
+    "source": "tool.exe 0x4A5870",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "primary",
+       "secondary"
+      ]
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A5870"
   },
   "trigger_firing_effect_block": {
    "max_count": 8,

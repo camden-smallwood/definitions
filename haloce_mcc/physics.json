@@ -14,7 +14,22 @@
   "inertial_matrix_block": {
    "max_count": 2,
    "struct": "inertial_matrix_block_struct",
-   "max_count_string": "MAXIMUM_PHYSICS_INERTIAL_MATRICES"
+   "max_count_string": "MAXIMUM_PHYSICS_INERTIAL_MATRICES",
+   "element_label": {
+    "source": "tool.exe 0x524230",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "inertial_matrix",
+       "inertial_matrix_inverse"
+      ]
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x524230"
   },
   "powered_mass_point_block": {
    "max_count": 32,

@@ -14,7 +14,22 @@
   "gg_sound_block": {
    "max_count": 2,
    "struct": "gg_sound_block_struct",
-   "max_count_string": "NUMBER_OF_GLOBAL_SOUNDS"
+   "max_count_string": "NUMBER_OF_GLOBAL_SOUNDS",
+   "element_label": {
+    "source": "tool.exe 0x495490",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "enter water",
+       "leave water"
+      ]
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x495490"
   },
   "camera_block": {
    "max_count": 1,
@@ -29,7 +44,14 @@
   "look_function_block": {
    "max_count": 16,
    "struct": "look_function_block_struct",
-   "max_count_string": "16"
+   "max_count_string": "16",
+   "element_label": {
+    "source": "tool.exe 0x495410",
+    "label": [
+     "{#fraction:.3f}, {scale:.3f}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x495410"
   },
   "difficulty_block": {
    "max_count": 1,
@@ -39,7 +61,14 @@
   "grenades_block": {
    "max_count": 4,
    "struct": "grenades_block_struct",
-   "max_count_string": "k_unit_grenade_types_count"
+   "max_count_string": "k_unit_grenade_types_count",
+   "element_label": {
+    "source": "tool.exe 0x4953C0 (the `grenade type` string list)",
+    "label": [
+     "{#|enum:grenade type}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x4953C0"
   },
   "rasterizer_data_block": {
    "max_count": 1,
@@ -94,7 +123,53 @@
   "materials_block": {
    "max_count": 33,
    "struct": "materials_block_struct",
-   "max_count_string": "NUMBER_OF_MATERIAL_TYPES"
+   "max_count_string": "NUMBER_OF_MATERIAL_TYPES",
+   "element_label": {
+    "source": "tool.exe 0x495360",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "dirt",
+       "sand",
+       "stone",
+       "snow",
+       "wood",
+       "metal (hollow)",
+       "metal (thin)",
+       "metal (thick)",
+       "rubber",
+       "glass",
+       "force field",
+       "grunt",
+       "hunter armor",
+       "hunter skin",
+       "elite",
+       "jackal",
+       "jackal energy shield",
+       "engineer skin",
+       "engineer force field",
+       "flood combat form",
+       "flood carrier form",
+       "cyborg armor",
+       "cyborg energy shield",
+       "human armor",
+       "human skin",
+       "sentinel",
+       "monitor",
+       "plastic",
+       "water",
+       "leaves",
+       "elite energy shield",
+       "ice",
+       "hunter shield"
+      ]
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x495360"
   },
   "breakable_surface_particle_effect_block": {
    "max_count": 8,

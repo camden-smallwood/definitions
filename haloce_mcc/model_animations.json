@@ -34,7 +34,51 @@
   "unit_seat_animation_block": {
    "max_count": 30,
    "struct": "unit_seat_animation_block_struct",
-   "max_count_string": "NUMBER_OF_UNIT_SEAT_ANIMATIONS"
+   "max_count_string": "NUMBER_OF_UNIT_SEAT_ANIMATIONS",
+   "element_label": {
+    "source": "tool.exe 0x4A34D0",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "airborne-dead",
+       "landing-dead",
+       "acc-front-back",
+       "acc-left-right",
+       "acc-up-down",
+       "push",
+       "twist",
+       "enter",
+       "exit",
+       "look",
+       "talk",
+       "emotions",
+       "unused",
+       "user0",
+       "user1",
+       "user2",
+       "user3",
+       "user4",
+       "user5",
+       "user6",
+       "user7",
+       "user8",
+       "user9",
+       "flying-front",
+       "flying-back",
+       "flying-left",
+       "flying-right",
+       "opening",
+       "closing",
+       "hovering"
+      ],
+      "else": "#<invalid>"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A34D0"
   },
   "animation_graph_unit_seat_ik_point": {
    "max_count": 8,
@@ -49,7 +93,76 @@
   "weapon_class_animation_block": {
    "max_count": 55,
    "struct": "weapon_class_animation_block_struct",
-   "max_count_string": "NUMBER_OF_UNIT_WEAPON_CLASS_ANIMATIONS"
+   "max_count_string": "NUMBER_OF_UNIT_WEAPON_CLASS_ANIMATIONS",
+   "element_label": {
+    "source": "tool.exe 0x4A3510",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "idle",
+       "gesture",
+       "turn-left",
+       "turn-right",
+       "dive-front",
+       "dive-back",
+       "dive-left",
+       "dive-right",
+       "move-front",
+       "move-back",
+       "move-left",
+       "move-right",
+       "slide-front",
+       "slide-back",
+       "slide-left",
+       "slide-right",
+       "airborne",
+       "land-soft",
+       "land-hard",
+       "unused",
+       "throw-grenade",
+       "disarm",
+       "drop",
+       "ready",
+       "put-away",
+       "aim-still",
+       "aim-move",
+       "surprise-front",
+       "surprise-back",
+       "berserk",
+       "evade-left",
+       "evade-right",
+       "signal-move",
+       "signal-attack",
+       "warn",
+       "stunned-front",
+       "stunned-back",
+       "stunned-left",
+       "stunned-right",
+       "melee",
+       "celebrate",
+       "panic",
+       "melee-airborne",
+       "flaming",
+       "resurrect-front",
+       "resurrect-back",
+       "melee-continuous",
+       "feeding",
+       "leap-start",
+       "leap-airborne",
+       "leap-melee",
+       "zapping",
+       "unused",
+       "unused",
+       "unused"
+      ],
+      "else": "#<invalid>"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A3510"
   },
   "animation_graph_weapon_type_block": {
    "max_count": 64,
@@ -59,7 +172,31 @@
   "weapon_type_animation_block": {
    "max_count": 10,
    "struct": "weapon_type_animation_block_struct",
-   "max_count_string": "NUMBER_OF_UNIT_WEAPON_TYPE_ANIMATIONS"
+   "max_count_string": "NUMBER_OF_UNIT_WEAPON_TYPE_ANIMATIONS",
+   "element_label": {
+    "source": "tool.exe 0x4A3550",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "reload-1",
+       "reload-2",
+       "chamber-1",
+       "chamber-2",
+       "fire-1",
+       "fire-2",
+       "charged-1",
+       "charged-2",
+       "melee",
+       "overheat"
+      ],
+      "else": "#<invalid>"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A3550"
   },
   "animation_graph_weapon_animations_block": {
    "max_count": 1,
@@ -69,7 +206,32 @@
   "weapon_animation_block": {
    "max_count": 11,
    "struct": "weapon_animation_block_struct",
-   "max_count_string": "NUMBER_OF_WEAPON_ANIMATIONS"
+   "max_count_string": "NUMBER_OF_WEAPON_ANIMATIONS",
+   "element_label": {
+    "source": "tool.exe 0x4A3410",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "idle",
+       "ready",
+       "put-away",
+       "reload-1",
+       "reload-2",
+       "chamber-1",
+       "chamber-2",
+       "charged-1",
+       "charged-2",
+       "fire-1",
+       "fire-2"
+      ],
+      "else": "#<invalid>"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A3410"
   },
   "animation_graph_vehicle_animations_block": {
    "max_count": 1,
@@ -79,7 +241,29 @@
   "vehicle_animation_block": {
    "max_count": 8,
    "struct": "vehicle_animation_block_struct",
-   "max_count_string": "NUMBER_OF_VEHICLE_ANIMATIONS"
+   "max_count_string": "NUMBER_OF_VEHICLE_ANIMATIONS",
+   "element_label": {
+    "source": "tool.exe 0x4A3490",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "steering",
+       "roll",
+       "throttle",
+       "velocity",
+       "braking",
+       "ground-speed",
+       "occupied",
+       "unoccupied"
+      ],
+      "else": "#<invalid>"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A3490"
   },
   "suspension_animation_block": {
    "max_count": 32,
@@ -94,7 +278,23 @@
   "device_animation_block": {
    "max_count": 2,
    "struct": "device_animation_block_struct",
-   "max_count_string": "NUMBER_OF_DEVICE_ANIMATIONS"
+   "max_count_string": "NUMBER_OF_DEVICE_ANIMATIONS",
+   "element_label": {
+    "source": "tool.exe 0x4A3450",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "position",
+       "power"
+      ],
+      "else": "#<invalid>"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A3450"
   },
   "unit_damage_animations": {
    "max_count": 176,
@@ -109,7 +309,51 @@
   "first_person_weapon_block": {
    "max_count": 30,
    "struct": "first_person_weapon_block_struct",
-   "max_count_string": "NUMBER_OF_FIRST_PERSON_WEAPON_ANIMATIONS"
+   "max_count_string": "NUMBER_OF_FIRST_PERSON_WEAPON_ANIMATIONS",
+   "element_label": {
+    "source": "tool.exe 0x4A3590",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "idle",
+       "posing",
+       "fire-1",
+       "moving",
+       "overlays",
+       "light-off",
+       "light-on",
+       "reload-empty",
+       "reload-full",
+       "overheated",
+       "ready",
+       "put-away",
+       "overcharged",
+       "melee",
+       "fire-2",
+       "overcharged-jitter",
+       "throw-grenade",
+       "ammunition",
+       "misfire-1",
+       "misfire-2",
+       "throw-overheated",
+       "overheating",
+       "overheating-again",
+       "enter",
+       "exit-empty",
+       "exit-full",
+       "o-h-exit",
+       "o-h-s-enter",
+       "reload-empty-2",
+       "reload-full-2"
+      ],
+      "else": "#<invalid>"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A3590"
   },
   "animation_graph_node_block": {
    "max_count": 64,

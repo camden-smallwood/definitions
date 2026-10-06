@@ -24,12 +24,68 @@
   "object_function_block": {
    "max_count": 4,
    "struct": "object_function_block_struct",
-   "max_count_string": "NUMBER_OF_OUTGOING_OBJECT_FUNCTIONS"
+   "max_count_string": "NUMBER_OF_OUTGOING_OBJECT_FUNCTIONS",
+   "element_label": {
+    "source": "tool.exe 0x4A0780",
+    "label": [
+     {
+      "when": "{usage} != \"\"",
+      "format": "{#|map:outputs} ({usage})"
+     },
+     {
+      "when": "1",
+      "format": "{#|map:outputs}"
+     }
+    ],
+    "maps": {
+     "outputs": {
+      "names": [
+       "A out",
+       "B out",
+       "C out",
+       "D out"
+      ]
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A0780"
   },
   "object_change_colors": {
    "max_count": 4,
    "struct": "object_change_colors_struct",
-   "max_count_string": "NUMBER_OF_OBJECT_CHANGE_COLORS"
+   "max_count_string": "NUMBER_OF_OBJECT_CHANGE_COLORS",
+   "element_label": {
+    "source": "tool.exe 0x4A0820",
+    "label": [
+     {
+      "when": "{darken by} > 0 && {scale by} > 0",
+      "format": "{#|map:letters}(dark:{darken by})(scale:{scale by})"
+     },
+     {
+      "when": "{darken by} > 0",
+      "format": "{#|map:letters}(dark:{darken by})"
+     },
+     {
+      "when": "{scale by} > 0",
+      "format": "{#|map:letters}(scale:{scale by})"
+     },
+     {
+      "when": "1",
+      "format": "{#|map:letters}"
+     }
+    ],
+    "maps": {
+     "letters": {
+      "names": [
+       "A",
+       "B",
+       "C",
+       "D"
+      ]
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A0820"
   },
   "object_change_color_permutations": {
    "max_count": 8,

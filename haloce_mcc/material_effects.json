@@ -14,12 +14,84 @@
   "material_effect_block": {
    "max_count": 13,
    "struct": "material_effect_block_struct",
-   "max_count_string": "NUMBER_OF_MATERIAL_EFFECT_TYPES"
+   "max_count_string": "NUMBER_OF_MATERIAL_EFFECT_TYPES",
+   "element_label": {
+    "source": "tool.exe 0x527710",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "walk",
+       "run",
+       "sliding",
+       "shuffle",
+       "jump",
+       "jump land",
+       "biped unused1",
+       "biped unused2",
+       "impact",
+       "vehicle tire slip",
+       "vehicle chassis slip",
+       "vehicle unused 1",
+       "vehicle unused 2"
+      ]
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x527710"
   },
   "material_effect_material_block": {
    "max_count": 33,
    "struct": "material_effect_material_block_struct",
-   "max_count_string": "NUMBER_OF_MATERIAL_TYPES"
+   "max_count_string": "NUMBER_OF_MATERIAL_TYPES",
+   "element_label": {
+    "source": "tool.exe 0x5276C0",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "dirt",
+       "sand",
+       "stone",
+       "snow",
+       "wood",
+       "metal (hollow)",
+       "metal (thin)",
+       "metal (thick)",
+       "rubber",
+       "glass",
+       "force field",
+       "grunt",
+       "hunter armor",
+       "hunter skin",
+       "elite",
+       "jackal",
+       "jackal energy shield",
+       "engineer skin",
+       "engineer force field",
+       "flood combat form",
+       "flood carrier form",
+       "cyborg armor",
+       "cyborg energy shield",
+       "human armor",
+       "human skin",
+       "sentinel",
+       "monitor",
+       "plastic",
+       "water",
+       "leaves",
+       "elite energy shield",
+       "ice",
+       "hunter shield"
+      ]
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x5276C0"
   }
  },
  "structs": {

@@ -14,7 +14,37 @@
   "contrail_point_states_block": {
    "max_count": 16,
    "struct": "contrail_point_states_block_struct",
-   "max_count_string": "MAXIMUM_CONTRAIL_POINT_STATES_PER_CONTRAIL"
+   "max_count_string": "MAXIMUM_CONTRAIL_POINT_STATES_PER_CONTRAIL",
+   "element_label": {
+    "source": "tool.exe 0x524A70",
+    "label": [
+     {
+      "when": "{duration[0]} == {duration[1]} && {transition duration[1]} == 0",
+      "format": "{duration[0]:.2f} seconds"
+     },
+     {
+      "when": "{duration[0]} != {duration[1]} && {transition duration[1]} == 0",
+      "format": "{duration[0]:.2f}-{duration[1]:.2f} seconds"
+     },
+     {
+      "when": "{duration[0]} == {duration[1]} && {transition duration[1]} != 0 && {transition duration[0]} == {transition duration[1]}",
+      "format": "{duration[0]:.2f} + {transition duration[0]:.2f} seconds"
+     },
+     {
+      "when": "{duration[0]} == {duration[1]} && {transition duration[1]} != 0 && {transition duration[0]} != {transition duration[1]}",
+      "format": "{duration[0]:.2f} + {transition duration[0]:.2f}-{transition duration[1]:.2f} seconds"
+     },
+     {
+      "when": "{duration[0]} != {duration[1]} && {transition duration[1]} != 0 && {transition duration[0]} == {transition duration[1]}",
+      "format": "{duration[0]:.2f}-{duration[1]:.2f} + {transition duration[0]:.2f} seconds"
+     },
+     {
+      "when": "{duration[0]} != {duration[1]} && {transition duration[1]} != 0 && {transition duration[0]} != {transition duration[1]}",
+      "format": "{duration[0]:.2f}-{duration[1]:.2f} + {transition duration[0]:.2f}-{transition duration[1]:.2f} seconds"
+     }
+    ]
+   },
+   "element_label_callback": "tool.exe 0x524A70"
   }
  },
  "structs": {

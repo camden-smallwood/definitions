@@ -14,7 +14,39 @@
   "hud_button_icon_block": {
    "max_count": 18,
    "struct": "hud_button_icon_block_struct",
-   "max_count_string": "NUMBER_OF_GAMEPAD_BUTTONS+NUMBER_OF_GAMEPAD_STICKS"
+   "max_count_string": "NUMBER_OF_GAMEPAD_BUTTONS+NUMBER_OF_GAMEPAD_STICKS",
+   "element_label": {
+    "source": "tool.exe 0x527130",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "a button",
+       "b button",
+       "x button",
+       "y button",
+       "black button",
+       "white button",
+       "left trigger",
+       "right trigger",
+       "dpad up",
+       "dpad down",
+       "dpad left",
+       "dpad right",
+       "start button",
+       "back button",
+       "left thumb button",
+       "right thumb button",
+       "left stick (not a button)",
+       "right stick (not a button)"
+      ],
+      "else": "invalid button"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x527130"
   },
   "hud_waypoint_arrow_block": {
    "max_count": 16,

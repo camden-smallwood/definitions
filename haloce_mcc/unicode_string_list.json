@@ -15,7 +15,22 @@
    "max_count": 800,
    "struct": "unicode_string_list_string_reference_block_struct",
    "max_count_string": "MAXIMUM_UNICODE_STRINGS_PER_STRING_LIST",
-   "display_name": "string reference"
+   "display_name": "string reference",
+   "element_label": {
+    "source": "tool.exe 0x4A5B70; formats into 31 wide characters, and prints <unprintable string> when the text won't convert (not modelled)",
+    "max_length": 31,
+    "label": [
+     {
+      "when": "{string|utf16} != \"\"",
+      "format": "{#}: {string|utf16}"
+     },
+     {
+      "when": "1",
+      "format": "<empty string>"
+     }
+    ]
+   },
+   "element_label_callback": "tool.exe 0x4A5B70"
   }
  },
  "structs": {

@@ -34,7 +34,17 @@
   "editor_comment_block": {
    "max_count": 1024,
    "struct": "editor_comment_block_struct",
-   "max_count_string": "MAXIMUM_EDITOR_COMMENTS"
+   "max_count_string": "MAXIMUM_EDITOR_COMMENTS",
+   "element_label": {
+    "source": "tool.exe 0x4A0120; an empty comment falls back to \"%d. editor_comment_block\" (decision 3) rather than the editor's four video ids",
+    "label": [
+     {
+      "when": "{comment|text} != \"\"",
+      "format": "{comment|text}"
+     }
+    ]
+   },
+   "element_label_callback": "tool.exe 0x4A0120"
   },
   "scenario_scavenger_hunt_object_block": {
    "max_count": 16,
@@ -50,7 +60,14 @@
   "scenario_scenery_block": {
    "max_count": 2000,
    "struct": "scenario_scenery_block_struct",
-   "max_count_string": "MAXIMUM_SCENERY_DATUMS_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_SCENERY_DATUMS_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FD50",
+    "label": [
+     "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x49FD50"
   },
   "scenario_scenery_palette_block": {
    "max_count": 256,
@@ -60,7 +77,14 @@
   "scenario_biped_block": {
    "max_count": 128,
    "struct": "scenario_biped_block_struct",
-   "max_count_string": "MAXIMUM_BIPED_DATUMS_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_BIPED_DATUMS_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FD50",
+    "label": [
+     "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x49FD50"
   },
   "scenario_biped_palette_block": {
    "max_count": 256,
@@ -70,7 +94,14 @@
   "scenario_vehicle_block": {
    "max_count": 256,
    "struct": "scenario_vehicle_block_struct",
-   "max_count_string": "MAXIMUM_VEHICLE_DATUMS_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_VEHICLE_DATUMS_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FD50",
+    "label": [
+     "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x49FD50"
   },
   "scenario_vehicle_palette_block": {
    "max_count": 256,
@@ -80,7 +111,14 @@
   "scenario_equipment_block": {
    "max_count": 256,
    "struct": "scenario_equipment_block_struct",
-   "max_count_string": "MAXIMUM_EQUIPMENT_DATUMS_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_EQUIPMENT_DATUMS_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FD50",
+    "label": [
+     "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x49FD50"
   },
   "scenario_equipment_palette_block": {
    "max_count": 256,
@@ -90,7 +128,14 @@
   "scenario_weapon_block": {
    "max_count": 128,
    "struct": "scenario_weapon_block_struct",
-   "max_count_string": "MAXIMUM_WEAPON_DATUMS_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_WEAPON_DATUMS_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FD50",
+    "label": [
+     "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x49FD50"
   },
   "scenario_weapon_palette_block": {
    "max_count": 256,
@@ -105,7 +150,14 @@
   "scenario_machine_block": {
    "max_count": 400,
    "struct": "scenario_machine_block_struct",
-   "max_count_string": "MAXIMUM_MACHINE_DATUMS_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_MACHINE_DATUMS_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FD50",
+    "label": [
+     "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x49FD50"
   },
   "scenario_machine_palette_block": {
    "max_count": 256,
@@ -115,7 +167,14 @@
   "scenario_control_block": {
    "max_count": 100,
    "struct": "scenario_control_block_struct",
-   "max_count_string": "MAXIMUM_CONTROL_DATUMS_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_CONTROL_DATUMS_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FD50",
+    "label": [
+     "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x49FD50"
   },
   "scenario_control_palette_block": {
    "max_count": 256,
@@ -125,7 +184,14 @@
   "scenario_light_fixture_block": {
    "max_count": 500,
    "struct": "scenario_light_fixture_block_struct",
-   "max_count_string": "MAXIMUM_LIGHT_FIXTURE_DATUMS_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_LIGHT_FIXTURE_DATUMS_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FD50",
+    "label": [
+     "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x49FD50"
   },
   "scenario_light_fixture_palette_block": {
    "max_count": 256,
@@ -135,7 +201,14 @@
   "scenario_sound_scenery_block": {
    "max_count": 256,
    "struct": "scenario_sound_scenery_block_struct",
-   "max_count_string": "MAXIMUM_SOUND_SCENERY_DATUMS_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_SOUND_SCENERY_DATUMS_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FD50",
+    "label": [
+     "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+    ]
+   },
+   "element_label_callback": "tool.exe 0x49FD50"
   },
   "scenario_sound_scenery_palette_block": {
    "max_count": 256,
@@ -170,12 +243,71 @@
   "scenario_netgame_flags_block": {
    "max_count": 200,
    "struct": "scenario_netgame_flags_block_struct",
-   "max_count_string": "MAXIMUM_SCENARIO_NETGAME_FLAGS_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_SCENARIO_NETGAME_FLAGS_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FF00",
+    "label": [
+     "{type|map:flags} #{usage id}"
+    ],
+    "maps": {
+     "flags": {
+      "names": [
+       "netgame_flag_ctf_flag",
+       "netgame_flag_ctf_vehicle",
+       "netgame_flag_oddball_ball_spawn",
+       "netgame_flag_race_track",
+       "netgame_flag_race_vehicle",
+       "netgame_flag_vegas_bank",
+       "netgame_flag_teleporter_source",
+       "netgame_flag_teleporter_target",
+       "netgame_flag_hill"
+      ],
+      "else": "unknown"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x49FF00"
   },
   "scenario_netgame_equipment_block": {
    "max_count": 200,
    "struct": "scenario_netgame_equipment_block_struct",
-   "max_count_string": "MAXIMUM_SCENARIO_NETGAME_EQUIPMENT_PER_SCENARIO"
+   "max_count_string": "MAXIMUM_SCENARIO_NETGAME_EQUIPMENT_PER_SCENARIO",
+   "element_label": {
+    "source": "tool.exe 0x49FFB0; the editor also cuts the file name at `/`",
+    "label": [
+     {
+      "when": "{type 1} != 0 || {type 2} != 0 || {type 3} != 0",
+      "format": "{type 0|map:games} * {item collection}"
+     },
+     {
+      "when": "1",
+      "format": "{type 0|map:games}  {item collection}"
+     }
+    ],
+    "maps": {
+     "games": {
+      "names": [
+       "none",
+       "ctf",
+       "slayer",
+       "oddball",
+       "king of the hill",
+       "race",
+       "terminator",
+       "stub",
+       "ignored1",
+       "ignored2",
+       "ignored3",
+       "ignored4",
+       "all games",
+       "all except ctf",
+       "all except race & ctf"
+      ],
+      "else": "unknown"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x49FFB0"
   },
   "scenario_starting_equipment_block": {
    "max_count": 200,
@@ -215,7 +347,21 @@
   "squads_block": {
    "max_count": 64,
    "struct": "squads_block_struct",
-   "max_count_string": "MAXIMUM_SQUADS_PER_ENCOUNTER"
+   "max_count_string": "MAXIMUM_SQUADS_PER_ENCOUNTER",
+   "element_label": {
+    "source": "tool.exe 0x4A5330",
+    "label": [
+     {
+      "when": "{platoon|index} >= 0 && {platoon|index} < {../platoons|count}",
+      "format": "({../platoons[{platoon|index}]/name}){name}"
+     },
+     {
+      "when": "1",
+      "format": "{name}"
+     }
+    ]
+   },
+   "element_label_callback": "tool.exe 0x4A5330"
   },
   "platoons_block": {
    "max_count": 32,
@@ -245,7 +391,457 @@
   "ai_command_block": {
    "max_count": 64,
    "struct": "ai_command_block_struct",
-   "max_count_string": "MAXIMUM_COMMANDS_PER_COMMAND_LIST"
+   "max_count_string": "MAXIMUM_COMMANDS_PER_COMMAND_LIST",
+   "element_label": {
+    "source": "tool.exe 0x4A5470, describing the atom with sub_5AAAF0 (vocalizations: sub_4EF090)",
+    "label": [
+     {
+      "when": "{atom type} == 0",
+      "format": "{#:2}: pause {parameter1:.1f}"
+     },
+     {
+      "when": "{atom type} == 1",
+      "format": "{#:2}: go to (p{point 1|index}) {atom modifier|map:go_to}"
+     },
+     {
+      "when": "{atom type} == 2",
+      "format": "{#:2}: go to (p{point 1|index}) and face (p{point 2|index})"
+     },
+     {
+      "when": "{atom type} == 3 && {point 1|index} == -1",
+      "format": "{#:2}: move {atom modifier|map:directions} along angle {parameter2:.1f}, dist {parameter1:.2f}"
+     },
+     {
+      "when": "{atom type} == 3",
+      "format": "{#:2}: move {atom modifier|map:directions} towards (p{point 1|index}), dist {parameter1:.2f}"
+     },
+     {
+      "when": "{atom type} == 4",
+      "format": "{#:2}: look {atom modifier|map:look} at (p{point 1|index}) for {parameter1:.1f}"
+     },
+     {
+      "when": "{atom type} == 5",
+      "format": "{#:2}: animation mode {atom modifier|map:animation_modes}"
+     },
+     {
+      "when": "{atom type} == 6",
+      "format": "{#:2}: crouch {atom modifier|map:crouch}"
+     },
+     {
+      "when": "{atom type} == 7",
+      "format": "{#:2}: shoot at (p{point 1|index}) for {parameter1:.1f}"
+     },
+     {
+      "when": "{atom type} == 8",
+      "format": "{#:2}: throw grenade at (p{point 1|index})"
+     },
+     {
+      "when": "{atom type} == 9",
+      "format": "{#:2}: enter vehicle as {atom modifier|map:seats} if within {parameter1:.1f}"
+     },
+     {
+      "when": "{atom type} == 10",
+      "format": "{#:2}: running jump"
+     },
+     {
+      "when": "{atom type} == 11",
+      "format": "{#:2}: targeted jump ({parameter1:.2f}h, {parameter2:.2f}v)"
+     },
+     {
+      "when": "{atom type} == 12",
+      "format": "{#:2}: script {script|bad:<error>} wake-and-continue"
+     },
+     {
+      "when": "{atom type} == 13",
+      "format": "{#:2}: animate {animation|bad:<error>}"
+     },
+     {
+      "when": "{atom type} == 14",
+      "format": "{#:2}: play recording {recording|bad:<error>}"
+     },
+     {
+      "when": "{atom type} == 15",
+      "format": "{#:2}: action {atom modifier|map:actions}"
+     },
+     {
+      "when": "{atom type} == 16",
+      "format": "{#:2}: vocalize {atom modifier|map:vocalizations}"
+     },
+     {
+      "when": "{atom type} == 17",
+      "format": "{#:2}: targeting {atom modifier|map:toggle}"
+     },
+     {
+      "when": "{atom type} == 18",
+      "format": "{#:2}: initiative {atom modifier|map:toggle}"
+     },
+     {
+      "when": "{atom type} == 19",
+      "format": "{#:2}: wait {atom modifier|map:wait}"
+     },
+     {
+      "when": "{atom type} == 20 && {command|index} == -1",
+      "format": "{#:2}: loop to <none> {atom modifier|map:loop}"
+     },
+     {
+      "when": "{atom type} == 20",
+      "format": "{#:2}: loop to #{command|index} {atom modifier|map:loop}"
+     },
+     {
+      "when": "{atom type} == 21",
+      "format": "{#:2}: die"
+     },
+     {
+      "when": "{atom type} == 22",
+      "format": "{#:2}: move {atom modifier|map:move_for} for {parameter1:.1f} sec"
+     },
+     {
+      "when": "{atom type} == 23",
+      "format": "{#:2}: look {atom modifier|map:look} at random one of (p{point 1|index}-p{point 2|index}) for {parameter1:.1f}-{parameter2:.1f}"
+     },
+     {
+      "when": "{atom type} == 24",
+      "format": "{#:2}: look {atom modifier|map:look} at player for {parameter1:.1f}"
+     },
+     {
+      "when": "{atom type} == 25",
+      "format": "{#:2}: look {atom modifier|map:look} at {object name|none:<error>|bad:<error>} for {parameter1:.1f}"
+     },
+     {
+      "when": "{atom type} == 26",
+      "format": "{#:2}: set radius {parameter1:.2f}"
+     },
+     {
+      "when": "{atom type} == 27 && {point 2|index} == -1",
+      "format": "{#:2}: teleport to (p{point 1|index})"
+     },
+     {
+      "when": "{atom type} == 27",
+      "format": "{#:2}: teleport to (p{point 1|index}) and face at (p{point 2|index})"
+     },
+     {
+      "when": "1",
+      "format": "{#:2}: <unknown {atom type|index}>"
+     }
+    ],
+    "maps": {
+     "go_to": {
+      "names": [
+       "stop_at_point",
+       "keep_moving"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "directions": {
+      "names": [
+       "forwards",
+       "left",
+       "right",
+       "backwards",
+       "any-facing"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "look": {
+      "names": [
+       "idle aim weapon",
+       "idle turn around",
+       "idle look with head",
+       "forced exact facing",
+       "forced aim weapon"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "animation_modes": {
+      "names": [
+       "noncombat",
+       "asleep",
+       "combat",
+       "panic"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "crouch": {
+      "names": [
+       "disable",
+       "enable"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "seats": {
+      "names": [
+       "any-non-driver",
+       "gunner",
+       "passenger",
+       "driver",
+       "any-seat"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "actions": {
+      "names": [
+       "berserk",
+       "surprise-front",
+       "surprise-back",
+       "evade-left",
+       "evade-right",
+       "dive-fwd",
+       "dive-back",
+       "dive-left",
+       "dive-right",
+       "vehicle-woohoo",
+       "vehicle-scared"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "toggle": {
+      "names": [
+       "enable",
+       "disable"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "wait": {
+      "names": [
+       "until alerted",
+       "until visible enemy",
+       "until told to advance"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "loop": {
+      "names": [
+       "always",
+       "only until told to advance"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "move_for": {
+      "names": [
+       "forwards",
+       "left",
+       "right",
+       "backwards"
+      ],
+      "else": "<INVALID-ATOM-MODIFIER>"
+     },
+     "vocalizations": {
+      "names": [
+       "idle noncombat",
+       "idle combat",
+       "idle flee",
+       "unused",
+       "unused",
+       "unused",
+       "pain body minor",
+       "pain body major",
+       "pain shield",
+       "pain falling",
+       "scream fear",
+       "scream pain",
+       "maimed limb",
+       "maimed head",
+       "death quiet",
+       "death violent",
+       "death falling",
+       "death agonizing",
+       "death instant",
+       "death flying",
+       "unused",
+       "damaged friend",
+       "damaged friend player",
+       "damaged enemy",
+       "damaged enemy cm",
+       "unused",
+       "unused",
+       "unused",
+       "unused",
+       "hurt friend",
+       "hurt friend re",
+       "hurt friend player",
+       "hurt enemy",
+       "hurt enemy re",
+       "hurt enemy cm",
+       "hurt enemy bullet",
+       "hurt enemy needler",
+       "hurt enemy plasma",
+       "hurt enemy sniper",
+       "hurt enemy grenade",
+       "hurt enemy explosion",
+       "hurt enemy melee",
+       "hurt enemy flame",
+       "hurt enemy shotgun",
+       "hurt enemy vehicle",
+       "hurt enemy mountedweapon",
+       "unused",
+       "unused",
+       "unused",
+       "killed friend",
+       "killed friend cm",
+       "killed friend player",
+       "killed friend player cm",
+       "killed enemy",
+       "killed enemy cm",
+       "killed enemy player",
+       "killed enemy player cm",
+       "killed enemy covenant",
+       "killed enemy covenant cm",
+       "killed enemy floodcombat",
+       "killed enemy floodcombat cm",
+       "killed enemy floodcarrier",
+       "killed enemy floodcarrier cm",
+       "killed enemy sentinel",
+       "killed enemy sentinel cm",
+       "killed enemy bullet",
+       "killed enemy needler",
+       "killed enemy plasma",
+       "killed enemy sniper",
+       "killed enemy grenade",
+       "killed enemy explosion",
+       "killed enemy melee",
+       "killed enemy flame",
+       "killed enemy shotgun",
+       "killed enemy vehicle",
+       "killed enemy mountedweapon",
+       "killing spree",
+       "unused",
+       "unused",
+       "unused",
+       "player kill cm",
+       "player kill bullet cm",
+       "player kill needler cm",
+       "player kill plasma cm",
+       "player kill sniper cm",
+       "anyone kill grenade cm",
+       "player kill explosion cm",
+       "player kill melee cm",
+       "player kill flame cm",
+       "player kill shotgun cm",
+       "player kill vehicle cm",
+       "player kill mountedweapon cm",
+       "player killing spree cm",
+       "unused",
+       "unused",
+       "unused",
+       "friend died",
+       "friend player died",
+       "friend killed by friend",
+       "friend killed by friendly player",
+       "friend killed by enemy",
+       "friend killed by enemy player",
+       "friend killed by covenant",
+       "friend killed by flood",
+       "friend killed by sentinel",
+       "friend betrayed",
+       "unused",
+       "unused",
+       "new combat alone",
+       "new enemy recent combat",
+       "old enemy sighted",
+       "unexpected enemy",
+       "dead friend found",
+       "alliance broken",
+       "alliance reformed",
+       "grenade throwing",
+       "grenade startle",
+       "grenade sighted",
+       "grenade danger enemy",
+       "grenade danger self",
+       "grenade danger friend",
+       "unused",
+       "unused",
+       "new combat group re",
+       "nea combat nearby re",
+       "alert friend",
+       "alert friend re",
+       "alert lost contact",
+       "alert lost contact re",
+       "blocked",
+       "blocked re",
+       "search start",
+       "search query",
+       "search query re",
+       "search report",
+       "search abandon",
+       "search group abandon",
+       "uncover start",
+       "uncover start re",
+       "advance",
+       "advance re",
+       "retreat",
+       "retreat re",
+       "cover",
+       "unused",
+       "unused",
+       "unused",
+       "unused",
+       "sighted friend player",
+       "shooting",
+       "shooting vehicle",
+       "shooting berserk",
+       "shooting group",
+       "shooting traitor",
+       "taunt",
+       "taunt re",
+       "flee",
+       "flee re",
+       "flee leader died",
+       "attempted flee",
+       "attempted flee re",
+       "lost contact",
+       "hiding finished",
+       "vehicle entry",
+       "vehicle exit",
+       "vehicle woohoo",
+       "vehicle scared",
+       "vehicle collision",
+       "partially sighted",
+       "nothing there",
+       "pleading",
+       "unused",
+       "unused",
+       "unused",
+       "unused",
+       "unused",
+       "unused",
+       "surprise",
+       "berserk",
+       "melee attack",
+       "dive",
+       "uncover leap",
+       "leap attack",
+       "resurrection",
+       "unused",
+       "unused",
+       "unused",
+       "unused",
+       "celebration",
+       "check body enemy",
+       "check body friend",
+       "shooting dead enemy",
+       "shooting dead enemy player",
+       "unused",
+       "unused",
+       "unused",
+       "unused",
+       "alone",
+       "unscathed",
+       "seriously wounded",
+       "seriously wounded re",
+       "massacre",
+       "massacre re",
+       "rout",
+       "rout re",
+       "unused",
+       "unused",
+       "unused",
+       "unused"
+      ],
+      "else": "<error>"
+     }
+    }
+   },
+   "element_label_callback": "tool.exe 0x4A5470"
   },
   "ai_command_point_block": {
    "max_count": 64,
@@ -275,7 +871,20 @@
   "ai_conversation_participant_block": {
    "max_count": 8,
    "struct": "ai_conversation_participant_block_struct",
-   "max_count_string": "MAXIMUM_PARTICIPANTS_PER_CONVERSATION"
+   "max_count_string": "MAXIMUM_PARTICIPANTS_PER_CONVERSATION",
+   "element_label": {
+    "source": "tool.exe 0x4A5550",
+    "label": [
+     "{#}: {use this object} / {set new name}",
+     "{#}: {use this object}",
+     "{#}: {set new name}",
+     {
+      "when": "1",
+      "format": "{#}: unnamed"
+     }
+    ]
+   },
+   "element_label_callback": "tool.exe 0x4A5550"
   },
   "ai_conversation_line_block": {
    "max_count": 32,

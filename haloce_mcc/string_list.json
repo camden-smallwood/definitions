@@ -15,7 +15,21 @@
    "max_count": 800,
    "struct": "string_list_string_reference_block_struct",
    "max_count_string": "MAXIMUM_STRINGS_PER_STRING_LIST",
-   "display_name": "string reference"
+   "display_name": "string reference",
+   "element_label": {
+    "source": "tool.exe 0x4A5AD0",
+    "label": [
+     {
+      "when": "{string|text} != \"\"",
+      "format": "{string|text}"
+     },
+     {
+      "when": "1",
+      "format": "<empty string>"
+     }
+    ]
+   },
+   "element_label_callback": "tool.exe 0x4A5AD0"
   }
  },
  "structs": {

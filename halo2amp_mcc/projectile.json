@@ -258,10 +258,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -305,10 +303,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -974,7 +970,7 @@
         "distance based damage scaling uses damage range low bounds#damage scales from 1.f --> 0.f  between 'damage range - low' --> 'damage range - high'",
         "skip object first tick#similar to Disable instantaneous first tick, but there's actually two types of ticks"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\projectile_definitions.cpp"
     },
     "secondary_projectile_flags": {
       "options": [
@@ -986,7 +982,7 @@
         "always use localized physics#overrides early mover localize projectiles",
         "never use localized physics#overrides early mover localize projectiles"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\projectile_definitions.cpp"
     },
     "projectile_detonation_timer_modes": {
       "options": [
@@ -995,7 +991,7 @@
         "when at rest",
         "after first bounce off any surface"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\projectile_definitions.cpp"
     },
     "ai_sound_volume_enum": {
       "options": [
@@ -1005,7 +1001,7 @@
         "shout",
         "loud#ai can hear this sound at any range"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\ai\\ai_scenario_definitions.cpp"
     },
     "global_damage_reporting_enum_definition": {
       "options": [
@@ -1108,7 +1104,7 @@
         "fusion coil",
         "stalactice"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\objects\\damage_reporting.cpp"
     },
     "object_type_enum_definition": {
       "options": [
@@ -1129,7 +1125,7 @@
         "effect_scenery",
         "spawner"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\scenario\\scenario_object_definitions.cpp"
     },
     "material_response": {
       "options": [
@@ -1142,7 +1138,7 @@
         "fizzle (ricochet)",
         "turn physical"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\projectile_definitions.cpp"
     },
     "material_possible_response_flags": {
       "options": [
@@ -1158,14 +1154,14 @@
         "only AI projectiles",
         "never AI projectiles"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\projectile_definitions.cpp"
     },
     "effect_scale_enum": {
       "options": [
         "damage",
         "angle"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\projectile_definitions.cpp"
     }
   }
 }

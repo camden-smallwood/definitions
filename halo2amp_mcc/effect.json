@@ -322,17 +322,23 @@
           "definition": {
             "flags": 0,
             "allowed": [
-              "BT\u001c0",
-              "???\u0001",
-              "A?E?",
-              "???\u0001",
-              "A?F\b",
-              "???\u0001",
-              "A?F ",
-              "???\u0001",
-              "A?F8",
-              "???\u0001",
-              "???\u0003"
+              "rwrd",
+              "jpt!",
+              "drdf",
+              "decs",
+              "lens",
+              "ligh",
+              "gldf",
+              "ltvl",
+              "sefc",
+              "char",
+              "cpem",
+              "obje",
+              "shit",
+              "cmoe",
+              "snd!",
+              "trac",
+              "airs"
             ]
           }
         },
@@ -992,8 +998,7 @@
         {
           "type": "custom",
           "name": "Mapping",
-          "group_tag": "fned",
-          "definition": "C?5?"
+          "group_tag": "fned"
         },
         {
           "type": "struct",
@@ -1089,8 +1094,7 @@
         {
           "type": "custom",
           "name": "Mapping",
-          "group_tag": "fned",
-          "definition": "C?6?"
+          "group_tag": "fned"
         },
         {
           "type": "struct",
@@ -1158,8 +1162,7 @@
         {
           "type": "custom",
           "name": "Mapping",
-          "group_tag": "fned",
-          "definition": "C?5p"
+          "group_tag": "fned"
         },
         {
           "type": "struct",
@@ -1429,8 +1432,7 @@
         {
           "type": "custom",
           "name": "Mapping",
-          "group_tag": "fned",
-          "definition": "C?60"
+          "group_tag": "fned"
         },
         {
           "type": "struct",
@@ -1498,8 +1500,7 @@
         {
           "type": "custom",
           "name": "Mapping",
-          "group_tag": "fned",
-          "definition": "C?5\u0010"
+          "group_tag": "fned"
         },
         {
           "type": "struct",
@@ -1653,7 +1654,7 @@
         "hides associated object on effect deletion#when the effect is deleted, it hides the object it is associated with (for hologram in mp)",
         "bypass mp throttle#effect can not ignore generated crates or be non-networked"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effect_definitions.cpp"
     },
     "event_flags": {
       "options": [
@@ -1661,7 +1662,7 @@
         "particles die when effect ends{particles die when event ends}",
         "loop event age duration override"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effect_definitions.cpp"
     },
     "global_effect_priority_enum": {
       "options": [
@@ -1672,7 +1673,7 @@
         "very high",
         "essential"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effect_globals.cpp"
     },
     "effect_environments": {
       "options": [
@@ -1683,7 +1684,7 @@
         "wet only",
         "dry only"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effect_definitions.cpp"
     },
     "effect_dispositions": {
       "options": [
@@ -1691,7 +1692,7 @@
         "violent mode only",
         "nonviolent mode only"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effect_definitions.cpp"
     },
     "effect_location_flags": {
       "options": [
@@ -1700,7 +1701,7 @@
         "track sub-frame movements#When effect moves multiple times within one frame, update location each time",
         "never stagger across markers#Even if this effect is told to stagger across available markers, always fire from all instances"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effect_definitions.cpp"
     },
     "effect_part_flags": {
       "options": [
@@ -1716,7 +1717,7 @@
         "face up regardless of location (replace_up)",
         "sound only plays in killcam#NOTE this is only for sound, and really only for firing effect sounds"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effect_definitions.cpp"
     },
     "effect_camera_modes": {
       "options": [
@@ -1725,7 +1726,7 @@
         "only in third person",
         "both first and third"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effect_definitions.cpp"
     },
     "effectPartGameModeDefinition": {
       "options": [
@@ -1736,7 +1737,7 @@
         "campaign cinematics only",
         "campaign solo only"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effect_definitions.cpp"
     },
     "global_damage_reporting_enum_definition": {
       "options": [
@@ -1839,7 +1840,7 @@
         "fusion coil",
         "stalactice"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\objects\\damage_reporting.cpp"
     },
     "effect_part_scaleable_values": {
       "options": [
@@ -1850,14 +1851,14 @@
         "angular velocity delta",
         "type-specific scale"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effect_definitions.cpp"
     },
     "coordinate_system_enum": {
       "options": [
         "world",
         "local"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_system_definitions.cpp"
     },
     "particle_system_flags": {
       "options": [
@@ -1885,7 +1886,7 @@
         "disable when zoomed",
         "continue when offscreen ignores .performance_throttles tag"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_system_definitions.cpp"
     },
     "emission_shape_enum": {
       "options": [
@@ -1910,17 +1911,17 @@
         "planar orbit",
         "sphere orbit"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_system_definitions.cpp"
     },
     "emitter_flags": {
       "options": [],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_system_definitions.cpp"
     },
     "visible_emitter_flags": {
       "options": [
         "volume emitter particle velocities are random#By default, particles emit radially away from the emitter center.  This option gives them random velocity instead.  This only applies to volume emitters."
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_system_definitions.cpp"
     },
     "emission_axis_enum": {
       "options": [
@@ -1929,7 +1930,7 @@
         "disc",
         "globe"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_system_definitions.cpp"
     },
     "emission_reference_axis_enum": {
       "options": [
@@ -1937,7 +1938,7 @@
         "y",
         "z"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_system_definitions.cpp"
     },
     "game_state_type_enum": {
       "options": [
@@ -1964,7 +1965,7 @@
         "particle velocity",
         "invalid state --- please set again"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_property_definitions.cpp"
     },
     "output_mod_enum": {
       "options": [
@@ -1972,13 +1973,13 @@
         "Plus",
         "Times"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_property_definitions.cpp"
     },
     "force_flags_definition": {
       "options": [
         "force constant"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_property_definitions.cpp"
     },
     "particle_movement_flags": {
       "options": [
@@ -1995,7 +1996,7 @@
         "global force",
         "disable swarm collision"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_movement_definitions.cpp"
     },
     "particle_movement_type": {
       "options": [
@@ -2006,19 +2007,19 @@
         "turbulence",
         "global force"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_movement_definitions.cpp"
     },
     "particle_controller_flags": {
       "options": [
         "properties fully indexed"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\particle_movement_definitions.cpp"
     },
     "globalForceFlags": {
       "options": [
         "is infinitely long cylinder"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\effectglobalforces.cpp"
     }
   },
   "datas": {

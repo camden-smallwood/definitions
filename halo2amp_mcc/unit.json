@@ -137,8 +137,8 @@
           "definition": {
             "flags": 0,
             "allowed": [
-              "B?\u000fx",
-              "???\u0001"
+              "bipd",
+              "vehi"
             ]
           }
         },
@@ -1037,8 +1037,7 @@
         {
           "type": "custom",
           "name": "mapping",
-          "group_tag": "fned",
-          "definition": "E\u001c?0"
+          "group_tag": "fned"
         },
         {
           "type": "struct",
@@ -1389,10 +1388,9 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?X",
-              "???\u0001",
-              "???\b",
-              "sbnk"
+              "scmb",
+              "lsnd",
+              "snd!"
             ]
           }
         },
@@ -1669,10 +1667,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -1682,10 +1678,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -1725,10 +1719,9 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?X",
-              "???\u0001",
-              "???\b",
-              "sbnk"
+              "scmb",
+              "lsnd",
+              "snd!"
             ]
           }
         },
@@ -1738,10 +1731,9 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?X",
-              "???\u0001",
-              "???\b",
-              "sbnk"
+              "scmb",
+              "lsnd",
+              "snd!"
             ]
           }
         },
@@ -2130,8 +2122,7 @@
         {
           "type": "custom",
           "name": "trigger to boost",
-          "group_tag": "fned",
-          "definition": "BT??"
+          "group_tag": "fned"
         },
         {
           "type": "struct",
@@ -2230,7 +2221,7 @@
         "allow aim while opening or closing",
         "compute acceleration from aiming"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "unit_flags_part2": {
       "options": [
@@ -2249,7 +2240,7 @@
         "do not pass attached AOE damage to children#projectiles attached to this object do not do attached damage to the object's children (regular aoe damage is still done to top level aoe children)",
         "do not generate AI line of fire pill for unit#even if this vehicle is being driven by a friendly character, don't generate a pill for it during ai line of fire checks (for very large vehicles i.e. the lich)"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "unit_default_teams": {
       "options": [
@@ -2263,7 +2254,7 @@
         "covenant_player",
         "forerunner"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "ai_sound_volume_enum": {
       "options": [
@@ -2273,13 +2264,13 @@
         "shout",
         "loud#ai can hear this sound at any range"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\ai\\ai_scenario_definitions.cpp"
     },
     "campaign_metagame_bucket_flags": {
       "options": [
         "only counts with riders"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\campaign_metagame_definitions.cpp"
     },
     "campaign_metagame_bucket_type_enum": {
       "options": [
@@ -2328,7 +2319,7 @@
         "knight",
         "pawn"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\campaign_metagame_definitions.cpp"
     },
     "campaign_metagame_bucket_class_enum": {
       "options": [
@@ -2341,7 +2332,7 @@
         "giant vehicle",
         "standard vehicle"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\campaign_metagame_definitions.cpp"
     },
     "unit_camera_flags_definition": {
       "options": [
@@ -2350,7 +2341,7 @@
         "hides player-unit from camera#the player controlling this camera will not see their unit.  All other cameras will see this unit",
         "use aiming vector instead of marker forward#for cameras without tracks that use a marker position, specifies that we use the unit's aiming vector instead of the marker's forward vector.\r\nThis results in more accurate aiming and smoother movement when frames are dropped"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "unit_camera_acceleration_displacement_input": {
       "options": [
@@ -2360,7 +2351,7 @@
         "pitch",
         "roll"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "input_mapping_shape_enum": {
       "options": [
@@ -2368,14 +2359,14 @@
         "unit_circle",
         "unit_square"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_controller_globals.cpp"
     },
     "global_melee_class_enum_definition": {
       "options": [
         "default class",
         "elite class"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\weapon_definitions.cpp"
     },
     "global_chud_blip_type_definition": {
       "options": [
@@ -2383,7 +2374,7 @@
         "small",
         "large"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\interface\\components\\hud\\motionsensorbliplist.cpp"
     },
     "unit_item_owner_size_enum": {
       "options": [
@@ -2392,7 +2383,7 @@
         "large",
         "huge"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "hud_sound_cue_flags": {
       "options": [
@@ -2413,7 +2404,7 @@
         "player tracked",
         "player locked"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\interface\\hud\\hudaudio.cpp"
     },
     "global_grenade_type_enum": {
       "options": [
@@ -2426,14 +2417,14 @@
         "grenade type 6",
         "grenade type 7"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\grenadeglobalsdefinitions.cpp"
     },
     "initial_weapon_position": {
       "options": [
         "primary or backpack",
         "secondary"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "sentryTurretBehaviorFlagDefinition": {
       "options": [
@@ -2443,14 +2434,14 @@
         "only use vehicle range scale if secondary barrel active",
         "only use vehicle score bonus if secondary barrel active"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "booleanDefinition": {
       "options": [
         "false",
         "true"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\objects\\target_tracking.cpp"
     },
     "unit_seat_flags": {
       "options": [
@@ -2487,7 +2478,7 @@
         "pelvis relative attachment",
         "apply velocity on death exit"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "unit_seat_secondary_flags": {
       "options": [
@@ -2502,7 +2493,7 @@
         "kill parent if unit in seat dies",
         "co-pilot#opens and closes the cockpit to allow copilot in (if already closed)"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "global_ai_seat_type_enum": {
       "options": [
@@ -2513,13 +2504,13 @@
         "large cargo",
         "driver"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "boost_flags": {
       "options": [
         "pegs throttle"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     }
   }
 }

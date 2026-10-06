@@ -319,13 +319,9 @@
           "definition": {
             "flags": 0,
             "allowed": [
-              "BO8?",
-              "???\u0001",
-              "A?\r?",
-              "???\u0001",
-              "A?\\?",
-              "???\u0001",
-              "???\u0001"
+              "obje",
+              "scen",
+              "efsc"
             ]
           }
         },
@@ -366,23 +362,41 @@
           "type": "custom",
           "name": "environment darken:0 - 1#this works best with auto-exposure off",
           "group_tag": "sled",
-          "definition": "BO3?"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "environment darken:0 - 1#this works best with auto-exposure off",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "custom",
           "name": "forced exposure:stops#will disable auto-exposure",
           "group_tag": "sled",
-          "definition": "BO3?"
+          "definition": {
+            "min": -1.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "forced exposure:stops#will disable auto-exposure",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -1.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "custom",
@@ -569,8 +583,7 @@
         {
           "type": "custom",
           "name": "frame start",
-          "group_tag": "cifi",
-          "definition": "BO]@"
+          "group_tag": "cifi"
         },
         {
           "type": "long_integer",
@@ -580,8 +593,7 @@
         {
           "type": "custom",
           "name": "frame end",
-          "group_tag": "cifi",
-          "definition": "BO]H"
+          "group_tag": "cifi"
         },
         {
           "type": "long_integer",
@@ -636,18 +648,16 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?X",
-              "???\u0001",
-              "???\b",
-              "sbnk"
+              "scmb",
+              "lsnd",
+              "snd!"
             ]
           }
         },
         {
           "type": "custom",
           "name": "frame",
-          "group_tag": "cifi",
-          "definition": "BO]@"
+          "group_tag": "cifi"
         },
         {
           "type": "long_integer",
@@ -702,8 +712,7 @@
         {
           "type": "custom",
           "name": "frame",
-          "group_tag": "cifi",
-          "definition": "BO]@"
+          "group_tag": "cifi"
         },
         {
           "type": "long_integer",
@@ -744,8 +753,7 @@
         {
           "type": "custom",
           "name": "frame",
-          "group_tag": "cifi",
-          "definition": "BO]@"
+          "group_tag": "cifi"
         },
         {
           "type": "long_integer",
@@ -755,8 +763,7 @@
         {
           "type": "custom",
           "name": "stop frame",
-          "group_tag": "cifi",
-          "definition": "BO]H"
+          "group_tag": "cifi"
         },
         {
           "type": "long_integer",
@@ -789,8 +796,7 @@
         {
           "type": "custom",
           "name": "frame",
-          "group_tag": "cifi",
-          "definition": "BO]@"
+          "group_tag": "cifi"
         },
         {
           "type": "long_integer",
@@ -830,8 +836,7 @@
         {
           "type": "custom",
           "name": "frame",
-          "group_tag": "cifi",
-          "definition": "BO]@"
+          "group_tag": "cifi"
         },
         {
           "type": "long_integer",
@@ -893,7 +898,7 @@
         "Don't reset lighting",
         "Reset lighting"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     },
     "scene_object_flags": {
       "options": [
@@ -908,7 +913,7 @@
         "Primary Cortana",
         "Preload Textures"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     },
     "cinematic_coop_type_flags": {
       "options": [
@@ -917,13 +922,13 @@
         "3 player co-op",
         "4 player co-op"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     },
     "scene_object_attachment_flags": {
       "options": [
         "invisible"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     },
     "shot_flags_definition": {
       "options": [
@@ -931,7 +936,7 @@
         "Force Exposure",
         "Generate Looping Script"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     },
     "sceneShotSettingsFlags": {
       "options": [
@@ -949,37 +954,37 @@
         "Cubemap - persist across shots",
         "Disable All Lightmap Shadows"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     },
     "cinematic_shot_lighting_flags_definition": {
       "options": [
         "persists across shots"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     },
     "music_flags_enum": {
       "options": [
         "Stop Music At Frame (rather than starting it)"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     },
     "cinematic_shot_object_function_flags": {
       "options": [
         "clear function (Value and Interpolation time are unused)"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     },
     "cinematicShotScreenEffectFlags": {
       "options": [
         "Persist Entire Shot"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     },
     "textureMovieFlags": {
       "options": [
         "Stop Movie At Frame (rather than starting it)"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp"
     }
   },
   "datas": {

@@ -415,10 +415,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -438,10 +436,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -725,8 +721,7 @@
         {
           "type": "custom",
           "name": "mapping",
-          "group_tag": "fned",
-          "definition": "E\u001c?0"
+          "group_tag": "fned"
         },
         {
           "type": "struct",
@@ -1107,10 +1102,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -2535,32 +2528,8 @@
           "definition": {
             "flags": 0,
             "allowed": [
-              "B?w8",
-              "???\u0001",
-              "A?q?",
-              "???\u0001",
-              "B?x?",
-              "???\u0001",
-              "E\u001d\u001a0",
-              "???\u0001",
-              "A?q?",
-              "???\u0001",
-              "E\u001d\u001a@",
-              "???\u0001",
-              "E\u001d\u001a?",
-              "???\u0001",
-              "A?q?",
-              "???\u0001",
-              "E\u001d\u001a?",
-              "???\u0001",
-              "E\u001d\u001a?",
-              "???\u0001",
-              "A?q?",
-              "???\u0001",
-              "E\u001d\u001a?",
-              "???\u0001",
-              "E\u001d\u001b ",
-              "???\u0001"
+              "jpt!",
+              "drdf"
             ]
           }
         },
@@ -2580,32 +2549,8 @@
           "definition": {
             "flags": 0,
             "allowed": [
-              "B?w8",
-              "???\u0001",
-              "A?q?",
-              "???\u0001",
-              "B?x?",
-              "???\u0001",
-              "E\u001d\u001a0",
-              "???\u0001",
-              "A?q?",
-              "???\u0001",
-              "E\u001d\u001a@",
-              "???\u0001",
-              "E\u001d\u001a?",
-              "???\u0001",
-              "A?q?",
-              "???\u0001",
-              "E\u001d\u001a?",
-              "???\u0001",
-              "E\u001d\u001a?",
-              "???\u0001",
-              "A?q?",
-              "???\u0001",
-              "E\u001d\u001a?",
-              "???\u0001",
-              "E\u001d\u001b ",
-              "???\u0001"
+              "jpt!",
+              "drdf"
             ]
           }
         },
@@ -3715,10 +3660,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -3753,7 +3696,7 @@
         "is dropped by player",
         "is dropped by ai"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipment_pickup_behavior": {
       "options": [
@@ -3762,7 +3705,7 @@
         "manual#press RB to pickup or swap this equipment",
         "activate on ground#Never pickup, press RB to activate it in-place"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "unit_camera_flags_definition": {
       "options": [
@@ -3771,7 +3714,7 @@
         "hides player-unit from camera#the player controlling this camera will not see their unit.  All other cameras will see this unit",
         "use aiming vector instead of marker forward#for cameras without tracks that use a marker position, specifies that we use the unit's aiming vector instead of the marker's forward vector.\r\nThis results in more accurate aiming and smoother movement when frames are dropped"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "unit_camera_acceleration_displacement_input": {
       "options": [
@@ -3781,7 +3724,7 @@
         "pitch",
         "roll"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp"
     },
     "input_mapping_shape_enum": {
       "options": [
@@ -3789,7 +3732,7 @@
         "unit_circle",
         "unit_square"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_controller_globals.cpp"
     },
     "equipment_activation_flags": {
       "options": [
@@ -3826,7 +3769,7 @@
         "activation interrupts melee",
         "activation interrupts grenades"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipmentActivationSecondaryFlags": {
       "options": [
@@ -3845,7 +3788,7 @@
         "Hero Assist ability",
         "Ignores normal support weapon force deactivation of equipment#used by Auto Turret to bypass how support weapons force equipment deactivation"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipment_activation_mode": {
       "options": [
@@ -3855,7 +3798,7 @@
         "shield fail#activates when player shield fails",
         "death#activates when player dies"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "multiplayer_powerup_flavor": {
       "options": [
@@ -3864,7 +3807,7 @@
         "yellow powerup",
         "custom powerup"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipment_spawner_spawn_type": {
       "options": [
@@ -3872,21 +3815,21 @@
         "camera pos z plane",
         "foot pos z plane"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipmentAbilityType_MotionTrackerNoise_flags": {
       "options": [
         "affects self",
         "affects friendlies"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipmentAbilityType_treeoflife_flags": {
       "options": [
         "un-stuns shileds",
         "un-stuns body"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "player_traits_vitality_float_flags": {
       "options": [
@@ -3904,7 +3847,7 @@
         "wheelman armor vehicle emp disabled time modifier",
         "fall damage multiplier"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_bool_enum": {
       "options": [
@@ -3912,7 +3855,7 @@
         "false",
         "true"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_powerup_cancellation_enum": {
       "options": [
@@ -3920,7 +3863,7 @@
         "none",
         "no_overshield"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_traits_weapons_float_flags": {
       "options": [
@@ -3947,7 +3890,7 @@
         "drop recon distance modifier",
         "assassination speed modifier"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_initial_grenade_count_enum": {
       "options": [
@@ -3971,7 +3914,7 @@
         "1_type7",
         "2_type7"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_infinite_ammo_enum": {
       "options": [
@@ -3980,7 +3923,7 @@
         "on",
         "bottomless_clip"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_equipment_usage_enum": {
       "options": [
@@ -3989,7 +3932,7 @@
         "not with objectives",
         "on"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_traits_movement_float_flags": {
       "options": [
@@ -3998,7 +3941,7 @@
         "jump multiplier",
         "turn speed multiplier"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_vehicle_usage": {
       "options": [
@@ -4012,7 +3955,7 @@
         "not_gunner",
         "full"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_double_jump": {
       "options": [
@@ -4021,7 +3964,7 @@
         "on",
         "on_plus_lunge"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_active_camo": {
       "options": [
@@ -4032,7 +3975,7 @@
         "excellent",
         "invisible"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_primary_color": {
       "options": [
@@ -4054,7 +3997,7 @@
         "dark_red",
         "infection"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_secondary_color": {
       "options": [
@@ -4076,7 +4019,7 @@
         "dark_red",
         "infection"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_waypoint": {
       "options": [
@@ -4085,7 +4028,7 @@
         "allies",
         "all"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_aura": {
       "options": [
@@ -4095,14 +4038,14 @@
         "black",
         "white"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_traits_sensors_float_flags": {
       "options": [
         "motion tracker range",
         "nemesis duration"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "player_trait_motion_tracker": {
       "options": [
@@ -4112,7 +4055,7 @@
         "moving_bipeds_moving_vehicles",
         "all_bipeds_moving_vehicles"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_player_traits_structures.cpp"
     },
     "repulsor_field_flags": {
       "options": [
@@ -4120,7 +4063,7 @@
         "affects vehicles",
         "affects bipeds"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipmentAbilityTypeDaddyVisibleFlags": {
       "options": [
@@ -4134,14 +4077,14 @@
         "cooling down stowed",
         "shield vitality tied to energy#as energy goes down, the shield vitality will as well"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipmentAbilityTypeJetPackFlags": {
       "options": [
         "Use camera and movement for thrust dir#Jetpack thrust dir is controlled by camera dir and player movement (signifies Zero-G jet pack)",
         "Cache thrust at activation#don't let the player change the direction of thrust once they activate"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "collision_filter_enum": {
       "options": [
@@ -4177,13 +4120,13 @@
         "environment play collision",
         "environment bullet collision"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\physics\\havok_collision_filter_definitions.cpp"
     },
     "equipmentAbilityTypeHologramFlags": {
       "options": [
         "driveable#hologram is automatically bump possessed by the player"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "EquipmentSpecialMoveDefaultDirectionDefinition": {
       "options": [
@@ -4193,13 +4136,13 @@
         "backward",
         "right"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipment_engineer_shields_flags": {
       "options": [
         "gives shields to owner"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "teleporterFlags": {
       "options": [
@@ -4210,40 +4153,40 @@
         "can pass through objects#only collides against environment and structures",
         "force along stick direction#if stick throw magnitude==0 then search in facing direction, else search in stick direction"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipment_auto_turret_flags": {
       "options": [
         "turret follows player#if set, turret follows player, otherwise it moves to a specific location",
         "turret fake gravity#if set, turret will sink to a height defined in y orbit offset below"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipmentVisionModeFlags": {
       "options": [
         "Apply tell damage response to friends",
         "Generate tell motion sensor blip"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipment_remote_strike_flags": {
       "options": [
         "ordnance ui#special version of RS use for ordnance droppod UI",
         "target designator#target designator is in weapon field"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "equipmentHackerFlags": {
       "options": [
         "Disable friendly fire"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "activeShieldFlags": {
       "options": [
         "Pause shield stun timer#false forces full amount of stun following deactivation"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp"
     },
     "global_damage_reporting_enum_definition": {
       "options": [
@@ -4346,7 +4289,7 @@
         "fusion coil",
         "stalactice"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\objects\\damage_reporting.cpp"
     }
   }
 }

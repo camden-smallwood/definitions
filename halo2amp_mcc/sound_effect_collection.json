@@ -94,10 +94,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -107,10 +105,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -120,10 +116,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?H",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -180,23 +174,41 @@
           "type": "custom",
           "name": "cutoff frequency:Hz",
           "group_tag": "sled",
-          "definition": "BX??"
+          "definition": {
+            "min": 0.0,
+            "max": 20000.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",
           "name": "cutoff frequency:Hz",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 20000.0,
+            "step": 1.0
+          }
         },
         {
           "type": "custom",
           "name": "output gain:dB",
           "group_tag": "sled",
-          "definition": "BX??"
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "real",
           "name": "output gain:dB",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "terminator",
@@ -217,10 +229,9 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQ?X",
-              "???\u0001",
-              "???\b",
-              "sbnk"
+              "scmb",
+              "lsnd",
+              "snd!"
             ]
           }
         },
@@ -247,7 +258,7 @@
         "turn off in splitscreen",
         "only turn on in first person"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\sound\\platform_sound_effect_definitions.cpp"
     },
     "platform_sound_playback_component_flags": {
       "options": [
@@ -256,7 +267,7 @@
         "play alternate",
         "sync with origin looping sound"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\sound\\platform_sound_effect_definitions.cpp"
     }
   }
 }

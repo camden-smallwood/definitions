@@ -64,7 +64,20 @@
    "max_count": 2000,
    "struct": "scenario_scenery_block_struct",
    "max_count_string": "MAXIMUM_SCENERY_DATUMS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "scenario_biped_palette_block": {
    "max_count": 256,
@@ -75,7 +88,20 @@
    "max_count": 128,
    "struct": "scenario_biped_block_struct",
    "max_count_string": "MAXIMUM_BIPED_DATUMS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "scenario_vehicle_palette_block": {
    "max_count": 256,
@@ -86,7 +112,20 @@
    "max_count": 256,
    "struct": "scenario_vehicle_block_struct",
    "max_count_string": "MAXIMUM_VEHICLE_DATUMS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "scenario_equipment_palette_block": {
    "max_count": 256,
@@ -97,7 +136,20 @@
    "max_count": 256,
    "struct": "scenario_equipment_block_struct",
    "max_count_string": "MAXIMUM_EQUIPMENT_DATUMS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "scenario_weapon_palette_block": {
    "max_count": 256,
@@ -108,7 +160,20 @@
    "max_count": 128,
    "struct": "scenario_weapon_block_struct",
    "max_count_string": "MAXIMUM_WEAPON_DATUMS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "device_group_block": {
    "max_count": 128,
@@ -124,7 +189,20 @@
    "max_count": 400,
    "struct": "scenario_machine_block_struct",
    "max_count_string": "MAXIMUM_MACHINE_DATUMS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "scenario_control_palette_block": {
    "max_count": 256,
@@ -135,7 +213,20 @@
    "max_count": 100,
    "struct": "scenario_control_block_struct",
    "max_count_string": "MAXIMUM_CONTROL_DATUMS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "scenario_light_fixture_palette_block": {
    "max_count": 256,
@@ -146,7 +237,20 @@
    "max_count": 500,
    "struct": "scenario_light_fixture_block_struct",
    "max_count_string": "MAXIMUM_LIGHT_FIXTURE_DATUMS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "scenario_sound_scenery_palette_block": {
    "max_count": 256,
@@ -157,7 +261,20 @@
    "max_count": 256,
    "struct": "scenario_sound_scenery_block_struct",
    "max_count_string": "MAXIMUM_SOUND_SCENERY_DATUMS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "scenario_light_palette_block": {
    "max_count": 256,
@@ -168,7 +285,20 @@
    "max_count": 500,
    "struct": "scenario_light_block_struct",
    "max_count_string": "MAXIMUM_LIGHTS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "scenario_profiles_block": {
    "max_count": 256,
@@ -199,13 +329,97 @@
    "max_count": 200,
    "struct": "scenario_netpoints_block_struct",
    "max_count_string": "MAXIMUM_SCENARIO_NETPOINTS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6B0FE0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6B0FE0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6B0FE0",
+    "label": [
+     "{type|map:types} [{team designator|map:teams}]"
+    ],
+    "maps": {
+     "types": {
+      "names": [
+       "CTF spawn",
+       "CTF return",
+       "BOMB spawn",
+       "BOMB return",
+       "Oddball",
+       "UNUSED",
+       "Race checkpoint",
+       "Teleporter source",
+       "Teleporter dest",
+       "Headhunter bin",
+       "Territories flag",
+       "Hill 0",
+       "Hill 1",
+       "Hill 2",
+       "Hill 3",
+       "Hill 4",
+       "Hill 5",
+       "Hill 6",
+       "Hill 7"
+      ],
+      "else": "unknown"
+     },
+     "teams": {
+      "names": [
+       "Alpha",
+       "Bravo",
+       "Charlie",
+       "Delta",
+       "Echo",
+       "Foxtrot",
+       "Golf",
+       "Hotel",
+       "NEUTRAL"
+      ],
+      "else": "INVALID TEAM DESIGNATOR"
+     }
+    }
+   }
   },
   "scenario_netgame_equipment_block": {
    "max_count": 100,
    "struct": "scenario_netgame_equipment_block_struct",
    "max_count_string": "MAXIMUM_SCENARIO_NETGAME_EQUIPMENT_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6B1110"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6B1110",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6B1110; the editor also cuts the file name at `/`",
+    "label": [
+     {
+      "when": "{type 1} != 0 || {type 2} != 0 || {type 3} != 0",
+      "format": "{type 0|map:games} * {item\\vehicle collection}"
+     },
+     {
+      "when": "1",
+      "format": "{type 0|map:games}  {item\\vehicle collection}"
+     }
+    ],
+    "maps": {
+     "games": {
+      "names": [
+       "none",
+       "ctf",
+       "slayer",
+       "oddball",
+       "king of the hill",
+       "race",
+       "headhunter",
+       "juggernaut",
+       "territories",
+       "assault",
+       "stub",
+       "ignored1",
+       "all games",
+       "all except ctf",
+       "all except race and ctf",
+       "medic",
+       "vip",
+       "infection"
+      ],
+      "else": "unknown"
+     }
+    }
+   }
   },
   "scenario_starting_equipment_block": {
    "max_count": 200,
@@ -296,13 +510,51 @@
    "max_count": 32,
    "struct": "zone_set_block_struct",
    "max_count_string": "32",
-   "element_label_callback": "halo2_mcc_tool.exe 0x5B05C0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x5B05C0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x5B05C0",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\" && ({zone|index} < 0 || {zone|index} >= {/zones|count})",
+      "format": "Invalid zone"
+     },
+     {
+      "when": "{#group} == \"scnr\" && {area|index} == -1",
+      "format": "NONE ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "{#group} == \"scnr\" && ({area|index} < 0 || {area|index} >= {/zones[{zone|index}]/areas|count})",
+      "format": "Invalid area ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{/zones[{zone|index}]/areas[{area|index}]/name} ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "1",
+      "format": "zone {zone|index}: area {area|index}"
+     }
+    ]
+   }
   },
   "order_completion_condition": {
    "max_count": 5,
    "struct": "order_completion_condition_struct",
    "max_count_string": "5",
-   "element_label_callback": "halo2_mcc_tool.exe 0x5B0520"
+   "element_label_callback": "halo2_mcc_tool.exe 0x5B0520",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x5B0520",
+    "label": [
+     {
+      "when": "{flags} & 1",
+      "format": "NOT {rule type}"
+     },
+     {
+      "when": "1",
+      "format": "{rule type}"
+     }
+    ]
+   }
   },
   "order_completion_block": {
    "max_count": 5,
@@ -333,7 +585,32 @@
    "max_count": 32,
    "struct": "secondary_zone_set_block_struct",
    "max_count_string": "32",
-   "element_label_callback": "halo2_mcc_tool.exe 0x5B05C0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x5B05C0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x5B05C0",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\" && ({zone|index} < 0 || {zone|index} >= {/zones|count})",
+      "format": "Invalid zone"
+     },
+     {
+      "when": "{#group} == \"scnr\" && {area|index} == -1",
+      "format": "NONE ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "{#group} == \"scnr\" && ({area|index} < 0 || {area|index} >= {/zones[{zone|index}]/areas|count})",
+      "format": "Invalid area ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{/zones[{zone|index}]/areas[{area|index}]/name} ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "1",
+      "format": "zone {zone|index}: area {area|index}"
+     }
+    ]
+   }
   },
   "secondary_set_trigger_block": {
    "max_count": 1,
@@ -817,7 +1094,16 @@
    "max_count": 1,
    "struct": "scenario_level_data_block_struct",
    "max_count_string": "1",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6B1990"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6B1990",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6B1990",
+    "label": [
+     {
+      "when": "1",
+      "format": ""
+     }
+    ]
+   }
   },
   "ai_scenario_mission_dialogue_block": {
    "max_count": 1,

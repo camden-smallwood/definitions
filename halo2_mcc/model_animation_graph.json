@@ -64,13 +64,54 @@
    "max_count": 11,
    "struct": "damage_region_block_struct",
    "max_count_string": "k_total_damage_regions",
-   "element_label_callback": "halo2_mcc_tool.exe 0x66C340"
+   "element_label_callback": "halo2_mcc_tool.exe 0x66C340",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x66C340",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "gut",
+       "chest",
+       "head",
+       "l_arm",
+       "l_hand",
+       "l_leg",
+       "l_foot",
+       "r_arm",
+       "r_hand",
+       "r_leg",
+       "r_foot"
+      ],
+      "else": "#<invalid>"
+     }
+    }
+   }
   },
   "damage_direction_block": {
    "max_count": 4,
    "struct": "damage_direction_block_struct",
    "max_count_string": "k_total_damage_directions",
-   "element_label_callback": "halo2_mcc_tool.exe 0x66C370"
+   "element_label_callback": "halo2_mcc_tool.exe 0x66C370",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x66C370",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "front",
+       "left",
+       "right",
+       "back"
+      ],
+      "else": "#<invalid>"
+     }
+    }
+   }
   },
   "damage_animation_block": {
    "max_count": 8,

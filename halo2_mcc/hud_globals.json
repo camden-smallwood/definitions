@@ -9,7 +9,38 @@
    "max_count": 18,
    "struct": "hud_button_icon_block_struct",
    "max_count_string": "NUMBER_OF_GAMEPAD_BUTTONS+NUMBER_OF_GAMEPAD_STICKS",
-   "element_label_callback": "halo2_mcc_tool.exe 0x9092B3"
+   "element_label_callback": "halo2_mcc_tool.exe 0x9092B3",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x9092B3",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "a button",
+       "b button",
+       "x button",
+       "y button",
+       "black button",
+       "white button",
+       "left trigger",
+       "right trigger",
+       "dpad up",
+       "dpad down",
+       "dpad left",
+       "dpad right",
+       "start button",
+       "back button",
+       "left thumb button",
+       "right thumb button",
+       "left stick (not a button)",
+       "right stick (not a button)"
+      ],
+      "else": "invalid button"
+     }
+    }
+   }
   },
   "hud_waypoint_arrow_block": {
    "max_count": 16,
@@ -20,20 +51,81 @@
    "max_count": 9,
    "struct": "hud_dashlights_block_struct",
    "max_count_string": "k_hud_dashlight_count",
-   "element_label_callback": "halo2_mcc_tool.exe 0x90910C"
+   "element_label_callback": "halo2_mcc_tool.exe 0x90910C",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x90910C",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "no grenades",
+       "low ammo",
+       "no ammo",
+       "low battery",
+       "no battery",
+       "flag away",
+       "flag stolen",
+       "reload",
+       "bomb on post"
+      ]
+     }
+    }
+   }
   },
   "hud_waypoint_arrow_block_2": {
    "max_count": 4,
    "struct": "hud_waypoint_arrow_block_struct_2",
    "max_count_string": "k_hud_waypoint_arrow_type_count",
    "display_name": "hud_waypoint_arrow_block",
-   "element_label_callback": "halo2_mcc_tool.exe 0x909169"
+   "element_label_callback": "halo2_mcc_tool.exe 0x909169",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x909169",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "default",
+       "friendly",
+       "damage",
+       "dead friendly"
+      ]
+     }
+    }
+   }
   },
   "hud_waypoint_block": {
    "max_count": 12,
    "struct": "hud_waypoint_block_struct",
    "max_count_string": "k_hud_waypoint_type_count",
-   "element_label_callback": "halo2_mcc_tool.exe 0x9091C6"
+   "element_label_callback": "halo2_mcc_tool.exe 0x9091C6",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x9091C6",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "default",
+       "ctf flag",
+       "assault bomb",
+       "ally",
+       "dead ally",
+       "oddball ball",
+       "king hill",
+       "territories territory",
+       "headhunter multiplier2",
+       "headhunter multiplier3",
+       "headhunter multiplier4",
+       "headhunter multiplier5"
+      ]
+     }
+    }
+   }
   },
   "new_hud_sound_block": {
    "max_count": 6,
@@ -44,7 +136,51 @@
    "max_count": 32,
    "struct": "player_training_entry_data_block_struct",
    "max_count_string": "k_player_training_count",
-   "element_label_callback": "halo2_mcc_tool.exe 0x82DFF0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x82DFF0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x82DFF0",
+    "label": [
+     "{#|map:training}"
+    ],
+    "maps": {
+     "training": {
+      "names": [
+       "flashlight",
+       "crouch",
+       "look_stick_long",
+       "vehicle driving long",
+       "exit stationary vehicle passenger",
+       "activate_device_hold",
+       "enter_vehicle_hold",
+       "weapon_swap_hold",
+       "dual_wield_hold",
+       "fire_both_weapons",
+       "vehicle_look_stick",
+       "vehicle_move_stick",
+       "look_stick",
+       "move_stick",
+       "unzoom",
+       "primary_trigger",
+       "zoom",
+       "grenades",
+       "melee attack",
+       "rear_melee",
+       "board_vehicle",
+       "recharging_take_cover",
+       "low_shields_take_cover",
+       "reload_when_safe",
+       "warthog_slide",
+       "ghost_guns",
+       "banshee_boost",
+       "banshee_bomb",
+       "ghost_boost",
+       "banshee_trick",
+       "team chat",
+       "stealth"
+      ]
+     }
+    }
+   }
   },
   "hud_globals_block": {
    "max_count": 1,

@@ -54,7 +54,21 @@
    "max_count": 2,
    "struct": "sound_block_struct",
    "max_count_string": "NUMBER_OF_GLOBAL_SOUNDS",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6A1570"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6A1570",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6A1570",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "enter water",
+       "leave water"
+      ]
+     }
+    }
+   }
   },
   "camera_block": {
    "max_count": 1,
@@ -65,7 +79,13 @@
    "max_count": 16,
    "struct": "look_function_block_struct",
    "max_count_string": "16",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6A1500"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6A1500",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6A1500",
+    "label": [
+     "{#fraction:.3f}, {scale:.3f}"
+    ]
+   }
   },
   "player_control_block": {
    "max_count": 1,
@@ -81,13 +101,72 @@
    "max_count": 2,
    "struct": "grenades_block_struct",
    "max_count_string": "k_unit_grenade_types_count",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6A1490"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6A1490",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6A1490",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "human fragmentation",
+       "covenant plasma"
+      ]
+     }
+    }
+   }
   },
   "vertex_shader_reference_block": {
    "max_count": 33,
    "struct": "vertex_shader_reference_block_struct",
    "max_count_string": "k_global_vertex_shader_count",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6A1470"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6A1470",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6A1470; no bounds check",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "bloom",
+       "convolution",
+       "debug",
+       "decal",
+       "effect",
+       "effect_billboarded",
+       "effect_parallel",
+       "effect_parallel_pushed",
+       "effect_perpendicular",
+       "filter_copy",
+       "lens_flare",
+       "lens_flare_horrible_legacy",
+       "screen",
+       "screen_old",
+       "screen2_old",
+       "stencil_debug_view",
+       "screen_xform_4",
+       "stencil_shadow_cap_proj",
+       "stencil_shadow_stitch_no_proj",
+       "stencil_shadow_stitch_proj",
+       "screen_hud",
+       "weather plate",
+       "weather particle",
+       "decal_hardcoded",
+       "screen_0_stage",
+       "screen_1_stage",
+       "screen_2_stage",
+       "screen_3_stage",
+       "screen_4_stage",
+       "screen_5_stage",
+       "screen_6_stage",
+       "screen_7_stage",
+       "debug_screenspace"
+      ]
+     }
+    }
+   }
   },
   "rasterizer_data_block": {
    "max_count": 1,
@@ -128,25 +207,49 @@
    "max_count": 128,
    "struct": "game_engine_general_event_block_struct",
    "max_count_string": "k_maximum_game_engine_event_responses_per_type",
-   "element_label_callback": "halo2_mcc_tool.exe 0x8211D0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x8211D0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x8211D0",
+    "label": [
+     "{event} : {audience}"
+    ]
+   }
   },
   "game_engine_slayer_event_block": {
    "max_count": 128,
    "struct": "game_engine_slayer_event_block_struct",
    "max_count_string": "k_maximum_game_engine_event_responses_per_type",
-   "element_label_callback": "halo2_mcc_tool.exe 0x8212B0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x8212B0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x8212B0",
+    "label": [
+     "{event} : {audience}"
+    ]
+   }
   },
   "game_engine_ctf_event_block": {
    "max_count": 128,
    "struct": "game_engine_ctf_event_block_struct",
    "max_count_string": "k_maximum_game_engine_event_responses_per_type",
-   "element_label_callback": "halo2_mcc_tool.exe 0x821320"
+   "element_label_callback": "halo2_mcc_tool.exe 0x821320",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x821320",
+    "label": [
+     "{event} : {audience}"
+    ]
+   }
   },
   "game_engine_oddball_event_block": {
    "max_count": 128,
    "struct": "game_engine_oddball_event_block_struct",
    "max_count_string": "k_maximum_game_engine_event_responses_per_type",
-   "element_label_callback": "halo2_mcc_tool.exe 0x821400"
+   "element_label_callback": "halo2_mcc_tool.exe 0x821400",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x821400",
+    "label": [
+     "{event} : {audience}"
+    ]
+   }
   },
   "g_null_block": {
    "max_count": 0,
@@ -157,7 +260,13 @@
    "max_count": 128,
    "struct": "game_engine_king_event_block_struct",
    "max_count_string": "k_maximum_game_engine_event_responses_per_type",
-   "element_label_callback": "halo2_mcc_tool.exe 0x821470"
+   "element_label_callback": "halo2_mcc_tool.exe 0x821470",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x821470",
+    "label": [
+     "{event} : {audience}"
+    ]
+   }
   },
   "multiplayer_information_block": {
    "max_count": 1,
@@ -173,7 +282,23 @@
    "max_count": 4,
    "struct": "player_representation_block_struct",
    "max_count_string": "k_player_character_type_count",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6A1BD0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6A1BD0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6A1BD0",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "masterchief",
+       "dervish",
+       "chief multiplayer",
+       "elite multiplayer"
+      ]
+     }
+    }
+   }
   },
   "falling_damage_block": {
    "max_count": 1,
@@ -184,7 +309,52 @@
    "max_count": 33,
    "struct": "old_materials_block_struct",
    "max_count_string": "NUMBER_OF_MATERIAL_TYPES",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6A1410"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6A1410",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6A1410",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "dirt",
+       "sand",
+       "stone",
+       "snow",
+       "wood",
+       "metal (hollow)",
+       "metal (thin)",
+       "metal (thick)",
+       "rubber",
+       "glass",
+       "force field",
+       "grunt",
+       "hunter armor",
+       "hunter skin",
+       "elite",
+       "jackal",
+       "jackal energy shield",
+       "engineer skin",
+       "engineer force field",
+       "flood combat form",
+       "flood carrier form",
+       "cyborg armor",
+       "cyborg energy shield",
+       "human armor",
+       "human skin",
+       "sentinel",
+       "monitor",
+       "plastic",
+       "water",
+       "leaves",
+       "elite energy shield",
+       "ice",
+       "hunter shield"
+      ]
+     }
+    }
+   }
   },
   "materials_block": {
    "max_count": 256,

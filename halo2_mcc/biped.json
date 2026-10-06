@@ -20,7 +20,20 @@
    "max_count": 64,
    "struct": "materials_block_struct",
    "max_count_string": "k_maximum_materials_per_physics_model",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6999A0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6999A0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6999A0",
+    "label": [
+     {
+      "when": "{global material name} != \"\"",
+      "format": "{name} ({global material name})"
+     },
+     {
+      "when": "1",
+      "format": "{name}"
+     }
+    ]
+   }
   },
   "phantoms_block": {
    "max_count": 1024,
@@ -41,7 +54,23 @@
    "max_count": 3,
    "struct": "contact_point_block_struct",
    "max_count_string": "k_contact_point_count",
-   "element_label_callback": "halo2_mcc_tool.exe 0xA610F0"
+   "element_label_callback": "halo2_mcc_tool.exe 0xA610F0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0xA610F0",
+    "label": [
+     "{#|map:feet} ({marker name})"
+    ],
+    "maps": {
+     "feet": {
+      "names": [
+       "left foot",
+       "right foot",
+       "both feet"
+      ],
+      "else": "<invalid>"
+     }
+    }
+   }
   },
   "biped_block": {
    "max_count": 1,

@@ -74,7 +74,20 @@
    "max_count": 256,
    "struct": "scenario_vehicle_block_struct",
    "max_count_string": "MAXIMUM_VEHICLE_DATUMS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "actor_starting_locations_block": {
    "max_count": 32,
@@ -115,7 +128,32 @@
    "max_count": 32,
    "struct": "zone_set_block_struct",
    "max_count_string": "32",
-   "element_label_callback": "halo2_mcc_tool.exe 0x5B05C0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x5B05C0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x5B05C0",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\" && ({zone|index} < 0 || {zone|index} >= {/zones|count})",
+      "format": "Invalid zone"
+     },
+     {
+      "when": "{#group} == \"scnr\" && {area|index} == -1",
+      "format": "NONE ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "{#group} == \"scnr\" && ({area|index} < 0 || {area|index} >= {/zones[{zone|index}]/areas|count})",
+      "format": "Invalid area ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{/zones[{zone|index}]/areas[{area|index}]/name} ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "1",
+      "format": "zone {zone|index}: area {area|index}"
+     }
+    ]
+   }
   },
   "scenario_kill_trigger_volumes_block": {
    "max_count": 256,
@@ -131,7 +169,20 @@
    "max_count": 5,
    "struct": "order_completion_condition_struct",
    "max_count_string": "5",
-   "element_label_callback": "halo2_mcc_tool.exe 0x5B0520"
+   "element_label_callback": "halo2_mcc_tool.exe 0x5B0520",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x5B0520",
+    "label": [
+     {
+      "when": "{flags} & 1",
+      "format": "NOT {rule type}"
+     },
+     {
+      "when": "1",
+      "format": "{rule type}"
+     }
+    ]
+   }
   },
   "order_completion_block": {
    "max_count": 5,
@@ -162,7 +213,32 @@
    "max_count": 32,
    "struct": "secondary_zone_set_block_struct",
    "max_count_string": "32",
-   "element_label_callback": "halo2_mcc_tool.exe 0x5B05C0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x5B05C0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x5B05C0",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\" && ({zone|index} < 0 || {zone|index} >= {/zones|count})",
+      "format": "Invalid zone"
+     },
+     {
+      "when": "{#group} == \"scnr\" && {area|index} == -1",
+      "format": "NONE ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "{#group} == \"scnr\" && ({area|index} < 0 || {area|index} >= {/zones[{zone|index}]/areas|count})",
+      "format": "Invalid area ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{/zones[{zone|index}]/areas[{area|index}]/name} ({/zones[{zone|index}]/name})"
+     },
+     {
+      "when": "1",
+      "format": "zone {zone|index}: area {area|index}"
+     }
+    ]
+   }
   },
   "secondary_set_trigger_block": {
    "max_count": 1,

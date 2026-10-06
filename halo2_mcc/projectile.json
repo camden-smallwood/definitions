@@ -10,7 +10,16 @@
    "max_count": 200,
    "struct": "projectile_material_response_block_struct",
    "max_count_string": "k_maximum_material_responses",
-   "element_label_callback": "halo2_mcc_tool.exe 0xA63DC0"
+   "element_label_callback": "halo2_mcc_tool.exe 0xA63DC0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0xA63DC0",
+    "label": [
+     {
+      "when": "1",
+      "format": "{material name}"
+     }
+    ]
+   }
   },
   "projectile_block": {
    "max_count": 1,

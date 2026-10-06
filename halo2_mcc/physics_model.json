@@ -29,7 +29,36 @@
    "max_count": 64,
    "struct": "rigid_bodies_block_struct",
    "max_count_string": "k_maximum_rigid_bodies_per_physics_model",
-   "element_label_callback": "halo2_mcc_tool.exe 0x699810"
+   "element_label_callback": "halo2_mcc_tool.exe 0x699810",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x699810",
+    "label": [
+     {
+      "when": "{node|index} >= 0 && {node|index} < {/nodes|count} && {region|index} >= 0 && {region|index} < {/regions|count} && {permutattion|index} >= 0 && {permutattion|index} < {/regions[{region|index}]/permutations|count}",
+      "format": "{/nodes[{node|index}]/name} ({/regions[{region|index}]/name} {/regions[{region|index}]/permutations[{permutattion|index}]/name})"
+     },
+     {
+      "when": "{node|index} >= 0 && {node|index} < {/nodes|count} && {region|index} >= 0 && {region|index} < {/regions|count}",
+      "format": "{/nodes[{node|index}]/name} ({/regions[{region|index}]/name} NONE)"
+     },
+     {
+      "when": "{node|index} >= 0 && {node|index} < {/nodes|count}",
+      "format": "{/nodes[{node|index}]/name} (NONE NONE)"
+     },
+     {
+      "when": "{region|index} >= 0 && {region|index} < {/regions|count} && {permutattion|index} >= 0 && {permutattion|index} < {/regions[{region|index}]/permutations|count}",
+      "format": "NONE ({/regions[{region|index}]/name} {/regions[{region|index}]/permutations[{permutattion|index}]/name})"
+     },
+     {
+      "when": "{region|index} >= 0 && {region|index} < {/regions|count}",
+      "format": "NONE ({/regions[{region|index}]/name} NONE)"
+     },
+     {
+      "when": "1",
+      "format": "NONE (NONE NONE)"
+     }
+    ]
+   }
   },
   "phantom_types_block": {
    "max_count": 16,
@@ -40,7 +69,20 @@
    "max_count": 64,
    "struct": "materials_block_struct",
    "max_count_string": "k_maximum_materials_per_physics_model",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6999A0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6999A0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6999A0",
+    "label": [
+     {
+      "when": "{global material name} != \"\"",
+      "format": "{name} ({global material name})"
+     },
+     {
+      "when": "1",
+      "format": "{name}"
+     }
+    ]
+   }
   },
   "phantoms_block": {
    "max_count": 1024,
@@ -111,7 +153,44 @@
    "max_count": 4096,
    "struct": "physics_model_node_constraint_edge_block_struct",
    "max_count_string": "k_maximum_node_constraint_edges_per_physics_model",
-   "element_label_callback": "halo2_mcc_tool.exe 0x699A10"
+   "element_label_callback": "halo2_mcc_tool.exe 0x699A10",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x699A10",
+    "label": [
+     {
+      "when": "({constraints|count} == 0 || any(constraints[*], flags & 1)) && {node a|index} != -1 && {node b|index} != -1",
+      "format": "*{/nodes[{node a|index}]/name}:{/nodes[{node b|index}]/name}"
+     },
+     {
+      "when": "({constraints|count} == 0 || any(constraints[*], flags & 1)) && {node a|index} != -1 && {node b|index} == -1",
+      "format": "*{/nodes[{node a|index}]/name}:parent"
+     },
+     {
+      "when": "({constraints|count} == 0 || any(constraints[*], flags & 1)) && {node a|index} == -1 && {node b|index} != -1",
+      "format": "*parent:{/nodes[{node b|index}]/name}"
+     },
+     {
+      "when": "({constraints|count} == 0 || any(constraints[*], flags & 1)) && {node a|index} == -1 && {node b|index} == -1",
+      "format": "*parent:parent"
+     },
+     {
+      "when": "(!({constraints|count} == 0 || any(constraints[*], flags & 1))) && {node a|index} != -1 && {node b|index} != -1",
+      "format": " {/nodes[{node a|index}]/name}:{/nodes[{node b|index}]/name}"
+     },
+     {
+      "when": "(!({constraints|count} == 0 || any(constraints[*], flags & 1))) && {node a|index} != -1 && {node b|index} == -1",
+      "format": " {/nodes[{node a|index}]/name}:parent"
+     },
+     {
+      "when": "(!({constraints|count} == 0 || any(constraints[*], flags & 1))) && {node a|index} == -1 && {node b|index} != -1",
+      "format": " parent:{/nodes[{node b|index}]/name}"
+     },
+     {
+      "when": "(!({constraints|count} == 0 || any(constraints[*], flags & 1))) && {node a|index} == -1 && {node b|index} == -1",
+      "format": " parent:parent"
+     }
+    ]
+   }
   },
   "hinge_constraints_block": {
    "max_count": 64,

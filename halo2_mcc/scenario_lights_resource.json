@@ -44,7 +44,20 @@
    "max_count": 500,
    "struct": "scenario_light_block_struct",
    "max_count_string": "MAXIMUM_LIGHTS_PER_SCENARIO",
-   "element_label_callback": "halo2_mcc_tool.exe 0x783F40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x783F40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x783F40",
+    "label": [
+     {
+      "when": "{#group} == \"scnr\"",
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+     },
+     {
+      "when": "1",
+      "format": " {type|none:NONE|bad:BAD}"
+     }
+    ]
+   }
   },
   "scenario_lights_resource_block": {
    "max_count": 1,

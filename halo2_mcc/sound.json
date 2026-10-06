@@ -144,7 +144,20 @@
    "max_count": 9,
    "struct": "sound_pitch_range_block_struct",
    "max_count_string": "MAXIMUM_PITCH_RANGES_PER_SOUND",
-   "element_label_callback": "halo2_mcc_tool.exe 0x6A3D40"
+   "element_label_callback": "halo2_mcc_tool.exe 0x6A3D40",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x6A3D40",
+    "label": [
+     {
+      "when": "{#count} == 1",
+      "format": "always played"
+     },
+     {
+      "when": "1",
+      "format": "{name}:{bend bounds[0]} to {bend bounds[1]}"
+     }
+    ]
+   }
   },
   "sound_permutation_raw_info_block_old": {
    "max_count": 18,

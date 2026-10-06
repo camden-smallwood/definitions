@@ -10,7 +10,21 @@
    "max_count": 2,
    "struct": "unit_camera_track_block_struct",
    "max_count_string": "MAXIMUM_NUMBER_OF_UNIT_CAMERA_TRACKS",
-   "element_label_callback": "halo2_mcc_tool.exe 0xA60750"
+   "element_label_callback": "halo2_mcc_tool.exe 0xA60750",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0xA60750",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "loose",
+       "tight"
+      ]
+     }
+    }
+   }
   },
   "unit_postures_block": {
    "max_count": 20,
@@ -21,19 +35,57 @@
    "max_count": 2,
    "struct": "unit_hud_reference_block_struct",
    "max_count_string": "NUMBER_OF_UNIT_HUD_TYPES",
-   "element_label_callback": "halo2_mcc_tool.exe 0xA60700"
+   "element_label_callback": "halo2_mcc_tool.exe 0xA60700",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0xA60700",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "default/solo player hud",
+       "multiplayer hud"
+      ],
+      "else": "BAD"
+     }
+    }
+   }
   },
   "dialogue_variant_block": {
    "max_count": 16,
    "struct": "dialogue_variant_block_struct",
    "max_count_string": "MAXIMUM_DIALOGUE_VARIANTS_PER_UNIT",
-   "element_label_callback": "halo2_mcc_tool.exe 0xA60CC0"
+   "element_label_callback": "halo2_mcc_tool.exe 0xA60CC0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0xA60CC0",
+    "label": [
+     {
+      "when": "1",
+      "format": "{dialogue|path}"
+     }
+    ]
+   }
   },
   "powered_seat_block": {
    "max_count": 2,
    "struct": "powered_seat_block_struct",
    "max_count_string": "k_powered_seats_count",
-   "element_label_callback": "halo2_mcc_tool.exe 0xA60C60"
+   "element_label_callback": "halo2_mcc_tool.exe 0xA60C60",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0xA60C60",
+    "label": [
+     "{#|map:names}"
+    ],
+    "maps": {
+     "names": {
+      "names": [
+       "driver",
+       "gunner"
+      ]
+     }
+    }
+   }
   },
   "unit_weapon_block": {
    "max_count": 4,

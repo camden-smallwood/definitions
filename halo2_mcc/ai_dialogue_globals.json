@@ -49,7 +49,24 @@
    "max_count": 1000,
    "struct": "vocalization_patterns_block_struct",
    "max_count_string": "1000",
-   "element_label_callback": "halo2_mcc_tool.exe 0x56CAB0"
+   "element_label_callback": "halo2_mcc_tool.exe 0x56CAB0",
+   "element_label": {
+    "source": "halo2_mcc_tool.exe 0x56CAB0",
+    "label": [
+     {
+      "when": "{dialogue type} < 0 || {dialogue type} >= 200",
+      "format": "Invalid"
+     },
+     {
+      "when": "{vocalization name} == \"\"",
+      "format": "{dialogue type}/NONE"
+     },
+     {
+      "when": "1",
+      "format": "{dialogue type}/{vocalization name}"
+     }
+    ]
+   }
   },
   "dialogue_data_block": {
    "max_count": 200,

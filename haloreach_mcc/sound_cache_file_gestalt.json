@@ -335,14 +335,12 @@
         {
           "type": "custom",
           "name": "Clear distances",
-          "group_tag": "edit",
-          "definition": "@T??"
+          "group_tag": "edit"
         },
         {
           "type": "custom",
           "name": "Reset distances",
-          "group_tag": "edit",
-          "definition": "@T? "
+          "group_tag": "edit"
         },
         {
           "type": "explanation",
@@ -352,8 +350,7 @@
         {
           "type": "custom",
           "name": "Update gain bounds",
-          "group_tag": "edit",
-          "definition": "@T?0"
+          "group_tag": "edit"
         },
         {
           "type": "real",
@@ -395,8 +392,7 @@
         {
           "type": "custom",
           "name": "Update location",
-          "group_tag": "edit",
-          "definition": "@T??"
+          "group_tag": "edit"
         },
         {
           "type": "long_flags",
@@ -913,23 +909,41 @@
           "type": "custom",
           "name": "cutoff frequency:Hz",
           "group_tag": "sled",
-          "definition": "B!\u0001?"
+          "definition": {
+            "min": 0.0,
+            "max": 20000.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",
           "name": "cutoff frequency:Hz",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 20000.0,
+            "step": 1.0
+          }
         },
         {
           "type": "custom",
           "name": "output gain:dB",
           "group_tag": "sled",
-          "definition": "B!\u0001?"
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "real",
           "name": "output gain:dB",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "terminator",
@@ -950,8 +964,9 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "B\u001c\u000f\b",
-              "???\u0001"
+              "scmb",
+              "snd!",
+              "lsnd"
             ]
           }
         },
@@ -1296,8 +1311,7 @@
         {
           "type": "custom",
           "name": "Update skip fraction",
-          "group_tag": "edit",
-          "definition": "@T?\u0010"
+          "group_tag": "edit"
         },
         {
           "type": "real_fraction",
@@ -1306,8 +1320,7 @@
         {
           "type": "custom",
           "name": "Update gain",
-          "group_tag": "edit",
-          "definition": "@T?@"
+          "group_tag": "edit"
         },
         {
           "type": "real",

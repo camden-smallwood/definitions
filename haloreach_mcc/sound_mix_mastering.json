@@ -85,23 +85,41 @@
           "type": "custom",
           "name": "release : Speed in milliseconds",
           "group_tag": "sled",
-          "definition": "B\u001c7`"
+          "definition": {
+            "min": 1.0,
+            "max": 20.0,
+            "step": 1.0
+          }
         },
         {
           "type": "short_integer",
           "name": "release : Speed in milliseconds",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 1.0,
+            "max": 20.0,
+            "step": 1.0
+          }
         },
         {
           "type": "custom",
           "name": "loudness",
           "group_tag": "sled",
-          "definition": "B\u001c7p"
+          "definition": {
+            "min": 1.0,
+            "max": 1800.0,
+            "step": 1.0
+          }
         },
         {
           "type": "short_integer",
           "name": "loudness",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 1.0,
+            "max": 1800.0,
+            "step": 1.0
+          }
         },
         {
           "type": "terminator",
@@ -130,67 +148,121 @@
           "type": "custom",
           "name": "master gain:dB",
           "group_tag": "sled",
-          "definition": "B\u001c7P"
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "real",
           "name": "master gain:dB",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "custom",
           "name": "left gain:dB",
           "group_tag": "sled",
-          "definition": "B\u001c7P"
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "real",
           "name": "left gain:dB",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "custom",
           "name": "right gain:dB",
           "group_tag": "sled",
-          "definition": "B\u001c7P"
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "real",
           "name": "right gain:dB",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "custom",
           "name": "center gain:dB",
           "group_tag": "sled",
-          "definition": "B\u001c7P"
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "real",
           "name": "center gain:dB",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "custom",
           "name": "lfe gain:dB",
           "group_tag": "sled",
-          "definition": "B\u001c7P"
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "real",
           "name": "lfe gain:dB",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "custom",
           "name": "back gain:dB",
           "group_tag": "sled",
-          "definition": "B\u001c7P"
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "real",
           "name": "back gain:dB",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "terminator",
@@ -219,298 +291,541 @@
           "type": "custom",
           "name": "master gain:dB",
           "group_tag": "sled",
-          "definition": "B\u001c7P"
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "real",
           "name": "master gain:dB",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "custom",
           "name": "20hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "20hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "25hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "25hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "31.5hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "31.5hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "40hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "40hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "50hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "50hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "63hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "63hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "80hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "80hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "100hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "100hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "125hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "125hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "160hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "160hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "200hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "200hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "250hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "250hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "320hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "320hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "400hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "400hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "500hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "500hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "630hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "630hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "800hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "800hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "1000hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "1000hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "1250hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "1250hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "1600hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "1600hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "2000hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "2000hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "2500hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "2500hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "3150hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "3150hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "4000hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "4000hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "5000hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "5000hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "6300hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "6300hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "terminator",
@@ -539,298 +854,541 @@
           "type": "custom",
           "name": "master gain:dB",
           "group_tag": "sled",
-          "definition": "B\u001c7P"
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "real",
           "name": "master gain:dB",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
         },
         {
           "type": "custom",
           "name": "20hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "20hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "25hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "25hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "31.5hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "31.5hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "40hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "40hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "50hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "50hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "63hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "63hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "80hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "80hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "100hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "100hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "125hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "125hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "160hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "160hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "200hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "200hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "250hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "250hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "320hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "320hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "400hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "400hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "500hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "500hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "630hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "630hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "800hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "800hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "1000hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "1000hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "1250hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "1250hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "1600hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "1600hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "2000hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "2000hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "2500hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "2500hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "3150hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "3150hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "4000hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "4000hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "5000hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "5000hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "custom",
           "name": "6300hz : frequency amplitude",
           "group_tag": "sled",
-          "definition": "B\u001c7?"
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "real",
           "name": "6300hz : frequency amplitude",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.001,
+            "max": 2.0,
+            "step": 0.001
+          }
         },
         {
           "type": "terminator",

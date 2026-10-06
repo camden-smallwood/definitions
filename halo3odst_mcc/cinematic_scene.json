@@ -237,9 +237,9 @@
           "definition": {
             "flags": 0,
             "allowed": [
-              "AD\u00150",
-              "???\u0001",
-              "???\u0002"
+              "obje",
+              "scen",
+              "efsc"
             ]
           }
         },
@@ -311,23 +311,41 @@
           "type": "custom",
           "name": "environment darken:0 - 1#this works best with auto-exposure off",
           "group_tag": "sled",
-          "definition": "AD\u0010?"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "environment darken:0 - 1#this works best with auto-exposure off",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "custom",
           "name": "forced exposure:stops#will disable auto-exposure",
           "group_tag": "sled",
-          "definition": "AD\u0010?"
+          "definition": {
+            "min": -1.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "forced exposure:stops#will disable auto-exposure",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": -1.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "block",
@@ -566,8 +584,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "AE?\b",
-              "???\u0001"
+              "snd!",
+              "lsnd"
             ]
           }
         },
@@ -884,9 +902,9 @@
           "definition": {
             "flags": 0,
             "allowed": [
-              "AD\u00150",
-              "???\u0001",
-              "???\u0002"
+              "obje",
+              "scen",
+              "efsc"
             ]
           }
         },

@@ -42,12 +42,21 @@
           "type": "custom",
           "name": "environmental lighting scale",
           "group_tag": "sled",
-          "definition": "AJ??"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "environmental lighting scale",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "terminator",
@@ -76,34 +85,61 @@
           "type": "custom",
           "name": "Direction",
           "group_tag": "sled",
-          "definition": "AJ??"
+          "definition": {
+            "min": 0.0,
+            "max": 360.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",
           "name": "Direction",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 360.0,
+            "step": 1.0
+          }
         },
         {
           "type": "custom",
           "name": "Front-Back",
           "group_tag": "sled",
-          "definition": "AJ??"
+          "definition": {
+            "min": 0.0,
+            "max": 180.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",
           "name": "Front-Back",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 180.0,
+            "step": 1.0
+          }
         },
         {
           "type": "custom",
           "name": "Intensity",
           "group_tag": "sled",
-          "definition": "AJ??"
+          "definition": {
+            "min": 0.0,
+            "max": 10.0,
+            "step": 0.1
+          }
         },
         {
           "type": "real",
           "name": "Intensity",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 10.0,
+            "step": 0.1
+          }
         },
         {
           "type": "real_rgb_color",
@@ -113,12 +149,21 @@
           "type": "custom",
           "name": "Diffusion",
           "group_tag": "sled",
-          "definition": "AJ??"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "Diffusion",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "terminator",
@@ -147,23 +192,41 @@
           "type": "custom",
           "name": "Direction",
           "group_tag": "sled",
-          "definition": "AJ??"
+          "definition": {
+            "min": 0.0,
+            "max": 360.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",
           "name": "Direction",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 360.0,
+            "step": 1.0
+          }
         },
         {
           "type": "custom",
           "name": "Front-Back",
           "group_tag": "sled",
-          "definition": "AJ??"
+          "definition": {
+            "min": 0.0,
+            "max": 180.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",
           "name": "Front-Back",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 180.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",

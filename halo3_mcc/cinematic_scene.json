@@ -227,9 +227,9 @@
           "definition": {
             "flags": 0,
             "allowed": [
-              "A\u0017??",
-              "???\u0001",
-              "???\u0002"
+              "obje",
+              "scen",
+              "efsc"
             ]
           }
         },
@@ -300,12 +300,22 @@
         {
           "type": "real",
           "name": "environment darken:0 - 1#this works best with auto-exposure off",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "forced exposure:stops#will disable auto-exposure",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "block",
@@ -527,9 +537,8 @@
           "definition": {
             "flags": 0,
             "allowed": [
-              "A\u0017v?",
-              "???\u0001",
-              "???\r"
+              "snd!",
+              "lsnd"
             ]
           }
         },
@@ -786,9 +795,9 @@
           "definition": {
             "flags": 0,
             "allowed": [
-              "A\u0017??",
-              "???\u0001",
-              "???\u0002"
+              "obje",
+              "scen",
+              "efsc"
             ]
           }
         },

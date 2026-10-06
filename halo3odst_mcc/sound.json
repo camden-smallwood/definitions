@@ -296,14 +296,12 @@
         {
           "type": "custom",
           "name": "Clear distances",
-          "group_tag": "edit",
-          "definition": "@ST?"
+          "group_tag": "edit"
         },
         {
           "type": "custom",
           "name": "Reset distances",
-          "group_tag": "edit",
-          "definition": "@ST?"
+          "group_tag": "edit"
         },
         {
           "type": "struct",
@@ -327,8 +325,7 @@
         {
           "type": "custom",
           "name": "Update gain bounds",
-          "group_tag": "edit",
-          "definition": "@SU?"
+          "group_tag": "edit"
         },
         {
           "type": "real",
@@ -370,8 +367,7 @@
         {
           "type": "custom",
           "name": "Update location",
-          "group_tag": "edit",
-          "definition": "@SV0"
+          "group_tag": "edit"
         },
         {
           "type": "long_flags",
@@ -617,8 +613,7 @@
         {
           "type": "custom",
           "name": "Update skip fraction",
-          "group_tag": "edit",
-          "definition": "@SV?"
+          "group_tag": "edit"
         },
         {
           "type": "real_fraction",
@@ -627,8 +622,7 @@
         {
           "type": "custom",
           "name": "Update gain",
-          "group_tag": "edit",
-          "definition": "@SW?"
+          "group_tag": "edit"
         },
         {
           "type": "real",
@@ -1135,8 +1129,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "AE?\b",
-              "???\u0001"
+              "snd!",
+              "lsnd"
             ]
           }
         },
@@ -1215,8 +1209,7 @@
         {
           "type": "custom",
           "name": "sound effect value",
-          "group_tag": "fned",
-          "definition": "C???"
+          "group_tag": "fned"
         },
         {
           "type": "struct",

@@ -8,87 +8,104 @@
   "shader_pass_parameter_block": {
    "max_count": 64,
    "struct": "shader_pass_parameter_block_struct",
-   "max_count_string": "k_maximum_parameters_per_shader"
+   "max_count_string": "k_maximum_parameters_per_shader",
+   "display_name": "parameter"
   },
   "shader_texture_state_address_state_block": {
    "max_count": 1,
    "struct": "shader_texture_state_address_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "address state"
   },
   "shader_texture_state_filter_state_block": {
    "max_count": 1,
    "struct": "shader_texture_state_filter_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "filter state"
   },
   "shader_texture_state_kill_state_block": {
    "max_count": 1,
    "struct": "shader_texture_state_kill_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "kill state"
   },
   "shader_texture_state_misc_state_block": {
    "max_count": 1,
    "struct": "shader_texture_state_misc_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "misc state"
   },
   "shader_texture_state_constant_block": {
    "max_count": 10,
    "struct": "shader_texture_state_constant_block_struct",
-   "max_count_string": "k_number_of_shader_texture_state_constants"
+   "max_count_string": "k_number_of_shader_texture_state_constants",
+   "display_name": "texture constant"
   },
   "shader_pass_texture_block": {
    "max_count": 8,
    "struct": "shader_pass_texture_block_struct",
-   "max_count_string": "k_maximum_textures_per_shader_pass_implementation"
+   "max_count_string": "k_maximum_textures_per_shader_pass_implementation",
+   "display_name": "texture stage"
   },
   "shader_pass_vertex_shader_constant_block": {
    "max_count": 32,
    "struct": "shader_pass_vertex_shader_constant_block_struct",
-   "max_count_string": "k_maximum_vertex_shader_constants_per_shader_pass_implementation"
+   "max_count_string": "k_maximum_vertex_shader_constants_per_shader_pass_implementation",
+   "display_name": "vs constant"
   },
   "shader_state_channels_state_block": {
    "max_count": 1,
    "struct": "shader_state_channels_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "channels"
   },
   "shader_state_alpha_blend_state_block": {
    "max_count": 1,
    "struct": "shader_state_alpha_blend_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "alpha-blend state"
   },
   "shader_state_alpha_test_state_block": {
    "max_count": 1,
    "struct": "shader_state_alpha_test_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "alpha-test state"
   },
   "shader_state_depth_state_block": {
    "max_count": 1,
    "struct": "shader_state_depth_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "depth state"
   },
   "shader_state_cull_state_block": {
    "max_count": 1,
    "struct": "shader_state_cull_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "cull state"
   },
   "shader_state_fill_state_block": {
    "max_count": 1,
    "struct": "shader_state_fill_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "fill state"
   },
   "shader_state_misc_state_block": {
    "max_count": 1,
    "struct": "shader_state_misc_state_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "misc state"
   },
   "shader_state_constant_block": {
    "max_count": 7,
    "struct": "shader_state_constant_block_struct",
-   "max_count_string": "k_number_of_shader_state_constants"
+   "max_count_string": "k_number_of_shader_state_constants",
+   "display_name": "render state constant"
   },
   "shader_pass_implementation_block": {
    "max_count": 32,
    "struct": "shader_pass_implementation_block_struct",
-   "max_count_string": "k_maximum_implementations_per_shader_pass"
+   "max_count_string": "k_maximum_implementations_per_shader_pass",
+   "display_name": "implementation"
   },
   "shader_postprocess_pixel_shader_constant_defaults": {
    "max_count": 32,
@@ -213,7 +230,8 @@
   "shader_pass_block": {
    "max_count": 1,
    "struct": "shader_pass_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "shader_pass"
   }
  },
  "structs": {

@@ -8,142 +8,170 @@
   "tag_import_file_block": {
    "max_count": 1024,
    "struct": "tag_import_file_block_struct",
-   "max_count_string": "MAXIMUM_FILES_PER_TAG_IMPORT_INFO"
+   "max_count_string": "MAXIMUM_FILES_PER_TAG_IMPORT_INFO",
+   "display_name": "import file"
   },
   "global_tag_import_info_block": {
    "max_count": 1,
    "struct": "global_tag_import_info_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "import info"
   },
   "global_geometry_compression_info_block": {
    "max_count": 1,
    "struct": "global_geometry_compression_info_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "compression info"
   },
   "render_model_permutation_block": {
    "max_count": 32,
    "struct": "render_model_permutation_block_struct",
-   "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION"
+   "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION",
+   "display_name": "permutation"
   },
   "render_model_region_block": {
    "max_count": 16,
    "struct": "render_model_region_block_struct",
-   "max_count_string": "MAXIMUM_REGIONS_PER_MODEL"
+   "max_count_string": "MAXIMUM_REGIONS_PER_MODEL",
+   "display_name": "region"
   },
   "render_model_node_block": {
    "max_count": 255,
    "struct": "render_model_node_block_struct",
-   "max_count_string": "MAXIMUM_NODES_PER_MODEL"
+   "max_count_string": "MAXIMUM_NODES_PER_MODEL",
+   "display_name": "node"
   },
   "global_geometry_section_raw_vertex_block": {
    "max_count": 32767,
    "struct": "global_geometry_section_raw_vertex_block_struct",
-   "max_count_string": "MAXIMUM_VERTICES_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_VERTICES_PER_GEOMETRY_SECTION",
+   "display_name": "vertex"
   },
   "global_geometry_section_vertex_buffer_block": {
    "max_count": 512,
    "struct": "global_geometry_section_vertex_buffer_block_struct",
-   "max_count_string": "MAXIMUM_VERTEX_BUFFERS_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_VERTEX_BUFFERS_PER_GEOMETRY_SECTION",
+   "display_name": "vertex buffer"
   },
   "global_geometry_section_strip_index_block": {
    "max_count": 65535,
    "struct": "global_geometry_section_strip_index_block_struct",
-   "max_count_string": "MAXIMUM_STRIP_INDICES_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_STRIP_INDICES_PER_GEOMETRY_SECTION",
+   "display_name": "index"
   },
   "global_geometry_material_property_block": {
    "max_count": 16,
    "struct": "global_geometry_material_property_block_struct",
-   "max_count_string": "MAXIMUM_PROPERTIES_PER_MATERIAL"
+   "max_count_string": "MAXIMUM_PROPERTIES_PER_MATERIAL",
+   "display_name": "material property"
   },
   "global_geometry_material_block": {
    "max_count": 1024,
    "struct": "global_geometry_material_block_struct",
-   "max_count_string": "MAXIMUM_MATERIALS_PER_GEOMETRY"
+   "max_count_string": "MAXIMUM_MATERIALS_PER_GEOMETRY",
+   "display_name": "material"
   },
   "global_geometry_part_block": {
    "max_count": 255,
    "struct": "global_geometry_part_block_struct",
-   "max_count_string": "MAXIMUM_PARTS_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_PARTS_PER_GEOMETRY_SECTION",
+   "display_name": "part"
   },
   "global_geometry_part_block_new": {
    "max_count": 255,
    "struct": "global_geometry_part_block_new_struct",
-   "max_count_string": "MAXIMUM_PARTS_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_PARTS_PER_GEOMETRY_SECTION",
+   "display_name": "part"
   },
   "global_subparts_block": {
    "max_count": 32768,
    "struct": "global_subparts_block_struct",
-   "max_count_string": "MAXIMUM_SUBPARTS_PER_SECTION"
+   "max_count_string": "MAXIMUM_SUBPARTS_PER_SECTION",
+   "display_name": "subparts"
   },
   "global_visibility_bounds_block": {
    "max_count": 32768,
    "struct": "global_visibility_bounds_block_struct",
-   "max_count_string": "MAXIMUM_SUBPARTS_PER_SECTION"
+   "max_count_string": "MAXIMUM_SUBPARTS_PER_SECTION",
+   "display_name": "visibility bounds"
   },
   "global_geometry_raw_point_block": {
    "max_count": 32767,
    "struct": "global_geometry_raw_point_block_struct",
-   "max_count_string": "MAXIMUM_VERTICES_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_VERTICES_PER_GEOMETRY_SECTION",
+   "display_name": "point"
   },
   "global_geometry_rigid_point_group_block": {
    "max_count": 32767,
    "struct": "global_geometry_rigid_point_group_block_struct",
-   "max_count_string": "MAXIMUM_RIGID_POINT_GROUPS_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_RIGID_POINT_GROUPS_PER_GEOMETRY_SECTION",
+   "display_name": "rigid point group"
   },
   "global_geometry_point_data_index_block": {
    "max_count": 32767,
    "struct": "global_geometry_point_data_index_block_struct",
-   "max_count_string": "MAXIMUM_VERTICES_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_VERTICES_PER_GEOMETRY_SECTION",
+   "display_name": "index"
   },
   "render_model_node_map_block": {
    "max_count": 40,
    "struct": "render_model_node_map_block_struct",
-   "max_count_string": "MAXIMUM_NODES_PER_RENDER_MODEL_SECTION"
+   "max_count_string": "MAXIMUM_NODES_PER_RENDER_MODEL_SECTION",
+   "display_name": "index"
   },
   "global_geometry_plane_block": {
    "max_count": 65535,
    "struct": "global_geometry_plane_block_struct",
-   "max_count_string": "MAXIMUM_TRIANGLES_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_TRIANGLES_PER_GEOMETRY_SECTION",
+   "display_name": "plane"
   },
   "global_geometry_rigid_plane_group_block": {
    "max_count": 65280,
    "struct": "global_geometry_rigid_plane_group_block_struct",
-   "max_count_string": "MAXIMUM_RIGID_PLANE_GROUPS_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_RIGID_PLANE_GROUPS_PER_GEOMETRY_SECTION",
+   "display_name": "rigid plane group"
   },
   "global_geometry_explicit_edge_block": {
    "max_count": 65535,
    "struct": "global_geometry_explicit_edge_block_struct",
-   "max_count_string": "MAXIMUM_EXPLICIT_EDGES_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_EXPLICIT_EDGES_PER_GEOMETRY_SECTION",
+   "display_name": "explicit edge"
   },
   "render_model_forward_shared_edge_block": {
    "max_count": 16384,
    "struct": "render_model_forward_shared_edge_block_struct",
-   "max_count_string": "MAXIMUM_SHARED_EDGES_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_SHARED_EDGES_PER_GEOMETRY_SECTION",
+   "display_name": "forward shared edge"
   },
   "render_model_shared_edge_group_block": {
    "max_count": 512,
    "struct": "render_model_shared_edge_group_block_struct",
-   "max_count_string": "MAXIMUM_SHARED_EDGE_GROUPS_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_SHARED_EDGE_GROUPS_PER_GEOMETRY_SECTION",
+   "display_name": "shared edge group"
   },
   "render_model_backward_shared_edge_block": {
    "max_count": 16384,
    "struct": "render_model_backward_shared_edge_block_struct",
-   "max_count_string": "MAXIMUM_SHARED_EDGES_PER_GEOMETRY_SECTION"
+   "max_count_string": "MAXIMUM_SHARED_EDGES_PER_GEOMETRY_SECTION",
+   "display_name": "backward shared edge"
   },
   "render_model_dsq_raw_vertex_block": {
    "max_count": 65536,
    "struct": "render_model_dsq_raw_vertex_block_struct",
-   "max_count_string": "MAXIMUM_DSQ_VERTICES_PER_RENDER_MODEL_SECTION"
+   "max_count_string": "MAXIMUM_DSQ_VERTICES_PER_RENDER_MODEL_SECTION",
+   "display_name": "vertex"
   },
   "render_model_dsq_strip_index_block": {
    "max_count": 262144,
    "struct": "render_model_dsq_strip_index_block_struct",
-   "max_count_string": "MAXIMUM_DSQ_STRIP_INDICES_PER_RENDER_MODEL_SECTION"
+   "max_count_string": "MAXIMUM_DSQ_STRIP_INDICES_PER_RENDER_MODEL_SECTION",
+   "display_name": "index"
   },
   "render_model_dsq_silhouette_quad_block": {
    "max_count": 65536,
    "struct": "render_model_dsq_silhouette_quad_block_struct",
-   "max_count_string": "MAXIMUM_DSQ_SILHOUETTE_QUADS_PER_RENDER_MODEL_SECTION"
+   "max_count_string": "MAXIMUM_DSQ_SILHOUETTE_QUADS_PER_RENDER_MODEL_SECTION",
+   "display_name": "quad"
   },
   "render_model_section_data_block": {
    "max_count": 1,
@@ -153,7 +181,8 @@
   "global_geometry_block_resource_block": {
    "max_count": 1024,
    "struct": "global_geometry_block_resource_block_struct",
-   "max_count_string": "MAXIMUM_RESOURCES_PER_GEOMETRY_BLOCK"
+   "max_count_string": "MAXIMUM_RESOURCES_PER_GEOMETRY_BLOCK",
+   "display_name": "block resources"
   },
   "render_model_section_block": {
    "max_count": 255,
@@ -163,97 +192,116 @@
   "render_model_invalid_section_pairs_block": {
    "max_count": 1013,
    "struct": "render_model_invalid_section_pairs_block_struct",
-   "max_count_string": "((((MAXIMUM_SECTIONS_PER_RENDER_MODEL*(MAXIMUM_SECTIONS_PER_RENDER_MODEL - 1)/2)+(LONG_BITS-1))>>LONG_BITS_BITS))"
+   "max_count_string": "((((MAXIMUM_SECTIONS_PER_RENDER_MODEL*(MAXIMUM_SECTIONS_PER_RENDER_MODEL - 1)/2)+(LONG_BITS-1))>>LONG_BITS_BITS))",
+   "display_name": "bitvector"
   },
   "render_model_compound_node_block": {
    "max_count": 255,
    "struct": "render_model_compound_node_block_struct",
-   "max_count_string": "MAXIMUM_NODES_PER_MODEL"
+   "max_count_string": "MAXIMUM_NODES_PER_MODEL",
+   "display_name": "compound node"
   },
   "render_model_section_group_block": {
    "max_count": 6,
    "struct": "render_model_section_group_block_struct",
-   "max_count_string": "NUMBER_OF_GEOMETRY_DETAIL_LEVELS"
+   "max_count_string": "NUMBER_OF_GEOMETRY_DETAIL_LEVELS",
+   "display_name": "section group"
   },
   "render_model_node_map_block_OLD": {
    "max_count": 640,
    "struct": "render_model_node_map_block_OLD_struct",
-   "max_count_string": "MAXIMUM_NODES_PER_RENDER_MODEL_SECTION*MAXIMUM_REGIONS_PER_MODEL"
+   "max_count_string": "MAXIMUM_NODES_PER_RENDER_MODEL_SECTION*MAXIMUM_REGIONS_PER_MODEL",
+   "display_name": "index"
   },
   "render_model_marker_block": {
    "max_count": 256,
    "struct": "render_model_marker_block_struct",
-   "max_count_string": "MAXIMUM_MARKERS_PER_RENDER_MODEL_MARKER_GROUP"
+   "max_count_string": "MAXIMUM_MARKERS_PER_RENDER_MODEL_MARKER_GROUP",
+   "display_name": "marker"
   },
   "render_model_marker_group_block": {
    "max_count": 4096,
    "struct": "render_model_marker_group_block_struct",
-   "max_count_string": "MAXIMUM_MARKER_GROUPS_PER_RENDER_MODEL"
+   "max_count_string": "MAXIMUM_MARKER_GROUPS_PER_RENDER_MODEL",
+   "display_name": "marker group"
   },
   "error_report_vertices_block": {
    "max_count": 1048576,
    "struct": "error_report_vertices_block_struct",
-   "max_count_string": "MAXIMUM_VERTICES_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_VERTICES_PER_ERROR_REPORT",
+   "display_name": "error report vertex"
   },
   "error_report_vectors_block": {
    "max_count": 1048576,
    "struct": "error_report_vectors_block_struct",
-   "max_count_string": "MAXIMUM_VECTORS_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_VECTORS_PER_ERROR_REPORT",
+   "display_name": "error report vector"
   },
   "error_report_lines_block": {
    "max_count": 1048576,
    "struct": "error_report_lines_block_struct",
-   "max_count_string": "MAXIMUM_LINES_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_LINES_PER_ERROR_REPORT",
+   "display_name": "error report line"
   },
   "error_report_triangles_block": {
    "max_count": 1048576,
    "struct": "error_report_triangles_block_struct",
-   "max_count_string": "MAXIMUM_TRIANGLES_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_TRIANGLES_PER_ERROR_REPORT",
+   "display_name": "error report triangle"
   },
   "error_report_quads_block": {
    "max_count": 1048576,
    "struct": "error_report_quads_block_struct",
-   "max_count_string": "MAXIMUM_QUADS_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_QUADS_PER_ERROR_REPORT",
+   "display_name": "error report quad"
   },
   "error_report_comments_block": {
    "max_count": 1048576,
    "struct": "error_report_comments_block_struct",
-   "max_count_string": "MAXIMUM_COMMENTS_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_COMMENTS_PER_ERROR_REPORT",
+   "display_name": "error report comment"
   },
   "error_reports_block": {
    "max_count": 1048576,
    "struct": "error_reports_block_struct",
-   "max_count_string": "MAXIMUM_REPORTS_PER_ERROR_REPORT_CATEGORY"
+   "max_count_string": "MAXIMUM_REPORTS_PER_ERROR_REPORT_CATEGORY",
+   "display_name": "error report"
   },
   "global_error_report_categories_block": {
    "max_count": 64,
    "struct": "global_error_report_categories_block_struct",
-   "max_count_string": "MAXIMUM_ERROR_REPORT_CATEGORIES"
+   "max_count_string": "MAXIMUM_ERROR_REPORT_CATEGORIES",
+   "display_name": "error report category"
   },
   "prt_section_info_block": {
    "max_count": 255,
    "struct": "prt_section_info_block_struct",
-   "max_count_string": "MAXIMUM_SECTIONS_PER_RENDER_MODEL"
+   "max_count_string": "MAXIMUM_SECTIONS_PER_RENDER_MODEL",
+   "display_name": "prt section info"
   },
   "prt_lod_info_block": {
    "max_count": 6,
    "struct": "prt_lod_info_block_struct",
-   "max_count_string": "NUMBER_OF_GEOMETRY_DETAIL_LEVELS"
+   "max_count_string": "NUMBER_OF_GEOMETRY_DETAIL_LEVELS",
+   "display_name": "prt lod info"
   },
   "prt_cluster_basis_block": {
    "max_count": 34560,
    "struct": "prt_cluster_basis_block_struct",
-   "max_count_string": "k_max_cluster_data_size"
+   "max_count_string": "k_max_cluster_data_size",
+   "display_name": "cluster basis"
   },
   "prt_raw_pca_data_block": {
    "max_count": 150405120,
    "struct": "prt_raw_pca_data_block_struct",
-   "max_count_string": "k_max_pca_per_vertex_data_size"
+   "max_count_string": "k_max_pca_per_vertex_data_size",
+   "display_name": "raw pca data"
   },
   "prt_vertex_buffers_block": {
    "max_count": 255,
    "struct": "prt_vertex_buffers_block_struct",
-   "max_count_string": "MAXIMUM_SECTIONS_PER_RENDER_MODEL"
+   "max_count_string": "MAXIMUM_SECTIONS_PER_RENDER_MODEL",
+   "display_name": "vertex buffers"
   },
   "prt_info_block": {
    "max_count": 1,
@@ -283,7 +331,8 @@
   "render_model_block": {
    "max_count": 1,
    "struct": "render_model_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "render_model"
   }
  },
  "structs": {

@@ -13,27 +13,32 @@
   "model_variant_permutation_block": {
    "max_count": 32,
    "struct": "model_variant_permutation_block_struct",
-   "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION"
+   "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION",
+   "display_name": "permutation"
   },
   "model_variant_region_block": {
    "max_count": 16,
    "struct": "model_variant_region_block_struct",
-   "max_count_string": "MAXIMUM_REGIONS_PER_MODEL"
+   "max_count_string": "MAXIMUM_REGIONS_PER_MODEL",
+   "display_name": "region"
   },
   "model_variant_object_block": {
    "max_count": 16,
    "struct": "model_variant_object_block_struct",
-   "max_count_string": "k_maximum_objects_per_model_variant"
+   "max_count_string": "k_maximum_objects_per_model_variant",
+   "display_name": "object"
   },
   "model_variant_block": {
    "max_count": 64,
    "struct": "model_variant_block_struct",
-   "max_count_string": "k_maximum_variants_per_model"
+   "max_count_string": "k_maximum_variants_per_model",
+   "display_name": "variant"
   },
   "model_material_block": {
    "max_count": 32,
    "struct": "model_material_block_struct",
-   "max_count_string": "MAXIMUM_MATERIALS_PER_MODEL"
+   "max_count_string": "MAXIMUM_MATERIALS_PER_MODEL",
+   "display_name": "material"
   },
   "instantaneous_damage_repsonse_block": {
    "max_count": 16,
@@ -98,12 +103,14 @@
   "global_scenario_load_parameters_block": {
    "max_count": 32,
    "struct": "global_scenario_load_parameters_block_struct",
-   "max_count_string": "k_scenario_load_maximum_parameter_blocks"
+   "max_count_string": "k_scenario_load_maximum_parameter_blocks",
+   "display_name": "scenario load parameters"
   },
   "model_block": {
    "max_count": 1,
    "struct": "model_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "model"
   }
  },
  "structs": {

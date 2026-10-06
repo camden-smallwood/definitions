@@ -123,52 +123,62 @@
   "tag_import_file_block": {
    "max_count": 1024,
    "struct": "tag_import_file_block_struct",
-   "max_count_string": "MAXIMUM_FILES_PER_TAG_IMPORT_INFO"
+   "max_count_string": "MAXIMUM_FILES_PER_TAG_IMPORT_INFO",
+   "display_name": "import file"
   },
   "global_tag_import_info_block": {
    "max_count": 1,
    "struct": "global_tag_import_info_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "import info"
   },
   "error_report_vertices_block": {
    "max_count": 1048576,
    "struct": "error_report_vertices_block_struct",
-   "max_count_string": "MAXIMUM_VERTICES_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_VERTICES_PER_ERROR_REPORT",
+   "display_name": "error report vertex"
   },
   "error_report_vectors_block": {
    "max_count": 1048576,
    "struct": "error_report_vectors_block_struct",
-   "max_count_string": "MAXIMUM_VECTORS_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_VECTORS_PER_ERROR_REPORT",
+   "display_name": "error report vector"
   },
   "error_report_lines_block": {
    "max_count": 1048576,
    "struct": "error_report_lines_block_struct",
-   "max_count_string": "MAXIMUM_LINES_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_LINES_PER_ERROR_REPORT",
+   "display_name": "error report line"
   },
   "error_report_triangles_block": {
    "max_count": 1048576,
    "struct": "error_report_triangles_block_struct",
-   "max_count_string": "MAXIMUM_TRIANGLES_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_TRIANGLES_PER_ERROR_REPORT",
+   "display_name": "error report triangle"
   },
   "error_report_quads_block": {
    "max_count": 1048576,
    "struct": "error_report_quads_block_struct",
-   "max_count_string": "MAXIMUM_QUADS_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_QUADS_PER_ERROR_REPORT",
+   "display_name": "error report quad"
   },
   "error_report_comments_block": {
    "max_count": 1048576,
    "struct": "error_report_comments_block_struct",
-   "max_count_string": "MAXIMUM_COMMENTS_PER_ERROR_REPORT"
+   "max_count_string": "MAXIMUM_COMMENTS_PER_ERROR_REPORT",
+   "display_name": "error report comment"
   },
   "error_reports_block": {
    "max_count": 1048576,
    "struct": "error_reports_block_struct",
-   "max_count_string": "MAXIMUM_REPORTS_PER_ERROR_REPORT_CATEGORY"
+   "max_count_string": "MAXIMUM_REPORTS_PER_ERROR_REPORT_CATEGORY",
+   "display_name": "error report"
   },
   "global_error_report_categories_block": {
    "max_count": 64,
    "struct": "global_error_report_categories_block_struct",
-   "max_count_string": "MAXIMUM_ERROR_REPORT_CATEGORIES"
+   "max_count_string": "MAXIMUM_ERROR_REPORT_CATEGORIES",
+   "display_name": "error report category"
   },
   "multi_spheres_block": {
    "max_count": 1024,
@@ -208,7 +218,8 @@
   "physics_model_block": {
    "max_count": 1,
    "struct": "physics_model_block_struct",
-   "max_count_string": "1"
+   "max_count_string": "1",
+   "display_name": "physics_model"
   }
  },
  "structs": {

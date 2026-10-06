@@ -154,8 +154,7 @@
         {
           "type": "custom",
           "name": "Update gain bounds",
-          "group_tag": "edit",
-          "definition": "@a?p"
+          "group_tag": "edit"
         },
         {
           "type": "real_bounds",
@@ -171,34 +170,61 @@
           "type": "custom",
           "name": "equipment lowpass{equipment channel occlusion factor}:wetmix#sets the lowpass wet mix when an equiment is active",
           "group_tag": "sled",
-          "definition": "BQ 0"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "equipment lowpass{equipment channel occlusion factor}:wetmix#sets the lowpass wet mix when an equiment is active",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "custom",
           "name": "environment forced lowpass{forced lowpass wet mix}:wetmix#sets the lowpass wet mix when an environment forced lowpass is active",
           "group_tag": "sled",
-          "definition": "BQ 0"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "environment forced lowpass{forced lowpass wet mix}:wetmix#sets the lowpass wet mix when an environment forced lowpass is active",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "custom",
           "name": "effect lowpass:wetmix#sets the lowpass wet mix when a lowpass effect is active",
           "group_tag": "sled",
-          "definition": "BQ 0"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "effect lowpass:wetmix#sets the lowpass wet mix when a lowpass effect is active",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "explanation",
@@ -394,7 +420,7 @@
         "valid underwater propagation",
         "valid suppress spatialization"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\sound\\sound_classes.cpp"
     },
     "sound_class_external_flags_definition": {
       "options": [
@@ -413,35 +439,35 @@
         "don't fade on game over",
         "don't promote priority by proximity"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\sound\\sound_classes.cpp"
     },
     "sound_class_cache_miss_mode_definition": {
       "options": [
         "discard",
         "postpone"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\sound\\sound_classes.cpp"
     },
     "sound_class_acoustics_string_definition": {
       "options": [
         "outside",
         "inside"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\sound\\sound_classes.cpp"
     },
     "sound_class_suppress_spatialization_string_defintion": {
       "options": [
         "first person",
         "third person"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\sound\\sound_classes.cpp"
     },
     "sound_class_stereo_playback_definition": {
       "options": [
         "first person",
         "ambient"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\sound\\sound_classes.cpp"
     }
   }
 }

@@ -207,8 +207,7 @@
         {
           "type": "custom",
           "name": "camera height velocity function",
-          "group_tag": "fned",
-          "definition": "BS??"
+          "group_tag": "fned"
         },
         {
           "type": "struct",
@@ -439,10 +438,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQt ",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -452,10 +449,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQt ",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -465,10 +460,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQt ",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -478,10 +471,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQt ",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -676,8 +667,7 @@
         {
           "type": "custom",
           "name": "default function",
-          "group_tag": "fned",
-          "definition": "BS??"
+          "group_tag": "fned"
         },
         {
           "type": "struct",
@@ -2205,10 +2195,8 @@
           "definition": {
             "flags": 8,
             "allowed": [
-              "BQt ",
-              "???\u0001",
-              "???\b",
-              "lsnd"
+              "scmb",
+              "snd!"
             ]
           }
         },
@@ -2286,7 +2274,7 @@
         "sync action always projects on ground",
         "orient facing to movement (Mantis)"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\units\\biped_definitions.cpp"
     },
     "unit_trick_activation_type_enum": {
       "options": [
@@ -2311,7 +2299,7 @@
         "double-jump up",
         "double-jump down"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\units\\unit_trick_definitions.cpp"
     },
     "unit_trick_velocity_preservation_mode_enum": {
       "options": [
@@ -2319,14 +2307,14 @@
         "trick relative#velocity is relative to the object's orientation at the start of the trick (so if you're moving forward before the trick, you will be moving forward after the trick, even if that's a different direction)",
         "world relative#velocity is maintained in world space"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\units\\unit_trick_definitions.cpp"
     },
     "unit_trick_flags": {
       "options": [
         "use following camera#as opposed to the trick camera, which is the default\r\nvehicles only",
         "do not slam player control#allows the player to continue to move aiming vector while tricking"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\units\\unit_trick_definitions.cpp"
     },
     "biped_wall_proximity_composition_mode": {
       "options": [
@@ -2334,7 +2322,7 @@
         "least compressed#pick the marker that has the furthest obstacle",
         "average#average the distances from each marker"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\units\\biped_definitions.cpp"
     },
     "character_physics_flags": {
       "options": [
@@ -2352,14 +2340,14 @@
         "I am an Extreme Slipsurface",
         "slips off movers"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\physics\\character_physics_definitions.cpp"
     },
     "physics_material_flags": {
       "options": [
         "supresses effects",
         "force enable collision with player#enables collision with the player regardless of the collision group"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\physics\\physics_model_definitions.cpp"
     },
     "PhantomFlagsV2": {
       "options": [
@@ -2395,7 +2383,7 @@
         "activate ragdolls",
         "ignores forge editor"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\physics\\physics_model_definitions.cpp"
     },
     "rigid_body_size_enum": {
       "options": [
@@ -2407,7 +2395,7 @@
         "huge",
         "extra huge"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\physics\\physics_model_definitions.cpp"
     },
     "physics_material_proxy_collision_groups": {
       "options": [
@@ -2433,7 +2421,7 @@
         "everything",
         "creatures"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\physics\\physics_model_definitions.cpp"
     },
     "shape_enum": {
       "options": [
@@ -2454,26 +2442,26 @@
         "list",
         "mopp"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\physics\\physics_model_definitions.cpp"
     },
     "flying_physics_flags": {
       "options": [
         "use world up"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\physics\\character_physics_definitions.cpp"
     },
     "biped_leap_flags_definition": {
       "options": [
         "force early roll"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\units\\biped_definitions.cpp"
     },
     "grab_biped_throw_control_modes": {
       "options": [
         "camera facing",
         "control stick direction"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\units\\biped_definitions.cpp"
     },
     "biped_ground_fitting_flags_definition": {
       "options": [
@@ -2489,7 +2477,7 @@
         "use biped up direction#for characters that climb walls",
         "snap marker above contact#prevents ground marker from going below the contact point"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\units\\biped_definitions.cpp"
     }
   }
 }

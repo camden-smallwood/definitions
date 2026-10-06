@@ -37,23 +37,41 @@
           "type": "custom",
           "name": "Authored Light Probe Intensity Scale!",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 10.0,
+            "step": 0.2
+          }
         },
         {
           "type": "real",
           "name": "Authored Light Probe Intensity Scale!",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 10.0,
+            "step": 0.2
+          }
         },
         {
           "type": "custom",
           "name": "Generated Air Probe Intensity Scale!",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "Generated Air Probe Intensity Scale!",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "array",
@@ -84,12 +102,21 @@
           "type": "custom",
           "name": "IO Direct Lighting Minimum Percentage (When in Shadow)",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "IO Direct Lighting Minimum Percentage (When in Shadow)",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "terminator",
@@ -113,23 +140,41 @@
           "type": "custom",
           "name": "Direction 1&Direction(D)",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 360.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",
           "name": "Direction 1&Direction(D)",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 360.0,
+            "step": 1.0
+          }
         },
         {
           "type": "custom",
           "name": "Front-Back 1&Front-Back(D)",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 180.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",
           "name": "Front-Back 1&Front-Back(D)",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 180.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real_rgb_color",
@@ -139,34 +184,61 @@
           "type": "custom",
           "name": "Direct intensity 1",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "Direct intensity 1",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "custom",
           "name": "Direction 2&Direction(D)",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 360.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",
           "name": "Direction 2&Direction(D)",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 360.0,
+            "step": 1.0
+          }
         },
         {
           "type": "custom",
           "name": "Front-Back 2&Front-Back(D)",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 180.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real",
           "name": "Front-Back 2&Front-Back(D)",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 180.0,
+            "step": 1.0
+          }
         },
         {
           "type": "real_rgb_color",
@@ -176,34 +248,61 @@
           "type": "custom",
           "name": "Direct intensity 2",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "Direct intensity 2",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "custom",
           "name": "Authored Light Probe Intensity Scale",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 10.0,
+            "step": 0.2
+          }
         },
         {
           "type": "real",
           "name": "Authored Light Probe Intensity Scale",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 10.0,
+            "step": 0.2
+          }
         },
         {
           "type": "custom",
           "name": "Generated Air Probe Intensity Scale",
           "group_tag": "sled",
-          "definition": "Bw>?"
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "real",
           "name": "Generated Air Probe Intensity Scale",
-          "group_tag": "sled"
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
         },
         {
           "type": "terminator",
@@ -243,7 +342,7 @@
         "Off",
         "On"
       ],
-      "source_file": ""
+      "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\objects\\midnight_light_definitions.cpp"
     }
   }
 }

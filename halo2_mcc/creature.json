@@ -16,19 +16,7 @@
    "struct": "materials_block_struct",
    "max_count_string": "k_maximum_materials_per_physics_model",
    "element_label_callback": "halo2_mcc_tool.exe 0x6999A0",
-   "element_label": {
-    "source": "halo2_mcc_tool.exe 0x6999A0",
-    "label": [
-     {
-      "when": "{global material name} != \"\"",
-      "format": "{name} ({global material name})"
-     },
-     {
-      "when": "1",
-      "format": "{name}"
-     }
-    ]
-   }
+   "element_label": "materials"
   },
   "phantoms_block": {
    "max_count": 1024,

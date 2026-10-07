@@ -129,6 +129,131 @@
   "fallback_name": "block",
   "bad_index": "BAD",
   "flags": "number",
-  "source": "Guerilla sub_462940 / sub_4623F4 / sub_462454 (halo2_mcc_guerilla.exe)"
+  "source": "Guerilla sub_462940 / sub_4623F4 / sub_462454 (halo2_mcc_guerilla.exe)",
+  "maps": {
+   "magazines": {
+    "names": [
+     "primary",
+     "secondary"
+    ]
+   }
+  },
+  "entries": {
+   "materials": {
+    "label": [
+     {
+      "format": "{name} ({global material name})",
+      "when": "{global material name} != \"\""
+     },
+     {
+      "format": "{name}",
+      "when": "1"
+     }
+    ],
+    "source": "halo2_mcc_tool.exe 0x6999A0"
+   },
+   "particle_system_definition_block_new": {
+    "label": [
+     {
+      "format": "{particle}",
+      "when": "1"
+     }
+    ],
+    "source": "halo2_mcc_tool.exe 0x80D250"
+   },
+   "character_style": {
+    "label": [
+     "{#|enum:Attitude}"
+    ],
+    "source": "halo2_mcc_tool.exe 0x56A650; no bounds check, but the blocks hold at most 3 elements"
+   },
+   "game_engine_general_event": {
+    "label": [
+     "{event} : {audience}"
+    ],
+    "source": "halo2_mcc_tool.exe 0x8211D0"
+   },
+   "game_engine_slayer_event": {
+    "label": [
+     "{event} : {audience}"
+    ],
+    "source": "halo2_mcc_tool.exe 0x8212B0"
+   },
+   "game_engine_ctf_event": {
+    "label": [
+     "{event} : {audience}"
+    ],
+    "source": "halo2_mcc_tool.exe 0x821320"
+   },
+   "game_engine_oddball_event": {
+    "label": [
+     "{event} : {audience}"
+    ],
+    "source": "halo2_mcc_tool.exe 0x821400"
+   },
+   "game_engine_king_event": {
+    "label": [
+     "{event} : {audience}"
+    ],
+    "source": "halo2_mcc_tool.exe 0x821470"
+   },
+   "player_representation": {
+    "label": [
+     "{#|enum:campaign player type}"
+    ],
+    "source": "halo2_mcc_tool.exe 0x6A1BD0"
+   },
+   "scenario_object": {
+    "label": [
+     {
+      "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}",
+      "when": "{#group} == \"scnr\""
+     },
+     {
+      "format": " {type|none:NONE|bad:BAD}",
+      "when": "1"
+     }
+    ],
+    "source": "halo2_mcc_tool.exe 0x783F40"
+   },
+   "secondary_zone_set": {
+    "label": [
+     {
+      "format": "Invalid zone",
+      "when": "{#group} == \"scnr\" && ({zone|index} < 0 || {zone|index} >= {/zones|count})"
+     },
+     {
+      "format": "NONE ({/zones[{zone|index}]/name})",
+      "when": "{#group} == \"scnr\" && {area|index} == -1"
+     },
+     {
+      "format": "Invalid area ({/zones[{zone|index}]/name})",
+      "when": "{#group} == \"scnr\" && ({area|index} < 0 || {area|index} >= {/zones[{zone|index}]/areas|count})"
+     },
+     {
+      "format": "{/zones[{zone|index}]/areas[{area|index}]/name} ({/zones[{zone|index}]/name})",
+      "when": "{#group} == \"scnr\""
+     },
+     {
+      "format": "zone {zone|index}: area {area|index}",
+      "when": "1"
+     }
+    ],
+    "source": "halo2_mcc_tool.exe 0x5B05C0"
+   },
+   "order_completion_condition": {
+    "label": [
+     {
+      "format": "NOT {rule type}",
+      "when": "{flags} & 1"
+     },
+     {
+      "format": "{rule type}",
+      "when": "1"
+     }
+    ],
+    "source": "halo2_mcc_tool.exe 0x5B0520"
+   }
+  }
  }
 }

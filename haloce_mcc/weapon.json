@@ -16,40 +16,14 @@
    "max_count": 2,
    "struct": "magazines_struct",
    "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINES_PER_WEAPON",
-   "element_label": {
-    "source": "tool.exe 0x4A58D0",
-    "label": [
-     "{#|map:names}"
-    ],
-    "maps": {
-     "names": {
-      "names": [
-       "primary",
-       "secondary"
-      ]
-     }
-    }
-   },
+   "element_label": "magazine",
    "element_label_callback": "tool.exe 0x4A58D0"
   },
   "magazine_objects": {
    "max_count": 8,
    "struct": "magazine_objects_struct",
    "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINE_OBJECTS_PER_MAGAZINE",
-   "element_label": {
-    "source": "tool.exe 0x4A58D0",
-    "label": [
-     "{#|map:names}"
-    ],
-    "maps": {
-     "names": {
-      "names": [
-       "primary",
-       "secondary"
-      ]
-     }
-    }
-   },
+   "element_label": "magazine",
    "element_label_callback": "tool.exe 0x4A58D0"
   },
   "triggers": {
@@ -59,16 +33,8 @@
    "element_label": {
     "source": "tool.exe 0x4A5870",
     "label": [
-     "{#|map:names}"
-    ],
-    "maps": {
-     "names": {
-      "names": [
-       "primary",
-       "secondary"
-      ]
-     }
-    }
+     "{#|map:magazines}"
+    ]
    },
    "element_label_callback": "tool.exe 0x4A5870"
   },

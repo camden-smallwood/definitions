@@ -91,6 +91,28 @@
   "fallback_name": "block",
   "bad_index": "BAD",
   "flags": "number",
-  "source": "Guerilla sub_4038D0 / sub_403980 / sub_403C30 (haloce_mcc_guerilla.exe)"
+  "source": "Guerilla sub_4038D0 / sub_403980 / sub_403C30 (haloce_mcc_guerilla.exe)",
+  "maps": {
+   "magazines": {
+    "names": [
+     "primary",
+     "secondary"
+    ]
+   }
+  },
+  "entries": {
+   "scenario_object": {
+    "label": [
+     "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}"
+    ],
+    "source": "tool.exe 0x49FD50"
+   },
+   "magazine": {
+    "label": [
+     "{#|map:magazines}"
+    ],
+    "source": "tool.exe 0x4A58D0"
+   }
+  }
  }
 }

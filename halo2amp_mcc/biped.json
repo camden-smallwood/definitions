@@ -951,7 +951,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\physics\\physics_model_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x14039DEC0"
+      "element_label_callback": "halo2a_tag_test.exe 0x14039DEC0",
+      "element_label": "materials"
     },
     "phantom_types_block_struct": {
       "guid": "254090f2d0458529e1a4809cfea66bca",
@@ -1659,7 +1660,22 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\biped_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140EAFBB0"
+      "element_label_callback": "halo2a_tag_test.exe 0x140EAFBB0",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x140EAFBB0",
+        "label": [
+          "{#|map:feet} ({marker name})"
+        ],
+        "maps": {
+          "feet": {
+            "names": [
+              "left foot",
+              "right foot",
+              "both feet"
+            ]
+          }
+        }
+      }
     },
     "biped_leaping_data_struct": {
       "guid": "bd84158d944da2b9dd1762abd078bd65",
@@ -2179,7 +2195,24 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\biped_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140EAFC40"
+      "element_label_callback": "halo2a_tag_test.exe 0x140EAFC40",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x140EAFC40; reads the owning object's attachments",
+        "label": [
+          {
+            "when": "{Attachment Index|index} < 0 || {Attachment Index|index} >= {/unit/object/attachments|count}",
+            "format": "No attachment - uses main body"
+          },
+          {
+            "when": "{Function} != \"\"",
+            "format": "{/unit/object/attachments[{Attachment Index|index}]/type} -> {RTPC Name}"
+          },
+          {
+            "when": "1",
+            "format": "Invalid function"
+          }
+        ]
+      }
     },
     "BipedSoundSweetenerBlock": {
       "guid": "7cd5901ef34549ebf1fc589173ca533b",
@@ -2217,7 +2250,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\biped_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140E622C0"
+      "element_label_callback": "halo2a_tag_test.exe 0x140E622C0",
+      "element_label": "SoundSweetenerBlock"
     },
     "BipedAimingJointFixupBlock": {
       "guid": "04e3ddaba84c6f117e408f90a5975011",

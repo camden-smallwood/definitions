@@ -273,6 +273,387 @@
     "fallback_name": "struct",
     "bad_index": "BAD: %d",
     "flags": "names",
-    "source": "ManagedBlam sub_180551F30 / sub_180551B40 / sub_180551D30 / sub_1805520E0 (bin/ManagedBlam.dll)"
+    "source": "ManagedBlam sub_180551F30 / sub_180551B40 / sub_180551D30 / sub_1805520E0 (bin/ManagedBlam.dll)",
+    "entries": {
+      "game_engine_loadout_palette_entry": {
+        "source": "halo2a_tag_test.exe 0x1403F3170",
+        "label": [
+          "{#|map:game_engine_loadout_palette_entry_game_engine_loadout_palette_entry}"
+        ],
+        "maps": {
+          "game_engine_loadout_palette_entry_game_engine_loadout_palette_entry": {
+            "names": [
+              "Spartan Tier 1",
+              "Elite Tier 1",
+              "Spartan Tier 2",
+              "Elite Tier 2",
+              "Spartan Tier 3",
+              "Elite Tier 3"
+            ]
+          }
+        }
+      },
+      "materials": {
+        "source": "halo2a_tag_test.exe 0x14039DEC0",
+        "label": [
+          {
+            "format": "{name} ({global material name})",
+            "when": "{global material name} != \"\""
+          },
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "SoundSweetenerBlock": {
+        "source": "halo2a_tag_test.exe 0x140E622C0",
+        "label": [
+          {
+            "format": "{Function} -> ",
+            "when": "{Function} != \"\""
+          },
+          {
+            "format": "Invalid function",
+            "when": "1"
+          }
+        ]
+      },
+      "particle_system_definition_block_new": {
+        "source": "halo2a_tag_test.exe 0x14070DE60",
+        "label": [
+          {
+            "format": "{particle}",
+            "when": "1"
+          }
+        ]
+      },
+      "cinematic_frame": {
+        "source": "halo2a_tag_test.exe 0x1403E39B0, 0x1403E3BE0",
+        "label": [
+          "Shot {#1}"
+        ]
+      },
+      "cinematic_frame_2": {
+        "source": "halo2a_tag_test.exe 0x1403E3590",
+        "label": [
+          "Frame {#1}"
+        ]
+      },
+      "overlay": {
+        "source": "halo2a_tag_test.exe 0x1409483E0, 0x1409484C0",
+        "label": [
+          {
+            "format": "{resolution} {theme}",
+            "when": "1"
+          }
+        ],
+        "max_length": 127
+      },
+      "property_binding": {
+        "source": "halo2a_tag_test.exe 0x1409485A0",
+        "label": [
+          {
+            "format": "{source component name}.{source property name}->{target component name}.{target property name}",
+            "when": "1"
+          }
+        ],
+        "max_length": 127
+      },
+      "unit_camera_track": {
+        "source": "halo2a_tag_test.exe 0x140EAEE50",
+        "label": [
+          "{#|map:unit_camera_track_unit_camera_track}"
+        ],
+        "maps": {
+          "unit_camera_track_unit_camera_track": {
+            "names": [
+              "loose",
+              "tight",
+              "far"
+            ]
+          }
+        }
+      },
+      "player_momentum_data": {
+        "source": "halo2a_tag_test.exe 0x1401401B0",
+        "label": [
+          "{#|map:player_momentum_data_player_momentum_data}"
+        ],
+        "maps": {
+          "player_momentum_data_player_momentum_data": {
+            "names": [
+              "sprint",
+              "momentum"
+            ]
+          }
+        }
+      },
+      "player_representation": {
+        "source": "halo2a_tag_test.exe 0x140140150",
+        "label": [
+          "{#|map:player_representation_player_representation}"
+        ],
+        "maps": {
+          "player_representation_player_representation": {
+            "names": [
+              "spartan",
+              "elite",
+              "monitor"
+            ]
+          }
+        }
+      },
+      "materials_2": {
+        "source": "halo2a_tag_test.exe 0x1404256F0",
+        "label": [
+          {
+            "format": "${name}",
+            "when": "{flags} & 8"
+          },
+          {
+            "format": "*{name}",
+            "when": "{flags} & 16"
+          },
+          {
+            "format": "-{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "specialized_incident_object_properties": {
+        "source": "halo2a_tag_test.exe 0x1403ED270",
+        "label": [
+          {
+            "format": "{bucket type|map:specialized_incident_object_properties_specialized_incident_object_properties_types} {bucket class|map:specialized_incident_object_properties_specialized_incident_object_properties_classes}",
+            "when": "1"
+          }
+        ],
+        "maps": {
+          "specialized_incident_object_properties_specialized_incident_object_properties_types": {
+            "names": [
+              "any",
+              "brute",
+              "grunt",
+              "jackel",
+              "skirmisher",
+              "marine",
+              "spartan",
+              "bugger",
+              "hunter",
+              "flood_infection",
+              "flood_carrier",
+              "flood_combat",
+              "flood_pure",
+              "sentinel",
+              "elite",
+              "engineer"
+            ]
+          },
+          "specialized_incident_object_properties_specialized_incident_object_properties_classes": {
+            "names": [
+              "any",
+              "infantry",
+              "leader",
+              "hero",
+              "specialist",
+              "light vehicle",
+              "heavy vehicle",
+              "giant vehicle",
+              "standard vehicle",
+              "only counts with riders"
+            ]
+          }
+        }
+      },
+      "incident_accumulator_child_incident": {
+        "source": "halo2a_tag_test.exe 0x1403ED310",
+        "label": [
+          {
+            "format": "{count} {incident name}",
+            "when": "1"
+          }
+        ]
+      },
+      "incident_sum_accumulator_child_incident": {
+        "source": "halo2a_tag_test.exe 0x1403ED360",
+        "label": [
+          {
+            "format": "{incident name}",
+            "when": "1"
+          }
+        ]
+      },
+      "game_incident_response": {
+        "source": "halo2a_tag_test.exe 0x140731DC0",
+        "label": [
+          {
+            "join": "",
+            "parts": [
+              [
+                {
+                  "format": " {heat award} heat",
+                  "when": "{heat award} != 0"
+                }
+              ],
+              [
+                {
+                  "format": " {game engine event}",
+                  "when": "{game engine event} != \"\""
+                }
+              ],
+              [
+                {
+                  "format": " {medal}",
+                  "when": "{medal} != \"\""
+                }
+              ],
+              [
+                {
+                  "format": " {commendation}",
+                  "when": "{commendation} != \"\""
+                }
+              ],
+              [
+                {
+                  "format": " {achievement}",
+                  "when": "{achievement} != \"\""
+                }
+              ],
+              [
+                {
+                  "format": " {avatar award}",
+                  "when": "{avatar award} != \"\""
+                }
+              ],
+              [
+                {
+                  "format": " challenges",
+                  "when": "{challenges|count} > 0"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "compiled_compute_shader_refererence": {
+        "source": "halo2a_tag_test.exe 0x14087E050; no bounds check",
+        "label": [
+          "{#|enum:entry_point_enum}"
+        ]
+      },
+      "map_variant_palettes_compatibility": {
+        "source": "halo2a_tag_test.exe 0x1403D97E0; names the animation through the owning graph's runtime inheritance list; no template follows a reference yet; halo4_tag_test.exe 0x14045A480; prints the owning scenario's palette hash, which no template computes; halo2a_tag_test.exe 0x140456A60; names the animation through the owning graph's runtime inheritance list; no template follows a reference yet; halo4_tag_test.exe 0x14045A480; prints the owning scenario's palette hash, which no template computes",
+        "label": null
+      },
+      "squads": {
+        "source": "halo2a_tag_test.exe 0x1414E6200",
+        "label": [
+          {
+            "format": "{name} ({template})",
+            "when": "{squad template index} != -1"
+          },
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "spawn_points": {
+        "source": "halo2a_tag_test.exe 0x1414E5F10; the cell comes from the owning squad: its designer cells, or its templated cells once it has a template",
+        "label": [
+          {
+            "format": "NONE: {name}",
+            "when": "{cell|index} == -1"
+          },
+          {
+            "format": "ERROR: {name}",
+            "when": "{#group} != \"scnr\""
+          },
+          {
+            "format": "{../designer/cells[{cell|index}]}: {name}",
+            "when": "{../squad template index} == -1 && {cell|index} >= 0 && {cell|index} < {../designer/cells|count}"
+          },
+          {
+            "format": "{../templated/cells[{cell|index}]}: {name}",
+            "when": "{../squad template index} != -1 && {cell|index} >= 0 && {cell|index} < {../templated/cells|count}"
+          },
+          {
+            "format": "BAD {cell|index}: {name}",
+            "when": "1"
+          }
+        ]
+      },
+      "scenario_object": {
+        "source": "halo2a_tag_test.exe 0x1404448C0",
+        "label": [
+          {
+            "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}",
+            "when": "{#group} == \"scnr\""
+          },
+          {
+            "format": " {type|none:NONE|bad:BAD}",
+            "when": "1"
+          }
+        ]
+      },
+      "area_reference": {
+        "source": "halo2a_tag_test.exe 0x141563830",
+        "label": [
+          {
+            "format": "Invalid zone",
+            "when": "{#group} == \"scnr\" && ({zone|index} < 0 || {zone|index} >= {/zones|count})"
+          },
+          {
+            "format": "NONE ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\" && {area|index} == -1"
+          },
+          {
+            "format": "Invalid area ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\" && ({area|index} < 0 || {area|index} >= {/zones[{zone|index}]/areas|count})"
+          },
+          {
+            "format": "{/zones[{zone|index}]/areas[{area|index}]/name} ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\""
+          },
+          {
+            "format": "zone {zone|index}: area {area|index}",
+            "when": "1"
+          }
+        ]
+      },
+      "physics_model": {
+        "source": "halo2a_tag_test.exe 0x14039E2C0, 0x14039E370",
+        "label": [
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "player_grade_definition": {
+        "source": "halo2a_tag_test.exe 0x1403EDF10",
+        "label": [
+          {
+            "format": "{xp threshold} xp: {name}",
+            "when": "1"
+          }
+        ]
+      },
+      "primary_secondary": {
+        "source": "halo2a_tag_test.exe 0x140E61E10, 0x140E61E70, 0x140E61ED0",
+        "label": [
+          "{#|map:magazines_magazines}"
+        ],
+        "maps": {
+          "magazines_magazines": {
+            "names": [
+              "primary",
+              "secondary"
+            ]
+          }
+        }
+      }
+    }
   }
 }

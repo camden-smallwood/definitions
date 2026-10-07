@@ -584,7 +584,28 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\objects\\object_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140EB0CE0"
+      "element_label_callback": "halo2a_tag_test.exe 0x140EB0CE0",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x140EB0CE0",
+        "label": [
+          {
+            "when": "{import name} != \"\" && {export name} != \"\"",
+            "format": "{import name} -> {export name}"
+          },
+          {
+            "when": "{import name} != \"\"",
+            "format": "{import name} -> <unnamed>"
+          },
+          {
+            "when": "{export name} != \"\"",
+            "format": "<unnamed> -> {export name}"
+          },
+          {
+            "when": "1",
+            "format": "<unnamed> -> <unnamed>"
+          }
+        ]
+      }
     },
     "mapping_function": {
       "guid": "8fa9145a8444fa53d46810809e45f10a",
@@ -656,7 +677,28 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\objects\\object_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140EB0C90"
+      "element_label_callback": "halo2a_tag_test.exe 0x140EB0C90",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x140EB0C90",
+        "label": [
+          {
+            "when": "{#count} == 1",
+            "format": "symmetric"
+          },
+          {
+            "when": "{#} == 0",
+            "format": "increasing"
+          },
+          {
+            "when": "{#} == 1",
+            "format": "decreasing"
+          },
+          {
+            "when": "1",
+            "format": ""
+          }
+        ]
+      }
     },
     "object_runtime_interpolator_functions_block": {
       "guid": "e6dbefa2c24dee4b10245f30d9baf532",
@@ -701,7 +743,28 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\objects\\object_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140EB1480"
+      "element_label_callback": "halo2a_tag_test.exe 0x140EB1480",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x140EB1480",
+        "label": [
+          {
+            "when": "{switch function name} != \"\" && {export name} != \"\"",
+            "format": "{switch function name} -> {export name}"
+          },
+          {
+            "when": "{switch function name} != \"\"",
+            "format": "{switch function name} -> <unnamed>"
+          },
+          {
+            "when": "{export name} != \"\"",
+            "format": "<unnamed> -> {export name}"
+          },
+          {
+            "when": "1",
+            "format": "<unnamed> -> <unnamed>"
+          }
+        ]
+      }
     },
     "objectFunctionSwitchFunctionBlock": {
       "guid": "23614342bf440f65c76ec193f74535d7",
@@ -724,7 +787,20 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\objects\\object_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140EB1410"
+      "element_label_callback": "halo2a_tag_test.exe 0x140EB1410",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x140EB1410",
+        "label": [
+          {
+            "when": "{function name} != \"\"",
+            "format": "{selection bounds[0]:.2f} - {selection bounds[1]:.2f} : {function name}"
+          },
+          {
+            "when": "1",
+            "format": "{selection bounds[0]:.2f} - {selection bounds[1]:.2f} : <unnamed>"
+          }
+        ]
+      }
     },
     "global_object_attachment_block": {
       "guid": "577209119c42754733d975a73f4575ee",
@@ -1025,7 +1101,13 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\objects\\object_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140EB0E60"
+      "element_label_callback": "halo2a_tag_test.exe 0x140EB0E60",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x140EB0E60",
+        "label": [
+          "{#|enum:scenario_object_active_change_color_flags}"
+        ]
+      }
     },
     "object_change_color_initial_permutation": {
       "guid": "793e40fc2e4da6a7216c0cad7b6ca0c2",
@@ -1467,7 +1549,32 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\dx9\\effects\\modeldissolve.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x1403B3AC0"
+      "element_label_callback": "halo2a_tag_test.exe 0x1403B3AC0",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x1403B3AC0; no bounds check",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "hard_kill",
+              "soft_kill",
+              "resurrect",
+              "phase_out",
+              "phase_in",
+              "incineration",
+              "phase_from_ground",
+              "dropped_by_forerunner",
+              "grabbed_by_player",
+              "assassination",
+              "unused1",
+              "unused2",
+              "unused3"
+            ]
+          }
+        }
+      }
     },
     "hs_script_data_struct": {
       "guid": "80ef7fd8c347de0728fc85973f64538e",

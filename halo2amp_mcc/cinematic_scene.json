@@ -523,7 +523,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x1403E3BE0"
+      "element_label_callback": "halo2a_tag_test.exe 0x1403E3BE0",
+      "element_label": "cinematic_frame"
     },
     "cinematic_shot_lighting_block": {
       "guid": "8c17866f8f4ce0f503304ca178ceadea",
@@ -698,7 +699,20 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x1403E38E0"
+      "element_label_callback": "halo2a_tag_test.exe 0x1403E38E0",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x1403E38E0; reads the owning tag as a cinematic scene",
+        "label": [
+          {
+            "when": "{#group} == \"cisc\" && {object|index} >= 0 && {object|index} < {/objects|count}",
+            "format": "{#}. {/objects[{object|index}]/name} ({function name})"
+          },
+          {
+            "when": "1",
+            "format": "{#}. NONE ({function name})"
+          }
+        ]
+      }
     },
     "cinematic_shot_object_function_keyframe_block": {
       "guid": "c5f62d27cf422bfbd489008dc8012098",
@@ -735,7 +749,20 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x1403E3870"
+      "element_label_callback": "halo2a_tag_test.exe 0x1403E3870",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x1403E3870",
+        "label": [
+          {
+            "when": "{flags} & 1",
+            "format": "Frame {frame:3d} (Disable)"
+          },
+          {
+            "when": "1",
+            "format": "Frame {frame:3d}"
+          }
+        ]
+      }
     },
     "cinematic_shot_screen_effect_block": {
       "guid": "a5c0e8cbf8479dac6e01138792374c34",
@@ -789,7 +816,28 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x1403E3790"
+      "element_label_callback": "halo2a_tag_test.exe 0x1403E3790",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x1403E3790",
+        "label": [
+          {
+            "when": "{flags} & 1 && {screen effect|path} != \"\"",
+            "format": "{#}. {screen effect}"
+          },
+          {
+            "when": "{flags} & 1",
+            "format": "{#}. NONE"
+          },
+          {
+            "when": "{screen effect|path} != \"\"",
+            "format": "{#}. {screen effect} ({frame} - {stop frame})"
+          },
+          {
+            "when": "1",
+            "format": "{#}. NONE ({frame} - {stop frame})"
+          }
+        ]
+      }
     },
     "cinematic_shot_user_input_constraints_block": {
       "guid": "41ff97f96742bfdfd724e59d23cb2426",

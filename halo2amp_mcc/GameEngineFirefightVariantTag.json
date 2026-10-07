@@ -644,7 +644,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\loadout_definition.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x1403F3170"
+      "element_label_callback": "halo2a_tag_test.exe 0x1403F3170",
+      "element_label": "game_engine_loadout_palette_entry"
     },
     "gameEngineOrdnanceOptionsBlock": {
       "guid": "f4c7d1a4e64908cafbc0dcaa3dc53225",
@@ -754,7 +755,30 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\game\\game_engine_group.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x1403D8150"
+      "element_label_callback": "halo2a_tag_test.exe 0x1403D8150",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x1403D8150",
+        "label": [
+          {
+            "when": "1",
+            "format": "{Player Goal|map:goals}"
+          }
+        ],
+        "maps": {
+          "goals": {
+            "names": [
+              "object_destruction",
+              "object_delivery",
+              "location_arrival",
+              "time_passed",
+              "no_more_waves",
+              "kill_boss",
+              "defense",
+              "other"
+            ]
+          }
+        }
+      }
     },
     "GameEngineFirefightWavePropertiesBlock": {
       "guid": "b424cfa5a947a0ef39e4d8b302dedfcd",

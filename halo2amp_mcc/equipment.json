@@ -626,7 +626,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\units\\unit_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140EAEE50"
+      "element_label_callback": "halo2a_tag_test.exe 0x140EAEE50",
+      "element_label": "unit_camera_track"
     },
     "camera_obstruction_struct": {
       "guid": "0f379d3a3b4b74572fae3c86cca8f293",
@@ -3643,7 +3644,24 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140EB0150"
+      "element_label_callback": "halo2a_tag_test.exe 0x140EB0150",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x140EB0150; reads the owning object's attachments",
+        "label": [
+          {
+            "when": "{Attachment Index|index} < 0 || {Attachment Index|index} >= {/item/object/attachments|count}",
+            "format": "Invalid Attachment"
+          },
+          {
+            "when": "{Function} != \"\"",
+            "format": "{/item/object/attachments[{Attachment Index|index}]/type} -> {RTPC Name}"
+          },
+          {
+            "when": "1",
+            "format": "Invalid function"
+          }
+        ]
+      }
     },
     "EquipmentSoundSweetenerBlock": {
       "guid": "694a774ff24aacc63eadb9a263992891",
@@ -3681,7 +3699,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\items\\equipment_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140E622C0"
+      "element_label_callback": "halo2a_tag_test.exe 0x140E622C0",
+      "element_label": "SoundSweetenerBlock"
     }
   },
   "enums_flags": {

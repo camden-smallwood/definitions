@@ -147,7 +147,16 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\render_methods\\render_method_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140874030"
+      "element_label_callback": "halo2a_tag_test.exe 0x140874030",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x140874030",
+        "label": [
+          {
+            "when": "1",
+            "format": "{category name}"
+          }
+        ]
+      }
     },
     "render_method_options_block": {
       "guid": "493c64dc7d4ddb41904c8dbb10f4ae71",
@@ -183,7 +192,16 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\render_methods\\render_method_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x140874070"
+      "element_label_callback": "halo2a_tag_test.exe 0x140874070",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x140874070",
+        "label": [
+          {
+            "when": "1",
+            "format": "{option name}"
+          }
+        ]
+      }
     },
     "render_method_entry_points_block": {
       "guid": "d3696bb6fa447867493587acfb329ec5",
@@ -207,7 +225,60 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\render_methods\\render_method_definitions.cpp",
-      "element_label_callback": "halo2a_tag_test.exe 0x1408740F0"
+      "element_label_callback": "halo2a_tag_test.exe 0x1408740F0",
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x1408740F0",
+        "label": [
+          "{entry point|map:entry_points}"
+        ],
+        "maps": {
+          "entry_points": {
+            "names": [
+              "default",
+              "albedo",
+              "static_per_pixel",
+              "static_per_pixel_hybrid_refinement",
+              "static_per_pixel_analytic",
+              "static_per_pixel_analytic_hybrid_refinement",
+              "static_per_pixel_floating_shadow",
+              "static_per_vertex",
+              "static_probe",
+              "static_per_pixel_forge",
+              "static_per_pixel_object",
+              "static_per_vertex_object",
+              "dynamic_light",
+              "shadow_generate",
+              "shadow_apply",
+              "active_camo",
+              "lightmap_debug_mode",
+              "vertex_color_lighting",
+              "water_tessellation",
+              "water_shading",
+              "unused2",
+              "single_pass_per_pixel",
+              "single_pass_per_vertex",
+              "single_pass_single_probe",
+              "single_pass_as_decal",
+              "midnight_spotlight",
+              "midnight_spotlight_transparents",
+              "motion_blur",
+              "volume_fog_stencil",
+              "volume_fog_depth",
+              "curved_cui",
+              "single_pass_shadowed_no_fog_per_pixel",
+              "single_pass_shadowed_no_fog_per_vertex",
+              "single_pass_shadowed_no_fog_single_probe",
+              "static_per_pixel_floating_shadow_simple",
+              "static_per_pixel_simple",
+              "static_per_pixel_ao",
+              "static_per_vertex_ao",
+              "static_lit_cui",
+              "curved_static_lit_cui"
+            ],
+            "else": "unknown"
+          }
+        }
+      }
     },
     "render_method_pass_block": {
       "guid": "13081af42d49b7bf5ba9508bc0b07424",

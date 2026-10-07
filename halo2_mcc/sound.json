@@ -3145,14 +3145,54 @@
   }
  },
  "datas": {
-  "old_sound_samples": {},
-  "sound_mouth_data": {},
-  "sound_subtitle_data": {},
-  "large_permutation_sound_samples": {},
-  "sound_lipsync_data": {},
-  "sound_effect_hardware_format_data_definition": {},
-  "sound_samples": {},
-  "generic_tag_data": {}
+  "old_sound_samples": {
+   "flags": 1,
+   "alignment_bits": 0,
+   "max_size": 134217728,
+   "max_size_string": "MAXIMUM_SOUND_DATA_SIZE"
+  },
+  "sound_mouth_data": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 8192,
+   "max_size_string": "MAXIMUM_SOUND_MOUTH_DATA_SIZE"
+  },
+  "sound_subtitle_data": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 512,
+   "max_size_string": "MAXIMUM_SOUND_SUBTITLE_DATA_SIZE"
+  },
+  "large_permutation_sound_samples": {
+   "flags": 1,
+   "alignment_bits": 0,
+   "max_size": 134217728,
+   "max_size_string": "MAXIMUM_SOUND_DATA_SIZE"
+  },
+  "sound_lipsync_data": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 1048576,
+   "max_size_string": "MAXIMUM_SOUND_LIPSYNC_DATA_SIZE"
+  },
+  "sound_effect_hardware_format_data_definition": {
+   "flags": 0,
+   "alignment_bits": 2,
+   "max_size": 1024,
+   "max_size_string": "k_maximum_sound_effect_hardware_format_size"
+  },
+  "sound_samples": {
+   "flags": 1,
+   "alignment_bits": 0,
+   "max_size": 134217728,
+   "max_size_string": "MAXIMUM_SOUND_DATA_SIZE"
+  },
+  "generic_tag_data": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 301989888,
+   "max_size_string": "MAX(MAXIMUM_SOUND_MOUTH_DATA_SIZE, MAXIMUM_SOUND_LIPSYNC_DATA_SIZE)*MAXIMUM_PITCH_RANGES_PER_SOUND*MAXIMUM_PERMUTATIONS_PER_PITCH_RANGE"
+  }
  },
  "struct_versions": {
   "large_sound_playback_parameters_struct_2": {

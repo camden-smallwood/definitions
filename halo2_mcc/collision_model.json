@@ -1975,9 +1975,24 @@
   }
  },
  "datas": {
-  "error_report_string_data": {},
-  "mopp_codes_data": {},
-  "tag_import_file_zipped_data_definition": {}
+  "error_report_string_data": {
+   "flags": 2,
+   "alignment_bits": 0,
+   "max_size": 8192,
+   "max_size_string": "MAXIMUM_ERROR_REPORT_STRING_LENGTH+1"
+  },
+  "mopp_codes_data": {
+   "flags": 0,
+   "alignment_bits": 4,
+   "max_size": 1048576,
+   "max_size_string": "k_maximum_mopp_codes_size"
+  },
+  "tag_import_file_zipped_data_definition": {
+   "flags": 5,
+   "alignment_bits": 0,
+   "max_size": 167772160,
+   "max_size_string": "MAXIMUM_TAG_IMPORT_FILE_ZIPPED_DATA_SIZE_IN_BYTES"
+  }
  },
  "struct_versions": {
   "edges_block_struct": {

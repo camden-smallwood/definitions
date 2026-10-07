@@ -1847,8 +1847,18 @@
   }
  },
  "datas": {
-  "sound_effect_hardware_format_data_definition": {},
-  "generic_tag_data": {}
+  "sound_effect_hardware_format_data_definition": {
+   "flags": 0,
+   "alignment_bits": 2,
+   "max_size": 1024,
+   "max_size_string": "k_maximum_sound_effect_hardware_format_size"
+  },
+  "generic_tag_data": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 301989888,
+   "max_size_string": "MAX(MAXIMUM_SOUND_MOUTH_DATA_SIZE, MAXIMUM_SOUND_LIPSYNC_DATA_SIZE)*MAXIMUM_PITCH_RANGES_PER_SOUND*MAXIMUM_PERMUTATIONS_PER_PITCH_RANGE"
+  }
  },
  "struct_versions": {
   "mapping_function_2": {

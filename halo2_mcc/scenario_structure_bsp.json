@@ -9012,21 +9012,96 @@
   }
  },
  "datas": {
-  "tag_import_file_zipped_data_definition": {},
-  "structure_bsp_cluster_data_definition": {},
-  "global_section_mopp_code_data": {},
-  "global_geometry_runtime_plane_data_definition": {},
-  "structure_bsp_cluster_visibility_mopp_code_data": {},
-  "structure_bsp_cluster_visibility_subcluster_bitvector": {},
-  "cluster_mopp_code_data": {},
-  "mopp_codes_data": {},
-  "structure_bsp_cluster_encoded_sound_data": {},
-  "error_report_string_data": {},
-  "projection_tag_data_definition": {},
-  "visibility_clusters_tag_data_definition": {},
-  "cluster_remap_table_tag_data_definition": {},
-  "visibility_volumes_table_tag_data_definition": {},
-  "mopp_code_data": {}
+  "tag_import_file_zipped_data_definition": {
+   "flags": 5,
+   "alignment_bits": 0,
+   "max_size": 167772160,
+   "max_size_string": "MAXIMUM_TAG_IMPORT_FILE_ZIPPED_DATA_SIZE_IN_BYTES"
+  },
+  "structure_bsp_cluster_data_definition": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 65536,
+   "max_size_string": "MAXIMUM_CLUSTER_DATA_SIZE"
+  },
+  "global_section_mopp_code_data": {
+   "flags": 0,
+   "alignment_bits": 4,
+   "max_size": 393216,
+   "max_size_string": "k_maximum_structure_bsp_cluster_visibility_mopp_size"
+  },
+  "global_geometry_runtime_plane_data_definition": {
+   "flags": 0,
+   "alignment_bits": 4,
+   "max_size": 2097120,
+   "max_size_string": "MAXIMUM_BYTES_PER_GEOMETRY_RUNTIME_ISQ_PLANE_DATA"
+  },
+  "structure_bsp_cluster_visibility_mopp_code_data": {
+   "flags": 0,
+   "alignment_bits": 4,
+   "max_size": 393216,
+   "max_size_string": "k_maximum_structure_bsp_cluster_visibility_mopp_size"
+  },
+  "structure_bsp_cluster_visibility_subcluster_bitvector": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 1024,
+   "max_size_string": "BIT_VECTOR_SIZE_IN_LONGS(k_maximum_structure_bsp_subclusters_per_cluster)"
+  },
+  "cluster_mopp_code_data": {
+   "flags": 0,
+   "alignment_bits": 4,
+   "max_size": 1048576,
+   "max_size_string": "k_meg"
+  },
+  "mopp_codes_data": {
+   "flags": 0,
+   "alignment_bits": 4,
+   "max_size": 1048576,
+   "max_size_string": "k_maximum_mopp_codes_size"
+  },
+  "structure_bsp_cluster_encoded_sound_data": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 131072,
+   "max_size_string": "(MAXIMUM_CLUSTERS_PER_STRUCTURE*MAXIMUM_CLUSTERS_PER_STRUCTURE/2)*sizeof(byte)"
+  },
+  "error_report_string_data": {
+   "flags": 2,
+   "alignment_bits": 0,
+   "max_size": 8192,
+   "max_size_string": "MAXIMUM_ERROR_REPORT_STRING_LENGTH+1"
+  },
+  "projection_tag_data_definition": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 2664,
+   "max_size_string": "sizeof(struct visibility_projection)*MAXIMUM_PROJECTIONS_PER_VISIBILITY_REGION"
+  },
+  "visibility_clusters_tag_data_definition": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 3328,
+   "max_size_string": "sizeof(struct visibility_cluster)*MAXIMUM_CLUSTERS_PER_VISIBILITY_REGION"
+  },
+  "cluster_remap_table_tag_data_definition": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 512,
+   "max_size_string": "sizeof(long)*MAXIMUM_CLUSTERS_PER_VISIBILITY_REGION"
+  },
+  "visibility_volumes_table_tag_data_definition": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 135168,
+   "max_size_string": "sizeof(struct visibility_volume)*MAXIMUM_VOLUMES_PER_VISIBILITY_REGION"
+  },
+  "mopp_code_data": {
+   "flags": 0,
+   "alignment_bits": 4,
+   "max_size": 1048576,
+   "max_size_string": "k_maximum_mopp_code_size"
+  }
  },
  "struct_versions": {
   "edges_block_struct": {

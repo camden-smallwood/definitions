@@ -14069,12 +14069,42 @@
   }
  },
  "datas": {
-  "editor_scenario_data_definition": {},
-  "recorded_animation_event_stream_data": {},
-  "hs_old_syntax_data_definition": {},
-  "hs_string_data_definition": {},
-  "hs_source_data_definition": {},
-  "old_unused_mopp_code_data": {}
+  "editor_scenario_data_definition": {
+   "flags": 4,
+   "alignment_bits": 0,
+   "max_size": 65536,
+   "max_size_string": "MAXIMUM_EDITOR_SCENARIO_DATA_SIZE"
+  },
+  "recorded_animation_event_stream_data": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 2097152,
+   "max_size_string": "MAXIMUM_RECORDED_ANIMATION_DATA_SIZE"
+  },
+  "hs_old_syntax_data_definition": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 1290316,
+   "max_size_string": "(sizeof(s_data_array)+k_maximum_hs_syntax_nodes_per_scenario*sizeof(struct hs_syntax_node))"
+  },
+  "hs_string_data_definition": {
+   "flags": 0,
+   "alignment_bits": 0,
+   "max_size": 819200,
+   "max_size_string": "k_maximum_hs_string_data_per_scenario"
+  },
+  "hs_source_data_definition": {
+   "flags": 2,
+   "alignment_bits": 0,
+   "max_size": 1048576,
+   "max_size_string": "k_maximum_hs_source_data_per_file"
+  },
+  "old_unused_mopp_code_data": {
+   "flags": 0,
+   "alignment_bits": 4,
+   "max_size": 1048576,
+   "max_size_string": "k_maximum_mopp_code_size"
+  }
  },
  "struct_versions": {
   "scenario_structure_bsp_reference_block_struct": {

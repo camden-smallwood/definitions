@@ -487,7 +487,8 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\physics\\physics_model_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x14028DE70"
+      "element_label_callback": "reach_tag_test.exe 0x14028DE70",
+      "element_label": "physics_model"
     },
     "physics_model_position_motor_block": {
       "guid": "7355c6c0ce4442e34bc9dabf8cce2ef9",
@@ -533,7 +534,8 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\physics\\physics_model_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x14028DF20"
+      "element_label_callback": "reach_tag_test.exe 0x14028DF20",
+      "element_label": "physics_model"
     },
     "phantom_types_block": {
       "guid": "b2439ed678417776eb8a12927c2cabe2",
@@ -841,7 +843,44 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\physics\\physics_model_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x14028DB20"
+      "element_label_callback": "reach_tag_test.exe 0x14028DB20",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x14028DB20",
+        "label": [
+          {
+            "when": "({constraints|count} == 0 || any(constraints[*], flags & 2)) && {node a|index} != -1 && {node b|index} != -1",
+            "format": "*{/nodes[{node a|index}]/name}:{/nodes[{node b|index}]/name}"
+          },
+          {
+            "when": "({constraints|count} == 0 || any(constraints[*], flags & 2)) && {node a|index} != -1 && {node b|index} == -1",
+            "format": "*{/nodes[{node a|index}]/name}:parent"
+          },
+          {
+            "when": "({constraints|count} == 0 || any(constraints[*], flags & 2)) && {node a|index} == -1 && {node b|index} != -1",
+            "format": "*parent:{/nodes[{node b|index}]/name}"
+          },
+          {
+            "when": "({constraints|count} == 0 || any(constraints[*], flags & 2)) && {node a|index} == -1 && {node b|index} == -1",
+            "format": "*parent:parent"
+          },
+          {
+            "when": "(!({constraints|count} == 0 || any(constraints[*], flags & 2))) && {node a|index} != -1 && {node b|index} != -1",
+            "format": " {/nodes[{node a|index}]/name}:{/nodes[{node b|index}]/name}"
+          },
+          {
+            "when": "(!({constraints|count} == 0 || any(constraints[*], flags & 2))) && {node a|index} != -1 && {node b|index} == -1",
+            "format": " {/nodes[{node a|index}]/name}:parent"
+          },
+          {
+            "when": "(!({constraints|count} == 0 || any(constraints[*], flags & 2))) && {node a|index} == -1 && {node b|index} != -1",
+            "format": " parent:{/nodes[{node b|index}]/name}"
+          },
+          {
+            "when": "(!({constraints|count} == 0 || any(constraints[*], flags & 2))) && {node a|index} == -1 && {node b|index} == -1",
+            "format": " parent:parent"
+          }
+        ]
+      }
     },
     "physics_model_constraint_edge_constraint_block": {
       "guid": "54c6c5477b4f7f70b5a96b9579223eac",
@@ -1154,7 +1193,36 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\physics\\physics_model_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x14028D670"
+      "element_label_callback": "reach_tag_test.exe 0x14028D670",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x14028D670",
+        "label": [
+          {
+            "when": "{node|index} >= 0 && {node|index} < {/nodes|count} && {region|index} >= 0 && {region|index} < {/regions|count} && {permutattion|index} >= 0 && {permutattion|index} < {/regions[{region|index}]/permutations|count}",
+            "format": "{/nodes[{node|index}]/name} ({/regions[{region|index}]/name} {/regions[{region|index}]/permutations[{permutattion|index}]/name})"
+          },
+          {
+            "when": "{node|index} >= 0 && {node|index} < {/nodes|count} && {region|index} >= 0 && {region|index} < {/regions|count}",
+            "format": "{/nodes[{node|index}]/name} ({/regions[{region|index}]/name} NONE)"
+          },
+          {
+            "when": "{node|index} >= 0 && {node|index} < {/nodes|count}",
+            "format": "{/nodes[{node|index}]/name} (NONE NONE)"
+          },
+          {
+            "when": "{region|index} >= 0 && {region|index} < {/regions|count} && {permutattion|index} >= 0 && {permutattion|index} < {/regions[{region|index}]/permutations|count}",
+            "format": "NONE ({/regions[{region|index}]/name} {/regions[{region|index}]/permutations[{permutattion|index}]/name})"
+          },
+          {
+            "when": "{region|index} >= 0 && {region|index} < {/regions|count}",
+            "format": "NONE ({/regions[{region|index}]/name} NONE)"
+          },
+          {
+            "when": "1",
+            "format": "NONE (NONE NONE)"
+          }
+        ]
+      }
     },
     "regions_block": {
       "guid": "c400cf435d42fa48e345399f4d41ccc0",
@@ -1295,7 +1363,8 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\physics\\physics_model_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x14028DA90"
+      "element_label_callback": "reach_tag_test.exe 0x14028DA90",
+      "element_label": "materials"
     },
     "spheres_block_struct": {
       "guid": "4a02a213604ee8ce39e8ef8c83731737",

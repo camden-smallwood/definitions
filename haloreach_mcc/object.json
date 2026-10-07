@@ -489,7 +489,28 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\objects\\object_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140D88A30"
+      "element_label_callback": "reach_tag_test.exe 0x140D88A30",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140D88A30",
+        "label": [
+          {
+            "when": "{import name} != \"\" && {export name} != \"\"",
+            "format": "{import name} -> {export name}"
+          },
+          {
+            "when": "{import name} != \"\"",
+            "format": "{import name} -> <unnamed>"
+          },
+          {
+            "when": "{export name} != \"\"",
+            "format": "<unnamed> -> {export name}"
+          },
+          {
+            "when": "1",
+            "format": "<unnamed> -> <unnamed>"
+          }
+        ]
+      }
     },
     "mapping_function": {
       "guid": "8fa9145a8444fa53d46810809e45f10a",
@@ -561,7 +582,28 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\objects\\object_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140D889E0"
+      "element_label_callback": "reach_tag_test.exe 0x140D889E0",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140D889E0",
+        "label": [
+          {
+            "when": "{#count} == 1",
+            "format": "symmetric"
+          },
+          {
+            "when": "{#} == 0",
+            "format": "increasing"
+          },
+          {
+            "when": "{#} == 1",
+            "format": "decreasing"
+          },
+          {
+            "when": "1",
+            "format": ""
+          }
+        ]
+      }
     },
     "object_runtime_interpolator_functions_block": {
       "guid": "e6dbefa2c24dee4b10245f30d9baf532",
@@ -877,7 +919,13 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\objects\\object_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140D88B80"
+      "element_label_callback": "reach_tag_test.exe 0x140D88B80",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140D88B80",
+        "label": [
+          "{#|enum:scenario_object_active_change_color_flags}"
+        ]
+      }
     },
     "object_change_color_initial_permutation": {
       "guid": "793e40fc2e4da6a7216c0cad7b6ca0c2",

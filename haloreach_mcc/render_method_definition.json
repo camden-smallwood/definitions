@@ -147,7 +147,16 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\render_methods\\render_method_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1407E9EF0"
+      "element_label_callback": "reach_tag_test.exe 0x1407E9EF0",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1407E9EF0",
+        "label": [
+          {
+            "when": "1",
+            "format": "{category name}"
+          }
+        ]
+      }
     },
     "render_method_options_block": {
       "guid": "493c64dc7d4ddb41904c8dbb10f4ae71",
@@ -183,7 +192,16 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\render_methods\\render_method_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1407E9F30"
+      "element_label_callback": "reach_tag_test.exe 0x1407E9F30",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1407E9F30",
+        "label": [
+          {
+            "when": "1",
+            "format": "{option name}"
+          }
+        ]
+      }
     },
     "render_method_entry_points_block": {
       "guid": "d3696bb6fa447867493587acfb329ec5",
@@ -207,7 +225,50 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\render_methods\\render_method_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1407E9FB0"
+      "element_label_callback": "reach_tag_test.exe 0x1407E9FB0",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1407E9FB0",
+        "label": [
+          "{entry point|map:entry_points}"
+        ],
+        "maps": {
+          "entry_points": {
+            "names": [
+              "default",
+              "albedo",
+              "static_default",
+              "static_per_pixel",
+              "static_per_vertex",
+              "static_sh",
+              "static_prt_ambient",
+              "static_prt_linear",
+              "static_prt_quadratic",
+              "dynamic_light",
+              "shadow_generate",
+              "shadow_apply",
+              "active_camo",
+              "lightmap_debug_mode",
+              "vertex color lighting",
+              "water tessellation",
+              "water shading",
+              "dynamic_light_cinematic",
+              "single_pass_per_pixel",
+              "single_pass_per_vertex",
+              "single_pass_single_probe",
+              "single_pass_single_probe_ambient",
+              "imposter_static_lighting_sh",
+              "imposter_static_lighting_prt_ambient",
+              "dynamic_light_hq_shadows",
+              "dynamic_light_cinematic_hq_shadows",
+              "static_nv_sh",
+              "kernel5_non_xenon_output",
+              "depth_to_rgba_pack",
+              "linear_depth_downsample"
+            ],
+            "else": "unknown"
+          }
+        }
+      }
     },
     "render_method_pass_block": {
       "guid": "13081af42d49b7bf5ba9508bc0b07424",

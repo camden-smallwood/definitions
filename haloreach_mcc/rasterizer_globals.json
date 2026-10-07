@@ -190,7 +190,35 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\rasterizer\\rasterizer_global_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1407FF650"
+      "element_label_callback": "reach_tag_test.exe 0x1407FF650",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1407FF650",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "default 2D texture (white)",
+              "default normal map (no bump)",
+              "default cube map (error pattern)",
+              "color bars",
+              "black 2D texture",
+              "transparent black 2D texture",
+              "gray 2D texture",
+              "auto exposure weight",
+              "unused08",
+              "stencil dither pattern",
+              "smooth noise warp",
+              "ripple pattern",
+              "unused12",
+              "lightning random",
+              "unused14",
+              "monochrome noise for screen effect"
+            ]
+          }
+        }
+      }
     },
     "material_textures_refs_block": {
       "guid": "44b84d0fcd489ffd47aadcb9d4cc472d",
@@ -214,7 +242,21 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\rasterizer\\rasterizer_global_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1407FF690"
+      "element_label_callback": "reach_tag_test.exe 0x1407FF690",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1407FF690",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "VMF diffuse table",
+              "direction lookup table"
+            ]
+          }
+        }
+      }
     },
     "explicit_shader_refs_block": {
       "guid": "6b04d3d3ab4c92f17b11bc956f84cd3c",
@@ -262,7 +304,209 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\rasterizer\\rasterizer_global_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1407FF6D0"
+      "element_label_callback": "reach_tag_test.exe 0x1407FF6D0",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1407FF6D0",
+        "label": [
+          {
+            "when": "({#count} == 171 || !({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")) && starts_with({#|map:explicit}, \"(UNUSED)\") && ({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")",
+            "format": "(REMOVE!){#|map:explicit}"
+          },
+          {
+            "when": "({#count} == 171 || !({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")) && starts_with({#|map:explicit}, \"(UNUSED)\")",
+            "format": "IGNORE (UNUSED)"
+          },
+          {
+            "when": "({#count} == 171 || !({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")) && !({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")",
+            "format": "(IGNORE) {#|map:explicit}"
+          },
+          {
+            "when": "{#count} == 171 || !({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")",
+            "format": "{#|map:explicit}"
+          },
+          {
+            "when": "1",
+            "format": "{#}. {#block}"
+          }
+        ],
+        "maps": {
+          "explicit": {
+            "names": [
+              "debug",
+              "debug2d",
+              "copy w/scale",
+              "bloom: spike blur (vertical)",
+              "bloom: spike blur (horizontal)",
+              "bloom: downsample 4x4 (with bloom curve)",
+              "(UNUSED)bloom: downsample 4x4",
+              "bloom: copy RGBE -> RGB",
+              "(UNUSED)08",
+              "(UNUSED)bloom: add downsampled",
+              "bloom: add",
+              "bloom: kernel blur (11 horizontal)",
+              "bloom: kernel blur (11 vertical)",
+              "cubemap: blur (phi)",
+              "cubemap: blur (theta)",
+              "cubemap: clamp",
+              "cubemap: divide",
+              "write depth",
+              "final composite",
+              "(UNUSED)19",
+              "transparent",
+              "(UNUSED)(legacy) shield meter",
+              "(UNUSED)(legacy) general meter",
+              "overhead map geometry",
+              "(UNUSED)(legacy) hud bitmap",
+              "(UNUSED)25",
+              "particle update",
+              "particle spawn",
+              "screenshot combine",
+              "downsample 2x2",
+              "rotate 2d",
+              "bspline resample",
+              "bloom; downsample 4x4 (with bloom curve + DOF)",
+              "final composite (with DOF)",
+              "convolve 5-tap kernel",
+              "exposure downsample",
+              "(UNUSED)yuv to rgb",
+              "displacement",
+              "screenshot display",
+              "downsample 4x4 block",
+              "crop",
+              "screenshot combine (with DOF)",
+              "gamma correction",
+              "contrail spawn",
+              "contrail update",
+              "stencil 8x8 dither pattern",
+              "lens flare render",
+              "decorator render wind billboard",
+              "(UNUSED)bloom: NEW downsample 4x4 block (with bloom curve)",
+              "bloom: NEW downsample 4x4 gaussian",
+              "apply color matrix",
+              "copy",
+              "shadow geometry",
+              "shadow apply",
+              "gradient",
+              "alpha test",
+              "patchy fog",
+              "light volume",
+              "water ripple",
+              "double gradient",
+              "sniper scope",
+              "shield impact",
+              "(UNUSED)player emblem-world",
+              "(UNUSED)player emblem-screen",
+              "(UNUSED)implicit hill",
+              "(UNUSED)chud overlay blend",
+              "bloom add alpha1",
+              "(UNUSED)67",
+              "(UNUSED)restore LDR, HDR, and depth to EDRAM",
+              "beam",
+              "decorators static billboard",
+              "decorators mesh",
+              "decorators far object",
+              "decorators underwater",
+              "final composite zoom",
+              "(UNUSED)final composite debug",
+              "shadow_apply_point",
+              "shadow_apply_bilinear",
+              "shadow_apply_fancy",
+              "shadow_apply_faster",
+              "(UNUSED)shadow_apply_misc",
+              "displacement with motion blur",
+              "decorators volume",
+              "(UNUSED)screenshot memexport",
+              "(UNUSED)bloom: NEW downsample 4x4 gauss with curve LDR",
+              "(UNUSED)downsample 4x4 gauss w/o LDR",
+              "(UNUSED)downsample 4x4 gauss new",
+              "(UNUSED)bloom curve",
+              "(UNUSED)custom gamma correct",
+              "(UNUSED)pixel copy",
+              "(UNUSED)antialias blur combine",
+              "(UNUSED)91",
+              "hud camera",
+              "(UNUSED)hud camera nightvision",
+              "(UNUSED)hud camera mask",
+              "particle_overdraw_apply",
+              "lit_particle_overdraw_apply",
+              "(UNUSED)ssao",
+              "ssao_downsample_depth",
+              "light_apply",
+              "light_apply_frustum",
+              "light_apply_specular",
+              "light_apply_frustum_specular",
+              "light_apply_gel",
+              "light_apply_frustum_gel",
+              "light_apply_specular_gel",
+              "light_apply_frustum_specular_gel",
+              "light_expensive_apply",
+              "light_expensive_apply_frustum",
+              "light_expensive_apply_specular",
+              "light_expensive_apply_frustum_specular",
+              "light_expensive_apply_gel",
+              "light_expensive_apply_frustum_gel",
+              "light_expensive_apply_specular_gel",
+              "light_expensive_apply_frustum_specular_gel",
+              "shadow_geometry_projective",
+              "render imposter",
+              "render_instance_imposter",
+              "paint_constant_color",
+              "shield impact procedural uv",
+              "render_rain_particles",
+              "(UNUSED)weather wet",
+              "weather/update_rain_particles",
+              "weather/initialize_rain_particles",
+              "weather/initialize_splash_particles",
+              "weather/update_splash_particles",
+              "weather/render_splash_particles",
+              "rain sheets",
+              "screen space atmosphere fog",
+              "debug portals",
+              "shader light debug",
+              "shader light debug frustum",
+              "cui copy",
+              "cui change channel",
+              "cui linear gradient",
+              "cui directional blur",
+              "cui overlay mask",
+              "initialize cheap particles",
+              "update cheap particles",
+              "render cheap particles",
+              "spawn cheap particles",
+              "cui emblem",
+              "planar fog",
+              "(UNUSED)stencil_restore",
+              "shadow_single_pass_apply",
+              "cubemap_combine_maximum",
+              "lightning_generate",
+              "lightning_render",
+              "(UNUSED)bilateral_horizontal",
+              "(UNUSED)bilateral_vertical",
+              "(UNUSED)cheap_particles_debug",
+              "(UNUSED)rain_light_volume",
+              "paint_constant_color_at_depth",
+              "weather/render_splash_ripples",
+              "postprocess/hdao",
+              "cui debug",
+              "rigid world geometry",
+              "effects debug wireframe",
+              "effects debug heatmap",
+              "downsample_2x2_block_bloom",
+              "(UNUSED)kernel_5_sqrt",
+              "cui gamma correct copy",
+              "cui gamma correct overlay mask",
+              "copy surface sqrt",
+              "decorator wind volume",
+              "stipple pattern",
+              "fxaa",
+              "downsample depth",
+              "build particle overdraw tile list",
+              "durango downsample depth",
+              "shadow apply hq"
+            ]
+          }
+        }
+      }
     },
     "g_null_block": {
       "guid": "a6487e75bc4cac9c1ca146bcf3e2f763",

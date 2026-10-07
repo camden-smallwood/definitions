@@ -618,7 +618,16 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\items\\projectile_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140D90CE0"
+      "element_label_callback": "reach_tag_test.exe 0x140D90CE0",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140D90CE0",
+        "label": [
+          {
+            "when": "1",
+            "format": "{material name}"
+          }
+        ]
+      }
     },
     "projectile_material_response_block": {
       "guid": "7f6308339a4dd1a678e93898052b15c1",
@@ -713,7 +722,37 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\items\\projectile_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140D90D20"
+      "element_label_callback": "reach_tag_test.exe 0x140D90D20",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140D90D20",
+        "label": [
+          {
+            "when": "{material name} != \"\"",
+            "format": "{material name} -> {response|map:responses}"
+          },
+          {
+            "when": "1",
+            "format": "no material"
+          }
+        ],
+        "maps": {
+          "responses": {
+            "names": [
+              "impact (detonate)",
+              "fizzle",
+              "overpenetrate",
+              "attach",
+              "bounce",
+              "bounce (dud)",
+              "fizzle (ricochet)",
+              "turn physical",
+              "airstrike",
+              "damage",
+              "angle"
+            ]
+          }
+        }
+      }
     },
     "brute_grenade_block": {
       "guid": "db56fb7c494af5210ddc449398654b0d",

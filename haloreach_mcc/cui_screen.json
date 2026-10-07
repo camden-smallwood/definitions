@@ -335,7 +335,8 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\interface\\cui\\cui_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1408E9AB0"
+      "element_label_callback": "reach_tag_test.exe 0x1408E9AB0",
+      "element_label": "overlay"
     },
     "component_properties_definition": {
       "guid": "cff72084238c8c439c91c7faf7fee1f4",
@@ -810,7 +811,8 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\interface\\cui\\cui_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1408E9B90"
+      "element_label_callback": "reach_tag_test.exe 0x1408E9B90",
+      "element_label": "overlay"
     },
     "component_editor_only_definition": {
       "guid": "f3be536f7ea3b64abf15c8f038edde45",
@@ -921,7 +923,17 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\interface\\cui\\cui_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1408E9C70"
+      "element_label_callback": "reach_tag_test.exe 0x1408E9C70",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1408E9C70",
+        "label": [
+          {
+            "when": "1",
+            "format": "{source component name}.{source property name}->{target component name}.{target property name}"
+          }
+        ],
+        "max_length": 127
+      }
     },
     "binding_conversion_long_comparison_block_definition": {
       "guid": "43506e6dd746d01353f80db490e3c4d5",

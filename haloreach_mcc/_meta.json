@@ -247,6 +247,512 @@
     "fallback_name": "struct",
     "bad_index": "BAD: %d",
     "flags": "names",
-    "source": "ManagedBlam sub_180442BF0 / sub_180442800 / sub_1804429F0 / sub_180442DA0 (ManagedBlam_patched.dll)"
+    "source": "ManagedBlam sub_180442BF0 / sub_180442800 / sub_1804429F0 / sub_180442DA0 (ManagedBlam_patched.dll)",
+    "entries": {
+      "ai_reference_frame": {
+        "source": "reach_tag_test.exe 0x141265D10; reads the owning tag as a scenario; outside one the placement lookup has no scenario to read",
+        "label": [
+          {
+            "format": "{/{object id/type|map:ai_reference_frame_placement_blocks}[object data/object id/unique id == {object id/unique id} && object data/object id/source == {object id/source} && object data/object id/type == {object id/type} && (object data/object id/source != 0 || object data/object id/origin bsp index == {object id/origin bsp index})]/name|none:[invalid]|bad:[invalid]}:{node index}",
+            "when": "{#group} == \"scnr\" && {object id/source} <= 1 && {/{object id/type|map:ai_reference_frame_placement_blocks}[object data/object id/unique id == {object id/unique id} && object data/object id/source == {object id/source} && object data/object id/type == {object id/type} && (object data/object id/source != 0 || object data/object id/origin bsp index == {object id/origin bsp index})]}"
+          },
+          {
+            "format": "[invalid]:{node index}",
+            "when": "1"
+          }
+        ],
+        "maps": {
+          "ai_reference_frame_placement_blocks": {
+            "names": [
+              "bipeds",
+              "vehicles",
+              "weapons",
+              "equipment",
+              "terminals",
+              null,
+              "scenery",
+              "machines",
+              "controls",
+              "sound scenery",
+              "crates",
+              "creatures",
+              "giants",
+              "effect scenery"
+            ]
+          }
+        }
+      },
+      "materials": {
+        "source": "reach_tag_test.exe 0x14028DA90",
+        "label": [
+          {
+            "format": "{name} ({global material name})",
+            "when": "{global material name} != \"\""
+          },
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "particle_system_definition_block_new": {
+        "source": "reach_tag_test.exe 0x1405C7FD0",
+        "label": [
+          {
+            "format": "{particle}",
+            "when": "1"
+          }
+        ]
+      },
+      "chud_widget_state_data_base": {
+        "source": "reach_tag_test.exe 0x1408E2AD0",
+        "label": [
+          {
+            "join": "",
+            "parts": [
+              [
+                {
+                  "format": "A:{Active State|join: AND }",
+                  "when": "{Active State|count} > 0"
+                }
+              ],
+              [
+                {
+                  "format": " F:{Flash State|join: AND }",
+                  "when": "{Flash State|count} > 0"
+                }
+              ],
+              [
+                {
+                  "format": " H:{Hidden State|join: AND }",
+                  "when": "{Hidden State|count} > 0"
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "chud_widget_state_and": {
+        "source": "reach_tag_test.exe 0x1408E2A10",
+        "label": [
+          {
+            "format": "({OR|join: OR })",
+            "when": "1"
+          }
+        ]
+      },
+      "chud_widget_state_or": {
+        "source": "reach_tag_test.exe 0x1408E29C0",
+        "label": [
+          {
+            "format": "",
+            "when": "{condition} < 0 || {condition} > 329"
+          },
+          {
+            "format": "NOT {condition|enum:chud_state_enum}",
+            "when": "{flags} & 1"
+          },
+          {
+            "format": "{condition|enum:chud_state_enum}",
+            "when": "1"
+          }
+        ]
+      },
+      "chud_widget_state_editor": {
+        "source": "reach_tag_test.exe 0x1408E2A60; the callback writes nothing",
+        "label": [
+          {
+            "format": "",
+            "when": "1"
+          }
+        ]
+      },
+      "chud_widget_placement_data_base": {
+        "source": "reach_tag_test.exe 0x1408E2C80",
+        "label": [
+          {
+            "join": "",
+            "parts": [
+              [
+                {
+                  "format": "{0|enum:chud_curvature_res_flags}",
+                  "when": "{window state} & 1"
+                }
+              ],
+              [
+                {
+                  "format": "{1|enum:chud_curvature_res_flags}",
+                  "when": "{window state} & 2"
+                }
+              ],
+              [
+                {
+                  "format": "{2|enum:chud_curvature_res_flags}",
+                  "when": "{window state} & 4"
+                }
+              ],
+              [
+                {
+                  "format": "{3|enum:chud_curvature_res_flags}",
+                  "when": "{window state} & 8"
+                }
+              ],
+              [
+                {
+                  "format": "{4|enum:chud_curvature_res_flags}",
+                  "when": "{window state} & 16"
+                }
+              ]
+            ],
+            "prefix": "{anchor type|map:chud_widget_placement_data_base_anchors}"
+          }
+        ],
+        "maps": {
+          "chud_widget_placement_data_base_anchors": {
+            "names": [
+              "parent",
+              "top left",
+              "top center",
+              "top right",
+              "center",
+              "bottom left",
+              "bottom center",
+              "bottom right",
+              "motion sensor",
+              "d-damge",
+              "messaging",
+              "state msg left",
+              "state msg right",
+              "msg bottom state",
+              "msg bottom prim",
+              "tracked target",
+              "<tracking object>",
+              "crosshair",
+              "backpack weapon",
+              "grenade",
+              "equipment",
+              "weapon target",
+              "ghost reticule",
+              "hologram target"
+            ]
+          }
+        }
+      },
+      "cinematic_shot": {
+        "source": "reach_tag_test.exe 0x1402FB830",
+        "label": [
+          "Shot {#1}"
+        ]
+      },
+      "cinematic_shot_object_function": {
+        "source": "reach_tag_test.exe 0x1402FB760; reads the owning tag as a cinematic scene",
+        "label": [
+          {
+            "format": "{#}. {/objects[{object|index}]/name} ({function name})",
+            "when": "{#group} == \"cisc\" && {object|index} >= 0 && {object|index} < {/objects|count}"
+          },
+          {
+            "format": "{#}. NONE ({function name})",
+            "when": "1"
+          }
+        ]
+      },
+      "cinematic_shot_object_function_keyframe": {
+        "source": "reach_tag_test.exe 0x1402FB6F0",
+        "label": [
+          {
+            "format": "Frame {frame:3d} (Disable)",
+            "when": "{flags} & 1"
+          },
+          {
+            "format": "Frame {frame:3d}",
+            "when": "1"
+          }
+        ]
+      },
+      "cinematic_frame": {
+        "source": "reach_tag_test.exe 0x1402FB6C0",
+        "label": [
+          "Frame {#1}"
+        ]
+      },
+      "overlay": {
+        "source": "reach_tag_test.exe 0x1408E9AB0, 0x1408E9B90",
+        "label": [
+          {
+            "format": "{resolution} {theme}",
+            "when": "1"
+          }
+        ],
+        "max_length": 127
+      },
+      "unit_camera_track": {
+        "source": "reach_tag_test.exe 0x140D87590",
+        "label": [
+          "{#|map:unit_camera_track}"
+        ],
+        "maps": {
+          "unit_camera_track": {
+            "names": [
+              "loose",
+              "tight"
+            ]
+          }
+        }
+      },
+      "player_representation": {
+        "source": "reach_tag_test.exe 0x140122390",
+        "label": [
+          "{#|map:player_representation}"
+        ],
+        "maps": {
+          "player_representation": {
+            "names": [
+              "spartan",
+              "elite",
+              "monitor"
+            ]
+          }
+        }
+      },
+      "materials_2": {
+        "source": "reach_tag_test.exe 0x1403EB2E0",
+        "label": [
+          {
+            "format": "${name}",
+            "when": "{flags} & 8"
+          },
+          {
+            "format": "*{name}",
+            "when": "{flags} & 16"
+          },
+          {
+            "format": "-{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "specialized_incident_object_properties": {
+        "source": "reach_tag_test.exe 0x140304860",
+        "label": [
+          {
+            "format": "{bucket type|map:specialized_incident_object_properties_types} {bucket class|enum:campaign_metagame_bucket_class_with_none_enum}",
+            "when": "1"
+          }
+        ],
+        "maps": {
+          "specialized_incident_object_properties_types": {
+            "names": [
+              "any",
+              "brute",
+              "grunt",
+              "jackel",
+              "skirmisher",
+              "marine",
+              "spartan",
+              "bugger",
+              "hunter",
+              "flood_infection",
+              "flood_carrier",
+              "flood_combat"
+            ]
+          }
+        }
+      },
+      "incident_accumulator_child_incident": {
+        "source": "reach_tag_test.exe 0x140304900",
+        "label": [
+          {
+            "format": "{count} {incident name}",
+            "when": "1"
+          }
+        ]
+      },
+      "game_incident_response": {
+        "source": "reach_tag_test.exe 0x14060D0D0",
+        "label": [
+          {
+            "join": "",
+            "parts": [
+              [
+                {
+                  "format": " {heat award} heat",
+                  "when": "{heat award} != 0"
+                }
+              ],
+              [
+                {
+                  "format": " {game engine event}",
+                  "when": "{game engine event} != \"\""
+                }
+              ],
+              [
+                {
+                  "format": " {medal}",
+                  "when": "{medal} != \"\""
+                }
+              ],
+              [
+                {
+                  "format": " {achievement}",
+                  "when": "{achievement} != \"\""
+                }
+              ]
+            ]
+          }
+        ]
+      },
+      "model_material_block": {
+        "source": "reach_tag_test.exe 0x1402839A0",
+        "label": [
+          {
+            "format": "{material name} ({global material name})",
+            "when": "{global material name} != \"\""
+          },
+          {
+            "format": "{material name}",
+            "when": "1"
+          }
+        ]
+      },
+      "map_variant_palettes_compatibility": {
+        "source": "reach_tag_test.exe 0x1402BB470; names the animation through the owning graph's runtime inheritance list; no template follows a reference yet; reach_tag_test.exe 0x140356C20; prints the owning scenario's palette hash and quota, which no template computes",
+        "label": null
+      },
+      "physics_model": {
+        "source": "reach_tag_test.exe 0x14028DE70, 0x14028DF20",
+        "label": [
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "scenario_object": {
+        "source": "reach_tag_test.exe 0x140348A30",
+        "label": [
+          {
+            "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}",
+            "when": "{#group} == \"scnr\""
+          },
+          {
+            "format": " {type|none:NONE|bad:BAD}",
+            "when": "1"
+          }
+        ]
+      },
+      "squads": {
+        "source": "reach_tag_test.exe 0x1412396F0",
+        "label": [
+          {
+            "format": "{name} ({template})",
+            "when": "{squad template index} != -1"
+          },
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "zone_set": {
+        "source": "reach_tag_test.exe 0x14126C4D0",
+        "label": [
+          {
+            "format": "Invalid zone",
+            "when": "{#group} == \"scnr\" && ({zone|index} < 0 || {zone|index} >= {/zones|count})"
+          },
+          {
+            "format": "NONE ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\" && {area|index} == -1"
+          },
+          {
+            "format": "Invalid area ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\" && ({area|index} < 0 || {area|index} >= {/zones[{zone|index}]/areas|count})"
+          },
+          {
+            "format": "{/zones[{zone|index}]/areas[{area|index}]/name} ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\""
+          },
+          {
+            "format": "zone {zone|index}: area {area|index}",
+            "when": "1"
+          }
+        ]
+      },
+      "spawn_points": {
+        "source": "reach_tag_test.exe 0x141238DD0; the cell comes from the owning squad: its designer cells, or its templated cells once it has a template",
+        "label": [
+          {
+            "format": "NONE: {name}",
+            "when": "{cell|index} == -1"
+          },
+          {
+            "format": "ERROR: {name}",
+            "when": "{#group} != \"scnr\""
+          },
+          {
+            "format": "{../designer/cells[{cell|index}]}: {name}",
+            "when": "{../squad template index} == -1 && {cell|index} >= 0 && {cell|index} < {../designer/cells|count}"
+          },
+          {
+            "format": "{../templated/cells[{cell|index}]}: {name}",
+            "when": "{../squad template index} != -1 && {cell|index} >= 0 && {cell|index} < {../templated/cells|count}"
+          },
+          {
+            "format": "BAD {cell|index}: {name}",
+            "when": "1"
+          }
+        ]
+      },
+      "order_completion_condition": {
+        "source": "reach_tag_test.exe 0x141265CB0",
+        "label": [
+          {
+            "format": "NOT {rule type|enum:condition_type_enum}",
+            "when": "{flags} & 1"
+          },
+          {
+            "format": "{rule type|enum:condition_type_enum}",
+            "when": "1"
+          }
+        ]
+      },
+      "scenario_cubemap": {
+        "source": "reach_tag_test.exe 0x140356D40",
+        "label": [
+          {
+            "format": "cubemap {#:3d} : reference {reference points|count}",
+            "when": "1"
+          }
+        ]
+      },
+      "sound_pitch_range": {
+        "source": "reach_tag_test.exe 0x14025AC80",
+        "label": [
+          {
+            "format": "always played",
+            "when": "{#count} == 1"
+          },
+          {
+            "format": "{name}:{bend bounds[0]} to {bend bounds[1]}",
+            "when": "1"
+          }
+        ]
+      },
+      "primary_secondary": {
+        "source": "reach_tag_test.exe 0x140D899E0, 0x140D89A20, 0x140D89A60",
+        "label": [
+          "{#|map:magazines}"
+        ],
+        "maps": {
+          "magazines": {
+            "names": [
+              "primary",
+              "secondary"
+            ]
+          }
+        }
+      }
+    }
   }
 }

@@ -218,7 +218,16 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1402FBC90"
+      "element_label_callback": "reach_tag_test.exe 0x1402FBC90",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1402FBC90",
+        "label": [
+          {
+            "when": "1",
+            "format": "global {gain:g}dB {time}t"
+          }
+        ]
+      }
     },
     "cinematic_transition_sound_class_gain_block_struct": {
       "guid": "c2ceb5968a47820e278bbfbccf6bf2ab",
@@ -250,7 +259,94 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1402FBE30"
+      "element_label_callback": "reach_tag_test.exe 0x1402FBE30",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1402FBE30",
+        "label": [
+          {
+            "when": "1",
+            "format": "{class|map:classes} {gain:g}dB {time}t"
+          }
+        ],
+        "maps": {
+          "classes": {
+            "names": [
+              "projectile_impact",
+              "projectile_detonation",
+              "projectile_flyby",
+              "projectile_detonation_lod",
+              "weapon_fire",
+              "weapon_ready",
+              "weapon_reload",
+              "weapon_empty",
+              "weapon_charge",
+              "weapon_overheat",
+              "weapon_idle",
+              "weapon_melee",
+              "weapon_animation",
+              "object_impacts",
+              "particle_impacts",
+              "weapon_fire_lod",
+              "water_transitions",
+              "lowpass_effects",
+              "unit_footsteps",
+              "unit_dialog",
+              "unit_animation",
+              "unit_unused!",
+              "vehicle_collision",
+              "vehicle_engine",
+              "vehicle_animation",
+              "vehicle_engine_lod",
+              "device_door",
+              "device_unused0!",
+              "device_machinery",
+              "device_stationary",
+              "device_unused1!",
+              "device_unused2!",
+              "music",
+              "ambient_nature",
+              "ambient_machinery",
+              "ambient_stationary",
+              "huge_ass",
+              "object_looping",
+              "cinematic_music",
+              "unknown_unused0!",
+              "unknown_unused1!",
+              "ambient_flock",
+              "no_pad",
+              "no_pad_stationary",
+              "equipment_effect",
+              "mission_dialog",
+              "cinematic_dialog",
+              "scripted_cinematic_foley",
+              "game_event",
+              "ui",
+              "test",
+              "multiplayer_dialog",
+              "ambient_nature_details",
+              "ambient_machinery_details",
+              "inside_surround_tail",
+              "outside_surround_tail",
+              "vehicle_detonation",
+              "ambient_detonation",
+              "first_person_inside",
+              "first_person_outside",
+              "first_person_anywhere",
+              "space_projectile_detonation",
+              "space_projectile_flyby",
+              "space_vehicle_engine",
+              "space_weapon_fire",
+              "player_voice_team",
+              "player_voice_proxy",
+              "projectile_impact_postpone",
+              "unit_footsteps_postpone",
+              "weapon_ready_third_person",
+              "ui_music"
+            ],
+            "else": "???"
+          }
+        }
+      }
     },
     "cinematic_transition_sound_reference_block_struct": {
       "guid": "c9ccd71398433085687f35853aad492d",

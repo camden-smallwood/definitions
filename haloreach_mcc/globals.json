@@ -2568,7 +2568,22 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\game\\game_globals.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140120340"
+      "element_label_callback": "reach_tag_test.exe 0x140120340",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140120340",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "human fragmentation",
+              "covenant plasma"
+            ],
+            "else": ""
+          }
+        }
+      }
     },
     "soft_ceiling_globals_block": {
       "guid": "5679e564a74b733677cfb683edea4fda",
@@ -2966,7 +2981,8 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\game\\game_player_globals.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140122390"
+      "element_label_callback": "reach_tag_test.exe 0x140122390",
+      "element_label": "player_representation"
     },
     "damage_globals_block": {
       "guid": "2ae17c2b8441fdc911c9b5a50a5d516d",
@@ -3233,7 +3249,8 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\game\\materials_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1403EB2E0"
+      "element_label_callback": "reach_tag_test.exe 0x1403EB2E0",
+      "element_label": "materials_2"
     },
     "wet_proxies_struct": {
       "guid": "556346e58043af333db0f08334cc20fc",
@@ -3373,7 +3390,13 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\game\\materials_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1403EB260"
+      "element_label_callback": "reach_tag_test.exe 0x1403EB260",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1403EB260",
+        "label": [
+          "{#|enum:object_type_enum_definition}"
+        ]
+      }
     },
     "materials_sweeteners_struct": {
       "guid": "b9ba749f884266c34ffc2eb84b4c9259",
@@ -3862,7 +3885,13 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\game\\campaign_metagame_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140343D10"
+      "element_label_callback": "reach_tag_test.exe 0x140343D10",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140343D10",
+        "label": [
+          "difficulty: {#|enum:global_campaign_difficulty_enum}"
+        ]
+      }
     },
     "campaign_metagame_skull_block": {
       "guid": "d930158f934cccc5139373a6aebac8d5",
@@ -3880,7 +3909,60 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\game\\campaign_metagame_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140343D60"
+      "element_label_callback": "reach_tag_test.exe 0x140343D60",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140343D60",
+        "label": [
+          "Skull: {#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "skull_iron",
+              "skull_black_eye",
+              "skull_tough_luck",
+              "skull_catch",
+              "skull_fog",
+              "skull_famine",
+              "skull_thunderstorm",
+              "skull_tilt",
+              "skull_mythic",
+              "skull_assassin",
+              "skull_blind",
+              "skull_superman",
+              "skull_birthday_party",
+              "skull_daddy",
+              "skull_red",
+              "skull_yellow",
+              "skull_blue",
+              "skull_anger",
+              "skull_bandanna",
+              "skull_bonded_pair",
+              "skull_boom",
+              "skull_envy",
+              "skull_eye_patch",
+              "skull_feather",
+              "skull_foreign",
+              "skull_ghost",
+              "skull_reserved26",
+              "skull_jacked",
+              "skull_malfunction",
+              "skull_masterblaster",
+              "skull_pinata",
+              "skull_reserved31",
+              "skull_recession",
+              "skull_scarab",
+              "skull_so_angry",
+              "skull_sputnik",
+              "skull_streaking",
+              "skull_swarm",
+              "skull_thats_just_wrong",
+              "skull_reserved39",
+              "skull_boots_off_the_ground"
+            ]
+          }
+        }
+      }
     },
     "active_camo_globals_block": {
       "guid": "5eff34402d4cd839fba46c91bc83790c",
@@ -3960,7 +4042,27 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\game\\game_active_camo_globals.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1403EB070"
+      "element_label_callback": "reach_tag_test.exe 0x1403EB070",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1403EB070",
+        "label": [
+          "{#|map:levels}"
+        ],
+        "maps": {
+          "levels": {
+            "names": [
+              "poor",
+              "good",
+              "excellent",
+              "invisible",
+              "ai"
+            ],
+            "values": {
+              "-1": "none"
+            }
+          }
+        }
+      }
     },
     "garbage_collection_block": {
       "guid": "e047b14947483c86aa4813be7e2dc96b",
@@ -4113,7 +4215,8 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\game\\materials_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1403EB2E0"
+      "element_label_callback": "reach_tag_test.exe 0x1403EB2E0",
+      "element_label": "materials_2"
     }
   },
   "arrays": {

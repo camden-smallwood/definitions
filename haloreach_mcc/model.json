@@ -1051,7 +1051,16 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1405C43A0"
+      "element_label_callback": "reach_tag_test.exe 0x1405C43A0",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1405C43A0",
+        "label": [
+          {
+            "when": "1",
+            "format": "{vitality percentage:.3f}"
+          }
+        ]
+      }
     },
     "new_instantaneous_damage_response_block": {
       "guid": "ca199d55ab4d72e30baeccb0d45c41ff",
@@ -1199,7 +1208,24 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140DB13F0"
+      "element_label_callback": "reach_tag_test.exe 0x140DB13F0",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140DB13F0",
+        "label": [
+          {
+            "when": "{region_transitions|count} <= 0 && {label} != \"\"",
+            "format": "{damage threshold:.3f} : {label}"
+          },
+          {
+            "when": "{region_transitions|count} > 0 && {region_transitions[0]/region} != \"\"",
+            "format": "{damage threshold:.3f} : {region_transitions[0]/region} -> {region_transitions[0]/new state|enum:model_state_enum_definition}"
+          },
+          {
+            "when": "1",
+            "format": "{damage threshold:.3f}"
+          }
+        ]
+      }
     },
     "instantaneous_response_damage_effect_struct": {
       "guid": "61f7ba1614491a458c1308b51eda4472",
@@ -1266,7 +1292,16 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1405C4480"
+      "element_label_callback": "reach_tag_test.exe 0x1405C4480",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1405C4480",
+        "label": [
+          {
+            "when": "1",
+            "format": "{region} -> {new state|enum:model_state_enum_definition}"
+          }
+        ]
+      }
     },
     "damage_transfer_block": {
       "guid": "d62279d7fa43e07be42ce6b5b90e4960",
@@ -1303,7 +1338,143 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140DB0420"
+      "element_label_callback": "reach_tag_test.exe 0x140DB0420",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140DB0420",
+        "label": [
+          {
+            "when": "{#group} != \"hlmt\"",
+            "format": ""
+          },
+          {
+            "when": "{flags} == 0",
+            "format": "no transfers"
+          },
+          {
+            "when": "{transfer function} == 0",
+            "join": " AND ",
+            "prefix": "{transfer amount*100:.2f}%: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 2",
+                  "format": "parent"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 4 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "children"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 8",
+                  "format": "seats"
+                }
+              ]
+            ]
+          },
+          {
+            "when": "{transfer function} == 1",
+            "join": " AND ",
+            "prefix": "{transfer amount:.2f} pts: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 2",
+                  "format": "parent"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 4 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "children"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 8",
+                  "format": "seats"
+                }
+              ]
+            ]
+          },
+          {
+            "when": "{transfer function} == 2",
+            "join": " AND ",
+            "prefix": "{transfer amount:.2f} ceil: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 2",
+                  "format": "parent"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 4 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "children"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 8",
+                  "format": "seats"
+                }
+              ]
+            ]
+          },
+          {
+            "join": " AND ",
+            "prefix": "{transfer amount:.2f}: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 2",
+                  "format": "parent"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 4 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "children"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 8",
+                  "format": "seats"
+                }
+              ]
+            ]
+          }
+        ]
+      }
     },
     "global_model_instance_group_block": {
       "guid": "213123e24b460ffa23e2be93b260da29",
@@ -1432,7 +1603,58 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x140DB0750"
+      "element_label_callback": "reach_tag_test.exe 0x140DB0750",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x140DB0750",
+        "label": [
+          {
+            "when": "{#group} != \"hlmt\"",
+            "format": ""
+          },
+          {
+            "when": "!({flags} & 1)",
+            "format": "no transfers"
+          },
+          {
+            "when": "{transfer function} == 0",
+            "join": " AND ",
+            "prefix": "{transfer amount*100:.2f}%: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ]
+            ]
+          },
+          {
+            "when": "{transfer function} == 1",
+            "join": " AND ",
+            "prefix": "{transfer amount*100:.2f}% ceil: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ]
+            ]
+          },
+          {
+            "join": " AND ",
+            "prefix": "{transfer amount*100:.2f}% ceil: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ]
+            ]
+          }
+        ]
+      }
     },
     "damage_section_rendering_paramters": {
       "guid": "0bfea55477423ae5195355953141929f",
@@ -1532,7 +1754,8 @@
       ],
       "short_name": "material",
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\models\\model_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1402839A0"
+      "element_label_callback": "reach_tag_test.exe 0x1402839A0",
+      "element_label": "model_material_block"
     },
     "model_material_block_new": {
       "guid": "5aa37d9dd94f7e8b2ed0669c80a615b4",
@@ -1583,7 +1806,8 @@
       ],
       "short_name": "material",
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\models\\model_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1402839A0"
+      "element_label_callback": "reach_tag_test.exe 0x1402839A0",
+      "element_label": "model_material_block"
     },
     "global_damage_info_block": {
       "guid": "3f70eaf88e430e56000a3e90f2b3771c",
@@ -2078,7 +2302,16 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1405C4310"
+      "element_label_callback": "reach_tag_test.exe 0x1405C4310",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1405C4310",
+        "label": [
+          {
+            "when": "1",
+            "format": "{damage threshold:.3f} : {region} -> {new state|enum:model_state_enum_definition}"
+          }
+        ]
+      }
     },
     "g_null_block": {
       "guid": "a6487e75bc4cac9c1ca146bcf3e2f763",

@@ -212,7 +212,36 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\game\\multiplayer_object_list_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1401928C0"
+      "element_label_callback": "reach_tag_test.exe 0x1401928C0",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1401928C0; from and to index the owning tag's weapons",
+        "label": [
+          {
+            "when": "{from object|index} == -1 && {to object|index} == -1 && {#count} == 1",
+            "format": "EVERYTHING -> REMOVE"
+          },
+          {
+            "when": "{from object|index} == -1 && {to object|index} == -1",
+            "format": "{#}. NONE -> NONE (BAD)"
+          },
+          {
+            "when": "{from object|index} == -1 && {#count} == 1",
+            "format": "EVERYTHING -> {/weapons[{to object|index}]}"
+          },
+          {
+            "when": "{from object|index} == -1",
+            "format": "NONE -> {/weapons[{to object|index}]}"
+          },
+          {
+            "when": "{to object|index} == -1",
+            "format": "{/weapons[{from object|index}]} -> REMOVE"
+          },
+          {
+            "when": "1",
+            "format": "{/weapons[{from object|index}]} -> {/weapons[{to object|index}]}"
+          }
+        ]
+      }
     },
     "multiplayer_vehicle_remap_table_block": {
       "guid": "afa7c3fcdd46c257795ed885a0c8a08f",
@@ -256,7 +285,36 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\reach\\shared\\engine\\source\\omaha\\game\\multiplayer_object_list_definitions.cpp",
-      "element_label_callback": "reach_tag_test.exe 0x1401928C0"
+      "element_label_callback": "reach_tag_test.exe 0x1401928C0",
+      "element_label": {
+        "source": "reach_tag_test.exe 0x1401928C0; from and to index the owning tag's vehicles",
+        "label": [
+          {
+            "when": "{from object|index} == -1 && {to object|index} == -1 && {#count} == 1",
+            "format": "EVERYTHING -> REMOVE"
+          },
+          {
+            "when": "{from object|index} == -1 && {to object|index} == -1",
+            "format": "{#}. NONE -> NONE (BAD)"
+          },
+          {
+            "when": "{from object|index} == -1 && {#count} == 1",
+            "format": "EVERYTHING -> {/vehicles[{to object|index}]}"
+          },
+          {
+            "when": "{from object|index} == -1",
+            "format": "NONE -> {/vehicles[{to object|index}]}"
+          },
+          {
+            "when": "{to object|index} == -1",
+            "format": "{/vehicles[{from object|index}]} -> REMOVE"
+          },
+          {
+            "when": "1",
+            "format": "{/vehicles[{from object|index}]} -> {/vehicles[{to object|index}]}"
+          }
+        ]
+      }
     }
   }
 }

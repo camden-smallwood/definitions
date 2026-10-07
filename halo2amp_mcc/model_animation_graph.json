@@ -3475,7 +3475,15 @@
       ],
       "source_file": "c:\\mcc\\release\\h2a\\shared\\engine\\source\\blofeld\\animations\\animation_definitions.cpp",
       "element_label_callback": "halo2a_tag_test.exe 0x1403D97E0",
-      "element_label": "map_variant_palettes_compatibility"
+      "element_label": {
+        "source": "halo2a_tag_test.exe 0x1403D97E0; the packed index names a graph in the runtime inheritance list, which source tags leave at -1 (every Reach and H4 kit entry), so the editor finds no graph",
+        "label": [
+          {
+            "when": "{animation/graph index} < 0 || {animation/animation|index} < 0",
+            "format": "<invalid animation>"
+          }
+        ]
+      }
     },
     "triangulation_entry_block": {
       "guid": "8bcc3482c5411a3830a0e789878204e1",

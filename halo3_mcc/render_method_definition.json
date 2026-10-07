@@ -143,7 +143,16 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\render_methods\\render_method_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x14062F7B0"
+      "element_label_callback": "halo3_guerilla.exe 0x14062F7B0",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x14062F7B0",
+        "label": [
+          {
+            "when": "1",
+            "format": "{category name}"
+          }
+        ]
+      }
     },
     "render_method_options_block": {
       "guid": "493c64dc7d4ddb41904c8dbb10f4ae71",
@@ -179,7 +188,16 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\render_methods\\render_method_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x14062F800"
+      "element_label_callback": "halo3_guerilla.exe 0x14062F800",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x14062F800",
+        "label": [
+          {
+            "when": "1",
+            "format": "{option name}"
+          }
+        ]
+      }
     },
     "render_method_entry_points_block": {
       "guid": "d3696bb6fa447867493587acfb329ec5",
@@ -203,7 +221,38 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\render_methods\\render_method_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x14062F8A0"
+      "element_label_callback": "halo3_guerilla.exe 0x14062F8A0",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x14062F8A0",
+        "label": [
+          "{entry point|map:entry_points}"
+        ],
+        "maps": {
+          "entry_points": {
+            "names": [
+              "default",
+              "albedo",
+              "static_default",
+              "static_per_pixel",
+              "static_per_vertex",
+              "static_sh",
+              "static_prt_ambient",
+              "static_prt_linear",
+              "static_prt_quadratic",
+              "dynamic_light",
+              "shadow_generate",
+              "shadow_apply",
+              "active_camo",
+              "lightmap_debug_mode",
+              "vertex color lighting",
+              "water tessellation",
+              "water shading",
+              "dynamic_light_cinematic"
+            ],
+            "else": "unknown"
+          }
+        }
+      }
     },
     "render_method_pass_block": {
       "guid": "13081af42d49b7bf5ba9508bc0b07424",

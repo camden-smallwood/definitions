@@ -195,6 +195,185 @@
     "fallback_name": "struct",
     "bad_index": "BAD: %d",
     "flags": "names",
-    "source": "Guerilla sub_140278EA0 / sub_140278A80 / sub_140278C50 / sub_140279040 (halo3_guerilla.exe)"
+    "source": "Guerilla sub_140278EA0 / sub_140278A80 / sub_140278C50 / sub_140279040 (halo3_guerilla.exe)",
+    "maps": {
+      "magazines": {
+        "names": [
+          "primary",
+          "secondary"
+        ]
+      }
+    },
+    "entries": {
+      "materials": {
+        "label": [
+          {
+            "format": "{name} ({global material name})",
+            "when": "{global material name} != \"\""
+          },
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ],
+        "source": "halo3_guerilla.exe 0x1403CEF10"
+      },
+      "particle_system_definition_block_new": {
+        "label": [
+          {
+            "format": "{particle}",
+            "when": "1"
+          }
+        ],
+        "source": "halo3_guerilla.exe 0x1404C62E0"
+      },
+      "character_style": {
+        "label": [
+          "{#|enum:style_attitude_enum}"
+        ],
+        "source": "halo3_guerilla.exe 0x1409F6670; no bounds check"
+      },
+      "cinematic_shot": {
+        "label": [
+          "Shot {#1}"
+        ],
+        "source": "halo3_guerilla.exe 0x1402A1350"
+      },
+      "cinematic_shot_object_function": {
+        "label": [
+          {
+            "format": "{#}. {/objects[{object|index}]/name} ({function name})",
+            "when": "{#group} == \"cisc\" && {object|index} >= 0 && {object|index} < {/objects|count}"
+          },
+          {
+            "format": "{#}. NONE ({function name})",
+            "when": "1"
+          }
+        ],
+        "source": "halo3_guerilla.exe 0x1402A1280; reads the owning tag as a cinematic scene"
+      },
+      "cinematic_shot_object_function_keyframe": {
+        "label": [
+          {
+            "format": "Frame {frame:3d} (Disable)",
+            "when": "{flags} & 1"
+          },
+          {
+            "format": "Frame {frame:3d}",
+            "when": "1"
+          }
+        ],
+        "source": "halo3_guerilla.exe 0x1402A1210"
+      },
+      "cinematic_frame": {
+        "label": [
+          "Frame {#1}"
+        ],
+        "source": "halo3_guerilla.exe 0x1402A11E0"
+      },
+      "player_representation": {
+        "label": [
+          "{#|enum:global_player_character_enum}"
+        ],
+        "source": "halo3_guerilla.exe 0x14033AB90"
+      },
+      "scenario_object": {
+        "label": [
+          {
+            "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}",
+            "when": "{#group} == \"scnr\""
+          },
+          {
+            "format": " {type|none:NONE|bad:BAD}",
+            "when": "1"
+          }
+        ],
+        "source": "halo3_guerilla.exe 0x140558D00"
+      },
+      "ai_reference_frame": {
+        "label": [
+          {
+            "format": "{/{object id/type|map:ai_reference_frame_placement_blocks}[object data/object id/unique id == {object id/unique id} && object data/object id/source == {object id/source} && object data/object id/type == {object id/type} && (object data/object id/source != 0 || object data/object id/origin bsp index == {object id/origin bsp index})]/name|none:[invalid]|bad:[invalid]}:{node index}",
+            "when": "{#group} == \"scnr\" && {object id/source} <= 1 && {/{object id/type|map:ai_reference_frame_placement_blocks}[object data/object id/unique id == {object id/unique id} && object data/object id/source == {object id/source} && object data/object id/type == {object id/type} && (object data/object id/source != 0 || object data/object id/origin bsp index == {object id/origin bsp index})]}"
+          },
+          {
+            "format": "[invalid]:{node index}",
+            "when": "1"
+          }
+        ],
+        "source": "halo3_guerilla.exe 0x140A2D910; reads the owning tag as a scenario; outside one the placement lookup has no scenario to read",
+        "maps": {
+          "ai_reference_frame_placement_blocks": {
+            "names": [
+              "bipeds",
+              "vehicles",
+              "weapons",
+              "equipment",
+              "terminals",
+              null,
+              "scenery",
+              "machines",
+              "controls",
+              "sound scenery",
+              "crates",
+              "creatures",
+              "giants",
+              "effect scenery"
+            ]
+          }
+        }
+      },
+      "secondary_zone_set": {
+        "label": [
+          {
+            "format": "Invalid zone",
+            "when": "{#group} == \"scnr\" && ({zone|index} < 0 || {zone|index} >= {/zones|count})"
+          },
+          {
+            "format": "NONE ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\" && {area|index} == -1"
+          },
+          {
+            "format": "Invalid area ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\" && ({area|index} < 0 || {area|index} >= {/zones[{zone|index}]/areas|count})"
+          },
+          {
+            "format": "{/zones[{zone|index}]/areas[{area|index}]/name} ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\""
+          },
+          {
+            "format": "zone {zone|index}: area {area|index}",
+            "when": "1"
+          }
+        ],
+        "source": "halo3_guerilla.exe 0x140A30810"
+      },
+      "order_completion_condition": {
+        "label": [
+          {
+            "format": "NOT {rule type|enum:condition_type_enum}",
+            "when": "{flags} & 1"
+          },
+          {
+            "format": "{rule type|enum:condition_type_enum}",
+            "when": "1"
+          }
+        ],
+        "source": "halo3_guerilla.exe 0x140A306C0"
+      },
+      "sound_pitch_range": {
+        "label": [
+          {
+            "format": "always played",
+            "when": "{#count} == 1"
+          },
+          {
+            "format": "{name}:{bend bounds[0]} to {bend bounds[1]}",
+            "when": "1"
+          }
+        ],
+        "source": "halo3_guerilla.exe 0x1402A8FA0"
+      }
+    }
   }
 }

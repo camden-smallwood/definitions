@@ -483,7 +483,20 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\units\\vehicle_engine_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x1407BC6C0"
+      "element_label_callback": "halo3_guerilla.exe 0x1407BC6C0",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x1407BC6C0",
+        "label": [
+          {
+            "when": "{#} == 0",
+            "format": "reverse"
+          },
+          {
+            "when": "1",
+            "format": "drive: {#}"
+          }
+        ]
+      }
     },
     "torque_curve_struct": {
       "guid": "306ab8a12c4a8621a65c6eb2c39fdbf2",

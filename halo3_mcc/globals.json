@@ -862,7 +862,13 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\game\\game_globals.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x14033A500"
+      "element_label_callback": "halo3_guerilla.exe 0x14033A500",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x14033A500; no bounds check",
+        "label": [
+          "{#|enum:global_style_enum}"
+        ]
+      }
     },
     "game_globals_damage_block": {
       "guid": "9887605edc4f9658b562d0bc00d30273",
@@ -1280,7 +1286,13 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\game\\game_globals.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x14033A390"
+      "element_label_callback": "halo3_guerilla.exe 0x14033A390",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x14033A390",
+        "label": [
+          "{#fraction:.3f}, {scale:.3f}"
+        ]
+      }
     },
     "difficulty_block": {
       "guid": "8c69849cb540cfa3696073b46b01d1ab",
@@ -1843,7 +1855,13 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\game\\game_globals.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x14033A340"
+      "element_label_callback": "halo3_guerilla.exe 0x14033A340",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x14033A340",
+        "label": [
+          "{#|enum:global_grenade_type_enum}"
+        ]
+      }
     },
     "interface_tag_references": {
       "guid": "42bdfceafb4d2627c124269c3c0d8b92",
@@ -2146,7 +2164,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\game\\game_globals.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x14033AB90"
+      "element_label_callback": "halo3_guerilla.exe 0x14033AB90",
+      "element_label": "player_representation"
     },
     "falling_damage_block": {
       "guid": "2ae17c2b8441fdc911c9b5a50a5d516d",
@@ -2408,7 +2427,21 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\game\\materials_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x1404E23F0"
+      "element_label_callback": "halo3_guerilla.exe 0x1404E23F0",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x1404E23F0",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "default",
+              "units"
+            ]
+          }
+        }
+      }
     },
     "materials_sweeteners_struct": {
       "guid": "b9ba749f884266c34ffc2eb84b4c9259",
@@ -2761,7 +2794,27 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\game\\campaign_metagame_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x1404E2450"
+      "element_label_callback": "halo3_guerilla.exe 0x1404E2450",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x1404E2450",
+        "label": [
+          "style: {#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "grendade stick",
+              "headshot",
+              "melee kill",
+              "stealth kill",
+              "road-kill",
+              "multi-kill",
+              "needler-superdetonation",
+              "emp"
+            ]
+          }
+        }
+      }
     },
     "campaign_metagame_difficulty_scale_block": {
       "guid": "8ffa1d4caa4e1e201b858bad95e2677d",
@@ -2779,7 +2832,13 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\game\\campaign_metagame_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x1404E24A0"
+      "element_label_callback": "halo3_guerilla.exe 0x1404E24A0",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x1404E24A0",
+        "label": [
+          "difficulty: {#|enum:difficulty_placement_flags}"
+        ]
+      }
     },
     "campaign_metagame_primary_skull_block": {
       "guid": "d930158f934cccc5139373a6aebac8d5",
@@ -2797,7 +2856,28 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\game\\campaign_metagame_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x1404E24F0"
+      "element_label_callback": "halo3_guerilla.exe 0x1404E24F0",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x1404E24F0",
+        "label": [
+          "Skull: {#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "skull_iron",
+              "skull_black_eye",
+              "skull_tough_luck",
+              "skull_catch",
+              "skull_fog",
+              "skull_famine",
+              "skull_thunderstorm",
+              "skull_tilt",
+              "skull_mythic"
+            ]
+          }
+        }
+      }
     },
     "campaign_metagame_secondary_skull_block": {
       "guid": "7a513055f941064e0058ef91758e990b",
@@ -2815,7 +2895,24 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\game\\campaign_metagame_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x1404E2540"
+      "element_label_callback": "halo3_guerilla.exe 0x1404E2540",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x1404E2540",
+        "label": [
+          "Skull: {#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "skull_assassin",
+              "skull_blind",
+              "skull_superman",
+              "skull_birthday_party",
+              "skull_daddy"
+            ]
+          }
+        }
+      }
     }
   },
   "arrays": {

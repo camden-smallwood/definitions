@@ -755,7 +755,20 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\interface\\chud\\chud_globals_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x1406B3A20"
+      "element_label_callback": "halo3_guerilla.exe 0x1406B3A20",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x1406B3A20",
+        "label": [
+          {
+            "when": "{latched to|flags: } != \"\"",
+            "format": "{latched to|flags: } "
+          },
+          {
+            "when": "1",
+            "format": ""
+          }
+        ]
+      }
     },
     "chud_sound_character_block": {
       "guid": "8b77baae70457bf6f9f8d48697f338cc",
@@ -923,7 +936,54 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\game\\player_training.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x140403120"
+      "element_label_callback": "halo3_guerilla.exe 0x140403120",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x140403120",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "flashlight",
+              "crouch",
+              "look_stick_long",
+              "vehicle driving long",
+              "exit stationary vehicle passenger",
+              "activate_device_hold",
+              "enter_vehicle_hold",
+              "weapon_swap_hold",
+              "dual_wield_hold",
+              "fire_both_weapons",
+              "vehicle_look_stick",
+              "vehicle_move_stick",
+              "look_stick",
+              "move_stick",
+              "unzoom",
+              "primary_trigger",
+              "zoom",
+              "grenades",
+              "melee attack",
+              "rear_melee",
+              "board_vehicle",
+              "recharging_take_cover",
+              "low_shields_take_cover",
+              "reload_when_safe",
+              "warthog_slide",
+              "ghost_guns",
+              "banshee_boost",
+              "banshee_bomb",
+              "ghost_boost",
+              "banshee_trick",
+              "team chat",
+              "stealth",
+              "equipment",
+              "jump",
+              "reload_left_when_safe"
+            ]
+          }
+        }
+      }
     }
   },
   "enums_flags": {

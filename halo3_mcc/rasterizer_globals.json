@@ -193,7 +193,31 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\rasterizer\\rasterizer_global_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x140639D20"
+      "element_label_callback": "halo3_guerilla.exe 0x140639D20",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x140639D20",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "default 2D texture (white)",
+              "default normal map (no bump)",
+              "default cube map (error pattern)",
+              "color bars",
+              "black 2D texture",
+              "transparent black 2D texture",
+              "gray 2D texture",
+              "auto exposure weight",
+              "auto exposure weight (4x3)",
+              "stencil dither pattern",
+              "smooth noise warp",
+              "ripple pattern"
+            ]
+          }
+        }
+      }
     },
     "material_textures_refs_block": {
       "guid": "44b84d0fcd489ffd47aadcb9d4cc472d",
@@ -217,7 +241,22 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\rasterizer\\rasterizer_global_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x140639D70"
+      "element_label_callback": "halo3_guerilla.exe 0x140639D70",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x140639D70",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "SH Glossy CT CC0236",
+              "SH Glossy CT C78D78",
+              "SH Glossy CT DD0236"
+            ]
+          }
+        }
+      }
     },
     "explicit_shader_refs_block": {
       "guid": "6b04d3d3ab4c92f17b11bc956f84cd3c",
@@ -261,7 +300,140 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h3\\source\\rasterizer\\rasterizer_global_definitions.cpp",
-      "element_label_callback": "halo3_guerilla.exe 0x140639DC0"
+      "element_label_callback": "halo3_guerilla.exe 0x140639DC0",
+      "element_label": {
+        "source": "halo3_guerilla.exe 0x140639DC0",
+        "label": [
+          {
+            "when": "({#count} == 102 || !({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")) && starts_with({#|map:explicit}, \"(UNUSED)\") && ({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")",
+            "format": "(REMOVE!){#|map:explicit}"
+          },
+          {
+            "when": "({#count} == 102 || !({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")) && starts_with({#|map:explicit}, \"(UNUSED)\")",
+            "format": "IGNORE (UNUSED)"
+          },
+          {
+            "when": "({#count} == 102 || !({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")) && !({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\")",
+            "format": "(IGNORE) {#|map:explicit}"
+          },
+          {
+            "when": "({#count} == 102 || !({explicit vertex shader|path} != \"\" || {explicit pixel shader|path} != \"\" || {explicit compute shader|path} != \"\"))",
+            "format": "{#|map:explicit}"
+          },
+          {
+            "when": "1",
+            "format": "{#}. {#block}"
+          }
+        ],
+        "maps": {
+          "explicit": {
+            "names": [
+              "debug",
+              "debug2d",
+              "copy w/scale",
+              "bloom: spike blur (vertical)",
+              "bloom: spike blur (horizontal)",
+              "bloom: downsample 4x4 (with bloom curve)",
+              "(UNUSED)bloom: downsample 4x4",
+              "bloom: copy RGBE -> RGB",
+              "(UNUSED)bloom: update persistence",
+              "(UNUSED)bloom: add downsampled",
+              "bloom: add",
+              "bloom: kernel blur (11 horizontal)",
+              "bloom: kernel blur (11 vertical)",
+              "cubemap: blur (phi)",
+              "cubemap: blur (theta)",
+              "cubemap: clamp",
+              "cubemap: divide",
+              "write depth",
+              "final composite",
+              "(UNUSED)sky dome (simple)",
+              "transparent",
+              "(UNUSED)(legacy) shield meter",
+              "(UNUSED)(legacy) general meter",
+              "overhead map geometry",
+              "(UNUSED)(legacy) hud bitmap",
+              "(UNUSED)bloom: blend 3 textures",
+              "particle update",
+              "particle spawn",
+              "screenshot combine",
+              "downsample 2x2",
+              "rotate 2d",
+              "(UNUSED)bspline resample",
+              "(UNUSED)bloom; downsample 4x4 (with bloom curve + DOF)",
+              "final composite (with DOF)",
+              "convolve 5-tap kernel",
+              "exposure downsample",
+              "(UNUSED)yuv to rgb",
+              "displacement",
+              "screenshot display",
+              "downsample 4x4 block",
+              "crop",
+              "screenshot combine (with DOF)",
+              "gamma correction",
+              "contrail spawn",
+              "contrail update",
+              "stencil 8x8 dither pattern",
+              "lens flare render",
+              "decorator render",
+              "bloom: NEW downsample 4x4 block (with bloom curve)",
+              "bloom: NEW downsample 4x4 gaussian",
+              "apply color matrix",
+              "copy",
+              "shadow geometry",
+              "shadow apply",
+              "gradient",
+              "alpha test",
+              "patchy fog",
+              "light volume",
+              "water ripple",
+              "double gradient",
+              "sniper scope",
+              "shield impact",
+              "(UNUSED)player emblem-world",
+              "player emblem-screen",
+              "implicit hill",
+              "(UNUSED)chud overlay blend",
+              "bloom add alpha1",
+              "bloom: NEW downsample 4x4 block (with bloom curve) LDR",
+              "restore LDR, HDR, and depth to EDRAM",
+              "beam",
+              "decorators no wind",
+              "decorators static",
+              "decorators sun only",
+              "decorators wavy",
+              "(UNUSED)final composite zoom",
+              "final composite debug",
+              "shadow_apply_point",
+              "shadow_apply_bilinear",
+              "shadow_apply_fancy",
+              "shadow_apply_faster",
+              "(UNUSED)shadow_apply_misc",
+              "displacement with motion blur",
+              "decorator_render_shaded",
+              "screenshot memexport",
+              "(UNUSED)bloom: NEW downsample 4x4 gauss with curve LDR",
+              "(UNUSED)bloom_downsample_4x4_gaussian_bloom",
+              "(UNUSED)bloom_downsample_4x4_gaussian_bloom new",
+              "(UNUSED)bloom_curve",
+              "custom gamma correct",
+              "(UNUSED)pixel copy",
+              "decorators edit",
+              "(UNUSED)hdr_retrieve",
+              "(UNUSED)smirnov test",
+              "fxaa",
+              "sniper scope stencil pc",
+              "ssao",
+              "ssao_blur",
+              "lightshafts",
+              "radial_blur",
+              "clear_letterbox",
+              "rigid world geometry",
+              "copy depth"
+            ]
+          }
+        }
+      }
     },
     "g_null_block": {
       "guid": "a6487e75bc4cac9c1ca146bcf3e2f763",

@@ -70,7 +70,20 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\editor\\sharedvariabledefinitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403FA220"
+      "element_label_callback": "halo4_tag_test.exe 0x1403FA220",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1403FA220",
+        "label": [
+          {
+            "when": "{file to touch|path} != \"\"",
+            "format": "{file to touch}.{file to touch|group}"
+          },
+          {
+            "when": "1",
+            "format": ""
+          }
+        ]
+      }
     },
     "sharedVariableBlock": {
       "guid": "d37659a7d54494a68971118277c2d8f8",

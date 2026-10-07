@@ -699,7 +699,16 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\projectile_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140EB6AD0"
+      "element_label_callback": "halo4_tag_test.exe 0x140EB6AD0",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x140EB6AD0",
+        "label": [
+          {
+            "when": "1",
+            "format": "{material name}"
+          }
+        ]
+      }
     },
     "projectile_material_response_block": {
       "guid": "7f6308339a4dd1a678e93898052b15c1",
@@ -794,7 +803,20 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\projectile_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140EB6B10"
+      "element_label_callback": "halo4_tag_test.exe 0x140EB6B10",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x140EB6B10",
+        "label": [
+          {
+            "when": "{material name} != \"\"",
+            "format": "{material name} -> {response|enum:material_response}"
+          },
+          {
+            "when": "1",
+            "format": "no material"
+          }
+        ]
+      }
     },
     "brute_grenade_block": {
       "guid": "db56fb7c494af5210ddc449398654b0d",
@@ -934,7 +956,24 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\projectile_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140EB0CB0"
+      "element_label_callback": "halo4_tag_test.exe 0x140EB0CB0",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x140EB0CB0; reads the owning object's attachments",
+        "label": [
+          {
+            "when": "{Attachment Index|index} < 0 || {Attachment Index|index} >= {/object/attachments|count}",
+            "format": "No attachment - uses main body"
+          },
+          {
+            "when": "{Function} != \"\"",
+            "format": "{/object/attachments[{Attachment Index|index}]/type} -> {RTPC Name}"
+          },
+          {
+            "when": "1",
+            "format": "Invalid function"
+          }
+        ]
+      }
     }
   },
   "enums_flags": {

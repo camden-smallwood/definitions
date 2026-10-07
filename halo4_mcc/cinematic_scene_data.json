@@ -224,7 +224,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403E6FB0"
+      "element_label_callback": "halo4_tag_test.exe 0x1403E6FB0",
+      "element_label": "cinematic_frame"
     },
     "cinematic_shot_dialogue_block": {
       "guid": "ccacbb710b4b6d8accd780b0399fa912",
@@ -294,7 +295,20 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403E7A80"
+      "element_label_callback": "halo4_tag_test.exe 0x1403E7A80",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1403E7A80",
+        "label": [
+          {
+            "when": "{dialogue|path} != \"\"",
+            "format": "{#}. {dialogue}"
+          },
+          {
+            "when": "1",
+            "format": "{#}. cinematic_shot_dialogue_block"
+          }
+        ]
+      }
     },
     "cinematic_shot_effect_block": {
       "guid": "5d75e31f9f484bb7179a3eb4c0325614",
@@ -377,7 +391,28 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403E6C70"
+      "element_label_callback": "halo4_tag_test.exe 0x1403E6C70",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1403E6C70; reads the owning cinematic scene data's objects",
+        "label": [
+          {
+            "when": "{marker parent|index} >= 0 && {marker parent|index} < {/objects|count} && {effect|path} != \"\"",
+            "format": "{#}. {/objects[{marker parent|index}]/name} ({effect}) {frame}"
+          },
+          {
+            "when": "{marker parent|index} >= 0 && {marker parent|index} < {/objects|count}",
+            "format": "{#}. {/objects[{marker parent|index}]/name} (NONE) {frame}"
+          },
+          {
+            "when": "{effect|path} != \"\"",
+            "format": "{#}. NONE ({effect}) {frame}"
+          },
+          {
+            "when": "1",
+            "format": "{#}. NONE (NONE) {frame}"
+          }
+        ]
+      }
     },
     "cinematic_shot_custom_script_block": {
       "guid": "aa3381bc7940f8c1a97b2c92d21cca5f",
@@ -460,7 +495,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403E7A50"
+      "element_label_callback": "halo4_tag_test.exe 0x1403E7A50",
+      "element_label": "cinematic_frame_2"
     },
     "camera_frame_struct": {
       "guid": "f23e5124c3452e4fbba4bd0856fa83e7",
@@ -572,7 +608,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403E7A50"
+      "element_label_callback": "halo4_tag_test.exe 0x1403E7A50",
+      "element_label": "cinematic_frame_2"
     },
     "cinematic_shot_frame_constant_block": {
       "guid": "acbc8cecda4a6b6da8e17694b3d6851f",
@@ -595,7 +632,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403E7A50"
+      "element_label_callback": "halo4_tag_test.exe 0x1403E7A50",
+      "element_label": "cinematic_frame_2"
     },
     "cinematic_shot_extra_camera_block": {
       "guid": "10da5114684cd6db4db8abaab39997d3",
@@ -664,7 +702,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\cutscene\\cinematics_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403E7A50"
+      "element_label_callback": "halo4_tag_test.exe 0x1403E7A50",
+      "element_label": "cinematic_frame_2"
     }
   },
   "arrays": {

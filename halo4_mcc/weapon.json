@@ -1023,7 +1023,13 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\weapon_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140E62FB0"
+      "element_label_callback": "halo4_tag_test.exe 0x140E62FB0",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x140E62FB0",
+        "label": [
+          "{#|enum:global_melee_class_enum_definition}"
+        ]
+      }
     },
     "aim_assist_struct": {
       "guid": "c90b3ffd0846de19b8351aa92757c40a",
@@ -1444,7 +1450,13 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\weapon_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140144B60"
+      "element_label_callback": "halo4_tag_test.exe 0x140144B60",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x140144B60",
+        "label": [
+          "{#|enum:game_engine_team_options_player_model_choice}"
+        ]
+      }
     },
     "magazines": {
       "guid": "a4f9fcb88e4c19a0c564fe8c41c0cfb1",
@@ -1572,7 +1584,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\weapon_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140E62D10"
+      "element_label_callback": "halo4_tag_test.exe 0x140E62D10",
+      "element_label": "primary_secondary"
     },
     "magazine_objects": {
       "guid": "7239f33e514cacc41284b596acd42774",
@@ -1683,7 +1696,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\weapon_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140E62D70"
+      "element_label_callback": "halo4_tag_test.exe 0x140E62D70",
+      "element_label": "primary_secondary"
     },
     "weapon_barrels": {
       "guid": "b0b3d6523b423432725b12954a7144fc",
@@ -1920,7 +1934,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\weapon_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140E62DD0"
+      "element_label_callback": "halo4_tag_test.exe 0x140E62DD0",
+      "element_label": "primary_secondary"
     },
     "weapon_barrel_firing_parameters_struct": {
       "guid": "ea73d685ff47e192bae5f3b5f3961710",
@@ -2185,7 +2200,22 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\weapon_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140E62F20"
+      "element_label_callback": "halo4_tag_test.exe 0x140E62F20",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x140E62F20",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "single wield",
+              "dual right",
+              "dual left"
+            ]
+          }
+        }
+      }
     },
     "weapon_barrel_damage_effect_struct": {
       "guid": "c100c00cbd4f216c4ff61d8b08b45cc7",
@@ -2704,7 +2734,24 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\weapon_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140E63040"
+      "element_label_callback": "halo4_tag_test.exe 0x140E63040",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x140E63040; reads the owning object's attachments",
+        "label": [
+          {
+            "when": "{Attachment Index|index} < 0 || {Attachment Index|index} >= {/item/object/attachments|count}",
+            "format": "No attachment - uses main body"
+          },
+          {
+            "when": "{Function} != \"\"",
+            "format": "{/item/object/attachments[{Attachment Index|index}]/type} -> {RTPC Name}"
+          },
+          {
+            "when": "1",
+            "format": "Invalid function"
+          }
+        ]
+      }
     },
     "WeaponSoundSweetenerBlock": {
       "guid": "86fed52f43451534122eb2b2f066fee0",
@@ -2742,7 +2789,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\items\\weapon_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140E631C0"
+      "element_label_callback": "halo4_tag_test.exe 0x140E631C0",
+      "element_label": "SoundSweetenerBlock"
     }
   },
   "enums_flags": {

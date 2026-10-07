@@ -923,7 +923,16 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\animations\\animation_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403DCB70"
+      "element_label_callback": "halo4_tag_test.exe 0x1403DCB70",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1403DCB70",
+        "label": [
+          {
+            "when": "1",
+            "format": "{mode or stance} -> {alias}"
+          }
+        ]
+      }
     },
     "animation_graph_sound_reference_block": {
       "guid": "a608209e044538154286e986dfb50e77",
@@ -1766,7 +1775,46 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\animations\\animation_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403DCE00"
+      "element_label_callback": "halo4_tag_test.exe 0x1403DCE00",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1403DCE00",
+        "label": [
+          "{type|map:events} : {frame}"
+        ],
+        "maps": {
+          "events": {
+            "names": [
+              "none",
+              "primary keyframe",
+              "secondary keyframe",
+              "tertiary keyframe",
+              "left foot",
+              "right foot",
+              "allow interruption",
+              "do not allow interruption",
+              "both-feet shuffle",
+              "body impact",
+              "left foot lock",
+              "left foot unlock",
+              "right foot lock",
+              "right foot unlock",
+              "blend range marker",
+              "stride expansion",
+              "stride contraction",
+              "ragdoll keyframe",
+              "drop weapon keyframe",
+              "match a",
+              "match b",
+              "match c",
+              "match d",
+              "jetpack closed",
+              "jetpack open",
+              "sound event",
+              "effect event"
+            ]
+          }
+        }
+      }
     },
     "animation_sound_event_block": {
       "guid": "a2c45bb33545e813b04bdc992fee7a8c",
@@ -3160,7 +3208,23 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\animations\\animation_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403DC880"
+      "element_label_callback": "halo4_tag_test.exe 0x1403DC880",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1403DC880",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "front",
+              "left",
+              "right",
+              "back"
+            ]
+          }
+        }
+      }
     },
     "damage_region_block": {
       "guid": "846fa0c42444323333a0ab851cd4c578",
@@ -3179,7 +3243,30 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\animations\\animation_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403DC7F0"
+      "element_label_callback": "halo4_tag_test.exe 0x1403DC7F0",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1403DC7F0",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "gut",
+              "chest",
+              "head",
+              "l_arm",
+              "l_hand",
+              "l_leg",
+              "l_foot",
+              "r_arm",
+              "r_hand",
+              "r_leg",
+              "r_foot"
+            ]
+          }
+        }
+      }
     },
     "animation_transition_source_block_struct": {
       "guid": "dd80a921b846b74c1f817eab14a7e714",
@@ -3228,7 +3315,16 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\animations\\animation_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403DC4E0"
+      "element_label_callback": "halo4_tag_test.exe 0x1403DC4E0",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1403DC4E0",
+        "label": [
+          {
+            "when": "1",
+            "format": "{mode name}:{state name}"
+          }
+        ]
+      }
     },
     "animation_velocity_boundaries_block": {
       "guid": "238fb77d2a41920f86bfffa512324773",
@@ -3378,7 +3474,8 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\animations\\animation_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1403DC780"
+      "element_label_callback": "halo4_tag_test.exe 0x1403DC780",
+      "element_label": "map_variant_palettes_compatibility"
     },
     "triangulation_entry_block": {
       "guid": "8bcc3482c5411a3830a0e789878204e1",

@@ -1115,7 +1115,16 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1405931F0"
+      "element_label_callback": "halo4_tag_test.exe 0x1405931F0",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1405931F0",
+        "label": [
+          {
+            "when": "1",
+            "format": "{vitality percentage:.3f}"
+          }
+        ]
+      }
     },
     "new_instantaneous_damage_response_block": {
       "guid": "ca199d55ab4d72e30baeccb0d45c41ff",
@@ -1270,7 +1279,24 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140EE1850"
+      "element_label_callback": "halo4_tag_test.exe 0x140EE1850",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x140EE1850",
+        "label": [
+          {
+            "when": "{region_transitions|count} <= 0 && {label} != \"\"",
+            "format": "{damage threshold:.3f} : {label}"
+          },
+          {
+            "when": "{region_transitions|count} > 0 && {region_transitions[0]/region} != \"\"",
+            "format": "{damage threshold:.3f} : {region_transitions[0]/region} -> {region_transitions[0]/new state|enum:model_state_enum_definition}"
+          },
+          {
+            "when": "1",
+            "format": "{damage threshold:.3f}"
+          }
+        ]
+      }
     },
     "instantaneous_response_damage_effect_struct": {
       "guid": "61f7ba1614491a458c1308b51eda4472",
@@ -1337,7 +1363,16 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1405932D0"
+      "element_label_callback": "halo4_tag_test.exe 0x1405932D0",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1405932D0",
+        "label": [
+          {
+            "when": "1",
+            "format": "{region} -> {new state|enum:model_state_enum_definition}"
+          }
+        ]
+      }
     },
     "damage_transfer_block": {
       "guid": "d62279d7fa43e07be42ce6b5b90e4960",
@@ -1374,7 +1409,143 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140EE0B50"
+      "element_label_callback": "halo4_tag_test.exe 0x140EE0B50",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x140EE0B50",
+        "label": [
+          {
+            "when": "{#group} != \"hlmt\"",
+            "format": ""
+          },
+          {
+            "when": "{flags} == 0",
+            "format": "no transfers"
+          },
+          {
+            "when": "{transfer function} == 0",
+            "join": " AND ",
+            "prefix": "{transfer amount*100:.2f}%: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 2",
+                  "format": "parent"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 4 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "children"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 8",
+                  "format": "seats"
+                }
+              ]
+            ]
+          },
+          {
+            "when": "{transfer function} == 1",
+            "join": " AND ",
+            "prefix": "{transfer amount:.2f} pts: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 2",
+                  "format": "parent"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 4 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "children"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 8",
+                  "format": "seats"
+                }
+              ]
+            ]
+          },
+          {
+            "when": "{transfer function} == 2",
+            "join": " AND ",
+            "prefix": "{transfer amount:.2f} ceil: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 2",
+                  "format": "parent"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 4 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "children"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 8",
+                  "format": "seats"
+                }
+              ]
+            ]
+          },
+          {
+            "join": " AND ",
+            "prefix": "{transfer amount:.2f}: -> ",
+            "parts": [
+              [
+                {
+                  "when": "{flags} & 1 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "{/damage info/damage sections[{damage section|index}]/name}"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 2",
+                  "format": "parent"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 4 && {damage section|index} >= 0 && {damage section|index} < {/damage info/damage sections|count}",
+                  "format": "children"
+                }
+              ],
+              [
+                {
+                  "when": "{flags} & 8",
+                  "format": "seats"
+                }
+              ]
+            ]
+          }
+        ]
+      }
     },
     "global_model_instance_group_block": {
       "guid": "213123e24b460ffa23e2be93b260da29",
@@ -1602,7 +1773,20 @@
       ],
       "short_name": "material",
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\models\\model_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x1401DDDE0"
+      "element_label_callback": "halo4_tag_test.exe 0x1401DDDE0",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x1401DDDE0",
+        "label": [
+          {
+            "when": "{global material name} != \"\"",
+            "format": "{material name} ({global material name})"
+          },
+          {
+            "when": "1",
+            "format": "{material name}"
+          }
+        ]
+      }
     },
     "global_damage_info_block": {
       "guid": "3f70eaf88e430e56000a3e90f2b3771c",
@@ -2088,7 +2272,16 @@
         }
       ],
       "source_file": "c:\\mcc\\release\\h4\\shared\\engine\\source\\blofeld\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "halo4_tag_test.exe 0x140593160"
+      "element_label_callback": "halo4_tag_test.exe 0x140593160",
+      "element_label": {
+        "source": "halo4_tag_test.exe 0x140593160",
+        "label": [
+          {
+            "when": "1",
+            "format": "{damage threshold:.3f} : {region} -> {new state|enum:model_state_enum_definition}"
+          }
+        ]
+      }
     },
     "global_damage_nodes_block": {
       "guid": "b4d03637e1400a7c521181a4f011f822",

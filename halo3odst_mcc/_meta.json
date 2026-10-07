@@ -425,19 +425,14 @@
         "source": "halo3odst_mcc_guerilla.exe 0x140A93360",
         "label": [
           {
-            "format": "NOT {rule type|map:order_completion_condition_conditions}",
+            "format": "NOT {rule type|enum:condition_type_enum}",
             "when": "{flags} & 1"
           },
           {
-            "format": "{rule type|map:order_completion_condition_conditions}",
+            "format": "{rule type|enum:condition_type_enum}",
             "when": "1"
           }
-        ],
-        "maps": {
-          "order_completion_condition_conditions": {
-            "names": "x"
-          }
-        }
+        ]
       },
       "sound_pitch_range": {
         "source": "halo3odst_mcc_guerilla.exe 0x1402CC390",

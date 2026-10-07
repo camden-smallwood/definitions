@@ -951,7 +951,20 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\interface\\chud\\chud_globals_definitions.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x1406F7A10"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x1406F7A10",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1406F7A10",
+        "label": [
+          {
+            "when": "{latched to|flags: } != \"\"",
+            "format": "{latched to|flags: } "
+          },
+          {
+            "when": "1",
+            "format": ""
+          }
+        ]
+      }
     },
     "chud_sound_character_block": {
       "guid": "8b77baae70457bf6f9f8d48697f338cc",
@@ -1123,7 +1136,57 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\game\\player_training.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14045B910"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14045B910",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14045B910",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "flashlight",
+              "crouch",
+              "stealth",
+              "equipment",
+              "jump",
+              "look_stick_long",
+              "vehicle driving long",
+              "exit stationary vehicle passenger",
+              "activate_device_hold",
+              "enter_vehicle_hold",
+              "weapon_swap_hold",
+              "dual_wield_hold",
+              "fire_both_weapons",
+              "vehicle_look_stick",
+              "vehicle_move_stick",
+              "look_stick",
+              "move_stick",
+              "unzoom",
+              "primary_trigger",
+              "zoom",
+              "grenades",
+              "melee attack",
+              "activate pda",
+              "rear_melee",
+              "board_vehicle",
+              "recharging_body_take_cover",
+              "low_body_take_cover",
+              "recharging_shield_take_cover",
+              "low_shield_take_cover",
+              "reload_when_safe",
+              "reload_left_when_safe",
+              "warthog_slide",
+              "ghost_guns",
+              "banshee_boost",
+              "banshee_bomb",
+              "ghost_boost",
+              "banshee_trick",
+              "team chat"
+            ]
+          }
+        }
+      }
     },
     "mapping_function": {
       "guid": "8fa9145a8444fa53d46810809e45f10a",

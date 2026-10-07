@@ -413,7 +413,24 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\ai\\ai_dialogue_definitions.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x140A5D0B0"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x140A5D0B0",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140A5D0B0",
+        "label": [
+          {
+            "when": "{dialogue type} < 0 || {dialogue type} >= 127",
+            "format": "Invalid"
+          },
+          {
+            "when": "{vocalization name} == \"\"",
+            "format": "{dialogue type|enum:dialogue_names_enum}/NONE"
+          },
+          {
+            "when": "1",
+            "format": "{dialogue type|enum:dialogue_names_enum}/{vocalization name}"
+          }
+        ]
+      }
     },
     "dialogue_data_block": {
       "guid": "421cf2fc904d9b164364f0981ec7eac4",

@@ -169,7 +169,20 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\game\\game_progression_definitions.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x1404143C0"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x1404143C0",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1404143C0; reads the owning tag's booleans",
+        "label": [
+          {
+            "when": "{starting index|index} != -1 && {ending index|index} != -1 && {ending index|index} >= {starting index|index}",
+            "format": "{starting index|none:NONE|bad:NONE}->{ending index|none:NONE|bad:NONE}"
+          },
+          {
+            "when": "1",
+            "format": "INVALID:{starting index|none:NONE|bad:NONE}->{ending index|none:NONE|bad:NONE}"
+          }
+        ]
+      }
     },
     "game_progression_profile_integer_block": {
       "guid": "23b33aabca42ca6a0563b30a0c02bb1c",

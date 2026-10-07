@@ -196,14 +196,6 @@
     "bad_index": "BAD: %d",
     "flags": "names",
     "source": "Guerilla sub_140278EA0 / sub_140278A80 / sub_140278C50 / sub_140279040 (halo3_guerilla.exe)",
-    "maps": {
-      "magazines": {
-        "names": [
-          "primary",
-          "secondary"
-        ]
-      }
-    },
     "entries": {
       "materials": {
         "label": [
@@ -373,6 +365,29 @@
           }
         ],
         "source": "halo3_guerilla.exe 0x1402A8FA0"
+      },
+      "physics_model": {
+        "source": "halo3_guerilla.exe 0x1403CF2E0, 0x1403CF3B0",
+        "label": [
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "primary_secondary": {
+        "source": "halo3_guerilla.exe 0x14076DCA0, 0x14076DCF0, 0x14076DD40",
+        "label": [
+          "{#|map:magazines}"
+        ],
+        "maps": {
+          "magazines": {
+            "names": [
+              "primary",
+              "secondary"
+            ]
+          }
+        }
       }
     }
   }

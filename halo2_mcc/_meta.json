@@ -130,14 +130,6 @@
   "bad_index": "BAD",
   "flags": "number",
   "source": "Guerilla sub_462940 / sub_4623F4 / sub_462454 (halo2_mcc_guerilla.exe)",
-  "maps": {
-   "magazines": {
-    "names": [
-     "primary",
-     "secondary"
-    ]
-   }
-  },
   "entries": {
    "materials": {
     "label": [
@@ -253,6 +245,44 @@
      }
     ],
     "source": "halo2_mcc_tool.exe 0x5B0520"
+   },
+   "decorator_classes": {
+    "source": "halo2_mcc_tool.exe 0x8C9E20, 0x8C9EC0, 0x909223, 0x909253, 0x909283",
+    "label": [
+     {
+      "format": "{name}",
+      "when": "1"
+     }
+    ]
+   },
+   "models": {
+    "source": "halo2_mcc_tool.exe 0x68C0A0, 0x8C9FE0",
+    "label": [
+     {
+      "format": "{#}: {model name}",
+      "when": "1"
+     }
+    ]
+   },
+   "game_engine_event": {
+    "source": "halo2_mcc_tool.exe 0x821240, 0x821390, 0x8214E0, 0x821550, 0x8215C0, 0x821630, 0x8216A0, 0x821710",
+    "label": [
+     "{event} : {audience}"
+    ]
+   },
+   "primary_secondary": {
+    "source": "halo2_mcc_tool.exe 0xA61C70, 0xA61CD0, 0xA61D30",
+    "label": [
+     "{#|map:magazines}"
+    ],
+    "maps": {
+     "magazines": {
+      "names": [
+       "primary",
+       "secondary"
+      ]
+     }
+    }
    }
   }
  }

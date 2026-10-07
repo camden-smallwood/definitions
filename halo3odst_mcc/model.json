@@ -797,7 +797,20 @@
       ],
       "short_name": "material",
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\models\\model_definitions.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x140409CC0"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x140409CC0",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140409CC0",
+        "label": [
+          {
+            "when": "{global material name} != \"\"",
+            "format": "{material name} ({global material name})"
+          },
+          {
+            "when": "1",
+            "format": "{material name}"
+          }
+        ]
+      }
     },
     "global_damage_info_block": {
       "guid": "3f70eaf88e430e56000a3e90f2b3771c",
@@ -1236,7 +1249,13 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\models\\damage_info_definitions.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14058F620"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14058F620",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14058F620",
+        "label": [
+          "{damage threshold:.3f} : {new state|enum:model_state_enum_definition}"
+        ]
+      }
     },
     "instantaneous_response_damage_effect_struct": {
       "guid": "61f7ba1614491a458c1308b51eda4472",

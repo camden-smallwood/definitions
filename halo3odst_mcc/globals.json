@@ -1011,7 +1011,8 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\ai\\ai_globals.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x140A51C90"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x140A51C90",
+      "element_label": "ai_globals_styles"
     },
     "ai_globals_formation_block": {
       "guid": "b4dafd33ab42853b1aa8c89f98a8454e",
@@ -1479,7 +1480,13 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\game\\game_globals.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x140361970"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x140361970",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140361970",
+        "label": [
+          "{#fraction:.3f}, {scale:.3f}"
+        ]
+      }
     },
     "difficulty_block": {
       "guid": "8c69849cb540cfa3696073b46b01d1ab",
@@ -1990,7 +1997,21 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\game\\game_globals.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x140361940"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x140361940",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140361940",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "campaign",
+              "survival"
+            ]
+          }
+        }
+      }
     },
     "grenades_block": {
       "guid": "10d45ffb074bb743f5a4cd94563af419",
@@ -2043,7 +2064,13 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\game\\game_globals.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x1403618F0"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x1403618F0",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1403618F0",
+        "label": [
+          "{#|enum:global_grenade_type_enum}"
+        ]
+      }
     },
     "interface_tag_references": {
       "guid": "42bdfceafb4d2627c124269c3c0d8b92",
@@ -2655,7 +2682,21 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\game\\materials_definitions.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x1405223D0"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x1405223D0",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1405223D0",
+        "label": [
+          "{#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "default",
+              "units"
+            ]
+          }
+        }
+      }
     },
     "materials_sweeteners_struct": {
       "guid": "b9ba749f884266c34ffc2eb84b4c9259",
@@ -3104,7 +3145,62 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\game\\campaign_metagame_definitions.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14050A750"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14050A750",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14050A750",
+        "label": [
+          "style: {#|map:names}"
+        ],
+        "maps": {
+          "names": {
+            "names": [
+              "grendade stick",
+              "headshot",
+              "melee kill",
+              "stealth kill",
+              "road-kill",
+              "multi-kill (deprecated)",
+              "needler-superdetonation",
+              "emp",
+              "double_kill",
+              "triple_kill",
+              "overkill",
+              "killtacular",
+              "killtrocity",
+              "killamanjaro",
+              "killtastrophe",
+              "killpocalpyse",
+              "killionaire",
+              "killing_spree",
+              "killing_frenzy",
+              "running_riot",
+              "rampage",
+              "untouchable",
+              "invincible",
+              "splatter_spree",
+              "vehicluar_manslaughter",
+              "sniper_spree",
+              "sharpshooter",
+              "shotgun_spree",
+              "open_season",
+              "stick_spree",
+              "corrected",
+              "sword_spree",
+              "slice_n_dice",
+              "hammer_spree",
+              "ball_peen_buster",
+              "hero",
+              "incineration",
+              "laser_kill",
+              "death_from_the_grave",
+              "vehicle_jack",
+              "skyjacker",
+              "vision_mode_kill",
+              "assist"
+            ]
+          }
+        }
+      }
     },
     "campaign_metagame_difficulty_scale_block": {
       "guid": "8ffa1d4caa4e1e201b858bad95e2677d",
@@ -3122,7 +3218,13 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\game\\campaign_metagame_definitions.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14050A7A0"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14050A7A0",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14050A7A0",
+        "label": [
+          "difficulty: {#|enum:global_campaign_difficulty_enum}"
+        ]
+      }
     },
     "campaign_metagame_primary_skull_block": {
       "guid": "d930158f934cccc5139373a6aebac8d5",
@@ -3140,7 +3242,13 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\game\\campaign_metagame_definitions.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14050A7F0"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14050A7F0",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14050A7F0",
+        "label": [
+          "Skull: {#|enum:primary_skull_flags}"
+        ]
+      }
     },
     "campaign_metagame_secondary_skull_block": {
       "guid": "7a513055f941064e0058ef91758e990b",
@@ -3158,7 +3266,13 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\game\\campaign_metagame_definitions.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14050A840"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14050A840",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14050A840",
+        "label": [
+          "Skull: {#|enum:secondary_skull_flags}"
+        ]
+      }
     }
   },
   "arrays": {

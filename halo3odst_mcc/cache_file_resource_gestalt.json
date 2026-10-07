@@ -1085,7 +1085,20 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\cache\\cache_file_builder_tag_resource_manager.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14043C2E0"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14043C2E0",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14043C2E0",
+        "label": [
+          {
+            "when": "{#group} == \"zone\"",
+            "format": "{/resource type identifiers[#]}"
+          },
+          {
+            "when": "1",
+            "format": "{#}"
+          }
+        ]
+      }
     },
     "cache_file_zone_resource_visit_node_block_struct": {
       "guid": "ba75c3171f48b7e777157daf4acdc6fa",
@@ -1355,7 +1368,20 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\cache\\cache_file_builder_tag_resource_manager.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14043C5E0"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14043C5E0",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14043C5E0",
+        "label": [
+          {
+            "when": "{#group} == \"zone\" && {#} < {/bsp references|count}",
+            "format": "{/bsp references[#]/bsp}"
+          },
+          {
+            "when": "1",
+            "format": "bsp {#}"
+          }
+        ]
+      }
     },
     "cache_file_bsp_attachment_block": {
       "guid": "e231708ac74ac9c4824cc78977e296c9",
@@ -1411,7 +1437,20 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\cache\\cache_file_builder_tag_resource_manager.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14043C460"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14043C460",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14043C460",
+        "label": [
+          {
+            "when": "{owner tag|group} == \"scenario_structure_bsp\"",
+            "format": "{owner tag}: {disk size:mb} MB"
+          },
+          {
+            "when": "1",
+            "format": "{owner tag|path}.{owner tag|group}: {disk size:mb} MB"
+          }
+        ]
+      }
     },
     "cache_file_debug_resource_definition_block": {
       "guid": "92be566d914c1fe970281f90382fdfad",
@@ -1504,7 +1543,20 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\cache\\cache_file_builder_tag_resource_manager.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14043C380"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14043C380",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14043C380",
+        "label": [
+          {
+            "when": "{#group} == \"zone\"",
+            "format": "[{#:04x}]{/resources[#]/owner tag|path}.{/resources[#]/owner tag|group}"
+          },
+          {
+            "when": "1",
+            "format": ""
+          }
+        ]
+      }
     },
     "cache_file_tag_resource_properties_block": {
       "guid": "c8154d888447401e2c36e4b1e3e7442e",
@@ -1599,7 +1651,16 @@
         }
       ],
       "source_file": "c:\\mcc\\qfe1\\odst\\source\\cache\\cache_file_builder_tag_resource_manager.cpp",
-      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14043C570"
+      "element_label_callback": "halo3odst_mcc_guerilla.exe 0x14043C570",
+      "element_label": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14043C570",
+        "label": [
+          {
+            "when": "1",
+            "format": "{tag|path}.{tag|group}"
+          }
+        ]
+      }
     },
     "cache_file_tag_parentage_reference_block": {
       "guid": "1e7773c2ba45c699c43e0eb3fb688496",

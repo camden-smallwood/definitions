@@ -208,6 +208,264 @@
     "fallback_name": "struct",
     "bad_index": "BAD: %d",
     "flags": "names",
-    "source": "Guerilla sub_14029AC90 / sub_14029A870 / sub_14029AA40 / sub_14029AE40 (halo3odst_mcc_guerilla.exe)"
+    "source": "Guerilla sub_14029AC90 / sub_14029A870 / sub_14029AA40 / sub_14029AE40 (halo3odst_mcc_guerilla.exe)",
+    "entries": {
+      "ai_globals_styles": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140A51C90; no bounds check",
+        "label": [
+          "{#|enum:global_style_enum}"
+        ]
+      },
+      "materials": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14040F310",
+        "label": [
+          {
+            "format": "{name} ({global material name})",
+            "when": "{global material name} != \"\""
+          },
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "particle_system_definition_block_new": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14050CD50",
+        "label": [
+          {
+            "format": "{particle}",
+            "when": "1"
+          }
+        ]
+      },
+      "character_style": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140A5AF90; no bounds check",
+        "label": [
+          "{#|enum:style_attitude_enum}"
+        ]
+      },
+      "cinematic_shot": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1402C3390",
+        "label": [
+          "Shot {#1}"
+        ]
+      },
+      "cinematic_shot_object_function": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1402C32D0; reads the owning tag as a cinematic scene",
+        "label": [
+          {
+            "format": "{#}. {/objects[{object|index}]/name} ({function name})",
+            "when": "{#group} == \"cisc\" && {object|index} >= 0 && {object|index} < {/objects|count}"
+          },
+          {
+            "format": "{#}. NONE ({function name})",
+            "when": "1"
+          }
+        ]
+      },
+      "cinematic_shot_object_function_keyframe": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1402C3260",
+        "label": [
+          {
+            "format": "Frame {frame:3d} (Disable)",
+            "when": "{flags} & 1"
+          },
+          {
+            "format": "Frame {frame:3d}",
+            "when": "1"
+          }
+        ]
+      },
+      "cinematic_frame": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1402C3230",
+        "label": [
+          "Frame {#1}"
+        ]
+      },
+      "widget": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1406F8CE0, 0x1406F8D50, 0x1406F8DC0, 0x1406F8E30, 0x1406F8EA0",
+        "label": [
+          {
+            "format": "{#}. {name}",
+            "when": "{name} != \"\""
+          },
+          {
+            "format": "{#}. [{#block}]",
+            "when": "1"
+          }
+        ],
+        "max_length": 127
+      },
+      "game_engine_event": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140534B80, 0x140534C20",
+        "label": [
+          "{event id} : {audience|enum:game_engine_event_audience_enum_definition}"
+        ]
+      },
+      "physics_model": {
+        "source": "halo3odst_mcc_guerilla.exe 0x14040F6D0, 0x14040F790",
+        "label": [
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "scenario_object": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140302230",
+        "label": [
+          {
+            "format": "{name|none:|bad:<invalid name>} {type|none:NONE|bad:BAD}",
+            "when": "{#group} == \"scnr\""
+          },
+          {
+            "format": " {type|none:NONE|bad:BAD}",
+            "when": "1"
+          }
+        ]
+      },
+      "squads": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140A54550",
+        "label": [
+          {
+            "format": "{name} ({template})",
+            "when": "{squad template index} != -1"
+          },
+          {
+            "format": "{name}",
+            "when": "1"
+          }
+        ]
+      },
+      "ai_reference_frame": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140A91620; reads the owning tag as a scenario; outside one the placement lookup has no scenario to read",
+        "label": [
+          {
+            "format": "{/{object id/type|map:ai_reference_frame_placement_blocks}[object data/object id/unique id == {object id/unique id} && object data/object id/source == {object id/source} && object data/object id/type == {object id/type} && (object data/object id/source != 0 || object data/object id/origin bsp index == {object id/origin bsp index})]/name|none:[invalid]|bad:[invalid]}:{node index}",
+            "when": "{#group} == \"scnr\" && {object id/source} <= 1 && {/{object id/type|map:ai_reference_frame_placement_blocks}[object data/object id/unique id == {object id/unique id} && object data/object id/source == {object id/source} && object data/object id/type == {object id/type} && (object data/object id/source != 0 || object data/object id/origin bsp index == {object id/origin bsp index})]}"
+          },
+          {
+            "format": "[invalid]:{node index}",
+            "when": "1"
+          }
+        ],
+        "maps": {
+          "ai_reference_frame_placement_blocks": {
+            "names": [
+              "bipeds",
+              "vehicles",
+              "weapons",
+              "equipment",
+              "arg devices",
+              "terminals",
+              null,
+              "scenery",
+              "machines",
+              "controls",
+              "sound scenery",
+              "crates",
+              "creatures",
+              "giants",
+              "effect scenery"
+            ]
+          }
+        }
+      },
+      "zone_set": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140A9AE90",
+        "label": [
+          {
+            "format": "Invalid zone",
+            "when": "{#group} == \"scnr\" && ({zone|index} < 0 || {zone|index} >= {/zones|count})"
+          },
+          {
+            "format": "NONE ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\" && {area|index} == -1"
+          },
+          {
+            "format": "Invalid area ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\" && ({area|index} < 0 || {area|index} >= {/zones[{zone|index}]/areas|count})"
+          },
+          {
+            "format": "{/zones[{zone|index}]/areas[{area|index}]/name} ({/zones[{zone|index}]/name})",
+            "when": "{#group} == \"scnr\""
+          },
+          {
+            "format": "zone {zone|index}: area {area|index}",
+            "when": "1"
+          }
+        ]
+      },
+      "spawn_points": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140A54290; the cell comes from the owning squad: its designer cells, or its templated cells once it has a template",
+        "label": [
+          {
+            "format": "NONE: {name}",
+            "when": "{cell|index} == -1"
+          },
+          {
+            "format": "ERROR: {name}",
+            "when": "{#group} != \"scnr\""
+          },
+          {
+            "format": "{../designer/cells[{cell|index}]}: {name}",
+            "when": "{../squad template index} == -1 && {cell|index} >= 0 && {cell|index} < {../designer/cells|count}"
+          },
+          {
+            "format": "{../templated/cells[{cell|index}]}: {name}",
+            "when": "{../squad template index} != -1 && {cell|index} >= 0 && {cell|index} < {../templated/cells|count}"
+          },
+          {
+            "format": "BAD {cell|index}: {name}",
+            "when": "1"
+          }
+        ]
+      },
+      "order_completion_condition": {
+        "source": "halo3odst_mcc_guerilla.exe 0x140A93360",
+        "label": [
+          {
+            "format": "NOT {rule type|map:order_completion_condition_conditions}",
+            "when": "{flags} & 1"
+          },
+          {
+            "format": "{rule type|map:order_completion_condition_conditions}",
+            "when": "1"
+          }
+        ],
+        "maps": {
+          "order_completion_condition_conditions": {
+            "names": "x"
+          }
+        }
+      },
+      "sound_pitch_range": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1402CC390",
+        "label": [
+          {
+            "format": "always played",
+            "when": "{#count} == 1"
+          },
+          {
+            "format": "{name}:{bend bounds[0]} to {bend bounds[1]}",
+            "when": "1"
+          }
+        ]
+      },
+      "primary_secondary": {
+        "source": "halo3odst_mcc_guerilla.exe 0x1407C6830, 0x1407C6870, 0x1407C68B0",
+        "label": [
+          "{#|map:magazines}"
+        ],
+        "maps": {
+          "magazines": {
+            "names": [
+              "primary",
+              "secondary"
+            ]
+          }
+        }
+      }
+    }
   }
 }

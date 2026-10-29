@@ -666,6 +666,24 @@
     "crates": "crate palette"
   },
   "string_editors": {
+    "hud_message": {
+      "caption": "HUD Messages",
+      "builder": "string_list",
+      "source": [
+        "globals",
+        {
+          "ref": "interface tags[0]/multiplayer ui globals"
+        },
+        {
+          "ref": "HUD globals"
+        }
+      ],
+      "lists": {
+        "block": "string references",
+        "ref": "string list"
+      },
+      "language": "English"
+    },
     "default_model_variant": {
       "caption": "Model Variants",
       "builder": "names",

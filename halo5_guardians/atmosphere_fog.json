@@ -1,0 +1,655 @@
+{
+  "name": "atmosphere_fog",
+  "tag": "fogg",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "atmosphere_fog_block",
+  "blocks": {
+    "atmosphere_fog_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "atmosphere_fog_block_struct"
+    },
+    "soloFogFunctionBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "soloFogFunctionBlock"
+    }
+  },
+  "structs": {
+    "atmosphere_fog_block_struct": {
+      "guid": "e9e5c4a45c42a7402d14db83b126793f",
+      "size": 472,
+      "size_string": "(sizeof(s_atmosphere_definition) - Tag::SizeInfo<s_atmosphere_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "Depth Fog",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "custom",
+          "name": "Master Depth Fog Start",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "Start Bias",
+          "definition": "Fog start offset for all \"depth fog.\" Positive value that moves fog starting point forward \nalong camera view direction (into the screen)."
+        },
+        {
+          "type": "real",
+          "name": "distance bias:world units#positive means into the screen"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Depth Sky Fog",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "sky fog",
+          "definition": "solo_fog_parameters_struct_definition"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Depth Ground Fog",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "ground fog",
+          "definition": "solo_fog_parameters_struct_definition"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Depth Ceiling Fog",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "ceiling fog",
+          "definition": "s_ceiling_fog_parameters_struct_definition"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Fog Light",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "fog light",
+          "definition": "fog_light_struct_definition"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "explanation",
+          "name": "### CAUTION ###",
+          "definition": "Non-blending globals are currently still read from the .atmosphere_globals tag.\nWe will remove this tag and switch to using this block in the very near future"
+        },
+        {
+          "type": "struct",
+          "name": "fog globals",
+          "definition": "volumeTextureFogGlobalsStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "Volume Texture Fog Per-Cluster Parameters",
+          "definition": "Sheet density.............Intensity scaling factor applied to all sheets\nFull intensity height.....Height above 0 below which fog should be at full intensity\nHalf intensity height.....Height at which fog should be attenuated to half intensity\nWind......................Direction and intensity of fog motion due to wind\n\n"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "volumeTextureFogFlagsDefn"
+        },
+        {
+          "type": "real",
+          "name": "Sheet density"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "Color tint"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "Color tint inner"
+        },
+        {
+          "type": "real",
+          "name": "Intensity"
+        },
+        {
+          "type": "real",
+          "name": "Full intensity height"
+        },
+        {
+          "type": "real",
+          "name": "Half intensity height"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "Wind direction"
+        },
+        {
+          "type": "real",
+          "name": "Reference plane height"
+        },
+        {
+          "type": "custom",
+          "name": "Crepuscular Rays",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "crepuscular ray",
+          "definition": "CrepuscularRayParamsDefinition"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "explanation",
+          "name": "Weather effect",
+          "definition": "Effect tag to create nearby raindrops, snowflakes, etc.\nParticle systems from this effect will follow the camera and wrap seamlessly as you turn or move.\n\n"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Weather effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144861310"
+    },
+    "solo_fog_parameters_struct_definition": {
+      "guid": "15b12ad89949240949a17c854849f224",
+      "size": 64,
+      "size_string": "sizeof(s_solo_fog_parameters)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "soloFogFlagsDefn"
+        },
+        {
+          "type": "real",
+          "name": "base height:world units"
+        },
+        {
+          "type": "real",
+          "name": "fog height:world units"
+        },
+        {
+          "type": "real",
+          "name": "fog thickness [0.0 to 1.0]"
+        },
+        {
+          "type": "real",
+          "name": "fog falloff end{max fog distance}"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "fog color"
+        },
+        {
+          "type": "real",
+          "name": "fog color intensity#scales color up or down to allow for HDR values"
+        },
+        {
+          "type": "block",
+          "name": "Function",
+          "definition": "soloFogFunctionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144860da0"
+    },
+    "soloFogFunctionBlock": {
+      "guid": "29d5f9d1e1d3069b3c7909d550af3136",
+      "size": 28,
+      "size_string": "sizeof(s_soloFogFunction)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144860c80"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "s_ceiling_fog_parameters_struct_definition": {
+      "guid": "16b12ad89a49240949a17c854849f224",
+      "size": 36,
+      "size_string": "sizeof(s_ceiling_fog_parameters)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "ceilingFogFlagsDefn"
+        },
+        {
+          "type": "real",
+          "name": "base height:world units"
+        },
+        {
+          "type": "real",
+          "name": "fog height:world units"
+        },
+        {
+          "type": "real",
+          "name": "fog thickness [0.0 to 1.0]"
+        },
+        {
+          "type": "real",
+          "name": "fog falloff end{max fog distance}"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "fog color"
+        },
+        {
+          "type": "real",
+          "name": "fog color intensity#scales color up or down to allow for HDR values"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144860eb0"
+    },
+    "fog_light_struct_definition": {
+      "guid": "09f2a42edb43eb235a12cf96da6c717f",
+      "size": 44,
+      "size_string": "sizeof(s_fog_light_parameters)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "fogLightFlagsDefn"
+        },
+        {
+          "type": "real",
+          "name": "pitch angle [-90 to 90]:degree"
+        },
+        {
+          "type": "real",
+          "name": "yaw angle [0 to 360]:degree"
+        },
+        {
+          "type": "real",
+          "name": "angular radius [0 to 180]:degree"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "tint color"
+        },
+        {
+          "type": "real",
+          "name": "tint color intensity"
+        },
+        {
+          "type": "real",
+          "name": "angular falloff steepness"
+        },
+        {
+          "type": "real",
+          "name": "distance falloff steepness"
+        },
+        {
+          "type": "real",
+          "name": "nearby cutoff percentage"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144860fd0"
+    },
+    "volumeTextureFogGlobalsStruct": {
+      "guid": "1788bf3e16494cc9d390c9b316f63970",
+      "size": 80,
+      "size_string": "sizeof(VolumeTextureFogGlobals)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Volume Texture Fog Non-blending Parameters",
+          "definition": "NOTE: The parameters below do not interpolate across lighting volumes. If you do not fade out\nthe volume texture fog to 0, and do not transition from 0 to a new value in a different lighting\nvolume but rather simply specify a different value directly, you will see a pop\n\nFog Bitmap................Noise texture to use on the screen-aligned sheets of fog\nTexture repeat rate.......Scaling factor to apply to fog UV coordinates\nDistance between sheets...Separating distance between sheets of fog\nDepth fade factor.........Lower values (approaching 0) cause a smoother fade at scene boundaries. Larger values (1 or more) make for a sharp transition\n\nFalloff start distance....Distance (in world units) at which to begin fading out patchy fog (default: 5)\nDistance falloff power....Rate at which to begin attenuating patchy fog settings (default: 2)\nTransparent sort distance..Distance from the camera where we sort the patchy fog effect (default: 100)\nDisable Texture Rotation..When checked, fog texture will not rotate, i.e. fog's up direction\n                          will always match the camera's up direction. (default: false)\nwind strength across distance..Multiplies the wind strength based upon distance from player\n\n"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Fog Bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "Texture repeat rate"
+        },
+        {
+          "type": "real",
+          "name": "Distance between sheets"
+        },
+        {
+          "type": "real",
+          "name": "Depth fade factor"
+        },
+        {
+          "type": "real",
+          "name": "Transparent sort distance"
+        },
+        {
+          "type": "char_enum",
+          "name": "Transparent sort layer",
+          "definition": "global_sort_layer_enum_defintion"
+        },
+        {
+          "type": "byte_flags",
+          "name": "Flags",
+          "definition": "volumeTextureFogGlobalFlagsDefn"
+        },
+        {
+          "type": "pad",
+          "name": "UNdfdfdSED",
+          "definition": 2
+        },
+        {
+          "type": "struct",
+          "name": "wind strength across distance",
+          "definition": "scalar_function_named_struct_default_one"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144867790"
+    },
+    "scalar_function_named_struct_default_one": {
+      "guid": "00ba4e383445a92a43d011ad26ef234a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function_default_one"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738f40"
+    },
+    "mapping_function_default_one": {
+      "guid": "a5ab19901a4a5a4c34f01aadada1fd11",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738c20"
+    },
+    "CrepuscularRayParamsDefinition": {
+      "guid": "8fe1a114a84a3f6ba85be9b60026b1fd",
+      "size": 72,
+      "size_string": "sizeof(CrepuscularRayParams)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "crepuscularRaysFlagsDefn"
+        },
+        {
+          "type": "real",
+          "name": "pitch angle [-90 to 90]:degree"
+        },
+        {
+          "type": "real",
+          "name": "yaw angle [0 to 360]:degree"
+        },
+        {
+          "type": "real",
+          "name": "angular radius [0 to 180]:degree"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "source position"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "light shaft tint color"
+        },
+        {
+          "type": "real",
+          "name": "light shaft intensity"
+        },
+        {
+          "type": "real",
+          "name": "saturation"
+        },
+        {
+          "type": "real",
+          "name": "time variation scale [0 to 1]"
+        },
+        {
+          "type": "real",
+          "name": "light shaft decay rate"
+        },
+        {
+          "type": "real",
+          "name": "maximum screen distance"
+        },
+        {
+          "type": "real",
+          "name": "sample density"
+        },
+        {
+          "type": "real",
+          "name": "minimum caster distance"
+        },
+        {
+          "type": "pad",
+          "name": "PAD",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144861200"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "soloFogFlagsDefn": {
+      "options": [
+        "Enabled",
+        "Camera-relative"
+      ]
+    },
+    "ceilingFogFlagsDefn": {
+      "options": [
+        "Enabled"
+      ]
+    },
+    "fogLightFlagsDefn": {
+      "options": [
+        "Enabled",
+        "Use sun direction for fog light"
+      ]
+    },
+    "global_sort_layer_enum_defintion": {
+      "options": [
+        "invalid",
+        "pre-pass",
+        "normal",
+        "post-pass"
+      ]
+    },
+    "volumeTextureFogGlobalFlagsDefn": {
+      "options": [
+        "Disable Texture Rotation"
+      ]
+    },
+    "volumeTextureFogFlagsDefn": {
+      "options": [
+        "Enabled"
+      ]
+    },
+    "crepuscularRaysFlagsDefn": {
+      "options": [
+        "Enabled",
+        "Use sun direction for crepuscular rays",
+        "Use world space position for the source of crepuscular rays"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

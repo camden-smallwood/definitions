@@ -1,0 +1,173 @@
+{
+  "name": "antenna",
+  "tag": "ant!",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "antenna_block",
+  "blocks": {
+    "antenna_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "antenna_block_struct"
+    },
+    "antenna_vertex_block": {
+      "max_count": 20,
+      "max_count_string": "MAXIMUM_NUMBER_OF_ANTENNA_VERTICES",
+      "struct": "antenna_vertex_block"
+    }
+  },
+  "structs": {
+    "antenna_block_struct": {
+      "guid": "391dbeb3864b27efc8796486eec930e0",
+      "size": 144,
+      "size_string": "(sizeof(antenna_definition) - Tag::SizeInfo<antenna_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "string_id",
+          "name": "attachment marker name#the marker name where the antenna should be attached"
+        },
+        {
+          "type": "tag_reference",
+          "name": "bitmaps",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "physics",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "pphy"
+            ]
+          }
+        },
+        {
+          "type": "real_fraction",
+          "name": "spring strength coefficient#strength of the spring (larger values make the spring stronger)"
+        },
+        {
+          "type": "real",
+          "name": "texel to world width scale"
+        },
+        {
+          "type": "real",
+          "name": "falloff pixels!"
+        },
+        {
+          "type": "real",
+          "name": "cutoff pixels!"
+        },
+        {
+          "type": "real",
+          "name": "point of bend#[0,1]"
+        },
+        {
+          "type": "real",
+          "name": "starting bend#[0,1]"
+        },
+        {
+          "type": "real",
+          "name": "ending bend#[0,1]"
+        },
+        {
+          "type": "real",
+          "name": "runtime total length!"
+        },
+        {
+          "type": "block",
+          "name": "vertices",
+          "definition": "antenna_vertex_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449b2c50"
+    },
+    "antenna_vertex_block": {
+      "guid": "f0f43b5f6a47547741ad5983490f16ab",
+      "size": 64,
+      "size_string": "sizeof(struct antenna_vertex)",
+      "fields": [
+        {
+          "type": "real_euler_angles_2d",
+          "name": "angles#direction toward next vertex!"
+        },
+        {
+          "type": "real",
+          "name": "length:world units#distance between this vertex and the next"
+        },
+        {
+          "type": "short_integer",
+          "name": "sequence index#bitmap group sequence index for this vertex's texture"
+        },
+        {
+          "type": "pad",
+          "name": "NTCTQQF",
+          "definition": 2
+        },
+        {
+          "type": "real_argb_color",
+          "name": "color#color at this vertex"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "LOD color#color at this vertex for the low-LOD line primitives!"
+        },
+        {
+          "type": "real",
+          "name": "hermite t!"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "vector to next!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449b2b40"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

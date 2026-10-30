@@ -1,0 +1,270 @@
+{
+  "name": "streamingzoneset",
+  "tag": "SDzs",
+  "version": 1,
+  "flags": 2048,
+  "parent_tag": "aTag",
+  "block": "streamingzoneset_block",
+  "blocks": {
+    "streamingzoneset_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "streamingzoneset_block_struct"
+    },
+    "StreamingZoneSetResourceIdBlock": {
+      "max_count": 4096,
+      "max_count_string": "4096",
+      "struct": "StreamingZoneSetResourceIdBlock"
+    },
+    "StreamingZoneSetResourceSubregionDataBlockOld": {
+      "max_count": 65536,
+      "max_count_string": "65536",
+      "struct": "StreamingZoneSetResourceSubregionDataBlockOld"
+    },
+    "StreamingZoneSetResourceLevelsBlock": {
+      "max_count": 4096,
+      "max_count_string": "4096",
+      "struct": "StreamingZoneSetResourceLevelsBlock"
+    },
+    "StreamingZoneSetResourceSubregionDataBlock": {
+      "max_count": 65536,
+      "max_count_string": "65536",
+      "struct": "StreamingZoneSetResourceSubregionDataBlock"
+    },
+    "StreamingZoneSetResourceLevelsBlockPacked": {
+      "max_count": 4096,
+      "max_count_string": "4096",
+      "struct": "StreamingZoneSetResourceLevelsBlockPacked"
+    }
+  },
+  "structs": {
+    "streamingzoneset_block_struct": {
+      "guid": "7034f419f74399e5629e34bc0718a610",
+      "size": 104,
+      "size_string": "(sizeof(StreamingZoneSet) - Tag::SizeInfo<StreamingZoneSet::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "resource subregion AABB min"
+        },
+        {
+          "type": "real_vector_2d",
+          "name": "resource subregion block size"
+        },
+        {
+          "type": "block",
+          "name": "streaming resource ids",
+          "definition": "StreamingZoneSetResourceIdBlock"
+        },
+        {
+          "type": "block",
+          "name": "streaming resource subregions",
+          "definition": "StreamingZoneSetResourceSubregionDataBlockOld"
+        },
+        {
+          "type": "tag_resource",
+          "name": "resource data",
+          "definition": "StreamingZonesetResource_schema"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144756080"
+    },
+    "StreamingZoneSetResourceIdBlock": {
+      "guid": "6a1e5fb7a34e40c740d487984044a719",
+      "size": 32,
+      "size_string": "sizeof(struct StreamingZoneSetResourceId)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "streaming_reference_tag",
+          "definition": {
+            "flags": 64,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144755980"
+    },
+    "StreamingZoneSetResourceSubregionDataBlockOld": {
+      "guid": "90ba5936394e27eb78b22183019f7021",
+      "size": 44,
+      "size_string": "sizeof(struct StreamingZoneSetResourceSubregionDataOld)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "block offset X"
+        },
+        {
+          "type": "long_integer",
+          "name": "block offset Y"
+        },
+        {
+          "type": "real",
+          "name": "min Z"
+        },
+        {
+          "type": "real",
+          "name": "max Z"
+        },
+        {
+          "type": "block",
+          "name": "resource levels",
+          "definition": "StreamingZoneSetResourceLevelsBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144755d10"
+    },
+    "StreamingZoneSetResourceLevelsBlock": {
+      "guid": "489bf96abc44c835190296bd92853246",
+      "size": 4,
+      "size_string": "sizeof(struct StreamingZoneSetResourceLevel)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "requested width"
+        },
+        {
+          "type": "short_integer",
+          "name": "requested height"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144755ab0"
+    },
+    "StreamingZonesetResource_schema_struct": {
+      "guid": "dc30f7553a487ee656f04fae309af4e6",
+      "size": 72,
+      "size_string": "sizeof(StreamingZonesetResource)",
+      "fields": [
+        {
+          "type": "real_point_2d",
+          "name": "resource subregion AABB min"
+        },
+        {
+          "type": "real_vector_2d",
+          "name": "resource subregion block size"
+        },
+        {
+          "type": "block",
+          "name": "streaming resource ids",
+          "definition": "StreamingZoneSetResourceIdBlock"
+        },
+        {
+          "type": "block",
+          "name": "streaming resource subregions",
+          "definition": "StreamingZoneSetResourceSubregionDataBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144755f60"
+    },
+    "StreamingZoneSetResourceSubregionDataBlock": {
+      "guid": "14cbf0344c4989c2a89f8ba88b91d1e8",
+      "size": 44,
+      "size_string": "sizeof(struct StreamingZoneSetResourceSubregionData)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "block offset X"
+        },
+        {
+          "type": "long_integer",
+          "name": "block offset Y"
+        },
+        {
+          "type": "real",
+          "name": "min Z"
+        },
+        {
+          "type": "real",
+          "name": "max Z"
+        },
+        {
+          "type": "block",
+          "name": "resource levels",
+          "definition": "StreamingZoneSetResourceLevelsBlockPacked"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144755e40"
+    },
+    "StreamingZoneSetResourceLevelsBlockPacked": {
+      "guid": "71a8167d1542ee2ea39c3990c45bc8de",
+      "size": 2,
+      "size_string": "sizeof(short)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "requested width"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144755be0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "resources": {
+    "StreamingZonesetResource_schema": {
+      "flags": 0,
+      "struct": "StreamingZonesetResource_schema_struct"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

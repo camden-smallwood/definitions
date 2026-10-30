@@ -1,0 +1,105 @@
+{
+  "name": "portrait_poses_definition",
+  "tag": "ppod",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "portrait_poses_definition_block",
+  "blocks": {
+    "portrait_poses_definition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "portrait_poses_definition_block_struct"
+    },
+    "gui_portrait_pose_block": {
+      "max_count": 32,
+      "max_count_string": "k_maxPortraitPoses",
+      "struct": "gui_portrait_pose_block"
+    }
+  },
+  "structs": {
+    "portrait_poses_definition_block_struct": {
+      "guid": "930c85f0f145224e608d3db2e09f4be6",
+      "size": 48,
+      "size_string": "(sizeof(UserInterfacePortraitPosesDefinitions) - Tag::SizeInfo<UserInterfacePortraitPosesDefinitions::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "portrait poses",
+          "definition": "gui_portrait_pose_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448cd3b0"
+    },
+    "gui_portrait_pose_block": {
+      "guid": "5bf8f244154a27267caec8bddabc789a",
+      "size": 16,
+      "size_string": "sizeof(GuiPortraitPose)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "pose name^"
+        },
+        {
+          "type": "string_id",
+          "name": "animation name"
+        },
+        {
+          "type": "string_id",
+          "name": "camera view name"
+        },
+        {
+          "type": "long_integer",
+          "name": "scenario profile index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448cd2a0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

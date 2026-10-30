@@ -1,0 +1,448 @@
+{
+  "name": "AnimatedMesh",
+  "tag": "ames",
+  "version": 2,
+  "flags": 2050,
+  "parent_tag": "aTag",
+  "block": "AnimatedMesh_block",
+  "blocks": {
+    "AnimatedMesh_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "AnimatedMesh_block_struct"
+    },
+    "AnimatedMeshRigidBodyFrameStats_BlockSchema": {
+      "max_count": 3000,
+      "max_count_string": "AnimatedMesh::MAX_ANIMATION_FRAMES",
+      "struct": "AnimatedMeshRigidBodyFrameStats_BlockSchema_struct"
+    },
+    "AnimatedMeshRigidBodyRenderStats_BlockSchema": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "AnimatedMeshRigidBodyRenderStats_BlockSchema_struct"
+    },
+    "AnimatedMeshRigidBodyFrameBounds_BlockSchema": {
+      "max_count": 3000,
+      "max_count_string": "AnimatedMesh::MAX_ANIMATION_FRAMES",
+      "struct": "AnimatedMeshRigidBodyFrameBounds_BlockSchema_struct"
+    },
+    "AnimatedMeshRigidBodyMaterialStats_BlockSchema": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "AnimatedMeshRigidBodyMaterialStats_BlockSchema_struct"
+    },
+    "ReferencedPartPerMaterial_BlockSchema": {
+      "max_count": 8192,
+      "max_count_string": "AnimatedMesh::MAX_PARTS_PER_ANIMATED_MESH >> 2",
+      "struct": "ReferencedPartPerMaterial_BlockSchema_struct"
+    },
+    "AnimatedMeshRigidBodyFrameTransforms_BlockSchema": {
+      "max_count": 3000,
+      "max_count_string": "AnimatedMesh::MAX_ANIMATION_FRAMES",
+      "struct": "AnimatedMeshRigidBodyFrameTransforms_BlockSchema_struct"
+    },
+    "AnimatedMeshQuantizedRigidTransform_BlockSchema": {
+      "max_count": 32768,
+      "max_count_string": "AnimatedMesh::MAX_PARTS_PER_ANIMATED_MESH",
+      "struct": "AnimatedMeshQuantizedRigidTransform_BlockSchema_struct"
+    },
+    "DwordIndexBuffer_BlockSchema": {
+      "max_count": 2621400,
+      "max_count_string": "AnimatedMesh::MAX_COMPOUND_INDEX_BUFFER",
+      "struct": "DwordIndexBuffer_BlockSchema_struct"
+    },
+    "AnimatedMeshRigidBodyCSVertex_BlockSchema": {
+      "max_count": 1048560,
+      "max_count_string": "AnimatedMesh::MAX_COMPOUND_VERTEX_BUFFER",
+      "struct": "AnimatedMeshRigidBodyCSVertex_BlockSchema_struct"
+    },
+    "AnimatedMeshRigidBodyTransformedVertexBuffer_BlockSchema": {
+      "max_count": 1048560,
+      "max_count_string": "AnimatedMesh::MAX_COMPOUND_VERTEX_BUFFER",
+      "struct": "AnimatedMeshRigidBodyTransformedVertexBuffer_BlockSchema_struct"
+    }
+  },
+  "structs": {
+    "AnimatedMesh_block_struct": {
+      "guid": "ff889185d44621a92f79579cdc79a90b",
+      "size": 40,
+      "size_string": "(sizeof(AnimatedMesh) - Tag::SizeInfo<AnimatedMesh::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Flags"
+        },
+        {
+          "type": "byte_integer",
+          "name": "Version"
+        },
+        {
+          "type": "byte_integer",
+          "name": "Authored FPS"
+        },
+        {
+          "type": "word_integer",
+          "name": "Resource frame count"
+        },
+        {
+          "type": "tag_resource",
+          "name": "Perframe rigid body resources",
+          "definition": "AnimatedMeshRigidBody_ResourceSchema"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499f9a0"
+    },
+    "AnimatedMeshRigidBody_ResourceSchema_struct": {
+      "guid": "9cce06a68943fb41b3057b85e3184bb6",
+      "size": 208,
+      "size_string": "sizeof(AnimatedMeshRigidBodyResouce)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "Runtime*!~\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "block",
+          "name": "Render stats per frame",
+          "definition": "AnimatedMeshRigidBodyFrameStats_BlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "Bounds per frame",
+          "definition": "AnimatedMeshRigidBodyFrameBounds_BlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "Referenced parts per material",
+          "definition": "AnimatedMeshRigidBodyMaterialStats_BlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "Part transforms per frame",
+          "definition": "AnimatedMeshRigidBodyFrameTransforms_BlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "Compound index buffer",
+          "definition": "DwordIndexBuffer_BlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "Compound vertex buffer",
+          "definition": "AnimatedMeshRigidBodyCSVertex_BlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "Transform vertex buffer",
+          "definition": "AnimatedMeshRigidBodyTransformedVertexBuffer_BlockSchema"
+        },
+        {
+          "type": "word_integer",
+          "name": "Material count"
+        },
+        {
+          "type": "char_enum",
+          "name": "Animation transform type",
+          "definition": "AnimatedMeshTransformType_EnumSchema"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499f890"
+    },
+    "AnimatedMeshRigidBodyFrameStats_BlockSchema_struct": {
+      "guid": "f31bfe7a6748b2e18cf66e8cbfa3ec29",
+      "size": 28,
+      "size_string": "sizeof(AnimatedMeshRigidBodyFrameStats)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "Render stats per frame per material",
+          "definition": "AnimatedMeshRigidBodyRenderStats_BlockSchema"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499f300"
+    },
+    "AnimatedMeshRigidBodyRenderStats_BlockSchema_struct": {
+      "guid": "65017da28a41630e8429d4a743707eb9",
+      "size": 16,
+      "size_string": "sizeof(AnimatedMeshRigidBodyRenderStats)",
+      "fields": [
+        {
+          "type": "dword_integer",
+          "name": "Index buffer start index"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Index buffer indices count"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Vertex buffer start index"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Vertex buffer vertices count"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499f1f0"
+    },
+    "AnimatedMeshRigidBodyFrameBounds_BlockSchema_struct": {
+      "guid": "ce8a3f00bb9ed3948b461f862498ee93",
+      "size": 24,
+      "size_string": "sizeof(AnimatedMeshRigidBodyFrameBounds)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "Position AABB min"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "Position AABB extents"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499f530"
+    },
+    "AnimatedMeshRigidBodyMaterialStats_BlockSchema_struct": {
+      "guid": "39c5f3c2a34f148f66663f8f8c36e0cd",
+      "size": 28,
+      "size_string": "sizeof(AnimatedMeshRigidBodyFrameStats)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "Referenced part indices",
+          "definition": "ReferencedPartPerMaterial_BlockSchema"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499f420"
+    },
+    "ReferencedPartPerMaterial_BlockSchema_struct": {
+      "guid": "f1c5570af449c7bd6d48c992bcd17d7b",
+      "size": 2,
+      "size_string": "sizeof(word)",
+      "fields": [
+        {
+          "type": "word_integer",
+          "name": "word*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499eb40"
+    },
+    "AnimatedMeshRigidBodyFrameTransforms_BlockSchema_struct": {
+      "guid": "e2fb90fd7748de225e911d86269e2a83",
+      "size": 28,
+      "size_string": "sizeof(AnimatedMeshRigidBodyFrameTransforms)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "Part transform",
+          "definition": "AnimatedMeshQuantizedRigidTransform_BlockSchema"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499f760"
+    },
+    "AnimatedMeshQuantizedRigidTransform_BlockSchema_struct": {
+      "guid": "49c4c4a80a48394a916f619760d77b74",
+      "size": 12,
+      "size_string": "sizeof(AnimatedMeshQuantizedRigidTransform)",
+      "fields": [
+        {
+          "type": "array",
+          "name": "Compressed quantized rigid transform",
+          "definition": "CompressedQuantizedRigidTransform_ArraySchema"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499ed90"
+    },
+    "CompressedQuantizedRigidTransform_ArraySchema": {
+      "guid": "6af8d3336043ae9d160755ac1a33ef26",
+      "size": 4,
+      "size_string": "sizeof(dword)",
+      "fields": [
+        {
+          "type": "dword_integer",
+          "name": "Compressed quantized rigid transform channel*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499ec80"
+    },
+    "DwordIndexBuffer_BlockSchema_struct": {
+      "guid": "8e4b51737849a55e0d44aa8a4cc2e199",
+      "size": 4,
+      "size_string": "sizeof(dword)",
+      "fields": [
+        {
+          "type": "dword_integer",
+          "name": "dword*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499ea30"
+    },
+    "AnimatedMeshRigidBodyCSVertex_BlockSchema_struct": {
+      "guid": "8f224b91fb4109bcee20adadc253b97a",
+      "size": 28,
+      "size_string": "sizeof(AnimatedMeshRigidBodyCSVertex)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "position"
+        },
+        {
+          "type": "real",
+          "name": "texcoord"
+        },
+        {
+          "type": "dword_integer",
+          "name": "normal"
+        },
+        {
+          "type": "dword_integer",
+          "name": "tangent"
+        },
+        {
+          "type": "dword_integer",
+          "name": "part index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499efc0"
+    },
+    "AnimatedMeshRigidBodyTransformedVertexBuffer_BlockSchema_struct": {
+      "guid": "b6cc9932e24934cc1888df8095033e34",
+      "size": 28,
+      "size_string": "sizeof(rasterizer_vertex_world)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "position"
+        },
+        {
+          "type": "dword_integer",
+          "name": "half texcoord"
+        },
+        {
+          "type": "dword_integer",
+          "name": "compressed normal"
+        },
+        {
+          "type": "dword_integer",
+          "name": "compressed tangent"
+        },
+        {
+          "type": "dword_integer",
+          "name": "compressed color"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14499f0d0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "arrays": {
+    "CompressedQuantizedRigidTransform_ArraySchema": {
+      "count": 3,
+      "count_string": "3",
+      "struct": "CompressedQuantizedRigidTransform_ArraySchema"
+    }
+  },
+  "enums_flags": {
+    "AnimatedMeshTransformType_EnumSchema": {
+      "options": [
+        "Per Part",
+        "Per Vertex"
+      ]
+    }
+  },
+  "resources": {
+    "AnimatedMeshRigidBody_ResourceSchema": {
+      "flags": 0,
+      "struct": "AnimatedMeshRigidBody_ResourceSchema_struct"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

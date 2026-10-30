@@ -1,0 +1,1310 @@
+{
+  "name": "light_volume_system",
+  "tag": "ltvl",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "light_volume_system_block",
+  "blocks": {
+    "light_volume_system_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "light_volume_system_block_struct"
+    },
+    "light_volume_definition_block": {
+      "max_count": 16,
+      "max_count_string": "c_light_volume_system_definition::k_max_light_volume",
+      "struct": "light_volume_definition_block"
+    },
+    "material_shader_parameter_block": {
+      "max_count": 267,
+      "max_count_string": "s_material_shader_parameter::k_max_material_shader_parameters",
+      "struct": "material_shader_parameter_block"
+    },
+    "material_shader_function_parameter_block": {
+      "max_count": 267,
+      "max_count_string": "s_material_shader_parameter::k_max_material_shader_parameters",
+      "struct": "material_shader_function_parameter_block"
+    },
+    "material_postprocess_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "material_postprocess_block_struct"
+    },
+    "material_postprocess_texture_block": {
+      "max_count": 32,
+      "max_count_string": "c_material::k_maximum_postprocess_textures",
+      "struct": "material_postprocess_texture_block"
+    },
+    "functionParameterBlock": {
+      "max_count": 255,
+      "max_count_string": "k_uint8_max",
+      "struct": "functionParameterBlock"
+    },
+    "externParameterBlock": {
+      "max_count": 255,
+      "max_count_string": "k_uint8_max",
+      "struct": "externParameterBlock"
+    },
+    "materialConstantBlock": {
+      "max_count": 255,
+      "max_count_string": "k_uint8_max",
+      "struct": "materialConstantBlock"
+    },
+    "g_null_block": {
+      "max_count": 0,
+      "max_count_string": "0",
+      "struct": "g_null_block"
+    },
+    "gpu_property_block": {
+      "max_count": 20,
+      "max_count_string": "k_max_gpu_properties",
+      "struct": "gpu_property_block"
+    },
+    "gpu_function_block": {
+      "max_count": 28,
+      "max_count_string": "k_max_gpu_functions",
+      "struct": "gpu_function_block"
+    },
+    "gpu_color_block": {
+      "max_count": 8,
+      "max_count_string": "k_max_gpu_colors",
+      "struct": "gpu_color_block"
+    },
+    "light_volume_precompiled_vert_block": {
+      "max_count": 128,
+      "max_count_string": "LightVolumeDefinition::k_max_precompiled_profiles",
+      "struct": "light_volume_precompiled_vert_block"
+    }
+  },
+  "structs": {
+    "light_volume_system_block_struct": {
+      "guid": "e029886695422e9e3ff4e1acbc897706",
+      "size": 48,
+      "size_string": "(sizeof(c_light_volume_system_definition) - Tag::SizeInfo<c_light_volume_system_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "light_volumes",
+          "definition": "light_volume_definition_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14470fd10"
+    },
+    "light_volume_definition_block": {
+      "guid": "9bf93c7ef74a5cb81800998f8adde1b1",
+      "size": 596,
+      "size_string": "sizeof(LightVolumeDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "ifp+"
+        },
+        {
+          "type": "string_id",
+          "name": "light_volume name^"
+        },
+        {
+          "type": "custom",
+          "name": "material",
+          "group_tag": "tmpl"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "struct",
+          "name": "actual material?",
+          "definition": "material_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "word_flags",
+          "name": "appearance flags",
+          "definition": "light_volume_appearance_flags"
+        },
+        {
+          "type": "pad",
+          "name": "SONGWEOINGEW",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "brightness ratio#avg. brightness head-on/side-view"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "light_volume_flags"
+        },
+        {
+          "type": "real",
+          "name": "LOD in distance#defaults to 0.0, ignored if 'lod enabled' not checked above"
+        },
+        {
+          "type": "real",
+          "name": "LOD feather in delta#defaults to 0.0, ignored if 'lod enabled' not checked above"
+        },
+        {
+          "type": "real",
+          "name": "inverse LOD feather in!"
+        },
+        {
+          "type": "real",
+          "name": "LOD out distance#defaults to 30.0, ignored if 'lod enabled' not checked above"
+        },
+        {
+          "type": "real",
+          "name": "LOD feather out delta#defaults to 10.0, ignored if 'lod enabled' not checked above"
+        },
+        {
+          "type": "real",
+          "name": "inverse LOD feather out!"
+        },
+        {
+          "type": "struct",
+          "name": "length",
+          "definition": "light_volume_property_float"
+        },
+        {
+          "type": "struct",
+          "name": "offset",
+          "definition": "light_volume_property_float"
+        },
+        {
+          "type": "struct",
+          "name": "profile_density",
+          "definition": "light_volume_property_float"
+        },
+        {
+          "type": "struct",
+          "name": "profile_length",
+          "definition": "light_volume_property_float"
+        },
+        {
+          "type": "struct",
+          "name": "profile_thickness",
+          "definition": "light_volume_property_float"
+        },
+        {
+          "type": "struct",
+          "name": "profile_color",
+          "definition": "light_volume_property_real_rgb_color"
+        },
+        {
+          "type": "struct",
+          "name": "profile_alpha",
+          "definition": "light_volume_property_float"
+        },
+        {
+          "type": "struct",
+          "name": "profile_intensity",
+          "definition": "light_volume_property_float"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "ifp-"
+        },
+        {
+          "type": "dword_integer",
+          "name": "runtime m_constant_per_profile_properties!"
+        },
+        {
+          "type": "dword_integer",
+          "name": "runtime m_used_states!"
+        },
+        {
+          "type": "dword_integer",
+          "name": "runtime m_max_profile_count!"
+        },
+        {
+          "type": "struct",
+          "name": "runtime m_gpu_data!",
+          "definition": "gpu_property_function_color_struct"
+        },
+        {
+          "type": "block",
+          "name": "precompiled vertices",
+          "definition": "light_volume_precompiled_vert_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14470fc00"
+    },
+    "material_struct": {
+      "guid": "230d81130644153c599476aa073df0a7",
+      "size": 112,
+      "size_string": "sizeof(c_material)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "material shader",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mats"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "material parameters",
+          "definition": "material_shader_parameter_block"
+        },
+        {
+          "type": "block",
+          "name": "postprocess definition!",
+          "definition": "material_postprocess_block"
+        },
+        {
+          "type": "string_id",
+          "name": "physics material name",
+          "group_tag": "sted"
+        },
+        {
+          "type": "string_id",
+          "name": "physics material name 2",
+          "group_tag": "sted"
+        },
+        {
+          "type": "string_id",
+          "name": "physics material name 3",
+          "group_tag": "sted"
+        },
+        {
+          "type": "string_id",
+          "name": "physics material name 4",
+          "group_tag": "sted"
+        },
+        {
+          "type": "real",
+          "name": "sort offset"
+        },
+        {
+          "type": "char_enum",
+          "name": "alpha blend mode",
+          "definition": "alpha_blend_mode_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "sort layer*",
+          "definition": "global_sort_layer_enum_defintion"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags!",
+          "definition": "materialFlags"
+        },
+        {
+          "type": "byte_flags",
+          "name": "render flags!",
+          "definition": "materialRenderFlags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d8f0"
+    },
+    "material_shader_parameter_block": {
+      "guid": "063e4b5e3647a8183f96cfbe9dd6ca42",
+      "size": 232,
+      "size_string": "sizeof(s_material_shader_parameter)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "parameter name^*"
+        },
+        {
+          "type": "long_enum",
+          "name": "parameter type*",
+          "definition": "material_shader_parameter_type_enum"
+        },
+        {
+          "type": "long_integer",
+          "name": "parameter index*!"
+        },
+        {
+          "type": "tag_reference",
+          "name": "bitmap",
+          "definition": {
+            "flags": 18,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "bitmap path"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "color"
+        },
+        {
+          "type": "real",
+          "name": "real"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "vector"
+        },
+        {
+          "type": "long_integer",
+          "name": "int/bool"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap flags"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap filter mode"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap address mode"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap address mode x"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap address mode y"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap sharpen mode"
+        },
+        {
+          "type": "byte_integer",
+          "name": "bitmap extern mode"
+        },
+        {
+          "type": "byte_integer",
+          "name": "bitmap min mipmap"
+        },
+        {
+          "type": "byte_integer",
+          "name": "bitmap max mipmap"
+        },
+        {
+          "type": "byte_integer",
+          "name": "parameter flags!"
+        },
+        {
+          "type": "dword_integer",
+          "name": "render phases used"
+        },
+        {
+          "type": "dword_integer",
+          "name": "shader types used"
+        },
+        {
+          "type": "block",
+          "name": "function parameters",
+          "definition": "material_shader_function_parameter_block"
+        },
+        {
+          "type": "data",
+          "name": "display name*",
+          "definition": "help_text_block"
+        },
+        {
+          "type": "data",
+          "name": "display group*",
+          "definition": "help_text_block"
+        },
+        {
+          "type": "data",
+          "name": "display help text*",
+          "definition": "help_text_block"
+        },
+        {
+          "type": "real",
+          "name": "display minimum"
+        },
+        {
+          "type": "real",
+          "name": "display maximum"
+        },
+        {
+          "type": "word_integer",
+          "name": "register offset*!"
+        },
+        {
+          "type": "word_integer",
+          "name": "register size*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448875a0"
+    },
+    "material_shader_function_parameter_block": {
+      "guid": "e3f0715472444df516a555aded7b009a",
+      "size": 52,
+      "size_string": "sizeof(s_material_shader_function_parameter)",
+      "fields": [
+        {
+          "type": "long_enum",
+          "name": "type^",
+          "definition": "material_animated_parameter_type_enum"
+        },
+        {
+          "type": "string_id",
+          "name": "input name",
+          "group_tag": "fnin"
+        },
+        {
+          "type": "string_id",
+          "name": "range name",
+          "group_tag": "fnir"
+        },
+        {
+          "type": "char_enum",
+          "name": "Output Modifier!",
+          "group_tag": "fnop",
+          "definition": "materialFunctionOutputModEnum"
+        },
+        {
+          "type": "pad",
+          "name": "BVCG",
+          "definition": 3
+        },
+        {
+          "type": "string_id",
+          "name": "Output Modifier Input!",
+          "group_tag": "fnom"
+        },
+        {
+          "type": "real",
+          "name": "time period:seconds",
+          "group_tag": "fn**"
+        },
+        {
+          "type": "explanation",
+          "name": "FUNCTION",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144887470"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "material_postprocess_block_struct": {
+      "guid": "c3d0501dc04152c857905b9ea3f398ce",
+      "size": 200,
+      "size_string": "sizeof(s_material_postprocess_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "textures",
+          "definition": "material_postprocess_texture_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "textures to clear"
+        },
+        {
+          "type": "block",
+          "name": "functions",
+          "definition": "material_shader_function_parameter_block"
+        },
+        {
+          "type": "block",
+          "name": "function parameters",
+          "definition": "functionParameterBlock"
+        },
+        {
+          "type": "block",
+          "name": "extern parameters",
+          "definition": "externParameterBlock"
+        },
+        {
+          "type": "char_enum",
+          "name": "alpha blend mode",
+          "definition": "alpha_blend_mode_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "layer blend mode",
+          "definition": "layerBlendModeEnum"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "materialPostprocessFlags"
+        },
+        {
+          "type": "block",
+          "name": "material constants!~",
+          "definition": "materialConstantBlock"
+        },
+        {
+          "type": "block",
+          "name": "alternate constants!~",
+          "definition": "materialConstantBlock"
+        },
+        {
+          "type": "int64_integer",
+          "name": "materialConstantBuffer!~\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "int64_integer",
+          "name": "alternateConstantBuffer!~\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "dword_integer",
+          "name": "material constant shader stage mask"
+        },
+        {
+          "type": "array",
+          "name": "runtime queryable properties table",
+          "definition": "runtime_queryable_properties"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d6b0"
+    },
+    "material_postprocess_texture_block": {
+      "guid": "ec1298cde14bd63c48fe3bb396a5bc0b",
+      "size": 56,
+      "size_string": "sizeof(s_material_postprocess_texture)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "bitmap reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "dword_integer",
+          "name": "render phase mask"
+        },
+        {
+          "type": "dword_integer",
+          "name": "shader stage mask"
+        },
+        {
+          "type": "word_integer",
+          "name": "frame index parameter"
+        },
+        {
+          "type": "word_integer",
+          "name": "sampler index"
+        },
+        {
+          "type": "word_integer",
+          "name": "transform register index"
+        },
+        {
+          "type": "byte_integer",
+          "name": "extern texture mode"
+        },
+        {
+          "type": "pad",
+          "name": "lkasdfhbahsdf",
+          "definition": 1
+        },
+        {
+          "type": "int64_integer",
+          "name": "SamplerState!~\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485cfc0"
+    },
+    "functionParameterBlock": {
+      "guid": "c0eca125be4c1fb8e266949fdbcfa980",
+      "size": 8,
+      "size_string": "sizeof(s_materialFunctionParameter)",
+      "fields": [
+        {
+          "type": "byte_integer",
+          "name": "function index"
+        },
+        {
+          "type": "byte_integer",
+          "name": "register offset"
+        },
+        {
+          "type": "byte_integer",
+          "name": "parameter group"
+        },
+        {
+          "type": "pad",
+          "name": "DHaFS",
+          "definition": 1
+        },
+        {
+          "type": "dword_integer",
+          "name": "render phase mask"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d0f0"
+    },
+    "externParameterBlock": {
+      "guid": "36821172914f2cb2afda45a6bba5e7ab",
+      "size": 8,
+      "size_string": "sizeof(s_materialExternParameter)",
+      "fields": [
+        {
+          "type": "byte_integer",
+          "name": "extern index"
+        },
+        {
+          "type": "byte_integer",
+          "name": "extern offset"
+        },
+        {
+          "type": "byte_integer",
+          "name": "parameter group"
+        },
+        {
+          "type": "pad",
+          "name": "DHaFS",
+          "definition": 1
+        },
+        {
+          "type": "dword_integer",
+          "name": "render phase mask"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d220"
+    },
+    "materialConstantBlock": {
+      "guid": "6c763383c6491399871f34aef2fb867f",
+      "size": 16,
+      "size_string": "sizeof(i343::Float4)",
+      "fields": [
+        {
+          "type": "real_quaternion",
+          "name": "register"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d350"
+    },
+    "runtime_queryable_properties": {
+      "guid": "71d3c8c7b14b1a1e30c49fbebedec7be",
+      "size": 1,
+      "size_string": "sizeof(uint8)",
+      "fields": [
+        {
+          "type": "char_block_index",
+          "name": "index",
+          "definition": "g_null_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d480"
+    },
+    "g_null_block": {
+      "guid": "a6487e75bc4cac9c1ca146bcf3e2f763",
+      "size": 0,
+      "size_string": "0",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449ec0c0"
+    },
+    "light_volume_property_float": {
+      "guid": "6e912ebc9c45c1130d6ebc82dde08c88",
+      "size": 40,
+      "size_string": "sizeof(c_light_volume_property_float)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "Input Variable",
+          "group_tag": "fnin",
+          "definition": "light_volume_state_input_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Range Variable",
+          "group_tag": "fnir",
+          "definition": "light_volume_state_input_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Output Modifier",
+          "group_tag": "fnop",
+          "definition": "output_mod_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Output Modifier Input",
+          "group_tag": "fnom",
+          "definition": "light_volume_state_input_enum"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "Mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "real",
+          "name": "runtime m_constant_value!"
+        },
+        {
+          "type": "word_integer",
+          "name": "runtime m_flags!"
+        },
+        {
+          "type": "pad",
+          "name": "DSFDSGLKJ",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14470ec50"
+    },
+    "light_volume_property_real_rgb_color": {
+      "guid": "a90f1159ee4b249df20fbb8ccf2e823a",
+      "size": 40,
+      "size_string": "sizeof(c_light_volume_property_real_rgb_color)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "Input Variable",
+          "group_tag": "fnin",
+          "definition": "light_volume_state_input_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Range Variable",
+          "group_tag": "fnir",
+          "definition": "light_volume_state_input_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Output Modifier",
+          "group_tag": "fnop",
+          "definition": "output_mod_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Output Modifier Input",
+          "group_tag": "fnom",
+          "definition": "light_volume_state_input_enum"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "Mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "real",
+          "name": "runtime m_constant_value!"
+        },
+        {
+          "type": "word_integer",
+          "name": "runtime m_flags!"
+        },
+        {
+          "type": "pad",
+          "name": "DSFDSGLKJ",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14470ed60"
+    },
+    "gpu_property_function_color_struct": {
+      "guid": "3623de33c542627c318c5aadea782c99",
+      "size": 84,
+      "size_string": "sizeof(c_particle_emitter_definition::s_gpu_data)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "runtime gpu_property_block!",
+          "definition": "gpu_property_block"
+        },
+        {
+          "type": "block",
+          "name": "runtime gpu_functions_block!",
+          "definition": "gpu_function_block"
+        },
+        {
+          "type": "block",
+          "name": "runtime gpu_colors_block!",
+          "definition": "gpu_color_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14471a020"
+    },
+    "gpu_property_block": {
+      "guid": "23089ca4624bcf4647395ba40eda112d",
+      "size": 16,
+      "size_string": "sizeof(c_particle_emitter_definition::s_gpu_data::s_property)",
+      "fields": [
+        {
+          "type": "array",
+          "name": "runtime gpu_property_sub_array!",
+          "definition": "gpu_property_sub_array"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144719f00"
+    },
+    "gpu_property_sub_array": {
+      "guid": "b1cd565e2b4034ec1def36bfba68749b",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "runtime gpu_property_real!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144719dd0"
+    },
+    "gpu_function_block": {
+      "guid": "fdc1f4e421456d77eaf4ccaacd0b3551",
+      "size": 64,
+      "size_string": "sizeof(c_particle_emitter_definition::s_gpu_data::s_function)",
+      "fields": [
+        {
+          "type": "array",
+          "name": "runtime gpu_function_sub_array!",
+          "definition": "gpu_function_sub_array"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144719a40"
+    },
+    "gpu_function_sub_array": {
+      "guid": "310926d6a24191e0d91145989985d7a3",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "runtime gpu_function_real!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144719910"
+    },
+    "gpu_color_block": {
+      "guid": "fb6fa2771943160cd3c4e4814937dc69",
+      "size": 16,
+      "size_string": "sizeof(c_particle_emitter_definition::s_gpu_data::s_color)",
+      "fields": [
+        {
+          "type": "array",
+          "name": "runtime gpu_color_sub_array!",
+          "definition": "gpu_color_sub_array"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144719ca0"
+    },
+    "gpu_color_sub_array": {
+      "guid": "b01fccebd441f1840fb084a54360ff8e",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "runtime gpu_color_real!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144719b70"
+    },
+    "light_volume_precompiled_vert_block": {
+      "guid": "88f6fe12cf4ad53640f716af96b1422a",
+      "size": 8,
+      "size_string": "sizeof(LightVolumeDefinition::s_precompiled_vertex)",
+      "fields": [
+        {
+          "type": "word_integer",
+          "name": "r"
+        },
+        {
+          "type": "word_integer",
+          "name": "g"
+        },
+        {
+          "type": "word_integer",
+          "name": "b"
+        },
+        {
+          "type": "word_integer",
+          "name": "thickness"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14470f6f0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "arrays": {
+    "runtime_queryable_properties": {
+      "count": 4,
+      "count_string": "s_material_postprocess_definition::k_runtime_queryable_properties_count",
+      "struct": "runtime_queryable_properties"
+    },
+    "gpu_property_sub_array": {
+      "count": 4,
+      "count_string": "c_particle_emitter_gpu::_sizeof_gpu_property/sizeof(float)",
+      "struct": "gpu_property_sub_array"
+    },
+    "gpu_function_sub_array": {
+      "count": 16,
+      "count_string": "c_particle_emitter_gpu::_sizeof_gpu_function/sizeof(float)",
+      "struct": "gpu_function_sub_array"
+    },
+    "gpu_color_sub_array": {
+      "count": 4,
+      "count_string": "c_particle_emitter_gpu::_sizeof_gpu_color/sizeof(float)",
+      "struct": "gpu_color_sub_array"
+    }
+  },
+  "enums_flags": {
+    "material_shader_parameter_type_enum": {
+      "options": [
+        "bitmap",
+        "real",
+        "int",
+        "bool",
+        "color"
+      ]
+    },
+    "material_animated_parameter_type_enum": {
+      "options": [
+        "value",
+        "color",
+        "scale uniform",
+        "scale u",
+        "scale v",
+        "offset u",
+        "offset v",
+        "frame index",
+        "alpha"
+      ]
+    },
+    "materialFunctionOutputModEnum": {
+      "options": [
+        " ",
+        "Add",
+        "Multiply"
+      ]
+    },
+    "alpha_blend_mode_enum": {
+      "options": [
+        "opaque",
+        "additive",
+        "multiply",
+        "alpha_blend",
+        "double_multiply",
+        "pre_multiplied_alpha",
+        "maximum",
+        "multiply_add",
+        "add_src_times_dstalpha",
+        "add_src_times_srcalpha",
+        "inv_alpha_blend",
+        "motion_blur_static",
+        "motion_blur_inhibit",
+        "alpha_blend_constant",
+        "overdraw_apply",
+        "wet_screen_effect",
+        "minimum",
+        "revsubtract",
+        "forge_lightmap",
+        "forge_lightmap_inv",
+        "replace_all_channels",
+        "alpha_blend_max",
+        "opaque_alpha_blend",
+        "alpha_blend_additive_transparent",
+        "floating shadow",
+        "decal_alpha_blend",
+        "decal_add_src_times_src_alpha",
+        "decal_multiply_add",
+        "wpf_blend_mode",
+        "wpf_no_color_blend_mode",
+        "blend forge analytic red",
+        "blend factor green only",
+        "blend forge analytic blue",
+        "blend factor alpha only",
+        "multiply red green only",
+        "multiply blue alpha only",
+        "decal opaque",
+        "accumulate_pre_multiplied_alpha",
+        "accumulate_multiply_add",
+        "accumulate_alpha_blend",
+        "accumulate_inverse_alpha_blend",
+        "accumulate_additive",
+        "accumulate_additive_transparent",
+        "accumulate_add_src_times_srcalpha",
+        "accumulate_multiply",
+        "ssao_multiply",
+        "ssao_alpha_channel_only",
+        "depth_peeling_blend_mode",
+        "depth_peeling_Z_pass",
+        "wpf_additive_blend_mode",
+        "forge_normalize",
+        "depth_peeling_accumulate_alpha",
+        "alpha_blend_for_display_planes",
+        "forge_light",
+        "forge_light_inverse",
+        "composite_UI"
+      ]
+    },
+    "layerBlendModeEnum": {
+      "options": [
+        "none",
+        "blended",
+        "layered"
+      ]
+    },
+    "materialPostprocessFlags": {
+      "options": [
+        "has material constant functions",
+        "has texture frame functions",
+        "disable atmosphere fog",
+        "uses depth camera",
+        "material is variable",
+        "has variable material constant functions",
+        "has at least one extern texture used"
+      ]
+    },
+    "global_sort_layer_enum_defintion": {
+      "options": [
+        "invalid",
+        "pre-pass",
+        "normal",
+        "post-pass"
+      ]
+    },
+    "materialFlags": {
+      "options": [
+        "converted from shader",
+        "decal post lighting"
+      ]
+    },
+    "materialRenderFlags": {
+      "options": [
+        "no atmosphere fog",
+        "cull shields",
+        "cull active camo"
+      ]
+    },
+    "light_volume_appearance_flags": {
+      "options": []
+    },
+    "light_volume_flags": {
+      "options": [
+        "lod enabled#if not checked, the following flags do not matter, nor do LOD parameters below",
+        "lod always 1.0{ignore lod (render always)}",
+        "lod same in splitscreen",
+        "disable precompiled profiles",
+        "force precompile profiles",
+        "can be low res",
+        "precompiled!"
+      ]
+    },
+    "light_volume_state_input_enum": {
+      "options": [
+        "profile position",
+        "game time",
+        "light volume age",
+        "light volume random",
+        "light volume correlation 1",
+        "light volume correlation 2",
+        "light volume lod",
+        "effect a scale",
+        "effect b scale",
+        "invalid state --- please set again"
+      ]
+    },
+    "output_mod_enum": {
+      "options": [
+        " ",
+        "Plus",
+        "Times"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    },
+    "help_text_block": {
+      "alignment": 10,
+      "flags": 0,
+      "max_size": 65535,
+      "max_size_string": "UNSIGNED_SHORT_MAX"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

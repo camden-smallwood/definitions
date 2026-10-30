@@ -1,0 +1,138 @@
+{
+  "name": "sound_incident_response",
+  "tag": "sirg",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "sound_incident_response_block",
+  "blocks": {
+    "sound_incident_response_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_incident_response_block_struct"
+    },
+    "sound_incident_response_data_block": {
+      "max_count": 10,
+      "max_count_string": "10",
+      "struct": "sound_incident_response_data_block"
+    }
+  },
+  "structs": {
+    "sound_incident_response_block_struct": {
+      "guid": "4eadad96c64e07a67a8626a6ef14e36d",
+      "size": 48,
+      "size_string": "(sizeof(SoundIncidentResponseGroupDefinition) - Tag::SizeInfo<SoundIncidentResponseGroupDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "responses",
+          "definition": "sound_incident_response_data_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144820220"
+    },
+    "sound_incident_response_data_block": {
+      "guid": "857e5673ee41dda16a161fb9986c245d",
+      "size": 36,
+      "size_string": "sizeof(SoundIncidentResponseDefinition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "audience",
+          "definition": "sound_audience_flags"
+        },
+        {
+          "type": "byte_flags",
+          "name": "excluded audience",
+          "definition": "sound_audience_flags"
+        },
+        {
+          "type": "byte_flags",
+          "name": "split screen flags",
+          "definition": "sound_splitscreen_flags"
+        },
+        {
+          "type": "pad",
+          "name": "RMPES",
+          "definition": 1
+        },
+        {
+          "type": "tag_reference",
+          "name": "response",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sgrp"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144820100"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "sound_audience_flags": {
+      "options": [
+        "cause player",
+        "cause team",
+        "effect player",
+        "effect team",
+        "everyone"
+      ]
+    },
+    "sound_splitscreen_flags": {
+      "options": [
+        "disable if split screen",
+        "disable if not split screen",
+        "disable if split screen on different teams",
+        "disable if split screen all on same team"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

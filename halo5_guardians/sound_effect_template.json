@@ -1,0 +1,286 @@
+{
+  "name": "sound_effect_template",
+  "tag": "<fx>",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "sound_effect_template_block",
+  "blocks": {
+    "sound_effect_template_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_effect_template_block_struct"
+    },
+    "sound_effect_templates_block": {
+      "max_count": 8,
+      "max_count_string": "k_maximum_number_of_sound_effect_templates",
+      "struct": "sound_effect_templates_block"
+    },
+    "sound_effect_template_parameter_block": {
+      "max_count": 128,
+      "max_count_string": "k_maximum_number_of_sound_effect_parameters",
+      "struct": "sound_effect_template_parameter_block"
+    },
+    "sound_effect_template_additional_sound_input_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_effect_template_additional_sound_input_block"
+    }
+  },
+  "structs": {
+    "sound_effect_template_block_struct": {
+      "guid": "f8334eabe84a317712a9c29ecdccb098",
+      "size": 80,
+      "size_string": "(sizeof(s_sound_effect_template_collection) - Tag::SizeInfo<s_sound_effect_template_collection::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "template collection",
+          "definition": "sound_effect_templates_block"
+        },
+        {
+          "type": "string_id",
+          "name": "internal dsp effect name{input effect name}"
+        },
+        {
+          "type": "block",
+          "name": "additional sound inputs",
+          "definition": "sound_effect_template_additional_sound_input_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_set_0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144788900"
+    },
+    "sound_effect_templates_block": {
+      "guid": "f858845c6045b8946fb5eb93026e7ea6",
+      "size": 68,
+      "size_string": "sizeof(s_sound_effect_template_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "dsp effect"
+        },
+        {
+          "type": "explanation",
+          "name": "WARNING",
+          "definition": "DON'T MODIFY THIS TAG UNLESS YOU KNOW WHAT YOU ARE DOING"
+        },
+        {
+          "type": "data",
+          "name": "explanation",
+          "definition": "sound_effect_template_explanation"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "sound_effect_template_flags_definition"
+        },
+        {
+          "type": "short_integer",
+          "name": "dsp state offset!"
+        },
+        {
+          "type": "short_integer",
+          "name": "dsp state size!"
+        },
+        {
+          "type": "block",
+          "name": "parameters",
+          "definition": "sound_effect_template_parameter_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144788610"
+    },
+    "sound_effect_template_parameter_block": {
+      "guid": "167b090c7a42df122e4070a14f8ed4bf",
+      "size": 56,
+      "size_string": "sizeof(s_sound_effect_template_parameter_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "short_enum",
+          "name": "type",
+          "definition": "sound_effect_template_type_enum_definition"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "sound_effect_template_parameter_flags_definition"
+        },
+        {
+          "type": "long_integer",
+          "name": "hardware offset"
+        },
+        {
+          "type": "long_integer",
+          "name": "default enum integer value"
+        },
+        {
+          "type": "real",
+          "name": "default scalar value"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "default function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "real",
+          "name": "minimum scalar value"
+        },
+        {
+          "type": "real",
+          "name": "maximum scalar value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447884e0"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "sound_effect_template_additional_sound_input_block": {
+      "guid": "4efb46c12942454467c630b8f0319f1a",
+      "size": 36,
+      "size_string": "sizeof(s_sound_effect_template_sound_input_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "dsp effect"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "low frequency sound",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "real",
+          "name": "time period: seconds",
+          "group_tag": "fn**"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447887e0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "sound_effect_template_flags_definition": {
+      "options": [
+        "use high level parameters",
+        "custom parameters"
+      ]
+    },
+    "sound_effect_template_type_enum_definition": {
+      "options": [
+        "integer",
+        "real",
+        "filter type"
+      ]
+    },
+    "sound_effect_template_parameter_flags_definition": {
+      "options": [
+        "expose as function"
+      ]
+    }
+  },
+  "datas": {
+    "sound_effect_template_explanation": {
+      "alignment": 10,
+      "flags": 0,
+      "max_size": 65536,
+      "max_size_string": "64*k_kilo"
+    },
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

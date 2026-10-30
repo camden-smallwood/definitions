@@ -1,0 +1,383 @@
+{
+  "name": "game_globals_grenade_list",
+  "tag": "gggl",
+  "version": 0,
+  "flags": 0,
+  "parent_tag": "aTag",
+  "block": "game_globals_grenade_list_block",
+  "blocks": {
+    "game_globals_grenade_list_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_globals_grenade_list_block_struct"
+    },
+    "GameGlobalsGrenadeBlock": {
+      "max_count": 8,
+      "max_count_string": "eUGT_count",
+      "struct": "GameGlobalsGrenadeBlock_struct"
+    },
+    "UIItemInfoBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "UIItemInfoBlock_struct"
+    }
+  },
+  "structs": {
+    "game_globals_grenade_list_block_struct": {
+      "guid": "4835fd6a5d444abe0a7e00aa84aaf490",
+      "size": 48,
+      "size_string": "(sizeof(GameGlobalsGrenadeList) - Tag::SizeInfo<GameGlobalsGrenadeList::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "grenades",
+          "definition": "GameGlobalsGrenadeBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14498e980"
+    },
+    "GameGlobalsGrenadeBlock_struct": {
+      "guid": "3a6a622d9a46efbb087316adecdfd9ae",
+      "size": 260,
+      "size_string": "sizeof(GameGlobalsGrenade)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "UI",
+          "definition": "Labels needed for UI."
+        },
+        {
+          "type": "string_id",
+          "name": "Display Text StringID"
+        },
+        {
+          "type": "string_id",
+          "name": "Description Text StringID"
+        },
+        {
+          "type": "string_id",
+          "name": "Help Text StringID"
+        },
+        {
+          "type": "explanation",
+          "name": "Maximum Grenade Count (Campaign)",
+          "definition": "Malleable property specifying the maximum number of grenades on a unit"
+        },
+        {
+          "type": "custom",
+          "name": "maximum count (campaign)",
+          "group_tag": "mpsh"
+        },
+        {
+          "type": "struct",
+          "name": "maximum count (campaign)",
+          "definition": "MalleablePropertyBaseShortStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "Initial Grenade Count (Campaign)",
+          "definition": "Malleable property specifying the maximum number of grenades on a unit"
+        },
+        {
+          "type": "custom",
+          "name": "initial count (campaign)",
+          "group_tag": "mpsh"
+        },
+        {
+          "type": "struct",
+          "name": "initial count (campaign)",
+          "definition": "MalleablePropertyBaseShortStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "Maximum Grenade Count (Firefight)",
+          "definition": "Malleable property specifying the maximum number of grenades on a unit"
+        },
+        {
+          "type": "custom",
+          "name": "maximum count (firefight)",
+          "group_tag": "mpsh"
+        },
+        {
+          "type": "struct",
+          "name": "maximum count (firefight)",
+          "definition": "MalleablePropertyBaseShortStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "Initial Grenade Count (Firefight)",
+          "definition": "Malleable property specifying the maximum number of grenades on a unit"
+        },
+        {
+          "type": "custom",
+          "name": "initial count (firefight)",
+          "group_tag": "mpsh"
+        },
+        {
+          "type": "struct",
+          "name": "initial count (firefight)",
+          "definition": "MalleablePropertyBaseShortStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "Maximum Grenade Count (Multiplayer)",
+          "definition": "Malleable property specifying the maximum number of grenades on a unit"
+        },
+        {
+          "type": "custom",
+          "name": "maximum count (multiplayer)",
+          "group_tag": "mpsh"
+        },
+        {
+          "type": "struct",
+          "name": "maximum count (multiplayer)",
+          "definition": "MalleablePropertyBaseShortStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "Initial Grenade Count (Multiplayer)",
+          "definition": "Malleable property specifying the maximum number of grenades on a unit"
+        },
+        {
+          "type": "custom",
+          "name": "initial count (multiplayer)",
+          "group_tag": "mpsh"
+        },
+        {
+          "type": "struct",
+          "name": "initial count (multiplayer)",
+          "definition": "MalleablePropertyBaseShortStruct"
+        },
+        {
+          "type": "real",
+          "name": "drop percentage (Campaign)"
+        },
+        {
+          "type": "real",
+          "name": "drop percentage (Firefight)"
+        },
+        {
+          "type": "real",
+          "name": "drop percentage (Multiplayer)"
+        },
+        {
+          "type": "tag_reference",
+          "name": "throwing effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "equipment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "projectile",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "proj"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "equipment (PvE)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "projectile (PvE)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "proj"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "UI display info",
+          "definition": "UIItemInfoBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14498e460"
+    },
+    "MalleablePropertyBaseShortStruct": {
+      "guid": "b89a0078824cc377262a5081a5c134e4",
+      "size": 8,
+      "size_string": "sizeof(i343::MalleableProperty::BaseDefinition<short>)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "Base Value"
+        },
+        {
+          "type": "short_bounds",
+          "name": "Value Bounds"
+        },
+        {
+          "type": "char_enum",
+          "name": "Combiner",
+          "definition": "MalleablePropertyCombiner"
+        },
+        {
+          "type": "pad",
+          "name": "padEnd",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144736bf0"
+    },
+    "UIItemInfoBlock_struct": {
+      "guid": "fd73b86b2b47c65277909b90d0074580",
+      "size": 128,
+      "size_string": "sizeof(UIItemInfo)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^#short name for the item"
+        },
+        {
+          "type": "string_id",
+          "name": "display name#friendly name for the item"
+        },
+        {
+          "type": "string_id",
+          "name": "description#general in-universe item description"
+        },
+        {
+          "type": "string_id",
+          "name": "help text#verbose usage info for use during gameplay"
+        },
+        {
+          "type": "string_id",
+          "name": "icon string id#legacy, from when we embedded the sprites into the font to get streaming behaviour"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sprite#bitmap file representing this item",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "sprite index#frame inside the item's image strip which shows this item "
+        },
+        {
+          "type": "tag_reference",
+          "name": "alt sprite#secondary bitmap file representing this item. for detail images, overlays etc.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "alt sprite index#alt sprite's frame"
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui vehicle screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489bef0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "MalleablePropertyCombiner": {
+      "options": [
+        "sequential#applies the percentages one after another on the base",
+        "total percentage#adds up all of the percentages and applies them to the base",
+        "addition#adds on all of the modifiers to the base",
+        "product#multiplies the values one after another on to the base"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

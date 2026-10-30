@@ -1,0 +1,581 @@
+{
+  "name": "SpartanTrackingComponentDefinition",
+  "tag": "sptr",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "SpartanTrackingComponentDefinition_block",
+  "blocks": {
+    "SpartanTrackingComponentDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "SpartanTrackingComponentDefinition_block_struct"
+    }
+  },
+  "structs": {
+    "SpartanTrackingComponentDefinition_block_struct": {
+      "guid": "25e034a74f42fb63b043d2811fcad098",
+      "size": 632,
+      "size_string": "(sizeof(SpartanTrackingComponentDefinition) - Tag::SizeInfo<SpartanTrackingComponentDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "Gameplay",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "SpartanTrackingDefinitionTagFlags"
+        },
+        {
+          "type": "tag_reference",
+          "name": "weapon#The weapon provides hooks for much of the UI and animation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weap"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "ping max distance:wu#The max distance the volume could be from the player's point of view"
+        },
+        {
+          "type": "angle",
+          "name": "ping max view pitch angle:degrees [0, 180]#The max pitch angle the volume could be from the player's point of view"
+        },
+        {
+          "type": "angle",
+          "name": "ping max view yaw angle:degrees [0, 180]#The max yaw angle the volume could be from the player's point of view"
+        },
+        {
+          "type": "angle",
+          "name": "ping signal view angle:degrees [0, ping max view angle]#The max angle that is rendered in the graph, outside of renders at the farthest side"
+        },
+        {
+          "type": "real",
+          "name": "ping signal duration:seconds#The number of seconds the pinged object should emit a signal"
+        },
+        {
+          "type": "explanation",
+          "name": "signal strength attenuation function",
+          "definition": "Determines how the signal strength attenuates over the ping signal duration."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "signal strength attenuation function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "distance weight function",
+          "definition": "Maps actual distance weight to a modified distance weight so we can have greater control over strength contrast at close range."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "distance weight function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "real_fraction",
+          "name": "ping signal angle weight:[0,1]#Honing weight given to the angle towards to the tracking area"
+        },
+        {
+          "type": "explanation",
+          "name": "angle weight over distance weight function",
+          "definition": "Determines pct of the angle weight that can be applied over % of distance weight.  This is used to avoid ugly jumps from no signal to big-ish signal when you move in/out of range of signal looking directly at it."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "angle weight over distance weight function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Rumble",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real_bounds",
+          "name": "ping signal low rumble range:[0,1]#Frequency range for a signal's low rumble"
+        },
+        {
+          "type": "real_bounds",
+          "name": "ping signal high rumble range:[0,1]#Frequency range for a signal's high rumble"
+        },
+        {
+          "type": "real_bounds",
+          "name": "ping signal trigger rumble range:[0,1]#Frequency range for a signal's trigger rumble"
+        },
+        {
+          "type": "explanation",
+          "name": "rumble shape function",
+          "definition": "Use this curve to define the shape of rumble intensity over ping signal duration."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "rumble shape function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "trigger rumble intensity function",
+          "definition": "Use this curve to define the trigger rumble strength as it approaches center.  Consider 0.5 center intensity value, [0,0.5] is not my side & [0.5,1.0] is my side"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "trigger rumble intensity function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "FX",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "tracking area near ENTER effect#Triggered when player ENTERS tracking area near range. Plays on the player.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "tracking area near EXIT effect#Triggered when player EXITS tracking area near range. Plays on the player.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ping success effect#Triggered when player successfully pings something. Plays at trackable object's location for duration of ping success.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "scan complete effect#Triggered when player successfully scans a tracking object. Plays on the player.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "scan fail effect#Triggered when player fails to scans a tracking object. Plays on the player.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "scan loop effect#Triggered when player is scanning a tracking object. Plays on the player.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Ping Signal Wave",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "ping signal wave",
+          "definition": "SpartanTrackingComponentSignalWaveDefinitionTagStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c92f0"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "SpartanTrackingComponentSignalWaveDefinitionTagStruct": {
+      "guid": "d5ff0d60594c29cb3b2b99a7ecdf13fb",
+      "size": 200,
+      "size_string": "sizeof(SpartanTrackingComponentSignalWaveDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "tracking mode data",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "tracking mode data",
+          "definition": "SpartanTrackingComponentSignalWaveGraphDefinitionTagStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "ping signal",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "ping signal",
+          "definition": "SpartanTrackingComponentPingSignalDefinitionTagStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "scanning mode data",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "scanning mode data",
+          "definition": "SpartanTrackingComponentSignalWaveGraphDefinitionTagStruct"
+        },
+        {
+          "type": "real",
+          "name": "scanning hint amplitude#the distance the particles should move to provide a hint during the scan mode"
+        },
+        {
+          "type": "real",
+          "name": "scanning hint frequency#the frequency of the hint during the scan mode"
+        },
+        {
+          "type": "real",
+          "name": "the max initial scan particle velocity#the max initial particle velocity towards the hint target"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "real",
+          "name": "noise duration enter#number of seconds over which to linearly scale up the noise after getting near enough to the signal"
+        },
+        {
+          "type": "real",
+          "name": "noise duration exit#number of seconds over which to linearly scale down the noise after getting far enough away from the signal"
+        },
+        {
+          "type": "custom",
+          "name": "signal noise x 1",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "signal noise x 1 (left to right)",
+          "definition": "SpartanTrackingComponentPingSignalNoiseDefinitionTagStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "signal noise x 2",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "signal noise x 2 (left to right)",
+          "definition": "SpartanTrackingComponentPingSignalNoiseDefinitionTagStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "signal noise z 1",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "signal noise z 1 (front to back)",
+          "definition": "SpartanTrackingComponentPingSignalNoiseDefinitionTagStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "signal noise z 2",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "signal noise z 2 (front to back)",
+          "definition": "SpartanTrackingComponentPingSignalNoiseDefinitionTagStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e9f30"
+    },
+    "SpartanTrackingComponentSignalWaveGraphDefinitionTagStruct": {
+      "guid": "3dcfc8439d4ab39f383db5b4ab9d9dea",
+      "size": 36,
+      "size_string": "sizeof(SpartanTrackingComponentSignalWaveGraphDefinition)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "number of data columns#number of data columns, must be at least 1 and rows x columns must be less than 10,000"
+        },
+        {
+          "type": "long_integer",
+          "name": "number of data rows#number of data rows, must be at least 1 and rows x columns must be less than 10,000"
+        },
+        {
+          "type": "real",
+          "name": "depth#the depth of the plane of the signal (regardless of data point size or number)"
+        },
+        {
+          "type": "real",
+          "name": "height#the height of the plane of the signal, noise and signal values are calculated against this (regardless of data point size or number)"
+        },
+        {
+          "type": "real",
+          "name": "width#the width of the plane of the signal (regardless of data point size or number)"
+        },
+        {
+          "type": "real",
+          "name": "data point size#the size of the data point texture"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "wave offset#offset of the wave from the marker x+ right, y+ up, z+ forward"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e9e20"
+    },
+    "SpartanTrackingComponentPingSignalDefinitionTagStruct": {
+      "guid": "9e0aef2aeb41966d4f15468562b36ee2",
+      "size": 28,
+      "size_string": "sizeof(SpartanTrackingComponentPingSignalDefinition)",
+      "fields": [
+        {
+          "type": "real_bounds",
+          "name": "amplitude percentage#Affects the min/max height of ping success peaks in the signal"
+        },
+        {
+          "type": "real",
+          "name": "domain half size#defines the domain of the normal distribution: [-size, +size]"
+        },
+        {
+          "type": "explanation",
+          "name": "sigma",
+          "definition": "effects the \"pointiness\" of the signal.  The low value will be used when really close to the object and you want a spike in the wave form. The high value will be used when far from the object and you want a shallower wave form.  See: http://en.wikipedia.org/wiki/Normal_distribution"
+        },
+        {
+          "type": "real_bounds",
+          "name": "sigma effects the \"pointyness\" of the signal: "
+        },
+        {
+          "type": "fraction_bounds",
+          "name": "z axis-min-max percentage#the min max depth the signal will effect the plane (Can be ignored in the shader)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e9bf0"
+    },
+    "SpartanTrackingComponentPingSignalNoiseDefinitionTagStruct": {
+      "guid": "d5eafc9e534c0fed082c59a6beb2ff8c",
+      "size": 20,
+      "size_string": "sizeof(SpartanTrackingComponentPingSignalNoiseDefinition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "PingSignalNoiseEnumFlags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "real",
+          "name": "frequency modulation#Affects wave direction and distance between peaks"
+        },
+        {
+          "type": "real_bounds",
+          "name": "amplitude modulation percentage (min to max)#Affects peak heights"
+        },
+        {
+          "type": "real",
+          "name": "phase#Affects speed at which waves move across"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e9d00"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "SpartanTrackingDefinitionTagFlags": {
+      "options": [
+        "is tracker unequipped upon successful scan",
+        "is ping continuously generating data on original strongest signal over duration",
+        "is scanning automatic on zoom"
+      ]
+    },
+    "PingSignalNoiseEnumFlags": {
+      "options": [
+        "is scaled by distance"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

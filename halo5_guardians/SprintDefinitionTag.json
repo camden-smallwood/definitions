@@ -1,0 +1,410 @@
+{
+  "name": "SprintDefinitionTag",
+  "tag": "sasp",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "SprintDefinitionTag_block",
+  "blocks": {
+    "SprintDefinitionTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "SprintDefinitionTag_block_struct"
+    }
+  },
+  "structs": {
+    "SprintDefinitionTag_block_struct": {
+      "guid": "c8130f3f6f441218a6c32cb566e26ad6",
+      "size": 296,
+      "size_string": "(sizeof(SprintDefinitionTag) - Tag::SizeInfo<SprintDefinitionTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "sprint",
+          "definition": "SprintDefinitionStruct"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c74a0"
+    },
+    "SprintDefinitionStruct": {
+      "guid": "bcdf613cde44784040842381b84cfb42",
+      "size": 276,
+      "size_string": "sizeof(SprintDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "common ability parameters",
+          "definition": "SpartanAbilityCommonParametersStruct"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags{shoulder bash flags}",
+          "definition": "SprintDefinitionFlagsDef"
+        },
+        {
+          "type": "long_enum",
+          "name": "stun timer control",
+          "definition": "SprintDamageStunTimerControlEnum"
+        },
+        {
+          "type": "real",
+          "name": "evade delay time#how long after evading before the sprint fraction starts building up again"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "real",
+          "name": "seconds to full speed#how long to reach top speed"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "custom",
+          "name": "time to full speed:seconds#how long to reach top speed",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "time to full speed:seconds#how long to reach top speed",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "real",
+          "name": "falloff time:seconds#amount of time it takes for effects of sprint (speed, look speed, and strafe scale) to wear off after exiting sprint"
+        },
+        {
+          "type": "explanation",
+          "name": "speed ramp up function",
+          "definition": "Determines how speed multiplier increases from sprint initiation (0 on x axis) to full speed (1 on x axis). Y axis is percentage of full speed multiplier applied."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "speed ramp up function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "real",
+          "name": "full speed multiplier#how much faster we actually go when at full sprint"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "custom",
+          "name": "full speed scalar#how much faster we actually go when at full sprint",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "full speed scalar#how much faster we actually go when at full sprint",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "look velocity scale function",
+          "definition": "Determines how look velocity scale (both yaw and pitch) moves from 1.0 to full sprint scale as sprint is ramping up to full speed."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "look velocity scale function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "real",
+          "name": "yaw velocity scale at full sprint#scale applied to yaw velocity when sprinting at full speed"
+        },
+        {
+          "type": "real",
+          "name": "pitch velocity scale at full sprint#scale applied to pitch velocity when sprinting at full speed"
+        },
+        {
+          "type": "explanation",
+          "name": "max strafe throttle magnitude function",
+          "definition": "Determines how maximum strafe throttle magnitude moves from 1.0 to full sprint cap as sprint is ramping up to full speed."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "max strafe throttle magnitude function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "real",
+          "name": "max strafe throttle magnitude at full sprint#cap applied to strafe throttle magnitude at full sprint"
+        },
+        {
+          "type": "real",
+          "name": "pegged magnitude#how far the stick needs to be pressed before being considered pegged"
+        },
+        {
+          "type": "real",
+          "name": "pegged magnitude (legacy presets)#in legacy you don't get left/right throttle inputs only forward/back (default = 0.3)"
+        },
+        {
+          "type": "angle",
+          "name": "pegged angular threshold#how far off straight up we consider pegged"
+        },
+        {
+          "type": "angle",
+          "name": "max angle between facing and velocity:degrees#if facing deviates from velocity by more than this threshold, player is kicked out of sprint"
+        },
+        {
+          "type": "real",
+          "name": "minimum player velocity to be considered in a sprinting state:world units per second"
+        },
+        {
+          "type": "string_id",
+          "name": "animation stance"
+        },
+        {
+          "type": "explanation",
+          "name": "stopping power",
+          "definition": "Determines how damage corresponds to sprint fraction reduction - takes a normalized damage (think percentage of shield) as the input and maps to the amount of speed fraction that should be removed."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "damage to sprint fraction reduction",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "damage recharge delay timer",
+          "definition": "There are some networking implications to this value such that we don\u0092t really want it to be too small. It currently relies on the damage state being send across from the authority and if this time value is too small it might be possible to miss out on some updates. Would suggest avoid going any lower than 1.5 for now."
+        },
+        {
+          "type": "real",
+          "name": "damage recharge delay timer#how long after taking damage before you can start to build up sprint"
+        },
+        {
+          "type": "real_fraction",
+          "name": "damage reduction ignore threshold#only reduce sprint fraction from damage if the sprint fraction is <= this"
+        },
+        {
+          "type": "real_fraction",
+          "name": "damage reduction minimum#don't reduce the sprint fraction below this"
+        },
+        {
+          "type": "custom",
+          "name": "exit animation speed scalar#scales the Spartan's sprint exit animation playback speed",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "exit animation speed scalar#scales the Spartan's sprint exit animation playback speed",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c7390"
+    },
+    "SpartanAbilityCommonParametersStruct": {
+      "guid": "f4efb1a03c4854d9d47df188cdebb4f0",
+      "size": 44,
+      "size_string": "sizeof(SpartanAbilityCommonParameters)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "SpartanAbilityDefinitionTagFlags"
+        },
+        {
+          "type": "real_fraction",
+          "name": "activation energy cost#amount of energy required to activate the ability"
+        },
+        {
+          "type": "real",
+          "name": "active energy consumption:energy/second#amount of energy consumed continuously while the ability is active"
+        },
+        {
+          "type": "tag_reference",
+          "name": "activation effect#effects triggered when player activates ability",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e94d0"
+    },
+    "MalleablePropertyBaseFloatStruct": {
+      "guid": "a1b4d8f8e64063dbbb8cea978b2eae63",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::BaseDefinition<float>)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "Base Value"
+        },
+        {
+          "type": "real_bounds",
+          "name": "Value Bounds"
+        },
+        {
+          "type": "char_enum",
+          "name": "Combiner",
+          "definition": "MalleablePropertyCombiner"
+        },
+        {
+          "type": "pad",
+          "name": "padEnd",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447369c0"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "SpartanAbilityDefinitionTagFlags": {
+      "options": [
+        "Use 3rd Person Camera When Active",
+        "Hide Reticle When Active",
+        "Is Motion Tracked (By Enemies) When Active",
+        "One-Shot Activation Effect#Effect kills itself rather than being explicitly killed when the ability deactivates",
+        "Can be activated when weapon state is relaxed",
+        "Does Not Appear In Extended Motion Tracker Range"
+      ]
+    },
+    "SprintDefinitionFlagsDef": {
+      "options": [
+        "allow build up whilst airborne",
+        "enable stopping power",
+        "enable stopping power in campaign",
+        "pause damage section recharge#when sprinting prevents the damage section recharging (N.B. not the same as the stun timer)",
+        "zero sprint fraction when engaging combat actions#firing, throwing grenades, etc."
+      ]
+    },
+    "SprintDamageStunTimerControlEnum": {
+      "options": [
+        "Normal",
+        "Suspend",
+        "Reset"
+      ]
+    },
+    "MalleablePropertyCombiner": {
+      "options": [
+        "sequential#applies the percentages one after another on the base",
+        "total percentage#adds up all of the percentages and applies them to the base",
+        "addition#adds on all of the modifiers to the base",
+        "product#multiplies the values one after another on to the base"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

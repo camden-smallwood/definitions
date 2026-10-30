@@ -1,0 +1,94 @@
+{
+  "name": "scenario_render_data",
+  "tag": "sred",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "scenario_render_data_block",
+  "blocks": {
+    "scenario_render_data_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "scenario_render_data_block_struct"
+    }
+  },
+  "structs": {
+    "scenario_render_data_block_struct": {
+      "guid": "2b34e16ccf4b32bc31e798355c222a73",
+      "size": 24,
+      "size_string": "(sizeof(ScenarioRenderData) - Tag::SizeInfo<ScenarioRenderData::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_integer",
+          "name": "dynamic/analytic gobo texture slots"
+        },
+        {
+          "type": "short_integer",
+          "name": "max gobo resolution"
+        },
+        {
+          "type": "char_enum",
+          "name": "gobo bit depth",
+          "definition": "goboBitDepthEnum"
+        },
+        {
+          "type": "char_enum",
+          "name": "single pass lighting mode",
+          "definition": "singlePassLightingModeEnum"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144760740"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "goboBitDepthEnum": {
+      "options": [
+        "8-bit",
+        "16-bit"
+      ]
+    },
+    "singlePassLightingModeEnum": {
+      "options": [
+        "sun only",
+        "multiple lights"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

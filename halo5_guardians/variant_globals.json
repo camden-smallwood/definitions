@@ -1,0 +1,111 @@
+{
+  "name": "variant_globals",
+  "tag": "vtgl",
+  "version": 2,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "variant_globals_block",
+  "blocks": {
+    "variant_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "variant_globals_block_struct"
+    },
+    "single_variant_block": {
+      "max_count": 1024,
+      "max_count_string": "s_variant_globals_definition::k_variant_globals_per_block_count_maximum",
+      "struct": "single_variant_block"
+    }
+  },
+  "structs": {
+    "variant_globals_block_struct": {
+      "guid": "581139e2dd432d9913f57f9932190ce9",
+      "size": 72,
+      "size_string": "(sizeof(s_variant_globals_definition) - Tag::SizeInfo<s_variant_globals_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "map_variants",
+          "definition": "single_variant_block"
+        },
+        {
+          "type": "block",
+          "name": "game_variants",
+          "definition": "single_variant_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481de80"
+    },
+    "single_variant_block": {
+      "guid": "82b10aea894e85d75d77158e5d20b4c9",
+      "size": 312,
+      "size_string": "sizeof(s_single_variant_definition)",
+      "fields": [
+        {
+          "type": "data",
+          "name": "metadata",
+          "definition": "variant_resource_data"
+        },
+        {
+          "type": "data",
+          "name": "full_data",
+          "definition": "variant_resource_data"
+        },
+        {
+          "type": "long_string",
+          "name": "filename^"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481dd60"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "datas": {
+    "variant_resource_data": {
+      "alignment": 0,
+      "flags": 0,
+      "max_size": 153600,
+      "max_size_string": "s_single_variant_definition::k_maximum_data_size_bytes"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

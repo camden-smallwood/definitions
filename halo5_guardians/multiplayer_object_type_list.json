@@ -1,0 +1,185 @@
+{
+  "name": "multiplayer_object_type_list",
+  "tag": "motl",
+  "version": 1,
+  "flags": 3,
+  "parent_tag": "aTag",
+  "block": "multiplayer_object_type_list_block",
+  "blocks": {
+    "multiplayer_object_type_list_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "multiplayer_object_type_list_block_struct"
+    },
+    "multiplayer_object_type_block": {
+      "max_count": 2048,
+      "max_count_string": "k_multiplayer_object_type_maximum_count",
+      "struct": "multiplayer_object_type_block"
+    },
+    "multiplayer_weapon_collection_block": {
+      "max_count": 64,
+      "max_count_string": "k_maximum_number_of_multiplayer_weapon_selections",
+      "struct": "multiplayer_object_collection_struct"
+    },
+    "multiplayer_vehicle_collection_block": {
+      "max_count": 64,
+      "max_count_string": "k_maximum_number_of_multiplayer_vehicle_selections",
+      "struct": "multiplayer_object_collection_struct"
+    },
+    "multiplayer_grenade_collection_block": {
+      "max_count": 8,
+      "max_count_string": "k_maximum_number_of_multiplayer_grenade_selections",
+      "struct": "multiplayer_object_collection_struct"
+    },
+    "multiplayer_equipment_collection_block": {
+      "max_count": 32,
+      "max_count_string": "k_maximum_number_of_multiplayer_equipment_selections",
+      "struct": "multiplayer_object_collection_struct"
+    }
+  },
+  "structs": {
+    "multiplayer_object_type_list_block_struct": {
+      "guid": "b37e88851248f4262a6ab381c93fb651",
+      "size": 176,
+      "size_string": "(sizeof(s_multiplayer_object_type_list) - Tag::SizeInfo<s_multiplayer_object_type_list::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "object types",
+          "definition": "multiplayer_object_type_block"
+        },
+        {
+          "type": "block",
+          "name": "weapons",
+          "definition": "multiplayer_weapon_collection_block"
+        },
+        {
+          "type": "block",
+          "name": "vehicles",
+          "definition": "multiplayer_vehicle_collection_block"
+        },
+        {
+          "type": "block",
+          "name": "grenades",
+          "definition": "multiplayer_grenade_collection_block"
+        },
+        {
+          "type": "block",
+          "name": "equipment",
+          "definition": "multiplayer_equipment_collection_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "random weapon menu sprite frame"
+        },
+        {
+          "type": "long_integer",
+          "name": "random equipment menu sprite frame"
+        },
+        {
+          "type": "string_id",
+          "name": "random weapon icon string id"
+        },
+        {
+          "type": "string_id",
+          "name": "random equipment icon string id"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480e970"
+    },
+    "multiplayer_object_type_block": {
+      "guid": "ba827e813e4eb5fc4543a681387bda9e",
+      "size": 36,
+      "size_string": "sizeof(s_multiplayer_object_type)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "WARNING",
+          "definition": "This block is readonly because adding, removing, reordering, or renaming elements after we ship a map pack will completely break the game.  And I will punch you.  Hard.  In the face."
+        },
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "tag_reference",
+          "name": "object",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "obje"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480e740"
+    },
+    "multiplayer_object_collection_struct": {
+      "guid": "5e2f9b922040fd14bec0a08753f3a454",
+      "size": 8,
+      "size_string": "sizeof(s_multiplayer_object_collection_entry)",
+      "fields": [
+        {
+          "type": "long_block_index",
+          "name": "object type^",
+          "definition": "multiplayer_object_type_block"
+        },
+        {
+          "type": "real",
+          "name": "random weight"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480e860"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

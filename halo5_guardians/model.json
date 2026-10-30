@@ -1,0 +1,3191 @@
+{
+  "name": "model",
+  "tag": "hlmt",
+  "version": 1,
+  "flags": 3,
+  "parent_tag": "aTag",
+  "block": "model_block",
+  "blocks": {
+    "model_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "model_block_struct"
+    },
+    "lodTransitionDistanceBlock": {
+      "max_count": 16,
+      "max_count_string": "MAXIMUM_LODS_PER_MODEL",
+      "struct": "lodTransitionDistanceBlock"
+    },
+    "model_variant_block": {
+      "max_count": 64,
+      "max_count_string": "k_maximum_variants_per_model",
+      "struct": "model_variant_block",
+      "short_name": "variant"
+    },
+    "model_variant_region_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_REGIONS_PER_MODEL",
+      "struct": "model_variant_region_block",
+      "short_name": "region"
+    },
+    "model_variant_permutation_block": {
+      "max_count": 1023,
+      "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION",
+      "struct": "model_variant_permutation_block",
+      "short_name": "permutation"
+    },
+    "model_variant_state_block": {
+      "max_count": 10,
+      "max_count_string": "MAXIMUM_STATES_PER_MODEL_PERMUTATION",
+      "struct": "model_variant_state_block"
+    },
+    "model_variant_object_block": {
+      "max_count": 31,
+      "max_count_string": "k_maximum_objects_per_model_variant",
+      "struct": "model_variant_object_block",
+      "short_name": "object"
+    },
+    "new_global_damage_section_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_DAMAGE_SECTIONS_PER_MODEL",
+      "struct": "new_global_damage_section_block_struct"
+    },
+    "damage_section_recharge_speed_curve_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "damage_section_recharge_speed_curve_block"
+    },
+    "damage_section_segmented_recharge_fraction": {
+      "max_count": 16,
+      "max_count_string": "k_maxDamageSectionRechargeThresholds",
+      "struct": "damage_section_segmented_recharge_fraction"
+    },
+    "new_instantaneous_damage_response_block": {
+      "max_count": 16,
+      "max_count_string": "MAXIMUM_RESPONSES_PER_DAMAGE_SECTION",
+      "struct": "new_instantaneous_damage_response_block"
+    },
+    "damage_response_region_transition_block": {
+      "max_count": 16,
+      "max_count_string": "k_maximumRegionTransitionsPerDamageResponse",
+      "struct": "damage_response_region_transition_block"
+    },
+    "damage_transfer_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_DAMAGE_TRANSFERS_PER_MODEL",
+      "struct": "damage_transfer_block"
+    },
+    "global_model_instance_group_block": {
+      "max_count": 256,
+      "max_count_string": "k_maximum_instance_groups_per_model",
+      "struct": "global_model_instance_group_block",
+      "short_name": "instance group"
+    },
+    "model_instance_group_member_block": {
+      "max_count": 32,
+      "max_count_string": "k_maximum_members_per_instance_group",
+      "struct": "model_instance_group_member_block",
+      "short_name": "instance group member"
+    },
+    "seat_ejection_block": {
+      "max_count": 8,
+      "max_count_string": "k_maximumSeatEjectionsPerDamageResponse",
+      "struct": "seat_ejection_block"
+    },
+    "damage_section_rendering_paramters": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "damage_section_rendering_paramters"
+    },
+    "model_variant_muted_node_block": {
+      "max_count": 31,
+      "max_count_string": "k_maximum_muted_nodes_per_model_variant",
+      "struct": "model_variant_muted_node_block",
+      "short_name": "muted node"
+    },
+    "region_name_block": {
+      "max_count": 1024,
+      "max_count_string": "k_kilo",
+      "struct": "region_name_block"
+    },
+    "model_material_block_new": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_MATERIALS_PER_MODEL",
+      "struct": "model_material_block_new",
+      "short_name": "material"
+    },
+    "global_damage_info_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "global_damage_info_block"
+    },
+    "global_damage_section_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_DAMAGE_SECTIONS_PER_MODEL",
+      "struct": "global_damage_section_block"
+    },
+    "instantaneous_damage_repsonse_block": {
+      "max_count": 16,
+      "max_count_string": "MAXIMUM_RESPONSES_PER_DAMAGE_SECTION",
+      "struct": "instantaneous_damage_repsonse_block"
+    },
+    "g_null_block": {
+      "max_count": 0,
+      "max_count_string": "0",
+      "struct": "g_null_block"
+    },
+    "global_damage_nodes_block": {
+      "max_count": 255,
+      "max_count_string": "MAXIMUM_NODES_PER_MODEL",
+      "struct": "global_damage_nodes_block"
+    },
+    "damage_seat_info_block": {
+      "max_count": 16,
+      "max_count_string": "MAXIMUM_DAMAGE_SEAT_INFOS_PER_MODEL",
+      "struct": "damage_seat_info_block"
+    },
+    "damage_seat_region_setting_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "damage_seat_region_setting_block"
+    },
+    "damage_constraint_info_block": {
+      "max_count": 16,
+      "max_count_string": "MAXIMUM_DAMAGE_CONSTRAINT_INFOS_PER_MODEL",
+      "struct": "damage_constraint_info_block"
+    },
+    "ModelTargetBlock": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_MODEL_TARGETS_PER_MODEL",
+      "struct": "ModelTargetBlock_struct"
+    },
+    "model_region_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_REGIONS_PER_MODEL",
+      "struct": "model_region_block"
+    },
+    "model_permutation_block": {
+      "max_count": 1023,
+      "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION",
+      "struct": "model_permutation_block"
+    },
+    "model_node_block": {
+      "max_count": 255,
+      "max_count_string": "MAXIMUM_NODES_PER_MODEL",
+      "struct": "model_node_block"
+    },
+    "model_variant_override_block": {
+      "max_count": 64,
+      "max_count_string": "k_maximum_variants_per_model",
+      "struct": "model_variant_override_block"
+    },
+    "teammate_chatter_dialogue_block": {
+      "max_count": 16,
+      "max_count_string": "k_maximumTeamChatterVoiceValues",
+      "struct": "teammate_chatter_dialogue_block"
+    }
+  },
+  "structs": {
+    "model_block_struct": {
+      "guid": "7e9a56aba34e6cc72702f099d8a306d0",
+      "size": 1072,
+      "size_string": "(sizeof(s_model_definition) - Tag::SizeInfo<s_model_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "MODEL",
+          "definition": ""
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hlmt"
+        },
+        {
+          "type": "custom",
+          "name": "__excludedBundle__",
+          "group_tag": "bidb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "render model",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mode"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "bide"
+        },
+        {
+          "type": "tag_reference",
+          "name": "collision model",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "coll"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "animation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jmad"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "physics_model",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "phmo"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime render checksum*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime collision checksum*!"
+        },
+        {
+          "type": "explanation",
+          "name": "Optional Static Lightmap",
+          "definition": "\n"
+        },
+        {
+          "type": "long_flags",
+          "name": "Lightmap Flags{PVS flags}",
+          "definition": "model_lightmap_flags_definition"
+        },
+        {
+          "type": "explanation",
+          "name": "PVS",
+          "definition": "\n"
+        },
+        {
+          "type": "real",
+          "name": "PVS bounding box extension factor #How much we extend the PVS region around the objects AABB : [good initial value 2.5]"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "PVS block size #How big a single PVS block is, in world units : [good initial value (2.0,2.0,2.0)]"
+        },
+        {
+          "type": "long_integer",
+          "name": "PVS sampling subdivision per axis #How many sample subdivisions we perform per PVS block when generating the data : [good initial value 2]"
+        },
+        {
+          "type": "real",
+          "name": "PVS visibility threshold #Minimum amount we need to see of an individual part mesh to care about it : [good initial value 0.004]"
+        },
+        {
+          "type": "explanation",
+          "name": "level of detail",
+          "definition": "\n"
+        },
+        {
+          "type": "block",
+          "name": "lod levels",
+          "definition": "lodTransitionDistanceBlock"
+        },
+        {
+          "type": "real",
+          "name": "Fade out after distance"
+        },
+        {
+          "type": "real",
+          "name": "disappear distance:world units"
+        },
+        {
+          "type": "real",
+          "name": "begin fade distance:world units"
+        },
+        {
+          "type": "real",
+          "name": "animation lod distance:world units"
+        },
+        {
+          "type": "real",
+          "name": "shadow fade distance:world units#NOTE this is only a maximum distance, shadows may fade closer when you exceed the shadow budget, you should balance the total shadows in a scene"
+        },
+        {
+          "type": "real",
+          "name": "instance disappear distance:world units"
+        },
+        {
+          "type": "real",
+          "name": "midrange detail disappear distance:world units#distance at which the midrange detail disappears"
+        },
+        {
+          "type": "real",
+          "name": "close detail disappear distance:world units#distance at which the close detail disappears"
+        },
+        {
+          "type": "real",
+          "name": "tessellation max draw distance:world units"
+        },
+        {
+          "type": "long_flags",
+          "name": "resource distance override flags",
+          "definition": "model_lod_resource_distance_flags_definition"
+        },
+        {
+          "type": "real",
+          "name": "medium priority distance"
+        },
+        {
+          "type": "real",
+          "name": "low priority distance"
+        },
+        {
+          "type": "block",
+          "name": "variants",
+          "definition": "model_variant_block"
+        },
+        {
+          "type": "block",
+          "name": "region sort",
+          "definition": "region_name_block"
+        },
+        {
+          "type": "block",
+          "name": "instance groups",
+          "definition": "global_model_instance_group_block"
+        },
+        {
+          "type": "block",
+          "name": "model materials*",
+          "definition": "model_material_block_new"
+        },
+        {
+          "type": "block",
+          "name": "new damage info!",
+          "definition": "global_damage_info_block"
+        },
+        {
+          "type": "struct",
+          "name": "damage info",
+          "definition": "model_damage_info_struct"
+        },
+        {
+          "type": "block",
+          "name": "targets old{targets}!",
+          "definition": "ModelTargetBlock"
+        },
+        {
+          "type": "block",
+          "name": "model targets",
+          "definition": "ModelTargetBlock"
+        },
+        {
+          "type": "block",
+          "name": "runtime regions!",
+          "definition": "model_region_block"
+        },
+        {
+          "type": "block",
+          "name": "runtime nodes!",
+          "definition": "model_node_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime node list checksum!"
+        },
+        {
+          "type": "explanation",
+          "name": "more stuff",
+          "definition": ""
+        },
+        {
+          "type": "block",
+          "name": "variant overrides",
+          "definition": "model_variant_override_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "default dialogue#The default dialogue tag for this model (overriden by variants)",
+          "definition": {
+            "flags": 2,
+            "allowed": [
+              "udlg"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default dialogue female#The default FEMALE dialogue tag for this model (overriden by variants)",
+          "definition": {
+            "flags": 2,
+            "allowed": [
+              "udlg"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "teammate chatter dialogue male",
+          "definition": "teammate_chatter_dialogue_block"
+        },
+        {
+          "type": "block",
+          "name": "teammate chatter dialogue female",
+          "definition": "teammate_chatter_dialogue_block"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "model_flags_definition"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime flags*!"
+        },
+        {
+          "type": "string_id",
+          "name": "default dialogue effect#The default dialogue tag for this model (overriden by variants)"
+        },
+        {
+          "type": "array",
+          "name": "render-only node flags*!",
+          "definition": "g_node_flag_storage_array"
+        },
+        {
+          "type": "array",
+          "name": "render-only section flags*!",
+          "definition": "g_node_flag_storage_array"
+        },
+        {
+          "type": "real_fraction",
+          "name": "Sky parallax percent#If flag checked % between sky pos and camera pos 0=camera"
+        },
+        {
+          "type": "real",
+          "name": "shadow depth compare bias#Default is 0.002"
+        },
+        {
+          "type": "real",
+          "name": "shadow slope scale bias:degrees#controls cutoff point for shadows around edges.  Default is 81 degrees"
+        },
+        {
+          "type": "real",
+          "name": "shadow depth compare bias (dynamic lights)#Default is 0.0008"
+        },
+        {
+          "type": "real",
+          "name": "shadow slope scale bias (dynamic lights):degrees#controls cutoff point for shadows around edges.  Default is 81 degrees"
+        },
+        {
+          "type": "explanation",
+          "name": "Shield impact overrides!",
+          "definition": "Regular and 1st person shield impact effect overrides\n"
+        },
+        {
+          "type": "tag_reference",
+          "name": "shield impact parameter override!",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "shit"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "1st person shield impact parameter override!",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "shit"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "runtime bounding radius:world units*!"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "runtime bounding offset*!"
+        },
+        {
+          "type": "pad",
+          "name": "padding",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473ea30"
+    },
+    "lodTransitionDistanceBlock": {
+      "guid": "23133647164d371f0248c397a4ffa9c3",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "lodTransitionDistance"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144731cc0"
+    },
+    "model_variant_block": {
+      "guid": "b4dd9c537a481274aa5db89110f5aac3",
+      "size": 320,
+      "size_string": "sizeof(s_model_variant)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_flags",
+          "name": "model variant flags",
+          "definition": "modelVariantFlagsDefinition"
+        },
+        {
+          "type": "array",
+          "name": "runtime variant region indices!",
+          "definition": "runtime_region_index_array"
+        },
+        {
+          "type": "block",
+          "name": "regions",
+          "definition": "model_variant_region_block"
+        },
+        {
+          "type": "block",
+          "name": "objects",
+          "definition": "model_variant_object_block"
+        },
+        {
+          "type": "long_block_index",
+          "name": "instance group#selects an instance group for this variant",
+          "definition": "global_model_instance_group_block"
+        },
+        {
+          "type": "block",
+          "name": "muted nodes#turn off animation on these named nodes and children",
+          "definition": "model_variant_muted_node_block"
+        },
+        {
+          "type": "array",
+          "name": "muted flag*!",
+          "definition": "g_node_flag_storage_array"
+        },
+        {
+          "type": "custom",
+          "name": "__excludedBundle__",
+          "group_tag": "bidb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "structure lighting_info^&Structure Lights",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "strl"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "structure lightmap&Structure Lightmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "stlm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "lighting settings&Lighting Settings",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "LigS"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "lighting volumes&Lighting Volumes",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "blvo"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "scenario lighting volumes&Scenario Lighting Volumes",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "slvo"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "bide"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473fa40"
+    },
+    "runtime_region_index_array": {
+      "guid": "1c678d698549e68705ef638d4ee8eaf3",
+      "size": 1,
+      "size_string": "sizeof(char)",
+      "fields": [
+        {
+          "type": "char_integer",
+          "name": "runtime region index!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473f380"
+    },
+    "model_variant_region_block": {
+      "guid": "fa6a0f07744ff605e6ffffba5cbdf812",
+      "size": 40,
+      "size_string": "sizeof(s_model_variant_region)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "region name^:must match region name in render_model"
+        },
+        {
+          "type": "char_integer",
+          "name": "runtime region index!"
+        },
+        {
+          "type": "byte_integer",
+          "name": "runtime flags!"
+        },
+        {
+          "type": "short_block_index",
+          "name": "parent variant",
+          "definition": "model_variant_block"
+        },
+        {
+          "type": "block",
+          "name": "permutations",
+          "definition": "model_variant_permutation_block"
+        },
+        {
+          "type": "short_enum",
+          "name": "sort order#negative values mean closer to the camera",
+          "definition": "region_sort_enum"
+        },
+        {
+          "type": "pad",
+          "name": "JO",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473fb70"
+    },
+    "model_variant_permutation_block": {
+      "guid": "0490d94ecc45701d00969598ad50356c",
+      "size": 56,
+      "size_string": "sizeof(s_model_variant_permutation)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "permutation name^"
+        },
+        {
+          "type": "dword_integer",
+          "name": "runtime permutation index!"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "model_variant_permutation_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "KSJOSR",
+          "definition": 3
+        },
+        {
+          "type": "real",
+          "name": "probability:(0,+inf)"
+        },
+        {
+          "type": "block",
+          "name": "states",
+          "definition": "model_variant_state_block"
+        },
+        {
+          "type": "array",
+          "name": "runtime state permutation indices!",
+          "definition": "model_state_permutation_index_array"
+        },
+        {
+          "type": "pad",
+          "name": "LOOEL",
+          "definition": 7
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473fdd0"
+    },
+    "model_variant_state_block": {
+      "guid": "cb5a3ddda94217c8789f1c9181ca184a",
+      "size": 12,
+      "size_string": "sizeof(s_model_variant_state)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "permutation name"
+        },
+        {
+          "type": "char_integer",
+          "name": "runtime permutation index!"
+        },
+        {
+          "type": "byte_flags",
+          "name": "property flags",
+          "definition": "model_state_property_flags_definition"
+        },
+        {
+          "type": "short_enum",
+          "name": "state^",
+          "definition": "model_state_enum_definition"
+        },
+        {
+          "type": "real_fraction",
+          "name": "initial probability"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144740030"
+    },
+    "model_state_permutation_index_array": {
+      "guid": "9bcbcd42ea408414086d1cb2536cc8b3",
+      "size": 1,
+      "size_string": "sizeof(char)",
+      "fields": [
+        {
+          "type": "char_integer",
+          "name": "runtime permutation index!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473fca0"
+    },
+    "model_variant_object_block": {
+      "guid": "db6fb386c346d5eac30b19b089869334",
+      "size": 84,
+      "size_string": "sizeof(i343::Model::ModelVariantObject)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "parent marker^"
+        },
+        {
+          "type": "string_id",
+          "name": "parent controlling seat label^#the seat in my parent that will control me"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "child marker"
+        },
+        {
+          "type": "string_id",
+          "name": "child variant name#optional"
+        },
+        {
+          "type": "tag_reference",
+          "name": "child object",
+          "definition": {
+            "flags": 2,
+            "allowed": [
+              "obje"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "child configuration",
+          "definition": {
+            "flags": 2,
+            "allowed": [
+              "ocfg"
+            ]
+          }
+        },
+        {
+          "type": "short_block_index",
+          "name": "damage section",
+          "definition": "new_global_damage_section_block"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "ModelVariantObjectFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "MVOBP1",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144740160"
+    },
+    "new_global_damage_section_block_struct": {
+      "guid": "fdd2f6b8a5491deea4012ba80e3809fe",
+      "size": 360,
+      "size_string": "sizeof(s_new_model_damage_section)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "new_damage_section_flags_definition"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime flags!*"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "real_fraction",
+          "name": "vitality percentage:[0.1]#percentage of total object vitality"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "custom",
+          "name": "maximum vitality percentage#percentage of total object vitality",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "maximum vitality percentage#percentage of total object vitality",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "string_id",
+          "name": "shield material name#set this to make this damage section a shield",
+          "group_tag": "sted"
+        },
+        {
+          "type": "explanation",
+          "name": "stun",
+          "definition": ""
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "real",
+          "name": "stun time:seconds"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "custom",
+          "name": "stun duration:seconds",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "stun duration:seconds",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "real",
+          "name": "minimum stun damage#the minimum damage required to stun this object's health"
+        },
+        {
+          "type": "explanation",
+          "name": "recharge",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "recharge time:seconds"
+        },
+        {
+          "type": "custom",
+          "name": "recharge speed base scalar#malleable scale applied to the recharge velocity",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "recharge speed base scalar#malleable scale applied to the recharge velocity",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "block",
+          "name": "recharge speed curve",
+          "definition": "damage_section_recharge_speed_curve_block"
+        },
+        {
+          "type": "block",
+          "name": "recharge fractions",
+          "definition": "damage_section_segmented_recharge_fraction"
+        },
+        {
+          "type": "tag_reference",
+          "name": "recharging effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "pre recharge effect warn time:seconds#(main shield only) how long before the recharge begins the pre-recharge effect fires"
+        },
+        {
+          "type": "tag_reference",
+          "name": "pre recharge effect#(main shield only)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "pre recharge effect marker#(main shield only)"
+        },
+        {
+          "type": "tag_reference",
+          "name": "pre recharge abort effect#(main shield only) if the pre-recharge effect is aborted before the actual recharge starts, this effect plays",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "pre recharge abort effect marker#(main shield only)"
+        },
+        {
+          "type": "explanation",
+          "name": "overcharge",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "overcharge time:seconds#time it takes to reach full \"overcharge fraction\""
+        },
+        {
+          "type": "real",
+          "name": "overcharge fraction#fraction to which shields will automatically overcharge, values <= 1.0 are ignored"
+        },
+        {
+          "type": "explanation",
+          "name": "decay",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "pre decay time:seconds#time for this section to be active before it will start to decay"
+        },
+        {
+          "type": "real",
+          "name": "decay time:seconds#time for need for this section to fully decay with full health."
+        },
+        {
+          "type": "explanation",
+          "name": "resurrection",
+          "definition": ""
+        },
+        {
+          "type": "string_id",
+          "name": "resurrection restored region name"
+        },
+        {
+          "type": "block",
+          "name": "instant responses",
+          "definition": "new_instantaneous_damage_response_block"
+        },
+        {
+          "type": "block",
+          "name": "section damage transfers",
+          "definition": "damage_transfer_block"
+        },
+        {
+          "type": "block",
+          "name": "rendering",
+          "definition": "damage_section_rendering_paramters"
+        },
+        {
+          "type": "real",
+          "name": "runtime recharge velocity!*"
+        },
+        {
+          "type": "real",
+          "name": "runtime overcharge velocity!*"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime resurrection restored region index!*"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime global shield material type!*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14498ae20"
+    },
+    "MalleablePropertyBaseFloatStruct": {
+      "guid": "a1b4d8f8e64063dbbb8cea978b2eae63",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::BaseDefinition<float>)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "Base Value"
+        },
+        {
+          "type": "real_bounds",
+          "name": "Value Bounds"
+        },
+        {
+          "type": "char_enum",
+          "name": "Combiner",
+          "definition": "MalleablePropertyCombiner"
+        },
+        {
+          "type": "pad",
+          "name": "padEnd",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447369c0"
+    },
+    "damage_section_recharge_speed_curve_block": {
+      "guid": "14fcad938c499ddc84a83bafd86aff17",
+      "size": 28,
+      "size_string": "sizeof(s_damage_section_recharge_speed_multiplier_curve)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "Mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14498abe0"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "damage_section_segmented_recharge_fraction": {
+      "guid": "e7374997c54ed569a96142b3ce17c853",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real_fraction",
+          "name": "vitality percentage:[0.1]#recharge will stop once this percentage of vitality is reached."
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14498aab0"
+    },
+    "new_instantaneous_damage_response_block": {
+      "guid": "ca199d55ab4d72e30baeccb0d45c41ff",
+      "size": 316,
+      "size_string": "sizeof(s_new_instantaneous_damage_response)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "group_tag": "dumb",
+          "definition": "newDamageResponseFlagsPart1"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags2",
+          "group_tag": "dumb",
+          "definition": "newDamageResponseFlagsPart2"
+        },
+        {
+          "type": "string_id",
+          "name": "label"
+        },
+        {
+          "type": "real_fraction",
+          "name": "damage threshold#response fires after crossing this threshold.  1=full health"
+        },
+        {
+          "type": "string_id",
+          "name": "forced hard ping anim #animation forced by \"force hard ping\" flag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "transition effect (generic){transition effect}",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "generic effect marker{effect marker name}"
+        },
+        {
+          "type": "tag_reference",
+          "name": "transition effect (specific)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "specific effect marker"
+        },
+        {
+          "type": "struct",
+          "name": "damage effect",
+          "definition": "instantaneous_response_damage_effect_struct"
+        },
+        {
+          "type": "struct",
+          "name": "damage effect marker",
+          "definition": "instantaneous_response_damage_effect_marker_struct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "looping effect#will play until the next response is triggered.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "region_transitions",
+          "definition": "damage_response_region_transition_block"
+        },
+        {
+          "type": "block",
+          "name": "response damage transfers",
+          "definition": "damage_transfer_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "destroy instance group#all possible instances from this group will be destroyed",
+          "definition": "global_model_instance_group_block"
+        },
+        {
+          "type": "short_enum",
+          "name": "custom response behavior",
+          "definition": "damage_response_custom_response_behavior_enum_definition"
+        },
+        {
+          "type": "string_id",
+          "name": "custom response label"
+        },
+        {
+          "type": "real",
+          "name": "response delay:seconds#time to wait until firing the response. This delay is pre-empted if another timed response for the same section fires."
+        },
+        {
+          "type": "tag_reference",
+          "name": "delay effect#plays while the timer is counting down",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "delay effect marker name"
+        },
+        {
+          "type": "block",
+          "name": "seat eject",
+          "definition": "seat_ejection_block"
+        },
+        {
+          "type": "real_fraction",
+          "name": "skip fraction#0.0 always fires, 1.0 never fires"
+        },
+        {
+          "type": "string_id",
+          "name": "destroyed child object marker name#when this response fires, any children objects created at the supplied marker name will be destroyed"
+        },
+        {
+          "type": "real_fraction",
+          "name": "total damage threshold#scale on total damage section vitality"
+        },
+        {
+          "type": "string_id",
+          "name": "constraint/group name#can specify a randomly-selected single constraint or the entire group of named constraints"
+        },
+        {
+          "type": "short_enum",
+          "name": "constraint damage type",
+          "definition": "damage_response_constraint_damage_type_enum_definition"
+        },
+        {
+          "type": "pad",
+          "name": "IDRBCDT",
+          "definition": 2
+        },
+        {
+          "type": "long_enum",
+          "name": "ai dialog event",
+          "definition": "damage_response_ai_dialoge_event_type_enum_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e4dc0"
+    },
+    "instantaneous_response_damage_effect_struct": {
+      "guid": "61f7ba1614491a458c1308b51eda4472",
+      "size": 32,
+      "size_string": "sizeof(s_tag_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "transition damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e4560"
+    },
+    "instantaneous_response_damage_effect_marker_struct": {
+      "guid": "c9dd72622f4d66c8bc217eb7dfb9c9b0",
+      "size": 4,
+      "size_string": "sizeof(string_id)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "damage effect marker name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e4690"
+    },
+    "damage_response_region_transition_block": {
+      "guid": "ddec37ab8a446324b5fe16a480250b6a",
+      "size": 8,
+      "size_string": "sizeof(s_region_transition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "region"
+        },
+        {
+          "type": "short_enum",
+          "name": "new state",
+          "definition": "model_state_enum_definition"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime region index!*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e47c0"
+    },
+    "damage_transfer_block": {
+      "guid": "d62279d7fa43e07be42ce6b5b90e4960",
+      "size": 16,
+      "size_string": "sizeof(s_damage_transfer)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "damage_transfer_flags_definition"
+        },
+        {
+          "type": "real",
+          "name": "transfer amount"
+        },
+        {
+          "type": "short_enum",
+          "name": "transfer function",
+          "definition": "damage_transfer_function_enum_definition"
+        },
+        {
+          "type": "short_block_index",
+          "name": "damage section",
+          "definition": "new_global_damage_section_block"
+        },
+        {
+          "type": "string_id",
+          "name": "seat label"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473beb0"
+    },
+    "global_model_instance_group_block": {
+      "guid": "213123e24b460ffa23e2be93b260da29",
+      "size": 40,
+      "size_string": "sizeof(c_model_instance_group)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^#name of this instance group"
+        },
+        {
+          "type": "long_enum",
+          "name": "choice#how to choose members",
+          "definition": "model_instance_group_choice_enum"
+        },
+        {
+          "type": "block",
+          "name": "member list",
+          "definition": "model_instance_group_member_block"
+        },
+        {
+          "type": "real",
+          "name": "total probability!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473f5e0"
+    },
+    "model_instance_group_member_block": {
+      "guid": "bd52f4b9844436e53e5da7bc78f26a09",
+      "size": 28,
+      "size_string": "sizeof(c_model_instance_group_member)",
+      "fields": [
+        {
+          "type": "long_block_index",
+          "name": "subgroup#if this member is chosen, this subgroup will be chosen as well",
+          "definition": "global_model_instance_group_block"
+        },
+        {
+          "type": "string_id",
+          "name": "instances#instance name, a partial name will choose all matching instances, leave blank for NONE"
+        },
+        {
+          "type": "real",
+          "name": "probability:> 0.0#higher numbers make it more likely"
+        },
+        {
+          "type": "long_integer",
+          "name": "instance placement mask 0!"
+        },
+        {
+          "type": "long_integer",
+          "name": "instance placement mask 1!"
+        },
+        {
+          "type": "long_integer",
+          "name": "instance placement mask 2!"
+        },
+        {
+          "type": "long_integer",
+          "name": "instance placement mask 3!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473f4b0"
+    },
+    "seat_ejection_block": {
+      "guid": "bb68b86ca240ba2c958ab0ae0d8896ca",
+      "size": 4,
+      "size_string": "sizeof(string_id)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "seat label^"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e48f0"
+    },
+    "damage_section_rendering_paramters": {
+      "guid": "0bfea55477423ae5195355953141929f",
+      "size": 64,
+      "size_string": "sizeof(s_damage_section_rendering_parameters)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "3rd person impact parameters",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "shit"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "1st person impact parameters",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "shit"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14498ad10"
+    },
+    "model_variant_muted_node_block": {
+      "guid": "d3f7aafb164a715ad138369af5ee0fc7",
+      "size": 4,
+      "size_string": "sizeof(string_id)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "node name^:must match node name in render_model"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473f710"
+    },
+    "g_node_flag_storage_array": {
+      "guid": "962e38fa54470031dd7a3ba74c13aac9",
+      "size": 4,
+      "size_string": "sizeof(c_big_flags_chunk_type)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "flag data"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d4810"
+    },
+    "region_name_block": {
+      "guid": "1b90b3d0954ed2c20d7ed486843e13e9",
+      "size": 4,
+      "size_string": "sizeof(string_id)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473e7e0"
+    },
+    "model_material_block_new": {
+      "guid": "5aa37d9dd94f7e8b2ed0669c80a615b4",
+      "size": 20,
+      "size_string": "sizeof(s_model_material)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "material name*"
+        },
+        {
+          "type": "pad",
+          "name": "unused flags",
+          "definition": 2
+        },
+        {
+          "type": "short_block_index",
+          "name": "damage section",
+          "definition": "new_global_damage_section_block"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime collision material index!"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime damager material index!"
+        },
+        {
+          "type": "string_id",
+          "name": "global material name",
+          "group_tag": "sted"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime global material index!"
+        },
+        {
+          "type": "pad",
+          "name": "SEWETKHRE",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447403c0"
+    },
+    "global_damage_info_block": {
+      "guid": "3f70eaf88e430e56000a3e90f2b3771c",
+      "size": 376,
+      "size_string": "sizeof(s_model_damage_info)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "model_damage_info_flags_definition"
+        },
+        {
+          "type": "string_id",
+          "name": "global indirect material name#absorbes AOE or child damage"
+        },
+        {
+          "type": "short_integer",
+          "name": "indirect damage section#absorbes AOE or child damage"
+        },
+        {
+          "type": "pad",
+          "name": "XN",
+          "definition": 2
+        },
+        {
+          "type": "pad",
+          "name": "LPVYKO",
+          "definition": 4
+        },
+        {
+          "type": "pad",
+          "name": "MYON",
+          "definition": 20
+        },
+        {
+          "type": "explanation",
+          "name": "body",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "body",
+          "definition": "damage_body_parameters_struct"
+        },
+        {
+          "type": "pad",
+          "name": "IKEIDYSCX",
+          "definition": 64
+        },
+        {
+          "type": "explanation",
+          "name": "shield",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "shield",
+          "definition": "damage_shield_parameters_struct"
+        },
+        {
+          "type": "block",
+          "name": "damage sections",
+          "definition": "global_damage_section_block"
+        },
+        {
+          "type": "block",
+          "name": "nodes*",
+          "definition": "global_damage_nodes_block"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime shield material type!*"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime indirect material type!*"
+        },
+        {
+          "type": "real",
+          "name": "runtime shield recharge velocity!*"
+        },
+        {
+          "type": "real",
+          "name": "runtime overcharge velocity!*"
+        },
+        {
+          "type": "real",
+          "name": "runtime health recharge velocity!*"
+        },
+        {
+          "type": "block",
+          "name": "damage seats",
+          "definition": "damage_seat_info_block"
+        },
+        {
+          "type": "block",
+          "name": "damage constraints",
+          "definition": "damage_constraint_info_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473b2d0"
+    },
+    "damage_body_parameters_struct": {
+      "guid": "95acec33e745429a5549248fe8163541",
+      "size": 20,
+      "size_string": "sizeof(float)*5",
+      "fields": [
+        {
+          "type": "real",
+          "name": "maximum vitality"
+        },
+        {
+          "type": "real",
+          "name": "minimum stun damage#the minimum damage required to stun this object's health"
+        },
+        {
+          "type": "real",
+          "name": "stun time:seconds#the length of time the health stay stunned (do not recharge) after taking damage"
+        },
+        {
+          "type": "real",
+          "name": "recharge time:seconds#the length of time it would take for the shields to fully recharge after being completely depleted"
+        },
+        {
+          "type": "real_fraction",
+          "name": "recharge fraction#0 defaults to 1 - to what maximum level the body health will be allowed to recharge"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473b160"
+    },
+    "damage_shield_parameters_struct": {
+      "guid": "ac880cd32c4630f094e83695c152f7a6",
+      "size": 128,
+      "size_string": "k_damage_shield_parameters_size",
+      "fields": [
+        {
+          "type": "real",
+          "name": "maximum shield vitality#the default initial and maximum shield vitality of this object"
+        },
+        {
+          "type": "string_id",
+          "name": "global shield material name",
+          "group_tag": "sted"
+        },
+        {
+          "type": "real",
+          "name": "minimum stun damage#the minimum damage required to stun this object's shields"
+        },
+        {
+          "type": "real",
+          "name": "stun time:seconds#the length of time the shields stay stunned (do not recharge) after taking damage"
+        },
+        {
+          "type": "real",
+          "name": "recharge time:seconds#the length of time it would take for the shields to fully recharge after being completely depleted"
+        },
+        {
+          "type": "real",
+          "name": "shield overcharge fraction#fraction to which shields will automatically overcharge, values <= 1.0 are ignored"
+        },
+        {
+          "type": "real",
+          "name": "shield overcharge time#time it takes to reach full \"shield overcharge fraction\""
+        },
+        {
+          "type": "real",
+          "name": "shield damaged threshold"
+        },
+        {
+          "type": "tag_reference",
+          "name": "shield damaged effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "shield depleted effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "shield recharging effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473a510"
+    },
+    "global_damage_section_block": {
+      "guid": "7b07d362ca4b58c67a7c4e9af1b49e98",
+      "size": 116,
+      "size_string": "sizeof(s_model_damage_section)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "explanation",
+          "name": "damage section flags",
+          "definition": "* absorbs body damage: damage to this section does not count against body vitality\n* headshottable: takes extra headshot damage when shot\n* ignores shields: damage to this section bypasses shields"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "damage_section_flags_definition"
+        },
+        {
+          "type": "real_fraction",
+          "name": "vitality percentage:[0.1]#percentage of total object vitality"
+        },
+        {
+          "type": "block",
+          "name": "instant responses",
+          "definition": "instantaneous_damage_repsonse_block"
+        },
+        {
+          "type": "block",
+          "name": "unused0",
+          "definition": "g_null_block"
+        },
+        {
+          "type": "block",
+          "name": "unused1",
+          "definition": "g_null_block"
+        },
+        {
+          "type": "real",
+          "name": "stun time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "recharge time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "runtime recharge velocity!*"
+        },
+        {
+          "type": "string_id",
+          "name": "resurrection restored region name"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime resurrection restored region index!*"
+        },
+        {
+          "type": "pad",
+          "name": "AG",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14498a980"
+    },
+    "instantaneous_damage_repsonse_block": {
+      "guid": "6b9e8c2adb4cde10c4982f9cedfe69bb",
+      "size": 216,
+      "size_string": "sizeof(s_instantaneous_damage_response)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "response type",
+          "definition": "damage_response_type_enum_definition"
+        },
+        {
+          "type": "explanation",
+          "name": "Constraint damage type",
+          "definition": "* if you specify a constraint group name (see lower section of this block)\n  you can specify a constraint damage\n* loosening a constraint takes it out of the rigid state - activates it\n* destroying a constraint sets the attached body free"
+        },
+        {
+          "type": "short_enum",
+          "name": "constraint damage type",
+          "definition": "damage_response_constraint_damage_type_enum_definition"
+        },
+        {
+          "type": "explanation",
+          "name": "Constraint destruction",
+          "definition": "- a response can destroy a single constraint by naming it explicitly.\n- alternatively it can randomly destroy a single constraint from a specified group if the \"destroy one group constraint\" flag is set\n- also it can destroy all constraints in a specified group if the \"destroy all group constraints\" flag is set\n"
+        },
+        {
+          "type": "string_id",
+          "name": "constraint/group name"
+        },
+        {
+          "type": "explanation",
+          "name": "Damage response flags",
+          "definition": "* kills object: when the response fires the object dies regardless of its current health\n* inhibits <x>: from halo 1 - disallows basic behaviors for a unit\n* forces drop weapon: from halo 1 - makes the unit drop its current weapon\n* kills weapon <x> trigger: destroys the <x> trigger on the unit's current weapon\n* destroys object: when the response fires the object is destroyed"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "group_tag": "dumb",
+          "definition": "damage_response_set1"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags2",
+          "group_tag": "dumb",
+          "definition": "damage_response_set2"
+        },
+        {
+          "type": "real_fraction",
+          "name": "damage threshold#response fires after crossing this threshold.  1=full health"
+        },
+        {
+          "type": "long_flags",
+          "name": "body threshold flags",
+          "definition": "damage_response_body_threshold_flags_definition"
+        },
+        {
+          "type": "real",
+          "name": "body damage threshold#response fires after object body damage crosses this threshold, numbers can be negative.  You need to set the flag \"body threshold active\" for this number to be used. 1=full health"
+        },
+        {
+          "type": "tag_reference",
+          "name": "transition effect (generic){transition effect}",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "transition effect (specific)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "struct",
+          "name": "damage effect",
+          "definition": "instantaneous_response_damage_effect_struct"
+        },
+        {
+          "type": "string_id",
+          "name": "region"
+        },
+        {
+          "type": "short_enum",
+          "name": "new state",
+          "definition": "model_state_enum_definition"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime region index!*"
+        },
+        {
+          "type": "string_id",
+          "name": "region (secondary)"
+        },
+        {
+          "type": "short_enum",
+          "name": "new state (secondary)",
+          "definition": "model_state_enum_definition"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime region index (secondary)!*"
+        },
+        {
+          "type": "short_block_index",
+          "name": "destroy instance group#all possible instances from this group will be destroyed",
+          "definition": "global_model_instance_group_block"
+        },
+        {
+          "type": "short_enum",
+          "name": "custom response behavior",
+          "definition": "damage_response_custom_response_behavior_enum_definition"
+        },
+        {
+          "type": "string_id",
+          "name": "custom response label"
+        },
+        {
+          "type": "string_id",
+          "name": "effect marker name"
+        },
+        {
+          "type": "struct",
+          "name": "damage effect marker",
+          "definition": "instantaneous_response_damage_effect_marker_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "Response delay",
+          "definition": "If desired, you can specify a delay until the response fires.This delay is pre-empted if another timed response for the same section fires.The delay effect plays while the timer is counting down.If the damage threshold is taken in a single hit while counting down, it will prematurely fire."
+        },
+        {
+          "type": "real",
+          "name": "response delay#in seconds"
+        },
+        {
+          "type": "tag_reference",
+          "name": "delay effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "delay effect marker name"
+        },
+        {
+          "type": "real",
+          "name": "response delay premature damage threshold"
+        },
+        {
+          "type": "explanation",
+          "name": "seat ejaculation",
+          "definition": ""
+        },
+        {
+          "type": "string_id",
+          "name": "ejecting seat label"
+        },
+        {
+          "type": "explanation",
+          "name": "skip fraction",
+          "definition": "0.0 always fires, 1.0 never fires"
+        },
+        {
+          "type": "real_fraction",
+          "name": "skip fraction"
+        },
+        {
+          "type": "explanation",
+          "name": "destroyed child object marker name",
+          "definition": "when this response fires, any children objects created at the supplied marker name will be destroyed"
+        },
+        {
+          "type": "string_id",
+          "name": "destroyed child object marker name"
+        },
+        {
+          "type": "explanation",
+          "name": "total damage threshold",
+          "definition": "scale on total damage section vitality"
+        },
+        {
+          "type": "real_fraction",
+          "name": "total damage threshold"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e53f0"
+    },
+    "g_null_block": {
+      "guid": "a6487e75bc4cac9c1ca146bcf3e2f763",
+      "size": 0,
+      "size_string": "0",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449ec0c0"
+    },
+    "global_damage_nodes_block": {
+      "guid": "b4d03637e1400a7c521181a4f011f822",
+      "size": 16,
+      "size_string": "sizeof(s_damage_node)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "runtime damage part!*"
+        },
+        {
+          "type": "pad",
+          "name": "EOT",
+          "definition": 2
+        },
+        {
+          "type": "pad",
+          "name": "SBFL",
+          "definition": 12
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473b790"
+    },
+    "damage_seat_info_block": {
+      "guid": "a3bca6f8c041a5caf5d6eba34dc8d5fe",
+      "size": 48,
+      "size_string": "sizeof(s_damage_seat_info)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "seat label^"
+        },
+        {
+          "type": "real_fraction",
+          "name": "direct damage scale#0==no damage, 1==full damage"
+        },
+        {
+          "type": "real",
+          "name": "damage transfer fall-off radius"
+        },
+        {
+          "type": "real",
+          "name": "maximum transfer damage scale"
+        },
+        {
+          "type": "real",
+          "name": "minimum transfer damage scale"
+        },
+        {
+          "type": "block",
+          "name": "region-specific-damage",
+          "definition": "damage_seat_region_setting_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473b530"
+    },
+    "damage_seat_region_setting_block": {
+      "guid": "4d83c1111e4ca1c1bdefb69b5394648a",
+      "size": 44,
+      "size_string": "sizeof(s_damage_seat_region_setting)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "region-state-specific-damage",
+          "definition": "for fields below, 0.0==inherit from damage seat"
+        },
+        {
+          "type": "string_id",
+          "name": "damage region name"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime damage region index!*"
+        },
+        {
+          "type": "pad",
+          "name": "EOQ",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "direct damage scale (minor)"
+        },
+        {
+          "type": "real",
+          "name": "Max. transfer scale (minor)"
+        },
+        {
+          "type": "real",
+          "name": "min. transfer scale (minor)"
+        },
+        {
+          "type": "real",
+          "name": "direct damage scale (medium)"
+        },
+        {
+          "type": "real",
+          "name": "Max. transfer scale (medium)"
+        },
+        {
+          "type": "real",
+          "name": "min. transfer scale (medium)"
+        },
+        {
+          "type": "real",
+          "name": "direct damage scale (major)"
+        },
+        {
+          "type": "real",
+          "name": "Max. transfer scale (major)"
+        },
+        {
+          "type": "real",
+          "name": "min. transfer scale (major)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473b400"
+    },
+    "damage_constraint_info_block": {
+      "guid": "a45c69b29445bb6d95c0d78c63272b29",
+      "size": 20,
+      "size_string": "sizeof(s_damage_constraint_info)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "physics model constraint name"
+        },
+        {
+          "type": "string_id",
+          "name": "damage constraint name"
+        },
+        {
+          "type": "string_id",
+          "name": "damage constraint group name"
+        },
+        {
+          "type": "real",
+          "name": "group probability scale"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime constraint type!*"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime constraint index!*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473b660"
+    },
+    "model_damage_info_struct": {
+      "guid": "f5787588bc4b7e8452213fbe69403032",
+      "size": 232,
+      "size_string": "sizeof(s_new_model_damage_info)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Damage Info",
+          "definition": ""
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "new_model_damage_info_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "flagPad",
+          "definition": 4
+        },
+        {
+          "type": "string_id",
+          "name": "indirect material name#absorbes AOE or child damage"
+        },
+        {
+          "type": "short_block_index",
+          "name": "indirect damage section#absorbes AOE or child damage",
+          "definition": "new_global_damage_section_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "shielded state damage section#the model's shielded/unshielded state reflects the depletion of this damage section",
+          "definition": "new_global_damage_section_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "restoration effect#effect played when some or all of the object's damage sections are restored (healed)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "damage sections",
+          "definition": "new_global_damage_section_block"
+        },
+        {
+          "type": "block",
+          "name": "damage constraints",
+          "definition": "damage_constraint_info_block"
+        },
+        {
+          "type": "block",
+          "name": "nodes*",
+          "definition": "global_damage_nodes_block"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime indirect material type!*"
+        },
+        {
+          "type": "pad",
+          "name": "MDIBP1",
+          "definition": 2
+        },
+        {
+          "type": "explanation",
+          "name": "Malleable Properties",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "properties",
+          "definition": "DamagePropertiesDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473bd80"
+    },
+    "DamagePropertiesDefinitionStruct": {
+      "guid": "2f1acb9863408cd78b013787911565e5",
+      "size": 96,
+      "size_string": "sizeof(i343::Damage::DamageableComponentPropertiesDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "max overshield scalar#scales the max overshields (must be less than 1.0 for the player in Breakout; 4.0 is max network safe)",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "max overshield scalar#scales the max overshields (must be less than 1.0 for the player in Breakout; 4.0 is max network safe)",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "real",
+          "name": "body vitality#This units vitality"
+        },
+        {
+          "type": "custom",
+          "name": "damage resistance#[Product]Malleable property base for an inverse scale factor for damage done to this unit (1.0 = full damage, 2.0 = half damage)",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "damage resistance#[Product]Malleable property base for an inverse scale factor for damage done to this unit (1.0 = full damage, 2.0 = half damage)",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "explosive damage resistance#[Product]Malleable property base for a scale factor for explosive damage done to this unit (1.0 = full damage, 0.0 = no damage)",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "explosive damage resistance#[Product]Malleable property base for a scale factor for explosive damage done to this unit (1.0 = full damage, 0.0 = no damage)",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "struct",
+          "name": "overshield information",
+          "definition": "OvershieldInformationStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14498a310"
+    },
+    "OvershieldInformationStruct": {
+      "guid": "8fde798aa74e8737c22168b17451406c",
+      "size": 44,
+      "size_string": "sizeof(i343::Damage::OvershieldInformation)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "OvershieldInformationTagFlags"
+        },
+        {
+          "type": "real",
+          "name": "recharge rate scalar (0, n] #if \"is regenerative\" then this scale is applied to the recharge rate, if \"is instantly eliminated\" is NOT checked, is applied to overshield deplete time (from game variants)"
+        },
+        {
+          "type": "real",
+          "name": "stun time scalar [0, n] #is applied to the standard shield stun time"
+        },
+        {
+          "type": "tag_reference",
+          "name": "looping overshield fx",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144989ea0"
+    },
+    "ModelTargetBlock_struct": {
+      "guid": "fee4d4bd5647cca107dbeeb5a6a89816",
+      "size": 40,
+      "size_string": "sizeof(ModelTarget)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "model_target_flags_definition"
+        },
+        {
+          "type": "char_enum",
+          "name": "type",
+          "definition": "ModelTargetTypeDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "MTBNP1",
+          "definition": 2
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "marker name^#multiple markers become multiple spheres of the same radius"
+        },
+        {
+          "type": "real",
+          "name": "size#sphere radius"
+        },
+        {
+          "type": "angle",
+          "name": "cone angle#the target is only visible when viewed within this angle of the marker's x axis"
+        },
+        {
+          "type": "short_block_index",
+          "name": "damage section#the target is associated with this damage section",
+          "definition": "new_global_damage_section_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "variant#the target will only appear with this variant",
+          "definition": "model_variant_block"
+        },
+        {
+          "type": "real_fraction",
+          "name": "aim assist magnetism scale:percent#0-1 use to scale how much aim assist magnetism this target gets.  0 means the target will not be evaluated for aim assist"
+        },
+        {
+          "type": "real_fraction",
+          "name": "ai selection priority scale:percent#0-1 use to scale an ai's selection priority for this target.  Is used as a weight 0 is lowest 1 is highest"
+        },
+        {
+          "type": "real",
+          "name": "aoe exclusion radius#ignored if zero"
+        },
+        {
+          "type": "struct",
+          "name": "lock-on data",
+          "definition": "model_target_lock_on_data_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473ccb0"
+    },
+    "model_target_lock_on_data_struct": {
+      "guid": "60caa3ce074579be57a0fda7c9d065da",
+      "size": 8,
+      "size_string": "sizeof(ModelTargetLockOnData)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "lock-on fields",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "lock on distance"
+        },
+        {
+          "type": "string_id",
+          "name": "tracking type#a weapon can track/lock on this target if this string is in the weapon's tracking block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473cba0"
+    },
+    "model_region_block": {
+      "guid": "a1fa1e4ef748a29c6f102392a4c1a5c7",
+      "size": 36,
+      "size_string": "sizeof(s_model_region)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*^"
+        },
+        {
+          "type": "char_integer",
+          "name": "collision region index*"
+        },
+        {
+          "type": "char_integer",
+          "name": "physics region index*"
+        },
+        {
+          "type": "pad",
+          "name": "QDSJS",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "permutations*",
+          "definition": "model_permutation_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447404f0"
+    },
+    "model_permutation_block": {
+      "guid": "5f1b67720742ce63d5299abe3f03b13e",
+      "size": 8,
+      "size_string": "sizeof(s_model_permutation)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*^"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags*",
+          "definition": "model_permutation_flags_definition"
+        },
+        {
+          "type": "char_integer",
+          "name": "collision permutation index*"
+        },
+        {
+          "type": "char_integer",
+          "name": "physics permutation index*"
+        },
+        {
+          "type": "pad",
+          "name": "AVZQS",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144740620"
+    },
+    "model_node_block": {
+      "guid": "01fbe9e5084438f8ff9eecaff4e6e728",
+      "size": 92,
+      "size_string": "sizeof(s_model_node)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*^"
+        },
+        {
+          "type": "short_block_index",
+          "name": "parent node*",
+          "definition": "model_node_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "first child node*",
+          "definition": "model_node_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "next sibling node*",
+          "definition": "model_node_block"
+        },
+        {
+          "type": "pad",
+          "name": "GHTI",
+          "definition": 2
+        },
+        {
+          "type": "real_point_3d",
+          "name": "default translation*"
+        },
+        {
+          "type": "real_quaternion",
+          "name": "default rotation*"
+        },
+        {
+          "type": "real",
+          "name": "default inverse scale*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "default inverse forward*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "default inverse left*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "default inverse up*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "default inverse position*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144740750"
+    },
+    "model_variant_override_block": {
+      "guid": "df8218f20341be4975106496e6b94894",
+      "size": 16,
+      "size_string": "sizeof(ModelVariantOverrideDef)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "base variant^"
+        },
+        {
+          "type": "string_id",
+          "name": "override a"
+        },
+        {
+          "type": "string_id",
+          "name": "override b"
+        },
+        {
+          "type": "string_id",
+          "name": "override c"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473ff00"
+    },
+    "teammate_chatter_dialogue_block": {
+      "guid": "6d053ecd514252dade0a6297d1122d68",
+      "size": 32,
+      "size_string": "sizeof(TeammateChatterDialogueBlockDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "teammate chatter dialogue#The list of possible (random) teammate chatter dialogue tag for this model",
+          "definition": {
+            "flags": 2,
+            "allowed": [
+              "udlg"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14473e910"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "arrays": {
+    "runtime_region_index_array": {
+      "count": 32,
+      "count_string": "MAXIMUM_REGIONS_PER_MODEL",
+      "struct": "runtime_region_index_array"
+    },
+    "model_state_permutation_index_array": {
+      "count": 5,
+      "count_string": "k_number_of_model_states",
+      "struct": "model_state_permutation_index_array"
+    },
+    "g_node_flag_storage_array": {
+      "count": 8,
+      "count_string": "c_node_flags::k_flag_chunk_count",
+      "struct": "g_node_flag_storage_array"
+    }
+  },
+  "enums_flags": {
+    "model_lightmap_flags_definition": {
+      "options": [
+        "pvs enabled",
+        "per vertex all",
+        "generate forge atlas"
+      ]
+    },
+    "model_lod_resource_distance_flags_definition": {
+      "options": [
+        "override enabled"
+      ]
+    },
+    "modelVariantFlagsDefinition": {
+      "options": [
+        "available in forge",
+        "has valid lightmap*!",
+        "has valid lightmap and airprobes*!"
+      ]
+    },
+    "model_variant_permutation_flags_definition": {
+      "options": [
+        "copy states to all permutations"
+      ]
+    },
+    "model_state_property_flags_definition": {
+      "options": [
+        "blurred",
+        "hella blurred",
+        "unshielded{shielded}",
+        "battery depleted"
+      ]
+    },
+    "model_state_enum_definition": {
+      "options": [
+        "default",
+        "minor damage",
+        "medium damage",
+        "major damage",
+        "destroyed"
+      ]
+    },
+    "region_sort_enum": {
+      "options": [
+        "no sorting",
+        "-5 (closest)",
+        "-4",
+        "-3",
+        "-2",
+        "-1",
+        "0 (same as model)",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5 (farthest)"
+      ]
+    },
+    "new_damage_section_flags_definition": {
+      "options": [
+        "starts inactive#this section will be initialized with zero health and will be stunned indefinitely",
+        "takes full dmg when object dies",
+        "takes full dmg when obj dstryd",
+        "restored on ressurection",
+        "headshot#takes extra headshot damage when shot",
+        "depletion is permanent",
+        "recharges while dead",
+        "play recharge effect only when empty",
+        "networked (note that primary body and shield are always networked)",
+        "can recharge independently#always a shield layer to recharge even if there is an inner shield layer that is stunned",
+        "depletion tracked by AI characters#on an AI character, depletion of this section is tracked by the AI, stimulus 'tracked_sections_depleted' is set when all of these on a character are depleted",
+        "DEPRECATED DO NOT USE 1!",
+        "DEPRECATED DO NOT USE 2!",
+        "DEPRECATED DO NOT USE 3!",
+        "DEPRECATED DO NOT USE 4!",
+        "DEPRECATED DO NOT USE 5!",
+        "DEPRECATED DO NOT USE 6!",
+        "blocks headshots#headshot obstruction test collides with this damage section",
+        "weak spot#this section is considered a weak spot and is not blocked by trivial collision sections",
+        "trivial collision#test for headshots and weak spot hits through this damage section",
+        "disable additive player damage sound"
+      ]
+    },
+    "MalleablePropertyCombiner": {
+      "options": [
+        "sequential#applies the percentages one after another on the base",
+        "total percentage#adds up all of the percentages and applies them to the base",
+        "addition#adds on all of the modifiers to the base",
+        "product#multiplies the values one after another on to the base"
+      ]
+    },
+    "newDamageResponseFlagsPart1": {
+      "options": [
+        "kills object#when the response fires the object dies regardless of its current health",
+        "inhibits melee attack#from halo 1 - disallows melee for a unit",
+        "inhibits weapon attack#from halo 1 - disallows weapon fire for a unit",
+        "inhibits walking#from halo 1 - disallows walking for a unit",
+        "forces drop weapon#from halo 1 - makes the unit drop its current weapon",
+        "kills weapon primary trigger",
+        "kills weapon secondary trigger",
+        "destroys object#when the response fires the object is destroyed",
+        "damages weapon primary trigger#destroys the primary trigger on the unit's current weapon",
+        "damages weapon secondary trigger#destroys the secondary trigger on the unit's current weapon",
+        "kills object (no player solo)",
+        "causes detonation",
+        "kills variant objects",
+        "force unattached effects",
+        "fires under threshold",
+        "triggers special death",
+        "only on special death",
+        "only NOT on special death",
+        "buckles giants",
+        "causes sp detonation",
+        "skip sounds on generic effect",
+        "kills giants",
+        "skip sounds on special death",
+        "force hard ping",
+        "can refire#can fire again if the section ever recharges past its threshold",
+        "can skip transition effects#will not spawn effects if previous response also fired",
+        "(UNUSED) cause head dismemberment",
+        "(UNUSED) cause left leg dismemberment",
+        "(UNUSED) cause right leg dismemberment",
+        "(UNUSED) cause left arm dismemberment",
+        "(UNUSED) cause right arm dismemberment",
+        "(UNUSED) allow damage recharge overflow"
+      ]
+    },
+    "newDamageResponseFlagsPart2": {
+      "options": [
+        "hides object if destroyed by response on predicted client#if the destroys object flag and this flag are both checked, the object will be hidden on predicted clients when the response fires (hologram hack)"
+      ]
+    },
+    "damage_transfer_flags_definition": {
+      "options": [
+        "transfer damage to damage section",
+        "transfer damage to parent",
+        "transfer damage to children",
+        "transfer damage to seats",
+        "transfer direct damage",
+        "transfer AOE exposed damage",
+        "transfer AOE obstructed damage"
+      ]
+    },
+    "damage_transfer_function_enum_definition": {
+      "options": [
+        "percent",
+        "points",
+        "ceiling"
+      ]
+    },
+    "model_instance_group_choice_enum": {
+      "options": [
+        "choose one member",
+        "choose all members"
+      ]
+    },
+    "damage_response_custom_response_behavior_enum_definition": {
+      "options": [
+        "plays always",
+        "plays if labels match",
+        "plays if labels differ"
+      ]
+    },
+    "damage_response_constraint_damage_type_enum_definition": {
+      "options": [
+        "none",
+        "destroy one of group#sets the attached body of this constraint free",
+        "destroy entire group#sets the attached body of all constraints free",
+        "loosen one of group#takes this constraint out of the rigid state - activates it",
+        "loosen entire group#takes all constraints out of the rigid state - activates them"
+      ]
+    },
+    "damage_response_ai_dialoge_event_type_enum_definition": {
+      "options": [
+        "none",
+        "armor broken",
+        "vehicle damage state worsens"
+      ]
+    },
+    "ModelVariantObjectFlagsDefinition": {
+      "options": [
+        "enable physics",
+        "share bones with parent#Set when this object's skeleton will share overlapping bones with it's parent object. Mainly used for attached heads on characters."
+      ]
+    },
+    "model_damage_info_flags_definition": {
+      "options": [
+        "takes shield damage for children",
+        "takes body damage for children",
+        "always shields friendly damage",
+        "passes area damage to children",
+        "parent never takes body damage for us",
+        "only damaged by explosives",
+        "parent never takes shield damage for us",
+        "cannot die from damage",
+        "passes attached damage to riders",
+        "shield depletion is permanent",
+        "shield depletion force hard ping",
+        "AI do not damage without player",
+        "health regrows while dead",
+        "shield recharge plays only when empty",
+        "IGNORE force minimum transfer",
+        "orphan from postprocess autogen#check this to take control of the new damage info tag block",
+        "only damaged by boarding damage"
+      ]
+    },
+    "damage_section_flags_definition": {
+      "options": [
+        "absorbs body damage",
+        "takes full dmg when object dies",
+        "cannot die with riders",
+        "takes full dmg when obj dstryd",
+        "restored on ressurection",
+        "unused0!",
+        "unused1!",
+        "heatshottable",
+        "ignores shields",
+        "takes full dmg when shield depl",
+        "networked (e.g. armor lock)",
+        "allow damage response overflow"
+      ]
+    },
+    "damage_response_type_enum_definition": {
+      "options": [
+        "receives all damage",
+        "receives area effect damage",
+        "receives local damage"
+      ]
+    },
+    "damage_response_set1": {
+      "options": [
+        "kills object#when the response fires the object dies regardless of its current health",
+        "inhibits melee attack#from halo 1 - disallows melee for a unit",
+        "inhibits weapon attack#from halo 1 - disallows weapon fire for a unit",
+        "inhibits walking#from halo 1 - disallows walking for a unit",
+        "forces drop weapon#from halo 1 - makes the unit drop its current weapon",
+        "kills weapon primary trigger",
+        "kills weapon secondary trigger",
+        "destroys object#when the response fires the object is destroyed",
+        "damages weapon primary trigger#destroys the primary trigger on the unit's current weapon",
+        "damages weapon secondary trigger#destroys the secondary trigger on the unit's current weapon",
+        "light damage left turn",
+        "major damage left turn",
+        "light damage right turn",
+        "major damage right turn",
+        "light damage engine",
+        "major damage engine",
+        "kills object (no player solo)",
+        "causes detonation",
+        "fires on creation",
+        "kills variant objects",
+        "force unattached effects",
+        "fires under threshold",
+        "triggers special death",
+        "only on special death",
+        "only NOT on special death",
+        "buckles giants",
+        "causes sp detonation",
+        "skip sounds on generic effect",
+        "kills giants",
+        "skip sounds on special death",
+        "cause head dismemberment",
+        "cause left leg dismemberment"
+      ]
+    },
+    "damage_response_set2": {
+      "options": [
+        "cause right leg dismemberment",
+        "cause left arm dismemberment",
+        "cause right arm dismemberment",
+        "allow damage recharge overflow"
+      ]
+    },
+    "damage_response_body_threshold_flags_definition": {
+      "options": [
+        "body threshold active#this resoponse fires when the body healh fraction crosses this boundary"
+      ]
+    },
+    "new_model_damage_info_flags_definition": {
+      "options": [
+        "takes damage for children#useful for bipeds shielding/taking damage for weapons",
+        "parent never takes damage for us#useful for attached shields",
+        "cannot die from damage",
+        "dies with riders",
+        "passes area damage to children"
+      ]
+    },
+    "OvershieldInformationTagFlags": {
+      "options": [
+        "is instantly added",
+        "is instantly eliminated",
+        "is regenerative"
+      ]
+    },
+    "model_target_flags_definition": {
+      "options": [
+        "aoe top level",
+        "aoe test obstruction",
+        "shows tracking reticle#use this model targets center for displaying the targetting reticle",
+        "ignored on local physics",
+        "use for network lead vector only"
+      ]
+    },
+    "ModelTargetTypeDefinition": {
+      "options": [
+        "standard",
+        "head",
+        "weak spot"
+      ]
+    },
+    "model_permutation_flags_definition": {
+      "options": [
+        "cannot be chosen randomly"
+      ]
+    },
+    "model_flags_definition": {
+      "options": [
+        "active camo always on",
+        "active camo never",
+        "inconsequential target#used in magnetism and campaign saving",
+        "locked precomputed probes#air or scenery probe",
+        "If sky attaches to camera#parallax % between sky pos and camera pos below",
+        "model is big battle object",
+        "model never uses compressed vertex position",
+        "model is invisible, even attachments",
+        "DEPRECATED DO NOT USE 0!",
+        "DEPRECATED DO NOT USE 1!",
+        "DEPRECATED DO NOT USE 2!",
+        "DEPRECATED DO NOT USE 3!",
+        "DEPRECATED DO NOT USE 4!",
+        "DEPRECATED DO NOT USE 5!",
+        "DEPRECATED DO NOT USE 6!"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

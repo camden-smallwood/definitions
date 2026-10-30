@@ -1,0 +1,233 @@
+{
+  "name": "NavPointLayoutDefinition",
+  "tag": "navl",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "NavPointLayoutDefinition_block",
+  "blocks": {
+    "NavPointLayoutDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "NavPointLayoutDefinition_block_struct"
+    }
+  },
+  "structs": {
+    "NavPointLayoutDefinition_block_struct": {
+      "guid": "5aac14cbba43390acc443cadb4a8da87",
+      "size": 176,
+      "size_string": "(sizeof(NavPointLayoutDefinition) - Tag::SizeInfo<NavPointLayoutDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "real",
+          "name": "morph fraction"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "anchor offset"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "center box width height"
+        },
+        {
+          "type": "explanation",
+          "name": "center sprite bg",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "center sprite bg",
+          "definition": "GenericLayoutStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "center sprite fg",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "center sprite fg",
+          "definition": "GenericLayoutStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "center radial progress bar",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "center radial progress bar",
+          "definition": "GenericLayoutStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "top sprite",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "top sprite",
+          "definition": "GenericLayoutStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "top label",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "top label",
+          "definition": "GenericLayoutStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right progress bar",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right progress bar",
+          "definition": "GenericLayoutStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right progress bar 2",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right progress bar 2",
+          "definition": "GenericLayoutStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right label",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right label",
+          "definition": "GenericLayoutStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right timer",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right timer",
+          "definition": "GenericLayoutStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "left timer",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "left timer",
+          "definition": "GenericLayoutStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "yaw sprite",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "yaw sprite",
+          "definition": "RotatedSpriteLayoutStruct"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144895c40"
+    },
+    "GenericLayoutStruct": {
+      "guid": "31bddafe6d45b708611c8685dd945617",
+      "size": 12,
+      "size_string": "sizeof(GenericLayout)",
+      "fields": [
+        {
+          "type": "real_point_2d",
+          "name": "width and height"
+        },
+        {
+          "type": "real",
+          "name": "alpha"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144895a10"
+    },
+    "RotatedSpriteLayoutStruct": {
+      "guid": "8d50369acb43ec5d3587e8b9266fc263",
+      "size": 16,
+      "size_string": "sizeof(RotatedSpriteLayout)",
+      "fields": [
+        {
+          "type": "real_point_2d",
+          "name": "width and height"
+        },
+        {
+          "type": "real",
+          "name": "alpha"
+        },
+        {
+          "type": "real",
+          "name": "pivot offset"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144895b20"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

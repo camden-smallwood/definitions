@@ -1,0 +1,1777 @@
+{
+  "name": "ComponentDefinition",
+  "tag": "fuic",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "ComponentDefinition_block",
+  "blocks": {
+    "ComponentDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "ComponentDefinition_block_struct"
+    },
+    "NamedResourceHandleDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "NamedResourceHandleDefinitionBlock_struct"
+    },
+    "BooleanDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "BooleanDefinitionBlock_struct"
+    },
+    "IntegerDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "IntegerDefinitionBlock_struct"
+    },
+    "FloatDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "FloatDefinitionBlock_struct"
+    },
+    "ColorDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "ColorDefinitionBlock_struct"
+    },
+    "Point2FDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "Point2FDefinitionBlock_struct"
+    },
+    "StringIdDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "StringIdDefinitionBlock_struct"
+    },
+    "BitmapGroupReferenceDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "BitmapGroupReferenceDefinitionBlock_struct"
+    },
+    "FloatAnimationDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "FloatAnimationDefinitionBlock_struct"
+    },
+    "ColorAnimationDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "ColorAnimationDefinitionBlock_struct"
+    },
+    "Point2FAnimationDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "Point2FAnimationDefinitionBlock_struct"
+    },
+    "IntegerAnimationDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "IntegerAnimationDefinitionBlock_struct"
+    },
+    "StoryboardDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "StoryboardDefinitionBlock_struct"
+    },
+    "ResourceHandleDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "ResourceHandleDefinitionBlock_struct"
+    },
+    "NumericDisplayDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "NumericDisplayDefinitionBlock_struct"
+    },
+    "VisualStateDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "VisualStateDefinitionBlock_struct"
+    },
+    "VisualStateGroupDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "VisualStateGroupDefinitionBlock_struct"
+    },
+    "FloatAnimationUsingKeyFramesDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "FloatAnimationUsingKeyFramesDefinitionBlock_struct"
+    },
+    "LinearFloatKeyFrameDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "LinearFloatKeyFrameDefinitionBlock_struct"
+    },
+    "DiscreteFloatKeyFrameDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "DiscreteFloatKeyFrameDefinitionBlock_struct"
+    },
+    "ColorAnimationUsingKeyFramesDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "ColorAnimationUsingKeyFramesDefinitionBlock_struct"
+    },
+    "LinearColorKeyFrameDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "LinearColorKeyFrameDefinitionBlock_struct"
+    },
+    "DiscreteColorKeyFrameDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "DiscreteColorKeyFrameDefinitionBlock_struct"
+    },
+    "BooleanAnimationUsingKeyFramesDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "BooleanAnimationUsingKeyFramesDefinitionBlock_struct"
+    },
+    "DiscreteBooleanKeyFrameDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "DiscreteBooleanKeyFrameDefinitionBlock_struct"
+    },
+    "Point2FAnimationUsingKeyFramesDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "Point2FAnimationUsingKeyFramesDefinitionBlock_struct"
+    },
+    "LinearPoint2FKeyFrameDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "LinearPoint2FKeyFrameDefinitionBlock_struct"
+    },
+    "DiscretePoint2FKeyFrameDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "DiscretePoint2FKeyFrameDefinitionBlock_struct"
+    },
+    "IntegerAnimationUsingKeyFramesDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "IntegerAnimationUsingKeyFramesDefinitionBlock_struct"
+    },
+    "LinearIntegerKeyFrameDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "LinearIntegerKeyFrameDefinitionBlock_struct"
+    },
+    "DiscreteIntegerKeyFrameDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "DiscreteIntegerKeyFrameDefinitionBlock_struct"
+    },
+    "RepeatBehaviorDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "RepeatBehaviorDefinitionBlock_struct"
+    },
+    "SoundDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "SoundDefinitionBlock_struct"
+    },
+    "SoundLoopDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "SoundLoopDefinitionBlock_struct"
+    },
+    "NavPointLayoutDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "NavPointLayoutDefinitionBlock_struct"
+    },
+    "NavPointAnimationDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "NavPointAnimationDefinitionBlock_struct"
+    },
+    "StringTableDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "StringTableDefinitionBlock_struct"
+    },
+    "StringTableEntryDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "StringTableEntryDefinitionBlock_struct"
+    },
+    "SubComponentDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "SubComponentDefinitionBlock_struct"
+    },
+    "HudTwoToneGradientDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "HudTwoToneGradientDefinitionBlock_struct"
+    },
+    "FontDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "FontDefinitionBlock_struct"
+    },
+    "HighContrastAdditiveDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "HighContrastAdditiveDefinitionBlock_struct"
+    },
+    "VertexWarpDefinitionBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "VertexWarpDefinitionBlock_struct"
+    }
+  },
+  "structs": {
+    "ComponentDefinition_block_struct": {
+      "guid": "770e3b8b80443dda4cb6a495ba81f1f9",
+      "size": 1200,
+      "size_string": "(sizeof(ComponentDefinition) - Tag::SizeInfo<ComponentDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "string_id",
+          "name": "name#screen name"
+        },
+        {
+          "type": "string",
+          "name": "class#class name"
+        },
+        {
+          "type": "struct",
+          "name": "resources",
+          "definition": "ComponentResourcesDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144892320"
+    },
+    "ComponentResourcesDefinitionStruct": {
+      "guid": "7595ed5aa646a5755fa5488da028a692",
+      "size": 1148,
+      "size_string": "sizeof(ComponentResourcesDefinition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "entries",
+          "definition": "NamedResourceHandleDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "booleans",
+          "definition": "BooleanDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "ints",
+          "definition": "IntegerDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "floats",
+          "definition": "FloatDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "colors",
+          "definition": "ColorDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "point2fs",
+          "definition": "Point2FDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "string ids",
+          "definition": "StringIdDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "bitmaps",
+          "definition": "BitmapGroupReferenceDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "floatanimations",
+          "definition": "FloatAnimationDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "coloranimations",
+          "definition": "ColorAnimationDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "point2fanimations",
+          "definition": "Point2FAnimationDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "integeranimations",
+          "definition": "IntegerAnimationDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "storyboards",
+          "definition": "StoryboardDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "numericdisplay",
+          "definition": "NumericDisplayDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "visualstates",
+          "definition": "VisualStateDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "visualstategroups",
+          "definition": "VisualStateGroupDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "floatanimationusingkeyframes",
+          "definition": "FloatAnimationUsingKeyFramesDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "linearfloatkeyframes",
+          "definition": "LinearFloatKeyFrameDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "discretefloatkeyframes",
+          "definition": "DiscreteFloatKeyFrameDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "coloranimationusingkeyframes",
+          "definition": "ColorAnimationUsingKeyFramesDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "linearcolorkeyframes",
+          "definition": "LinearColorKeyFrameDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "discretecolorkeyframes",
+          "definition": "DiscreteColorKeyFrameDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "booleananimationusingkeyframes",
+          "definition": "BooleanAnimationUsingKeyFramesDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "discretebooleankeyframes",
+          "definition": "DiscreteBooleanKeyFrameDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "point2fanimationusingkeyframes",
+          "definition": "Point2FAnimationUsingKeyFramesDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "linearpoint2fkeyframes",
+          "definition": "LinearPoint2FKeyFrameDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "discretepoint2fkeyframes",
+          "definition": "DiscretePoint2FKeyFrameDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "integeranimationusingkeyframes",
+          "definition": "IntegerAnimationUsingKeyFramesDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "linearintegerkeyframes",
+          "definition": "LinearIntegerKeyFrameDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "discreteintegerkeyframes",
+          "definition": "DiscreteIntegerKeyFrameDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "repeatbehaviors",
+          "definition": "RepeatBehaviorDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "sound",
+          "definition": "SoundDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "soundloop",
+          "definition": "SoundLoopDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "navpointlayouts",
+          "definition": "NavPointLayoutDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "navpointanimations",
+          "definition": "NavPointAnimationDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "stringtables",
+          "definition": "StringTableDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "subcomponents",
+          "definition": "SubComponentDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "hudtwotonegradient",
+          "definition": "HudTwoToneGradientDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "font",
+          "definition": "FontDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "highcontrastadditive",
+          "definition": "HighContrastAdditiveDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "vertexwarp",
+          "definition": "VertexWarpDefinitionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489eaa0"
+    },
+    "NamedResourceHandleDefinitionBlock_struct": {
+      "guid": "8ff9f61c45492227123748ac2663b239",
+      "size": 12,
+      "size_string": "sizeof(ResourceEntryDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "struct",
+          "name": "handle",
+          "definition": "ResourceHandleDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489ef00"
+    },
+    "ResourceHandleDefinitionStruct": {
+      "guid": "c5c71f30c8422555e7c244a9895e6969",
+      "size": 8,
+      "size_string": "sizeof(ResourceHandleDefinition)",
+      "fields": [
+        {
+          "type": "dword_integer",
+          "name": "resource type"
+        },
+        {
+          "type": "long_integer",
+          "name": "resource index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489ecd0"
+    },
+    "BooleanDefinitionBlock_struct": {
+      "guid": "9becdf69bf43b10d194d8c9176d5aaea",
+      "size": 1,
+      "size_string": "sizeof(bool)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "value",
+          "definition": "BooleanFlagsDefinition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489f010"
+    },
+    "IntegerDefinitionBlock_struct": {
+      "guid": "fa61491d81482ae36d57d6835c161349",
+      "size": 4,
+      "size_string": "sizeof(int)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489f130"
+    },
+    "FloatDefinitionBlock_struct": {
+      "guid": "7986ca395649992c754c59a09521c2b9",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489f240"
+    },
+    "ColorDefinitionBlock_struct": {
+      "guid": "b96146d497490d730fe084a8a313dfce",
+      "size": 36,
+      "size_string": "sizeof(FastHudColor)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "value",
+          "definition": "FastHudColorDefinitionStruct"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "value old {value}"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489f360"
+    },
+    "FastHudColorDefinitionStruct": {
+      "guid": "12d2dd359e4a50b5a758f69f0d9f0e68",
+      "size": 20,
+      "size_string": "sizeof(FastHudColorActualData)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489ebc0"
+    },
+    "Point2FDefinitionBlock_struct": {
+      "guid": "45a553f74c44c2d2be10359a03069be9",
+      "size": 8,
+      "size_string": "sizeof(real_point2d)",
+      "fields": [
+        {
+          "type": "real_point_2d",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489f470"
+    },
+    "StringIdDefinitionBlock_struct": {
+      "guid": "8e3060ba5142824ced994aa1f9c5ccb6",
+      "size": 4,
+      "size_string": "sizeof(StringId)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489f590"
+    },
+    "BitmapGroupReferenceDefinitionBlock_struct": {
+      "guid": "4147600ddf4071c25360bf8e99172c26",
+      "size": 36,
+      "size_string": "sizeof(BitmapGroupReferenceDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "asset reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "word_integer",
+          "name": "sprite index#the index of the sprite within the bitmap to use"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489f6a0"
+    },
+    "FloatAnimationDefinitionBlock_struct": {
+      "guid": "38fa7eebc04a4ecd1a9675b9d4bd8e52",
+      "size": 28,
+      "size_string": "sizeof(FloatAnimationDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "animation base",
+          "definition": "AnimationBaseDefinitionStruct"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "FloatAnimationFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "real",
+          "name": "from"
+        },
+        {
+          "type": "real",
+          "name": "to"
+        },
+        {
+          "type": "real",
+          "name": "duration"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489fd30"
+    },
+    "AnimationBaseDefinitionStruct": {
+      "guid": "8d2e6b8e514428cffd7319a502acc9ba",
+      "size": 12,
+      "size_string": "sizeof(AnimationBaseDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "target"
+        },
+        {
+          "type": "struct",
+          "name": "repeat behavior",
+          "definition": "ResourceHandleDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489fc20"
+    },
+    "ColorAnimationDefinitionBlock_struct": {
+      "guid": "a0ba94735a440a95dec953a734bf85db",
+      "size": 92,
+      "size_string": "sizeof(ColorAnimationDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "animation base",
+          "definition": "AnimationBaseDefinitionStruct"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "ColorAnimationFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "struct",
+          "name": "from",
+          "definition": "FastHudColorDefinitionStruct"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "from old {from}"
+        },
+        {
+          "type": "struct",
+          "name": "to",
+          "definition": "FastHudColorDefinitionStruct"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "to old {to}"
+        },
+        {
+          "type": "real",
+          "name": "duration"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489fe50"
+    },
+    "Point2FAnimationDefinitionBlock_struct": {
+      "guid": "1fc94290744c729cc5bef884c27a7e22",
+      "size": 36,
+      "size_string": "sizeof(Point2FAnimationDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "animation base",
+          "definition": "AnimationBaseDefinitionStruct"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "Point2FAnimationFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "real_point_2d",
+          "name": "from"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "to"
+        },
+        {
+          "type": "real",
+          "name": "duration"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489ff60"
+    },
+    "IntegerAnimationDefinitionBlock_struct": {
+      "guid": "2ba81330c8484e65fae1c4832c5e56c5",
+      "size": 28,
+      "size_string": "sizeof(IntegerAnimationDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "animation base",
+          "definition": "AnimationBaseDefinitionStruct"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "IntegerAnimationFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "long_integer",
+          "name": "from"
+        },
+        {
+          "type": "long_integer",
+          "name": "to"
+        },
+        {
+          "type": "real",
+          "name": "duration"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0080"
+    },
+    "StoryboardDefinitionBlock_struct": {
+      "guid": "30dbe4f5064ae1022887a79e28f0b7ca",
+      "size": 28,
+      "size_string": "sizeof(StoryboardDefinition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "timelines",
+          "definition": "ResourceHandleDefinitionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0190"
+    },
+    "ResourceHandleDefinitionBlock_struct": {
+      "guid": "a24f4e42724ed37bcb6aa1bbdee69eb8",
+      "size": 8,
+      "size_string": "sizeof(ResourceHandleDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "handle",
+          "definition": "ResourceHandleDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489ede0"
+    },
+    "NumericDisplayDefinitionBlock_struct": {
+      "guid": "66bc83f19c4e5a4d4000aca7aa4e1545",
+      "size": 112,
+      "size_string": "sizeof(NumericDisplayDefinition)",
+      "fields": [
+        {
+          "type": "string",
+          "name": "extra characters used in display in addition to 0 to 9#must be in order that they appear in bitmap tag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "asset reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "struct",
+          "name": "tint color of the numeric display",
+          "definition": "FastHudColorDefinitionStruct"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "tint color old {tint color of the numeric display}"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "alignment point on screen#top-left, top-center, or top-right corner depending on text alignment"
+        },
+        {
+          "type": "short_enum",
+          "name": "numeric display alignment based on alignment point given",
+          "definition": "numericDisplayTextAlignmentEnum"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "NumericDisplayFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "padBase",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489f7c0"
+    },
+    "VisualStateDefinitionBlock_struct": {
+      "guid": "ef0e6161994103b19713c4b47d61289d",
+      "size": 12,
+      "size_string": "sizeof(VisualStateDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "struct",
+          "name": "storyboard",
+          "definition": "ResourceHandleDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a02b0"
+    },
+    "VisualStateGroupDefinitionBlock_struct": {
+      "guid": "2e577dccc1442f36fc84399d3ad8ba2e",
+      "size": 28,
+      "size_string": "sizeof(VisualStateGroupDefinition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "visual states",
+          "definition": "ResourceHandleDefinitionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a03c0"
+    },
+    "FloatAnimationUsingKeyFramesDefinitionBlock_struct": {
+      "guid": "f5cb783546402caee22e4dac4eea02d2",
+      "size": 40,
+      "size_string": "sizeof(AnimationUsingKeyFramesDefinition< float >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "animation base",
+          "definition": "AnimationBaseDefinitionStruct"
+        },
+        {
+          "type": "block",
+          "name": "key frames",
+          "definition": "ResourceHandleDefinitionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a04e0"
+    },
+    "LinearFloatKeyFrameDefinitionBlock_struct": {
+      "guid": "42a9d3dce9438c22d1d5e4a9ac4a466a",
+      "size": 8,
+      "size_string": "sizeof(LinearKeyFrameDefinition< float >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "keyframebase",
+          "definition": "FloatKeyFrameBaseDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0710"
+    },
+    "FloatKeyFrameBaseDefinitionStruct": {
+      "guid": "03546c1b5044a1c6e1c19aa2b331d310",
+      "size": 8,
+      "size_string": "sizeof(KeyFrameBaseDefinition< float >)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "key time"
+        },
+        {
+          "type": "real",
+          "name": "key value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0600"
+    },
+    "DiscreteFloatKeyFrameDefinitionBlock_struct": {
+      "guid": "a30ce24ad3428f1043e8a88e7bc04b15",
+      "size": 8,
+      "size_string": "sizeof(DiscreteKeyFrameDefinition< float >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "keyframebase",
+          "definition": "FloatKeyFrameBaseDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0820"
+    },
+    "ColorAnimationUsingKeyFramesDefinitionBlock_struct": {
+      "guid": "3a56f702a3496e58218df9b321d8de78",
+      "size": 40,
+      "size_string": "sizeof(AnimationUsingKeyFramesDefinition< FastHudColor >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "animation base",
+          "definition": "AnimationBaseDefinitionStruct"
+        },
+        {
+          "type": "block",
+          "name": "key frames",
+          "definition": "ResourceHandleDefinitionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0940"
+    },
+    "LinearColorKeyFrameDefinitionBlock_struct": {
+      "guid": "03a43cb3d742847d1073c4aa066aab14",
+      "size": 40,
+      "size_string": "sizeof(LinearKeyFrameDefinition< FastHudColor >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "keyframebase",
+          "definition": "ColorKeyFrameBaseDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0b70"
+    },
+    "ColorKeyFrameBaseDefinitionStruct": {
+      "guid": "4ed4ea942245b8dd65c17da178a0ff9a",
+      "size": 40,
+      "size_string": "sizeof(KeyFrameBaseDefinition< FastHudColor >)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "key time"
+        },
+        {
+          "type": "struct",
+          "name": "key value",
+          "definition": "FastHudColorDefinitionStruct"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "key value old {key value}"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0a60"
+    },
+    "DiscreteColorKeyFrameDefinitionBlock_struct": {
+      "guid": "820cc41e1448c792d2fd0ab82e1b3033",
+      "size": 40,
+      "size_string": "sizeof(DiscreteKeyFrameDefinition< FastHudColor >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "keyframebase",
+          "definition": "ColorKeyFrameBaseDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0c80"
+    },
+    "BooleanAnimationUsingKeyFramesDefinitionBlock_struct": {
+      "guid": "ac1c28b2ac454301051e2a9a2c1bac96",
+      "size": 40,
+      "size_string": "sizeof(AnimationUsingKeyFramesDefinition< bool >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "animation base",
+          "definition": "AnimationBaseDefinitionStruct"
+        },
+        {
+          "type": "block",
+          "name": "key frames",
+          "definition": "ResourceHandleDefinitionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0da0"
+    },
+    "DiscreteBooleanKeyFrameDefinitionBlock_struct": {
+      "guid": "247c2493fc4d52860ab9528afe1da873",
+      "size": 8,
+      "size_string": "sizeof(DiscreteKeyFrameDefinition< bool >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "keyframebase",
+          "definition": "BooleanKeyFrameBaseDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0fd0"
+    },
+    "BooleanKeyFrameBaseDefinitionStruct": {
+      "guid": "94c6525b044ba1317de1038d6486252c",
+      "size": 8,
+      "size_string": "sizeof(KeyFrameBaseDefinition< bool >)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "key time"
+        },
+        {
+          "type": "byte_flags",
+          "name": "key value",
+          "definition": "BooleanFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a0ec0"
+    },
+    "Point2FAnimationUsingKeyFramesDefinitionBlock_struct": {
+      "guid": "998457f7c04741886d0ff7b5799c9834",
+      "size": 40,
+      "size_string": "sizeof(AnimationUsingKeyFramesDefinition< i343::Float2 >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "animation base",
+          "definition": "AnimationBaseDefinitionStruct"
+        },
+        {
+          "type": "block",
+          "name": "key frames",
+          "definition": "ResourceHandleDefinitionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a10e0"
+    },
+    "LinearPoint2FKeyFrameDefinitionBlock_struct": {
+      "guid": "16dca436674a6ff7422069b92309f53c",
+      "size": 12,
+      "size_string": "sizeof(LinearKeyFrameDefinition< i343::Float2 >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "keyframebase",
+          "definition": "Point2FKeyFrameBaseDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1310"
+    },
+    "Point2FKeyFrameBaseDefinitionStruct": {
+      "guid": "7dbb7c9ab2464f968bebaa8ca0776b78",
+      "size": 12,
+      "size_string": "sizeof(KeyFrameBaseDefinition< i343::Float2 >)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "key time"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "key value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1200"
+    },
+    "DiscretePoint2FKeyFrameDefinitionBlock_struct": {
+      "guid": "75d47a136d4f5863dd1788b82e39d8a8",
+      "size": 12,
+      "size_string": "sizeof(DiscreteKeyFrameDefinition< i343::Float2 >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "keyframebase",
+          "definition": "Point2FKeyFrameBaseDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1430"
+    },
+    "IntegerAnimationUsingKeyFramesDefinitionBlock_struct": {
+      "guid": "1aa2bbebb94c33649da081ad034a71d5",
+      "size": 40,
+      "size_string": "sizeof(AnimationUsingKeyFramesDefinition< int >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "animation base",
+          "definition": "AnimationBaseDefinitionStruct"
+        },
+        {
+          "type": "block",
+          "name": "key frames",
+          "definition": "ResourceHandleDefinitionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1540"
+    },
+    "LinearIntegerKeyFrameDefinitionBlock_struct": {
+      "guid": "956752a1d44538064a643b8d3f649653",
+      "size": 8,
+      "size_string": "sizeof(LinearKeyFrameDefinition< int >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "keyframebase",
+          "definition": "IntegerKeyFrameBaseDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1770"
+    },
+    "IntegerKeyFrameBaseDefinitionStruct": {
+      "guid": "88215c23dc47c0bcdbb812a608ced824",
+      "size": 8,
+      "size_string": "sizeof(KeyFrameBaseDefinition< int >)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "key time"
+        },
+        {
+          "type": "long_integer",
+          "name": "key value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1660"
+    },
+    "DiscreteIntegerKeyFrameDefinitionBlock_struct": {
+      "guid": "57c4074eff4deef1142d62afe9be7152",
+      "size": 8,
+      "size_string": "sizeof(DiscreteKeyFrameDefinition< int >)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "keyframebase",
+          "definition": "IntegerKeyFrameBaseDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1890"
+    },
+    "RepeatBehaviorDefinitionBlock_struct": {
+      "guid": "0e12d4a17f44f329c940db861b6948f6",
+      "size": 12,
+      "size_string": "sizeof(RepeatBehaviorDefinition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "RepeatBehaviorFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "long_integer",
+          "name": "count"
+        },
+        {
+          "type": "real",
+          "name": "duration"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a19a0"
+    },
+    "SoundDefinitionBlock_struct": {
+      "guid": "5ee5974f054ed59c0d63dab358e62e26",
+      "size": 32,
+      "size_string": "sizeof(SoundDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "asset reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1ac0"
+    },
+    "SoundLoopDefinitionBlock_struct": {
+      "guid": "bf32e156a14f205e48f23eb67179c6c1",
+      "size": 32,
+      "size_string": "sizeof(SoundLoopDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "asset reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "lsnd"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1bd0"
+    },
+    "NavPointLayoutDefinitionBlock_struct": {
+      "guid": "546b1d5050425b3f00649c9e186c03df",
+      "size": 32,
+      "size_string": "sizeof(NavPointLayoutReferenceDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "tag reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "navl"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489f8d0"
+    },
+    "NavPointAnimationDefinitionBlock_struct": {
+      "guid": "6bb02e4f0547a601d8afdca11f7ff543",
+      "size": 32,
+      "size_string": "sizeof(NavPointAnimationReferenceDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "tag reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "nava"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489f9f0"
+    },
+    "StringTableDefinitionBlock_struct": {
+      "guid": "cb8fed3cd34006d3980a0b8201982cfa",
+      "size": 28,
+      "size_string": "sizeof(StringTableDefinition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "entires",
+          "definition": "StringTableEntryDefinitionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1e00"
+    },
+    "StringTableEntryDefinitionBlock_struct": {
+      "guid": "3bec85205943383bcf09eaa98be55834",
+      "size": 32,
+      "size_string": "sizeof(StringTableEntryDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "data",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1cf0"
+    },
+    "SubComponentDefinitionBlock_struct": {
+      "guid": "d7a3b4e0804b9a6fba77208297e40dad",
+      "size": 32,
+      "size_string": "sizeof(SubComponentDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "sub component reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "fuic"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489fb00"
+    },
+    "HudTwoToneGradientDefinitionBlock_struct": {
+      "guid": "900244a79c4a1bff68a70282f683d3c4",
+      "size": 92,
+      "size_string": "sizeof(HudTwoToneGradientDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "left color",
+          "definition": "FastHudColorDefinitionStruct"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "left color old {left color}"
+        },
+        {
+          "type": "struct",
+          "name": "right color",
+          "definition": "FastHudColorDefinitionStruct"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "right color old {right color}"
+        },
+        {
+          "type": "real",
+          "name": "edge filter amount"
+        },
+        {
+          "type": "real",
+          "name": "current meter value"
+        },
+        {
+          "type": "real",
+          "name": "min meter value"
+        },
+        {
+          "type": "real",
+          "name": "max meter value"
+        },
+        {
+          "type": "byte_flags",
+          "name": "additive blend toggle",
+          "definition": "BooleanFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a1f20"
+    },
+    "FontDefinitionBlock_struct": {
+      "guid": "009523a8c34d6851df43e9a4c73fb602",
+      "size": 296,
+      "size_string": "sizeof(FontDefinition)",
+      "fields": [
+        {
+          "type": "long_string",
+          "name": "font family name"
+        },
+        {
+          "type": "struct",
+          "name": "tint color",
+          "definition": "FastHudColorDefinitionStruct"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "tint color old {tint color}"
+        },
+        {
+          "type": "real",
+          "name": "font size"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a2260"
+    },
+    "HighContrastAdditiveDefinitionBlock_struct": {
+      "guid": "0da2eb0be74c8bc7ab729b8152c71e0f",
+      "size": 16,
+      "size_string": "sizeof(HighContrastAdditiveDefinition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "dynamic threshold min"
+        },
+        {
+          "type": "real",
+          "name": "dynamic threshold max"
+        },
+        {
+          "type": "real",
+          "name": "dynamic threshold clamp"
+        },
+        {
+          "type": "byte_flags",
+          "name": "high contrast enable",
+          "definition": "BooleanFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a2030"
+    },
+    "VertexWarpDefinitionBlock_struct": {
+      "guid": "769a96e3154844bcd85e738712aa7b63",
+      "size": 48,
+      "size_string": "sizeof(VertexWarpDefinition)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "ellipsoid scale"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "ellipsoid center"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "output offset"
+        },
+        {
+          "type": "long_integer",
+          "name": "tessellation X"
+        },
+        {
+          "type": "long_integer",
+          "name": "tessellation Y"
+        },
+        {
+          "type": "byte_flags",
+          "name": "warp enabled",
+          "definition": "BooleanFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448a2150"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "BooleanFlagsDefinition": {
+      "options": [
+        "Enabled"
+      ]
+    },
+    "FloatAnimationFlagsDefinition": {
+      "options": [
+        "From valid",
+        "To valid"
+      ]
+    },
+    "ColorAnimationFlagsDefinition": {
+      "options": [
+        "From valid",
+        "To valid"
+      ]
+    },
+    "Point2FAnimationFlagsDefinition": {
+      "options": [
+        "From valid",
+        "To valid"
+      ]
+    },
+    "IntegerAnimationFlagsDefinition": {
+      "options": [
+        "From valid",
+        "To valid"
+      ]
+    },
+    "numericDisplayTextAlignmentEnum": {
+      "options": [
+        "left alignment",
+        "right alignment",
+        "center alignment"
+      ]
+    },
+    "NumericDisplayFlagsDefinition": {
+      "options": [
+        "Use additive blend"
+      ]
+    },
+    "RepeatBehaviorFlagsDefinition": {
+      "options": [
+        "Count valid",
+        "Duration valid"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

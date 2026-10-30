@@ -1,0 +1,357 @@
+{
+  "name": "InterfaceGlobalsDefinition",
+  "tag": "glin",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "InterfaceGlobalsDefinition_block",
+  "blocks": {
+    "InterfaceGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "InterfaceGlobalsDefinition_block_struct"
+    },
+    "interface_tag_references": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "interface_tag_references"
+    }
+  },
+  "structs": {
+    "InterfaceGlobalsDefinition_block_struct": {
+      "guid": "1b1cfeea3b4016848dbbf2aad0270af7",
+      "size": 48,
+      "size_string": "(sizeof(i343::InterfaceGlobals) - Tag::SizeInfo<i343::InterfaceGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "interface tags",
+          "definition": "interface_tag_references"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14482ac30"
+    },
+    "interface_tag_references": {
+      "guid": "42bdfceafb4d2627c124269c3c0d8b92",
+      "size": 736,
+      "size_string": "sizeof(s_game_globals_interface_tag_references)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "spinner bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "obsolete2",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "screen color table",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "colo"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "hud color table",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "colo"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "editor color table",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "colo"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "dialog color table",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "colo"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "motion sensor sweep bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "motion sensor sweep bitmap mask",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "multiplayer hud bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "unused!",
+          "definition": {
+            "flags": 16,
+            "allowed": []
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "motion sensor blip bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "interface goo map1",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "interface goo map2",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "interface goo map3",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "revive damage response",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": "mainmenu",
+          "group_tag": "bidb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "mainmenu ui globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wgtz"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "bide"
+        },
+        {
+          "type": "custom",
+          "name": "singleplayer",
+          "group_tag": "bidb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "singleplayer ui globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wgtz"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "bide"
+        },
+        {
+          "type": "custom",
+          "name": "multiplayer",
+          "group_tag": "bidb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "multiplayer ui globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wgtz"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "bide"
+        },
+        {
+          "type": "custom",
+          "name": "firefight",
+          "group_tag": "bidb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "firefight ui globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wgtz"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "bide"
+        },
+        {
+          "type": "tag_reference",
+          "name": "style sheet globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "uiss"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "spartan rendering scenario",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "scnr"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "damage reporting display globals#tag that defines content for display damage stats",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "drdg"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "level display globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "ludg"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144837960"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

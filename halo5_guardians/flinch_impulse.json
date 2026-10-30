@@ -1,0 +1,160 @@
+{
+  "name": "flinch_impulse",
+  "tag": "flni",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "flinch_impulse_block",
+  "blocks": {
+    "flinch_impulse_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "flinch_impulse_block_struct"
+    }
+  },
+  "structs": {
+    "flinch_impulse_block_struct": {
+      "guid": "237b56c3244bcb62333351b3af18e4c9",
+      "size": 48,
+      "size_string": "(sizeof(i343::Flinch::FlinchImpulseDefinition) - Tag::SizeInfo<i343::Flinch::FlinchImpulseDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "flinch impulse",
+          "definition": "flinch_impulse_internal"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144723910"
+    },
+    "flinch_impulse_internal": {
+      "guid": "b1059fdbbb4245584dd278b6250501a6",
+      "size": 32,
+      "size_string": "sizeof(FlinchImpulseInternalDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Gun Flinch",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "gun flinch",
+          "definition": "flinch_impulse_settings"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "View Flinch",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "view flinch",
+          "definition": "flinch_impulse_settings"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447237f0"
+    },
+    "flinch_impulse_settings": {
+      "guid": "22186360024df8c18a66f984116f0604",
+      "size": 16,
+      "size_string": "sizeof(FlinchImpulseSettings)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "flinch direction",
+          "definition": "flinch_direction"
+        },
+        {
+          "type": "char_enum",
+          "name": "flinch mapping",
+          "definition": "flinch_mapping"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "angle_bounds",
+          "name": "magnitude range:degrees#scales the direction by a random value defined by the range"
+        },
+        {
+          "type": "angle",
+          "name": "random rotation:degrees#rotates the direction by a random value defined by the range of this value positive and negative"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447236e0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "flinch_direction": {
+      "options": [
+        "hit direction",
+        "inverse hit direction",
+        "attacker to victim",
+        "victim to attacker"
+      ]
+    },
+    "flinch_mapping": {
+      "options": [
+        "top down",
+        "camera"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

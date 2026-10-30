@@ -1,0 +1,153 @@
+{
+  "name": "shared_variables",
+  "tag": "shvr",
+  "version": 0,
+  "flags": 0,
+  "parent_tag": "aTag",
+  "block": "shared_variables_block",
+  "blocks": {
+    "shared_variables_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "shared_variables_block_struct"
+    },
+    "affectedFileBlock": {
+      "max_count": 32,
+      "max_count_string": "SharedVariablesGroupDefinition::k_maxAffectedFiles",
+      "struct": "affectedFileBlock"
+    },
+    "sharedVariableBlock": {
+      "max_count": 32,
+      "max_count_string": "SharedVariableDefinition::k_maxSharedVariables",
+      "struct": "sharedVariableBlock"
+    },
+    "sharedVariableTouchBlock": {
+      "max_count": 32,
+      "max_count_string": "SharedVariableTouchDefinition::k_maxSharedVariablTouches",
+      "struct": "sharedVariableTouchBlock"
+    }
+  },
+  "structs": {
+    "shared_variables_block_struct": {
+      "guid": "69985edd26457118248f9da79b5441f6",
+      "size": 72,
+      "size_string": "(sizeof(SharedVariablesGroupDefinition) - Tag::SizeInfo<SharedVariablesGroupDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "affected files",
+          "definition": "affectedFileBlock"
+        },
+        {
+          "type": "block",
+          "name": "shared variables",
+          "definition": "sharedVariableBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144701110"
+    },
+    "affectedFileBlock": {
+      "guid": "f934afb8974d1c9970e893a5d6f52f17",
+      "size": 32,
+      "size_string": "sizeof(s_tag_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "file to touch^",
+          "definition": {
+            "flags": 0,
+            "allowed": []
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144700d20"
+    },
+    "sharedVariableBlock": {
+      "guid": "d37659a7d54494a68971118277c2d8f8",
+      "size": 64,
+      "size_string": "sizeof(SharedVariableDefinition)",
+      "fields": [
+        {
+          "type": "string",
+          "name": "name^"
+        },
+        {
+          "type": "block",
+          "name": "touches",
+          "definition": "sharedVariableTouchBlock"
+        },
+        {
+          "type": "real",
+          "name": "numerical value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144701000"
+    },
+    "sharedVariableTouchBlock": {
+      "guid": "f9f3db6930469c8f300a54b0cc49dd43",
+      "size": 260,
+      "size_string": "sizeof(SharedVariableTouchDefinition)",
+      "fields": [
+        {
+          "type": "long_block_index",
+          "name": "file to touch",
+          "definition": "affectedFileBlock"
+        },
+        {
+          "type": "long_string",
+          "name": "field to touch"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144700e50"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

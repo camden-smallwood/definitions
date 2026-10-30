@@ -1,0 +1,93 @@
+{
+  "name": "collisionLayerAuditConfigurationTag",
+  "tag": "clac",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "collisionLayerAuditConfigurationTag_block",
+  "blocks": {
+    "collisionLayerAuditConfigurationTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "collisionLayerAuditConfigurationTag_block_struct"
+    },
+    "collisionLayerAuditConfigStringBlock": {
+      "max_count": 256,
+      "max_count_string": "k_maxConfigStrings",
+      "struct": "collisionLayerAuditConfigStringBlock_struct"
+    }
+  },
+  "structs": {
+    "collisionLayerAuditConfigurationTag_block_struct": {
+      "guid": "ee47547bfd4d5002e355768251ab582b",
+      "size": 72,
+      "size_string": "(sizeof(CollisionLayerAuditConfigurationTag) - Tag::SizeInfo<CollisionLayerAuditConfigurationTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "ignored directories",
+          "definition": "collisionLayerAuditConfigStringBlock"
+        },
+        {
+          "type": "block",
+          "name": "ignored files",
+          "definition": "collisionLayerAuditConfigStringBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14484b970"
+    },
+    "collisionLayerAuditConfigStringBlock_struct": {
+      "guid": "0e3498fb7f4778abd6c649bc66924ec4",
+      "size": 256,
+      "size_string": "sizeof(CollisionLayerAuditConfigString)",
+      "fields": [
+        {
+          "type": "long_string",
+          "name": "string"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14484b850"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

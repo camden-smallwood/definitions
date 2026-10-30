@@ -1,0 +1,280 @@
+{
+  "name": "SpartanTrackingGlobalsDefinition",
+  "tag": "sptg",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "SpartanTrackingGlobalsDefinition_block",
+  "blocks": {
+    "SpartanTrackingGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "SpartanTrackingGlobalsDefinition_block_struct"
+    },
+    "SpartanTrackingPingGlobalsBlockDefinition": {
+      "max_count": 2,
+      "max_count_string": "static_cast<long>(ePingType::count)",
+      "struct": "SpartanTrackingPingGlobalsBlockDefinition"
+    },
+    "DefaultRangeBlock": {
+      "max_count": 4,
+      "max_count_string": "static_cast<long>(ePriority::count)",
+      "struct": "DefaultRangeBlock"
+    },
+    "DisplayMaximumsBlock": {
+      "max_count": 4,
+      "max_count_string": "static_cast<long>(ePriority::count)",
+      "struct": "DisplayMaximumsBlock"
+    }
+  },
+  "structs": {
+    "SpartanTrackingGlobalsDefinition_block_struct": {
+      "guid": "171ca22d2644becba2ee95a14a0c8114",
+      "size": 80,
+      "size_string": "(sizeof(i343::SpartanTracking::Globals) - Tag::SizeInfo<i343::SpartanTracking::Globals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "Sorting",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "",
+          "definition": "Tracking targets are sorted in order from lowest to highest key value.  If too many targets are found, targets with the highest key values are dropped until we are under the limit.  \n\nThe keys used to sort targets are based on distance from the player and an FOV factor defined as the absolute value of the sine of the angle between the camera facing and camera-to-object vectors.  The following fields serve as coefficients or weights in the equation used to calculate a target's key value.  \n\n\tD = distance from player's unit\n\tF = FOV factor\n\n\ta = distance weight\n\tb = blended weight\n\tc = FOV weight\n\n \tkey(D,F) = (a * D) + (b * D * F) + (c * F)\n\nIf all three weights are left at 0, then the blended weight will default to 1\n"
+        },
+        {
+          "type": "real",
+          "name": "distance weight"
+        },
+        {
+          "type": "real",
+          "name": "blended weight"
+        },
+        {
+          "type": "real",
+          "name": "FOV weight"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "pad",
+          "name": "pad0[3]",
+          "definition": 3
+        },
+        {
+          "type": "custom",
+          "name": "Outlining",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "char_enum",
+          "name": "default outline color index#index into outline material's 4-color 'outline_color' parameter",
+          "definition": "s_outlineColorEnumNames"
+        },
+        {
+          "type": "real_fraction",
+          "name": "default outline intensity:(0,1] - 0 or less defaults to 0.025"
+        },
+        {
+          "type": "real_fraction",
+          "name": "default outline thickness:(0,1] - 0 or less defaults to 0.25"
+        },
+        {
+          "type": "real",
+          "name": "outline fade duration:(0...) seconds - 0 or less defaults to 0.33"
+        },
+        {
+          "type": "real",
+          "name": "interaction target outline intensity scale:[1...) - less than 1 defaults to 2#overall intensity will be capped at 1"
+        },
+        {
+          "type": "real",
+          "name": "interaction target outline thickness scale:[1...) - less than 1 defaults to 2.5#overall thickness will be capped at 1"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "block",
+          "name": "Ping Globals",
+          "definition": "SpartanTrackingPingGlobalsBlockDefinition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480a380"
+    },
+    "SpartanTrackingPingGlobalsBlockDefinition": {
+      "guid": "09d2d2119741258dd31670b4fc430d25",
+      "size": 164,
+      "size_string": "sizeof(PingGlobals)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "ping display time:seconds#how long tracked objects are marked"
+        },
+        {
+          "type": "explanation",
+          "name": "Per Priority Default Ranges",
+          "definition": "The following list defines the default ranges at which objects can be hit with a ping. The list contains one default, per priority.  They are ordered by increasing priority, from low to critical, so for example, the range for highest priority trackables should be entered under \"0. DefaultRangeBlock\"."
+        },
+        {
+          "type": "block",
+          "name": "default range per priority",
+          "definition": "DefaultRangeBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Per Priority Tracking Limits",
+          "definition": "The following list defines the maximum number of objects to be tracked per priority.  Limits are ordered by increasing priority, from low to critical, so for example, the limit for highest priority trackables should be entered under \"0. DisplayMaximumsBlock\"."
+        },
+        {
+          "type": "block",
+          "name": "max tracked per priority",
+          "definition": "DisplayMaximumsBlock"
+        },
+        {
+          "type": "custom",
+          "name": "active ping properties",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "The following fields only apply to active tracking.",
+          "definition": ""
+        },
+        {
+          "type": "tag_reference",
+          "name": "ping effect 0&team Chief active ping effect#this effect is used when the spartan uses their tracking device",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ping effect 1{ping effect}&team Locke active ping effect#this effect is used when the spartan uses their tracking device",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ping effect 2&team Chief (cracked visor) active ping effect#this effect is used when the spartan uses their tracking device",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "ping recharge time&active ping recharge time:seconds#minimum time (in seconds) between successive pings"
+        },
+        {
+          "type": "real",
+          "name": "ping travel rate&active ping travel rate:world units per second#approximation of how fast the active ping effect travels so we can synchronize when things show up in the UI"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480a260"
+    },
+    "DefaultRangeBlock": {
+      "guid": "454f065e7541afc0887ff38d14540631",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "default range"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480a000"
+    },
+    "DisplayMaximumsBlock": {
+      "guid": "68edc0a7984443a7477ea99f9e5dcee9",
+      "size": 1,
+      "size_string": "sizeof(byte)",
+      "fields": [
+        {
+          "type": "byte_integer",
+          "name": "maximum number of tracked objects displayed"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480a130"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "s_outlineColorEnumNames": {
+      "options": [
+        "color index 0",
+        "color index 1",
+        "color index 2",
+        "color index 3"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

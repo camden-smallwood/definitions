@@ -1,0 +1,127 @@
+{
+  "name": "wpf_polyart",
+  "tag": "wpat",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "wpf_polyart_block",
+  "blocks": {
+    "wpf_polyart_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "wpf_polyart_block_struct"
+    },
+    "wpfPolyartVertexBlock": {
+      "max_count": 32768,
+      "max_count_string": "WPFPolyartIndex::k_WPFPolyArtIndexMaxCount",
+      "struct": "wpfPolyartVertexBlock"
+    },
+    "wpfPolyartIndexBlock": {
+      "max_count": 32768,
+      "max_count_string": "WPFPolyartIndex::k_WPFPolyArtIndexMaxCount",
+      "struct": "wpfPolyartIndexBlock"
+    }
+  },
+  "structs": {
+    "wpf_polyart_block_struct": {
+      "guid": "0646553b2f4fbdf6c9bec1999faba2a8",
+      "size": 72,
+      "size_string": "(sizeof(WPFPolyartDefinition) - Tag::SizeInfo<WPFPolyartDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "import",
+          "group_tag": "ctcd"
+        },
+        {
+          "type": "block",
+          "name": "vertices*",
+          "definition": "wpfPolyartVertexBlock"
+        },
+        {
+          "type": "block",
+          "name": "indices*",
+          "definition": "wpfPolyartIndexBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144890040"
+    },
+    "wpfPolyartVertexBlock": {
+      "guid": "3d2e0b1f0943c4aab2533abf775dbd30",
+      "size": 32,
+      "size_string": "sizeof(WPFPolyartVertex)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "position*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "normal*"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "texture coordinate*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488fe00"
+    },
+    "wpfPolyartIndexBlock": {
+      "guid": "dfbddb27204550d2559b879298d7e020",
+      "size": 2,
+      "size_string": "sizeof(WPFPolyartIndex)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "index*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488ff30"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

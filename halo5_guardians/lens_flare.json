@@ -1,0 +1,632 @@
+{
+  "name": "lens_flare",
+  "tag": "lens",
+  "version": 2,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "lens_flare_block",
+  "blocks": {
+    "lens_flare_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "lens_flare_block_struct"
+    },
+    "lens_flare_reflection_block": {
+      "max_count": 32,
+      "max_count_string": "k_maximum_reflections_per_lens_flare",
+      "struct": "lens_flare_reflection_block",
+      "short_name": "reflection"
+    },
+    "lens_flare_scalar_animation_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "lens_flare_scalar_animation_block"
+    },
+    "lens_flare_color_animation_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "lens_flare_color_animation_block"
+    }
+  },
+  "structs": {
+    "lens_flare_block_struct": {
+      "guid": "c2e819da9345c5ef92314aabcb5fe274",
+      "size": 328,
+      "size_string": "(sizeof(s_lens_flare_definition) - Tag::SizeInfo<s_lens_flare_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "LENS FLARE",
+          "definition": ""
+        },
+        {
+          "type": "angle",
+          "name": "falloff angle:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "cutoff angle:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "separate X falloff angle:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "separate X cutoff angle:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "separate Y falloff angle:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "separate Y cutoff angle:degrees"
+        },
+        {
+          "type": "explanation",
+          "name": "OCCLUSION",
+          "definition": "Occlusion factor affects overall lens flare brightness and can also affect scale. Occlusion never affects rotation."
+        },
+        {
+          "type": "long_integer",
+          "name": "occlusion reflection index#occlusion information will be generated against the size of this reflection"
+        },
+        {
+          "type": "real",
+          "name": "occlusion offset distance:world units#distance along offset direction used to test occlusion"
+        },
+        {
+          "type": "short_enum",
+          "name": "occlusion offset direction",
+          "definition": "lens_flare_occlusion_offset_enum_definition"
+        },
+        {
+          "type": "pad",
+          "name": "PANTS",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "occlusion inner radius scale#percent of the corona to occlude against (ie 0.25, 0.125, etc)"
+        },
+        {
+          "type": "real",
+          "name": "occlusion min pixels"
+        },
+        {
+          "type": "real",
+          "name": "occlusion max pixels"
+        },
+        {
+          "type": "real",
+          "name": "near fade begin distance:world units#distance where the lens flare starts to fade in"
+        },
+        {
+          "type": "real",
+          "name": "near fade end distance:world units#distance where the lens flare is fully faded in"
+        },
+        {
+          "type": "real",
+          "name": "far fade begin distance{near fade distance}:world units#distance at which the lens flare brightness is maximum"
+        },
+        {
+          "type": "real",
+          "name": "far fade end distance{far fade distance}:world units#distance at which the lens flare brightness is minimum; set to zero to disable distance fading"
+        },
+        {
+          "type": "tag_reference",
+          "name": "bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "lens_flare_flags_definition"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime flags!"
+        },
+        {
+          "type": "short_enum",
+          "name": "rotation function",
+          "definition": "lens_flare_corona_rotation_function_enum_definition"
+        },
+        {
+          "type": "pad",
+          "name": "WWZC",
+          "definition": 2
+        },
+        {
+          "type": "angle",
+          "name": "rotation function scale:degrees"
+        },
+        {
+          "type": "explanation",
+          "name": "EFFECT PARAMETERS",
+          "definition": "Only affects lens flares created by effects."
+        },
+        {
+          "type": "short_enum",
+          "name": "falloff function",
+          "definition": "global_reverse_transition_functions_enum"
+        },
+        {
+          "type": "pad",
+          "name": "COYUTLR",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "reflections",
+          "definition": "lens_flare_reflection_block"
+        },
+        {
+          "type": "explanation",
+          "name": "ANIMATION",
+          "definition": ""
+        },
+        {
+          "type": "word_flags",
+          "name": "animation flags",
+          "definition": "lens_flare_animation_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "AQVC",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "time brightness",
+          "definition": "lens_flare_scalar_animation_block"
+        },
+        {
+          "type": "block",
+          "name": "age brightness",
+          "definition": "lens_flare_scalar_animation_block"
+        },
+        {
+          "type": "block",
+          "name": "time color",
+          "definition": "lens_flare_color_animation_block"
+        },
+        {
+          "type": "block",
+          "name": "age color",
+          "definition": "lens_flare_color_animation_block"
+        },
+        {
+          "type": "block",
+          "name": "time rotation",
+          "definition": "lens_flare_scalar_animation_block"
+        },
+        {
+          "type": "block",
+          "name": "age rotation",
+          "definition": "lens_flare_scalar_animation_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14470d280"
+    },
+    "lens_flare_reflection_block": {
+      "guid": "7703c3fbca46fc4b998a9f870a240dbc",
+      "size": 252,
+      "size_string": "sizeof(LensFlareReflection)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "ifp+"
+        },
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "lens_flare_reflection_flags_definition"
+        },
+        {
+          "type": "short_integer",
+          "name": "bitmap index"
+        },
+        {
+          "type": "tag_reference",
+          "name": "bitmap override",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "angle",
+          "name": "falloff angle:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "cutoff_angle:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "separate X falloff angle:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "separate X cutoff angle:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "separate Y falloff angle:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "separate Y cutoff angle:degrees"
+        },
+        {
+          "type": "real",
+          "name": "near fade begin distance:world units#distance where the lens flare starts to fade in"
+        },
+        {
+          "type": "real",
+          "name": "near fade end distance:world units#distance where the lens flare is fully faded in"
+        },
+        {
+          "type": "real",
+          "name": "far fade begin distance:world units#distance at which the lens flare brightness is maximum"
+        },
+        {
+          "type": "real",
+          "name": "far fade end distance:world units#distance at which the lens flare brightness is minimum; set to zero to disable distance fading"
+        },
+        {
+          "type": "real",
+          "name": "rotation offset:degrees"
+        },
+        {
+          "type": "real",
+          "name": "axis offset:percent#percent offset in screen space along corona axis - 0.0 is on the corona, 1.0 is primary side edge of the screen, -1.0 is opposite side"
+        },
+        {
+          "type": "real",
+          "name": "x offset:percent"
+        },
+        {
+          "type": "real",
+          "name": "y offset:percent"
+        },
+        {
+          "type": "real_bounds",
+          "name": "offset bounds#the axis offset times corona offset is clamped between these values"
+        },
+        {
+          "type": "struct",
+          "name": "radius curve#interpolated by external input",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "scale curve X#interpolated by external input",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "scale curve Y#interpolated by external input",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "brightness curve#interpolated by external input",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "TINT COLOR",
+          "definition": "Tinting and modulating are not the same; 'tinting' a reflection will color the darker regions but leave the highlights, while 'modulating' will color everything uniformly. The modulation factor controls how much the reflection is modulated as opposed to tinted (0 is tinted, 1 is modulated). The tint power affects the curve of how much of the color range to tint."
+        },
+        {
+          "type": "struct",
+          "name": "color curve#interpolated by external input",
+          "definition": "color_function_named_struct"
+        },
+        {
+          "type": "real_fraction",
+          "name": "modulation factor:[0,1]"
+        },
+        {
+          "type": "real",
+          "name": "tint power:[0.1, 16]"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "ifp-"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14470ccf0"
+    },
+    "scalar_function_named_struct": {
+      "guid": "8992cb721e48760251a36794187c6df5",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738e30"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "color_function_named_struct": {
+      "guid": "487f54f9404428478a3ed4b0faf5d1bd",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144739050"
+    },
+    "lens_flare_scalar_animation_block": {
+      "guid": "2621d870bb40bdaab0037aa30bd1779d",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14470ce20"
+    },
+    "lens_flare_color_animation_block": {
+      "guid": "31d1b6a02f4a632a77cbd98d3a99dc8b",
+      "size": 44,
+      "size_string": "sizeof(s_editing_function)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "color animation",
+          "definition": "lens_flare_color_function_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14470d170"
+    },
+    "lens_flare_color_function_struct": {
+      "guid": "1a7fbb3dd04ff95491da249d78307a29",
+      "size": 44,
+      "size_string": "sizeof(s_editing_function)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Input Variable!",
+          "group_tag": "fnin"
+        },
+        {
+          "type": "string_id",
+          "name": "Range Variable!",
+          "group_tag": "fnir"
+        },
+        {
+          "type": "short_enum",
+          "name": "Output Modifier!",
+          "group_tag": "fnop",
+          "definition": "output_mod_enum"
+        },
+        {
+          "type": "pad",
+          "name": "BVCG1",
+          "definition": 2
+        },
+        {
+          "type": "string_id",
+          "name": "Output Modifier Input!",
+          "group_tag": "fnom"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "lens flare color mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14470cf30"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "lens_flare_occlusion_offset_enum_definition": {
+      "options": [
+        "toward viewer",
+        "marker forward",
+        "none"
+      ]
+    },
+    "lens_flare_flags_definition": {
+      "options": [
+        "rotate occlusion testing box with lens flare#otherwise remains aligned with screen. turn on render_debug_lens_flares and look at green box",
+        "no occlusion test",
+        "only render in first person",
+        "only render in third person",
+        "no reflection opacity feedback#unchecked, each reflection evaluates its opacity from the previous reflection in the list",
+        "scale by marker",
+        "don't autofade#otherwise fade based on effect time, for effect attachments only",
+        "don't render while zoomed",
+        "use separate X and Y falloff angles"
+      ]
+    },
+    "lens_flare_corona_rotation_function_enum_definition": {
+      "options": [
+        "none",
+        "rotation A",
+        "rotation B",
+        "rotation-translation",
+        "translation"
+      ]
+    },
+    "global_reverse_transition_functions_enum": {
+      "options": [
+        "linear",
+        "late",
+        "very late",
+        "early",
+        "very early",
+        "cosine",
+        "zero",
+        "one"
+      ]
+    },
+    "lens_flare_reflection_flags_definition": {
+      "options": [
+        "rotate from center of screen",
+        "radius scaled by distance",
+        "radius scaled by occlusion factor",
+        "ignore external color",
+        "only move along Y{lock to flare X}",
+        "only move along X{lock to flare Y}",
+        "proximity to center as function input#The input to the curves below should be multiplied by 1 if at the center of the screen and 0 if at the edge",
+        "mirror across flare#Also renders this reflection's mirror image across the flare center",
+        "disabled for debugging",
+        "flip U coordinate",
+        "flip V coordinate",
+        "draw in world space instead of screen space",
+        "override falloff angles",
+        "override fade distances",
+        "use separate X and Y falloff angles",
+        "do not render"
+      ]
+    },
+    "lens_flare_animation_flags_definition": {
+      "options": [
+        "synchronized"
+      ]
+    },
+    "output_mod_enum": {
+      "options": [
+        " ",
+        "Plus",
+        "Times"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

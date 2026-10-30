@@ -1,0 +1,271 @@
+{
+  "name": "bsp_volumes",
+  "tag": "bspv",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "bsp_volumes_block",
+  "blocks": {
+    "bsp_volumes_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "bsp_volumes_block_struct"
+    },
+    "scenarioBakedPVSVolumesBlock": {
+      "max_count": 128,
+      "max_count_string": "128",
+      "struct": "scenarioBakedPVSVolumesBlock"
+    },
+    "genericVolumePointBlock": {
+      "max_count": 32,
+      "max_count_string": "k_maximum_points_per_sector",
+      "struct": "genericVolumePointBlock"
+    },
+    "editorMetadataBlock": {
+      "max_count": 1024,
+      "max_count_string": "MAXIMUM_EDITOR_METADATA_ENTRIES",
+      "struct": "editorMetadataBlock"
+    }
+  },
+  "structs": {
+    "bsp_volumes_block_struct": {
+      "guid": "d3864163814a70667b7b97aa6d59b39c",
+      "size": 48,
+      "size_string": "(sizeof(BspVolumes) - Tag::SizeInfo<BspVolumes::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "Baked PVS Volumes",
+          "definition": "scenarioBakedPVSVolumesBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474d960"
+    },
+    "scenarioBakedPVSVolumesBlock": {
+      "guid": "949d0bd0bc4a37dec0a4edb31382e16a",
+      "size": 120,
+      "size_string": "sizeof(ScenarioBakedPVSVolume)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Name"
+        },
+        {
+          "type": "custom",
+          "name": "Volume settings",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Volume",
+          "definition": "genericVolumeStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "short_enum",
+          "name": "Use vertical beam count override",
+          "definition": "scenarioBakedPVSVolumeBooleanEnumDefinition"
+        },
+        {
+          "type": "short_enum",
+          "name": "Use beam height overrides",
+          "definition": "scenarioBakedPVSVolumeBooleanEnumDefinition"
+        },
+        {
+          "type": "short_enum",
+          "name": "Pin the beams to the top of the volume",
+          "definition": "scenarioBakedPVSVolumeBooleanEnumDefinition"
+        },
+        {
+          "type": "short_enum",
+          "name": "Add beams even if there is no collision",
+          "definition": "scenarioBakedPVSVolumeBooleanEnumDefinition"
+        },
+        {
+          "type": "long_integer",
+          "name": "Vertical beam count override"
+        },
+        {
+          "type": "real",
+          "name": "Beam 1 height override"
+        },
+        {
+          "type": "real",
+          "name": "Beam 2 height override"
+        },
+        {
+          "type": "real",
+          "name": "Beam 3 height override"
+        },
+        {
+          "type": "real",
+          "name": "Beam 4 and above height override"
+        },
+        {
+          "type": "long_integer",
+          "name": "Volume importance override value"
+        },
+        {
+          "type": "block",
+          "name": "Editor Metadata!",
+          "definition": "editorMetadataBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474de20"
+    },
+    "genericVolumeStruct": {
+      "guid": "45f49a878c45d85f2be1c39216d26f81",
+      "size": 56,
+      "size_string": "sizeof(GenericVolume)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "Points",
+          "definition": "genericVolumePointBlock"
+        },
+        {
+          "type": "real",
+          "name": "height"
+        },
+        {
+          "type": "real",
+          "name": "sink"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "center point!"
+        },
+        {
+          "type": "real",
+          "name": "trivial cull radius squared!"
+        },
+        {
+          "type": "pad",
+          "name": "gvolpad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144756470"
+    },
+    "genericVolumePointBlock": {
+      "guid": "1f02dd66b742e46769b744af5c73a047",
+      "size": 20,
+      "size_string": "sizeof(VolumeSectorPoint)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "position"
+        },
+        {
+          "type": "real_euler_angles_2d",
+          "name": "normal"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144756350"
+    },
+    "editorMetadataBlock": {
+      "guid": "106d5649e63ebeef6d8c8eb1db3d0368",
+      "size": 520,
+      "size_string": "sizeof(EditorMetadata)",
+      "fields": [
+        {
+          "type": "long_string",
+          "name": "data name"
+        },
+        {
+          "type": "long_enum",
+          "name": "data type",
+          "definition": "editorDataTypesEnum"
+        },
+        {
+          "type": "long_integer",
+          "name": "parent index"
+        },
+        {
+          "type": "long_string",
+          "name": "data value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144700050"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "scenarioBakedPVSVolumeBooleanEnumDefinition": {
+      "options": [
+        "No",
+        "Yes"
+      ]
+    },
+    "editorDataTypesEnum": {
+      "options": [
+        "class",
+        "array",
+        "string",
+        "bool",
+        "int"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

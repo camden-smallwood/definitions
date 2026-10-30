@@ -1,0 +1,195 @@
+{
+  "name": "effect_exposure",
+  "tag": "efex",
+  "version": 1,
+  "flags": 3,
+  "parent_tag": "aTag",
+  "block": "effect_exposure_block",
+  "blocks": {
+    "effect_exposure_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "effect_exposure_block_struct"
+    }
+  },
+  "structs": {
+    "effect_exposure_block_struct": {
+      "guid": "ba47d89e892aab0be7f4db40b05684d2",
+      "size": 128,
+      "size_string": "(sizeof(EffectExposureDefinition) - Tag::SizeInfo<EffectExposureDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "Alpha-blend Override",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Alpha-blend Override",
+          "definition": "effectExposureOverrideStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Additive Override",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Additive Override",
+          "definition": "effectExposureOverrideStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Lit Alpha-blend Override",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Lit Alpha-blend Override",
+          "definition": "effectExposureOverrideStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Lit Additive Override",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Lit Additive Override",
+          "definition": "effectExposureOverrideStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Surface Alpha-blend Override",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Surface Alpha-blend Override",
+          "definition": "effectExposureOverrideStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Surface Additive Override",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Surface Additive Override",
+          "definition": "effectExposureOverrideStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Cheap Light Override",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Cheap Light Override",
+          "definition": "effectExposureOverrideStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447066a0"
+    },
+    "effectExposureOverrideStruct": {
+      "guid": "1e2926794758221fc251695eaeceb61b",
+      "size": 16,
+      "size_string": "sizeof(EffectExposureOverride)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "min exposure"
+        },
+        {
+          "type": "real",
+          "name": "max exposure"
+        },
+        {
+          "type": "real",
+          "name": "underexposed slope"
+        },
+        {
+          "type": "real",
+          "name": "overexposed slope"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144706590"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

@@ -1,0 +1,1338 @@
+{
+  "name": "cui_logic",
+  "tag": "culo",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "cui_logic_block",
+  "blocks": {
+    "cui_logic_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "cui_logic_block_struct"
+    },
+    "template_instantiation_block_definition": {
+      "max_count": 8192,
+      "max_count_string": "k_cui_max_component_count",
+      "struct": "template_instantiation_block_definition"
+    },
+    "component_definition": {
+      "max_count": 8192,
+      "max_count_string": "k_cui_max_component_count",
+      "struct": "component_definition"
+    },
+    "component_index_block_definition": {
+      "max_count": 8192,
+      "max_count_string": "k_cui_max_component_count",
+      "struct": "component_index_block_definition"
+    },
+    "overlay_definition": {
+      "max_count": 24,
+      "max_count_string": "k_cui_max_overlay_count",
+      "struct": "overlay_definition"
+    },
+    "component_properties_definition": {
+      "max_count": 8192,
+      "max_count_string": "k_cui_max_component_count",
+      "struct": "component_properties_definition"
+    },
+    "property_long_value": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "property_long_value"
+    },
+    "property_real_value": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "property_real_value"
+    },
+    "property_string_id_value": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "property_string_id_value"
+    },
+    "propertyComponentPtrValue": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "propertyComponentPtrValue"
+    },
+    "property_tag_reference_value": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "property_tag_reference_value"
+    },
+    "property_text_value": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "property_text_value"
+    },
+    "property_argb_color_value": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "property_argb_color_value"
+    },
+    "animation_definition": {
+      "max_count": 8192,
+      "max_count_string": "k_cui_max_animation_count",
+      "struct": "animation_definition"
+    },
+    "animation_component_definition": {
+      "max_count": 8192,
+      "max_count_string": "k_cui_max_component_count",
+      "struct": "animation_component_definition"
+    },
+    "animation_component_real_property": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "animation_component_real_property"
+    },
+    "animation_property_keyframe_real_value": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "animation_property_keyframe_real_value"
+    },
+    "animation_component_argb_color_property": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "animation_component_argb_color_property"
+    },
+    "animation_property_keyframe_argb_color_value": {
+      "max_count": 8192,
+      "max_count_string": "8*k_kilo",
+      "struct": "animation_property_keyframe_argb_color_value"
+    },
+    "overlay_editor_only_definition": {
+      "max_count": 24,
+      "max_count_string": "k_cui_max_overlay_count",
+      "struct": "overlay_editor_only_definition"
+    },
+    "component_editor_only_definition": {
+      "max_count": 8192,
+      "max_count_string": "k_cui_max_component_count",
+      "struct": "component_editor_only_definition"
+    },
+    "property_editor_only_definition": {
+      "max_count": 8192,
+      "max_count_string": "k_cui_max_property_count",
+      "struct": "property_editor_only_definition"
+    },
+    "animation_editor_only_definition": {
+      "max_count": 8192,
+      "max_count_string": "k_cui_max_animation_count",
+      "struct": "animation_editor_only_definition"
+    },
+    "property_binding": {
+      "max_count": 1024,
+      "max_count_string": "k_cui_max_property_binding_count",
+      "struct": "property_binding"
+    },
+    "binding_conversion_long_comparison_block_definition": {
+      "max_count": 1024,
+      "max_count_string": "k_cui_max_property_binding_count",
+      "struct": "binding_conversion_long_comparison_block_definition"
+    },
+    "static_data_table": {
+      "max_count": 128,
+      "max_count_string": "128",
+      "struct": "static_data_table"
+    },
+    "static_data_column": {
+      "max_count": 128,
+      "max_count_string": "128",
+      "struct": "static_data_column"
+    },
+    "static_data_row": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "properties_struct"
+    },
+    "expression": {
+      "max_count": 128,
+      "max_count_string": "128",
+      "struct": "expression"
+    },
+    "expression_step": {
+      "max_count": 32,
+      "max_count_string": "s_cui_expression_step_definition::k_maximum_step_count",
+      "struct": "expression_step"
+    },
+    "encapsulatedProperties": {
+      "max_count": 64,
+      "max_count_string": "k_cuiMaxEncapsulationCount",
+      "struct": "encapsulatedProperties"
+    }
+  },
+  "structs": {
+    "cui_logic_block_struct": {
+      "guid": "0600d8aa4f4acb5632f57e9d2598c0ae",
+      "size": 336,
+      "size_string": "(sizeof(CuiLogicDefinition) - Tag::SizeInfo<CuiLogicDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "string_id",
+          "name": "logic name"
+        },
+        {
+          "type": "tag_reference",
+          "name": "string list",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "struct",
+          "name": "system",
+          "definition": "cui_system"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dc260"
+    },
+    "cui_system": {
+      "guid": "1c723e92874f15fef31f088ce5e8e02c",
+      "size": 280,
+      "size_string": "sizeof(CuiSystemDefinition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "template instantiations",
+          "definition": "template_instantiation_block_definition"
+        },
+        {
+          "type": "block",
+          "name": "components",
+          "definition": "component_definition"
+        },
+        {
+          "type": "block",
+          "name": "component indices",
+          "definition": "component_index_block_definition"
+        },
+        {
+          "type": "block",
+          "name": "overlays",
+          "definition": "overlay_definition"
+        },
+        {
+          "type": "block",
+          "name": "overlays editor only",
+          "definition": "overlay_editor_only_definition"
+        },
+        {
+          "type": "block",
+          "name": "property bindings",
+          "definition": "property_binding"
+        },
+        {
+          "type": "block",
+          "name": "binding conversion long comparisons",
+          "definition": "binding_conversion_long_comparison_block_definition"
+        },
+        {
+          "type": "block",
+          "name": "static data tables",
+          "definition": "static_data_table"
+        },
+        {
+          "type": "block",
+          "name": "expressions",
+          "definition": "expression"
+        },
+        {
+          "type": "block",
+          "name": "encapsulated properties",
+          "definition": "encapsulatedProperties"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dc140"
+    },
+    "template_instantiation_block_definition": {
+      "guid": "fc597914bb43e9bee461e5bb8f08818e",
+      "size": 32,
+      "size_string": "sizeof(s_cui_template_instantiation_definition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cusc"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448db6b0"
+    },
+    "component_definition": {
+      "guid": "6fbc11bd694a2913c5d205a3fa325109",
+      "size": 16,
+      "size_string": "sizeof(s_cui_component_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "type"
+        },
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "string_id",
+          "name": "parent"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "component_definition_flags"
+        },
+        {
+          "type": "short_block_index",
+          "name": "template instantiation index",
+          "definition": "template_instantiation_block_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448db7e0"
+    },
+    "component_index_block_definition": {
+      "guid": "814bd0a6884174503127e9859e1129cd",
+      "size": 8,
+      "size_string": "sizeof(s_cui_component_index_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "short_block_index",
+          "name": "component definition index",
+          "definition": "component_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448db910"
+    },
+    "overlay_definition": {
+      "guid": "8bd536880a6f6a4aa33d7366f95acb9b",
+      "size": 64,
+      "size_string": "sizeof(s_cui_overlay_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "resolution"
+        },
+        {
+          "type": "string_id",
+          "name": "theme"
+        },
+        {
+          "type": "block",
+          "name": "components",
+          "definition": "component_properties_definition"
+        },
+        {
+          "type": "block",
+          "name": "animations",
+          "definition": "animation_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dbb70"
+    },
+    "component_properties_definition": {
+      "guid": "cff72084238c8c439c91c7faf7fee1f4",
+      "size": 200,
+      "size_string": "sizeof(s_cui_component_properties_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "struct",
+          "name": "property values",
+          "definition": "properties_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dba40"
+    },
+    "properties_struct": {
+      "guid": "45eca7b19e433dbca4f1d9a6af5709a3",
+      "size": 196,
+      "size_string": "sizeof(s_cui_properties_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "long properties",
+          "definition": "property_long_value"
+        },
+        {
+          "type": "block",
+          "name": "real properties",
+          "definition": "property_real_value"
+        },
+        {
+          "type": "block",
+          "name": "string_id properties",
+          "definition": "property_string_id_value"
+        },
+        {
+          "type": "block",
+          "name": "component ptr properties",
+          "definition": "propertyComponentPtrValue"
+        },
+        {
+          "type": "block",
+          "name": "tag reference properties",
+          "definition": "property_tag_reference_value"
+        },
+        {
+          "type": "block",
+          "name": "string properties",
+          "definition": "property_text_value"
+        },
+        {
+          "type": "block",
+          "name": "argb color properties",
+          "definition": "property_argb_color_value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448da2a0"
+    },
+    "property_long_value": {
+      "guid": "2928dd63144df1d152793896fc1fcc8f",
+      "size": 8,
+      "size_string": "sizeof(s_cui_property_value_long_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_integer",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d9a60"
+    },
+    "property_real_value": {
+      "guid": "a4a88d75904012596254fba1693c45d2",
+      "size": 8,
+      "size_string": "sizeof(s_cui_property_value_real_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "real",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d9b90"
+    },
+    "property_string_id_value": {
+      "guid": "70f9ca63a94eaf0f2cb1feb315007ca4",
+      "size": 8,
+      "size_string": "sizeof(s_cui_property_value_string_id_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "string_id",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d9cc0"
+    },
+    "propertyComponentPtrValue": {
+      "guid": "c9c824b8af44e49f0e33aaa4b60e0b97",
+      "size": 12,
+      "size_string": "sizeof(CuiPropertyValueComponentPtrDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "string_id",
+          "name": "value"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "propertyComponentPtrFlags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d9df0"
+    },
+    "property_tag_reference_value": {
+      "guid": "140aa8cab545129bf5403aa52e4ca4ff",
+      "size": 36,
+      "size_string": "sizeof(s_cui_property_value_tag_reference_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "tag_reference",
+          "name": "value",
+          "definition": {
+            "flags": 0,
+            "allowed": []
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d9f20"
+    },
+    "property_text_value": {
+      "guid": "d3dc809b464ff8d043607aafda9d5497",
+      "size": 260,
+      "size_string": "sizeof(s_cui_property_value_text_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_string",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448da050"
+    },
+    "property_argb_color_value": {
+      "guid": "9bc86fa8ac4b8a47446bed97b89a09c3",
+      "size": 20,
+      "size_string": "sizeof(s_cui_property_value_argb_color_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448da180"
+    },
+    "animation_definition": {
+      "guid": "46d9c228403918489778322850a4c019",
+      "size": 44,
+      "size_string": "sizeof(s_cui_animation_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "real",
+          "name": "time base offset"
+        },
+        {
+          "type": "real",
+          "name": "time exponential offset"
+        },
+        {
+          "type": "char_enum",
+          "name": "animation input",
+          "definition": "animationInputType"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "components",
+          "definition": "animation_component_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dac20"
+    },
+    "animation_component_definition": {
+      "guid": "2f4a943716b9b1458b52723e392682be",
+      "size": 64,
+      "size_string": "sizeof(s_cui_animation_component_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_integer",
+          "name": "total milliseconds"
+        },
+        {
+          "type": "block",
+          "name": "real properties",
+          "definition": "animation_component_real_property"
+        },
+        {
+          "type": "block",
+          "name": "argb color properties",
+          "definition": "animation_component_argb_color_property"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448daaf0"
+    },
+    "animation_component_real_property": {
+      "guid": "11e869ad196a3f43a8c37d38891bda5f",
+      "size": 40,
+      "size_string": "sizeof(s_cui_animation_component_property_real_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "short_enum",
+          "name": "composition",
+          "definition": "animation_property_composition_type"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "animation_property_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 1
+        },
+        {
+          "type": "long_integer",
+          "name": "total milliseconds"
+        },
+        {
+          "type": "block",
+          "name": "real keyframes",
+          "definition": "animation_property_keyframe_real_value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448da890"
+    },
+    "animation_property_keyframe_real_value": {
+      "guid": "997460b0c206b4478cf63ab2fe7a143d",
+      "size": 36,
+      "size_string": "sizeof(s_cui_animation_property_keyframe_value_real_definition)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "duration:milliseconds#the amount of time from the previous keyframe to this keyframe"
+        },
+        {
+          "type": "real",
+          "name": "value#the value when the current time is on this keyframe"
+        },
+        {
+          "type": "struct",
+          "name": "transition function",
+          "definition": "animation_scalar_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448da630"
+    },
+    "animation_scalar_function": {
+      "guid": "9274df9388166a41ae919c60ee87d1c3",
+      "size": 28,
+      "size_string": "sizeof(s_cui_animation_scalar_function)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "scalar function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d9920"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "animation_component_argb_color_property": {
+      "guid": "0ce38af7b4150140af85f680ec811ae1",
+      "size": 40,
+      "size_string": "sizeof(s_cui_animation_component_property_argb_color_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "short_enum",
+          "name": "composition",
+          "definition": "animation_property_composition_type"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "animation_property_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 1
+        },
+        {
+          "type": "long_integer",
+          "name": "total milliseconds"
+        },
+        {
+          "type": "block",
+          "name": "argb color keyframes",
+          "definition": "animation_property_keyframe_argb_color_value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448da9c0"
+    },
+    "animation_property_keyframe_argb_color_value": {
+      "guid": "4420ebf1ea545a45b27137856111cc0e",
+      "size": 48,
+      "size_string": "sizeof(s_cui_animation_property_keyframe_value_argb_color_definition)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "duration:milliseconds#the amount of time from the previous keyframe to this keyframe"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "color#the value when the current time is on this keyframe"
+        },
+        {
+          "type": "struct",
+          "name": "transition function",
+          "definition": "animation_scalar_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448da760"
+    },
+    "overlay_editor_only_definition": {
+      "guid": "3fb772e9113e7846abea165d97b8d1c2",
+      "size": 68,
+      "size_string": "sizeof(s_cui_overlay_editor_only_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "resolution"
+        },
+        {
+          "type": "string_id",
+          "name": "theme"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "editor_overlay_info_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "components editor only",
+          "definition": "component_editor_only_definition"
+        },
+        {
+          "type": "block",
+          "name": "animations editor only",
+          "definition": "animation_editor_only_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dc030"
+    },
+    "component_editor_only_definition": {
+      "guid": "f3be536f7ea3b64abf15c8f038edde45",
+      "size": 32,
+      "size_string": "sizeof(s_cui_component_editor_only_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "block",
+          "name": "properties editor only",
+          "definition": "property_editor_only_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dbdd0"
+    },
+    "property_editor_only_definition": {
+      "guid": "9cb8284f2a00ce45a9c3fce2dedd80c0",
+      "size": 8,
+      "size_string": "sizeof(s_cui_property_editor_only_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "editor_property_info_flags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dbca0"
+    },
+    "animation_editor_only_definition": {
+      "guid": "36ec0bc4d365904cbec59261f689ae9c",
+      "size": 32,
+      "size_string": "sizeof(s_cui_animation_editor_only_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "block",
+          "name": "components editor only",
+          "definition": "component_editor_only_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dbf00"
+    },
+    "property_binding": {
+      "guid": "37cd88480f41eff2c9c0bbb02e58f1d9",
+      "size": 20,
+      "size_string": "sizeof(s_cui_property_binding_definition)",
+      "fields": [
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "property_binding_flags"
+        },
+        {
+          "type": "short_enum",
+          "name": "conversion function",
+          "definition": "binding_conversion_function_enum_definition"
+        },
+        {
+          "type": "string_id",
+          "name": "source component name"
+        },
+        {
+          "type": "string_id",
+          "name": "source property name"
+        },
+        {
+          "type": "string_id",
+          "name": "target component name"
+        },
+        {
+          "type": "string_id",
+          "name": "target property name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448da3d0"
+    },
+    "binding_conversion_long_comparison_block_definition": {
+      "guid": "43506e6dd746d01353f80db490e3c4d5",
+      "size": 16,
+      "size_string": "sizeof(s_cui_binding_conversion_long_comparison_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "target component name"
+        },
+        {
+          "type": "string_id",
+          "name": "target property name"
+        },
+        {
+          "type": "char_enum",
+          "name": "comparison operator",
+          "definition": "binding_conversion_comparison_operator_enum_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "long_integer",
+          "name": "comparison value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448da500"
+    },
+    "static_data_table": {
+      "guid": "4ad32a5f654c5e12e634919e7118e6d3",
+      "size": 64,
+      "size_string": "sizeof(s_cui_static_data_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "string_id",
+          "name": "mock data for component#a component on this screen that gets replaced in simulation with this data table"
+        },
+        {
+          "type": "struct",
+          "name": "static data",
+          "definition": "static_data_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448db0c0"
+    },
+    "static_data_struct": {
+      "guid": "12e518262b44f98fb2ff939f1f12b890",
+      "size": 56,
+      "size_string": "sizeof(s_cui_static_data)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "columns",
+          "definition": "static_data_column"
+        },
+        {
+          "type": "block",
+          "name": "rows",
+          "definition": "static_data_row"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dae70"
+    },
+    "static_data_column": {
+      "guid": "41b0c01f0944b9cf0693b2bed14c8905",
+      "size": 8,
+      "size_string": "sizeof(s_cui_static_data_column_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "short_enum",
+          "name": "type",
+          "definition": "property_type"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448dad50"
+    },
+    "expression": {
+      "guid": "87b190f0dd4c749d527a3a8c99e86b1d",
+      "size": 288,
+      "size_string": "sizeof(s_cui_expression_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_string",
+          "name": "expression text"
+        },
+        {
+          "type": "block",
+          "name": "steps",
+          "definition": "expression_step"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448db450"
+    },
+    "expression_step": {
+      "guid": "b92d3bcc834a259a4f99a28c2b432ef9",
+      "size": 12,
+      "size_string": "sizeof(s_cui_expression_step_definition)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "step type^",
+          "definition": "step_type"
+        },
+        {
+          "type": "char_enum",
+          "name": "operator",
+          "definition": "step_operator"
+        },
+        {
+          "type": "char_enum",
+          "name": "variable",
+          "definition": "step_variable"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 1
+        },
+        {
+          "type": "real",
+          "name": "value&real value"
+        },
+        {
+          "type": "string_id",
+          "name": "string id value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448db320"
+    },
+    "encapsulatedProperties": {
+      "guid": "16436e923644a2ca9d6ccba481eb9f7e",
+      "size": 32,
+      "size_string": "sizeof(CuiEncapsulatedProperties)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "encapsulation name^"
+        },
+        {
+          "type": "block",
+          "name": "properties",
+          "definition": "static_data_column"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448db580"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "component_definition_flags": {
+      "options": [
+        "hidden to tools user"
+      ]
+    },
+    "propertyComponentPtrFlags": {
+      "options": [
+        "source is in external system"
+      ]
+    },
+    "animationInputType": {
+      "options": [
+        "time",
+        "binding"
+      ]
+    },
+    "animation_property_composition_type": {
+      "options": [
+        "relative to current",
+        "absolute to screen",
+        "absolute to parent"
+      ]
+    },
+    "animation_property_flags": {
+      "options": [
+        "loop"
+      ]
+    },
+    "editor_overlay_info_flags": {
+      "options": [
+        "exclude overlay"
+      ]
+    },
+    "editor_property_info_flags": {
+      "options": [
+        "default value"
+      ]
+    },
+    "property_binding_flags": {
+      "options": [
+        "source is in external screen",
+        "source is in external system",
+        "target is in external system"
+      ]
+    },
+    "binding_conversion_function_enum_definition": {
+      "options": [
+        "none",
+        "negate bool",
+        "compare long"
+      ]
+    },
+    "binding_conversion_comparison_operator_enum_definition": {
+      "options": [
+        "equality",
+        "inequality",
+        "less than",
+        "less than or equal",
+        "greater than or equal",
+        "greater than"
+      ]
+    },
+    "property_type": {
+      "options": [
+        "boolean",
+        "long",
+        "real",
+        "string",
+        "component",
+        "tag reference",
+        "string id",
+        "argb color",
+        "emblem info"
+      ]
+    },
+    "step_type": {
+      "options": [
+        "operator",
+        "variable",
+        "real value",
+        "string id value"
+      ]
+    },
+    "step_operator": {
+      "options": [
+        "add",
+        "subtract",
+        "multiply",
+        "divide",
+        "negate",
+        "not",
+        "less than",
+        "less than or equal to",
+        "greater than",
+        "greater than or equal to",
+        "equals",
+        "not equals",
+        "and",
+        "or",
+        "mod"
+      ]
+    },
+    "step_variable": {
+      "options": [
+        "variable a",
+        "variable b",
+        "variable c",
+        "variable d",
+        "variable e",
+        "variable f",
+        "variable g",
+        "variable h"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

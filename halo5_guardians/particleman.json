@@ -1,0 +1,169 @@
+{
+  "name": "particleman",
+  "tag": "pman",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "particleman_block",
+  "blocks": {
+    "particleman_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "particleman_block_struct"
+    }
+  },
+  "structs": {
+    "particleman_block_struct": {
+      "guid": "7cb4909647406891a7bb609713752f24",
+      "size": 64,
+      "size_string": "(sizeof(s_particleize_parameters) - Tag::SizeInfo<s_particleize_parameters::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "Particleize Settings",
+          "definition": "Defines a particular particleize effect\n\nDensity modifies how many particles are made\nSize indicates how large the effect can be in world units\nShape indicates the shape of the effect\nCurve defines how the shape evolves over time\n"
+        },
+        {
+          "type": "short_enum",
+          "name": "Shape",
+          "definition": "particleize_shape_enum"
+        },
+        {
+          "type": "word_flags",
+          "name": "Flags",
+          "definition": "particleize_flags"
+        },
+        {
+          "type": "real",
+          "name": "Duration:sec"
+        },
+        {
+          "type": "real",
+          "name": "Density"
+        },
+        {
+          "type": "real",
+          "name": "Size:world units"
+        },
+        {
+          "type": "struct",
+          "name": "Curve",
+          "definition": "particleize_scalar_function_struct"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14471aff0"
+    },
+    "particleize_scalar_function_struct": {
+      "guid": "693acbc19c48f92576e25fb42b3b3400",
+      "size": 28,
+      "size_string": "sizeof(particleize_function)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "Mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14471ae70"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "particleize_shape_enum": {
+      "options": [
+        "cloud"
+      ]
+    },
+    "particleize_flags": {
+      "options": [
+        "hide object when effect completes",
+        "move particles towards current set target location",
+        "override any currently running particleization"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

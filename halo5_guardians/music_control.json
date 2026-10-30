@@ -1,0 +1,125 @@
+{
+  "name": "music_control",
+  "tag": "musc",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "music_control_block",
+  "blocks": {
+    "music_control_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "music_control_block_struct"
+    },
+    "MusicActionBlock": {
+      "max_count": 16,
+      "max_count_string": "k_maximumMusicActionsPerTag",
+      "struct": "MusicActionBlock"
+    }
+  },
+  "structs": {
+    "music_control_block_struct": {
+      "guid": "1b0a44fe1548467a2ef2d5b38e332e38",
+      "size": 48,
+      "size_string": "(sizeof(MusicControlDefinition) - Tag::SizeInfo<MusicControlDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "Music action list#List of music actions to perform. All will be performed when the tag is called.",
+          "definition": "MusicActionBlock"
+        },
+        {
+          "type": "long_integer",
+          "name": "Event priority#0s will always play until a higher number is set, then only an even higher number will play after that until a reset from the sound marker occurs"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144785750"
+    },
+    "MusicActionBlock": {
+      "guid": "663a6cbac540b2f20ae0b38dbfdc2961",
+      "size": 20,
+      "size_string": "sizeof(MusicActionBlockDefinition)",
+      "fields": [
+        {
+          "type": "long_enum",
+          "name": "Music action",
+          "definition": "MusicActionSettingDefinition"
+        },
+        {
+          "type": "string_id",
+          "name": "Event or Group Name#Event, or state group name"
+        },
+        {
+          "type": "long_integer",
+          "name": "Event or Group Name hash"
+        },
+        {
+          "type": "string_id",
+          "name": "Group value#Value to set the state or switch to"
+        },
+        {
+          "type": "long_integer",
+          "name": "rtpc value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144785630"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "MusicActionSettingDefinition": {
+      "options": [
+        "NoAction#Take no action",
+        "StartEvent#Saved  event to start music. Will call a wwise event. Restored on load",
+        "StopEvent#Saved event to stop music. Will call a wwise event. Restored on load",
+        "ControlEvent#Saved event for control info. Will call a wwise event. Restored on load",
+        "TriggerEvent#NOT saved event for one-offs. Will call a wwise event. NOT restored on load",
+        "TriggerEventTracked#Same as trigger event but timing is tracked for event system",
+        "SetState#set the state group to the value. Restored on load",
+        "SetSwitch#set the switch group to the value. Restored on load",
+        "SetRTPC#set the rtpc value. Restored on load",
+        "SetPriority#use rtpc value field. sets the music playback priority. Use with caution"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

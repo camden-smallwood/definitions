@@ -1,0 +1,636 @@
+{
+  "name": "DamageGlobalsDefinition",
+  "tag": "glda",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "DamageGlobalsDefinition_block",
+  "blocks": {
+    "DamageGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "DamageGlobalsDefinition_block_struct"
+    },
+    "game_globals_damage_block": {
+      "max_count": 2,
+      "max_count_string": "s_damage_globals_definition::k_numBlockElements",
+      "struct": "game_globals_damage_block"
+    },
+    "damage_group_block": {
+      "max_count": 512,
+      "max_count_string": "k_maximum_material_types",
+      "struct": "damage_group_block"
+    },
+    "armor_modifier_block": {
+      "max_count": 512,
+      "max_count_string": "k_maximum_material_types",
+      "struct": "armor_modifier_block"
+    },
+    "damage_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "damage_globals_block_struct"
+    }
+  },
+  "structs": {
+    "DamageGlobalsDefinition_block_struct": {
+      "guid": "d6c1c4e3cb4239795a6ed3aa6d41140d",
+      "size": 72,
+      "size_string": "(sizeof(i343::DamageGlobals) - Tag::SizeInfo<i343::DamageGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "damage table",
+          "definition": "game_globals_damage_block"
+        },
+        {
+          "type": "block",
+          "name": "damage{falling damage}",
+          "definition": "damage_globals_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144828bf0"
+    },
+    "game_globals_damage_block": {
+      "guid": "9887605edc4f9658b562d0bc00d30273",
+      "size": 28,
+      "size_string": "sizeof(s_damage_globals_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "damage groups",
+          "definition": "damage_group_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144835240"
+    },
+    "damage_group_block": {
+      "guid": "aa5d94349d4010310d33f3a404fd1b4b",
+      "size": 32,
+      "size_string": "sizeof(s_damage_group_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "block",
+          "name": "armor modifiers",
+          "definition": "armor_modifier_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144835110"
+    },
+    "armor_modifier_block": {
+      "guid": "2b480d1dc045b10a80efb6868a83de3f",
+      "size": 8,
+      "size_string": "sizeof(s_armor_modifier_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "real",
+          "name": "damage multiplier"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144834fe0"
+    },
+    "damage_globals_block_struct": {
+      "guid": "2ae17c2b8441fdc911c9b5a50a5d516d",
+      "size": 956,
+      "size_string": "sizeof(s_game_globals_damage)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Guardians Damage Source",
+          "definition": "Damage source used for damage caused by the \"guardians\". This includes instant kills performed without the use of a damage effect as well as any damage caused by an unknown damage source."
+        },
+        {
+          "type": "struct",
+          "name": "guardiansDamageSource",
+          "definition": "DamageSourceDefinitionStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "Unknown Damage Type",
+          "definition": "Damage type for damage caused without the use of a damage effect."
+        },
+        {
+          "type": "struct",
+          "name": "unknownDamageType",
+          "definition": "DamageTypeDefinitionStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "Generic Collision Damage Source",
+          "definition": "Damage source used for collision damage against static geo or when the instigating object has no custom collision damage source."
+        },
+        {
+          "type": "struct",
+          "name": "genericCollisionDamageSource",
+          "definition": "DamageSourceDefinitionStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "Scripting Damage Source",
+          "definition": "Damage source used for generic damage applied directly through scripting."
+        },
+        {
+          "type": "struct",
+          "name": "scriptingDamageSource",
+          "definition": "DamageSourceDefinitionStruct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Instant kill damage#damage effect used when instantly killing an object",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "falling damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "jumping damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "soft landing damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "hard landing damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "hs damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Fire Damage Source",
+          "definition": "Damage source used for damage applied through DamageObjectWithFire script function."
+        },
+        {
+          "type": "struct",
+          "name": "scriptingFireDamageSource",
+          "definition": "DamageSourceDefinitionStruct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "hs fire damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Terminal Velocity Damage Source",
+          "definition": "Damage source used for terminal velocity damage."
+        },
+        {
+          "type": "struct",
+          "name": "terminalVelocityDamageSource",
+          "definition": "DamageSourceDefinitionStruct"
+        },
+        {
+          "type": "real",
+          "name": "terminal velocity:wu/s#you die if you fall faster than this (non-multiplayer only)"
+        },
+        {
+          "type": "tag_reference",
+          "name": "terminal velocity damage{distance damage}",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default damage response{damage response}#fall back if none is specified in damage effect tags",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "friendly fire damage response#anytime your teammate shoots you",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "player shield spillover#the minimum amount of shield vitality needed to prevent spillover from damage types that do not spillover."
+        },
+        {
+          "type": "custom",
+          "name": "damage decay",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "damage decay props*!",
+          "definition": "damage_decay_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "AI damage decay",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "ai damage decay props*!",
+          "definition": "damage_decay_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "shield impact decay",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "shield impact decay props",
+          "definition": "damage_decay_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "player damage additive sounds",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "deprecated player dealt damage additive sound{player dealt damage additive sound}*!#sound played when a local player deals damage to another player or an AI",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "deprecated player dealt AOE damage additive sound{player dealt AOE damage additive sound}*!#sound played when a local player deals AoE damage to another player or an AI",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "deprecated player dealt friendly fire additive sound{player dealt friendly fire additive sound}*!#sound played when a local player deals friendly fire to another player or an AI",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "struct",
+          "name": "player additive sound deal damage",
+          "definition": "DamagePlayerAdditiveSoundDealDamageDefinition"
+        },
+        {
+          "type": "tag_reference",
+          "name": "player received damage additive sound (default)#sound played when a local player receives damage and is in normal first-person view",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player received damage additive sound (third person)#sound played when a local player receives damage and is in third-person view",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player received damage additive sound (in vehicle)#sound played when the vehicle that a local player is riding in receives damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player received AOE damage additive sound (default)#sound played when a local player receives AOE damage and is in normal first-person view",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player received AOE damage additive sound (third person)#sound played when a local player receives AOE damage and is in third-person view",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player received AOE damage additive sound (in vehicle)#sound played when the vehicle that a local player is riding in receives AOE damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player died from AOE damage sound",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448347a0"
+    },
+    "DamageSourceDefinitionStruct": {
+      "guid": "5d241ac33d4387ff27bbe58fe63e1849",
+      "size": 4,
+      "size_string": "sizeof(DamageSourceDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Damage Source Name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144983d20"
+    },
+    "DamageTypeDefinitionStruct": {
+      "guid": "783dab923f4f51898cde4989c2f6e056",
+      "size": 4,
+      "size_string": "sizeof(DamageTypeDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Damage Type Name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144984480"
+    },
+    "damage_decay_struct": {
+      "guid": "43231e1c3549642e351ccea20539142b",
+      "size": 20,
+      "size_string": "sizeof(s_damage_decay)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "current damage decay delay:seconds#current damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)"
+        },
+        {
+          "type": "real",
+          "name": "current damage decay time:seconds#amount of time it would take for 100% current damage to decay to 0"
+        },
+        {
+          "type": "real",
+          "name": "current damage decay rate:damage/second#amount of damage that decays from our current damage every second"
+        },
+        {
+          "type": "real",
+          "name": "recent damage decay delay:seconds#recent damage begins to fall after a time delay has passed since last the damage (MAX 4.1, because timer is stored in a char so 127 ticks maximum)"
+        },
+        {
+          "type": "real",
+          "name": "recent damage decay time:seconds#amount of time it would take for 100% recent damage to decay to 0"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144834690"
+    },
+    "DamagePlayerAdditiveSoundDealDamageDefinition": {
+      "guid": "9f38f8b3ef4b9819cdb630b52491dec2",
+      "size": 224,
+      "size_string": "sizeof(PlayerAdditiveSoundDealDamageDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "player additive sound deal damage regular#sound played when a local player deals damage to another player or an AI",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player additive sound deal damage aoe#sound played when a local player deals AoE damage to another player or an AI",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player additive sound deal damage friendly fire#sound played when a local player deals friendly fire to another player or an AI",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player additive sound deal damage weak spot",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player additive sound deal damage headshot",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player additive sound deal damage kill",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "player additive sound deal damage headshot kill",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d6550"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

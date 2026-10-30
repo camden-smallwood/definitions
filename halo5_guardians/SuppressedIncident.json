@@ -1,0 +1,118 @@
+{
+  "name": "SuppressedIncident",
+  "tag": "sigd",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "SuppressedIncident_block",
+  "blocks": {
+    "SuppressedIncident_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "SuppressedIncident_block_struct"
+    },
+    "suppressed_incident_block": {
+      "max_count": 1000,
+      "max_count_string": "1000",
+      "struct": "suppressed_incident_block"
+    }
+  },
+  "structs": {
+    "SuppressedIncident_block_struct": {
+      "guid": "71ec0bd36745403f68cba683ff2e57f2",
+      "size": 48,
+      "size_string": "(sizeof(SuppressedIncidentGroupDefinition) - Tag::SizeInfo<SuppressedIncidentGroupDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "suppressed incidents",
+          "group_tag": "slap",
+          "definition": "suppressed_incident_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144819100"
+    },
+    "suppressed_incident_block": {
+      "guid": "72309dcb9e46a1c371aefa95e1e3a333",
+      "size": 8,
+      "size_string": "sizeof(s_suppressed_incident_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "incident name^"
+        },
+        {
+          "type": "byte_flags",
+          "name": "suppression type",
+          "definition": "suppressed_incident_flags"
+        },
+        {
+          "type": "pad",
+          "name": "VNJESHFHV",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448182d0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "suppressed_incident_flags": {
+      "options": [
+        "suppress cause player game engine event{suppress game engine event}",
+        "suppress effect player game engine event",
+        "suppress cause team game engine event",
+        "suppress effect team game engine event",
+        "suppress medal display{suppress display}",
+        "suppress medal stats{suppress stats}",
+        "suppress fanfare",
+        "suppress audio"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

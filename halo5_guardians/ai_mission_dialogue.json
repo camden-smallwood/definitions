@@ -1,0 +1,137 @@
+{
+  "name": "ai_mission_dialogue",
+  "tag": "mdlg",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "ai_mission_dialogue_block",
+  "blocks": {
+    "ai_mission_dialogue_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "ai_mission_dialogue_block_struct"
+    },
+    "mission_dialogue_lines_block": {
+      "max_count": 500,
+      "max_count_string": "k_max_lines_per_scenario",
+      "struct": "mission_dialogue_lines_block"
+    },
+    "mission_dialogue_variants_block": {
+      "max_count": 10,
+      "max_count_string": "k_max_variants_per_line",
+      "struct": "mission_dialogue_variants_block"
+    }
+  },
+  "structs": {
+    "ai_mission_dialogue_block_struct": {
+      "guid": "b4352d7a0d4553cd27b2b0aef4c14069",
+      "size": 48,
+      "size_string": "(sizeof(ai_mission_dialogue) - Tag::SizeInfo<ai_mission_dialogue::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "lines",
+          "definition": "mission_dialogue_lines_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447ee260"
+    },
+    "mission_dialogue_lines_block": {
+      "guid": "7fd25bb9a145655b94003db837332d92",
+      "size": 36,
+      "size_string": "sizeof(mission_dialogue_line)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "block",
+          "name": "variants",
+          "definition": "mission_dialogue_variants_block"
+        },
+        {
+          "type": "string_id",
+          "name": "default sound effect"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447ee140"
+    },
+    "mission_dialogue_variants_block": {
+      "guid": "0cb9e35de34dbbab07fc0e8780aab27b",
+      "size": 40,
+      "size_string": "sizeof(mission_dialogue_variant)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "variant designation#3-letter designation for the character^"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "sound effect"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447ee010"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

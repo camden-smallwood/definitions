@@ -1,0 +1,178 @@
+{
+  "name": "composer_transition",
+  "tag": "cmpt",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "composer_transition_block",
+  "blocks": {
+    "composer_transition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "composer_transition_block_struct"
+    }
+  },
+  "structs": {
+    "composer_transition_block_struct": {
+      "guid": "e6cfdd44e44fa9aea0e9b5a3d54d6b4a",
+      "size": 136,
+      "size_string": "(sizeof(ComposerTransition) - Tag::SizeInfo<ComposerTransition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "FADE OUT FROM GAME",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Fade Out From Game",
+          "definition": "composerTransitionElement"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "FADE IN",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Fade In",
+          "definition": "composerTransitionElement"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "FADE OUT",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Fade Out",
+          "definition": "composerTransitionElement"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "FADE POST CORE LOAD",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Fade Post Core Load",
+          "definition": "composerTransitionElement"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "FADE IN TO GAME",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Fade In To Game ",
+          "definition": "composerTransitionElement"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446f91f0"
+    },
+    "composerTransitionElement": {
+      "guid": "b94c51860e4b25ba187eb7903f48fe43",
+      "size": 24,
+      "size_string": "sizeof(ComposerTransitionElement)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "Flags",
+          "definition": "composerTransitionFlags"
+        },
+        {
+          "type": "pad",
+          "name": "PAD1!",
+          "definition": 3
+        },
+        {
+          "type": "long_integer",
+          "name": "Fade Time:ticks"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "Fade Color^"
+        },
+        {
+          "type": "long_integer",
+          "name": "Sleep Time:ticks"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446f90e0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "composerTransitionFlags": {
+      "options": [
+        "Active"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

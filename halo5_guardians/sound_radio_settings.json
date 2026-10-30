@@ -1,0 +1,86 @@
+{
+  "name": "sound_radio_settings",
+  "tag": "srad",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "sound_radio_settings_block",
+  "blocks": {
+    "sound_radio_settings_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_radio_settings_block_struct"
+    }
+  },
+  "structs": {
+    "sound_radio_settings_block_struct": {
+      "guid": "04bf77610c4a9ff0d3e970b6ce930153",
+      "size": 24,
+      "size_string": "(sizeof(s_sound_radio_settings) - Tag::SizeInfo<s_sound_radio_settings::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "mix settings",
+          "definition": ""
+        },
+        {
+          "type": "long_enum",
+          "name": "mix",
+          "definition": "radio_mix_setting_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144786f60"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "radio_mix_setting_definition": {
+      "options": [
+        "full#full unspatialized radio effect",
+        "3d#mixes in the unspatialized radio effect with distance",
+        "none#essentially turns off the radio effect!"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

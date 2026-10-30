@@ -1,0 +1,336 @@
+{
+  "name": "DamageReportingDisplayGlobals",
+  "tag": "drdg",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "DamageReportingDisplayGlobals_block",
+  "blocks": {
+    "DamageReportingDisplayGlobals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "DamageReportingDisplayGlobals_block_struct"
+    },
+    "DamageDisplayByDamageSourceBlock": {
+      "max_count": 1024,
+      "max_count_string": "k_maxDamageDisplaysByDamageSource",
+      "struct": "DamageDisplayByDamageSourceBlock_struct"
+    },
+    "DamageDisplayByAttachmentListBlock": {
+      "max_count": 50,
+      "max_count_string": "k_maxDamageDisplaysByAttachmentList",
+      "struct": "DamageDisplayByAttachmentListBlock_struct"
+    },
+    "AttachmentNameListBlock": {
+      "max_count": 8,
+      "max_count_string": "Weapon::k_maxAttachmentsPerWeapon",
+      "struct": "AttachmentNameListBlock_struct"
+    },
+    "DamageDisplayByDamageTypeBlock": {
+      "max_count": 10,
+      "max_count_string": "k_maxDamageDisplaysByDamageType",
+      "struct": "DamageDisplayByDamageTypeBlock_struct"
+    }
+  },
+  "structs": {
+    "DamageReportingDisplayGlobals_block_struct": {
+      "guid": "509cca5d154c407c9a8eac9c4e47e152",
+      "size": 48,
+      "size_string": "(sizeof(DamageReportingDisplayGlobals) - Tag::SizeInfo<DamageReportingDisplayGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "Damage Reporting Display Map",
+          "definition": "This tag is used to define a map from unique damage identifier to display information. A unique damage identifier has three parts: Damage Source, Attachment List, and Damage Type. When trying to look up the display information for a damage identifier, here is how the map works:\n\n1) Search for a damage source block that matches the damage source in the damage identifier. If one is not found, fall back on a damage source block that does not specify a specific source (source left blank). If no fallback exists, fail.\n\n2) Search for an attachment list block in the chosen damage source block that matches the attachment list in the damage identifier. If one is not found, fall back on an attachment list block that does not specify a specific attachment list (attachment list is empty). If no fallback exists, fail.\n\n3) Search for a damage type block in the chosen attachment list block that matches the damage type in the damage identifier. If one is not found, fall back on a damage type block that does not specify a specific type (type left blank). If no fallback exists and we have not already tried step 4, go to step 4. If we've already tried step 4, fail.\n\n4) If we matched on source and attachment list, but could not match on type and had no fallback, look for a damage source block that has a blank damage source and go to step 2 with that damage source already chosen (as if we had gone to the fallback option in step 1.\n\nSo, for example, an entry with the damage source \"assault_rifle\", only a blank attachment list, and only a blank damage type would be used for any and all damage caused by assault rifles. If you wanted to a display uniquely for assault rifle bullet kills you would add a damage type block under assault rifle, any attachments. If you wanted a display for a melee kill by any weapon, you would add an empty damage source block, add an empty attachment list block to that, and then add a block for the melee damage type. Then, for all weapons that you don't have a unique melee kill/damage display for, make sure that you don't have a blank damage type block for that weapon and you'll use the generic melee kill display via step 4 above.\n\nIMPORTANT: The algorithm will NOT handle duplicate blocks on the same level of the tree correctly. The rule of thumb is that you should never have two entries in a single dropdown menu with the same name.\n\nIf you have questions please seek out the engineer in charge of the damage reporting system."
+        },
+        {
+          "type": "block",
+          "name": "damageDisplayMap",
+          "definition": "DamageDisplayByDamageSourceBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144891af0"
+    },
+    "DamageDisplayByDamageSourceBlock_struct": {
+      "guid": "21e2b28557458feeb446f7bd80156dcf",
+      "size": 32,
+      "size_string": "sizeof(Interface::DamageDisplayByDamageSource)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Damage Source",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "Explanation",
+          "definition": "Damage source associated with all of the display definitions defined in the attachment list and damage type blocks. If you leave the damage source empty then the displays defined in the blocks below will be used for any damage sources that do not have content explicitly defined here."
+        },
+        {
+          "type": "struct",
+          "name": "damageSource",
+          "definition": "DamageSourceReferenceStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "block",
+          "name": "displayByAttachmentList",
+          "definition": "DamageDisplayByAttachmentListBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144891910"
+    },
+    "DamageSourceReferenceStruct": {
+      "guid": "2fcd19fb624e1e492c715b8fcdcaa19d",
+      "size": 4,
+      "size_string": "sizeof(DamageSourceReference)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "NOTE",
+          "definition": "If the dropdown menu is empty, run the \"build damage reporting table\" tool command (build-damage-reporting-table from the command line) in order to generate the xml file used to populate the menu. If you added a new damage source you will need to run this command in order for the source to show up in the menu."
+        },
+        {
+          "type": "string_id",
+          "name": "Damage Source Name",
+          "group_tag": "sted"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144983ea0"
+    },
+    "DamageDisplayByAttachmentListBlock_struct": {
+      "guid": "feb46b082d48f84ca12a10acf8e9fb45",
+      "size": 56,
+      "size_string": "sizeof(DamageDisplayByAttachmentList)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Attachment List",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "Explanation",
+          "definition": "Attachment list associated with the display definitions defined in the damage types block. If you leave the attachment list empty then the displays defined in the damage type blocks below will be used for any attachment lists that do not have content explicitly defined here."
+        },
+        {
+          "type": "block",
+          "name": "attachmentList",
+          "definition": "AttachmentNameListBlock"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "block",
+          "name": "displayByDamageType",
+          "definition": "DamageDisplayByDamageTypeBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144891740"
+    },
+    "AttachmentNameListBlock_struct": {
+      "guid": "d81f1388b54214e8256e7ebe17d5287f",
+      "size": 4,
+      "size_string": "sizeof(AttachmentNameReference)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Attachment Name",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "Explanation",
+          "definition": "Name of the attachment. Make sure you don't leave any invalid entries in the list!"
+        },
+        {
+          "type": "struct",
+          "name": "attachmentName",
+          "definition": "AttachmentNameReferenceStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144984280"
+    },
+    "AttachmentNameReferenceStruct": {
+      "guid": "d7f824aab6492cd1538279b814679955",
+      "size": 4,
+      "size_string": "sizeof(AttachmentNameReference)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "NOTE",
+          "definition": "If the dropdown menu is empty, run the \"build damage reporting table\" tool command (build-damage-reporting-table from the command line) in order to generate the xml file used to populate the menu. If you added a new attachment name you will need to run this command in order for the name to show up in the menu."
+        },
+        {
+          "type": "string_id",
+          "name": "Attachment Name",
+          "group_tag": "sted"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144984170"
+    },
+    "DamageDisplayByDamageTypeBlock_struct": {
+      "guid": "670ac497be4ddd93a9f7ffbc507d24bc",
+      "size": 44,
+      "size_string": "sizeof(DamageDisplayByDamageType)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Damage Type",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "Explanation",
+          "definition": "Damage type described by this display definition. If you leave this blank then this display will be used for any damage types that do not have content explicitly defined here."
+        },
+        {
+          "type": "struct",
+          "name": "damageType",
+          "definition": "DamageTypeReferenceStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "struct",
+          "name": "displayDefinition",
+          "definition": "DamageDisplayDefinitionStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144891560"
+    },
+    "DamageTypeReferenceStruct": {
+      "guid": "88949bbb9640aac2ae76608081711e6f",
+      "size": 4,
+      "size_string": "sizeof(DamageTypeReference)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "NOTE",
+          "definition": "If the dropdown menu is empty, run the \"build damage reporting table\" tool command (build-damage-reporting-table from the command line) in order to generate the xml file used to populate the menu. If you added a new damage type you will need to run this command in order for the type to show up in the menu."
+        },
+        {
+          "type": "string_id",
+          "name": "Damage Type Name",
+          "group_tag": "sted"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449845f0"
+    },
+    "DamageDisplayDefinitionStruct": {
+      "guid": "e8c48e0324451b04328db09895bef241",
+      "size": 40,
+      "size_string": "sizeof(Interface::DamageDisplayDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "display name#friendly name for the damage"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sprite sheet#sprite sheet that contains the sprite for this damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "sprite index#index in the sprite sheet of the sprite for this damage"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144891450"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

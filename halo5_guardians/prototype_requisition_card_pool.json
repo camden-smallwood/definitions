@@ -1,0 +1,103 @@
+{
+  "name": "prototype_requisition_card_pool",
+  "tag": "rpcp",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "prototype_requisition_card_pool_block",
+  "blocks": {
+    "prototype_requisition_card_pool_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "prototype_requisition_card_pool_block_struct"
+    },
+    "prototype_requisition_globals_card_pool_entry": {
+      "max_count": 512,
+      "max_count_string": "512",
+      "struct": "prototype_requisition_globals_card_pool_entry_struct"
+    }
+  },
+  "structs": {
+    "prototype_requisition_card_pool_block_struct": {
+      "guid": "4665b020e248306db3edf3873d095851",
+      "size": 48,
+      "size_string": "(sizeof(PrototypeRequisitionCardPoolDefinition) - Tag::SizeInfo<PrototypeRequisitionCardPoolDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "cards",
+          "definition": "prototype_requisition_globals_card_pool_entry"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144748ea0"
+    },
+    "prototype_requisition_globals_card_pool_entry_struct": {
+      "guid": "892e948e1946f843a15c50a22ddc992b",
+      "size": 36,
+      "size_string": "sizeof(PrototypeRequisitionPackCardPoolEntryDefinition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "weight"
+        },
+        {
+          "type": "tag_reference",
+          "name": "card^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "rpcd"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144748d80"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

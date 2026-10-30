@@ -1,0 +1,290 @@
+{
+  "name": "GenericModifierDefinitionTag",
+  "tag": "gmpm",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "GenericModifierDefinitionTag_block",
+  "blocks": {
+    "GenericModifierDefinitionTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "GenericModifierDefinitionTag_block_struct"
+    },
+    "genericModifierDefinitionFloatBlock": {
+      "max_count": 32,
+      "max_count_string": "k_maxModifiersPerBlock",
+      "struct": "genericModifierDefinitionFloatBlock_struct"
+    },
+    "genericModifierDefinitionIntBlock": {
+      "max_count": 32,
+      "max_count_string": "k_maxModifiersPerBlock",
+      "struct": "genericModifierDefinitionIntBlock_struct"
+    },
+    "genericModifierDefinitionBoolBlock": {
+      "max_count": 32,
+      "max_count_string": "k_maxModifiersPerBlock",
+      "struct": "genericModifierDefinitionBoolBlock_struct"
+    }
+  },
+  "structs": {
+    "GenericModifierDefinitionTag_block_struct": {
+      "guid": "07fa5841284f35f64081669051bcad6b",
+      "size": 104,
+      "size_string": "(sizeof(GenericModifierDefinitionTag) - Tag::SizeInfo<GenericModifierDefinitionTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "modifiers",
+          "definition": "genericModifierDefinitionBlockStruct"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738030"
+    },
+    "genericModifierDefinitionBlockStruct": {
+      "guid": "95bcb8bdff475603e6ae40876ef7a998",
+      "size": 84,
+      "size_string": "sizeof(i343::MalleableProperty::GenericModifierDefinitionBlock)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "modifiers float",
+          "definition": "genericModifierDefinitionFloatBlock"
+        },
+        {
+          "type": "block",
+          "name": "modifiers int",
+          "definition": "genericModifierDefinitionIntBlock"
+        },
+        {
+          "type": "block",
+          "name": "modifiers bool",
+          "definition": "genericModifierDefinitionBoolBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144737f20"
+    },
+    "genericModifierDefinitionFloatBlock_struct": {
+      "guid": "6cf9cfc310470b3a7f8f8d92d4a9f47a",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::GenericModifierDefinitionFloat)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "modifier float",
+          "definition": "genericModifierDefinitionFloatStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144737bd0"
+    },
+    "genericModifierDefinitionFloatStruct": {
+      "guid": "8a2e097c1c4fbc1b8c41f98528157f27",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::GenericModifierDefinitionFloat)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "property"
+        },
+        {
+          "type": "char_enum",
+          "name": "scope",
+          "definition": "modifierScopeEnumDef"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "real",
+          "name": "duration"
+        },
+        {
+          "type": "real",
+          "name": "modifier"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144737890"
+    },
+    "genericModifierDefinitionIntBlock_struct": {
+      "guid": "bde4ffc6314303c706f522ba3ff67f6b",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::GenericModifierDefinitionInt)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "modifier int",
+          "definition": "genericModifierDefinitionIntStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144737ce0"
+    },
+    "genericModifierDefinitionIntStruct": {
+      "guid": "62a7a8c3e8424f500b30e5926f906b27",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::GenericModifierDefinitionInt)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "property"
+        },
+        {
+          "type": "char_enum",
+          "name": "scope",
+          "definition": "modifierScopeEnumDef"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "real",
+          "name": "duration"
+        },
+        {
+          "type": "long_integer",
+          "name": "modifier"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447379a0"
+    },
+    "genericModifierDefinitionBoolBlock_struct": {
+      "guid": "27ed57e1214d306ddc6b66a4fb27f16e",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::GenericModifierDefinitionBool)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "modifier bool",
+          "definition": "genericModifierDefinitionBoolStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144737e00"
+    },
+    "genericModifierDefinitionBoolStruct": {
+      "guid": "ff351f275449603763871ba5cc43aac9",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::GenericModifierDefinitionBool)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "property"
+        },
+        {
+          "type": "char_enum",
+          "name": "scope",
+          "definition": "modifierScopeEnumDef"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "real",
+          "name": "duration"
+        },
+        {
+          "type": "char_enum",
+          "name": "modifier",
+          "definition": "boolEnumDef"
+        },
+        {
+          "type": "pad",
+          "name": "pad00",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144737ac0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "modifierScopeEnumDef": {
+      "options": [
+        "global",
+        "object",
+        "player",
+        "team",
+        "mount"
+      ]
+    },
+    "boolEnumDef": {
+      "options": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

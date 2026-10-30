@@ -1,0 +1,5013 @@
+{
+  "name": "model_animation_graph",
+  "tag": "jmad",
+  "version": 1,
+  "flags": 3,
+  "parent_tag": "aTag",
+  "block": "model_animation_graph_block",
+  "blocks": {
+    "model_animation_graph_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "model_animation_graph_block_struct"
+    },
+    "SoundEventReferenceSetBlock": {
+      "max_count": 4096,
+      "max_count_string": "k_max_sound_references_per_graph",
+      "struct": "SoundEventReferenceSetBlock_struct"
+    },
+    "SoundEventReferenceBlock": {
+      "max_count": 256,
+      "max_count_string": "k_max_variants_per_event",
+      "struct": "SoundEventReferenceBlock"
+    },
+    "animation_graph_dialogue_reference_block": {
+      "max_count": 4096,
+      "max_count_string": "k_maxDialogueReferencesPerGraph",
+      "struct": "animation_graph_dialogue_reference_block"
+    },
+    "EffectEventReferenceSetBlock": {
+      "max_count": 4096,
+      "max_count_string": "k_max_effect_references_per_graph",
+      "struct": "EffectEventReferenceSetBlock_struct"
+    },
+    "EffectEventReferenceBlock": {
+      "max_count": 256,
+      "max_count_string": "k_max_variants_per_event",
+      "struct": "EffectEventReferenceBlock"
+    },
+    "animation_graph_node_block": {
+      "max_count": 255,
+      "max_count_string": "k_max_nodes_per_animation",
+      "struct": "animation_graph_node_block"
+    },
+    "animation_usage_block": {
+      "max_count": 34,
+      "max_count_string": "k_animation_node_usage_count",
+      "struct": "animation_usage_block"
+    },
+    "animation_node_mask_block": {
+      "max_count": 32,
+      "max_count_string": "k_animation_maximum_node_mask_count",
+      "struct": "animation_node_mask_block_struct"
+    },
+    "animation_node_mask_entry_block": {
+      "max_count": 255,
+      "max_count_string": "k_max_nodes_per_animation",
+      "struct": "animation_node_mask_entry_block"
+    },
+    "animation_ik_junction_block": {
+      "max_count": 4,
+      "max_count_string": "k_animation_maximum_ik_junctions",
+      "struct": "animation_ik_junction_block"
+    },
+    "animation_ik_chain_block": {
+      "max_count": 8,
+      "max_count_string": "k_animation_maximum_ik_chains",
+      "struct": "animation_ik_chain_block_struct"
+    },
+    "animation_ik_chain_joint_block": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "animation_ik_chain_joint_block"
+    },
+    "animation_ik_block": {
+      "max_count": 64,
+      "max_count_string": "k_max_ik_points",
+      "struct": "animation_ik_block"
+    },
+    "animation_ik_set": {
+      "max_count": 32,
+      "max_count_string": "k_max_ik_sets",
+      "struct": "animation_ik_set"
+    },
+    "animation_ik_set_item": {
+      "max_count": 8,
+      "max_count_string": "k_max_ik_points_per_set",
+      "struct": "animation_ik_set_item"
+    },
+    "animation_pool_block": {
+      "max_count": 4096,
+      "max_count_string": "k_max_animations_per_graph",
+      "struct": "animation_pool_block_struct"
+    },
+    "g_compositeTag": {
+      "max_count": 256,
+      "max_count_string": "MAX_COMPOSITES_PER_GRAPH",
+      "struct": "g_compositeTag_struct"
+    },
+    "CompositeAxisDefinition": {
+      "max_count": 16,
+      "max_count_string": "MAX_VALUES_PER_COMPOSITE_ENTRY",
+      "struct": "CompositeAxisDefinition"
+    },
+    "CompositeDeadZoneDefinition": {
+      "max_count": 16,
+      "max_count_string": "MAX_DEAD_ZONES_PER_COMPOSITE_AXIS",
+      "struct": "CompositeDeadZoneDefinition"
+    },
+    "CompositeEntryDefinition": {
+      "max_count": 256,
+      "max_count_string": "MAX_ENTRIES_PER_COMPOSITE",
+      "struct": "CompositeEntryDefinition"
+    },
+    "CompositeEntryValueDefinition": {
+      "max_count": 16,
+      "max_count_string": "MAX_VALUES_PER_COMPOSITE_ENTRY",
+      "struct": "CompositeEntryValueDefinition"
+    },
+    "CompositePhaseSetDefinition": {
+      "max_count": 16,
+      "max_count_string": "MAX_PHASE_SETS_PER_COMPOSITE",
+      "struct": "CompositePhaseSetDefinition"
+    },
+    "SyncKeyBlock": {
+      "max_count": 8,
+      "max_count_string": "Composite::MAX_SYNC_KEYS",
+      "struct": "SyncKeyBlock"
+    },
+    "StringBlock": {
+      "max_count": 1024,
+      "max_count_string": "k_kilo",
+      "struct": "StringBlock"
+    },
+    "model_animation_tag_resource_group": {
+      "max_count": 12288,
+      "max_count_string": "k_max_animations_per_graph*3",
+      "struct": "model_animation_tag_resource_group"
+    },
+    "model_animation_tag_resource_member": {
+      "max_count": 4096,
+      "max_count_string": "k_max_animations_per_graph",
+      "struct": "model_animation_tag_resource_member"
+    },
+    "animation_frame_event_block": {
+      "max_count": 512,
+      "max_count_string": "k_max_frame_events",
+      "struct": "animation_frame_event_block_struct"
+    },
+    "animation_sound_event_block": {
+      "max_count": 512,
+      "max_count_string": "k_max_frame_events",
+      "struct": "animation_sound_event_block"
+    },
+    "animation_effect_event_block": {
+      "max_count": 512,
+      "max_count_string": "k_max_frame_events",
+      "struct": "animation_effect_event_block"
+    },
+    "animation_dialogue_event_block": {
+      "max_count": 512,
+      "max_count_string": "k_max_frame_events",
+      "struct": "animation_dialogue_event_block"
+    },
+    "object_space_node_data_block": {
+      "max_count": 255,
+      "max_count_string": "k_max_nodes_per_animation",
+      "struct": "object_space_node_data_block"
+    },
+    "object_space_offset_node_block": {
+      "max_count": 16,
+      "max_count_string": "k_max_object_space_offset_node_count",
+      "struct": "object_space_offset_node_block"
+    },
+    "fik_anchor_node_block": {
+      "max_count": 5,
+      "max_count_string": "k_max_fik_anchor_node_count",
+      "struct": "fik_anchor_node_block"
+    },
+    "animation_ik_chain_events": {
+      "max_count": 32,
+      "max_count_string": "k_animation_maximum_ik_chain_events",
+      "struct": "animation_ik_chain_events_struct"
+    },
+    "animation_ik_chain_proxies": {
+      "max_count": 16,
+      "max_count_string": "k_animation_maximum_ik_chain_proxies",
+      "struct": "animation_ik_chain_proxies_struct"
+    },
+    "animation_facial_wrinkle_events": {
+      "max_count": 32,
+      "max_count_string": "k_animation_maximum_facial_wrinkle_events",
+      "struct": "animation_facial_wrinkle_events_struct"
+    },
+    "animation_extended_events": {
+      "max_count": 32,
+      "max_count_string": "k_animation_maximum_extended_events",
+      "struct": "animation_extended_events_struct"
+    },
+    "animation_object_functions": {
+      "max_count": 4,
+      "max_count_string": "k_animation_maximum_object_functions",
+      "struct": "animation_object_functions_struct"
+    },
+    "PCAGroupSettingsBlock": {
+      "max_count": 4096,
+      "max_count_string": "k_max_animations_per_graph",
+      "struct": "PCAGroupSettingsBlock_struct"
+    },
+    "animation_function_block": {
+      "max_count": 64,
+      "max_count_string": "k_animation_maximum_function_count",
+      "struct": "animation_function_block"
+    },
+    "new_animation_blend_screen_block": {
+      "max_count": 1024,
+      "max_count_string": "k_animation_maximum_blend_screens",
+      "struct": "new_animation_blend_screen_block_struct"
+    },
+    "new_animation_function_overlay_block": {
+      "max_count": 32,
+      "max_count_string": "k_animation_maximum_function_overlays",
+      "struct": "new_animation_function_overlay_block"
+    },
+    "overlay_group_definition_block": {
+      "max_count": 1056,
+      "max_count_string": "k_animation_maximum_overlay_groups",
+      "struct": "overlay_group_definition_block"
+    },
+    "blend_screen_item_definition_block": {
+      "max_count": 8,
+      "max_count_string": "k_animation_maximum_mixing_board_pose_overlays",
+      "struct": "blend_screen_item_definition_block"
+    },
+    "function_overlay_item_definition_block": {
+      "max_count": 32,
+      "max_count_string": "k_animation_maximum_function_overlays",
+      "struct": "function_overlay_item_definition_block"
+    },
+    "animation_interpolator_block": {
+      "max_count": 256,
+      "max_count_string": "k_max_animations_per_block",
+      "struct": "animation_interpolator_block"
+    },
+    "animation_interpolation_sets": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "animation_interpolation_sets_struct"
+    },
+    "animation_interpolation_entries": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "animation_interpolation_entries"
+    },
+    "model_animation_variant_block": {
+      "max_count": 64,
+      "max_count_string": "k_animation_maximum_model_variants",
+      "struct": "model_animation_variant_block"
+    },
+    "mode_or_stance_alias_block": {
+      "max_count": 64,
+      "max_count_string": "k_animation_maximum_mode_or_stance_aliases",
+      "struct": "mode_or_stance_alias_block_struct"
+    },
+    "function_driven_variant_block": {
+      "max_count": 64,
+      "max_count_string": "k_animation_maximum_model_variants",
+      "struct": "function_driven_variant_block"
+    },
+    "animation_mode_block": {
+      "max_count": 512,
+      "max_count_string": "k_max_modes_per_graph",
+      "struct": "animation_mode_block"
+    },
+    "weapon_class_block": {
+      "max_count": 64,
+      "max_count_string": "k_max_weapon_classes",
+      "struct": "weapon_class_block_struct"
+    },
+    "weapon_type_block": {
+      "max_count": 64,
+      "max_count_string": "k_max_weapon_types",
+      "struct": "weapon_type_block_struct"
+    },
+    "animation_set_block": {
+      "max_count": 64,
+      "max_count_string": "k_max_animation_sets",
+      "struct": "animation_set_block"
+    },
+    "animation_entry_block": {
+      "max_count": 256,
+      "max_count_string": "k_max_animations_per_block",
+      "struct": "animation_entry_block"
+    },
+    "damage_animation_block": {
+      "max_count": 8,
+      "max_count_string": "k_max_death_and_damage_actions",
+      "struct": "damage_animation_block"
+    },
+    "damage_direction_block": {
+      "max_count": 4,
+      "max_count_string": "k_total_damage_directions",
+      "struct": "damage_direction_block"
+    },
+    "damage_region_block": {
+      "max_count": 11,
+      "max_count_string": "k_total_damage_regions",
+      "struct": "damage_region_block"
+    },
+    "animation_transition_source_block": {
+      "max_count": 256,
+      "max_count_string": "k_max_animations_per_block",
+      "struct": "animation_transition_source_block_struct"
+    },
+    "animation_transition_destination_block": {
+      "max_count": 32,
+      "max_count_string": "k_max_transition_animations",
+      "struct": "animation_transition_destination_block_struct"
+    },
+    "animation_velocity_boundaries_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "animation_velocity_boundaries_block"
+    },
+    "animation_ik_block_v1": {
+      "max_count": 64,
+      "max_count_string": "k_max_ik_points",
+      "struct": "animation_ik_block_v1"
+    },
+    "animation_ranged_action_block": {
+      "max_count": 16,
+      "max_count_string": "k_max_ranged_actions",
+      "struct": "animation_ranged_action_block"
+    },
+    "ranged_animation_entry_block": {
+      "max_count": 256,
+      "max_count_string": "k_max_animations_per_block",
+      "struct": "ranged_animation_entry_block_struct"
+    },
+    "triangulation_entry_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "triangulation_entry_block"
+    },
+    "triangulation_point_block": {
+      "max_count": 255,
+      "max_count_string": "k_max_triangulation_tag_points",
+      "struct": "triangulation_point_block"
+    },
+    "triangulation_triangle_block": {
+      "max_count": 255,
+      "max_count_string": "k_max_triangulation_tag_triangles",
+      "struct": "triangulation_triangle_block"
+    },
+    "animation_sync_action_group_block": {
+      "max_count": 128,
+      "max_count_string": "k_max_sync_action_groups",
+      "struct": "animation_sync_action_group_block"
+    },
+    "animation_sync_action_block": {
+      "max_count": 32,
+      "max_count_string": "k_max_sync_actions",
+      "struct": "animation_sync_action_block"
+    },
+    "animation_sync_action_same_type_participant": {
+      "max_count": 6,
+      "max_count_string": "k_max_sync_action_participants",
+      "struct": "animation_sync_action_same_type_participant"
+    },
+    "animation_sync_action_other_type_participant": {
+      "max_count": 6,
+      "max_count_string": "k_max_sync_action_participants",
+      "struct": "animation_sync_action_other_type_participant"
+    },
+    "vehicle_suspension_block": {
+      "max_count": 32,
+      "max_count_string": "k_max_vehicle_suspensions",
+      "struct": "vehicle_suspension_block"
+    },
+    "function_overlay_animation_block": {
+      "max_count": 32,
+      "max_count_string": "k_max_function_overlays_per_graph",
+      "struct": "function_overlay_animation_block"
+    },
+    "inherited_animation_block": {
+      "max_count": 8,
+      "max_count_string": "k_max_animation_inheritence_levels",
+      "struct": "inherited_animation_block"
+    },
+    "inherited_animation_node_map_block": {
+      "max_count": 255,
+      "max_count_string": "k_max_nodes_per_animation",
+      "struct": "inherited_animation_node_map_block"
+    },
+    "inherited_animation_node_map_flag_block": {
+      "max_count": 255,
+      "max_count_string": "k_max_nodes_per_animation",
+      "struct": "inherited_animation_node_map_flag_block"
+    },
+    "weapon_class_lookup_block": {
+      "max_count": 64,
+      "max_count_string": "k_max_weapon_types",
+      "struct": "weapon_class_lookup_block"
+    },
+    "additional_node_data_block": {
+      "max_count": 255,
+      "max_count_string": "k_max_nodes_per_animation",
+      "struct": "additional_node_data_block"
+    },
+    "shared_static_data_codec_rotation_block": {
+      "max_count": 1044480,
+      "max_count_string": "k_max_animations_per_graph * k_max_nodes_per_animation",
+      "struct": "shared_static_data_codec_rotation_block"
+    },
+    "shared_static_data_codec_translation_block": {
+      "max_count": 1044480,
+      "max_count_string": "k_max_animations_per_graph * k_max_nodes_per_animation",
+      "struct": "shared_static_data_codec_translation_block"
+    },
+    "shared_static_data_codec_scale_block": {
+      "max_count": 1044480,
+      "max_count_string": "k_max_animations_per_graph * k_max_nodes_per_animation",
+      "struct": "shared_static_data_codec_scale_block"
+    }
+  },
+  "structs": {
+    "model_animation_graph_block_struct": {
+      "guid": "925bcd47f54091cc0ff8888310105df1",
+      "size": 1072,
+      "size_string": "(sizeof(c_model_animation_graph) - Tag::SizeInfo<c_model_animation_graph::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "content",
+          "definition": "AnimationGraphContentsTagStruct"
+        },
+        {
+          "type": "custom",
+          "name": "Runtime Data*",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "run time data*!",
+          "definition": "model_animation_runtime_data_struct"
+        },
+        {
+          "type": "block",
+          "name": "additional node data*!",
+          "group_tag": "slap",
+          "definition": "additional_node_data_block"
+        },
+        {
+          "type": "block",
+          "name": "tag resource groups*",
+          "group_tag": "slap",
+          "definition": "model_animation_tag_resource_group"
+        },
+        {
+          "type": "struct",
+          "name": "codec data*!",
+          "definition": "animation_codec_data_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e0570"
+    },
+    "AnimationGraphContentsTagStruct": {
+      "guid": "133f7b3957474dbf882faebcdc6debca",
+      "size": 796,
+      "size_string": "sizeof(AnimationGraphContents)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Links and Settings",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "links",
+          "definition": "AnimationGraphExternalReferencesStruct"
+        },
+        {
+          "type": "struct",
+          "name": "settings",
+          "definition": "AnimationGraphSettingsStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Skeleton and IK",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "skeleton",
+          "definition": "AnimationGraphSkeletonStruct"
+        },
+        {
+          "type": "struct",
+          "name": "ik",
+          "definition": "AnimationGraphIKStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Animation Pool",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "block",
+          "name": "animations*",
+          "group_tag": "slap",
+          "definition": "animation_pool_block"
+        },
+        {
+          "type": "struct",
+          "name": "pca data",
+          "definition": "AnimationGraphPCADataStruct"
+        },
+        {
+          "type": "block",
+          "name": "composites",
+          "group_tag": "slap",
+          "definition": "g_compositeTag"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Blending and Overlays",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "block",
+          "name": "functions",
+          "group_tag": "slap",
+          "definition": "animation_function_block"
+        },
+        {
+          "type": "block",
+          "name": "blend screens",
+          "group_tag": "slap",
+          "definition": "new_animation_blend_screen_block"
+        },
+        {
+          "type": "block",
+          "name": "function overlays",
+          "group_tag": "slap",
+          "definition": "new_animation_function_overlay_block"
+        },
+        {
+          "type": "block",
+          "name": "overlay groups",
+          "group_tag": "slap",
+          "definition": "overlay_group_definition_block"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Interpolators",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "block",
+          "name": "interpolators",
+          "group_tag": "slap",
+          "definition": "animation_interpolator_block"
+        },
+        {
+          "type": "block",
+          "name": "interpolation sets",
+          "group_tag": "slap",
+          "definition": "animation_interpolation_sets"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Animation Lookup Tables",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "block",
+          "name": "model animation variants",
+          "group_tag": "slap",
+          "definition": "model_animation_variant_block"
+        },
+        {
+          "type": "block",
+          "name": "object function variants",
+          "group_tag": "slap",
+          "definition": "function_driven_variant_block"
+        },
+        {
+          "type": "block",
+          "name": "modes",
+          "group_tag": "slap",
+          "definition": "animation_mode_block"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Special Case Animations",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "block",
+          "name": "vehicle suspension",
+          "group_tag": "slap",
+          "definition": "vehicle_suspension_block"
+        },
+        {
+          "type": "block",
+          "name": "constant overlays",
+          "group_tag": "slap",
+          "definition": "function_overlay_animation_block"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446defa0"
+    },
+    "AnimationGraphExternalReferencesStruct": {
+      "guid": "233c50fdcf434b845324fea49afb404e",
+      "size": 188,
+      "size_string": "sizeof(AnimationGraphExternalReferences)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Links",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "inheritance",
+          "definition": "If needed, specify the parent animation graph and any inheritance settings desired.\nAny animations from the parent graph which are not already present here will be available at runtime,\neven though you will not see them populated in this animation graph."
+        },
+        {
+          "type": "struct",
+          "name": "inheritance",
+          "definition": "AnimationGraphInheritanceSettingsStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "events",
+          "definition": "Keyframe events are stored and edited in an external tag file to support multiple authors.\nThe contents of that tag file will be loaded into this animation graph at runtime."
+        },
+        {
+          "type": "struct",
+          "name": "events",
+          "definition": "AnimationGraphEventReferencesStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "pca animation",
+          "definition": "PCA Blend Shape Animation data is stored in an external file due to it's size.\nIf you do not specify a file here, one will be created for you if blend shape animation is imported."
+        },
+        {
+          "type": "struct",
+          "name": "pca",
+          "definition": "AnimationGraphPCAReferenceStruct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446de3a0"
+    },
+    "AnimationGraphInheritanceSettingsStruct": {
+      "guid": "526525d3454a655e5bbf108cea0b213e",
+      "size": 36,
+      "size_string": "sizeof(AnimationGraphInheritanceSettings)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "parent animation graph",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jmad"
+            ]
+          }
+        },
+        {
+          "type": "long_flags",
+          "name": "inheritance flags",
+          "definition": "public_animation_graph_flags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446de060"
+    },
+    "AnimationGraphEventReferencesStruct": {
+      "guid": "3c6ef62fc44e22261b362eb3d37c6c4d",
+      "size": 120,
+      "size_string": "sizeof(AnimationGraphEventReferences)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "events file|ABCDCC",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "frms"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "sound references|ABCDCC!*#Legacy field - please edit in new frame event tag below",
+          "definition": "SoundEventReferenceSetBlock"
+        },
+        {
+          "type": "block",
+          "name": "dialogue references|ABCDCC!*#Legacy field - please edit in new frame event tag below",
+          "definition": "animation_graph_dialogue_reference_block"
+        },
+        {
+          "type": "block",
+          "name": "effect references|ABCDCC!*#Legacy field - please edit in new frame event tag below",
+          "definition": "EffectEventReferenceSetBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446de170"
+    },
+    "SoundEventReferenceSetBlock_struct": {
+      "guid": "d95aff44bf4fba6229dbb48b1d39cdca",
+      "size": 32,
+      "size_string": "sizeof(struct SoundEventReferenceSet)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^#Give this group of references a name."
+        },
+        {
+          "type": "block",
+          "name": "sounds|ABCDCC",
+          "definition": "SoundEventReferenceBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d52b0"
+    },
+    "SoundEventReferenceBlock": {
+      "guid": "f2920b3b2846d00e6eb7dba1273aa9a8",
+      "size": 108,
+      "size_string": "sizeof(struct SoundEventReference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "sound^",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "key_event_flags_enum"
+        },
+        {
+          "type": "word_flags",
+          "name": "internal_flags!",
+          "definition": "key_event_internal_flags_enum"
+        },
+        {
+          "type": "tag_reference",
+          "name": "model#optional. only allow this event when used on this model",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "hlmt"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "model variant#optional. only allow this event when used on this model variant"
+        },
+        {
+          "type": "tag_reference",
+          "name": "weapon#optional. only allow this event when this weapon is in use",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "weap"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "weapon variant#optional. only allow this event when this weapon variant is in use"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d5070"
+    },
+    "animation_graph_dialogue_reference_block": {
+      "guid": "a618247e04b53a151286e9a6dab50c97",
+      "size": 8,
+      "size_string": "sizeof(AnimationGraphDialogueReference)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "vocalization name^"
+        },
+        {
+          "type": "char_enum",
+          "name": "play restriction",
+          "definition": "k_dialoguePlayRestrictionEnum"
+        },
+        {
+          "type": "pad",
+          "name": "paddingForCharSizeEnum",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d5470"
+    },
+    "EffectEventReferenceSetBlock_struct": {
+      "guid": "0226b8bd874e34dc619591a9c7c8e0fa",
+      "size": 32,
+      "size_string": "sizeof(EffectEventReferenceSet)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^#Give this group of references a name"
+        },
+        {
+          "type": "block",
+          "name": "effects|ABCDCC",
+          "definition": "EffectEventReferenceBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d57e0"
+    },
+    "EffectEventReferenceBlock": {
+      "guid": "5d826a4d88431cca9356c0b45df6ddd3",
+      "size": 108,
+      "size_string": "sizeof(EffectEventReference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "effect^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "key_event_flags_enum"
+        },
+        {
+          "type": "word_flags",
+          "name": "internal_flags!",
+          "definition": "key_event_internal_flags_enum"
+        },
+        {
+          "type": "tag_reference",
+          "name": "model#optional. only allow this event when used on this model",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "hlmt"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "model variant#optional. only allow this event when used on this model variant"
+        },
+        {
+          "type": "tag_reference",
+          "name": "weapon#optional. only allow this event when this weapon is in use",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "hlmt"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "weapon variant#optional. only allow this event when this weapon variant is in use"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d55a0"
+    },
+    "AnimationGraphPCAReferenceStruct": {
+      "guid": "ae635dea254b0b1a9c9743b52f21e0e5",
+      "size": 32,
+      "size_string": "sizeof(AnimationGraphPCAReference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "pca animation|ABCDCC",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "pcaa"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446de290"
+    },
+    "AnimationGraphSettingsStruct": {
+      "guid": "67956f345d48bee0b0b553a142530139",
+      "size": 8,
+      "size_string": "sizeof(AnimationGraphSettings)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Settings",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "word_flags",
+          "name": "graph flags",
+          "definition": "animation_graph_misc_flags"
+        },
+        {
+          "type": "word_flags",
+          "name": "private flags*!",
+          "definition": "animation_graph_private_flags"
+        },
+        {
+          "type": "explanation",
+          "name": "Compression",
+          "definition": "Warning: Changing this compression setting will force that setting on animations in the graph.\nThis is suitable for pre-testing different compression levels, but should not be used long term."
+        },
+        {
+          "type": "short_enum",
+          "name": "force compression setting*",
+          "definition": "compression_force_settings"
+        },
+        {
+          "type": "short_integer",
+          "name": "animation codec pack*!"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446de4c0"
+    },
+    "AnimationGraphSkeletonStruct": {
+      "guid": "591ed5f80f4cc1a1b83e7f93493e4747",
+      "size": 88,
+      "size_string": "sizeof(AnimationGraphSkeleton)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Bones",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "long_integer",
+          "name": "skeleton checksum*!"
+        },
+        {
+          "type": "block",
+          "name": "skeleton bones*|ABCDCC",
+          "group_tag": "slap",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "block",
+          "name": "bone usage*|ABCDCC",
+          "group_tag": "slap",
+          "definition": "animation_usage_block"
+        },
+        {
+          "type": "block",
+          "name": "bone masks|ABCDCC",
+          "group_tag": "slap",
+          "definition": "animation_node_mask_block"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446de5d0"
+    },
+    "animation_graph_node_block": {
+      "guid": "c93ebca14c45a1a82d3f898c6813ac2c",
+      "size": 40,
+      "size_string": "actual_size",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "short_block_index",
+          "name": "next sibling node index*",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "first child node index*",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "parent node index*",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "byte_flags",
+          "name": "model flags*",
+          "definition": "animation_node_model_flags"
+        },
+        {
+          "type": "byte_flags",
+          "name": "node joint flags",
+          "definition": "node_joint_flags"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "base vector*"
+        },
+        {
+          "type": "real",
+          "name": "vector range*"
+        },
+        {
+          "type": "real",
+          "name": "z_pos*"
+        },
+        {
+          "type": "long_integer",
+          "name": "frame_ID1*"
+        },
+        {
+          "type": "long_integer",
+          "name": "frame_ID2*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d4940"
+    },
+    "animation_usage_block": {
+      "guid": "ee552534a342f94e6d34e18115e11367",
+      "size": 4,
+      "size_string": "sizeof(s_animation_node_usage_entry)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "usage^",
+          "definition": "animation_usage_enumeration"
+        },
+        {
+          "type": "short_block_index",
+          "name": "node to use",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dd4a0"
+    },
+    "animation_node_mask_block_struct": {
+      "guid": "b1a3c352224c226f083c368953e5f3e0",
+      "size": 100,
+      "size_string": "sizeof(s_animation_node_mask)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "node_mask_flags"
+        },
+        {
+          "type": "short_block_index",
+          "name": "chain start",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "block",
+          "name": "chain ends",
+          "definition": "animation_node_mask_entry_block"
+        },
+        {
+          "type": "block",
+          "name": "nodes",
+          "definition": "animation_node_mask_entry_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "add nodes",
+          "definition": "animation_node_mask_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "remove nodes",
+          "definition": "animation_node_mask_block"
+        },
+        {
+          "type": "array",
+          "name": "node flags!",
+          "definition": "g_node_flag_storage_array"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d4c90"
+    },
+    "animation_node_mask_entry_block": {
+      "guid": "1fbe9d7aed4d2b6a4d2103be36d864d9",
+      "size": 4,
+      "size_string": "sizeof(s_animation_node_mask_entry)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "node^",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "pad",
+          "name": "anbfp",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d4a70"
+    },
+    "g_node_flag_storage_array": {
+      "guid": "962e38fa54470031dd7a3ba74c13aac9",
+      "size": 4,
+      "size_string": "sizeof(c_big_flags_chunk_type)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "flag data"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d4810"
+    },
+    "AnimationGraphIKStruct": {
+      "guid": "4b62e657a540d5f40cec3ba546fa1e42",
+      "size": 112,
+      "size_string": "sizeof(AnimationGraphIK)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "IK",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "IK Junctions",
+          "definition": "IK Junctions are rigid parts of the IK solver. Hips and Shoulder areas, for exampleThese are optional, but required when full-body IK influence is desired"
+        },
+        {
+          "type": "block",
+          "name": "ik junctions|CCBBAA",
+          "group_tag": "slap",
+          "definition": "animation_ik_junction_block"
+        },
+        {
+          "type": "explanation",
+          "name": "IK Chains",
+          "definition": "IK chains define full limbs like arms and legs. These are controlled byanimation events to lock the limb endpoints to key locations. They are also used to connect junctions"
+        },
+        {
+          "type": "block",
+          "name": "ik chains|CCBBAA",
+          "group_tag": "slap",
+          "definition": "animation_ik_chain_block"
+        },
+        {
+          "type": "explanation",
+          "name": "Points and Sets",
+          "definition": "Define a set of IK connection points, and combine them into sets.\nYou can then references these ik sets in the Mode & State tree below."
+        },
+        {
+          "type": "block",
+          "name": "ik point|CCBBAA",
+          "group_tag": "slap",
+          "definition": "animation_ik_block"
+        },
+        {
+          "type": "block",
+          "name": "ik sets|CCBBAA",
+          "group_tag": "slap",
+          "definition": "animation_ik_set"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446de6f0"
+    },
+    "animation_ik_junction_block": {
+      "guid": "30ebfe878743a643d1f9be9ac8e005ee",
+      "size": 16,
+      "size_string": "sizeof(AnimationIKJunction)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "short_block_index",
+          "name": "pivot node",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "parent junction!",
+          "definition": "animation_ik_junction_block"
+        },
+        {
+          "type": "short_integer",
+          "name": "supporting chain!"
+        },
+        {
+          "type": "short_block_index",
+          "name": "supporting node!",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "real_fraction",
+          "name": "pull passthrough"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446da3a0"
+    },
+    "animation_ik_chain_block_struct": {
+      "guid": "038867f14a450b3bd3b5c8963f2a9dba",
+      "size": 120,
+      "size_string": "sizeof(s_animation_ik_chain)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "short_enum",
+          "name": "type",
+          "definition": "animation_ik_chain_type_enumeration"
+        },
+        {
+          "type": "short_block_index",
+          "name": "start node{grandparent node}",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "effector node",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "parent junction!",
+          "definition": "animation_ik_junction_block"
+        },
+        {
+          "type": "short_integer",
+          "name": "rank!#calculated during post process where rank is default ordinal for solving"
+        },
+        {
+          "type": "short_integer",
+          "name": "antecedents!#calculated during post process where bit index represents chain index"
+        },
+        {
+          "type": "block",
+          "name": "special joints#add any joints you want skipped, or mark second hinges in limbs for z-legs",
+          "definition": "animation_ik_chain_joint_block"
+        },
+        {
+          "type": "explanation",
+          "name": "Pull settings",
+          "definition": "Controls how much the chain can push or pull it's parent junction"
+        },
+        {
+          "type": "real_fraction",
+          "name": "native pull strength#how much this chain wants to pull it's junction, even when not fully extended"
+        },
+        {
+          "type": "real_fraction",
+          "name": "native push strength#how much this chain wants to push it's junction, even when not fully extended"
+        },
+        {
+          "type": "real_fraction",
+          "name": "over extent pull strength#how much this chain wants to pull it's junction when beyond full extension"
+        },
+        {
+          "type": "real_fraction",
+          "name": "under extent push strength#how much this chain wants to push it's junction when below min extension"
+        },
+        {
+          "type": "explanation",
+          "name": "Effector Cone Limits",
+          "definition": "Limits the effector node to a cone centered on the starting node"
+        },
+        {
+          "type": "real_fraction",
+          "name": "effector cone limit power#how strongly we enforce that the end effector is in the cone defined below, when compared to the bind pose"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "pitch bounds:degrees#pitch angles of the limiting cone. 0= bind pose angle"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "yaw bounds:degrees#yaw angles of the limiting cone. 0= bind pose angle"
+        },
+        {
+          "type": "real_bounds",
+          "name": "offset bounds#distance bounds of the limiting cone. 0= bind pose distance"
+        },
+        {
+          "type": "block",
+          "name": "full joint chain!",
+          "definition": "animation_ik_chain_joint_block"
+        },
+        {
+          "type": "real_fraction",
+          "name": "spline reversal strength#how much this chain well bend backwards, when required"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446da710"
+    },
+    "animation_ik_chain_joint_block": {
+      "guid": "e8fd5652dd46e46fce153b90b04190ba",
+      "size": 4,
+      "size_string": "sizeof(AnimationIKJoint)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "joint index",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "animation_ik_chain_joint_flags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446da4d0"
+    },
+    "animation_ik_block": {
+      "guid": "f9322373894d6ad353b31588fc396ac3",
+      "size": 40,
+      "size_string": "sizeof(struct s_animation_ik_point)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "string_id",
+          "name": "source marker#the marker name on this object where the point of attachment is"
+        },
+        {
+          "type": "long_enum",
+          "name": "attach to",
+          "definition": "animation_ik_target_enum_definition"
+        },
+        {
+          "type": "string_id",
+          "name": "destination marker#the marker name of the attachment destination point"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "pole marker"
+        },
+        {
+          "type": "long_block_index",
+          "name": "chain to use#will be auto-set to the nearest chain if you don't name one",
+          "definition": "animation_ik_chain_block"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "weight source object function#allows a function to turn this IK point on or off"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "priority source object function#allows a function to adjust the priority of this chain in the full body solve"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446da980"
+    },
+    "animation_ik_set": {
+      "guid": "32df56bcdf4cd0c0f16b3dbcd8507c5e",
+      "size": 36,
+      "size_string": "sizeof(s_animation_ik_set)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "AnimationIKSetFlags"
+        },
+        {
+          "type": "block",
+          "name": "ik points|CCBBAA",
+          "definition": "animation_ik_set_item"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dabe0"
+    },
+    "animation_ik_set_item": {
+      "guid": "ede244b3f74c875939b2908522ea3dfb",
+      "size": 4,
+      "size_string": "sizeof(s_animation_ik_set_item)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "ik point^",
+          "definition": "animation_ik_block"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "animation_ik_set_item_flags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446daab0"
+    },
+    "animation_pool_block_struct": {
+      "guid": "743e06abf54d122debf4c79f389b6a6b",
+      "size": 92,
+      "size_string": "sizeof(c_model_animation)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*^"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "short_integer",
+          "name": "frame count*"
+        },
+        {
+          "type": "byte_integer",
+          "name": "node count*"
+        },
+        {
+          "type": "char_enum",
+          "name": "animation type*",
+          "definition": "animation_type_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "frame info type*",
+          "definition": "frame_info_type_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "desired frame info type*!",
+          "definition": "frame_info_type_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "desired compression#To change compression, set this value and re-import the sidecar to make it current.",
+          "definition": "compression_settings"
+        },
+        {
+          "type": "char_enum",
+          "name": "current compression*#the current compression method used.",
+          "definition": "compression_settings"
+        },
+        {
+          "type": "short_block_index",
+          "name": "parent animation*!",
+          "definition": "animation_pool_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "next animation*!",
+          "definition": "animation_pool_block"
+        },
+        {
+          "type": "real",
+          "name": "weight#When variants are available, the weight values determine how often each is used. All weights are normalized, so the values can be anything you like."
+        },
+        {
+          "type": "short_integer",
+          "name": "loop frame index#For looping animations, the frame index to return to after completing the first loop."
+        },
+        {
+          "type": "word_flags",
+          "name": "user flags!{playback flags}",
+          "definition": "animation_index_flags"
+        },
+        {
+          "type": "real",
+          "name": "override blend in time!{override blend time}#The desired interpolation frame count into this anim. If 0, the default value 8 will be used. To disable interpolation, see the flags above."
+        },
+        {
+          "type": "real",
+          "name": "override blend out time!#The desired interpolation frame count out of this anim. If 0, the default value 8 will be used. To disable interpolation, see the flags above."
+        },
+        {
+          "type": "word_flags",
+          "name": "production flags!",
+          "definition": "production_status_flags"
+        },
+        {
+          "type": "short_block_index",
+          "name": "composite*",
+          "definition": "g_compositeTag"
+        },
+        {
+          "type": "string_id",
+          "name": "pca group name#Name of the PCA compression group to add this animation's blend shapes to. Must match one of the PCA Groups defined."
+        },
+        {
+          "type": "word_flags",
+          "name": "internal flags*!",
+          "definition": "internal_animation_flags"
+        },
+        {
+          "type": "short_integer",
+          "name": "compressor_version*!"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "heading*!"
+        },
+        {
+          "type": "real",
+          "name": "heading angle*!"
+        },
+        {
+          "type": "real",
+          "name": "average translation magnitude*!"
+        },
+        {
+          "type": "real",
+          "name": "average pivot yaw*!"
+        },
+        {
+          "type": "real",
+          "name": "original object space yaw*!"
+        },
+        {
+          "type": "real",
+          "name": "maxElevationOffset*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "uid*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "node list checksum*!"
+        },
+        {
+          "type": "struct",
+          "name": "resource index*",
+          "definition": "AnimationResourceIndex_TagStruct"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtimeUseCounter*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d7e60"
+    },
+    "g_compositeTag_struct": {
+      "guid": "1abb71ceed45ab5074c8c79064f67f04",
+      "size": 124,
+      "size_string": "sizeof(CompositeTag)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*^"
+        },
+        {
+          "type": "block",
+          "name": "axes*",
+          "definition": "CompositeAxisDefinition"
+        },
+        {
+          "type": "block",
+          "name": "anims*",
+          "definition": "CompositeEntryDefinition"
+        },
+        {
+          "type": "block",
+          "name": "sets*",
+          "definition": "CompositePhaseSetDefinition"
+        },
+        {
+          "type": "block",
+          "name": "strings*",
+          "definition": "StringBlock"
+        },
+        {
+          "type": "string_id",
+          "name": "timing source"
+        },
+        {
+          "type": "short_integer",
+          "name": "timingAnimIndex*!"
+        },
+        {
+          "type": "short_integer",
+          "name": "medianThrottleMag*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e2b80"
+    },
+    "CompositeAxisDefinition": {
+      "guid": "2ee68d1644480a9be48e388a8ef740e4",
+      "size": 76,
+      "size_string": "sizeof(CompositeAxis)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*!^"
+        },
+        {
+          "type": "string_id",
+          "name": "animation source*"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "input function"
+        },
+        {
+          "type": "real_bounds",
+          "name": "animation bounds"
+        },
+        {
+          "type": "real_bounds",
+          "name": "input bounds"
+        },
+        {
+          "type": "real_bounds",
+          "name": "clamp bounds"
+        },
+        {
+          "type": "real",
+          "name": "blend limit*"
+        },
+        {
+          "type": "block",
+          "name": "dead zones",
+          "definition": "CompositeDeadZoneDefinition"
+        },
+        {
+          "type": "char_integer",
+          "name": "divisions*"
+        },
+        {
+          "type": "char_integer",
+          "name": "priority*"
+        },
+        {
+          "type": "char_integer",
+          "name": "update*"
+        },
+        {
+          "type": "char_integer",
+          "name": "functionIndex*"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags*",
+          "definition": "CompositeAxisFlags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e1e50"
+    },
+    "CompositeDeadZoneDefinition": {
+      "guid": "ca4fe3482f469e2cdcf247ad97a1f4ff",
+      "size": 28,
+      "size_string": "sizeof(CompositeDeadZone)",
+      "fields": [
+        {
+          "type": "real_bounds",
+          "name": "bounds"
+        },
+        {
+          "type": "real",
+          "name": "rate"
+        },
+        {
+          "type": "real",
+          "name": "center*!"
+        },
+        {
+          "type": "real",
+          "name": "radius*!"
+        },
+        {
+          "type": "real",
+          "name": "amount*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "delay*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e1d20"
+    },
+    "CompositeEntryDefinition": {
+      "guid": "7598af76634625e01b32bfa0793dee0e",
+      "size": 40,
+      "size_string": "sizeof(CompositeEntry)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "source^"
+        },
+        {
+          "type": "block",
+          "name": "values*",
+          "definition": "CompositeEntryValueDefinition"
+        },
+        {
+          "type": "long_integer",
+          "name": "overridden*!"
+        },
+        {
+          "type": "short_integer",
+          "name": "animIndex*!"
+        },
+        {
+          "type": "char_integer",
+          "name": "slideAxis*"
+        },
+        {
+          "type": "pad",
+          "name": "PAD",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e2360"
+    },
+    "CompositeEntryValueDefinition": {
+      "guid": "324b6e2c074a82e35d6f5ab9b651f81f",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "value^"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e1f80"
+    },
+    "CompositePhaseSetDefinition": {
+      "guid": "1ad76d1c2044ed07003ae497da04265f",
+      "size": 188,
+      "size_string": "sizeof(CompositePhaseSet)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*^"
+        },
+        {
+          "type": "string_id",
+          "name": "timing source"
+        },
+        {
+          "type": "block",
+          "name": "sync points",
+          "definition": "SyncKeyBlock"
+        },
+        {
+          "type": "data",
+          "name": "sync frames*!",
+          "definition": "SyncFramesDefinition"
+        },
+        {
+          "type": "data",
+          "name": "facets*",
+          "definition": "FacetDefinition"
+        },
+        {
+          "type": "data",
+          "name": "neighbors*",
+          "definition": "NeighborsDefinition"
+        },
+        {
+          "type": "data",
+          "name": "containment*",
+          "definition": "ContainmentDefinition"
+        },
+        {
+          "type": "data",
+          "name": "example grid*",
+          "definition": "GridDefinition"
+        },
+        {
+          "type": "real_bounds",
+          "name": "normalized bounds"
+        },
+        {
+          "type": "char_integer",
+          "name": "offset*"
+        },
+        {
+          "type": "pad",
+          "name": "PAD",
+          "definition": 1
+        },
+        {
+          "type": "short_integer",
+          "name": "timingAnimIndex*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e25c0"
+    },
+    "SyncKeyBlock": {
+      "guid": "8fc53cfbd949d9fa8f25798885107d35",
+      "size": 2,
+      "size_string": "sizeof(c_animation_frame_event_type)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "key*^",
+          "definition": "frame_event_type_new"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e1bf0"
+    },
+    "StringBlock": {
+      "guid": "d81650b7fd4f3cea1515198732318056",
+      "size": 4,
+      "size_string": "sizeof(string_id)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name*^"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e1ac0"
+    },
+    "AnimationResourceIndex_TagStruct": {
+      "guid": "ef648428a2476f68806b309566328895",
+      "size": 4,
+      "size_string": "sizeof(AnimationResourceIndex)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "resource group*",
+          "definition": "model_animation_tag_resource_group"
+        },
+        {
+          "type": "short_integer",
+          "name": "resource member index*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d7d50"
+    },
+    "model_animation_tag_resource_group": {
+      "guid": "506c8447f54ac72672edbd8cf6582497",
+      "size": 20,
+      "size_string": "sizeof(c_model_animation_tag_refrence_counted_resource)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "reference_count*"
+        },
+        {
+          "type": "tag_resource",
+          "name": "tag_resource",
+          "definition": "model_animation_tag_resource"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e0100"
+    },
+    "model_animation_tag_resource_struct": {
+      "guid": "e69b4309b148da3b2ead4799110628a1",
+      "size": 28,
+      "size_string": "sizeof(c_model_animation_tag_animation_group_resource)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "group_members",
+          "definition": "model_animation_tag_resource_member"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dffd0"
+    },
+    "model_animation_tag_resource_member": {
+      "guid": "0e794af85c4c49bb125bd8a52ca15897",
+      "size": 448,
+      "size_string": "sizeof(c_model_animation_tag_resource_member)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "dword_integer",
+          "name": "animation_checksum"
+        },
+        {
+          "type": "short_integer",
+          "name": "frame count*"
+        },
+        {
+          "type": "char_integer",
+          "name": "node count*"
+        },
+        {
+          "type": "char_enum",
+          "name": "movement_data_type*",
+          "definition": "frame_info_type_enum"
+        },
+        {
+          "type": "struct",
+          "name": "data blocks*!",
+          "definition": "animation_data_block_struct"
+        },
+        {
+          "type": "struct",
+          "name": "data sizes*!",
+          "definition": "packed_data_sizes_struct"
+        },
+        {
+          "type": "data",
+          "name": "animation_data*",
+          "definition": "aligned_animation_data_definition_v1"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dfeb0"
+    },
+    "animation_data_block_struct": {
+      "guid": "4d165ae3a0455d523e52a4834f61263f",
+      "size": 336,
+      "size_string": "sizeof(AnimationEventBlocks)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "a!",
+          "definition": "IMPORTANT NOTES ABOUT FRAME EVENTS\n1) The following four fields (hidden except in expert mode) are legacy Halo3-style tag blocks.\n2) New frame events (attached to animations in Maya) will automagically be exported to\n   the frame_event_list any time a model sidecar is imported with the tool import command.\n3) Do not add new frame events, fx events, audio events, or dialog events here.  Instead,\n   please use the frame_event_list tag referenced in 'imported events' (it's right above the\n   'animations' tag block).\n4) The only time you should be editing the following hidden fields is to remove legacy\n   frame events that have been replaced by events generated in Maya.\n"
+        },
+        {
+          "type": "block",
+          "name": "frame events|ABCDCC!*#Legacy field - please edit in new frame event tag below",
+          "definition": "animation_frame_event_block"
+        },
+        {
+          "type": "block",
+          "name": "sound events|ABCDCC!*#Legacy field - please edit in new frame event tag below",
+          "definition": "animation_sound_event_block"
+        },
+        {
+          "type": "block",
+          "name": "effect events|ABCDCC!*#Legacy field - please edit in new frame event tag below",
+          "definition": "animation_effect_event_block"
+        },
+        {
+          "type": "block",
+          "name": "dialogue events|ABCDCC!*#Legacy field - please edit in new frame event tag below",
+          "definition": "animation_dialogue_event_block"
+        },
+        {
+          "type": "explanation",
+          "name": "b!",
+          "definition": ""
+        },
+        {
+          "type": "block",
+          "name": "object-space parent nodes|ABCDCC",
+          "definition": "object_space_node_data_block"
+        },
+        {
+          "type": "block",
+          "name": "object space offset nodes|ABCDCC",
+          "definition": "object_space_offset_node_block"
+        },
+        {
+          "type": "block",
+          "name": "forward-invert kinetic anchor nodes|ABCDCC",
+          "definition": "fik_anchor_node_block"
+        },
+        {
+          "type": "block",
+          "name": "ik chain events*!",
+          "definition": "animation_ik_chain_events"
+        },
+        {
+          "type": "block",
+          "name": "ik chain proxies*!",
+          "definition": "animation_ik_chain_proxies"
+        },
+        {
+          "type": "block",
+          "name": "facial wrinkle events*!",
+          "definition": "animation_facial_wrinkle_events"
+        },
+        {
+          "type": "block",
+          "name": "extended data events*!",
+          "definition": "animation_extended_events"
+        },
+        {
+          "type": "block",
+          "name": "animation object functions",
+          "definition": "animation_object_functions"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d74e0"
+    },
+    "animation_frame_event_block_struct": {
+      "guid": "5424544b40456308469d8994e131f57c",
+      "size": 4,
+      "size_string": "sizeof(struct s_frame_event)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "type",
+          "definition": "frame_event_type_new"
+        },
+        {
+          "type": "short_integer",
+          "name": "frame"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d5a10"
+    },
+    "animation_sound_event_block": {
+      "guid": "a2c45bb33545e813b04bdc992fee7a8c",
+      "size": 8,
+      "size_string": "sizeof(struct s_sound_event)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "sound",
+          "definition": "SoundEventReferenceSetBlock"
+        },
+        {
+          "type": "short_integer",
+          "name": "frame"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "marker name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d5b40"
+    },
+    "animation_effect_event_block": {
+      "guid": "3007cde4c942838a0beea8b1c941e473",
+      "size": 8,
+      "size_string": "actual_size",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "effect",
+          "definition": "EffectEventReferenceSetBlock"
+        },
+        {
+          "type": "short_integer",
+          "name": "frame"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "marker name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d5c70"
+    },
+    "animation_dialogue_event_block": {
+      "guid": "6348842a3c47ad9a3e5ca7930e6fbfd1",
+      "size": 4,
+      "size_string": "sizeof(struct s_dialogue_event)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "dialogue event",
+          "definition": "animation_dialogue_event_enum"
+        },
+        {
+          "type": "short_integer",
+          "name": "frame"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d5da0"
+    },
+    "object_space_node_data_block": {
+      "guid": "47cdbc27a147c104774a4d9d02e716fa",
+      "size": 28,
+      "size_string": "sizeof(struct s_object_space_node_data)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "node index{node_index}^",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags*",
+          "definition": "object_space_node_flags"
+        },
+        {
+          "type": "struct",
+          "name": "parent orientation{orientation}*",
+          "definition": "quantized_orientation_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d6360"
+    },
+    "quantized_orientation_struct": {
+      "guid": "36384a21dd456c14225d31915deecb78",
+      "size": 24,
+      "size_string": "sizeof(c_quantized_orientation)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "rotation x*"
+        },
+        {
+          "type": "short_integer",
+          "name": "rotation y*"
+        },
+        {
+          "type": "short_integer",
+          "name": "rotation z*"
+        },
+        {
+          "type": "short_integer",
+          "name": "rotation w*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "default translation*"
+        },
+        {
+          "type": "real",
+          "name": "default scale*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d6100"
+    },
+    "object_space_offset_node_block": {
+      "guid": "82b80ff1224f15002f94f88b8aaeebbb",
+      "size": 4,
+      "size_string": "sizeof(struct s_object_space_offset_node_reference)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "object space offset node^",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "pad",
+          "name": "wsonbp",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d65c0"
+    },
+    "fik_anchor_node_block": {
+      "guid": "166e21344b416ab25c51c0a0ff5c6f92",
+      "size": 4,
+      "size_string": "sizeof(struct s_fik_anchor_node_reference)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "anchor node^",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "pad",
+          "name": "dse",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d66f0"
+    },
+    "animation_ik_chain_events_struct": {
+      "guid": "e50131095e4d2b2cdef51ab716e49b69",
+      "size": 28,
+      "size_string": "sizeof(s_animation_ik_chain_event)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "REFERENCE IK CHAIN INFO",
+          "definition": ""
+        },
+        {
+          "type": "string_id",
+          "name": "chain name"
+        },
+        {
+          "type": "short_enum",
+          "name": "chain type",
+          "definition": "animation_ik_chain_type_enumeration"
+        },
+        {
+          "type": "short_block_index",
+          "name": "chain start node",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "chain effector node",
+          "definition": "animation_graph_node_block"
+        },
+        {
+          "type": "explanation",
+          "name": "IMPORTED IK CHAIN INFO",
+          "definition": ""
+        },
+        {
+          "type": "short_enum",
+          "name": "chain usage",
+          "definition": "animation_ik_chain_event_usage"
+        },
+        {
+          "type": "string_id",
+          "name": "proxy marker"
+        },
+        {
+          "type": "long_integer",
+          "name": "proxy id"
+        },
+        {
+          "type": "char_enum",
+          "name": "event type",
+          "definition": "animation_ik_chain_event_type"
+        },
+        {
+          "type": "byte_integer",
+          "name": "effector transform data index"
+        },
+        {
+          "type": "byte_integer",
+          "name": "effector weight data index"
+        },
+        {
+          "type": "byte_integer",
+          "name": "pole point data index"
+        },
+        {
+          "type": "explanation",
+          "name": "POST PROCESS IK CHAIN INFO",
+          "definition": ""
+        },
+        {
+          "type": "byte_integer",
+          "name": "chain index"
+        },
+        {
+          "type": "pad",
+          "name": "aikcep",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d6800"
+    },
+    "animation_ik_chain_proxies_struct": {
+      "guid": "c4001accbb4f8d0351301f8fe04796a1",
+      "size": 12,
+      "size_string": "sizeof(s_animation_ik_chain_proxy)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "id"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "target marker"
+        },
+        {
+          "type": "byte_integer",
+          "name": "proxy transform data index"
+        },
+        {
+          "type": "pad",
+          "name": "aikcpp",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d6c60"
+    },
+    "animation_facial_wrinkle_events_struct": {
+      "guid": "bab2785d754c20415442c2aae13d38a7",
+      "size": 20,
+      "size_string": "sizeof(s_animation_wrinkle_event)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "REFERENCE FACIAL WRINKLE EVENT INFO",
+          "definition": ""
+        },
+        {
+          "type": "string_id",
+          "name": "wrinkle name"
+        },
+        {
+          "type": "real",
+          "name": "default value"
+        },
+        {
+          "type": "explanation",
+          "name": "IMPORTED FACIAL WRINKLE INFO",
+          "definition": ""
+        },
+        {
+          "type": "short_integer",
+          "name": "start frame"
+        },
+        {
+          "type": "short_integer",
+          "name": "frame count"
+        },
+        {
+          "type": "char_enum",
+          "name": "region",
+          "definition": "animation_facial_wrinkle_region"
+        },
+        {
+          "type": "pad",
+          "name": "PADDNG",
+          "definition": 3
+        },
+        {
+          "type": "explanation",
+          "name": "POST PROCESS WRINKLE EVENT INFO",
+          "definition": ""
+        },
+        {
+          "type": "short_integer",
+          "name": "wrinkle data index"
+        },
+        {
+          "type": "pad",
+          "name": "aikcep",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d6920"
+    },
+    "animation_extended_events_struct": {
+      "guid": "41f5b720a94f6b87ac765fadfab46726",
+      "size": 16,
+      "size_string": "sizeof(s_animation_extended_event)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "IMPORTED EXTENDED DATA EVENT INFO",
+          "definition": ""
+        },
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "short_integer",
+          "name": "start frame"
+        },
+        {
+          "type": "short_integer",
+          "name": "frame count"
+        },
+        {
+          "type": "real",
+          "name": "default value"
+        },
+        {
+          "type": "short_integer",
+          "name": "data index"
+        },
+        {
+          "type": "pad",
+          "name": "pants",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d6a30"
+    },
+    "animation_object_functions_struct": {
+      "guid": "e22e6b2c484c97fcf0f7279114e9f8eb",
+      "size": 40,
+      "size_string": "sizeof(s_animation_object_function)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "real_name!*"
+        },
+        {
+          "type": "long_enum",
+          "name": "name",
+          "definition": "animation_object_function_name"
+        },
+        {
+          "type": "short_integer",
+          "name": "start frame"
+        },
+        {
+          "type": "short_integer",
+          "name": "frame count"
+        },
+        {
+          "type": "struct",
+          "name": "function curve",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d6b50"
+    },
+    "scalar_function_named_struct": {
+      "guid": "8992cb721e48760251a36794187c6df5",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738e30"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "packed_data_sizes_struct": {
+      "guid": "a228be1ff24106841e1452882e4ad502",
+      "size": 72,
+      "size_string": "sizeof(c_animation_data_sizes)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "static_node_flags!"
+        },
+        {
+          "type": "long_integer",
+          "name": "animated_node_flags!"
+        },
+        {
+          "type": "long_integer",
+          "name": "movement_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "pill_offset_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "default_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "uncompressed_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "compressed_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "blend_screen_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "object_space_offset_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "ik_chain_event_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "ik_chain_control_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "ik_chain_proxy_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "ik_chain_pole_vector_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "uncompressed_object_space_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "fik_anchor_data!"
+        },
+        {
+          "type": "long_integer",
+          "name": "uncompressed_object_space_node_flags!"
+        },
+        {
+          "type": "long_integer",
+          "name": "compressed_event_curve!"
+        },
+        {
+          "type": "long_integer",
+          "name": "compressed_static_pose!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d5ff0"
+    },
+    "AnimationGraphPCADataStruct": {
+      "guid": "91e865e2fb483bf592a2669bcaca9b07",
+      "size": 36,
+      "size_string": "sizeof(AnimationGraphPCAData)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "PCA Groups",
+          "definition": "For each PCA Group desired, provide a unique name and desired number of blend shapes.\nThen, assign animations to these groups by setting their pca group name field.\nThis is how blend shapes animations are grouped for compression."
+        },
+        {
+          "type": "block",
+          "name": "PCA Groups",
+          "definition": "PCAGroupSettingsBlock"
+        },
+        {
+          "type": "long_integer",
+          "name": "PCA Animation Count*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "PCA Checksum*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ddf40"
+    },
+    "PCAGroupSettingsBlock_struct": {
+      "guid": "731505408e4989008d18de9850183347",
+      "size": 36,
+      "size_string": "sizeof(PCAGroupSettings)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Group Name^"
+        },
+        {
+          "type": "long_integer",
+          "name": "Desired Mesh Count"
+        },
+        {
+          "type": "explanation",
+          "name": "PCA Component Importance",
+          "definition": "The PCA compression algorithm treats position, normal, and tension data as equally\nimportant when calculating error.  Use the values below to prioritize various\ncomponenents so they are \"more important\" when determining error, and therefore\nare higher proirity for the algorithm to make accurate."
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "Position Importance Scale"
+        },
+        {
+          "type": "real_vector_2d",
+          "name": "Normal Importance Scale"
+        },
+        {
+          "type": "real_vector_2d",
+          "name": "Tension Importance Scale"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d7820"
+    },
+    "animation_function_block": {
+      "guid": "e1d36deac147a442fd008aa6081268dd",
+      "size": 32,
+      "size_string": "sizeof(s_animation_function)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d4e30"
+    },
+    "new_animation_blend_screen_block_struct": {
+      "guid": "544f9aa1094b70339b288988ee74dacb",
+      "size": 48,
+      "size_string": "sizeof(AnimationBlendScreenDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "blend_screen_definition_flags"
+        },
+        {
+          "type": "real",
+          "name": "weight"
+        },
+        {
+          "type": "real_fraction",
+          "name": "interpolation rate:[0,1]#A value of zero or one means no interpolation."
+        },
+        {
+          "type": "short_enum",
+          "name": "yaw source",
+          "definition": "blend_screen_variable_sources"
+        },
+        {
+          "type": "short_enum",
+          "name": "pitch source",
+          "definition": "blend_screen_variable_sources"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "yaw source object function#if used, make sure you set the yaw source to 'object function'"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "pitch source object function#if used, make sure you set the pitch source to 'object function'"
+        },
+        {
+          "type": "short_enum",
+          "name": "weight source#the primary weight control source",
+          "definition": "blend_screen_weight_sources"
+        },
+        {
+          "type": "short_enum",
+          "name": "secondary weight source#the optional secondary weight control source. Modulated with the primary if used.",
+          "definition": "blend_screen_weight_sources"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "weight source object function#if used, make sure you set the weight source to 'object function'"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "secondary weight object function#if used, make sure you set the secondary weight source to 'object function'"
+        },
+        {
+          "type": "short_block_index",
+          "name": "weight function#Function applied to input from weight function source",
+          "definition": "animation_function_block"
+        },
+        {
+          "type": "pad",
+          "name": "nabsbfp1",
+          "definition": 2
+        },
+        {
+          "type": "struct",
+          "name": "animation{animation info}",
+          "definition": "animation_index_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d9db0"
+    },
+    "animation_index_struct": {
+      "guid": "5d893c5f1647efa14dfb43aad2381e05",
+      "size": 4,
+      "size_string": "sizeof(c_animation_id)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "graph index!"
+        },
+        {
+          "type": "short_block_index",
+          "name": "animation",
+          "definition": "animation_pool_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d8490"
+    },
+    "new_animation_function_overlay_block": {
+      "guid": "4472c291064bfd40b1aabdacb91abf42",
+      "size": 40,
+      "size_string": "sizeof(s_new_animation_function_overlay)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "function_overlay_definition_flags"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "frame ratio object function"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "playback speed object function"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "blend weight object function"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "unlock function#function output must match unlock value for this overlay to play"
+        },
+        {
+          "type": "real_bounds",
+          "name": "unlock range#Unlocks this overlay when the unlock function values falls in this range. Unused when function isn't specified"
+        },
+        {
+          "type": "struct",
+          "name": "animation",
+          "definition": "animation_index_struct"
+        },
+        {
+          "type": "short_integer",
+          "name": "start LOD taper#Percent of screen size at which we start to taper off application of the function overlay"
+        },
+        {
+          "type": "short_integer",
+          "name": "end LOD taper#Percent of screen size at which we disable application of the function overlay"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d9ee0"
+    },
+    "overlay_group_definition_block": {
+      "guid": "aa8ec2b05c4592ad7014f7bc07256d11",
+      "size": 60,
+      "size_string": "sizeof(struct s_overlay_group)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "block",
+          "name": "blend screens{blend screen}|CCBBAA",
+          "definition": "blend_screen_item_definition_block"
+        },
+        {
+          "type": "block",
+          "name": "function overlays|CCBBAA",
+          "definition": "function_overlay_item_definition_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446da270"
+    },
+    "blend_screen_item_definition_block": {
+      "guid": "f956d0e86b4c96e443cb17b27b7c2650",
+      "size": 8,
+      "size_string": "sizeof(struct s_blend_screen_item)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "blend screen^",
+          "definition": "new_animation_blend_screen_block"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "pose_overlay_item_definition_block_flags"
+        },
+        {
+          "type": "short_block_index",
+          "name": "node mask",
+          "definition": "animation_node_mask_block"
+        },
+        {
+          "type": "pad",
+          "name": "bsidbfp",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446da010"
+    },
+    "function_overlay_item_definition_block": {
+      "guid": "6fc6cd88a64433ed93db32985599c949",
+      "size": 4,
+      "size_string": "sizeof(struct s_function_overlay_item)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "function overlay^",
+          "definition": "new_animation_function_overlay_block"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "pose_overlay_item_definition_block_flags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446da140"
+    },
+    "animation_interpolator_block": {
+      "guid": "3550d58d1341026bdb131a83b5b7b7b2",
+      "size": 36,
+      "size_string": "sizeof(struct AnimationInterpolator)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^#name of this interpolator"
+        },
+        {
+          "type": "long_block_index",
+          "name": "bone mask#bones this interpolator applies to",
+          "definition": "animation_node_mask_block"
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d8d90"
+    },
+    "animation_interpolation_sets_struct": {
+      "guid": "b29eace50442b59369349a8fe5b4ba85",
+      "size": 64,
+      "size_string": "sizeof(AnimationInterpolationSet)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^#name of this interpolation set"
+        },
+        {
+          "type": "real",
+          "name": "seconds#total interpolation time in seconds. recommended value= 0.25"
+        },
+        {
+          "type": "block",
+          "name": "interpolators",
+          "definition": "animation_interpolation_entries"
+        },
+        {
+          "type": "struct",
+          "name": "default curve#for all bones not included in specific interpolators above",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d8fd0"
+    },
+    "animation_interpolation_entries": {
+      "guid": "2765f72dbb42f4e24ff78f87178244d3",
+      "size": 4,
+      "size_string": "sizeof(struct AnimationInterpolationEntry)",
+      "fields": [
+        {
+          "type": "long_block_index",
+          "name": "interpolator^",
+          "definition": "animation_interpolator_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d8ec0"
+    },
+    "model_animation_variant_block": {
+      "guid": "7eaa63fd5840880cd94ca79fa6bcb153",
+      "size": 32,
+      "size_string": "sizeof(s_model_animation_variant)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "variant name^"
+        },
+        {
+          "type": "block",
+          "name": "mode or stance aliases",
+          "definition": "mode_or_stance_alias_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dd750"
+    },
+    "mode_or_stance_alias_block_struct": {
+      "guid": "fc0ac1c7ff4592362225018fa65f3a3a",
+      "size": 8,
+      "size_string": "sizeof(s_mode_or_stance_alias)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "mode or stance"
+        },
+        {
+          "type": "string_id",
+          "name": "alias"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dd5b0"
+    },
+    "function_driven_variant_block": {
+      "guid": "2e5675d28343554759063d892dbc4d26",
+      "size": 32,
+      "size_string": "sizeof(s_function_driven_variant)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "function name^"
+        },
+        {
+          "type": "block",
+          "name": "mode or stance aliases",
+          "definition": "mode_or_stance_alias_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dd880"
+    },
+    "animation_mode_block": {
+      "guid": "44d7898d3c43e783a6432ab9e4433e06",
+      "size": 68,
+      "size_string": "sizeof(c_animation_mode)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "label^"
+        },
+        {
+          "type": "short_block_index",
+          "name": "overlay group{pose overlay|overlay}",
+          "definition": "overlay_group_definition_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "ik set",
+          "definition": "animation_ik_set"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags*",
+          "definition": "animation_mode_flags"
+        },
+        {
+          "type": "block",
+          "name": "weapon class|AABBCC",
+          "definition": "weapon_class_block"
+        },
+        {
+          "type": "block",
+          "name": "mode ik|AABBCC",
+          "definition": "animation_ik_block_v1"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dd160"
+    },
+    "weapon_class_block_struct": {
+      "guid": "41aeca4e204e3dd265cef8aabbd161f2",
+      "size": 120,
+      "size_string": "sizeof(c_weapon_class)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "label^"
+        },
+        {
+          "type": "short_block_index",
+          "name": "overlay group{pose overlay|overlay}",
+          "definition": "overlay_group_definition_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "ik set",
+          "definition": "animation_ik_set"
+        },
+        {
+          "type": "block",
+          "name": "weapon type|AABBCC",
+          "definition": "weapon_type_block"
+        },
+        {
+          "type": "block",
+          "name": "weapon ik|AABBCC",
+          "definition": "animation_ik_block_v1"
+        },
+        {
+          "type": "block",
+          "name": "ranged actions",
+          "definition": "animation_ranged_action_block"
+        },
+        {
+          "type": "block",
+          "name": "sync actions groups",
+          "definition": "animation_sync_action_group_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dce50"
+    },
+    "weapon_type_block_struct": {
+      "guid": "f4c43882fd4d9657249f37954a5a2749",
+      "size": 36,
+      "size_string": "sizeof(c_weapon_type)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "label^"
+        },
+        {
+          "type": "short_block_index",
+          "name": "overlay group{pose overlay|overlay}",
+          "definition": "overlay_group_definition_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "ik set",
+          "definition": "animation_ik_set"
+        },
+        {
+          "type": "block",
+          "name": "sets|AABBCC",
+          "definition": "animation_set_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dc4a0"
+    },
+    "animation_set_block": {
+      "guid": "c8b7d676be4efe96647ceaa4da9f2bfd",
+      "size": 152,
+      "size_string": "sizeof(c_animation_set)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "label^"
+        },
+        {
+          "type": "short_block_index",
+          "name": "overlay group{pose overlay|overlay}",
+          "definition": "overlay_group_definition_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "ik set",
+          "definition": "animation_ik_set"
+        },
+        {
+          "type": "block",
+          "name": "actions|AABBCC",
+          "definition": "animation_entry_block"
+        },
+        {
+          "type": "block",
+          "name": "overlay animations{overlays}|AABBCC",
+          "definition": "animation_entry_block"
+        },
+        {
+          "type": "block",
+          "name": "death and damage|AABBCC",
+          "definition": "damage_animation_block"
+        },
+        {
+          "type": "block",
+          "name": "transitions|AABBCC",
+          "definition": "animation_transition_source_block"
+        },
+        {
+          "type": "block",
+          "name": "velocity boundaries!",
+          "definition": "animation_velocity_boundaries_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtimeUseCounter*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dc160"
+    },
+    "animation_entry_block": {
+      "guid": "575462ed9b4af2b469544b86f50e763c",
+      "size": 12,
+      "size_string": "sizeof(struct s_animation_entry)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "label^"
+        },
+        {
+          "type": "short_block_index",
+          "name": "overlay group{pose overlay|overlay}",
+          "definition": "overlay_group_definition_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "ik set",
+          "definition": "animation_ik_set"
+        },
+        {
+          "type": "struct",
+          "name": "animation",
+          "definition": "animation_index_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446db330"
+    },
+    "damage_animation_block": {
+      "guid": "458acb3a9f4df268ba5452a5fd027972",
+      "size": 32,
+      "size_string": "sizeof(struct s_animation_damage_actions)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "label^"
+        },
+        {
+          "type": "block",
+          "name": "directions*|AABBCC",
+          "definition": "damage_direction_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446db830"
+    },
+    "damage_direction_block": {
+      "guid": "964ae908a94afe4da81102b5ed0fe41b",
+      "size": 28,
+      "size_string": "sizeof(struct s_animation_damage_direction)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "regions*|AABBCC",
+          "definition": "damage_region_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446db6a0"
+    },
+    "damage_region_block": {
+      "guid": "846fa0c42444323333a0ab851cd4c578",
+      "size": 4,
+      "size_string": "sizeof(c_animation_id)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "animation*",
+          "definition": "animation_index_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446db570"
+    },
+    "animation_transition_source_block_struct": {
+      "guid": "dd80a921b846b74c1f817eab14a7e714",
+      "size": 32,
+      "size_string": "sizeof(struct s_animation_transition_source)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "state name^#name of the state this transition starts in"
+        },
+        {
+          "type": "block",
+          "name": "destinations",
+          "definition": "animation_transition_destination_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d9b00"
+    },
+    "animation_transition_destination_block_struct": {
+      "guid": "c6b690adb74981f27dff2a80fb161f11",
+      "size": 28,
+      "size_string": "sizeof(struct s_animation_transition_destination)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "mode name#name of the mode this transition ends in"
+        },
+        {
+          "type": "string_id",
+          "name": "state name#name of the state this transition ends in"
+        },
+        {
+          "type": "struct",
+          "name": "transition settings",
+          "definition": "AnimationTransitionSettingsStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d9970"
+    },
+    "AnimationTransitionSettingsStruct": {
+      "guid": "368a28bc5240dea601e5ee995bf03b65",
+      "size": 20,
+      "size_string": "sizeof(AnimationTransitionSettings)",
+      "fields": [
+        {
+          "type": "long_block_index",
+          "name": "transition lerp:NONE=engine default#interpolation to use when no animation is present. NONE=engine default",
+          "definition": "animation_interpolation_sets"
+        },
+        {
+          "type": "struct",
+          "name": "transition anim#When set, takes priority over a transition lerp",
+          "definition": "animation_index_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "anim timing function#when set, this function will control the transition animation playback from 0-1"
+        },
+        {
+          "type": "long_block_index",
+          "name": "anim lerp in:NONE=engine default#interpolation to use when starting the transition anim. NONE=engine default",
+          "definition": "animation_interpolation_sets"
+        },
+        {
+          "type": "long_block_index",
+          "name": "anim lerp out:NONE=engine default#interpolation to use when exiting the transition anim. NONE=engine default",
+          "definition": "animation_interpolation_sets"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446d96c0"
+    },
+    "animation_velocity_boundaries_block": {
+      "guid": "238fb77d2a41920f86bfffa512324773",
+      "size": 32,
+      "size_string": "sizeof(s_animation_velocity_boundaries)",
+      "fields": [
+        {
+          "type": "array",
+          "name": "velocity boundary entries!",
+          "definition": "animation_velocity_boundaries"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dbef0"
+    },
+    "animation_velocity_boundaries": {
+      "guid": "01b012d5934be05846ad63832c44e172",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "values!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dbdc0"
+    },
+    "animation_ik_block_v1": {
+      "guid": "19358a29d845ed243038c0b9dd786895",
+      "size": 16,
+      "size_string": "sizeof(struct s_animation_ik_point_v1)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "marker#the marker name on the object being attached"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "attach to marker#the marker name object (weapon, vehicle, etc.) the above marker is being attached to"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "weight source object function#allows a function to turn this IK point on or off"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "coff"
+        },
+        {
+          "type": "string_id",
+          "name": "priority source object function#allows a function to adjust the priority of this chain in the full body solve"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446da850"
+    },
+    "animation_ranged_action_block": {
+      "guid": "f2a8a9956145ce092b7b07b1cf4bb0a6",
+      "size": 68,
+      "size_string": "sizeof(s_animation_ranged_action)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "label^"
+        },
+        {
+          "type": "block",
+          "name": "animations",
+          "definition": "ranged_animation_entry_block"
+        },
+        {
+          "type": "block",
+          "name": "triangulation data!",
+          "definition": "triangulation_entry_block"
+        },
+        {
+          "type": "short_enum",
+          "name": "horizontal source",
+          "definition": "ranged_action_variable_sources"
+        },
+        {
+          "type": "short_enum",
+          "name": "vertical source",
+          "definition": "ranged_action_variable_sources"
+        },
+        {
+          "type": "short_enum",
+          "name": "start key",
+          "definition": "frame_event_type_new"
+        },
+        {
+          "type": "short_enum",
+          "name": "end key",
+          "definition": "frame_event_type_new"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dcb10"
+    },
+    "ranged_animation_entry_block_struct": {
+      "guid": "2db01a952b43c6a11929e3969d62be7b",
+      "size": 16,
+      "size_string": "sizeof(s_ranged_animation_entry)",
+      "fields": [
+        {
+          "type": "short_block_index",
+          "name": "overlay group{pose overlay|overlay}",
+          "definition": "overlay_group_definition_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "ik set",
+          "definition": "animation_ik_set"
+        },
+        {
+          "type": "struct",
+          "name": "animation",
+          "definition": "animation_index_struct"
+        },
+        {
+          "type": "real",
+          "name": "animation parameter#Numerical value associated with the ranged action animation (e.g. velocity for jumps)"
+        },
+        {
+          "type": "real",
+          "name": "animation parameter b"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446db440"
+    },
+    "triangulation_entry_block": {
+      "guid": "8bcc3482c5411a3830a0e789878204e1",
+      "size": 56,
+      "size_string": "sizeof(s_triangulation_tag_struct)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "points",
+          "definition": "triangulation_point_block"
+        },
+        {
+          "type": "block",
+          "name": "triangles",
+          "definition": "triangulation_triangle_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dc8e0"
+    },
+    "triangulation_point_block": {
+      "guid": "3b4cbe718a495130c05c9aaf672571b1",
+      "size": 8,
+      "size_string": "sizeof(real_point2d)",
+      "fields": [
+        {
+          "type": "real_vector_2d",
+          "name": "point"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dc680"
+    },
+    "triangulation_triangle_block": {
+      "guid": "8e133e836b4eed5980b2278385c6ae9f",
+      "size": 8,
+      "size_string": "sizeof(s_blend_screen_delaunay_triangle)",
+      "fields": [
+        {
+          "type": "byte_integer",
+          "name": "vertex1"
+        },
+        {
+          "type": "byte_integer",
+          "name": "vertex2"
+        },
+        {
+          "type": "byte_integer",
+          "name": "vertex3"
+        },
+        {
+          "type": "byte_integer",
+          "name": "link12"
+        },
+        {
+          "type": "byte_integer",
+          "name": "link23"
+        },
+        {
+          "type": "byte_integer",
+          "name": "link31"
+        },
+        {
+          "type": "pad",
+          "name": "aaah",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dc7b0"
+    },
+    "animation_sync_action_group_block": {
+      "guid": "76d31897ef47e8773cc1498250861531",
+      "size": 32,
+      "size_string": "sizeof(s_animation_sync_action_group)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "block",
+          "name": "sync actions",
+          "definition": "animation_sync_action_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446db160"
+    },
+    "animation_sync_action_block": {
+      "guid": "4884cfbdf04be672c898f8a4fbbe7be7",
+      "size": 64,
+      "size_string": "sizeof(s_animation_sync_action)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "long_enum",
+          "name": "sync action type",
+          "definition": "animation_sync_action_type"
+        },
+        {
+          "type": "block",
+          "name": "same type participants",
+          "definition": "animation_sync_action_same_type_participant"
+        },
+        {
+          "type": "block",
+          "name": "other participants",
+          "definition": "animation_sync_action_other_type_participant"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446db030"
+    },
+    "animation_sync_action_same_type_participant": {
+      "guid": "fa39259b314dbf54cfe0ac85a8fc8c27",
+      "size": 60,
+      "size_string": "sizeof(s_animation_sync_action_same_type_participant)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "animation_sync_action_flags_definition"
+        },
+        {
+          "type": "struct",
+          "name": "animation",
+          "definition": "animation_index_struct"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "start offset*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "start facing*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "end offset*"
+        },
+        {
+          "type": "real",
+          "name": "time_until_hurt*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "apex offset*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dad30"
+    },
+    "animation_sync_action_other_type_participant": {
+      "guid": "fbaf3e27ed4411ca47c901884322cc43",
+      "size": 36,
+      "size_string": "sizeof(s_animation_sync_action_other_type_participant)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "animation_sync_action_other_type_flags_definition"
+        },
+        {
+          "type": "tag_reference",
+          "name": "object type",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "unit",
+              "scen"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dae60"
+    },
+    "vehicle_suspension_block": {
+      "guid": "49a09688594e61e959c60b9e0ccf99a3",
+      "size": 48,
+      "size_string": "sizeof(c_vehicle_suspension)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "label^"
+        },
+        {
+          "type": "struct",
+          "name": "animation*",
+          "definition": "animation_index_struct"
+        },
+        {
+          "type": "string_id",
+          "name": "function name",
+          "group_tag": "sted"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "marker name#this marker should be parented to the vehicle root node"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "contact marker name#this marker should be parented to the wheel node"
+        },
+        {
+          "type": "real",
+          "name": "mass point offset#distance along the vehicle's up direction to move the wheel from the marker location"
+        },
+        {
+          "type": "real",
+          "name": "full extension ground_depth!"
+        },
+        {
+          "type": "real",
+          "name": "full compression ground_depth!"
+        },
+        {
+          "type": "explanation",
+          "name": "Destroyed Suspension",
+          "definition": "Only Necessary for suspensions with a destroyed state"
+        },
+        {
+          "type": "string_id",
+          "name": "region name"
+        },
+        {
+          "type": "real",
+          "name": "destroyed mass point offset"
+        },
+        {
+          "type": "real",
+          "name": "destroyed full extension ground_depth!"
+        },
+        {
+          "type": "real",
+          "name": "destroyed full compression ground_depth!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dbb60"
+    },
+    "function_overlay_animation_block": {
+      "guid": "f66694c8564bf07e05cd1aaf3e5b67de",
+      "size": 20,
+      "size_string": "sizeof(s_function_overlay)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "label^"
+        },
+        {
+          "type": "struct",
+          "name": "animation*",
+          "definition": "animation_index_struct"
+        },
+        {
+          "type": "pad",
+          "name": "VQWLKE",
+          "definition": 2
+        },
+        {
+          "type": "short_enum",
+          "name": "function controls",
+          "definition": "function_overlay_animation_mode"
+        },
+        {
+          "type": "string_id",
+          "name": "function"
+        },
+        {
+          "type": "pad",
+          "name": "OHIOJE",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dd370"
+    },
+    "model_animation_runtime_data_struct": {
+      "guid": "bf1b09b1754447fca5d6a285302faf2f",
+      "size": 120,
+      "size_string": "sizeof(s_model_animation_runtime_data)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "inheritence list*!|BBAAAA",
+          "group_tag": "slap",
+          "definition": "inherited_animation_block"
+        },
+        {
+          "type": "block",
+          "name": "weapon list*!|BBAAAA",
+          "group_tag": "slap",
+          "definition": "weapon_class_lookup_block"
+        },
+        {
+          "type": "array",
+          "name": "left arm bit vector*!",
+          "definition": "g_node_flag_storage_array"
+        },
+        {
+          "type": "array",
+          "name": "right arm bit vector*!",
+          "definition": "g_node_flag_storage_array"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446df6a0"
+    },
+    "inherited_animation_block": {
+      "guid": "4e4fa7bbe24eb694e7d8dca1259bd853",
+      "size": 100,
+      "size_string": "sizeof(struct s_animation_inheritance)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "inherited graph*",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jmad"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "node map*",
+          "group_tag": "slap",
+          "definition": "inherited_animation_node_map_block"
+        },
+        {
+          "type": "block",
+          "name": "node map flags*",
+          "group_tag": "slap",
+          "definition": "inherited_animation_node_map_flag_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "inheritance_flags*"
+        },
+        {
+          "type": "real",
+          "name": "uniform translation scale*"
+        },
+        {
+          "type": "long_integer",
+          "name": "alias index*#runtime use. marks this entry as an alias of another entry in the block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446df330"
+    },
+    "inherited_animation_node_map_block": {
+      "guid": "4eab6812b5485221db036d949f165ea1",
+      "size": 2,
+      "size_string": "sizeof(short)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "local node"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446df0d0"
+    },
+    "inherited_animation_node_map_flag_block": {
+      "guid": "1071d73ec04f520fe30b4ba37f8c8d16",
+      "size": 4,
+      "size_string": "sizeof(unsigned long)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "local node flags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446df200"
+    },
+    "weapon_class_lookup_block": {
+      "guid": "d4cb9b8257442c902b56d2b388328c17",
+      "size": 8,
+      "size_string": "sizeof(struct s_weapon_class_listing)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "weapon name^"
+        },
+        {
+          "type": "string_id",
+          "name": "weapon class"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446df460"
+    },
+    "additional_node_data_block": {
+      "guid": "97dda129f74889bbf9a406b6908c72a4",
+      "size": 60,
+      "size_string": "sizeof(struct s_additional_node_data)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "node name^"
+        },
+        {
+          "type": "real_quaternion",
+          "name": "default rotation*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "default translation*"
+        },
+        {
+          "type": "real",
+          "name": "default scale*"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "min bounds"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "max bounds"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446df590"
+    },
+    "animation_codec_data_struct": {
+      "guid": "6d0d20a51e4da310c5a4b5bd92252508",
+      "size": 84,
+      "size_string": "sizeof(s_animation_codec_data)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "CODEC-SPECIFIC DATA",
+          "definition": "fields used by varous compression codecs to store shared or global data for this graph. Do not manually edit."
+        },
+        {
+          "type": "struct",
+          "name": "shared_static_codec*!",
+          "definition": "shared_static_data_codec_graph_data_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dfc60"
+    },
+    "shared_static_data_codec_graph_data_struct": {
+      "guid": "d740eb764d4ddd2a9de935b54a70f262",
+      "size": 84,
+      "size_string": "sizeof(s_shared_static_data_codec_graph_data)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Shared Static Codec",
+          "definition": ""
+        },
+        {
+          "type": "block",
+          "name": "rotations*!",
+          "group_tag": "slap",
+          "definition": "shared_static_data_codec_rotation_block"
+        },
+        {
+          "type": "block",
+          "name": "translations*!",
+          "group_tag": "slap",
+          "definition": "shared_static_data_codec_translation_block"
+        },
+        {
+          "type": "block",
+          "name": "scale*!",
+          "group_tag": "slap",
+          "definition": "shared_static_data_codec_scale_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dfb50"
+    },
+    "shared_static_data_codec_rotation_block": {
+      "guid": "67f33bbe1c47128e7493c18af0dc0c92",
+      "size": 8,
+      "size_string": "sizeof(c_quantized_quaternion_8byte_revised)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "i"
+        },
+        {
+          "type": "short_integer",
+          "name": "j"
+        },
+        {
+          "type": "short_integer",
+          "name": "k"
+        },
+        {
+          "type": "short_integer",
+          "name": "w"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446df7d0"
+    },
+    "shared_static_data_codec_translation_block": {
+      "guid": "550f72858e4ddd597836ac9072b48b29",
+      "size": 12,
+      "size_string": "sizeof(real_vector3d)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "x"
+        },
+        {
+          "type": "real",
+          "name": "y"
+        },
+        {
+          "type": "real",
+          "name": "z"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446df900"
+    },
+    "shared_static_data_codec_scale_block": {
+      "guid": "93c4694240442752b58440a1261daa31",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "scale"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446dfa30"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "arrays": {
+    "g_node_flag_storage_array": {
+      "count": 8,
+      "count_string": "c_node_flags::k_flag_chunk_count",
+      "struct": "g_node_flag_storage_array"
+    },
+    "animation_velocity_boundaries": {
+      "count": 8,
+      "count_string": "k_animation_maximum_velocity_boundary_entries",
+      "struct": "animation_velocity_boundaries"
+    }
+  },
+  "enums_flags": {
+    "public_animation_graph_flags": {
+      "options": [
+        "inherit root trans scale only",
+        "inherit for use on player"
+      ]
+    },
+    "key_event_flags_enum": {
+      "options": [
+        "allow on player",
+        "left arm only",
+        "right arm only",
+        "first-person only",
+        "third-person only",
+        "forward only",
+        "reverse only",
+        "fp no aged weapons"
+      ]
+    },
+    "key_event_internal_flags_enum": {
+      "options": [
+        "model_index_required",
+        "weapon_index_required"
+      ]
+    },
+    "k_dialoguePlayRestrictionEnum": {
+      "options": [
+        "Unrestricted",
+        "Only With Shield",
+        "Only With Shield Empty"
+      ]
+    },
+    "animation_graph_misc_flags": {
+      "options": [
+        "use dual mixing boards{costly! Don't use it unless you need it!!!!}"
+      ]
+    },
+    "animation_graph_private_flags": {
+      "options": [
+        "prepared for cache",
+        "imported with codec compressors",
+        "written to cache",
+        "animation data reordered",
+        "ready for use",
+        "possesses default ik chains for a biped"
+      ]
+    },
+    "compression_force_settings": {
+      "options": [
+        "none",
+        "medium compression",
+        "rough compression",
+        "light compression",
+        "uncompressed",
+        "old codec",
+        "reach medium compression",
+        "reach rough compression"
+      ]
+    },
+    "animation_node_model_flags": {
+      "options": [
+        "primary model",
+        "secondary model",
+        "local root",
+        "left hand",
+        "right hand",
+        "left arm member"
+      ]
+    },
+    "node_joint_flags": {
+      "options": [
+        "ball-socket",
+        "hinge",
+        "no movement"
+      ]
+    },
+    "animation_usage_enumeration": {
+      "options": [
+        "physics control",
+        "camera control",
+        "origin marker",
+        "left clavicle",
+        "left upperarm",
+        "pose blend pitch",
+        "pose blend yaw",
+        "pedestal",
+        "pelvis",
+        "left foot",
+        "right foot",
+        "damage root gut",
+        "damage root chest",
+        "damage root head",
+        "damage root left shoulder",
+        "damage root left arm",
+        "damage root left leg",
+        "damage root left foot",
+        "damage root right shoulder",
+        "damage root right arm",
+        "damage root right leg",
+        "damage root right foot",
+        "left hand",
+        "right hand",
+        "weapon ik",
+        "head",
+        "helmet",
+        "right clavicle",
+        "left forearm",
+        "right forearm",
+        "left front foot",
+        "right front foot",
+        "left eye",
+        "right eye"
+      ]
+    },
+    "node_mask_flags": {
+      "options": [
+        "invert#the mask includes everything except the nodes set below"
+      ]
+    },
+    "animation_ik_chain_type_enumeration": {
+      "options": [
+        "standard",
+        "spine",
+        "spline driven spine"
+      ]
+    },
+    "animation_ik_chain_joint_flags": {
+      "options": [
+        "static#this joint will be unchanged by IK",
+        "hinge#special marking of extra hinges for limbs only. Max 2"
+      ]
+    },
+    "animation_ik_target_enum_definition": {
+      "options": [
+        "parent",
+        "NYI any child",
+        "primary weapon",
+        "secondary weapon"
+      ]
+    },
+    "AnimationIKSetFlags": {
+      "options": [
+        "Disable Quadruped Footlocking#stop the front feet (if any) from performing footlocking",
+        "Enable Biped Handlocking#Enable groundfitting of hands"
+      ]
+    },
+    "animation_ik_set_item_flags": {
+      "options": [
+        "disable"
+      ]
+    },
+    "animation_type_enum": {
+      "options": [
+        "none",
+        "base",
+        "overlay",
+        "replacement"
+      ]
+    },
+    "frame_info_type_enum": {
+      "options": [
+        "none",
+        "dx,dy",
+        "dx,dy,dyaw",
+        "dx,dy,dz,dyaw",
+        "dx,dy,dz,dangle-axis",
+        "x,y,z - absolute",
+        "auto"
+      ]
+    },
+    "compression_settings": {
+      "options": [
+        "best score&medium compression",
+        "best compression&rough compression",
+        "light compression",
+        "best accuracy&uncompressed",
+        "old codec",
+        "reach medium compression",
+        "reach rough compression"
+      ]
+    },
+    "animation_index_flags": {
+      "options": [
+        "disable interpolation in#when set, no other animation may interpolate into this one. It will just pop to this animation instead.",
+        "disable interpolation out#when set, this animation may not interpolate into any other. It will just pop to the new animation.",
+        "disable mode ik#(Bipeds Only) disable any mode ik (found in the mode and state tree) for the entire animation. Typically, this is IK to tie hands/feet to vehicle locations.",
+        "disable weapon ik#(Bipeds Only) disable any weapon ik (found in the mode and state tree) for the entire animation. Typically, this is IK to tie secondary hands to weapon locations.",
+        "disable weapon aim/1st person#(Bipeds,Vehicles Only) disable aim screens while this animation is playing.",
+        "disable look screen#(Bipeds,Vehicles Only) disable look screens while this animation is playing.",
+        "disable transition adjustment# DEPRECATED, will be ignored",
+        "force weapon ik on#(Bipeds,Vehicles Only) force any weapon ik to be on while this animation is playing.",
+        "use custom blend-in time#when possible, interpolate into this animation using the 'blend in' time value below",
+        "enable animated source interpolation#Cross-fade animations instead of interpolating. Requires Dual Mixing Board setting in graph flags.",
+        "disable ik sets#(Bipeds Only) disable all IK sets while this animation is playing.",
+        "disable ik chains#(Bipeds Only) disable all IK chains while this animation is playing.",
+        "translate and scale root only#ignore all translation and scale on all nodes except the root",
+        "enable blend-out on replacement anims#(Replacement Anims Only) fade this replacement animation out as playback nears the end. Fades over 8 frames.",
+        "use custom blend-out time#(Replacement Anims Only) when possible, fade this animation out over the 'blend out' time below instead of the default 8 frames. Requires enable blend-out flag above.",
+        "override player input#(Player Only) use the movement data in this animation instead of player physics. Use only when animation must control the player verbatim."
+      ]
+    },
+    "production_status_flags": {
+      "options": [
+        "do not monitor changes",
+        "verify sound events",
+        "do not inherit for player graphs",
+        "has errors or warnings",
+        "keep raw data in tag"
+      ]
+    },
+    "CompositeAxisFlags": {
+      "options": [
+        "wrapped",
+        "clamped"
+      ]
+    },
+    "frame_event_type_new": {
+      "options": [
+        "none",
+        "primary keyframe{primary_keyframe}",
+        "secondary keyframe{secondary_keyframe}",
+        "tertiary keyframe",
+        "left foot{left_foot}",
+        "right foot{right_foot}",
+        "allow interruption{allow_interruption}",
+        "do not allow interruption",
+        "both-feet shuffle",
+        "body impact",
+        "left foot lock",
+        "left foot unlock",
+        "right foot lock",
+        "right foot unlock",
+        "blend range marker",
+        "stride expansion",
+        "stride contraction",
+        "ragdoll keyframe",
+        "drop weapon keyframe",
+        "match a",
+        "match b",
+        "match c",
+        "match d",
+        "jetpack closed",
+        "jetpack open",
+        "sound event",
+        "effect event",
+        "left_hand",
+        "right_hand",
+        "start_bamf",
+        "end_bamf",
+        "hide"
+      ]
+    },
+    "internal_animation_flags": {
+      "options": [
+        "<unused0>!",
+        "world relative",
+        "<unused1>!",
+        "<unused3>!",
+        "<unused2>!",
+        "resource_group",
+        "compression disabled",
+        "old production checksum",
+        "valid production checksum",
+        "override force compression",
+        "contains pca data",
+        "authored at 60Hz",
+        "contains bamf function",
+        "whole frame playback"
+      ]
+    },
+    "animation_dialogue_event_enum": {
+      "options": [
+        "bump",
+        "dive",
+        "evade",
+        "lift",
+        "sigh",
+        "contempt",
+        "anger",
+        "fear",
+        "relief",
+        "sprint",
+        "sprint_end",
+        "ass_grabber",
+        "kill_ass",
+        "ass_grabbed",
+        "die_ass"
+      ]
+    },
+    "object_space_node_flags": {
+      "options": [
+        "rotation",
+        "translation",
+        "scale",
+        "motion root"
+      ]
+    },
+    "animation_ik_chain_event_usage": {
+      "options": [
+        "none",
+        "world",
+        "self",
+        "parent",
+        "primary weapon",
+        "secondary weapon",
+        "assassination"
+      ]
+    },
+    "animation_ik_chain_event_type": {
+      "options": [
+        "active",
+        "passive"
+      ]
+    },
+    "animation_facial_wrinkle_region": {
+      "options": [
+        "Upper Brow",
+        "Center Brow",
+        "Left Squint",
+        "Right Squint",
+        "Left Smile",
+        "Right Smile",
+        "Left Sneer",
+        "Right Sneer"
+      ]
+    },
+    "animation_object_function_name": {
+      "options": [
+        "animation_object_function_a",
+        "animation_object_function_b",
+        "animation_object_function_c",
+        "animation_object_function_d"
+      ]
+    },
+    "blend_screen_definition_flags": {
+      "options": [
+        "active only when weapon down",
+        "attempt piece-wise blending",
+        "allow parent adjustment",
+        "active only when weapon precise"
+      ]
+    },
+    "blend_screen_variable_sources": {
+      "options": [
+        "none",
+        "object function",
+        "horizontal test",
+        "vertical test",
+        "aim yaw",
+        "aim pitch",
+        "look yaw",
+        "look pitch",
+        "object yaw",
+        "object pitch",
+        "acceleration yaw",
+        "acceleration pitch",
+        "steering",
+        "velocity yaw",
+        "velocity pitch",
+        "damage gut yaw",
+        "damage gut pitch",
+        "damage chest yaw",
+        "damage chest pitch",
+        "damage head yaw",
+        "damage head pitch",
+        "damage left shoulder yaw",
+        "damage left shoulder pitch",
+        "damage left arm yaw",
+        "damage left arm pitch",
+        "damage left leg yaw",
+        "damage left leg pitch",
+        "damage left foot yaw",
+        "damage left foot pitch",
+        "damage right shoulder yaw",
+        "damage right shoulder pitch",
+        "damage right arm yaw",
+        "damage right arm pitch",
+        "damage right leg yaw",
+        "damage right leg pitch",
+        "damage right foot yaw",
+        "damage right foot pitch",
+        "defense yaw",
+        "defense pitch",
+        "first person pitch",
+        "first person turn",
+        "throttle side",
+        "throttle_forward",
+        "fp_look_offset_yaw",
+        "fp_look_offset_pitch",
+        "fp_look_accel_yaw",
+        "fp_look_accel_pitch"
+      ]
+    },
+    "blend_screen_weight_sources": {
+      "options": [
+        "none",
+        "object function",
+        "acceleration magnitude",
+        "velocity magnitude",
+        "state function a",
+        "state function b",
+        "state function c",
+        "state function d",
+        "damage chest{damage focus chest}",
+        "damage gut{damage focus gut}",
+        "damage head{damage focus head}",
+        "damage left shoulder{damage focus left shoulder}",
+        "damage left arm{damage focus left arm}",
+        "damage left leg{damage focus left leg}",
+        "damage left foot{damage focus left foot}",
+        "damage right shoulder{damage focus right shoulder}",
+        "damage right arm{damage focus right arm}",
+        "damage right leg{damage focus right leg}",
+        "damage right foot{damage focus right foot}",
+        "defense"
+      ]
+    },
+    "function_overlay_definition_flags": {
+      "options": [
+        "strict looping#loop without blending the first and last frames",
+        "hold last frame#pause on the last frame and hold"
+      ]
+    },
+    "pose_overlay_item_definition_block_flags": {
+      "options": [
+        "disable"
+      ]
+    },
+    "animation_mode_flags": {
+      "options": [
+        "this is a stance"
+      ]
+    },
+    "ranged_action_variable_sources": {
+      "options": [
+        "none",
+        "offset x",
+        "offset y",
+        "offset z",
+        "offset horizontal",
+        "negative offset x",
+        "negative offset y"
+      ]
+    },
+    "animation_sync_action_type": {
+      "options": [
+        "default#assassinations and most actions",
+        "destroy defenses# cavalier shard rip, etc."
+      ]
+    },
+    "animation_sync_action_flags_definition": {
+      "options": [
+        "Initiator",
+        "Critical Participant",
+        "Disabled",
+        "Airborne",
+        "Partner"
+      ]
+    },
+    "animation_sync_action_other_type_flags_definition": {
+      "options": [
+        "Supports any type",
+        "Disabled"
+      ]
+    },
+    "function_overlay_animation_mode": {
+      "options": [
+        "frame",
+        "scale"
+      ]
+    }
+  },
+  "datas": {
+    "SyncFramesDefinition": {
+      "alignment": 0,
+      "flags": 0,
+      "max_size": 1024,
+      "max_size_string": "1*KILO"
+    },
+    "FacetDefinition": {
+      "alignment": 0,
+      "flags": 0,
+      "max_size": 1024,
+      "max_size_string": "1*KILO"
+    },
+    "NeighborsDefinition": {
+      "alignment": 0,
+      "flags": 0,
+      "max_size": 1024,
+      "max_size_string": "1*KILO"
+    },
+    "ContainmentDefinition": {
+      "alignment": 0,
+      "flags": 0,
+      "max_size": 1024,
+      "max_size_string": "1*KILO"
+    },
+    "GridDefinition": {
+      "alignment": 0,
+      "flags": 0,
+      "max_size": 2048,
+      "max_size_string": "2*KILO"
+    },
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    },
+    "aligned_animation_data_definition_v1": {
+      "alignment": 0,
+      "flags": 4,
+      "max_size": 37820880,
+      "max_size_string": "k_animation_maximum_data_size"
+    }
+  },
+  "resources": {
+    "model_animation_tag_resource": {
+      "flags": 8,
+      "struct": "model_animation_tag_resource_struct"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

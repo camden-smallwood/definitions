@@ -1,0 +1,99 @@
+{
+  "name": "assetPhotoToolPhotoSpecBlockTag",
+  "tag": "appb",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "assetPhotoToolPhotoSpecBlockTag_block",
+  "blocks": {
+    "assetPhotoToolPhotoSpecBlockTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "assetPhotoToolPhotoSpecBlockTag_block_struct"
+    },
+    "photoSpecBlock": {
+      "max_count": 128,
+      "max_count_string": "k_maxPhotos",
+      "struct": "photoSpecBlock_struct"
+    }
+  },
+  "structs": {
+    "assetPhotoToolPhotoSpecBlockTag_block_struct": {
+      "guid": "616bb40246446f555550ca833b35d614",
+      "size": 48,
+      "size_string": "(sizeof(PhotoSpecBlockTag) - Tag::SizeInfo<PhotoSpecBlockTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "photo specs",
+          "definition": "photoSpecBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e7b30"
+    },
+    "photoSpecBlock_struct": {
+      "guid": "b73bd7720f45a4dff030ea83cb2919ed",
+      "size": 32,
+      "size_string": "sizeof(Tag::Reference<PhotoSpecTag>)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "photo spec reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "appt"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e7a10"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

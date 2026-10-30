@@ -1,0 +1,156 @@
+{
+  "name": "reactive_scenery",
+  "tag": "rscn",
+  "version": 0,
+  "flags": 3,
+  "parent_tag": "aTag",
+  "block": "reactive_scenery_block",
+  "blocks": {
+    "reactive_scenery_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "reactive_scenery_block_struct"
+    },
+    "reactive_animation": {
+      "max_count": 8,
+      "max_count_string": "ReactiveScenery::k_maxAnimations",
+      "struct": "reactive_animation"
+    }
+  },
+  "structs": {
+    "reactive_scenery_block_struct": {
+      "guid": "51fe185dd44c5ff89db80187ef1720db",
+      "size": 56,
+      "size_string": "(sizeof(ReactiveSceneryDefinition) - Tag::SizeInfo<ReactiveSceneryDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "Reactive Scenery",
+          "definition": "Scenery object that plays client-side animations in reaction to simple events."
+        },
+        {
+          "type": "block",
+          "name": "Animations#The animations this object will play in reaction to events.",
+          "definition": "reactive_animation"
+        },
+        {
+          "type": "real",
+          "name": "proximity distance:world units#How close a player must be to trigger a Proximity animation."
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "ReactiveSceneryFlags"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c17f0"
+    },
+    "reactive_animation": {
+      "guid": "c079efc2204f00081355289984c2c463",
+      "size": 20,
+      "size_string": "sizeof(ReactiveScenery::AnimationDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "animation name^"
+        },
+        {
+          "type": "real",
+          "name": "blend time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "wait time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "random start percent#0 to 1.0. Set to prevent objects animating in sync. The animation will start at a random point between 0 and the given value."
+        },
+        {
+          "type": "short_integer",
+          "name": "framerate:frames per second#0 defaults to 30 fps."
+        },
+        {
+          "type": "char_enum",
+          "name": "behavior",
+          "definition": "AnimationBehaviorEnum"
+        },
+        {
+          "type": "char_enum",
+          "name": "type#Animation type. Ambient plays on top of other animations.",
+          "definition": "ReactiveAnimationTypeEnum"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c16d0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "AnimationBehaviorEnum": {
+      "options": [
+        "Stopping",
+        "Looping",
+        "Bouncing"
+      ]
+    },
+    "ReactiveAnimationTypeEnum": {
+      "options": [
+        "Idle",
+        "Proximity",
+        "Damage",
+        "Recover",
+        "Ambient"
+      ]
+    },
+    "ReactiveSceneryFlags": {
+      "options": [
+        "halt Ambient animation during Damage animation"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

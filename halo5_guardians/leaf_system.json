@@ -1,0 +1,210 @@
+{
+  "name": "leaf_system",
+  "tag": "lswd",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "leaf_system_block",
+  "blocks": {
+    "leaf_system_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "leaf_system_block_struct"
+    },
+    "leaf_type_block": {
+      "max_count": 16,
+      "max_count_string": "k_maximum_leaf_type_definitions",
+      "struct": "leaf_type_block"
+    }
+  },
+  "structs": {
+    "leaf_system_block_struct": {
+      "guid": "23fc09064c659416a19db1868ba4c000",
+      "size": 136,
+      "size_string": "(sizeof(s_leaf_system_definition) - Tag::SizeInfo<s_leaf_system_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags!",
+          "definition": "leaf_flags"
+        },
+        {
+          "type": "string_id",
+          "name": "marker attach name"
+        },
+        {
+          "type": "tag_reference",
+          "name": "bitmap sprite plate",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "real_bounds",
+          "name": "emission rate#seconds"
+        },
+        {
+          "type": "real",
+          "name": "lifetime"
+        },
+        {
+          "type": "real_bounds",
+          "name": "wind min/max#default 0,0"
+        },
+        {
+          "type": "real",
+          "name": "wind scale"
+        },
+        {
+          "type": "real",
+          "name": "time scale"
+        },
+        {
+          "type": "real_bounds",
+          "name": "fade distance!#from maximum movement range (10+). default 0!"
+        },
+        {
+          "type": "real",
+          "name": "emissions sphere radius"
+        },
+        {
+          "type": "real",
+          "name": "movement cylinder radius"
+        },
+        {
+          "type": "real",
+          "name": "fade in time!"
+        },
+        {
+          "type": "real",
+          "name": "fade out time!"
+        },
+        {
+          "type": "block",
+          "name": "leaf types",
+          "definition": "leaf_type_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14498c380"
+    },
+    "leaf_type_block": {
+      "guid": "259db09c214539b3fd8222bc55ed4afa",
+      "size": 60,
+      "size_string": "sizeof(s_leaf_type)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "bitmap sprite index#assumes sequence 0. if no sprites uses full bitmap"
+        },
+        {
+          "type": "pad",
+          "name": "UNAX",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "frequency"
+        },
+        {
+          "type": "real",
+          "name": "mass"
+        },
+        {
+          "type": "real_bounds",
+          "name": "geometry scale#default of 0 for both means 0.1"
+        },
+        {
+          "type": "real",
+          "name": "flitteriness"
+        },
+        {
+          "type": "real",
+          "name": "flitteriness swing arm length*"
+        },
+        {
+          "type": "real",
+          "name": "flitteriness scale*"
+        },
+        {
+          "type": "real",
+          "name": "flitteriness speed*"
+        },
+        {
+          "type": "real",
+          "name": "flitteriness leaves phase*"
+        },
+        {
+          "type": "real",
+          "name": "tumble scale"
+        },
+        {
+          "type": "real",
+          "name": "rotation scale"
+        },
+        {
+          "type": "real",
+          "name": "starting velocity"
+        },
+        {
+          "type": "fraction_bounds",
+          "name": "air friction XY and Z"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14498c270"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "leaf_flags": {
+      "options": [
+        "collides structure",
+        "collides objects",
+        "collides water",
+        "affected by explosions"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

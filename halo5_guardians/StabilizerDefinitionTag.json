@@ -1,0 +1,320 @@
+{
+  "name": "StabilizerDefinitionTag",
+  "tag": "sast",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "StabilizerDefinitionTag_block",
+  "blocks": {
+    "StabilizerDefinitionTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "StabilizerDefinitionTag_block_struct"
+    }
+  },
+  "structs": {
+    "StabilizerDefinitionTag_block_struct": {
+      "guid": "fd9b0388aa41db988a5dc09489284ed8",
+      "size": 184,
+      "size_string": "(sizeof(StabilizerDefinitionTag) - Tag::SizeInfo<StabilizerDefinitionTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "data",
+          "definition": "StabilizerDefinitionBlock_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c80b0"
+    },
+    "StabilizerDefinitionBlock_struct": {
+      "guid": "a606656ed545236d5d7efa8e5babfafb",
+      "size": 168,
+      "size_string": "sizeof(StabilizerDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "common ability parameters",
+          "definition": "SpartanAbilityCommonParametersStruct"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "StabilizerDefinitionTagFlags"
+        },
+        {
+          "type": "real",
+          "name": "minimum height above floor#set to negative value to disable as 0 is used in the tag post-process to set a default"
+        },
+        {
+          "type": "real",
+          "name": "activation deceleration:[0.01,+inf] wu/s per sec#Rate at which the player decelerates after activating the stabilizer"
+        },
+        {
+          "type": "real",
+          "name": "stall duration:[0.01,+inf] seconds#Duration that the player remains completely stalled in mid air before starting to fall again"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "real",
+          "name": "time limit:seconds#Max time Stabilizer can remain active for a single burst.  Set to 0.0 if you want infinite."
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "custom",
+          "name": "malleable time limit::seconds#Max time stabilizer can remain active for a single burst. Set to 0.0 if you want infinite. Ensure that the activation effect can persist for this duration.",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "malleable time limit::seconds#Max time stabilizer can remain active for a single burst. Set to 0.0 if you want infinite. Ensure that the activation effect can persist for this duration.",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "real",
+          "name": "cooldown:seconds#How much time must pass after deactivation before you can activate again."
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "real",
+          "name": "time scale#Time scale applied to velocity after stall duration"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "custom",
+          "name": "malleable time scale#Time scale applied to velocity after stall duration",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "malleable time scale#Time scale applied to velocity after stall duration",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "real",
+          "name": "max horizontal speed:wu/s [0,+inf]#max horizontal speed while stabilizer is active"
+        },
+        {
+          "type": "struct",
+          "name": "vertical speed boost at exit:wu/s#adds this on to the player vertical velocity, based on normalized time spent stabilizing",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "rumble",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "rmbl"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c7d10"
+    },
+    "SpartanAbilityCommonParametersStruct": {
+      "guid": "f4efb1a03c4854d9d47df188cdebb4f0",
+      "size": 44,
+      "size_string": "sizeof(SpartanAbilityCommonParameters)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "SpartanAbilityDefinitionTagFlags"
+        },
+        {
+          "type": "real_fraction",
+          "name": "activation energy cost#amount of energy required to activate the ability"
+        },
+        {
+          "type": "real",
+          "name": "active energy consumption:energy/second#amount of energy consumed continuously while the ability is active"
+        },
+        {
+          "type": "tag_reference",
+          "name": "activation effect#effects triggered when player activates ability",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e94d0"
+    },
+    "MalleablePropertyBaseFloatStruct": {
+      "guid": "a1b4d8f8e64063dbbb8cea978b2eae63",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::BaseDefinition<float>)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "Base Value"
+        },
+        {
+          "type": "real_bounds",
+          "name": "Value Bounds"
+        },
+        {
+          "type": "char_enum",
+          "name": "Combiner",
+          "definition": "MalleablePropertyCombiner"
+        },
+        {
+          "type": "pad",
+          "name": "padEnd",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447369c0"
+    },
+    "scalar_function_named_struct": {
+      "guid": "8992cb721e48760251a36794187c6df5",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738e30"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "SpartanAbilityDefinitionTagFlags": {
+      "options": [
+        "Use 3rd Person Camera When Active",
+        "Hide Reticle When Active",
+        "Is Motion Tracked (By Enemies) When Active",
+        "One-Shot Activation Effect#Effect kills itself rather than being explicitly killed when the ability deactivates",
+        "Can be activated when weapon state is relaxed",
+        "Does Not Appear In Extended Motion Tracker Range"
+      ]
+    },
+    "StabilizerDefinitionTagFlags": {
+      "options": [
+        "Toggle stabilizer off if activated with ADS active",
+        "Must land again after activating",
+        "Auto activate only if already in the air"
+      ]
+    },
+    "MalleablePropertyCombiner": {
+      "options": [
+        "sequential#applies the percentages one after another on the base",
+        "total percentage#adds up all of the percentages and applies them to the base",
+        "addition#adds on all of the modifiers to the base",
+        "product#multiplies the values one after another on to the base"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

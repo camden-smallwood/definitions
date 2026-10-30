@@ -1,0 +1,102 @@
+{
+  "name": "ForgePaletteDefinition",
+  "tag": "fpal",
+  "version": 2,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "ForgePaletteDefinition_block",
+  "blocks": {
+    "ForgePaletteDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "ForgePaletteDefinition_block_struct"
+    }
+  },
+  "structs": {
+    "ForgePaletteDefinition_block_struct": {
+      "guid": "363e53ed5f4a22975b115ab0cdf056b5",
+      "size": 64,
+      "size_string": "(sizeof(ForgePaletteDefinition) - Tag::SizeInfo<ForgePaletteDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Parent Palette",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "fpal"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "Name"
+        },
+        {
+          "type": "string_id",
+          "name": "Description"
+        },
+        {
+          "type": "real",
+          "name": "Placement Priority"
+        },
+        {
+          "type": "word_flags",
+          "name": "Flags",
+          "definition": "TagForgePaletteFlags"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449cb0b0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "TagForgePaletteFlags": {
+      "options": [
+        "is inline#If true, we insert the elements of this palette directly into its parent palette with a header",
+        "is internal only#If true, we only get access to this palette (and its children) in non-release builds"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

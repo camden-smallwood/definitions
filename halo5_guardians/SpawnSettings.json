@@ -1,0 +1,807 @@
+{
+  "name": "SpawnSettings",
+  "tag": "ssdf",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "SpawnSettings_block",
+  "blocks": {
+    "SpawnSettings_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "SpawnSettings_block_struct"
+    },
+    "UnitOnlyInfluencerBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "UnitOnlyInfluencerBlock"
+    },
+    "InfluencerRegionBlock": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "InfluencerRegionBlock"
+    },
+    "SphereInfluencerRegionBlock": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "SphereInfluencerRegionBlock"
+    },
+    "WeightFunctionBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "WeightFunctionBlock"
+    },
+    "BoxInfluencerRegionBlock": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "BoxInfluencerRegionBlock"
+    },
+    "CylinderInfluencerRegionBlock": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "CylinderInfluencerRegionBlock"
+    },
+    "ConeInfluencerRegionBlock": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "ConeInfluencerRegionBlock"
+    },
+    "MovingInfluencerRegionBlock": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "MovingInfluencerRegionBlock"
+    },
+    "PillInfluencerRegionBlock": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "PillInfluencerRegionBlock"
+    },
+    "UnitInfluencerBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "UnitInfluencerBlock"
+    },
+    "WeaponInfluencerBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "WeaponInfluencerBlock"
+    },
+    "VehicleInfluencerBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "VehicleInfluencerBlock"
+    },
+    "ProjectileInfluencerBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "ProjectileInfluencerBlock"
+    },
+    "EquipmentInfluencerBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "EquipmentInfluencerBlock"
+    },
+    "ObjectDispenserInfluencerBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "ObjectDispenserInfluencerBlock"
+    }
+  },
+  "structs": {
+    "SpawnSettings_block_struct": {
+      "guid": "f46afdd46545d4f1a038ffb4f8503ac4",
+      "size": 272,
+      "size_string": "(sizeof(SpawnSettingsTagGroup) - Tag::SizeInfo<SpawnSettingsTagGroup::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "real",
+          "name": "Minimum spawn time:seconds"
+        },
+        {
+          "type": "explanation",
+          "name": "Unseen spawning settings",
+          "definition": "Settings to ensure players do not see other players spawn."
+        },
+        {
+          "type": "real",
+          "name": "Hostile visibility cone length"
+        },
+        {
+          "type": "real",
+          "name": "Friendly visibility cone length"
+        },
+        {
+          "type": "real",
+          "name": "Visibility cone angle:degrees"
+        },
+        {
+          "type": "real",
+          "name": "Spawn point can see hostile cone length"
+        },
+        {
+          "type": "real",
+          "name": "Spawn point can see friendly cone length"
+        },
+        {
+          "type": "explanation",
+          "name": "Spawn weight settings",
+          "definition": "Settings to change how weight values are calculated."
+        },
+        {
+          "type": "real",
+          "name": "Quantization step"
+        },
+        {
+          "type": "explanation",
+          "name": "Unit Influencers",
+          "definition": "Influencers in this block are applied to all matching units."
+        },
+        {
+          "type": "block",
+          "name": "Unit influencers",
+          "definition": "UnitOnlyInfluencerBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Dead Unit Influencers",
+          "definition": "Influencers in this block are applied to all locations a player has died at."
+        },
+        {
+          "type": "real",
+          "name": "Active duration:s"
+        },
+        {
+          "type": "block",
+          "name": "Dead unit influencers",
+          "definition": "UnitInfluencerBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Spawning Unit Influencers",
+          "definition": "Influencers in this block are applied to locations that a player is about to spawn at."
+        },
+        {
+          "type": "block",
+          "name": "Spawning unit influencers",
+          "definition": "UnitInfluencerBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Weapon Influencers",
+          "definition": "Influencers in this block are applied to weapons held by players or mounted on vehicles."
+        },
+        {
+          "type": "block",
+          "name": "Weapon influencers",
+          "definition": "WeaponInfluencerBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Vehicle Influencers",
+          "definition": "Influencers in this block are applied to vehicles."
+        },
+        {
+          "type": "block",
+          "name": "Vehicle influencers",
+          "definition": "VehicleInfluencerBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Projectile Influencers",
+          "definition": "Influencers in this block are applied to projectiles."
+        },
+        {
+          "type": "block",
+          "name": "Projectile influencers",
+          "definition": "ProjectileInfluencerBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Equipment Influencers",
+          "definition": "Influencers in this block are applied to equipment."
+        },
+        {
+          "type": "block",
+          "name": "Equipment influencers",
+          "definition": "EquipmentInfluencerBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Object Dispenser Influencers",
+          "definition": "Influencers in this block are applied to devices with object dispenser components."
+        },
+        {
+          "type": "block",
+          "name": "Object dispenser influencers",
+          "definition": "ObjectDispenserInfluencerBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448236d0"
+    },
+    "UnitOnlyInfluencerBlock": {
+      "guid": "300d7c57424358e4bf3ba0bed3236ff4",
+      "size": 68,
+      "size_string": "sizeof(UnitOnlyInfluencerDefinition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "Flags",
+          "definition": "UnitOnlyInfluencerFlagsDefinition"
+        },
+        {
+          "type": "struct",
+          "name": "Unit Influencer",
+          "definition": "UnitInfluencerStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144822fc0"
+    },
+    "UnitInfluencerStruct": {
+      "guid": "b24e98da7d499840331ab8a2f18c3069",
+      "size": 64,
+      "size_string": "sizeof(UnitInfluencerDefinition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "Filter flags",
+          "definition": "UnitInfluencerFilterFlagsDefinition"
+        },
+        {
+          "type": "long_flags",
+          "name": "Allowed dispositions",
+          "definition": "InfluencerDispositionFlagsDefinition"
+        },
+        {
+          "type": "block",
+          "name": "Influencer",
+          "definition": "InfluencerRegionBlock"
+        },
+        {
+          "type": "block",
+          "name": "Movement influencer",
+          "definition": "MovingInfluencerRegionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144822d60"
+    },
+    "InfluencerRegionBlock": {
+      "guid": "4d2e6307c94e2d645780a5b215b36591",
+      "size": 112,
+      "size_string": "sizeof(InfluencerRegion)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "Sphere",
+          "definition": "SphereInfluencerRegionBlock"
+        },
+        {
+          "type": "block",
+          "name": "Box",
+          "definition": "BoxInfluencerRegionBlock"
+        },
+        {
+          "type": "block",
+          "name": "Cylinder",
+          "definition": "CylinderInfluencerRegionBlock"
+        },
+        {
+          "type": "block",
+          "name": "Cone",
+          "definition": "ConeInfluencerRegionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144822b20"
+    },
+    "SphereInfluencerRegionBlock": {
+      "guid": "64521b208446f5edf15bcca17c6e92ec",
+      "size": 40,
+      "size_string": "sizeof(SphereInfluencerRegion)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "Flags",
+          "definition": "InfluencerRegionBehaviorFlagsDefinition"
+        },
+        {
+          "type": "real",
+          "name": "Radius"
+        },
+        {
+          "type": "real",
+          "name": "Weight"
+        },
+        {
+          "type": "block",
+          "name": "Weight function",
+          "definition": "WeightFunctionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144822530"
+    },
+    "WeightFunctionBlock": {
+      "guid": "7dfee55c2b45bb2edb188096958b8331",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "Function",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144822400"
+    },
+    "scalar_function_named_struct": {
+      "guid": "8992cb721e48760251a36794187c6df5",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738e30"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "BoxInfluencerRegionBlock": {
+      "guid": "e9c8d98b614e7df258292fa0b3c0eac7",
+      "size": 20,
+      "size_string": "sizeof(BoxInfluencerRegion)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "Flags",
+          "definition": "InfluencerRegionBehaviorFlagsDefinition"
+        },
+        {
+          "type": "real",
+          "name": "Width"
+        },
+        {
+          "type": "real",
+          "name": "Length"
+        },
+        {
+          "type": "real",
+          "name": "Height"
+        },
+        {
+          "type": "real",
+          "name": "Weight"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144822660"
+    },
+    "CylinderInfluencerRegionBlock": {
+      "guid": "72b297bb834e376faad5cb904fe89a8e",
+      "size": 44,
+      "size_string": "sizeof(CylinderInfluencerRegion)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "Flags",
+          "definition": "InfluencerRegionBehaviorFlagsDefinition"
+        },
+        {
+          "type": "real",
+          "name": "Radius"
+        },
+        {
+          "type": "real",
+          "name": "Height"
+        },
+        {
+          "type": "real",
+          "name": "Weight"
+        },
+        {
+          "type": "block",
+          "name": "Weight function",
+          "definition": "WeightFunctionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144822790"
+    },
+    "ConeInfluencerRegionBlock": {
+      "guid": "850add397a4a2a50d2d033a3b842dbb2",
+      "size": 44,
+      "size_string": "sizeof(ConeInfluencerRegion)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "Flags",
+          "definition": "InfluencerRegionBehaviorFlagsDefinition"
+        },
+        {
+          "type": "real",
+          "name": "Length"
+        },
+        {
+          "type": "real",
+          "name": "Base radius"
+        },
+        {
+          "type": "real",
+          "name": "Weight"
+        },
+        {
+          "type": "block",
+          "name": "Weight function",
+          "definition": "WeightFunctionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448228c0"
+    },
+    "MovingInfluencerRegionBlock": {
+      "guid": "accef89f52459df060a49e98fc38cc4f",
+      "size": 60,
+      "size_string": "sizeof(MovingInfluencerRegion)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "Lead time:s"
+        },
+        {
+          "type": "block",
+          "name": "Cone",
+          "definition": "ConeInfluencerRegionBlock"
+        },
+        {
+          "type": "block",
+          "name": "Pill",
+          "definition": "PillInfluencerRegionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144822c50"
+    },
+    "PillInfluencerRegionBlock": {
+      "guid": "5658e3165c432816909b00006947b7e7",
+      "size": 44,
+      "size_string": "sizeof(PillInfluencerRegion)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "Flags",
+          "definition": "InfluencerRegionBehaviorFlagsDefinition"
+        },
+        {
+          "type": "real",
+          "name": "Length"
+        },
+        {
+          "type": "real",
+          "name": "Radius"
+        },
+        {
+          "type": "real",
+          "name": "Weight"
+        },
+        {
+          "type": "block",
+          "name": "Weight function",
+          "definition": "WeightFunctionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448229f0"
+    },
+    "UnitInfluencerBlock": {
+      "guid": "537d0de1454b10278587628357e15491",
+      "size": 64,
+      "size_string": "sizeof(UnitInfluencerDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "Unit Influencer",
+          "definition": "UnitInfluencerStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144822e90"
+    },
+    "WeaponInfluencerBlock": {
+      "guid": "45a8d4876448701057f4a19650edb858",
+      "size": 64,
+      "size_string": "sizeof(WeaponInfluencerDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "Weapon^",
+          "definition": {
+            "flags": 33,
+            "allowed": [
+              "weap"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "Unit influencer",
+          "definition": "UnitInfluencerBlock"
+        },
+        {
+          "type": "real",
+          "name": "Location unseen multiplier"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448230f0"
+    },
+    "VehicleInfluencerBlock": {
+      "guid": "1c7bae640649a632b8752a8995bec0eb",
+      "size": 60,
+      "size_string": "sizeof(VehicleInfluencerDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "Vehicle^",
+          "definition": {
+            "flags": 33,
+            "allowed": [
+              "vehi"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "Unit influencer",
+          "definition": "UnitInfluencerBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144823220"
+    },
+    "ProjectileInfluencerBlock": {
+      "guid": "4d46146e804cb92e54361ca849b572b7",
+      "size": 88,
+      "size_string": "sizeof(ProjectileInfluencerDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "Projectile^",
+          "definition": {
+            "flags": 33,
+            "allowed": [
+              "proj"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "Influencer",
+          "definition": "InfluencerRegionBlock"
+        },
+        {
+          "type": "block",
+          "name": "Movement influencer",
+          "definition": "MovingInfluencerRegionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144823350"
+    },
+    "EquipmentInfluencerBlock": {
+      "guid": "e4bd4226334a0f30f812bd8a854f901b",
+      "size": 60,
+      "size_string": "sizeof(EquipmentInfluencerDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "Equipment^",
+          "definition": {
+            "flags": 33,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "Influencer",
+          "definition": "InfluencerRegionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144823480"
+    },
+    "ObjectDispenserInfluencerBlock": {
+      "guid": "8c2253383c424c6b21c1de9d62fcdb71",
+      "size": 32,
+      "size_string": "sizeof(ObjectDispenserInfluencerDefinition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "Filter flags",
+          "definition": "ObjectDispenserInfluencerFilterFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "Influencer",
+          "definition": "InfluencerRegionBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448235b0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "UnitOnlyInfluencerFlagsDefinition": {
+      "options": [
+        "Does not stack"
+      ]
+    },
+    "UnitInfluencerFilterFlagsDefinition": {
+      "options": [
+        "Player controlled",
+        "Not player controlled",
+        "In combat",
+        "Not in combat",
+        "AI controlled"
+      ]
+    },
+    "InfluencerDispositionFlagsDefinition": {
+      "options": [
+        "Ally",
+        "Enemy",
+        "Neutral"
+      ]
+    },
+    "InfluencerRegionBehaviorFlagsDefinition": {
+      "options": [
+        "Reject Spawn"
+      ]
+    },
+    "ObjectDispenserInfluencerFilterFlagsDefinition": {
+      "options": [
+        "None",
+        "Weapon Incoming",
+        "Weapon Constructing",
+        "Weapon Ready",
+        "Weapon Respawning"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

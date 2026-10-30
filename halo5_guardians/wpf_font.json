@@ -1,0 +1,158 @@
+{
+  "name": "wpf_font",
+  "tag": "font",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "wpf_font_block",
+  "blocks": {
+    "wpf_font_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "wpf_font_block_struct"
+    }
+  },
+  "structs": {
+    "wpf_font_block_struct": {
+      "guid": "16c161a902417c6bedab56a10966371f",
+      "size": 88,
+      "size_string": "(sizeof(WPFFontDefinition) - Tag::SizeInfo<WPFFontDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "import",
+          "group_tag": "ctcd"
+        },
+        {
+          "type": "string",
+          "name": "font name"
+        },
+        {
+          "type": "long_enum",
+          "name": "render mode*",
+          "definition": "FontRenderMode"
+        },
+        {
+          "type": "explanation",
+          "name": "Vector Font Antialiasing Tweakables",
+          "definition": "These values tweak the anti-aliasing settings for vector font rendering.\r\nNo effect if render mode is not vector."
+        },
+        {
+          "type": "array",
+          "name": "anti alias data",
+          "definition": "antiAliasDataArray"
+        },
+        {
+          "type": "tag_resource",
+          "name": "font file resource",
+          "definition": "WPFFontFileData_schema"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488fa70"
+    },
+    "antiAliasDataArray": {
+      "guid": "e64a1ddca6467ea254bc5c95cdcdf767",
+      "size": 4,
+      "size_string": "(sizeof((((WPFFontDefinition *)0)->antiAliasData[0])))",
+      "fields": [
+        {
+          "type": "real",
+          "name": "antiAliasData"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488f720"
+    },
+    "WPFFontFileData_schema_struct": {
+      "guid": "26af6745894569e65c2728af174e0b17",
+      "size": 28,
+      "size_string": "sizeof(WPFFontFileData)",
+      "fields": [
+        {
+          "type": "data",
+          "name": "font file data",
+          "definition": "WPFFontFileDataDef"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488f840"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "arrays": {
+    "antiAliasDataArray": {
+      "count": 4,
+      "count_string": "((sizeof(*numberof_sizeof_proxy<(sizeof(((((WPFFontDefinition *)0)->antiAliasData)))/sizeof(((((WPFFontDefinition *)0)->antiAliasData))[0]))>(((((WPFFontDefinition *)0)->antiAliasData))))))",
+      "struct": "antiAliasDataArray"
+    }
+  },
+  "enums_flags": {
+    "FontRenderMode": {
+      "options": [
+        "Bitmap",
+        "Vector"
+      ]
+    }
+  },
+  "datas": {
+    "WPFFontFileDataDef": {
+      "alignment": 104,
+      "flags": 0,
+      "max_size": 52428800,
+      "max_size_string": "MAXIMUM_WPF_FONT_FILE_SIZE"
+    }
+  },
+  "resources": {
+    "WPFFontFileData_schema": {
+      "flags": 0,
+      "struct": "WPFFontFileData_schema_struct"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

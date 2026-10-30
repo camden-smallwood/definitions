@@ -1,0 +1,918 @@
+{
+  "name": "DifficultyGlobalsDefinition",
+  "tag": "gldi",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "DifficultyGlobalsDefinition_block",
+  "blocks": {
+    "DifficultyGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "DifficultyGlobalsDefinition_block_struct"
+    },
+    "difficulty_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "difficulty_block_struct"
+    },
+    "coop_difficulty_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "coop_difficulty_block_struct"
+    }
+  },
+  "structs": {
+    "DifficultyGlobalsDefinition_block_struct": {
+      "guid": "36d2071a1a4b09c056f3a588b7ac811c",
+      "size": 72,
+      "size_string": "(sizeof(i343::DifficultyGlobals) - Tag::SizeInfo<i343::DifficultyGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "difficulty",
+          "definition": "difficulty_block"
+        },
+        {
+          "type": "block",
+          "name": "co-op difficulty",
+          "definition": "coop_difficulty_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448293f0"
+    },
+    "difficulty_block_struct": {
+      "guid": "8c69849cb540cfa3696073b46b01d1ab",
+      "size": 640,
+      "size_string": "sizeof(s_game_globals_difficulty_information)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "health",
+          "definition": "scale values for enemy health and damage settings"
+        },
+        {
+          "type": "real",
+          "name": "easy enemy damage#enemy damage multiplier on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal enemy damage#enemy damage multiplier on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard enemy damage#enemy damage multiplier on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. enemy damage#enemy damage multiplier on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy enemy vitality#enemy maximum body vitality scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal enemy vitality#enemy maximum body vitality scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard enemy vitality#enemy maximum body vitality scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. enemy vitality#enemy maximum body vitality scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy enemy shield#enemy maximum shield vitality scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal enemy shield#enemy maximum shield vitality scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard enemy shield#enemy maximum shield vitality scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. enemy shield#enemy maximum shield vitality scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy enemy recharge#enemy shield recharge scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal enemy recharge#enemy shield recharge scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard enemy recharge#enemy shield recharge scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. enemy recharge#enemy shield recharge scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy friend damage#friend damage multiplier on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal friend damage#friend damage multiplier on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard friend damage#friend damage multiplier on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. friend damage#friend damage multiplier on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy friend vitality#friend maximum body vitality scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal friend vitality#friend maximum body vitality scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard friend vitality#friend maximum body vitality scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. friend vitality#friend maximum body vitality scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy friend shield#friend maximum shield vitality scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal friend shield#friend maximum shield vitality scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard friend shield#friend maximum shield vitality scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. friend shield#friend maximum shield vitality scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy friend recharge#friend shield recharge scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal friend recharge#friend shield recharge scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard friend recharge#friend shield recharge scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. friend recharge#friend shield recharge scale on impossible difficulty"
+        },
+        {
+          "type": "pad",
+          "name": "$",
+          "definition": 16
+        },
+        {
+          "type": "pad",
+          "name": "$$",
+          "definition": 16
+        },
+        {
+          "type": "explanation",
+          "name": "ranged fire",
+          "definition": "difficulty-affecting values for enemy ranged combat settings"
+        },
+        {
+          "type": "real",
+          "name": "easy rate of fire#enemy rate of fire scale on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal rate of fire#enemy rate of fire scale on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard rate of fire#enemy rate of fire scale on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. rate of fire#enemy rate of fire scale on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy projectile error#enemy projectile error scale, as a fraction of their base firing error. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal projectile error#enemy projectile error scale, as a fraction of their base firing error. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard projectile error#enemy projectile error scale, as a fraction of their base firing error. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. projectile error#enemy projectile error scale, as a fraction of their base firing error. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy burst error#enemy burst error scale; reduces intra-burst shot distance. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal burst error#enemy burst error scale; reduces intra-burst shot distance. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard burst error#enemy burst error scale; reduces intra-burst shot distance. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. burst error#enemy burst error scale; reduces intra-burst shot distance. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy new target delay#enemy new-target delay scale factor. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal new target delay#enemy new-target delay scale factor. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard new target delay#enemy new-target delay scale factor. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. new target delay#enemy new-target delay scale factor. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy burst separation#delay time between bursts scale factor for enemies. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal burst separation#delay time between bursts scale factor for enemies. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard burst separation#delay time between bursts scale factor for enemies. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. burst separation#delay time between bursts scale factor for enemies. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy target tracking#additional target tracking fraction for enemies. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal target tracking#additional target tracking fraction for enemies. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard target tracking#additional target tracking fraction for enemies. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. target tracking#additional target tracking fraction for enemies. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy target leading#additional target leading fraction for enemies. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal target leading#additional target leading fraction for enemies. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard target leading#additional target leading fraction for enemies. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. target leading#additional target leading fraction for enemies. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy overcharge chance#overcharge chance scale factor for enemies. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal overcharge chance#overcharge chance scale factor for enemies. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard overcharge chance#overcharge chance scale factor for enemies. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. overcharge chance#overcharge chance scale factor for enemies. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. guidance vs player#guidance velocity scale factor for all projectiles targeted on a player. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy melee delay base#delay period added to all melee attacks, even when berserk. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal melee delay base#delay period added to all melee attacks, even when berserk. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard melee delay base#delay period added to all melee attacks, even when berserk. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. melee delay base#delay period added to all melee attacks, even when berserk. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy melee delay scale#multiplier for all existing non-berserk melee delay times. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal melee delay scale#multiplier for all existing non-berserk melee delay times. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard melee delay scale#multiplier for all existing non-berserk melee delay times. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. melee delay scale#multiplier for all existing non-berserk melee delay times. on impossible difficulty"
+        },
+        {
+          "type": "pad",
+          "name": "$$$",
+          "definition": 16
+        },
+        {
+          "type": "explanation",
+          "name": "grenades",
+          "definition": "difficulty-affecting values for enemy grenade behavior"
+        },
+        {
+          "type": "real",
+          "name": "easy grenade chance scale#scale factor affecting the desicions to throw a grenade. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal grenade chance scale#scale factor affecting the desicions to throw a grenade. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard grenade chance scale#scale factor affecting the desicions to throw a grenade. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. grenade chance scale#scale factor affecting the desicions to throw a grenade. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often). on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy grenade detonation timer scale#scale factor affecting how long grenades will take before exploding on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal grenade detonation timer scale#scale factor affecting how long grenades will take before exploding on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard grenade detonation timer scale#scale factor affecting how long grenades will take before exploding on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. grenade detonation timer scale#scale factor affecting how long grenades will take before exploding on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy grenade arming timer scale#scale factor affecting the minimum possible time before grendaes explode on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal grenade arming timer scale#scale factor affecting the minimum possible time before grendaes explode on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard grenade arming timer scale#scale factor affecting the minimum possible time before grendaes explode on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. grenade arming timer scale#scale factor affecting the minimum possible time before grendaes explode on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy grenade velocity scale#scale factor affecting how fast grenades are initially thrown on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal grenade velocity scale#scale factor affecting how fast grenades are initially thrown on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard grenade velocity scale#scale factor affecting how fast grenades are initially thrown on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. grenade velocity scale#scale factor affecting how fast grenades are initially thrown on impossible difficulty"
+        },
+        {
+          "type": "explanation",
+          "name": "placement",
+          "definition": "difficulty-affecting values for enemy placement"
+        },
+        {
+          "type": "real",
+          "name": "easy major upgrade (normal)#fraction of actors upgraded to their major variant. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal major upgrade (normal)#fraction of actors upgraded to their major variant. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard major upgrade (normal)#fraction of actors upgraded to their major variant. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. major upgrade (normal)#fraction of actors upgraded to their major variant. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal. on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. major upgrade (many)#fraction of actors upgraded to their major variant when mix = many. on impossible difficulty"
+        },
+        {
+          "type": "explanation",
+          "name": "vehicles",
+          "definition": "difficulty-affecting values for vehicle driving/combat"
+        },
+        {
+          "type": "real",
+          "name": "easy player vehicle ram chance#Chance of deciding to ram the player in a vehicle on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal player vehicle ram chance#Chance of deciding to ram the player in a vehicle on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard player vehicle ram chance#Chance of deciding to ram the player in a vehicle on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. player vehicle ram chance#Chance of deciding to ram the player in a vehicle on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy trick dodge chance scale#Multiplies the chance that a flying vehicle will trick to dodge danger on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal trick dodge chance scale#Multiplies the chance that a flying vehicle will trick to dodge danger on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard trick dodge chance scale#Multiplies the chance that a flying vehicle will trick to dodge danger on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. trick dodge chance scale#Multiplies the chance that a flying vehicle will trick to dodge danger on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy vehicle boarding chance#Enables a ranom dice roll for vehicle boarding (1.0 is the default behavior of no dice roll as long as all other conditions are met) on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal vehicle boarding chance#Enables a ranom dice roll for vehicle boarding (1.0 is the default behavior of no dice roll as long as all other conditions are met) on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard vehicle boarding chance#Enables a ranom dice roll for vehicle boarding (1.0 is the default behavior of no dice roll as long as all other conditions are met) on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. vehicle boarding chance#Enables a ranom dice roll for vehicle boarding (1.0 is the default behavior of no dice roll as long as all other conditions are met) on impossible difficulty"
+        },
+        {
+          "type": "explanation",
+          "name": "cover",
+          "definition": "difficulty-affecting values for cover and bunkering"
+        },
+        {
+          "type": "real",
+          "name": "easy hide time#scalar for time spent in cover behavior on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal hide time#scalar for time spent in cover behavior on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard hide time#scalar for time spent in cover behavior on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. hide time#scalar for time spent in cover behavior on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy shield fraction hide#scalar for what percentage shield left before entering cover behavior on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal shield fraction hide#scalar for what percentage shield left before entering cover behavior on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard shield fraction hide#scalar for what percentage shield left before entering cover behavior on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. shield fraction hide#scalar for what percentage shield left before entering cover behavior on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy cover vitality threshold#scalar for what percentage vitality left before entering cover behavior on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal cover vitality threshold#scalar for what percentage vitality left before entering cover behavior on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard cover vitality threshold#scalar for what percentage vitality left before entering cover behavior on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. cover vitality threshold#scalar for what percentage vitality left before entering cover behavior on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy bunker open duration#scalar for how long to stay open while bunkering on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal bunker open duration#scalar for how long to stay open while bunkering on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard bunker open duration#scalar for how long to stay open while bunkering on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. bunker open duration#scalar for how long to stay open while bunkering on impossible difficulty"
+        },
+        {
+          "type": "real",
+          "name": "easy bunker closed duration#scalar for how long to stay closed while bunkering on easy difficulty"
+        },
+        {
+          "type": "real",
+          "name": "normal bunker closed duration#scalar for how long to stay closed while bunkering on normal difficulty"
+        },
+        {
+          "type": "real",
+          "name": "hard bunker closed duration#scalar for how long to stay closed while bunkering on hard difficulty"
+        },
+        {
+          "type": "real",
+          "name": "imposs. bunker closed duration#scalar for how long to stay closed while bunkering on impossible difficulty"
+        },
+        {
+          "type": "pad",
+          "name": "$$$$",
+          "definition": 16
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144835980"
+    },
+    "coop_difficulty_block_struct": {
+      "guid": "0544c2777c4f61cabdd3929145809188",
+      "size": 156,
+      "size_string": "sizeof(s_game_globals_coop_difficulty_information)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "vitality",
+          "definition": "scale values for enemy health and shield settings"
+        },
+        {
+          "type": "real",
+          "name": "two-player shield recharge delay#multiplier on enemy shield recharge delay with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player shield recharge delay#multiplier on enemy shield recharge delay with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone shield recharge delay{six-player shield recharge delay}#multiplier on enemy shield recharge delay in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "real",
+          "name": "two-player shield recharge timer#multiplier on enemy shield recharge timer with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player shield recharge timer#multiplier on enemy shield recharge timer with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone shield recharge timer{six-player shield recharge timer}#multiplier on enemy shield recharge timer in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "explanation",
+          "name": "movement",
+          "definition": "scale values for enemy movement properties"
+        },
+        {
+          "type": "real",
+          "name": "two-player grenade dive chance#multiplier on enemy grenade dive chance with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player grenade dive chance#multiplier on enemy grenade dive chance with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone grenade dive chance{six-player grenade dive chance}#multiplier on enemy grenade dive chance in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "real",
+          "name": "two-player armor lock chance#multiplier on enemy armor lock chance with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player armor lock chance#multiplier on enemy armor lock chance with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone armor lock chance{six-player armor lock chance}#multiplier on enemy armor lock chance in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "explanation",
+          "name": "evasion",
+          "definition": "scale values for enemy evasion settings"
+        },
+        {
+          "type": "real",
+          "name": "two-player evasion danger threshold#multiplier on enemy evasion danger threshold with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player evasion danger threshold#multiplier on enemy evasion danger threshold with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone evasion danger threshold{six-player evasion danger threshold}#multiplier on enemy evasion danger threshold in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "real",
+          "name": "two-player evasion delay timer#multiplier on enemy evasion delay timer with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player evasion delay timer#multiplier on enemy evasion delay timer with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone evasion delay timer{six-player evasion delay timer}#multiplier on enemy evasion delay timer in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "real",
+          "name": "two-player evasion chance#multiplier on enemy evasion chance with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player evasion chance#multiplier on enemy evasion chance with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone evasion chance{six-player evasion chance}#multiplier on enemy evasion chance in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "explanation",
+          "name": "shooting",
+          "definition": "scale values for enemy shooting settings"
+        },
+        {
+          "type": "real",
+          "name": "two-player burst duration#multiplier on the enemy shooting burst duration with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player burst duration#multiplier on the enemy shooting burst duration with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone burst duration{six-player burst duration}#multiplier on the enemy shooting burst duration in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "real",
+          "name": "two-player burst separation#multipler on the enemy shooting burst separation with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player burst separation#multipler on the enemy shooting burst separation with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone burst separation{six-player burst separation}#multipler on the enemy shooting burst separation in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "real",
+          "name": "two-player damage modifier#multipler on the enemy shooting damage multiplier with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player damage modifier#multipler on the enemy shooting damage multiplier with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone damage modifier{six-player damage modifier}#multipler on the enemy shooting damage multiplier in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "explanation",
+          "name": "projectile",
+          "definition": "scale values for enemy projectile settings"
+        },
+        {
+          "type": "real",
+          "name": "two-player projectile speed#multiplier on the speed of projectiles fired by enemies with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player projectile speed#multiplier on the speed of projectiles fired by enemies with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone projectile speed{six-player projectile speed}#multiplier on the speed of projectiles fired by enemies in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "real",
+          "name": "two-player grenade throw chance#scalar multiplier on chance AI will throw grenades with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player grenade throw chance#scalar multiplier on chance AI will throw grenades with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone grenade throw chance{six-player grenade throw chance}#scalar multiplier on chance AI will throw grenades in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "explanation",
+          "name": "other",
+          "definition": "other coop difficulty values"
+        },
+        {
+          "type": "real",
+          "name": "two-player AI upgrade additional chance#additive value on chance AI will upgrade (in addition to normal chance) with two coop players"
+        },
+        {
+          "type": "real",
+          "name": "four-player AI upgrade additional chance#additive value on chance AI will upgrade (in addition to normal chance) with four coop players"
+        },
+        {
+          "type": "real",
+          "name": "Warzone AI upgrade additional chance{six-player AI upgrade additional chance}#additive value on chance AI will upgrade (in addition to normal chance) in Warzone or with 6+ coop players"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144836e00"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

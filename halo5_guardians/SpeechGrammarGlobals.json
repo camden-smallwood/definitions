@@ -1,0 +1,197 @@
+{
+  "name": "SpeechGrammarGlobals",
+  "tag": "sggs",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "SpeechGrammarGlobals_block",
+  "blocks": {
+    "SpeechGrammarGlobals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "SpeechGrammarGlobals_block_struct"
+    },
+    "SpeechGrammarBlock": {
+      "max_count": 256,
+      "max_count_string": "k_maxGrammars",
+      "struct": "SpeechGrammarBlock"
+    }
+  },
+  "structs": {
+    "SpeechGrammarGlobals_block_struct": {
+      "guid": "85c642b38d404debe1483296a83022a9",
+      "size": 288,
+      "size_string": "(sizeof(SpeechGrammarGlobals) - Tag::SizeInfo<SpeechGrammarGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "real",
+          "name": "VUI Timeout In Seconds"
+        },
+        {
+          "type": "real",
+          "name": "VUI Leafnode Timeout In Seconds"
+        },
+        {
+          "type": "real_fraction",
+          "name": "Default Confidence"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "SpeechGrammarGlobalsFlagsNames"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "Speech Grammars",
+          "definition": "SpeechGrammarBlock"
+        },
+        {
+          "type": "tag_reference",
+          "name": "localized errors",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "localized phrases",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "localized display text",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "localized needs text",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "localized locate text",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "localized orders text",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default spotted effect#effect played on objects when they first become visible",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "default shimmer effect delay#how many seconds must you look at the object for the shimmer effect to play"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447291e0"
+    },
+    "SpeechGrammarBlock": {
+      "guid": "f68a82fc084e6e8009d06184b486f845",
+      "size": 32,
+      "size_string": "sizeof(SpeechGrammarBlock)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "Speech Grammar",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sggg"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144728e80"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "SpeechGrammarGlobalsFlagsNames": {
+      "options": [
+        "turn all vui off"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

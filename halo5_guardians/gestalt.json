@@ -1,0 +1,629 @@
+{
+  "name": "gestalt",
+  "tag": "acme",
+  "version": 1,
+  "flags": 0,
+  "parent_tag": "aTag",
+  "block": "gestalt_block",
+  "blocks": {
+    "gestalt_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "gestalt_block_struct"
+    },
+    "all_field_block": {
+      "max_count": 7,
+      "max_count_string": "7",
+      "struct": "all_field_block"
+    },
+    "all_block_fields_block": {
+      "max_count": 7,
+      "max_count_string": "7",
+      "struct": "all_block_fields_block"
+    },
+    "test_block_count_1": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "gestalt_test_struct"
+    },
+    "test_block_count_4": {
+      "max_count": 3,
+      "max_count_string": "3",
+      "struct": "gestalt_test_struct"
+    },
+    "custom_field_block": {
+      "max_count": 4,
+      "max_count_string": "4",
+      "struct": "custom_field_block"
+    }
+  },
+  "structs": {
+    "gestalt_block_struct": {
+      "guid": "ddb7701de4404041c1271bbce2e78393",
+      "size": 112,
+      "size_string": "(sizeof(gestalt_definition) - Tag::SizeInfo<gestalt_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "array",
+          "name": "array test!",
+          "definition": "test_array"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "biqu"
+        },
+        {
+          "type": "string_id",
+          "name": "material",
+          "group_tag": "sted"
+        },
+        {
+          "type": "explanation",
+          "name": "test|FF0080",
+          "definition": ""
+        },
+        {
+          "type": "block",
+          "name": "all fields|pink",
+          "definition": "all_field_block"
+        },
+        {
+          "type": "block",
+          "name": "custom fields",
+          "definition": "custom_field_block"
+        },
+        {
+          "type": "custom",
+          "name": "Sliders",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "custom",
+          "name": "slider1",
+          "group_tag": "sled",
+          "definition": {
+            "min": 10.0,
+            "max": 255.0,
+            "step": 3.0
+          }
+        },
+        {
+          "type": "real",
+          "name": "slider1",
+          "group_tag": "sled",
+          "definition": {
+            "min": 10.0,
+            "max": 255.0,
+            "step": 3.0
+          }
+        },
+        {
+          "type": "custom",
+          "name": "slider2",
+          "group_tag": "sled",
+          "definition": {
+            "min": 10.0,
+            "max": 255.0,
+            "step": 3.0
+          }
+        },
+        {
+          "type": "real",
+          "name": "slider2",
+          "group_tag": "sled",
+          "definition": {
+            "min": 10.0,
+            "max": 255.0,
+            "step": 3.0
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "export tag to xml",
+          "group_tag": "ctcd"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ffe10"
+    },
+    "test_array": {
+      "guid": "ea2f7f242343704a08864f9ed9253c0b",
+      "size": 4,
+      "size_string": "sizeof(string_id)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "test array string"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ffcf0"
+    },
+    "all_field_block": {
+      "guid": "63720e296746df6894dad59733105f20",
+      "size": 592,
+      "size_string": "sizeof(all_field_struct)",
+      "fields": [
+        {
+          "type": "tag_resource",
+          "name": "test resource^",
+          "definition": "test_resource_definition"
+        },
+        {
+          "type": "tag_resource",
+          "name": "test resource2",
+          "definition": "test_resource_definition"
+        },
+        {
+          "type": "array",
+          "name": "blah",
+          "definition": "resource_array"
+        },
+        {
+          "type": "string",
+          "name": "_field_string"
+        },
+        {
+          "type": "string_id",
+          "name": "_field_string_id"
+        },
+        {
+          "type": "char_integer",
+          "name": "_field_char_integer"
+        },
+        {
+          "type": "short_integer",
+          "name": "_field_short_integer"
+        },
+        {
+          "type": "long_integer",
+          "name": "_field_long_integer"
+        },
+        {
+          "type": "angle",
+          "name": "_field_angle"
+        },
+        {
+          "type": "tag",
+          "name": "_field_tag"
+        },
+        {
+          "type": "short_enum",
+          "name": "_field_enum",
+          "definition": "test_enum"
+        },
+        {
+          "type": "long_flags",
+          "name": "_field_flags",
+          "definition": "test_flags"
+        },
+        {
+          "type": "word_flags",
+          "name": "_field_word_flags",
+          "definition": "test_flags"
+        },
+        {
+          "type": "byte_flags",
+          "name": "_field_byte_flags",
+          "definition": "test_flags"
+        },
+        {
+          "type": "point_2d",
+          "name": "_field_short_point2d"
+        },
+        {
+          "type": "rectangle_2d",
+          "name": "_field_short_rectangle2d"
+        },
+        {
+          "type": "rgb_color",
+          "name": "_field_rgb_pixel32"
+        },
+        {
+          "type": "argb_color",
+          "name": "_field_argb_pixel32"
+        },
+        {
+          "type": "real",
+          "name": "_field_real"
+        },
+        {
+          "type": "real_fraction",
+          "name": "_field_real_fraction"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "_field_real_point2d"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "_field_real_point3d"
+        },
+        {
+          "type": "real_vector_2d",
+          "name": "_field_real_vector2d"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "_field_real_vector3d"
+        },
+        {
+          "type": "real_quaternion",
+          "name": "_field_real_quaternion"
+        },
+        {
+          "type": "real_euler_angles_2d",
+          "name": "_field_real_euler_angles2d"
+        },
+        {
+          "type": "real_euler_angles_3d",
+          "name": "_field_real_euler_angles3d"
+        },
+        {
+          "type": "real_plane_2d",
+          "name": "_field_real_plane2d"
+        },
+        {
+          "type": "real_plane_3d",
+          "name": "_field_real_plane3d"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "_field_real_rgb_color"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "_field_real_argb_color"
+        },
+        {
+          "type": "real_hsv_color",
+          "name": "_field_real_hsv_color"
+        },
+        {
+          "type": "real_ahsv_color",
+          "name": "_field_real_ahsv_color"
+        },
+        {
+          "type": "short_bounds",
+          "name": "_field_short_integer_bounds"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "_field_angle_bounds"
+        },
+        {
+          "type": "real_bounds",
+          "name": "_field_real_bounds"
+        },
+        {
+          "type": "fraction_bounds",
+          "name": "_field_real_fraction_bounds"
+        },
+        {
+          "type": "tag_reference",
+          "name": "_field_tag_reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "acme"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "_field_block",
+          "definition": "all_block_fields_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "look at me!"
+        },
+        {
+          "type": "struct",
+          "name": "ugh foo ugh",
+          "definition": "test_struct"
+        },
+        {
+          "type": "string",
+          "name": "sentinel"
+        },
+        {
+          "type": "string_id",
+          "name": "bleh"
+        },
+        {
+          "type": "struct",
+          "name": "function crap",
+          "definition": "hacky_function_struct"
+        },
+        {
+          "type": "block",
+          "name": "block2",
+          "definition": "all_block_fields_block"
+        },
+        {
+          "type": "long_enum",
+          "name": "ugh",
+          "definition": "test_enum"
+        },
+        {
+          "type": "block",
+          "name": "block3",
+          "definition": "test_block_count_1"
+        },
+        {
+          "type": "block",
+          "name": "block4",
+          "definition": "test_block_count_4"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ffbc0"
+    },
+    "gestalt_test_struct": {
+      "guid": "bdb65fed354d29f0be2acea252d55038",
+      "size": 4,
+      "size_string": "sizeof(s_test_resource_data)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "can you see me???^"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ff550"
+    },
+    "resource_array": {
+      "guid": "df74e4ab254d8b9b36574d8e9105e63d",
+      "size": 16,
+      "size_string": "sizeof(s_tag_resource)",
+      "fields": [
+        {
+          "type": "tag_resource",
+          "name": "test resource2",
+          "definition": "test_resource_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ffa90"
+    },
+    "all_block_fields_block": {
+      "guid": "e082c5288a4f665b441c36ba0985b50d",
+      "size": 7,
+      "size_string": "sizeof(all_block_fields_struct)",
+      "fields": [
+        {
+          "type": "char_block_index",
+          "name": "_field_char_block_index",
+          "definition": "all_field_block"
+        },
+        {
+          "type": "short_block_index",
+          "name": "_field_short_block_index",
+          "definition": "all_field_block"
+        },
+        {
+          "type": "long_block_index",
+          "name": "_field_long_block_index",
+          "definition": "all_field_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ff430"
+    },
+    "test_struct": {
+      "guid": "d1ab1fcab84a20625cd95fa8b5cf0ace",
+      "size": 32,
+      "size_string": "actual_size",
+      "fields": [
+        {
+          "type": "string",
+          "name": "e"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ff7b0"
+    },
+    "hacky_function_struct": {
+      "guid": "fe4303bf034cc3e66f31c8ad70b4ed17",
+      "size": 32,
+      "size_string": "sizeof(s_i_hate_functions)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "Input Variable",
+          "group_tag": "fnin",
+          "definition": "test_enum"
+        },
+        {
+          "type": "short_enum",
+          "name": "Range Variable",
+          "group_tag": "fnir",
+          "definition": "test_enum"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "Mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ff8c0"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "custom_field_block": {
+      "guid": "0f5214f5af4288fc2447efbb3ad1ddb0",
+      "size": 12,
+      "size_string": "sizeof(custom_field_struct)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "more blah"
+        },
+        {
+          "type": "char_enum",
+          "name": "_field_char_enum",
+          "definition": "test_enum"
+        },
+        {
+          "type": "pad",
+          "name": "ARBP",
+          "definition": 3
+        },
+        {
+          "type": "long_enum",
+          "name": "_field_long_enum",
+          "definition": "test_enum"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ff680"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "arrays": {
+    "test_array": {
+      "count": 7,
+      "count_string": "7",
+      "struct": "test_array"
+    },
+    "resource_array": {
+      "count": 2,
+      "count_string": "k_resource_array_count",
+      "struct": "resource_array"
+    }
+  },
+  "enums_flags": {
+    "test_enum": {
+      "options": [
+        "alpha_blah{alpha}",
+        "beta",
+        "gamma",
+        "delta",
+        "epsilon",
+        "zeta",
+        "eta"
+      ]
+    },
+    "test_flags": {
+      "options": [
+        "alpha",
+        "beta",
+        "gamma",
+        "fixup_flag_test{delta}",
+        "epsilon",
+        "zeta",
+        "eta"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "resources": {
+    "test_resource_definition": {
+      "flags": 0,
+      "struct": "gestalt_test_struct"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

@@ -1,0 +1,573 @@
+{
+  "name": "musketeer_toe_definition_tag",
+  "tag": "mtrd",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "musketeer_toe_definition_tag_block",
+  "blocks": {
+    "musketeer_toe_definition_tag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "musketeer_toe_definition_tag_block_struct"
+    },
+    "MusketeerTeamDefinitionBlock": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "MusketeerTeamDefinitionBlock"
+    },
+    "MusketeerDefinitionBlock": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "MusketeerDefinitionBlock"
+    },
+    "MusketeerDifficultyTuningsBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "MusketeerDifficultyTuningsBlock"
+    },
+    "MusketeerDifficultyTuningSetBlock": {
+      "max_count": 10,
+      "max_count_string": "static_cast<long>(i343::Musketeer::Difficulty::TuningSetType::Count)",
+      "struct": "MusketeerDifficultyTuningSetBlock_struct"
+    }
+  },
+  "structs": {
+    "musketeer_toe_definition_tag_block_struct": {
+      "guid": "7d4b154bbf48daf6bbc85a8a69faa578",
+      "size": 48,
+      "size_string": "(sizeof(MusketeerTOEDefinition) - Tag::SizeInfo<MusketeerTOEDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "Musketeer Teams",
+          "definition": "MusketeerTeamDefinitionBlock"
+        },
+        {
+          "type": "pad",
+          "name": "post teams",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447d3090"
+    },
+    "MusketeerTeamDefinitionBlock": {
+      "guid": "3748246ad64afcc672bdb7a4af36a0fc",
+      "size": 56,
+      "size_string": "sizeof(MusketeerTeamDefinition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "Musketeer",
+          "definition": "MusketeerDefinitionBlock"
+        },
+        {
+          "type": "block",
+          "name": "Difficulty Tunings",
+          "definition": "MusketeerDifficultyTuningsBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447d2f70"
+    },
+    "MusketeerDefinitionBlock": {
+      "guid": "ae6ac3acaf415dd7d29c768dce5c763f",
+      "size": 36,
+      "size_string": "sizeof(MusketeerDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "character",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "char"
+            ]
+          }
+        },
+        {
+          "type": "char_enum",
+          "name": "avatar name",
+          "definition": "AvatarNameEnum"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447d2e40"
+    },
+    "MusketeerDifficultyTuningsBlock": {
+      "guid": "7f60a1cca4496c7bf024bfbd2fb4c4cd",
+      "size": 36,
+      "size_string": "sizeof(i343::Musketeer::Difficulty::Tunings)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "Tuning Sets",
+          "definition": "MusketeerDifficultyTuningSetBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "clamps",
+          "definition": "clamps for musketeer data"
+        },
+        {
+          "type": "real",
+          "name": "minimum value for starting accuracy"
+        },
+        {
+          "type": "real",
+          "name": "minimum value for ending accuracy"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447fb2d0"
+    },
+    "MusketeerDifficultyTuningSetBlock_struct": {
+      "guid": "1d547be003403c0c17380189a5ea6267",
+      "size": 332,
+      "size_string": "sizeof(i343::Musketeer::Difficulty::TuningSet)",
+      "fields": [
+        {
+          "type": "long_enum",
+          "name": "Type",
+          "definition": "TuningSetTypeEnum"
+        },
+        {
+          "type": "explanation",
+          "name": "health",
+          "definition": "scale values for enemy health and damage settings"
+        },
+        {
+          "type": "real",
+          "name": "SCALE enemy damage#enemy damage multiplier"
+        },
+        {
+          "type": "real",
+          "name": "MIN enemy damage#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE enemy vitality#enemy maximum body vitality scale"
+        },
+        {
+          "type": "real",
+          "name": "MIN enemy vitality#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE enemy shield#enemy maximum shield vitality scale"
+        },
+        {
+          "type": "real",
+          "name": "MIN enemy shield#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE enemy recharge#enemy shield recharge scale"
+        },
+        {
+          "type": "real",
+          "name": "MIN enemy recharge#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE friend damage#friend damage multiplier"
+        },
+        {
+          "type": "real",
+          "name": "MIN friend damage#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE friend vitality#friend maximum body vitality scale"
+        },
+        {
+          "type": "real",
+          "name": "MIN friend vitality#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE friend shield#friend maximum shield vitality scale"
+        },
+        {
+          "type": "real",
+          "name": "MIN friend shield#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE friend recharge#friend shield recharge scale"
+        },
+        {
+          "type": "real",
+          "name": "MIN friend recharge#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "pad",
+          "name": "$",
+          "definition": 8
+        },
+        {
+          "type": "pad",
+          "name": "$$",
+          "definition": 8
+        },
+        {
+          "type": "explanation",
+          "name": "ranged fire",
+          "definition": "difficulty-affecting values for enemy ranged combat settings"
+        },
+        {
+          "type": "real",
+          "name": "SCALE rate of fire#enemy rate of fire scale"
+        },
+        {
+          "type": "real",
+          "name": "MIN rate of fire#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE projectile error#enemy projectile error scale, as a fraction of their base firing error."
+        },
+        {
+          "type": "real",
+          "name": "MIN projectile error#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE burst error#enemy burst error scale; reduces intra-burst shot distance."
+        },
+        {
+          "type": "real",
+          "name": "MIN burst error#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE new target delay#enemy new-target delay scale factor."
+        },
+        {
+          "type": "real",
+          "name": "MIN new target delay#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE burst separation#delay time between bursts scale factor for enemies."
+        },
+        {
+          "type": "real",
+          "name": "MIN burst separation#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE target tracking#additional target tracking fraction for enemies."
+        },
+        {
+          "type": "real",
+          "name": "MIN target tracking#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE target leading#additional target leading fraction for enemies."
+        },
+        {
+          "type": "real",
+          "name": "MIN target leading#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE overcharge chance#overcharge chance scale factor for enemies."
+        },
+        {
+          "type": "real",
+          "name": "MIN overcharge chance#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE special fire delay#delay between special-fire shots (overcharge, banshee bombs) scale factor for enemies."
+        },
+        {
+          "type": "real",
+          "name": "MIN special fire delay#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE guidance vs player#guidance velocity scale factor for all projectiles targeted on a player."
+        },
+        {
+          "type": "real",
+          "name": "MIN guidance vs player#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE melee delay base#delay period added to all melee attacks, even when berserk."
+        },
+        {
+          "type": "real",
+          "name": "MIN melee delay base#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE melee delay scale#multiplier for all existing non-berserk melee delay times."
+        },
+        {
+          "type": "real",
+          "name": "MIN melee delay scale#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "pad",
+          "name": "$$$",
+          "definition": 8
+        },
+        {
+          "type": "explanation",
+          "name": "grenades",
+          "definition": "difficulty-affecting values for enemy grenade behavior"
+        },
+        {
+          "type": "real",
+          "name": "SCALE grenade chance scale#scale factor affecting the desicions to throw a grenade."
+        },
+        {
+          "type": "real",
+          "name": "MIN grenade chance scale#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE grenade timer scale#scale factor affecting the delay period between grenades thrown from the same encounter (lower is more often)."
+        },
+        {
+          "type": "real",
+          "name": "MIN grenade timer scale#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE grenade detonation timer scale#scale factor affecting how long grenades will take before exploding"
+        },
+        {
+          "type": "real",
+          "name": "MIN grenade detonation timer scale#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE grenade arming timer scale#scale factor affecting the minimum possible time before grenades explode"
+        },
+        {
+          "type": "real",
+          "name": "MIN grenade arming timer scale#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE grenade velocity scale#scale factor affecting how fast grenades are initially thrown"
+        },
+        {
+          "type": "real",
+          "name": "MIN grenade velocity scale#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "explanation",
+          "name": "placement",
+          "definition": "difficulty-affecting values for enemy placement"
+        },
+        {
+          "type": "real",
+          "name": "SCALE major upgrade (normal)#fraction of actors upgraded to their major variant."
+        },
+        {
+          "type": "real",
+          "name": "MIN major upgrade (normal)#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE major upgrade (few)#fraction of actors upgraded to their major variant when mix = normal."
+        },
+        {
+          "type": "real",
+          "name": "MIN major upgrade (few)#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE major upgrade (many)#fraction of actors upgraded to their major variant when mix = many."
+        },
+        {
+          "type": "real",
+          "name": "MIN major upgrade (many)#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "explanation",
+          "name": "vehicles",
+          "definition": "difficulty-affecting values for vehicle driving/combat"
+        },
+        {
+          "type": "real",
+          "name": "SCALE player vehicle ram chance#Chance of deciding to ram the player in a vehicle"
+        },
+        {
+          "type": "real",
+          "name": "MIN player vehicle ram chance#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE trick dodge chance scale#Multiplies the chance that a flying vehicle will trick to dodge danger"
+        },
+        {
+          "type": "real",
+          "name": "MIN trick dodge chance scale#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE vehicle boarding chance#Enables a ranom dice roll for vehicle boarding (1.0 is the default behavior of no dice roll as long as all other conditions are met)"
+        },
+        {
+          "type": "real",
+          "name": "MIN vehicle boarding chance#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "explanation",
+          "name": "cover",
+          "definition": "difficulty-affecting values for cover and bunkering"
+        },
+        {
+          "type": "real",
+          "name": "SCALE hide time#scalar for time spent in cover behavior"
+        },
+        {
+          "type": "real",
+          "name": "MIN hide time#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE shield fraction hide#scalar for what percentage shield left before entering cover behavior"
+        },
+        {
+          "type": "real",
+          "name": "MIN shield fraction hide#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE cover vitality threshold#scalar for what percentage vitality left before entering cover behavior"
+        },
+        {
+          "type": "real",
+          "name": "MIN cover vitality threshold#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE bunker open duration#scalar for how long to stay open while bunkering"
+        },
+        {
+          "type": "real",
+          "name": "MIN bunker open duration#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "real",
+          "name": "SCALE bunker closed duration#scalar for how long to stay closed while bunkering"
+        },
+        {
+          "type": "real",
+          "name": "MIN bunker closed duration#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "pad",
+          "name": "$$$$$$$$$",
+          "definition": 8
+        },
+        {
+          "type": "explanation",
+          "name": "Damage Scaling",
+          "definition": "scale damage"
+        },
+        {
+          "type": "real",
+          "name": "SCALE Damage received from enemy AI#scale damage received from enemy AI"
+        },
+        {
+          "type": "real",
+          "name": "MIN Damage received from enemy AI#min incomming value (set to 0 to keep unchanged, used to override any multipliers that has set the value to 0)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447fb190"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "AvatarNameEnum": {
+      "options": [
+        "None",
+        "Masterchief",
+        "Fred",
+        "Kelly",
+        "Linda",
+        "Locke",
+        "Thorne",
+        "Tanaka",
+        "Vale"
+      ]
+    },
+    "TuningSetTypeEnum": {
+      "options": [
+        "Target visible to any player",
+        "Actor gunning for any player",
+        "Actor following order",
+        "Musketeer",
+        "Actor visible to any player",
+        "Actor not visible to any player",
+        "Moving to revive Player",
+        "Moving to revive Ai",
+        "Reviving Player",
+        "Reviving Ai"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

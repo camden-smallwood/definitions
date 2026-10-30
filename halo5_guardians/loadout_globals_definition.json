@@ -1,0 +1,154 @@
+{
+  "name": "loadout_globals_definition",
+  "tag": "lgtd",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "loadout_globals_definition_block",
+  "blocks": {
+    "loadout_globals_definition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "loadout_globals_definition_block_struct"
+    },
+    "custom_loadout_defaults_block": {
+      "max_count": 5,
+      "max_count_string": "k_maximum_loadout_custom_slot_count",
+      "struct": "loadout_definition_struct"
+    },
+    "grenade_block": {
+      "max_count": 16,
+      "max_count_string": "16",
+      "struct": "grenade_block"
+    }
+  },
+  "structs": {
+    "loadout_globals_definition_block_struct": {
+      "guid": "43eb9356cf42663216b1149ec37eba47",
+      "size": 48,
+      "size_string": "(sizeof(s_loadout_globals_tag_definition) - Tag::SizeInfo<s_loadout_globals_tag_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "default custom loadouts",
+          "definition": "custom_loadout_defaults_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad1",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481a3b0"
+    },
+    "loadout_definition_struct": {
+      "guid": "6c240c5caa4b67320dc6959cd607567f",
+      "size": 52,
+      "size_string": "sizeof(s_static_loadout_tag_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "loadout name^"
+        },
+        {
+          "type": "string_id",
+          "name": "initial primary weapon#name of an element from global starting weapons block. Other values:\r\n(empty) - unchanged\r\nunchanged - unchanged\r\ndefault - take from starting profiles in scenario\r\nnone - no weapon\r\nrandom - use random item from valid starting weapons"
+        },
+        {
+          "type": "string_id",
+          "name": "initial primary weapon variant name"
+        },
+        {
+          "type": "string_id",
+          "name": "initial secondary weapon#see above"
+        },
+        {
+          "type": "string_id",
+          "name": "initial secondary weapon variant name"
+        },
+        {
+          "type": "string_id",
+          "name": "initial equipment#see above"
+        },
+        {
+          "type": "block",
+          "name": "initial grenade count",
+          "definition": "grenade_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144819920"
+    },
+    "grenade_block": {
+      "guid": "eca71958c44f2565f005c197a4decad8",
+      "size": 36,
+      "size_string": "sizeof(s_initial_grenade)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "grenade reference",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "obje"
+            ]
+          }
+        },
+        {
+          "type": "char_integer",
+          "name": "count"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144830250"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

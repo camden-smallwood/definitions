@@ -1,0 +1,116 @@
+{
+  "name": "script_container",
+  "tag": "hscn",
+  "version": 0,
+  "flags": 1,
+  "parent_tag": "aTag",
+  "block": "script_container_block",
+  "blocks": {
+    "script_container_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "script_container_block_struct"
+    },
+    "hs_source_reference_block": {
+      "max_count": 128,
+      "max_count_string": "k_maximum_hs_source_files_per_context",
+      "struct": "hs_source_reference_block"
+    }
+  },
+  "structs": {
+    "script_container_block_struct": {
+      "guid": "3e27fac9d54da15ab02da3bd008d8fbd",
+      "size": 72,
+      "size_string": "(sizeof(HSScriptContainer) - Tag::SizeInfo<HSScriptContainer::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "script data",
+          "definition": "hs_script_data_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144774db0"
+    },
+    "hs_script_data_struct": {
+      "guid": "80ef7fd8c347de0728fc85973f64538e",
+      "size": 56,
+      "size_string": "sizeof(HaloScript::ScriptData)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "source file references*",
+          "definition": "hs_source_reference_block"
+        },
+        {
+          "type": "block",
+          "name": "external source references",
+          "definition": "hs_source_reference_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144774ca0"
+    },
+    "hs_source_reference_block": {
+      "guid": "3a6bf38ccc4f228c839b8aa3d20ec8ce",
+      "size": 32,
+      "size_string": "sizeof(s_hs_source_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "reference^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hsc*"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144774b80"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

@@ -1,0 +1,428 @@
+{
+  "name": "sound_globals",
+  "tag": "sngl",
+  "version": 1,
+  "flags": 6,
+  "parent_tag": "aTag",
+  "block": "sound_globals_block",
+  "blocks": {
+    "sound_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_globals_block_struct"
+    },
+    "SoundbanksBlock": {
+      "max_count": 12,
+      "max_count_string": "k_maxVariantSoundbanks",
+      "struct": "SoundbanksBlock"
+    },
+    "GameVariantSoundbankBlock": {
+      "max_count": 12,
+      "max_count_string": "k_maxGameVariantSoundbanks",
+      "struct": "GameVariantSoundbankBlock"
+    },
+    "ADSBusEQBlock": {
+      "max_count": 12,
+      "max_count_string": "k_maxADSBusEQs",
+      "struct": "ADSBusEQBlock_struct"
+    },
+    "StreamingPackBlock": {
+      "max_count": 20,
+      "max_count_string": "k_maximum_streaming_packs",
+      "struct": "StreamingPackBlock"
+    },
+    "campaign_unspatialized_sounds_block": {
+      "max_count": 64,
+      "max_count_string": "k_maximum_campaign_unspatialized_sounds",
+      "struct": "campaign_unspatialized_sounds_block"
+    },
+    "focus_data_block": {
+      "max_count": 6,
+      "max_count_string": "k_maximumFocusSets",
+      "struct": "focus_data_block"
+    },
+    "g_vehicleSurfaceSoundDataBlock": {
+      "max_count": 2,
+      "max_count_string": "k_maximumVehicleSurfaceSoundSets",
+      "struct": "g_vehicleSurfaceSoundDataBlock"
+    },
+    "g_stateGroupReferenceBlock": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "g_stateGroupReferenceBlock"
+    }
+  },
+  "structs": {
+    "sound_globals_block_struct": {
+      "guid": "06fcbd186c8399412c276c832b6b9c3f",
+      "size": 512,
+      "size_string": "(sizeof(s_sound_globals_definition) - Tag::SizeInfo<s_sound_globals_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound effects",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sfx+"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound mix",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snmx"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound propagation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sgp!"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "Initial zone set preload event name#Event posted once a scenario's initial zone set has been preloaded."
+        },
+        {
+          "type": "string_id",
+          "name": "Level unloaded event name#Event posted once sound is notified of a level unloading."
+        },
+        {
+          "type": "tag_reference",
+          "name": "Init sound bank#Init sound bank for WWise.",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "sbnk"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "Global sound banks#Global sound banks for WWise.",
+          "definition": "SoundbanksBlock"
+        },
+        {
+          "type": "block",
+          "name": "Extra sound banks#The other sound banks for WWise.",
+          "definition": "SoundbanksBlock"
+        },
+        {
+          "type": "block",
+          "name": "Campaign sound banks#Extra sound banks for WWise - only loaded for Campaign.",
+          "definition": "SoundbanksBlock"
+        },
+        {
+          "type": "block",
+          "name": "Multiplayer sound banks#Extra sound bank for WWise - only loaded for MP - PVP, for all variants.",
+          "definition": "SoundbanksBlock"
+        },
+        {
+          "type": "block",
+          "name": "Variant sound banks",
+          "definition": "GameVariantSoundbankBlock"
+        },
+        {
+          "type": "block",
+          "name": "ADS Busses to EQ",
+          "definition": "ADSBusEQBlock"
+        },
+        {
+          "type": "block",
+          "name": "Streaming pack files",
+          "definition": "StreamingPackBlock"
+        },
+        {
+          "type": "block",
+          "name": "un-spatialized campaign sounds",
+          "definition": "campaign_unspatialized_sounds_block"
+        },
+        {
+          "type": "real",
+          "name": "Radio For Voice Radius#outside this radius, voice will switch to radio if possible"
+        },
+        {
+          "type": "block",
+          "name": "Audio Focus Info",
+          "definition": "focus_data_block"
+        },
+        {
+          "type": "block",
+          "name": "Vehicle Surface Sound Info#RTPC and sweetener info to apply to all surface sounds, regardless of vehicle",
+          "definition": "g_vehicleSurfaceSoundDataBlock"
+        },
+        {
+          "type": "string_id",
+          "name": "RTPC - enemies near player#Number of enemies near player (according to the 'enemy rtpc distance' in the active scenario's definition)"
+        },
+        {
+          "type": "string_id",
+          "name": "RTPC - enemies near player, weighted#Same as above, but scaled with the sound weight assigned to the enemy's .biped definition"
+        },
+        {
+          "type": "string_id",
+          "name": "RTPC - enemies near player targeting friendlies#Subset of the 'enemies near player' above, but this limited to the enemies targeting friendlies"
+        },
+        {
+          "type": "string_id",
+          "name": "RTPC - enemies near player targeting friendlies, weighted#Same as the above one, but scaled with the sound weight assigned to the enemy's .biped definition"
+        },
+        {
+          "type": "block",
+          "name": "State Groups#State groups we care enough about to have saved and loaded, as well as inherited during campaign player-teleportation",
+          "definition": "g_stateGroupReferenceBlock"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Forge sound events",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "fsld"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144783920"
+    },
+    "SoundbanksBlock": {
+      "guid": "a43a2a1ab44e1906c61ec7b432dffbfd",
+      "size": 32,
+      "size_string": "sizeof(SoundBankRefBlockDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "Sound bank",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "sbnk"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447831a0"
+    },
+    "GameVariantSoundbankBlock": {
+      "guid": "75582df9264a724f3088dab0f621662a",
+      "size": 64,
+      "size_string": "sizeof(GameVariantSoundBankBlockDefinition)",
+      "fields": [
+        {
+          "type": "string",
+          "name": "Variant Name#Name of the multiplayer variant that matches the Wwise state"
+        },
+        {
+          "type": "block",
+          "name": "Sound banks",
+          "definition": "SoundbanksBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447832d0"
+    },
+    "ADSBusEQBlock_struct": {
+      "guid": "ed0bb1814940a717895f58ab8087177b",
+      "size": 8,
+      "size_string": "sizeof(ADSBusEQBlockDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Bus EQ#Name of the wWise bus to EQ in ADS"
+        },
+        {
+          "type": "long_integer",
+          "name": "Bus EQ Hash!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144783000"
+    },
+    "StreamingPackBlock": {
+      "guid": "dfe3423d4a4eb7f0417dfeb9d5b7a68f",
+      "size": 36,
+      "size_string": "sizeof(StreamPackBlockDefinition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "StreamingPackBlockFlags"
+        },
+        {
+          "type": "string",
+          "name": "Streaming pck file#Name of the stream pack file"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144782ef0"
+    },
+    "campaign_unspatialized_sounds_block": {
+      "guid": "735840569c46065ecdc3cc865cb83a24",
+      "size": 32,
+      "size_string": "sizeof(CampainUnspatializedSoundBlockDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "sound^",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144782b00"
+    },
+    "focus_data_block": {
+      "guid": "1c7aa444194253c2d62b4a820ed329b1",
+      "size": 20,
+      "size_string": "sizeof(FocusData)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "Focus Inner Radius#Sounds within this radius are played back at full volume"
+        },
+        {
+          "type": "real",
+          "name": "Focus Outer Radius#Sounds outside of this radius are played back at the adjusted level"
+        },
+        {
+          "type": "real",
+          "name": "Focus Inner Cone Angle#Sounds within this cone are played back at full volume"
+        },
+        {
+          "type": "real",
+          "name": "Focus Outer Cone Angle#Sound outside of this radius are played back at the adjusted volume"
+        },
+        {
+          "type": "real",
+          "name": "Focus Outside Volume Adjustment#percentage value (0.0 to 1.0) determining the volume level when full outside both sphere and cone"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144782c30"
+    },
+    "g_vehicleSurfaceSoundDataBlock": {
+      "guid": "315d993f884f5f8af051be8587f1016d",
+      "size": 8,
+      "size_string": "sizeof(i343::Sound::VehicleSurfaceSoundData)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "RTPC name"
+        },
+        {
+          "type": "real",
+          "name": "Sweetener threshold#The RTPC value for determining whether to start or stop the sound to trigger the respective sweeteners (as defined by the start and stop events of the looping sound from the appropriate .material_effects tag"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144782dc0"
+    },
+    "g_stateGroupReferenceBlock": {
+      "guid": "684ada35c04d484184318dbc75986ffc",
+      "size": 32,
+      "size_string": "sizeof(Tag::Reference<SoundStateGroup>)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "State-group reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "ssgp"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144783800"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "StreamingPackBlockFlags": {
+      "options": [
+        "Language pack",
+        "Sound bank pack"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

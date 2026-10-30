@@ -1,0 +1,468 @@
+{
+  "name": "material_shader_bank",
+  "tag": "mtsb",
+  "version": 2,
+  "flags": 16777218,
+  "parent_tag": "aTag",
+  "block": "material_shader_bank_block",
+  "blocks": {
+    "material_shader_bank_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "material_shader_bank_block_struct"
+    },
+    "rasterizer_compiled_shader_BlockSchema": {
+      "max_count": 10240,
+      "max_count_string": "10 * k_kilo",
+      "struct": "rasterizer_compiled_shader_struct"
+    },
+    "rasterizer_constant_block": {
+      "max_count": 1024,
+      "max_count_string": "k_kilo",
+      "struct": "rasterizer_constant_block"
+    },
+    "RasterizerCompiledGeometryShaderBlockSchema": {
+      "max_count": 10240,
+      "max_count_string": "10 * k_kilo",
+      "struct": "RasterizerCompiledGeometryShaderBlockSchema_struct"
+    },
+    "geometryShaderStreamDeclarationBlock": {
+      "max_count": 1024,
+      "max_count_string": "k_kilo",
+      "struct": "geometryShaderStreamDeclarationBlock_struct"
+    },
+    "RasterizerCompiledComputeShaderBlockSchema": {
+      "max_count": 10240,
+      "max_count_string": "10 * k_kilo",
+      "struct": "RasterizerCompiledComputeShaderBlockSchema_struct"
+    },
+    "shaderHashBlock": {
+      "max_count": 10240,
+      "max_count_string": "rasterizer_compiled_shader_BlockSchema.maximum_element_count",
+      "struct": "shaderHashBlock_struct"
+    }
+  },
+  "structs": {
+    "material_shader_bank_block_struct": {
+      "guid": "73c9f8b86b46ff40b7f6cf89af3452d4",
+      "size": 56,
+      "size_string": "(sizeof(c_material_shader_bank) - Tag::SizeInfo<c_material_shader_bank::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "bytecode",
+          "group_tag": "bidb"
+        },
+        {
+          "type": "tag_resource",
+          "name": "shader bytecode resources",
+          "definition": "ShaderByteCodeResourceSchema"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "bide"
+        },
+        {
+          "type": "int64_integer",
+          "name": "runtime shader bank\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "word_integer",
+          "name": "vertex shader count*"
+        },
+        {
+          "type": "word_integer",
+          "name": "pixel shader count*"
+        },
+        {
+          "type": "word_integer",
+          "name": "geometry shader count*"
+        },
+        {
+          "type": "word_integer",
+          "name": "compute shader count*"
+        },
+        {
+          "type": "word_integer",
+          "name": "hull shader count*"
+        },
+        {
+          "type": "word_integer",
+          "name": "domain shader count*"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448650c0"
+    },
+    "ShaderByteCodeResourceSchema_struct": {
+      "guid": "2df16fe9134d8f1f6b257eaea6def02d",
+      "size": 336,
+      "size_string": "sizeof(ShaderByteCodeResource)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "vertex shaders bytecode*",
+          "definition": "rasterizer_compiled_shader_BlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "pixel shaders bytecode*",
+          "definition": "rasterizer_compiled_shader_BlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "geometry shaders bytecode*",
+          "definition": "RasterizerCompiledGeometryShaderBlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "compute shaders bytecode*",
+          "definition": "RasterizerCompiledComputeShaderBlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "hull shaders bytecode*",
+          "definition": "rasterizer_compiled_shader_BlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "domain shaders bytecode*",
+          "definition": "rasterizer_compiled_shader_BlockSchema"
+        },
+        {
+          "type": "block",
+          "name": "vertex shader hashes*",
+          "definition": "shaderHashBlock"
+        },
+        {
+          "type": "block",
+          "name": "pixel shader hashes*",
+          "definition": "shaderHashBlock"
+        },
+        {
+          "type": "block",
+          "name": "geometry shader hashes*",
+          "definition": "shaderHashBlock"
+        },
+        {
+          "type": "block",
+          "name": "compute shader hashes*",
+          "definition": "shaderHashBlock"
+        },
+        {
+          "type": "block",
+          "name": "hull shader hashes*",
+          "definition": "shaderHashBlock"
+        },
+        {
+          "type": "block",
+          "name": "domain shader hashes*",
+          "definition": "shaderHashBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144864fb0"
+    },
+    "rasterizer_compiled_shader_struct": {
+      "guid": "4c349bf9f54e345aeeb11f8d82016bfc",
+      "size": 56,
+      "size_string": "sizeof(c_rasterizer_compiled_shader)",
+      "fields": [
+        {
+          "type": "data",
+          "name": "dx11 compiled shader{..:dx11 compiled shader}",
+          "definition": "dx11_compiled_shader_data"
+        },
+        {
+          "type": "explanation",
+          "name": "dx11 constant table",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "dx11 constant table*!",
+          "definition": "global_rasterizer_constant_table_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144887b90"
+    },
+    "global_rasterizer_constant_table_struct": {
+      "guid": "e95a228892484a66190891a3fbaeca46",
+      "size": 28,
+      "size_string": "sizeof(c_rasterizer_constant_table_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "constants*",
+          "definition": "rasterizer_constant_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488c550"
+    },
+    "rasterizer_constant_block": {
+      "guid": "ab07ac9eef439d55bcf5ae8855326e65",
+      "size": 12,
+      "size_string": "sizeof(c_rasterizer_shader_parameter_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "constant name^"
+        },
+        {
+          "type": "word_integer",
+          "name": "buffer offset*"
+        },
+        {
+          "type": "word_integer",
+          "name": "buffer size*"
+        },
+        {
+          "type": "char_enum",
+          "name": "parameter group*",
+          "definition": "material_parameter_group_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "parameter type*",
+          "definition": "shaderParameterTypeEnum"
+        },
+        {
+          "type": "pad",
+          "name": "qersaui",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488c680"
+    },
+    "RasterizerCompiledGeometryShaderBlockSchema_struct": {
+      "guid": "ee60cd47f04405f5ddbf779e63cfbbfd",
+      "size": 104,
+      "size_string": "sizeof(RasterizerCompiledGeometryShader)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "base compiled shader",
+          "definition": "rasterizer_compiled_shader_struct"
+        },
+        {
+          "type": "block",
+          "name": "shader passes*",
+          "definition": "geometryShaderStreamDeclarationBlock"
+        },
+        {
+          "type": "long_integer",
+          "name": "stream out stride 0*"
+        },
+        {
+          "type": "long_integer",
+          "name": "stream out stride 1*"
+        },
+        {
+          "type": "long_integer",
+          "name": "stream out stride 2*"
+        },
+        {
+          "type": "long_integer",
+          "name": "stream out stride 3*"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144887db0"
+    },
+    "geometryShaderStreamDeclarationBlock_struct": {
+      "guid": "4f7f6d7d1f4b0c72e9d7fb8be053e2f0",
+      "size": 40,
+      "size_string": "sizeof(RasterizerCompiledStreamOutDeclarationEntry)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "stream out stride 0*"
+        },
+        {
+          "type": "data",
+          "name": "semantic name*",
+          "definition": "semantic_name_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "semantic index*"
+        },
+        {
+          "type": "char_integer",
+          "name": "start component*"
+        },
+        {
+          "type": "char_integer",
+          "name": "component count*"
+        },
+        {
+          "type": "char_integer",
+          "name": "output slot*"
+        },
+        {
+          "type": "pad",
+          "name": "JSGHFS",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144887ca0"
+    },
+    "RasterizerCompiledComputeShaderBlockSchema_struct": {
+      "guid": "28ff7695d34e56cb0527dd8051ce3cbb",
+      "size": 72,
+      "size_string": "sizeof(RasterizerCompiledComputeShader)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "base compiled shader",
+          "definition": "rasterizer_compiled_shader_struct"
+        },
+        {
+          "type": "long_integer",
+          "name": "thread group size X*"
+        },
+        {
+          "type": "long_integer",
+          "name": "thread group size Y*"
+        },
+        {
+          "type": "long_integer",
+          "name": "thread group size Z*"
+        },
+        {
+          "type": "long_integer",
+          "name": "thread count*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144887ed0"
+    },
+    "shaderHashBlock_struct": {
+      "guid": "56c54eecbc4892049c5dfaac9a3a703a",
+      "size": 4,
+      "size_string": "sizeof(long)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "hash*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144864e50"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "material_parameter_group_enum": {
+      "options": [
+        "unknown",
+        "$globals",
+        "material_parameters",
+        "skinning"
+      ]
+    },
+    "shaderParameterTypeEnum": {
+      "options": [
+        "float",
+        "int",
+        "bool",
+        "texture"
+      ]
+    }
+  },
+  "datas": {
+    "dx11_compiled_shader_data": {
+      "alignment": 8,
+      "flags": 0,
+      "max_size": 1048576,
+      "max_size_string": "c_rasterizer_compiled_shader::k_maximum_shader_size"
+    },
+    "semantic_name_block": {
+      "alignment": 10,
+      "flags": 0,
+      "max_size": 1024,
+      "max_size_string": "k_kilo"
+    }
+  },
+  "resources": {
+    "ShaderByteCodeResourceSchema": {
+      "flags": 0,
+      "struct": "ShaderByteCodeResourceSchema_struct"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

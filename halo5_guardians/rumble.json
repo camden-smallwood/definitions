@@ -1,0 +1,179 @@
+{
+  "name": "rumble",
+  "tag": "rmbl",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "rumble_block",
+  "blocks": {
+    "rumble_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "rumble_block_struct"
+    }
+  },
+  "structs": {
+    "rumble_block_struct": {
+      "guid": "820f7aa8884704d76e9ecc8cd17fb8c4",
+      "size": 144,
+      "size_string": "(sizeof(s_rumble_definition) - Tag::SizeInfo<s_rumble_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "rumble",
+          "definition": "rumble_definition_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144801f30"
+    },
+    "rumble_definition_struct": {
+      "guid": "297bdcf1b3467b0bbcae03bfcf877176",
+      "size": 128,
+      "size_string": "(sizeof(s_rumble_definition) - Tag::SizeInfo<s_rumble_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "low frequency rumble",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "low frequency rumble",
+          "definition": "rumble_frequency_definition_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "high frequency rumble",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "high frequency rumble",
+          "definition": "rumble_frequency_definition_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "primary trigger rumble",
+          "definition": "For actions on the 'primary' trigger like weapon fire (maps to the appropriate left or right trigger depending on controller preferences)"
+        },
+        {
+          "type": "struct",
+          "name": "primary trigger rumble",
+          "definition": "rumble_frequency_definition_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "secondary trigger rumble",
+          "definition": "For actions on the 'secondary' trigger like boosting (maps to the appropriate left or right trigger depending on controller preferences)"
+        },
+        {
+          "type": "struct",
+          "name": "secondary trigger rumble",
+          "definition": "rumble_frequency_definition_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144801e20"
+    },
+    "rumble_frequency_definition_struct": {
+      "guid": "48c665eaed41a5fd63cac498cc970ec7",
+      "size": 32,
+      "size_string": "sizeof(s_rumble_frequency_definition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "duration:seconds"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "dirty whore",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144801c80"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

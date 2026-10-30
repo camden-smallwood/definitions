@@ -1,0 +1,111 @@
+{
+  "name": "ui_ads_weapon_node_definition",
+  "tag": "uiwn",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "ui_ads_weapon_node_definition_block",
+  "blocks": {
+    "ui_ads_weapon_node_definition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "ui_ads_weapon_node_definition_block_struct"
+    }
+  },
+  "structs": {
+    "ui_ads_weapon_node_definition_block_struct": {
+      "guid": "c2af59d0d4485ac6e0c1d0a0b56c11fd",
+      "size": 152,
+      "size_string": "(sizeof(UIADSWeaponNodeDefinition) - Tag::SizeInfo<UIADSWeaponNodeDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "hip fire reticle default screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "reticle default screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sight front default screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sight back default screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "scale"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489a670"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

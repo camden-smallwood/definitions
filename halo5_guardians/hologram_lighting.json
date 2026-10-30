@@ -1,0 +1,269 @@
+{
+  "name": "hologram_lighting",
+  "tag": "holt",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "hologram_lighting_block",
+  "blocks": {
+    "hologram_lighting_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "hologram_lighting_block_struct"
+    }
+  },
+  "structs": {
+    "hologram_lighting_block_struct": {
+      "guid": "42b04ae427434f0c0b2e9ca66246aa8c",
+      "size": 112,
+      "size_string": "(sizeof(HologramLightingTag) - Tag::SizeInfo<HologramLightingTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "Hologram Lighting",
+          "definition": "hologramLightingStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144980d50"
+    },
+    "hologramLightingStruct": {
+      "guid": "37817b795340b99795c38d92a45d737a",
+      "size": 96,
+      "size_string": "sizeof(HologramLighting)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "HOLOGRAM",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "custom",
+          "name": "Intensity",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
+        },
+        {
+          "type": "real",
+          "name": "Intensity",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
+        },
+        {
+          "type": "real",
+          "name": "Intensity Input!"
+        },
+        {
+          "type": "char_enum",
+          "name": "Transparency Mode",
+          "definition": "hologramTransparencyMode"
+        },
+        {
+          "type": "pad",
+          "name": "PADDING1!",
+          "definition": 3
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "KEY LIGHT",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Key Light",
+          "definition": "hologramLight"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "FILL LIGHT",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Fill Light",
+          "definition": "hologramLight"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "RIM LIGHT",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Rim Light",
+          "definition": "hologramLight"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144980c40"
+    },
+    "hologramLight": {
+      "guid": "32da0639a6453cfc84c2edad952c291b",
+      "size": 28,
+      "size_string": "sizeof(HologramLight)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Hologram Light",
+          "group_tag": "holl"
+        },
+        {
+          "type": "custom",
+          "name": "Direction",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 360.0,
+            "step": 1.0
+          }
+        },
+        {
+          "type": "real",
+          "name": "Direction",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 360.0,
+            "step": 1.0
+          }
+        },
+        {
+          "type": "custom",
+          "name": "Front-Back",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 180.0,
+            "step": 1.0
+          }
+        },
+        {
+          "type": "real",
+          "name": "Front-Back",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 180.0,
+            "step": 1.0
+          }
+        },
+        {
+          "type": "custom",
+          "name": "Intensity",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
+        },
+        {
+          "type": "real",
+          "name": "Intensity",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
+        },
+        {
+          "type": "real",
+          "name": "Intensity Input!"
+        },
+        {
+          "type": "real",
+          "name": "Forward Input!"
+        },
+        {
+          "type": "real",
+          "name": "Right Input!"
+        },
+        {
+          "type": "real",
+          "name": "Up Input!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144980b20"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "hologramTransparencyMode": {
+      "options": [
+        "cheap",
+        "expensive"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

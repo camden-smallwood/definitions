@@ -1,0 +1,109 @@
+{
+  "name": "game_engine_globals",
+  "tag": "gegl",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "game_engine_globals_block",
+  "blocks": {
+    "game_engine_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_engine_globals_block_struct"
+    },
+    "gameEngineTextBlock": {
+      "max_count": 16,
+      "max_count_string": "16",
+      "struct": "gameEngineTextBlock"
+    }
+  },
+  "structs": {
+    "game_engine_globals_block_struct": {
+      "guid": "98346f79aa4d05653da32d884e7b67b1",
+      "size": 80,
+      "size_string": "(sizeof(s_game_engine_globals_definition) - Tag::SizeInfo<s_game_engine_globals_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "game engine settings",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wezr"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "game engine text",
+          "definition": "gameEngineTextBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144813690"
+    },
+    "gameEngineTextBlock": {
+      "guid": "2048c32071474ad8667da19bb077b0dc",
+      "size": 32,
+      "size_string": "sizeof(GameEngineTextDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "text source",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144813570"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

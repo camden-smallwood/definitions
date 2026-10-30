@@ -1,0 +1,99 @@
+{
+  "name": "CheatGlobalsDefinition",
+  "tag": "glch",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "CheatGlobalsDefinition_block",
+  "blocks": {
+    "CheatGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "CheatGlobalsDefinition_block_struct"
+    },
+    "cheat_powerups_block": {
+      "max_count": 20,
+      "max_count_string": "20",
+      "struct": "cheat_powerups_block"
+    }
+  },
+  "structs": {
+    "CheatGlobalsDefinition_block_struct": {
+      "guid": "89676082a543576da160fcb1ba86de83",
+      "size": 48,
+      "size_string": "(sizeof(i343::CheatGlobals) - Tag::SizeInfo<i343::CheatGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "@cheat powerups",
+          "definition": "cheat_powerups_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144826fa0"
+    },
+    "cheat_powerups_block": {
+      "guid": "087db5601c435ff49347ffbc18c0283c",
+      "size": 32,
+      "size_string": "sizeof(s_game_globals_tag_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "powerup^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448039b0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "AnyTag",
+  "tag": "aTag",
+  "version": 65535,
+  "flags": 1,
+  "block": "AnyTag_block",
+  "blocks": {
+    "AnyTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "AnyTag_struct_definition"
+    }
+  },
+  "structs": {
+    "AnyTag_struct_definition": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    },
+    "s_anyTagGuts": {
+      "guid": "46011d159c471f183970ec869043bc33",
+      "size": 8,
+      "size_string": "sizeof(AnyTagGuts)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "global tag ID!"
+        },
+        {
+          "type": "pad",
+          "name": "local tag handle!~",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb340"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

@@ -1,0 +1,1023 @@
+{
+  "name": "model_dissolve_definition",
+  "tag": "mdsv",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "model_dissolve_definition_block",
+  "blocks": {
+    "model_dissolve_definition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "model_dissolve_definition_block_struct"
+    },
+    "modelDissolvePerRegionTimeOffsetBlock": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_REGIONS_PER_MODEL",
+      "struct": "modelDissolvePerRegionTimeOffsetBlock"
+    },
+    "material_shader_parameter_block": {
+      "max_count": 267,
+      "max_count_string": "s_material_shader_parameter::k_max_material_shader_parameters",
+      "struct": "material_shader_parameter_block"
+    },
+    "material_shader_function_parameter_block": {
+      "max_count": 267,
+      "max_count_string": "s_material_shader_parameter::k_max_material_shader_parameters",
+      "struct": "material_shader_function_parameter_block"
+    },
+    "material_postprocess_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "material_postprocess_block_struct"
+    },
+    "material_postprocess_texture_block": {
+      "max_count": 32,
+      "max_count_string": "c_material::k_maximum_postprocess_textures",
+      "struct": "material_postprocess_texture_block"
+    },
+    "functionParameterBlock": {
+      "max_count": 255,
+      "max_count_string": "k_uint8_max",
+      "struct": "functionParameterBlock"
+    },
+    "externParameterBlock": {
+      "max_count": 255,
+      "max_count_string": "k_uint8_max",
+      "struct": "externParameterBlock"
+    },
+    "materialConstantBlock": {
+      "max_count": 255,
+      "max_count_string": "k_uint8_max",
+      "struct": "materialConstantBlock"
+    },
+    "g_null_block": {
+      "max_count": 0,
+      "max_count_string": "0",
+      "struct": "g_null_block"
+    }
+  },
+  "structs": {
+    "model_dissolve_definition_block_struct": {
+      "guid": "44636db4c1429a9eb07063a9f58c72a5",
+      "size": 408,
+      "size_string": "(sizeof(ModelDissolveDefinition) - Tag::SizeInfo<ModelDissolveDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "modelDissolveFlags"
+        },
+        {
+          "type": "char_enum",
+          "name": "particle spawn position",
+          "definition": "modelDissolveParticleSpawnPosition"
+        },
+        {
+          "type": "pad",
+          "name": "graaag",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "particle spawn random radius"
+        },
+        {
+          "type": "tag_reference",
+          "name": "cheap particle emitter",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cpem"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "cheap particle spawn distance threshold"
+        },
+        {
+          "type": "custom",
+          "name": "particle velocity factors",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real",
+          "name": "velocity up"
+        },
+        {
+          "type": "real",
+          "name": "velocity toward dissolve point"
+        },
+        {
+          "type": "real",
+          "name": "velocity toward dissolve surface"
+        },
+        {
+          "type": "real",
+          "name": "velocity along dissolve surface"
+        },
+        {
+          "type": "real",
+          "name": "velocity random"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "real",
+          "name": "particle forced speed#if non-zero, we normalize the speed to this value"
+        },
+        {
+          "type": "real",
+          "name": "delay"
+        },
+        {
+          "type": "real",
+          "name": "duration"
+        },
+        {
+          "type": "real",
+          "name": "extra duration#particularly for reverse dissolves, to prevent popping"
+        },
+        {
+          "type": "real",
+          "name": "particle spawn time offset#particularly for reverse dissolves, to cause particles to arrive at the leading edge"
+        },
+        {
+          "type": "block",
+          "name": "per-region time offset",
+          "definition": "modelDissolvePerRegionTimeOffsetBlock"
+        },
+        {
+          "type": "custom",
+          "name": "effects",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "dissolve point",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "opposite dissolve point",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "dissolve surface",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "bounding sphere center",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "tag_reference",
+          "name": "finish effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": "material",
+          "group_tag": "tmpl"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "struct",
+          "name": "actual material?",
+          "definition": "material_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "string_id",
+          "name": "time offset override function"
+        },
+        {
+          "type": "string_id",
+          "name": "marker name for dissolve center"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144711600"
+    },
+    "modelDissolvePerRegionTimeOffsetBlock": {
+      "guid": "995fedf16846ff068ffc2e8ce3cef52e",
+      "size": 8,
+      "size_string": "sizeof(ModelDissolveRegionTimeOffset)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "region name^"
+        },
+        {
+          "type": "real",
+          "name": "region time offset"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447114e0"
+    },
+    "material_struct": {
+      "guid": "230d81130644153c599476aa073df0a7",
+      "size": 112,
+      "size_string": "sizeof(c_material)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "material shader",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mats"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "material parameters",
+          "definition": "material_shader_parameter_block"
+        },
+        {
+          "type": "block",
+          "name": "postprocess definition!",
+          "definition": "material_postprocess_block"
+        },
+        {
+          "type": "string_id",
+          "name": "physics material name",
+          "group_tag": "sted"
+        },
+        {
+          "type": "string_id",
+          "name": "physics material name 2",
+          "group_tag": "sted"
+        },
+        {
+          "type": "string_id",
+          "name": "physics material name 3",
+          "group_tag": "sted"
+        },
+        {
+          "type": "string_id",
+          "name": "physics material name 4",
+          "group_tag": "sted"
+        },
+        {
+          "type": "real",
+          "name": "sort offset"
+        },
+        {
+          "type": "char_enum",
+          "name": "alpha blend mode",
+          "definition": "alpha_blend_mode_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "sort layer*",
+          "definition": "global_sort_layer_enum_defintion"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags!",
+          "definition": "materialFlags"
+        },
+        {
+          "type": "byte_flags",
+          "name": "render flags!",
+          "definition": "materialRenderFlags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d8f0"
+    },
+    "material_shader_parameter_block": {
+      "guid": "063e4b5e3647a8183f96cfbe9dd6ca42",
+      "size": 232,
+      "size_string": "sizeof(s_material_shader_parameter)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "parameter name^*"
+        },
+        {
+          "type": "long_enum",
+          "name": "parameter type*",
+          "definition": "material_shader_parameter_type_enum"
+        },
+        {
+          "type": "long_integer",
+          "name": "parameter index*!"
+        },
+        {
+          "type": "tag_reference",
+          "name": "bitmap",
+          "definition": {
+            "flags": 18,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "bitmap path"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "color"
+        },
+        {
+          "type": "real",
+          "name": "real"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "vector"
+        },
+        {
+          "type": "long_integer",
+          "name": "int/bool"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap flags"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap filter mode"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap address mode"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap address mode x"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap address mode y"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap sharpen mode"
+        },
+        {
+          "type": "byte_integer",
+          "name": "bitmap extern mode"
+        },
+        {
+          "type": "byte_integer",
+          "name": "bitmap min mipmap"
+        },
+        {
+          "type": "byte_integer",
+          "name": "bitmap max mipmap"
+        },
+        {
+          "type": "byte_integer",
+          "name": "parameter flags!"
+        },
+        {
+          "type": "dword_integer",
+          "name": "render phases used"
+        },
+        {
+          "type": "dword_integer",
+          "name": "shader types used"
+        },
+        {
+          "type": "block",
+          "name": "function parameters",
+          "definition": "material_shader_function_parameter_block"
+        },
+        {
+          "type": "data",
+          "name": "display name*",
+          "definition": "help_text_block"
+        },
+        {
+          "type": "data",
+          "name": "display group*",
+          "definition": "help_text_block"
+        },
+        {
+          "type": "data",
+          "name": "display help text*",
+          "definition": "help_text_block"
+        },
+        {
+          "type": "real",
+          "name": "display minimum"
+        },
+        {
+          "type": "real",
+          "name": "display maximum"
+        },
+        {
+          "type": "word_integer",
+          "name": "register offset*!"
+        },
+        {
+          "type": "word_integer",
+          "name": "register size*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448875a0"
+    },
+    "material_shader_function_parameter_block": {
+      "guid": "e3f0715472444df516a555aded7b009a",
+      "size": 52,
+      "size_string": "sizeof(s_material_shader_function_parameter)",
+      "fields": [
+        {
+          "type": "long_enum",
+          "name": "type^",
+          "definition": "material_animated_parameter_type_enum"
+        },
+        {
+          "type": "string_id",
+          "name": "input name",
+          "group_tag": "fnin"
+        },
+        {
+          "type": "string_id",
+          "name": "range name",
+          "group_tag": "fnir"
+        },
+        {
+          "type": "char_enum",
+          "name": "Output Modifier!",
+          "group_tag": "fnop",
+          "definition": "materialFunctionOutputModEnum"
+        },
+        {
+          "type": "pad",
+          "name": "BVCG",
+          "definition": 3
+        },
+        {
+          "type": "string_id",
+          "name": "Output Modifier Input!",
+          "group_tag": "fnom"
+        },
+        {
+          "type": "real",
+          "name": "time period:seconds",
+          "group_tag": "fn**"
+        },
+        {
+          "type": "explanation",
+          "name": "FUNCTION",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144887470"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "material_postprocess_block_struct": {
+      "guid": "c3d0501dc04152c857905b9ea3f398ce",
+      "size": 200,
+      "size_string": "sizeof(s_material_postprocess_definition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "textures",
+          "definition": "material_postprocess_texture_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "textures to clear"
+        },
+        {
+          "type": "block",
+          "name": "functions",
+          "definition": "material_shader_function_parameter_block"
+        },
+        {
+          "type": "block",
+          "name": "function parameters",
+          "definition": "functionParameterBlock"
+        },
+        {
+          "type": "block",
+          "name": "extern parameters",
+          "definition": "externParameterBlock"
+        },
+        {
+          "type": "char_enum",
+          "name": "alpha blend mode",
+          "definition": "alpha_blend_mode_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "layer blend mode",
+          "definition": "layerBlendModeEnum"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "materialPostprocessFlags"
+        },
+        {
+          "type": "block",
+          "name": "material constants!~",
+          "definition": "materialConstantBlock"
+        },
+        {
+          "type": "block",
+          "name": "alternate constants!~",
+          "definition": "materialConstantBlock"
+        },
+        {
+          "type": "int64_integer",
+          "name": "materialConstantBuffer!~\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "int64_integer",
+          "name": "alternateConstantBuffer!~\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "dword_integer",
+          "name": "material constant shader stage mask"
+        },
+        {
+          "type": "array",
+          "name": "runtime queryable properties table",
+          "definition": "runtime_queryable_properties"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d6b0"
+    },
+    "material_postprocess_texture_block": {
+      "guid": "ec1298cde14bd63c48fe3bb396a5bc0b",
+      "size": 56,
+      "size_string": "sizeof(s_material_postprocess_texture)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "bitmap reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "dword_integer",
+          "name": "render phase mask"
+        },
+        {
+          "type": "dword_integer",
+          "name": "shader stage mask"
+        },
+        {
+          "type": "word_integer",
+          "name": "frame index parameter"
+        },
+        {
+          "type": "word_integer",
+          "name": "sampler index"
+        },
+        {
+          "type": "word_integer",
+          "name": "transform register index"
+        },
+        {
+          "type": "byte_integer",
+          "name": "extern texture mode"
+        },
+        {
+          "type": "pad",
+          "name": "lkasdfhbahsdf",
+          "definition": 1
+        },
+        {
+          "type": "int64_integer",
+          "name": "SamplerState!~\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485cfc0"
+    },
+    "functionParameterBlock": {
+      "guid": "c0eca125be4c1fb8e266949fdbcfa980",
+      "size": 8,
+      "size_string": "sizeof(s_materialFunctionParameter)",
+      "fields": [
+        {
+          "type": "byte_integer",
+          "name": "function index"
+        },
+        {
+          "type": "byte_integer",
+          "name": "register offset"
+        },
+        {
+          "type": "byte_integer",
+          "name": "parameter group"
+        },
+        {
+          "type": "pad",
+          "name": "DHaFS",
+          "definition": 1
+        },
+        {
+          "type": "dword_integer",
+          "name": "render phase mask"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d0f0"
+    },
+    "externParameterBlock": {
+      "guid": "36821172914f2cb2afda45a6bba5e7ab",
+      "size": 8,
+      "size_string": "sizeof(s_materialExternParameter)",
+      "fields": [
+        {
+          "type": "byte_integer",
+          "name": "extern index"
+        },
+        {
+          "type": "byte_integer",
+          "name": "extern offset"
+        },
+        {
+          "type": "byte_integer",
+          "name": "parameter group"
+        },
+        {
+          "type": "pad",
+          "name": "DHaFS",
+          "definition": 1
+        },
+        {
+          "type": "dword_integer",
+          "name": "render phase mask"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d220"
+    },
+    "materialConstantBlock": {
+      "guid": "6c763383c6491399871f34aef2fb867f",
+      "size": 16,
+      "size_string": "sizeof(i343::Float4)",
+      "fields": [
+        {
+          "type": "real_quaternion",
+          "name": "register"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d350"
+    },
+    "runtime_queryable_properties": {
+      "guid": "71d3c8c7b14b1a1e30c49fbebedec7be",
+      "size": 1,
+      "size_string": "sizeof(uint8)",
+      "fields": [
+        {
+          "type": "char_block_index",
+          "name": "index",
+          "definition": "g_null_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485d480"
+    },
+    "g_null_block": {
+      "guid": "a6487e75bc4cac9c1ca146bcf3e2f763",
+      "size": 0,
+      "size_string": "0",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449ec0c0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "arrays": {
+    "runtime_queryable_properties": {
+      "count": 4,
+      "count_string": "s_material_postprocess_definition::k_runtime_queryable_properties_count",
+      "struct": "runtime_queryable_properties"
+    }
+  },
+  "enums_flags": {
+    "modelDissolveFlags": {
+      "options": [
+        "draw backfaces on overlay",
+        "reverse dissolve",
+        "pin to animation",
+        "time particles to die when arriving",
+        "needs transmission over network",
+        "can be restarted",
+        "bounding center effect is taint spawn"
+      ]
+    },
+    "modelDissolveParticleSpawnPosition": {
+      "options": [
+        "dissolve surface",
+        "dissolve point",
+        "opposite from dissolve point"
+      ]
+    },
+    "material_shader_parameter_type_enum": {
+      "options": [
+        "bitmap",
+        "real",
+        "int",
+        "bool",
+        "color"
+      ]
+    },
+    "material_animated_parameter_type_enum": {
+      "options": [
+        "value",
+        "color",
+        "scale uniform",
+        "scale u",
+        "scale v",
+        "offset u",
+        "offset v",
+        "frame index",
+        "alpha"
+      ]
+    },
+    "materialFunctionOutputModEnum": {
+      "options": [
+        " ",
+        "Add",
+        "Multiply"
+      ]
+    },
+    "alpha_blend_mode_enum": {
+      "options": [
+        "opaque",
+        "additive",
+        "multiply",
+        "alpha_blend",
+        "double_multiply",
+        "pre_multiplied_alpha",
+        "maximum",
+        "multiply_add",
+        "add_src_times_dstalpha",
+        "add_src_times_srcalpha",
+        "inv_alpha_blend",
+        "motion_blur_static",
+        "motion_blur_inhibit",
+        "alpha_blend_constant",
+        "overdraw_apply",
+        "wet_screen_effect",
+        "minimum",
+        "revsubtract",
+        "forge_lightmap",
+        "forge_lightmap_inv",
+        "replace_all_channels",
+        "alpha_blend_max",
+        "opaque_alpha_blend",
+        "alpha_blend_additive_transparent",
+        "floating shadow",
+        "decal_alpha_blend",
+        "decal_add_src_times_src_alpha",
+        "decal_multiply_add",
+        "wpf_blend_mode",
+        "wpf_no_color_blend_mode",
+        "blend forge analytic red",
+        "blend factor green only",
+        "blend forge analytic blue",
+        "blend factor alpha only",
+        "multiply red green only",
+        "multiply blue alpha only",
+        "decal opaque",
+        "accumulate_pre_multiplied_alpha",
+        "accumulate_multiply_add",
+        "accumulate_alpha_blend",
+        "accumulate_inverse_alpha_blend",
+        "accumulate_additive",
+        "accumulate_additive_transparent",
+        "accumulate_add_src_times_srcalpha",
+        "accumulate_multiply",
+        "ssao_multiply",
+        "ssao_alpha_channel_only",
+        "depth_peeling_blend_mode",
+        "depth_peeling_Z_pass",
+        "wpf_additive_blend_mode",
+        "forge_normalize",
+        "depth_peeling_accumulate_alpha",
+        "alpha_blend_for_display_planes",
+        "forge_light",
+        "forge_light_inverse",
+        "composite_UI"
+      ]
+    },
+    "layerBlendModeEnum": {
+      "options": [
+        "none",
+        "blended",
+        "layered"
+      ]
+    },
+    "materialPostprocessFlags": {
+      "options": [
+        "has material constant functions",
+        "has texture frame functions",
+        "disable atmosphere fog",
+        "uses depth camera",
+        "material is variable",
+        "has variable material constant functions",
+        "has at least one extern texture used"
+      ]
+    },
+    "global_sort_layer_enum_defintion": {
+      "options": [
+        "invalid",
+        "pre-pass",
+        "normal",
+        "post-pass"
+      ]
+    },
+    "materialFlags": {
+      "options": [
+        "converted from shader",
+        "decal post lighting"
+      ]
+    },
+    "materialRenderFlags": {
+      "options": [
+        "no atmosphere fog",
+        "cull shields",
+        "cull active camo"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    },
+    "help_text_block": {
+      "alignment": 10,
+      "flags": 0,
+      "max_size": 65535,
+      "max_size_string": "UNSIGNED_SHORT_MAX"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

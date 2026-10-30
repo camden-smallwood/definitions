@@ -1,0 +1,1173 @@
+{
+  "name": "incident_global_properties_definition",
+  "tag": "igpd",
+  "version": 2,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "incident_global_properties_definition_block",
+  "blocks": {
+    "incident_global_properties_definition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "incident_global_properties_definition_block_struct"
+    },
+    "incident_definition_block": {
+      "max_count": 1000,
+      "max_count_string": "s_incident_definition::k_maximum_incidents_per_definition",
+      "struct": "incident_definition_block_struct"
+    },
+    "suppressed_incident_block": {
+      "max_count": 1000,
+      "max_count_string": "1000",
+      "struct": "suppressed_incident_block"
+    },
+    "SuppressedIncidentBlockReferenceDefinition": {
+      "max_count": 8,
+      "max_count_string": "8",
+      "struct": "SuppressedIncidentBlockReferenceDefinition"
+    },
+    "specialized_incident_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "specialized_incident_block"
+    },
+    "specialized_incident_object_properties_block": {
+      "max_count": 10,
+      "max_count_string": "10",
+      "struct": "specialized_incident_object_properties_block"
+    },
+    "specialized_incident_object_riding_in_vehicle_properties_block": {
+      "max_count": 10,
+      "max_count_string": "10",
+      "struct": "specialized_incident_object_riding_in_vehicle_properties_block"
+    },
+    "specialized_incident_special_kill_type_block": {
+      "max_count": 10,
+      "max_count_string": "10",
+      "struct": "specialized_incident_special_kill_type_block"
+    },
+    "specializedIncidentGameOverBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "specializedIncidentGameOverBlock"
+    },
+    "specializedIncidentCustomDataFilterBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "specializedIncidentCustomDataFilterBlock"
+    },
+    "specializedIncidentDistanceFilterBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "specializedIncidentDistanceFilterBlock"
+    },
+    "incident_accumulator_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "incident_accumulator_block"
+    },
+    "incident_accumulator_child_incident_block": {
+      "max_count": 60,
+      "max_count_string": "60",
+      "struct": "incident_accumulator_child_incident_block"
+    },
+    "incident_sum_accumulator_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "incident_sum_accumulator_block"
+    },
+    "incident_sum_accumulator_child_incident_block": {
+      "max_count": 60,
+      "max_count_string": "60",
+      "struct": "incident_sum_accumulator_child_incident_block"
+    },
+    "game_incident_response_block": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_GAME_INCIDENT_RESPONSES_PER_BLOCK",
+      "struct": "game_incident_response_block_struct"
+    },
+    "specialized_incident_fanfare_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "specialized_incident_fanfare_block"
+    }
+  },
+  "structs": {
+    "incident_global_properties_definition_block_struct": {
+      "guid": "f3619a24204d09a66446e29427efc295",
+      "size": 152,
+      "size_string": "(sizeof(s_incident_global_properties_definition) - Tag::SizeInfo<s_incident_global_properties_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "real",
+          "name": "campaign multikill time:s"
+        },
+        {
+          "type": "real",
+          "name": "firefight multikill time:s"
+        },
+        {
+          "type": "real",
+          "name": "multiplayer multikill time:s"
+        },
+        {
+          "type": "real",
+          "name": "low health threshold:[0,1]"
+        },
+        {
+          "type": "real",
+          "name": "shield recharge threshold:[0,1]"
+        },
+        {
+          "type": "real",
+          "name": "maximum vengeance time:s"
+        },
+        {
+          "type": "real",
+          "name": "lifesaver damage threshold:[0,2]"
+        },
+        {
+          "type": "real",
+          "name": "avenger dead time:s"
+        },
+        {
+          "type": "real",
+          "name": "hologram recently used maximum time:s"
+        },
+        {
+          "type": "long_enum",
+          "name": "placeholder !*",
+          "definition": "e_place_holder_def"
+        },
+        {
+          "type": "real",
+          "name": "thruster pack recently used maximum time:s"
+        },
+        {
+          "type": "real",
+          "name": "active shield recently used maximum time:s"
+        },
+        {
+          "type": "real",
+          "name": "damage threshold for hologram incidents:[0,1]"
+        },
+        {
+          "type": "real",
+          "name": "damage threshold for distraction incident killer:[0,1]"
+        },
+        {
+          "type": "real",
+          "name": "damage threshold for distraction incident distractor:[0,1]"
+        },
+        {
+          "type": "custom",
+          "name": "HEAT",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "short_integer",
+          "name": "maximum heat"
+        },
+        {
+          "type": "pad",
+          "name": "KVLHESKH",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "full heat decay time:S#seconds to completely deplete a full heat meter"
+        },
+        {
+          "type": "real",
+          "name": "full heat stun time:s#seconds from the time you are at maximum heat until it starts decaying again"
+        },
+        {
+          "type": "real",
+          "name": "betrayal heat stun time:s#seconds from the time you are at maximum heat until it starts decaying again"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "tag_reference",
+          "name": "incident definitions",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "ingd"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "default incident definition!*#generated in code",
+          "definition": "incident_definition_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448196b0"
+    },
+    "incident_definition_block_struct": {
+      "guid": "e9ff3fae5e41f4c81c459c8ee9aadcc8",
+      "size": 180,
+      "size_string": "sizeof(s_incident_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "custom",
+          "name": "PROPERTIES",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "incident_definition_flags"
+        },
+        {
+          "type": "pad",
+          "name": "JKOPEIE",
+          "definition": 3
+        },
+        {
+          "type": "custom",
+          "name": "DISALLOWED GAME MODES",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "disallowed game modes",
+          "definition": "game_mode_flags_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "block",
+          "name": "suppressed incidents",
+          "group_tag": "slap",
+          "definition": "suppressed_incident_block"
+        },
+        {
+          "type": "block",
+          "name": "suppressed incident blocks",
+          "group_tag": "slap",
+          "definition": "SuppressedIncidentBlockReferenceDefinition"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "CREATION",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "block",
+          "name": "specialized incidents",
+          "group_tag": "slap",
+          "definition": "specialized_incident_block"
+        },
+        {
+          "type": "block",
+          "name": "accumulator incidents",
+          "group_tag": "slap",
+          "definition": "incident_accumulator_block"
+        },
+        {
+          "type": "block",
+          "name": "sum accumulator incidents",
+          "group_tag": "slap",
+          "definition": "incident_sum_accumulator_block"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "block",
+          "name": "response",
+          "definition": "game_incident_response_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144819470"
+    },
+    "game_mode_flags_struct": {
+      "guid": "7383f7a71a4d916ef66a80a0a04ec2fd",
+      "size": 4,
+      "size_string": "sizeof(s_game_mode_flags)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "game mode",
+          "definition": "game_type_enum_definition"
+        },
+        {
+          "type": "byte_flags",
+          "name": "matchmaking type",
+          "definition": "game_matchmaking_flags_definition"
+        },
+        {
+          "type": "byte_flags",
+          "name": "difficulty",
+          "definition": "global_campaign_difficulty_flags"
+        },
+        {
+          "type": "char_enum",
+          "name": "player count",
+          "definition": "game_player_count_flags_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144805b10"
+    },
+    "suppressed_incident_block": {
+      "guid": "72309dcb9e46a1c371aefa95e1e3a333",
+      "size": 8,
+      "size_string": "sizeof(s_suppressed_incident_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "incident name^"
+        },
+        {
+          "type": "byte_flags",
+          "name": "suppression type",
+          "definition": "suppressed_incident_flags"
+        },
+        {
+          "type": "pad",
+          "name": "VNJESHFHV",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448182d0"
+    },
+    "SuppressedIncidentBlockReferenceDefinition": {
+      "guid": "944fb36b1a41a460a76ea79ba8d9d191",
+      "size": 32,
+      "size_string": "sizeof(SuppressedIncidentBlockReferenceDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "suppression block",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sigd"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144819230"
+    },
+    "specialized_incident_block": {
+      "guid": "60c0f3c1724a5bbf8bbce89c6be88cf9",
+      "size": 172,
+      "size_string": "sizeof(s_specialized_incident_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "base incident^"
+        },
+        {
+          "type": "block",
+          "name": "cause object",
+          "definition": "specialized_incident_object_properties_block"
+        },
+        {
+          "type": "block",
+          "name": "effect object{kill bucket}",
+          "definition": "specialized_incident_object_properties_block"
+        },
+        {
+          "type": "block",
+          "name": "special kill type",
+          "definition": "specialized_incident_special_kill_type_block"
+        },
+        {
+          "type": "block",
+          "name": "game over filter",
+          "definition": "specializedIncidentGameOverBlock"
+        },
+        {
+          "type": "block",
+          "name": "custom data filter",
+          "definition": "specializedIncidentCustomDataFilterBlock"
+        },
+        {
+          "type": "block",
+          "name": "distance filter",
+          "definition": "specializedIncidentDistanceFilterBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144818b20"
+    },
+    "specialized_incident_object_properties_block": {
+      "guid": "04de1f4d604b0789b07548943eccac8d",
+      "size": 68,
+      "size_string": "sizeof(s_specialized_incident_object_properties_definition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "specialized_incident_kill_bucket_flags"
+        },
+        {
+          "type": "char_enum",
+          "name": "bucket type^",
+          "definition": "campaign_metagame_bucket_type_with_none_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "bucket class^",
+          "definition": "campaign_metagame_bucket_class_with_none_enum"
+        },
+        {
+          "type": "word_flags",
+          "name": "secondary flags",
+          "definition": "specialized_incident_kill_bucket_secondary_flags"
+        },
+        {
+          "type": "string",
+          "name": "gamertag"
+        },
+        {
+          "type": "block",
+          "name": "riding in vehicles",
+          "definition": "specialized_incident_object_riding_in_vehicle_properties_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144818530"
+    },
+    "specialized_incident_object_riding_in_vehicle_properties_block": {
+      "guid": "1fb55b0f014ae1a18ed15e83fe29979b",
+      "size": 4,
+      "size_string": "sizeof(s_specialized_incident_object_vehicle_properties_definition)",
+      "fields": [
+        {
+          "type": "long_enum",
+          "name": "vehicle type",
+          "definition": "vehicle_type_enum"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144818400"
+    },
+    "specialized_incident_special_kill_type_block": {
+      "guid": "dd4ee898ff4e446c7e0829ad19bb16b3",
+      "size": 4,
+      "size_string": "sizeof(s_specialized_incident_special_kill_type_definition)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "special kill type^",
+          "definition": "specialized_incident_special_kill_type_enum"
+        },
+        {
+          "type": "pad",
+          "name": "CVUIHEN",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144818660"
+    },
+    "specializedIncidentGameOverBlock": {
+      "guid": "08057b896f42cfaa53b02b8620d4a870",
+      "size": 4,
+      "size_string": "sizeof(SpecializedIncidentGameOverDefinition)",
+      "fields": [
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "specializedIncidentGameOverFlags"
+        },
+        {
+          "type": "short_integer",
+          "name": "minimum game length:seconds"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144818790"
+    },
+    "specializedIncidentCustomDataFilterBlock": {
+      "guid": "35c2a8fe7b4a9d9592e599a3fc5ffe8c",
+      "size": 8,
+      "size_string": "sizeof(SpecializedIncidentCustomDataFilterDefinition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "numeric_comparison_flags"
+        },
+        {
+          "type": "pad",
+          "name": "PAD1",
+          "definition": 3
+        },
+        {
+          "type": "long_integer",
+          "name": "value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448188c0"
+    },
+    "specializedIncidentDistanceFilterBlock": {
+      "guid": "4e725cae614229450074789b3ae7bd52",
+      "size": 8,
+      "size_string": "sizeof(SpecializedIncidentDistanceDefinition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "numeric_comparison_flags"
+        },
+        {
+          "type": "pad",
+          "name": "PAD1",
+          "definition": 3
+        },
+        {
+          "type": "long_integer",
+          "name": "distance between effect and cause player: wu"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448189f0"
+    },
+    "incident_accumulator_block": {
+      "guid": "78109f7c204d9d54610b5a92e26570d0",
+      "size": 32,
+      "size_string": "sizeof(s_incident_accumulator_definition)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "aggregation type",
+          "definition": "incident_accumulator_aggregation_method_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "resets on",
+          "definition": "incident_accumulator_reset_enum"
+        },
+        {
+          "type": "pad",
+          "name": "VJIOEJNLKS",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "child incidents",
+          "definition": "incident_accumulator_child_incident_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144818d80"
+    },
+    "incident_accumulator_child_incident_block": {
+      "guid": "be3b84c4ac477bfb0c6c8d8c10af7abf",
+      "size": 20,
+      "size_string": "sizeof(s_incident_accumulator_child_incident_definition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "numeric_comparison_flags"
+        },
+        {
+          "type": "pad",
+          "name": "VLHSJNRE",
+          "definition": 3
+        },
+        {
+          "type": "long_integer",
+          "name": "count"
+        },
+        {
+          "type": "string_id",
+          "name": "incident name"
+        },
+        {
+          "type": "string_id",
+          "name": "reset incident name"
+        },
+        {
+          "type": "real",
+          "name": "reset timeout"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144818c50"
+    },
+    "incident_sum_accumulator_block": {
+      "guid": "24e2dc6cc04db6e8ba97a485a1478300",
+      "size": 36,
+      "size_string": "sizeof(s_incident_sum_accumulator_definition)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "resets on",
+          "definition": "incident_accumulator_reset_enum"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "numeric_comparison_flags"
+        },
+        {
+          "type": "pad",
+          "name": "XSEXEC",
+          "definition": 2
+        },
+        {
+          "type": "long_integer",
+          "name": "count"
+        },
+        {
+          "type": "block",
+          "name": "child incidents",
+          "definition": "incident_sum_accumulator_child_incident_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144818fe0"
+    },
+    "incident_sum_accumulator_child_incident_block": {
+      "guid": "85bf983de246bfa95ffda9a4b348977f",
+      "size": 12,
+      "size_string": "sizeof(s_incident_sum_accumulator_child_incident_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "incident name"
+        },
+        {
+          "type": "string_id",
+          "name": "reset incident name"
+        },
+        {
+          "type": "real",
+          "name": "reset timeout"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144818eb0"
+    },
+    "game_incident_response_block_struct": {
+      "guid": "80cdd02ce04b091ab3b3a6be165d2068",
+      "size": 84,
+      "size_string": "sizeof(s_game_incident_response)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "allowed game modes",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "allowed game modes",
+          "definition": "game_mode_flags_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "allowed campaign and firefight",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "string_id",
+          "name": "allowed level name#Can only be triggered on this level."
+        },
+        {
+          "type": "long_flags",
+          "name": "required skulls#These skulls must be enabled to trigger.",
+          "definition": "skull_flags_definition"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "long_integer",
+          "name": "heat award"
+        },
+        {
+          "type": "string_id",
+          "name": "medal",
+          "group_tag": "sted"
+        },
+        {
+          "type": "string_id",
+          "name": "achievement",
+          "group_tag": "sted"
+        },
+        {
+          "type": "block",
+          "name": "fanfare",
+          "definition": "specialized_incident_fanfare_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound response",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sirg"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448341b0"
+    },
+    "specialized_incident_fanfare_block": {
+      "guid": "b5bdadbdfe4f933a85d3cf9a12d697b1",
+      "size": 84,
+      "size_string": "sizeof(IncidentFanfareImplementDefinition)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "priority#0 is highest prioroty"
+        },
+        {
+          "type": "char_enum",
+          "name": "queue type",
+          "definition": "incident_fanfare_queue_type"
+        },
+        {
+          "type": "byte_flags",
+          "name": "excluded audience",
+          "definition": "incident_fanfare_event_input_enum_definition"
+        },
+        {
+          "type": "byte_flags",
+          "name": "broad cast message",
+          "definition": "incident_fanfare_event_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "PADME",
+          "definition": 1
+        },
+        {
+          "type": "string_id",
+          "name": "fanfare string"
+        },
+        {
+          "type": "short_integer",
+          "name": "fanfare sprite index"
+        },
+        {
+          "type": "short_integer",
+          "name": "display time in seconds"
+        },
+        {
+          "type": "tag_reference",
+          "name": "hud screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cusc"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound response",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sgrp"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "carried object type"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144833f50"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "e_place_holder_def": {
+      "options": [
+        "placeholder this is getting deleted"
+      ]
+    },
+    "incident_definition_flags": {
+      "options": [
+        "never network (default is network only to interested parties)",
+        "always network to everyone (default is network only to interested parties)",
+        "use long delay (used in halo 3 on player_joined and player_rejoined incidents"
+      ]
+    },
+    "game_type_enum_definition": {
+      "options": [
+        "campaign",
+        "firefight",
+        "multiplayer"
+      ]
+    },
+    "game_matchmaking_flags_definition": {
+      "options": [
+        "custom game",
+        "matchmaking"
+      ]
+    },
+    "global_campaign_difficulty_flags": {
+      "options": [
+        "easy",
+        "normal",
+        "heroic",
+        "legendary"
+      ]
+    },
+    "game_player_count_flags_definition": {
+      "options": [
+        "any",
+        "1 player only",
+        "4 players only",
+        "more than one player"
+      ]
+    },
+    "suppressed_incident_flags": {
+      "options": [
+        "suppress cause player game engine event{suppress game engine event}",
+        "suppress effect player game engine event",
+        "suppress cause team game engine event",
+        "suppress effect team game engine event",
+        "suppress medal display{suppress display}",
+        "suppress medal stats{suppress stats}",
+        "suppress fanfare",
+        "suppress audio"
+      ]
+    },
+    "specialized_incident_kill_bucket_flags": {
+      "options": [
+        "player",
+        "ai",
+        "343i employee{bungie employee}",
+        "hologram",
+        "airborne",
+        "sprinting",
+        "crouched",
+        "reloading",
+        "not fancy assassinating",
+        "fancy assassinating",
+        "being fancy assassinated",
+        "low health",
+        "unshielded",
+        "active camouflage active",
+        "hologram active",
+        "jetpack active{jetpacking}",
+        "portable automated turret active",
+        "reflective shield active",
+        "thruster pack active",
+        "active camouflage active and effective",
+        "hologram recently activated",
+        "thruster pack recently activated",
+        "hologram took damage from other player",
+        "hologram did not take damage from other player",
+        "active shield recently activated",
+        "in a full vehicle",
+        "scoped in",
+        "not scoped in",
+        "jacking vehicle",
+        "airsassination"
+      ]
+    },
+    "campaign_metagame_bucket_type_with_none_enum": {
+      "options": [
+        "any",
+        "brute",
+        "grunt",
+        "jackal",
+        "skirmisher",
+        "marine",
+        "spartan",
+        "bugger",
+        "hunter",
+        "flood_infection",
+        "flood_carrier",
+        "flood_combat",
+        "flood_pure",
+        "sentinel",
+        "elite",
+        "engineer",
+        "mule",
+        "turret",
+        "mongoose",
+        "warthog",
+        "scorpion",
+        "hornet",
+        "pelican",
+        "revenant",
+        "seraph",
+        "shade",
+        "watchtower",
+        "ghost",
+        "chopper",
+        "mauler",
+        "wraith",
+        "banshee",
+        "phantom",
+        "scarab",
+        "guntower",
+        "tuning_fork",
+        "broadsword",
+        "mammoth",
+        "lich",
+        "mantis",
+        "wasp",
+        "phaeton",
+        "bishop",
+        "knight",
+        "pawn",
+        "soldier",
+        "packmaster",
+        "cavalier"
+      ]
+    },
+    "campaign_metagame_bucket_class_with_none_enum": {
+      "options": [
+        "any",
+        "infantry",
+        "leader",
+        "hero",
+        "specialist",
+        "light vehicle",
+        "heavy vehicle",
+        "giant vehicle",
+        "standard vehicle"
+      ]
+    },
+    "specialized_incident_kill_bucket_secondary_flags": {
+      "options": [
+        "launched from man-cannon",
+        "in airborne vehicle",
+        "not in vehicle"
+      ]
+    },
+    "vehicle_type_enum": {
+      "options": [
+        "vehicle_type_human_tank",
+        "vehicle_type_human_jeep",
+        "vehicle_type_human_plane",
+        "vehicle_type_alien_scout",
+        "vehicle_type_alien_fighter",
+        "vehicle_type_turret",
+        "vehicle_type_vtol",
+        "vehicle_type_chopper",
+        "vehicle_type_guardian",
+        "vehicle_type_jackal_glider",
+        "vehicle_type_boat",
+        "vehicle_type_space_fighter",
+        "vehicle_type_revenant",
+        "vehicle_type_sphere"
+      ]
+    },
+    "specialized_incident_special_kill_type_enum": {
+      "options": [
+        "headshot",
+        "grenade stick",
+        "stealth kill",
+        "fancy assassination",
+        "superdetonation",
+        "emp kill",
+        "melee",
+        "collision#vehicular splatter",
+        "leader killed#killed the player in 1st place",
+        "team elimination kill#killed the last surviving player on a team in team game",
+        "ffa elimination kill#killed the last surviving player in a ffa game"
+      ]
+    },
+    "specializedIncidentGameOverFlags": {
+      "options": [
+        "killed all enemies#only looks at the enemies in-game at the end",
+        "highest score#had the highest score",
+        "top 3 score#one of the top three scorers",
+        "winner#individual winner or on the winning team",
+        "hosted#was the host of the game at the end",
+        "loser",
+        "tied",
+        "not tied"
+      ]
+    },
+    "numeric_comparison_flags": {
+      "options": [
+        "equal to",
+        "greater than",
+        "less than"
+      ]
+    },
+    "incident_accumulator_aggregation_method_enum": {
+      "options": [
+        "all",
+        "any"
+      ]
+    },
+    "incident_accumulator_reset_enum": {
+      "options": [
+        "four seconds since last event",
+        "player death",
+        "round over",
+        "game over",
+        "on incident"
+      ]
+    },
+    "skull_flags_definition": {
+      "options": [
+        "skull_iron",
+        "skull_black_eye",
+        "skull_tough_luck",
+        "skull_catch",
+        "skull_fog",
+        "skull_famine",
+        "skull_thunderstorm",
+        "skull_tilt",
+        "skull_mythic",
+        "skull_blind",
+        "skull_superman",
+        "skull_birthday_party",
+        "skull_daddy",
+        "skull_red",
+        "skull_yellow",
+        "skull_blue"
+      ]
+    },
+    "incident_fanfare_queue_type": {
+      "options": [
+        "personal score",
+        "game score",
+        "game state",
+        "highlights",
+        "kill feed",
+        "quest feed"
+      ]
+    },
+    "incident_fanfare_event_input_enum_definition": {
+      "options": [
+        "NONE",
+        "cause player",
+        "cause team",
+        "effect player",
+        "effect team"
+      ]
+    },
+    "incident_fanfare_event_flags_definition": {
+      "options": [
+        "broad cast message"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

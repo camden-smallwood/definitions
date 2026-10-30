@@ -1,0 +1,95 @@
+{
+  "name": "LOCGlobalsDefinition",
+  "tag": "gllo",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "LOCGlobalsDefinition_block",
+  "blocks": {
+    "LOCGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "LOCGlobalsDefinition_block_struct"
+    }
+  },
+  "structs": {
+    "LOCGlobalsDefinition_block_struct": {
+      "guid": "3c1f2186c440ab47da71419e858f7ac7",
+      "size": 24,
+      "size_string": "(sizeof(i343::LOCGlobals) - Tag::SizeInfo<i343::LOCGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_enum",
+          "name": "language",
+          "definition": "language_enum"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14482b430"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "language_enum": {
+      "options": [
+        "english",
+        "japanese",
+        "german",
+        "french",
+        "spanish",
+        "mexican spanish",
+        "italian",
+        "korean",
+        "chinese-traditional",
+        "chinese-simplified",
+        "portuguese",
+        "polish",
+        "russian",
+        "danish",
+        "finnish",
+        "dutch",
+        "norwegian"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

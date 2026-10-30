@@ -1,0 +1,202 @@
+{
+  "name": "requisition_CMSLink",
+  "tag": "rbcl",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "requisition_CMSLink_block",
+  "blocks": {
+    "requisition_CMSLink_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "requisition_CMSLink_block_struct"
+    },
+    "requisition_ImageData": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "requisition_ImageData"
+    }
+  },
+  "structs": {
+    "requisition_CMSLink_block_struct": {
+      "guid": "dd23b21e824fdb8eceacd186f6255392",
+      "size": 224,
+      "size_string": "(sizeof(RequisitionCMSLinkDefinition) - Tag::SizeInfo<RequisitionCMSLinkDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "string_id",
+          "name": "CMS identifier*"
+        },
+        {
+          "type": "string_id",
+          "name": "CMS type*"
+        },
+        {
+          "type": "custom",
+          "name": "Automated Photo Data",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Asset Spec Block",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "apab"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "Lighting Spec Block",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "aplt"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "Photo Spec",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "appt"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "block",
+          "name": "Override Image Data",
+          "definition": "requisition_ImageData"
+        },
+        {
+          "type": "custom",
+          "name": "Generated Icons",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "icon bitmap*",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "icon sprite index*"
+        },
+        {
+          "type": "long_integer",
+          "name": "icon hash*"
+        },
+        {
+          "type": "tag_reference",
+          "name": "small icon bitmap*",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "small icon sprite index*"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474ac70"
+    },
+    "requisition_ImageData": {
+      "guid": "dee80423004114e56d6589b8ed3f21d4",
+      "size": 72,
+      "size_string": "sizeof(RequisitionImageData)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "icon bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "icon sprite index"
+        },
+        {
+          "type": "tag_reference",
+          "name": "small icon bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "small icon sprite index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474ab50"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

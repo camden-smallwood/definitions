@@ -1,0 +1,151 @@
+{
+  "name": "ComposerGlobalsDefinition",
+  "tag": "glcm",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "ComposerGlobalsDefinition_block",
+  "blocks": {
+    "ComposerGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "ComposerGlobalsDefinition_block_struct"
+    },
+    "composerGlobalsBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "composerGlobalsBlock"
+    },
+    "composerCharactersBlock": {
+      "max_count": 16,
+      "max_count_string": "16",
+      "struct": "composerCharactersBlock"
+    }
+  },
+  "structs": {
+    "ComposerGlobalsDefinition_block_struct": {
+      "guid": "a81582650640c732c9de3fb1dd0c11ae",
+      "size": 48,
+      "size_string": "(sizeof(i343::ComposerGlobals) - Tag::SizeInfo<i343::ComposerGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "composer globals{cinematics globals}",
+          "definition": "composerGlobalsBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448283f0"
+    },
+    "composerGlobalsBlock": {
+      "guid": "5b2a2f3bb04fdf528bff8fa6d769d030",
+      "size": 80,
+      "size_string": "sizeof(ComposerGlobalsDefinition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "cinematic film aperture"
+        },
+        {
+          "type": "real",
+          "name": "cinematic skip ui up time"
+        },
+        {
+          "type": "long_integer",
+          "name": "Max frames jumped to trigger sound"
+        },
+        {
+          "type": "fraction_bounds",
+          "name": "subtitle rect width#percentage towards the center - 0=default, 0.5=center of the screen"
+        },
+        {
+          "type": "fraction_bounds",
+          "name": "subtitle rect height#0=default, 0.5=center of the screen"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "default subtitle color"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "default subtitle shadow color"
+        },
+        {
+          "type": "block",
+          "name": "cinematic characters",
+          "definition": "composerCharactersBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446fa6e0"
+    },
+    "composerCharactersBlock": {
+      "guid": "743d6e4a8d4707c55fff2b8677a11f1f",
+      "size": 28,
+      "size_string": "sizeof(SubtitleCharacter)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "character name^"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "subtitle color"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "shadow color"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446fa5b0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

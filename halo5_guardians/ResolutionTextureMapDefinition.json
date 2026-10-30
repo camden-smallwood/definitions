@@ -1,0 +1,135 @@
+{
+  "name": "ResolutionTextureMapDefinition",
+  "tag": "retm",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "ResolutionTextureMapDefinition_block",
+  "blocks": {
+    "ResolutionTextureMapDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "ResolutionTextureMapDefinition_block_struct"
+    },
+    "defaultTextureMapBlock": {
+      "max_count": 1024,
+      "max_count_string": "1024",
+      "struct": "defaultTextureMapBlock"
+    },
+    "spriteIndexMapBlock": {
+      "max_count": 512,
+      "max_count_string": "512",
+      "struct": "spriteIndexMapBlock"
+    }
+  },
+  "structs": {
+    "ResolutionTextureMapDefinition_block_struct": {
+      "guid": "c3552d53254d2196aa7ef6b19456d1c2",
+      "size": 48,
+      "size_string": "(sizeof(ResolutionTextureMapDefinition) - Tag::SizeInfo<ResolutionTextureMapDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "texture maps",
+          "definition": "defaultTextureMapBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448cdf50"
+    },
+    "defaultTextureMapBlock": {
+      "guid": "74361212e24cf17c877d69bec3309093",
+      "size": 60,
+      "size_string": "sizeof(defaultTextureMap)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "default texture",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "sprite index to 4k texture mapping",
+          "definition": "spriteIndexMapBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448cde40"
+    },
+    "spriteIndexMapBlock": {
+      "guid": "caeb3680df47e5f85a7c34a1fa18fc02",
+      "size": 36,
+      "size_string": "sizeof(spriteIndexMap)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "4k texture",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "default texture sprite index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448cdd10"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

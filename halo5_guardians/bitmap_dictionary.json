@@ -1,0 +1,112 @@
+{
+  "name": "bitmap_dictionary",
+  "tag": "bitd",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "bitmap_dictionary_block",
+  "blocks": {
+    "bitmap_dictionary_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "bitmap_dictionary_block_struct"
+    },
+    "BitmapDictionaryEntryBlock": {
+      "max_count": 512,
+      "max_count_string": "BitmapDictionaryEntryDefinition::k_maxCount",
+      "struct": "BitmapDictionaryEntryBlock"
+    }
+  },
+  "structs": {
+    "bitmap_dictionary_block_struct": {
+      "guid": "45616c4b374151f421c2c9b58c7bbd4e",
+      "size": 48,
+      "size_string": "(sizeof(BitmapDictionaryDefinition) - Tag::SizeInfo<BitmapDictionaryDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "entries",
+          "definition": "BitmapDictionaryEntryBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e8e10"
+    },
+    "BitmapDictionaryEntryBlock": {
+      "guid": "bca92fc7354f711e9c9940a2d92a1b84",
+      "size": 40,
+      "size_string": "sizeof(BitmapDictionaryEntryDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "identifier^"
+        },
+        {
+          "type": "tag_reference",
+          "name": "bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "short_integer",
+          "name": "bitmap index"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e8cf0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

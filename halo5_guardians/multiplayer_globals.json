@@ -1,0 +1,1021 @@
+{
+  "name": "multiplayer_globals",
+  "tag": "mulg",
+  "version": 1,
+  "flags": 6,
+  "parent_tag": "aTag",
+  "block": "multiplayer_globals_block",
+  "blocks": {
+    "multiplayer_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "multiplayer_globals_block_struct"
+    },
+    "multiplayer_universal_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "multiplayer_universal_block"
+    },
+    "teamDefinitionBlock": {
+      "max_count": 8,
+      "max_count_string": "k_multiplayer_team_game_team_count",
+      "struct": "teamDefinitionBlock"
+    },
+    "global_team_role_block": {
+      "max_count": 8,
+      "max_count_string": "k_multiplayer_team_game_team_count",
+      "struct": "global_team_role_block"
+    },
+    "player_role_block": {
+      "max_count": 64,
+      "max_count_string": "k_maximum_number_of_game_engine_roles",
+      "struct": "player_role_block"
+    },
+    "scenario_profiles_block": {
+      "max_count": 256,
+      "max_count_string": "MAXIMUM_SCENARIO_PLAYERS_PER_BLOCK",
+      "struct": "scenario_profiles_block"
+    },
+    "g_scenario_editor_folder_block": {
+      "max_count": 32767,
+      "max_count_string": "k_maximum_scenario_editor_folders",
+      "struct": "g_scenario_editor_folder_block_struct"
+    },
+    "editorMetadataBlock": {
+      "max_count": 1024,
+      "max_count_string": "MAXIMUM_EDITOR_METADATA_ENTRIES",
+      "struct": "editorMetadataBlock"
+    },
+    "multiplayer_runtime_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "multiplayer_runtime_block"
+    },
+    "sounds_block": {
+      "max_count": 60,
+      "max_count_string": "k_maximum_multiplayer_sounds",
+      "struct": "sounds_block"
+    },
+    "looping_sounds_block": {
+      "max_count": 60,
+      "max_count_string": "k_maximum_multiplayer_sounds",
+      "struct": "looping_sounds_block"
+    },
+    "multiplayer_constants_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "multiplayer_constants_block"
+    }
+  },
+  "structs": {
+    "multiplayer_globals_block_struct": {
+      "guid": "018fee5d8c4620ee187ceea3c39c402d",
+      "size": 72,
+      "size_string": "(sizeof(s_multiplayer_globals_definition) - Tag::SizeInfo<s_multiplayer_globals_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "universal",
+          "definition": "multiplayer_universal_block"
+        },
+        {
+          "type": "block",
+          "name": "runtime",
+          "definition": "multiplayer_runtime_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480dbf0"
+    },
+    "multiplayer_universal_block": {
+      "guid": "90f8002fb7455f34d4739f87ec9a5d0a",
+      "size": 212,
+      "size_string": "sizeof(s_multiplayer_universal_globals_definition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "random player names",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "team names",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "teams",
+          "definition": "teamDefinitionBlock"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sandbox text",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "effects",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mgee"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "multiplayer roles",
+          "definition": "global_team_role_block"
+        },
+        {
+          "type": "block",
+          "name": "player starting profile",
+          "definition": "scenario_profiles_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480d600"
+    },
+    "teamDefinitionBlock": {
+      "guid": "446775c4e44a5d3bc88835944281341a",
+      "size": 40,
+      "size_string": "sizeof(TeamDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "primary color"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "secondary color"
+        },
+        {
+          "type": "custom",
+          "name": "- Emblem Data",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "long_integer",
+          "name": "emblem id"
+        },
+        {
+          "type": "long_integer",
+          "name": "harmony group index"
+        },
+        {
+          "type": "long_integer",
+          "name": "harmony index"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480d3d0"
+    },
+    "global_team_role_block": {
+      "guid": "de7e1a976c428d2fd70de89ffb03d61d",
+      "size": 36,
+      "size_string": "sizeof(s_team_role)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags!",
+          "definition": "team_role_flags"
+        },
+        {
+          "type": "short_enum",
+          "name": "team^!",
+          "definition": "global_multiplayer_team_designator_enum_definition"
+        },
+        {
+          "type": "pad",
+          "name": "QVO",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "player roles",
+          "definition": "player_role_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144805500"
+    },
+    "player_role_block": {
+      "guid": "c82f7478be4eac50252d89b0cb78856c",
+      "size": 224,
+      "size_string": "sizeof(s_player_role)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "role name^"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags!",
+          "definition": "player_role_flags"
+        },
+        {
+          "type": "tag_reference",
+          "name": "primary weapon",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weap"
+            ]
+          }
+        },
+        {
+          "type": "short_integer",
+          "name": "primary weapon rounds loaded"
+        },
+        {
+          "type": "short_integer",
+          "name": "primary weapon rounds total"
+        },
+        {
+          "type": "tag_reference",
+          "name": "secondary weapon",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weap"
+            ]
+          }
+        },
+        {
+          "type": "short_integer",
+          "name": "secondary weapon rounds loaded"
+        },
+        {
+          "type": "short_integer",
+          "name": "secondary weapon rounds total"
+        },
+        {
+          "type": "short_integer",
+          "name": "frag grenade count"
+        },
+        {
+          "type": "short_integer",
+          "name": "plasma grenade count"
+        },
+        {
+          "type": "short_integer",
+          "name": "UNUSED!"
+        },
+        {
+          "type": "short_integer",
+          "name": "spawn location index!"
+        },
+        {
+          "type": "tag_reference",
+          "name": "starting equipment!",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "string",
+          "name": "display name"
+        },
+        {
+          "type": "long_integer",
+          "name": "killstreak bonus time:secs"
+        },
+        {
+          "type": "real",
+          "name": "movement speed multiplier"
+        },
+        {
+          "type": "tag_reference",
+          "name": "killstreak bonus equipment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "killstreak bonus activation sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448053d0"
+    },
+    "scenario_profiles_block": {
+      "guid": "8164fb5adc40d96e2ab05c85c41a3db7",
+      "size": 268,
+      "size_string": "sizeof(struct scenario_starting_profile)",
+      "fields": [
+        {
+          "type": "string",
+          "name": "name^"
+        },
+        {
+          "type": "real_fraction",
+          "name": "starting health damage:[0,1]"
+        },
+        {
+          "type": "real_fraction",
+          "name": "starting shield damage:[0,1]"
+        },
+        {
+          "type": "tag_reference",
+          "name": "primary weapon",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weap"
+            ]
+          }
+        },
+        {
+          "type": "short_integer",
+          "name": "primaryrounds loaded#0 = weapon default"
+        },
+        {
+          "type": "short_integer",
+          "name": "primaryrounds total#0 = weapon default"
+        },
+        {
+          "type": "tag_reference",
+          "name": "primary weapon configuration",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wcfg"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "primary weapon variant name"
+        },
+        {
+          "type": "tag_reference",
+          "name": "secondary weapon",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weap"
+            ]
+          }
+        },
+        {
+          "type": "short_integer",
+          "name": "secondaryrounds loaded#0 = weapon default"
+        },
+        {
+          "type": "short_integer",
+          "name": "secondaryrounds total#0 = weapon default"
+        },
+        {
+          "type": "tag_reference",
+          "name": "secondary weapon configuration",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wcfg"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "secondary weapon variant name"
+        },
+        {
+          "type": "char_integer",
+          "name": "starting fragmentation grenade count"
+        },
+        {
+          "type": "char_integer",
+          "name": "starting plasma grenade count"
+        },
+        {
+          "type": "char_integer",
+          "name": "starting grenade 3 count"
+        },
+        {
+          "type": "char_integer",
+          "name": "starting grenade 4 count"
+        },
+        {
+          "type": "char_integer",
+          "name": "starting grenade 5 count"
+        },
+        {
+          "type": "char_integer",
+          "name": "starting grenade 6 count"
+        },
+        {
+          "type": "char_integer",
+          "name": "starting grenade 7 count"
+        },
+        {
+          "type": "char_integer",
+          "name": "starting grenade 8 count"
+        },
+        {
+          "type": "tag_reference",
+          "name": "starting equipment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "starting tactical package"
+        },
+        {
+          "type": "string_id",
+          "name": "starting support upgrade"
+        },
+        {
+          "type": "char_enum",
+          "name": "avatar name#only a player that has this avatar will receive this loadout",
+          "definition": "AvatarNameEnum"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 3
+        },
+        {
+          "type": "short_block_index",
+          "name": "editor folder!",
+          "group_tag": "ugly",
+          "definition": "g_scenario_editor_folder_block"
+        },
+        {
+          "type": "pad",
+          "name": "AHDVHJE",
+          "definition": 2
+        },
+        {
+          "type": "block",
+          "name": "Editor Metadata!",
+          "definition": "editorMetadataBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14475f640"
+    },
+    "g_scenario_editor_folder_block_struct": {
+      "guid": "596a9d0bcb41579ad1a5d7a13d5a089f",
+      "size": 360,
+      "size_string": "sizeof(s_scenario_editor_folder)",
+      "fields": [
+        {
+          "type": "long_block_index",
+          "name": "parent folder",
+          "definition": "g_scenario_editor_folder_block"
+        },
+        {
+          "type": "long_string",
+          "name": "name^"
+        },
+        {
+          "type": "string",
+          "name": "class name"
+        },
+        {
+          "type": "tag_reference",
+          "name": "prototype script!",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hsc*"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "Editor Metadata!",
+          "definition": "editorMetadataBlock"
+        },
+        {
+          "type": "int64_integer",
+          "name": "offset*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447003c0"
+    },
+    "editorMetadataBlock": {
+      "guid": "106d5649e63ebeef6d8c8eb1db3d0368",
+      "size": 520,
+      "size_string": "sizeof(EditorMetadata)",
+      "fields": [
+        {
+          "type": "long_string",
+          "name": "data name"
+        },
+        {
+          "type": "long_enum",
+          "name": "data type",
+          "definition": "editorDataTypesEnum"
+        },
+        {
+          "type": "long_integer",
+          "name": "parent index"
+        },
+        {
+          "type": "long_string",
+          "name": "data value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144700050"
+    },
+    "multiplayer_runtime_block": {
+      "guid": "4d15176f054d56486a0262b3547ff893",
+      "size": 572,
+      "size_string": "sizeof(s_multiplayer_runtime_globals_definition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "editor biped",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unit"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "editor helper",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "obje"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "flag",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "item"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ball",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "item"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "assault bomb",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "item"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "vip influence area",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "obje"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "sounds",
+          "definition": "sounds_block"
+        },
+        {
+          "type": "block",
+          "name": "looping sounds",
+          "definition": "looping_sounds_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "communication sounds{comm english}",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "coms"
+            ]
+          }
+        },
+        {
+          "type": "pad",
+          "name": "MAXFRAGCOUNT",
+          "definition": 4
+        },
+        {
+          "type": "pad",
+          "name": "MAXPLASMACOUNT",
+          "definition": 4
+        },
+        {
+          "type": "block",
+          "name": "multiplayer constants",
+          "definition": "multiplayer_constants_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "hill shader",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mat "
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default_biped_simulation_interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default_vehicle_simulation_interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default_crate_simulation_interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default_item_simulation_interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default_projectile_simulation_interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default_object_simulation_interpolation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "megalo string_id table",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "msit"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480dae0"
+    },
+    "sounds_block": {
+      "guid": "02d0d28f174fe4d549036690bbd307a7",
+      "size": 32,
+      "size_string": "sizeof(s_tag_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "sound^",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480d860"
+    },
+    "looping_sounds_block": {
+      "guid": "e2f1b2444e4c0f229963ecbba223a948",
+      "size": 32,
+      "size_string": "sizeof(s_tag_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "looping sound^",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480d990"
+    },
+    "multiplayer_constants_block": {
+      "guid": "962afc8f0342dfd891ddf5bb5a1ec6e6",
+      "size": 136,
+      "size_string": "sizeof(struct s_multiplayer_constants)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "PLAYER SPAWN INFLUENCERS",
+          "definition": "These are the default spawn influencer settings which can be overridden by scenario tags"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Default Spawn Settings",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "ssdf"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "MORE MP CONSTANTS",
+          "definition": "More old Halo2 stuff follows..."
+        },
+        {
+          "type": "real",
+          "name": "teleporter recharge time:seconds"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sandbox effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "blocked teleporter string"
+        },
+        {
+          "type": "explanation",
+          "name": "RESPAWN STRINGS",
+          "definition": "These are used for respawn status message displays\r\nThe text comes from the in-game-text multiplayer message strings list tag\r\nin the multiplayer runtime globals block above"
+        },
+        {
+          "type": "string_id",
+          "name": "voluntary respawn control instructions"
+        },
+        {
+          "type": "string_id",
+          "name": "spawn allowed default respawn"
+        },
+        {
+          "type": "string_id",
+          "name": "spawn at player allowed looking at self"
+        },
+        {
+          "type": "string_id",
+          "name": "spawn at player allowed looking at target"
+        },
+        {
+          "type": "string_id",
+          "name": "spawn at player allowed looking at potential target"
+        },
+        {
+          "type": "string_id",
+          "name": "spawn at territory allowed looking at target"
+        },
+        {
+          "type": "string_id",
+          "name": "spawn at territory allowed looking at potential target"
+        },
+        {
+          "type": "string_id",
+          "name": "you are out of lives"
+        },
+        {
+          "type": "string_id",
+          "name": "invalid spawn target selected"
+        },
+        {
+          "type": "string_id",
+          "name": "targetted player enemies nearby"
+        },
+        {
+          "type": "string_id",
+          "name": "targetted player unfriendly team"
+        },
+        {
+          "type": "string_id",
+          "name": "targetted player dead"
+        },
+        {
+          "type": "string_id",
+          "name": "targetted player in combat"
+        },
+        {
+          "type": "string_id",
+          "name": "targetted player too far from owned flag"
+        },
+        {
+          "type": "string_id",
+          "name": "no available netpoints"
+        },
+        {
+          "type": "string_id",
+          "name": "targetted netpoint contested"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480d730"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "team_role_flags": {
+      "options": [
+        "UNUSED"
+      ]
+    },
+    "global_multiplayer_team_designator_enum_definition": {
+      "options": [
+        "defender",
+        "attacker",
+        "third party",
+        "fourth party",
+        "fifth party",
+        "sixth party",
+        "seventh party",
+        "eighth party{eigth party}",
+        "neutral"
+      ]
+    },
+    "player_role_flags": {
+      "options": [
+        "UNUSED"
+      ]
+    },
+    "AvatarNameEnum": {
+      "options": [
+        "None",
+        "Masterchief",
+        "Fred",
+        "Kelly",
+        "Linda",
+        "Locke",
+        "Thorne",
+        "Tanaka",
+        "Vale"
+      ]
+    },
+    "editorDataTypesEnum": {
+      "options": [
+        "class",
+        "array",
+        "string",
+        "bool",
+        "int"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

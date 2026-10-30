@@ -1,0 +1,234 @@
+{
+  "name": "performance_throttles",
+  "tag": "perf",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "performance_throttles_block",
+  "blocks": {
+    "performance_throttles_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "performance_throttles_block_struct"
+    },
+    "performane_throttle_block": {
+      "max_count": 7,
+      "max_count_string": "7",
+      "struct": "performane_throttle_block"
+    }
+  },
+  "structs": {
+    "performance_throttles_block_struct": {
+      "guid": "63454a0454481326de1d4ea50348f172",
+      "size": 48,
+      "size_string": "(sizeof(c_performance_throttles) - Tag::SizeInfo<c_performance_throttles::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "Performance Throttles",
+          "definition": "Split-screen throttle settings should be more aggressive than non-local co-op settings\nblock index 0:\tdefault non split screen\nblock index 1: two way split screen\nblock index 2: three way split screen\nblock index 3: four way split screen\nblock index 4: one additional non-local player\nblock index 5: two additional non-local players\nblock index 6: three additional non-local players\n\n"
+        },
+        {
+          "type": "block",
+          "name": "Performance Throttles",
+          "definition": "performane_throttle_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144862300"
+    },
+    "performane_throttle_block": {
+      "guid": "0551d185b340678b88fd82a3e37ca3d1",
+      "size": 76,
+      "size_string": "sizeof(s_performance_throttles)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "performance_throttle_flags"
+        },
+        {
+          "type": "real",
+          "name": "water tessellation scale"
+        },
+        {
+          "type": "real",
+          "name": "decorator fade dist scale:0 = off"
+        },
+        {
+          "type": "real",
+          "name": "effect lod distance scale{effect lod limit}"
+        },
+        {
+          "type": "custom",
+          "name": "Object settings",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real",
+          "name": "instance fade modifier!"
+        },
+        {
+          "type": "real",
+          "name": "object fade modifier#scales down the distances at which objects first LOD and then fade out"
+        },
+        {
+          "type": "real",
+          "name": "object detail fade modifier"
+        },
+        {
+          "type": "real",
+          "name": "object lighting time limit:s 0=0.001s#per frame time limit to spend sampling new lighting radiosity"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "LOD settings",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real",
+          "name": "LOD modifier{IO fade modifier}:[0..1]#scales the distances for LOD"
+        },
+        {
+          "type": "real",
+          "name": "LOD vertical modifier{IO fade vertical modifier}:[0..1]#scales vertical LOD calculations (flying)"
+        },
+        {
+          "type": "long_integer",
+          "name": "Maximum Instance Group LOD draw bundles:[0..16]#Increases LOD on instances to reduce total number of draw bundles used to render groups"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Dynamic light settings",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "long_integer",
+          "name": "max forward dynamic lights{max gpu dynamic lights}#will quickly fade gpu lights when we try to render more than this many:0 = off"
+        },
+        {
+          "type": "real",
+          "name": "forward dynamic light fade distance scale{gpu light fade distance scale}#scales the size used for distance-fade (set smaller to make it fade earlier)"
+        },
+        {
+          "type": "long_integer",
+          "name": "max screenspace dynamic lights#will quickly fade screenspace lights when we try to render more than this many:0 = off"
+        },
+        {
+          "type": "real",
+          "name": "screenspace light fade distance scale#scales the size used for distance-fade (set smaller to make it fade earlier)"
+        },
+        {
+          "type": "long_integer",
+          "name": "max effect lights (screenspace)#limits the number of effect lights we allow to be active at a time (eg. needler needles lighting up objects):0 = off"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Shadow settings",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "long_integer",
+          "name": "max shadow casting objects:0 = off"
+        },
+        {
+          "type": "real",
+          "name": "shadow quality lod#scales resolution of object shadows:[0.0 to 1.0]"
+        },
+        {
+          "type": "real",
+          "name": "floating shadow quality lod#scales resolution of floating shadow:[0.0 to 1.0], 0 = off"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448621e0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "performance_throttle_flags": {
+      "options": [
+        "disable object attachment lights",
+        "disable first person shadow",
+        "disable cheap particles",
+        "disable blob shadows",
+        "disable patchy fog",
+        "disable screen distortion",
+        "disable light shafts",
+        "disable first person depth of field",
+        "disable motion blur",
+        "disable particles continue offscreen",
+        "disable light cones",
+        "disable water interraction",
+        "disable water refraction",
+        "disable decorators",
+        "disable instance occlusion queries#WARNING Will likely hurt perf on most maps",
+        "disable structure decals",
+        "disable object decals"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

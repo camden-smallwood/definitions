@@ -405,6 +405,16 @@
     "crates": "crate palette"
   },
   "string_editors": {
+    "default_model_variant": {
+      "caption": "Model Variants",
+      "builder": "names",
+      "source": [
+        "self",
+        { "ref": "model" }
+      ],
+      "block": "variants",
+      "label": "name"
+    },
     "hud_message": {
       "caption": "HUD Messages",
       "builder": "string_list",
@@ -954,6 +964,50 @@
         "chud_training_text",
         "chud_campaign_objective_text"
       ]
+    },
+    "marker_names": {
+      "caption": "Marker Names",
+      "validate": false,
+      "builder": "marker_names",
+      "model": "model",
+      "render_model": "render model",
+      "markers": "marker groups",
+      "marker_label": "name",
+      "empty": "No marker names available.",
+      "providers": [
+        {
+          "group": "object",
+          "from": "itself"
+        },
+        {
+          "group": "model",
+          "field": "variants/objects/child marker",
+          "from": {
+            "relative": [
+              "child object"
+            ]
+          }
+        },
+        {
+          "group": "model",
+          "from": "itself"
+        }
+      ]
+    },
+    "child_model_variant": {
+      "caption": "Model Variants",
+      "builder": "names",
+      "source": [
+        {
+          "element": "objects",
+          "ref": "child object"
+        },
+        {
+          "ref": "model"
+        }
+      ],
+      "block": "variants",
+      "label": "name"
     }
   },
   "string_text": {

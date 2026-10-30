@@ -844,7 +844,8 @@
         },
         {
           "type": "string_id",
-          "name": "child variant name#optional"
+          "name": "child variant name#optional",
+          "string_editor": "child_model_variant"
         },
         {
           "type": "tag_reference",
@@ -859,6 +860,7 @@
         {
           "type": "short_block_index",
           "name": "damage section",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {
@@ -1167,7 +1169,8 @@
         },
         {
           "type": "string_id",
-          "name": "generic effect marker{effect marker name}"
+          "name": "generic effect marker{effect marker name}",
+          "string_editor": "marker_names"
         },
         {
           "type": "tag_reference",
@@ -1181,7 +1184,8 @@
         },
         {
           "type": "string_id",
-          "name": "specific effect marker"
+          "name": "specific effect marker",
+          "string_editor": "marker_names"
         },
         {
           "type": "struct",
@@ -1243,7 +1247,8 @@
         },
         {
           "type": "string_id",
-          "name": "delay effect marker name"
+          "name": "delay effect marker name",
+          "string_editor": "marker_names"
         },
         {
           "type": "block",
@@ -1256,7 +1261,8 @@
         },
         {
           "type": "string_id",
-          "name": "destroyed child object marker name#when this response fires, any children objects created at the supplied marker name will be destroyed"
+          "name": "destroyed child object marker name#when this response fires, any children objects created at the supplied marker name will be destroyed",
+          "string_editor": "marker_names"
         },
         {
           "type": "real_fraction",
@@ -1332,7 +1338,8 @@
       "fields": [
         {
           "type": "string_id",
-          "name": "damage effect marker name"
+          "name": "damage effect marker name",
+          "string_editor": "marker_names"
         },
         {
           "type": "terminator",
@@ -1400,6 +1407,7 @@
         {
           "type": "short_block_index",
           "name": "damage section",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {
@@ -1745,6 +1753,7 @@
         {
           "type": "short_block_index",
           "name": "damage section",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {
@@ -1809,7 +1818,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "indirect damage section#absorbes AOE or child damage"
+          "name": "indirect damage section#absorbes AOE or child damage",
+          "index_target": {"path": "damage sections", "base": "holder"}
         },
         {
           "type": "pad",
@@ -2201,7 +2211,8 @@
         },
         {
           "type": "string_id",
-          "name": "effect marker name"
+          "name": "effect marker name",
+          "string_editor": "marker_names"
         },
         {
           "type": "struct",
@@ -2229,7 +2240,8 @@
         },
         {
           "type": "string_id",
-          "name": "delay effect marker name"
+          "name": "delay effect marker name",
+          "string_editor": "marker_names"
         },
         {
           "type": "real",
@@ -2260,7 +2272,8 @@
         },
         {
           "type": "string_id",
-          "name": "destroyed child object marker name"
+          "name": "destroyed child object marker name",
+          "string_editor": "marker_names"
         },
         {
           "type": "explanation",
@@ -2484,11 +2497,13 @@
         {
           "type": "short_block_index",
           "name": "indirect damage section#absorbes AOE or child damage",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {
           "type": "short_block_index",
           "name": "shielded state damage section#the model's shielded/unshielded state reflects the depletion of this damage section",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {
@@ -2563,7 +2578,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "damage section#the target is associated with this damage section"
+          "name": "damage section#the target is associated with this damage section",
+          "index_target": {"path": "new damage info[0]/damage sections"}
         },
         {
           "type": "short_block_index",
@@ -2663,6 +2679,7 @@
         {
           "type": "short_block_index",
           "name": "damage section#the target is associated with this damage section",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {

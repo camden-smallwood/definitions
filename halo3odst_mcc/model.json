@@ -608,7 +608,8 @@
         },
         {
           "type": "string_id",
-          "name": "looping effect marker name"
+          "name": "looping effect marker name",
+          "string_editor": "marker_names"
         },
         {
           "type": "real_fraction",
@@ -629,15 +630,18 @@
       "fields": [
         {
           "type": "string_id",
-          "name": "parent marker^"
+          "name": "parent marker^",
+          "string_editor": "marker_names"
         },
         {
           "type": "string_id",
-          "name": "child marker"
+          "name": "child marker",
+          "string_editor": "marker_names"
         },
         {
           "type": "string_id",
-          "name": "child variant name#optional"
+          "name": "child variant name#optional",
+          "string_editor": "child_model_variant"
         },
         {
           "type": "tag_reference",
@@ -766,7 +770,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "damage section"
+          "name": "damage section",
+          "index_target": {"path": "new damage info[0]/damage sections"}
         },
         {
           "type": "short_integer",
@@ -830,7 +835,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "indirect damage section#absorbes AOE or child damage"
+          "name": "indirect damage section#absorbes AOE or child damage",
+          "index_target": {"path": "damage sections", "base": "holder"}
         },
         {
           "type": "char_enum",
@@ -1179,7 +1185,8 @@
         },
         {
           "type": "string_id",
-          "name": "effect marker name"
+          "name": "effect marker name",
+          "string_editor": "marker_names"
         },
         {
           "type": "struct",
@@ -1207,7 +1214,8 @@
         },
         {
           "type": "string_id",
-          "name": "delay effect marker name"
+          "name": "delay effect marker name",
+          "string_editor": "marker_names"
         },
         {
           "type": "explanation",
@@ -1234,7 +1242,8 @@
         },
         {
           "type": "string_id",
-          "name": "destroyed child object marker name"
+          "name": "destroyed child object marker name",
+          "string_editor": "marker_names"
         },
         {
           "type": "explanation",
@@ -1290,7 +1299,8 @@
       "fields": [
         {
           "type": "string_id",
-          "name": "damage effect marker name"
+          "name": "damage effect marker name",
+          "string_editor": "marker_names"
         },
         {
           "type": "terminator",
@@ -1466,7 +1476,8 @@
       "fields": [
         {
           "type": "string_id",
-          "name": "marker name^#multiple markers become multiple spheres of the same radius"
+          "name": "marker name^#multiple markers become multiple spheres of the same radius",
+          "string_editor": "marker_names"
         },
         {
           "type": "real",
@@ -1478,7 +1489,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "damage section#the target is associated with this damage section"
+          "name": "damage section#the target is associated with this damage section",
+          "index_target": {"path": "new damage info[0]/damage sections"}
         },
         {
           "type": "short_block_index",
@@ -1540,7 +1552,8 @@
       "fields": [
         {
           "type": "string_id",
-          "name": "marker name^#1 marker == sphere, 2 markers == pill, >2 markers == multi sphere"
+          "name": "marker name^#1 marker == sphere, 2 markers == pill, >2 markers == multi sphere",
+          "string_editor": "marker_names"
         },
         {
           "type": "real",
@@ -1826,7 +1839,8 @@
       "fields": [
         {
           "type": "string_id",
-          "name": "marker 1 name"
+          "name": "marker 1 name",
+          "string_editor": "marker_names"
         },
         {
           "type": "long_integer",
@@ -1834,7 +1848,8 @@
         },
         {
           "type": "string_id",
-          "name": "marker 2 name"
+          "name": "marker 2 name",
+          "string_editor": "marker_names"
         },
         {
           "type": "long_integer",

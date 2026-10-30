@@ -155,6 +155,16 @@
     "cui": null
   },
   "string_editors": {
+    "default_model_variant": {
+      "caption": "Model Variants",
+      "builder": "names",
+      "source": [
+        "self",
+        { "ref": "model" }
+      ],
+      "block": "variants",
+      "label": "name"
+    },
     "hud_message": {
       "caption": "HUD Messages",
       "builder": "string_list",
@@ -164,6 +174,21 @@
         { "block": "skins", "ref": "chud text" }
       ],
       "language": "English"
+    },
+    "child_model_variant": {
+      "caption": "Model Variants",
+      "builder": "names",
+      "source": [
+        {
+          "element": "objects",
+          "ref": "child object"
+        },
+        {
+          "ref": "model"
+        }
+      ],
+      "block": "variants",
+      "label": "name"
     }
   }
 }

@@ -860,6 +860,7 @@
         {
           "type": "short_block_index",
           "name": "damage section",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {
@@ -1406,6 +1407,7 @@
         {
           "type": "short_block_index",
           "name": "damage section",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {
@@ -1751,6 +1753,7 @@
         {
           "type": "short_block_index",
           "name": "damage section",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {
@@ -1815,7 +1818,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "indirect damage section#absorbes AOE or child damage"
+          "name": "indirect damage section#absorbes AOE or child damage",
+          "index_target": {"path": "damage sections", "base": "holder"}
         },
         {
           "type": "pad",
@@ -2493,11 +2497,13 @@
         {
           "type": "short_block_index",
           "name": "indirect damage section#absorbes AOE or child damage",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {
           "type": "short_block_index",
           "name": "shielded state damage section#the model's shielded/unshielded state reflects the depletion of this damage section",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {
@@ -2572,7 +2578,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "damage section#the target is associated with this damage section"
+          "name": "damage section#the target is associated with this damage section",
+          "index_target": {"path": "new damage info[0]/damage sections"}
         },
         {
           "type": "short_block_index",
@@ -2672,6 +2679,7 @@
         {
           "type": "short_block_index",
           "name": "damage section#the target is associated with this damage section",
+          "index_target": {"path": "damage info/damage sections"},
           "definition": "new_global_damage_section_block"
         },
         {

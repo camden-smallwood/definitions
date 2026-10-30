@@ -709,7 +709,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "damage section"
+          "name": "damage section",
+          "index_target": {"path": "new damage info[0]/damage sections"}
         },
         {
           "type": "short_integer",
@@ -773,7 +774,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "indirect damage section#absorbes AOE or child damage"
+          "name": "indirect damage section#absorbes AOE or child damage",
+          "index_target": {"path": "damage sections", "base": "holder"}
         },
         {
           "type": "char_enum",
@@ -1426,7 +1428,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "damage section#the target is associated with this damage section"
+          "name": "damage section#the target is associated with this damage section",
+          "index_target": {"path": "new damage info[0]/damage sections"}
         },
         {
           "type": "short_block_index",

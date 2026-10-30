@@ -2394,7 +2394,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "initial task"
+          "name": "initial task",
+          "index_target": {"selector": "initial objective", "child": "tasks"}
         },
         {
           "type": "short_block_index",
@@ -2522,7 +2523,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "point set"
+          "name": "point set",
+          "index_target": {"path": "scripting data[0]/point sets"}
         },
         {
           "type": "short_enum",
@@ -2582,7 +2584,8 @@
       "fields": [
         {
           "type": "custom_short_block_index",
-          "name": "point^"
+          "name": "point^",
+          "index_target": {"selector": "../point set", "child": "points"}
         },
         {
           "type": "word_flags",
@@ -2788,7 +2791,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "point set"
+          "name": "point set",
+          "index_target": {"path": "scripting data[0]/point sets"}
         },
         {
           "type": "short_enum",
@@ -3895,7 +3899,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "point set"
+          "name": "point set",
+          "index_target": {"path": "scripting data[0]/point sets"}
         },
         {
           "type": "short_enum",
@@ -4140,7 +4145,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "area^"
+          "name": "area^",
+          "index_target": {"selector": "zone", "child": "areas"}
         },
         {
           "type": "angle",

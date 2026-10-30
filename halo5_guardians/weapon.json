@@ -1,0 +1,5349 @@
+{
+  "name": "weapon",
+  "tag": "weap",
+  "version": 2,
+  "flags": 3,
+  "parent_tag": "item",
+  "block": "weapon_block",
+  "blocks": {
+    "weapon_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weapon_block_struct"
+    },
+    "melee_damage_parameters_block": {
+      "max_count": 2,
+      "max_count_string": "k_melee_damage_class_count",
+      "struct": "melee_damage_parameters_block"
+    },
+    "globalAimAssistBlock": {
+      "max_count": 3,
+      "max_count_string": "3",
+      "struct": "globalAimAssistBlock"
+    },
+    "target_tracking_parameters_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "target_tracking_parameters_block"
+    },
+    "tracking_type_block": {
+      "max_count": 16,
+      "max_count_string": "16",
+      "struct": "tracking_type_block"
+    },
+    "weapon_laser_guidance_definition": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weapon_laser_guidance_definition_struct"
+    },
+    "weapon_first_person_interface_block": {
+      "max_count": 2,
+      "max_count_string": "k_first_person_interface_count",
+      "struct": "weapon_first_person_interface_block"
+    },
+    "UIItemInfoBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "UIItemInfoBlock_struct"
+    },
+    "magazines": {
+      "max_count": 2,
+      "max_count_string": "MAXIMUM_NUMBER_OF_MAGAZINES_PER_WEAPON",
+      "struct": "magazines"
+    },
+    "magazine_objects": {
+      "max_count": 8,
+      "max_count_string": "k_maximumNumberOfMagazineObjectsPerMagazine",
+      "struct": "magazine_objects"
+    },
+    "weapon_triggers": {
+      "max_count": 2,
+      "max_count_string": "TriggerSlotCount",
+      "struct": "weapon_triggers"
+    },
+    "WeaponBarrels": {
+      "max_count": 2,
+      "max_count_string": "BarrelSlotCount",
+      "struct": "WeaponBarrels_struct"
+    },
+    "ProjectileDistributionCustomAngleOffset": {
+      "max_count": 16,
+      "max_count_string": "i343::Weapon::k_projectileMaximumCustomVectors",
+      "struct": "ProjectileDistributionCustomAngleOffset_struct"
+    },
+    "projectileDistributionCustomVector": {
+      "max_count": 16,
+      "max_count_string": "i343::Weapon::k_projectileMaximumCustomVectors",
+      "struct": "projectileDistributionCustomVector_struct"
+    },
+    "weapon_barrel_function_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weapon_barrel_function_block"
+    },
+    "weapon_barrel_first_person_offset_block": {
+      "max_count": 3,
+      "max_count_string": "static_cast<long>(FirstPersonWeaponOffsetType::Count)",
+      "struct": "weapon_barrel_first_person_offset_block"
+    },
+    "barrel_firing_effect_block": {
+      "max_count": 5,
+      "max_count_string": "k_barrelEffectMaximumCount",
+      "struct": "barrel_firing_effect_block"
+    },
+    "WeaponRecoilViewKickAccelerationStanceBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "WeaponRecoilViewKickAccelerationStanceBlock_struct"
+    },
+    "weapon_recoil_gunkick_acceleration_stance_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weapon_recoil_gunkick_acceleration_stance_block_struct"
+    },
+    "weapon_procedural_animation_fp_fire_impulse_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weapon_procedural_animation_fp_fire_impulse_block_struct"
+    },
+    "AutomaticFireVariationBlock": {
+      "max_count": 8,
+      "max_count_string": "k_maxAutomaticFireVariations",
+      "struct": "AutomaticFireVariationBlock_struct"
+    },
+    "weapon_trigger_charging_fire_fraction": {
+      "max_count": 16,
+      "max_count_string": "k_maximimChargingFractionsPerTrigger",
+      "struct": "weapon_trigger_charging_fire_fraction"
+    },
+    "weapon_screen_effect_block": {
+      "max_count": 4,
+      "max_count_string": "4",
+      "struct": "weapon_screen_effect_block"
+    },
+    "SoundRTPCBlock": {
+      "max_count": 32,
+      "max_count_string": "k_maxSoundRTPCBlocks",
+      "struct": "SoundRTPCBlock_struct"
+    },
+    "global_object_attachment_block": {
+      "max_count": 48,
+      "max_count_string": "k_maximum_number_of_attachments_per_object",
+      "struct": "global_object_attachment_block"
+    },
+    "SoundSweetenerBlock": {
+      "max_count": 16,
+      "max_count_string": "k_maxSoundSweetenerBlocks",
+      "struct": "SoundSweetenerBlock"
+    },
+    "WeaponGenericAttachment": {
+      "max_count": 2,
+      "max_count_string": "i343::Weapon::k_maxGenericAttachments",
+      "struct": "WeaponGenericAttachment_struct"
+    },
+    "WeaponRecoilViewKickSettingsStanceBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "WeaponRecoilViewKickSettingsStanceBlock_struct"
+    },
+    "weapon_recoil_gunkick_stance_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weapon_recoil_gunkick_stance_block_struct"
+    },
+    "weapon_procedural_animation_fp_fire_spring_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weapon_procedural_animation_fp_fire_spring_block_struct"
+    }
+  },
+  "structs": {
+    "weapon_block_struct": {
+      "guid": "66fbc6ffc84e908860918db9de7c0afa",
+      "size": 4528,
+      "size_string": "(sizeof(WeaponDefinition) - Tag::SizeInfo<WeaponDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "item",
+          "definition": "_base_item"
+        },
+        {
+          "type": "custom",
+          "name": "$$$ WEAPON $$$",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "",
+          "definition": "All weapons should have 'primary trigger' and 'secondary trigger' markers as appropriate.\nBlurred permutations are called '$primary-blur' and '$secondary-blur'."
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "weapon_definition_flags"
+        },
+        {
+          "type": "long_flags",
+          "name": "secondary flags",
+          "definition": "weapon_definition_secondary_flags"
+        },
+        {
+          "type": "long_flags",
+          "name": "animation flags",
+          "definition": "weaponDefinitionAnimationFlags"
+        },
+        {
+          "type": "string_id",
+          "name": "unused label!"
+        },
+        {
+          "type": "real",
+          "name": "turn on time#how long after being readied it takes this weapon to switch its 'turned_on' attachment to 1.0"
+        },
+        {
+          "type": "real",
+          "name": "ready time:seconds"
+        },
+        {
+          "type": "tag_reference",
+          "name": "ready effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ready damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "heat",
+          "definition": ""
+        },
+        {
+          "type": "real_fraction",
+          "name": "heat recovery threshold:[0,1]#the heat value a weapon must return to before leaving the overheated state, once it has become overheated in the first place"
+        },
+        {
+          "type": "real_fraction",
+          "name": "overheated threshold:[0,1]#the heat value over which a weapon first becomes overheated (should be greater than the heat recovery threshold)"
+        },
+        {
+          "type": "real_fraction",
+          "name": "heat detonation threshold:[0,1]#the heat value above which the weapon has a chance of exploding each time it is fired"
+        },
+        {
+          "type": "real_fraction",
+          "name": "heat detonation fraction:[0,1]#the percent chance (between 0.0 and 1.0) the weapon will explode when fired over the heat detonation threshold"
+        },
+        {
+          "type": "real",
+          "name": "heat loss per second#the amount of heat lost each second when the weapon is not being fired"
+        },
+        {
+          "type": "string_id",
+          "name": "heat loss#function values sets the current heat loss per second",
+          "group_tag": "sted"
+        },
+        {
+          "type": "string_id",
+          "name": "heat loss venting#function value sets the heat loss per second while weapon is being vented",
+          "group_tag": "sted"
+        },
+        {
+          "type": "real",
+          "name": "heat venting time:seconds"
+        },
+        {
+          "type": "real_fraction",
+          "name": "heat venting exit heat#heat at which to begin the venting exit animations so that the weapon is just about fully cooled when the exit animation completes."
+        },
+        {
+          "type": "real_fraction",
+          "name": "heat illumination:[0,1]#the amount of illumination given off when the weapon is overheated"
+        },
+        {
+          "type": "real_fraction",
+          "name": "heat warning threshold#the amount of heat at which a warning will be displayed on the hud"
+        },
+        {
+          "type": "real",
+          "name": "overheated heat loss per second#the amount of heat lost each second when the weapon is not being fired"
+        },
+        {
+          "type": "string_id",
+          "name": "overheated heat loss#function values sets the heat loss per second when weapon is overheated",
+          "group_tag": "sted"
+        },
+        {
+          "type": "struct",
+          "name": "heat base properties",
+          "definition": "WeaponHeatBaseProperties"
+        },
+        {
+          "type": "tag_reference",
+          "name": "overheated",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "overheated damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "detonation",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "detonation damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "melee damage parameters",
+          "definition": "melee_damage_parameters_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "clang effect#effect that is played in the air between two players that clang with this weapon",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "pad",
+          "name": "FEOROBJE",
+          "definition": 2
+        },
+        {
+          "type": "explanation",
+          "name": "zoom",
+          "definition": ""
+        },
+        {
+          "type": "short_integer",
+          "name": "magnification levels#the number of magnification levels this weapon allows"
+        },
+        {
+          "type": "real_bounds",
+          "name": "magnification range"
+        },
+        {
+          "type": "char_integer",
+          "name": "zoom effect ticks#how often 'zoom effect' will be triggered (while zoomed)"
+        },
+        {
+          "type": "pad",
+          "name": "wzt",
+          "definition": 3
+        },
+        {
+          "type": "tag_reference",
+          "name": "zoom effect#effect that is played while zoomed",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": "aim assist deprecated",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "block",
+          "name": "aim assist modes#First mode is normal, second mode is iron sights/scoped",
+          "definition": "globalAimAssistBlock"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "aim assist",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "aim assist",
+          "definition": "WeaponAimAssist"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "block",
+          "name": "target tracking",
+          "definition": "target_tracking_parameters_block"
+        },
+        {
+          "type": "block",
+          "name": "laser guidance",
+          "definition": "weapon_laser_guidance_definition"
+        },
+        {
+          "type": "explanation",
+          "name": "ballistics",
+          "definition": ""
+        },
+        {
+          "type": "real_bounds",
+          "name": "ballistic arcing firing bounds:world units#At the min range (or closer), the minimum ballistic arcing is used, at the max (or farther away), the maximum arcing is used"
+        },
+        {
+          "type": "real_bounds",
+          "name": "ballistic arcing fraction bounds:[0-1]#Controls speed and degree of arc. 0 = low, fast, 1 = high, slow"
+        },
+        {
+          "type": "explanation",
+          "name": "movement",
+          "definition": ""
+        },
+        {
+          "type": "short_enum",
+          "name": "movement penalized",
+          "definition": "movement_penalty_modes"
+        },
+        {
+          "type": "pad",
+          "name": "GTIXVRPA",
+          "definition": 2
+        },
+        {
+          "type": "real_fraction",
+          "name": "forward movement penalty#percent slowdown to forward movement for units carrying this weapon"
+        },
+        {
+          "type": "real_fraction",
+          "name": "sideways movement penalty#percent slowdown to sideways and backward movement for units carrying this weapon"
+        },
+        {
+          "type": "real_fraction",
+          "name": "gunner armor mod forward movement penalty#percent slowdown to forward movement for units carrying this weapon with the gunner armor mod active"
+        },
+        {
+          "type": "real_fraction",
+          "name": "gunner armor mod sideways movement penalty#percent slowdown to sideways and backward movement for units carrying this weapon with the gunner armor mod active"
+        },
+        {
+          "type": "explanation",
+          "name": "Aiming",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "Maximum pitch rate:degrees per second#This will cap the speed at which the player can aim when holding this weapon, probably want to set something sensible for turrets etc"
+        },
+        {
+          "type": "explanation",
+          "name": "ArmorMod Parameters",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "Ammopack power capacity#Ammopack armormod - 0.2 would give 20% additional capacity to an energy weapon"
+        },
+        {
+          "type": "explanation",
+          "name": "AI targeting parameters",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "AI scariness"
+        },
+        {
+          "type": "explanation",
+          "name": "miscellaneous",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "weapon power-on time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "weapon power-off time:seconds"
+        },
+        {
+          "type": "tag_reference",
+          "name": "weapon power-on effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "weapon power-off effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "age heat recovery penalty#how much the weapon's heat recovery is penalized as it ages"
+        },
+        {
+          "type": "real",
+          "name": "age rate of fire penalty#how much the weapon's rate of fire is penalized as it ages"
+        },
+        {
+          "type": "real_fraction",
+          "name": "age misfire start:[0,1]#the age threshold when the weapon begins to misfire"
+        },
+        {
+          "type": "real_fraction",
+          "name": "age misfire chance:[0,1]#at age 1.0, the misfire chance per shot"
+        },
+        {
+          "type": "tag_reference",
+          "name": "pickup sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "zoom-in sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "zoom-out sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "active camo ding#how much to decrease active camo when a round is fired"
+        },
+        {
+          "type": "string_id",
+          "name": "handle node#the node that get's attached to the unit's hand"
+        },
+        {
+          "type": "explanation",
+          "name": "weapon labels",
+          "definition": ""
+        },
+        {
+          "type": "string_id",
+          "name": "weapon class"
+        },
+        {
+          "type": "string_id",
+          "name": "weapon name"
+        },
+        {
+          "type": "explanation",
+          "name": "more miscellaneous",
+          "definition": ""
+        },
+        {
+          "type": "char_enum",
+          "name": "first time pickup type",
+          "definition": "first_time_pickup_types"
+        },
+        {
+          "type": "pad",
+          "name": "PAD",
+          "definition": 3
+        },
+        {
+          "type": "short_enum",
+          "name": "weapon type",
+          "definition": "weapon_types"
+        },
+        {
+          "type": "short_integer",
+          "name": "low ammo threshold"
+        },
+        {
+          "type": "struct",
+          "name": "player interface",
+          "definition": "weapon_interface_struct"
+        },
+        {
+          "type": "block",
+          "name": "magazines",
+          "definition": "magazines"
+        },
+        {
+          "type": "block",
+          "name": "new triggers",
+          "definition": "weapon_triggers"
+        },
+        {
+          "type": "block",
+          "name": "barrels",
+          "definition": "WeaponBarrels"
+        },
+        {
+          "type": "real",
+          "name": "runtime weapon power on velocity!"
+        },
+        {
+          "type": "real",
+          "name": "runtime weapon power off velocity!"
+        },
+        {
+          "type": "explanation",
+          "name": "first-person movement control",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "max movement acceleration"
+        },
+        {
+          "type": "real",
+          "name": "max movement velocity"
+        },
+        {
+          "type": "real",
+          "name": "max turning acceleration"
+        },
+        {
+          "type": "real",
+          "name": "max turning velocity"
+        },
+        {
+          "type": "tag_reference",
+          "name": "deployed vehicle",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "vehi"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "tossed weapon",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weap"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "age effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "aged weapon",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weap"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "aged material effects",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "foot"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "per kill or hit aging amount#aging applied for 'weapon ages when damage is inflicted' or 'weapon ages with each kill' flags"
+        },
+        {
+          "type": "real",
+          "name": "external aging amount"
+        },
+        {
+          "type": "real",
+          "name": "campaign external aging amount"
+        },
+        {
+          "type": "real",
+          "name": "external heat amount"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "first person weapon offset"
+        },
+        {
+          "type": "real_bounds",
+          "name": "support third person camera range:degrees#range in degrees. 0 is straight, -90 is down, 90 is up"
+        },
+        {
+          "type": "real",
+          "name": "weapon zoom time#seconds"
+        },
+        {
+          "type": "real",
+          "name": "weapon ready-for-use time#seconds"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "real",
+          "name": "deprecated ready playback speed{ready playback speed}#ready weapon animation playback speed, 2.0 is double speed, 0.5 is half speed"
+        },
+        {
+          "type": "real",
+          "name": "deprecated ready initial playback speed{ready initial playback speed}#ready initial weapon animation playback speed, 2.0 is double speed, 0.5 is half speed"
+        },
+        {
+          "type": "real",
+          "name": "deprecated put away playback speed{put away playback speed}#put away weapon animation playback speed, 2.0 is double speed, 0.5 is half speed"
+        },
+        {
+          "type": "real",
+          "name": "deprecated reload playback speed{reload playback speed}#reload weapon animation playback speed, 2.0 is double speed, 0.5 is half speed"
+        },
+        {
+          "type": "real",
+          "name": "deprecated reload while empty playback speed{reload while empty playback speed}#reload weapon animation playback speed, 2.0 is double speed, 0.5 is half speed"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "struct",
+          "name": "animation base properties",
+          "definition": "WeaponAnimationBaseProperties"
+        },
+        {
+          "type": "real",
+          "name": "sprint exit disable weapon duration:seconds"
+        },
+        {
+          "type": "real",
+          "name": "tether transition to linked time:seconds#begins when tethered projectile is LNKED"
+        },
+        {
+          "type": "real",
+          "name": "tether transition from linked time:seconds#begins when tethered projectile becomes non-LNKED"
+        },
+        {
+          "type": "string_id",
+          "name": "unit stow anchor name"
+        },
+        {
+          "type": "block",
+          "name": "screen effects",
+          "definition": "weapon_screen_effect_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Player sound bank#High quality player sound bank to be prefetched. Can be empty.",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "sbnk"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "Player Aim Down Sights EQ preset name#Name of the EQ shareset in WWise to apply when aim down sights is active for player"
+        },
+        {
+          "type": "long_integer",
+          "name": "Player EQ preset hash!"
+        },
+        {
+          "type": "string_id",
+          "name": "Reload cancel event#Note - this is a direct event string - not a .sound"
+        },
+        {
+          "type": "long_integer",
+          "name": "Reload cancel event hash!"
+        },
+        {
+          "type": "tag_reference",
+          "name": "deprecated firing loop for automatics{firing loop for automatics}!*",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "deprecated automatic fire variations{automatic fire variations}!*",
+          "definition": "AutomaticFireVariationBlock"
+        },
+        {
+          "type": "pad",
+          "name": "PADT",
+          "definition": 4
+        },
+        {
+          "type": "block",
+          "name": "Sound RTPCs",
+          "definition": "SoundRTPCBlock"
+        },
+        {
+          "type": "block",
+          "name": "Sound Sweeteners",
+          "definition": "SoundSweetenerBlock"
+        },
+        {
+          "type": "tag_reference",
+          "name": "deprecated tail sounds{tail sounds}!*",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "stai"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "deprecated Tail sounds switch group{Tail sounds switch group}!*#this is the switch group this weapon tail class will use"
+        },
+        {
+          "type": "string_id",
+          "name": "deprecated Tail sounds switch value{Tail sounds switch value}!*#this is the name of the weapon for this weapon tail class"
+        },
+        {
+          "type": "string_id",
+          "name": "Locking Reticle Screen Name"
+        },
+        {
+          "type": "string_id",
+          "name": "Locked On Reticle Screen Name"
+        },
+        {
+          "type": "custom",
+          "name": "Default Attachments",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "block",
+          "name": "generic attachments",
+          "definition": "WeaponGenericAttachment"
+        },
+        {
+          "type": "tag_reference",
+          "name": "barrel attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weab"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "magazine attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weam"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "melee attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weme"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "weapon sight",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "west"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "weapon target tracking attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wett"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "weapon trigger attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wetr"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui display info",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "uiwi"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "accuracy spread scale{accuracy bloom scale}#Scales accuracy error range bounds",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "accuracy spread scale{accuracy bloom scale}#Scales accuracy error range bounds",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "struct",
+          "name": "unit properties",
+          "definition": "WeaponUnitBaseProperties"
+        },
+        {
+          "type": "custom",
+          "name": "Recoil",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Recoil View Kick",
+          "definition": "WeaponRecoilViewKickSettings"
+        },
+        {
+          "type": "struct",
+          "name": "recoil view kick base properties",
+          "definition": "weapon_recoil_view_kick_base_properties"
+        },
+        {
+          "type": "struct",
+          "name": "recoil gun kick",
+          "definition": "weapon_recoil_gunkick"
+        },
+        {
+          "type": "struct",
+          "name": "recoil gunkick base properties",
+          "definition": "WeaponRecoilGunkickBaseProperties"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Procedural Animation",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "procedural animation fp",
+          "definition": "weapon_procedural_animation_fp"
+        },
+        {
+          "type": "struct",
+          "name": "Procedural Recoil Settings",
+          "definition": "WeaponProceduralRecoilAnimationSettings"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Weapon Switch Events",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "string_id",
+          "name": "weaponSwitchEventNameInBegin"
+        },
+        {
+          "type": "string_id",
+          "name": "weaponSwitchEventNameInEnd"
+        },
+        {
+          "type": "string_id",
+          "name": "weaponSwitchEventNameOutBegin"
+        },
+        {
+          "type": "string_id",
+          "name": "weaponSwitchEventNameOutEnd"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "tag_reference",
+          "name": "pickup weapon#If this is set, you will never pick up this weapon, but will instead pick up the weapon specified here.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weap"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "pickup weapon attachment point#Which marker on the weapon model to attach the pickup weapon to."
+        },
+        {
+          "type": "string_id",
+          "name": "pickup weapon unit attachment point#Which marker on the unit model to attach the pickup weapon to."
+        },
+        {
+          "type": "byte_integer",
+          "name": "concurrent impact sound fx limit"
+        },
+        {
+          "type": "pad",
+          "name": "PAD2",
+          "definition": 3
+        },
+        {
+          "type": "long_enum",
+          "name": "tutorial weapon fire id",
+          "definition": "CollectibleTutorialEnum"
+        },
+        {
+          "type": "pad",
+          "name": "endPad",
+          "definition": 4
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144987820"
+    },
+    "WeaponHeatBaseProperties": {
+      "guid": "723bbd516e4568150720da9b271de14b",
+      "size": 48,
+      "size_string": "sizeof(HeatBasePropertiesDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "heat loss per second scale",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "heat loss per second scale",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "overheated heat loss per second scale",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "overheated heat loss per second scale",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "heat generated per round scale",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "heat generated per round scale",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e2be0"
+    },
+    "MalleablePropertyBaseFloatStruct": {
+      "guid": "a1b4d8f8e64063dbbb8cea978b2eae63",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::BaseDefinition<float>)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "Base Value"
+        },
+        {
+          "type": "real_bounds",
+          "name": "Value Bounds"
+        },
+        {
+          "type": "char_enum",
+          "name": "Combiner",
+          "definition": "MalleablePropertyCombiner"
+        },
+        {
+          "type": "pad",
+          "name": "padEnd",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447369c0"
+    },
+    "melee_damage_parameters_block": {
+      "guid": "2ea0ebb96ca795e874ea8baba5c19c40",
+      "size": 376,
+      "size_string": "sizeof(s_melee_damage_parameters)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "melee damage parameters",
+          "definition": "damage pyramid angles: defines the frustum from the camera that the melee-attack uses to find targets\ndamage pyramid depth: how far the melee attack searches for a target"
+        },
+        {
+          "type": "real_euler_angles_2d",
+          "name": "damage pyramid angles"
+        },
+        {
+          "type": "real",
+          "name": "damage pyramid depth:wu#0 defaults to k_default_player_melee_distance"
+        },
+        {
+          "type": "real",
+          "name": "maximum lunge range:wu#0 defaults to k_default_player_melee_lunge_distance"
+        },
+        {
+          "type": "real",
+          "name": "damage lunge explosive depth:wu#the distance out from the pyramid center to spawn explosive effects.  This value will be clamped to the damage pyramid depth. 0 defaults to the damage pyramid depth"
+        },
+        {
+          "type": "real",
+          "name": "runtime damage lunge explosive fraction*!"
+        },
+        {
+          "type": "tag_reference",
+          "name": "melee damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "melee response",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "lunge melee damage#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "lunge melee response#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "empty melee damage#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "empty melee response#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "clang melee damage#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "clang melee response#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "clang melee against melee weapon damage#e.g. used by AR to damage sword guy when clanging sword attack",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "clang melee against melee weapon damage response#e.g. used by AR to damage sword guy when clanging sword attack",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "lunge melee explosive damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d9e20"
+    },
+    "globalAimAssistBlock": {
+      "guid": "7a0f0836af42930feb5aa080085a98de",
+      "size": 40,
+      "size_string": "sizeof(AimAssistDefinitionDeprecated)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "AimAssistDefinitionFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "RuntimeFlagsAndPad",
+          "definition": 3
+        },
+        {
+          "type": "angle",
+          "name": "autoaim angle:degrees#the maximum angle that autoaim works at full strength"
+        },
+        {
+          "type": "real",
+          "name": "autoaim range:world units#autoaim only has an effect along this distance"
+        },
+        {
+          "type": "real",
+          "name": "autoaim falloff range:world units#at what point the autoaim starts falling off.  Fully falls off at autoaim range."
+        },
+        {
+          "type": "real",
+          "name": "autoaim near falloff range:world units#at what point the autoaim reaches full power"
+        },
+        {
+          "type": "angle",
+          "name": "magnetism angle:degrees#the maximum angle that magnetism works at full strength"
+        },
+        {
+          "type": "real",
+          "name": "magnetism range:world units#magnetism only has an effect along this distance"
+        },
+        {
+          "type": "real",
+          "name": "magnetism falloff range:world units#at what point magnetism starts falling off.  Fully falls off at magnetism range."
+        },
+        {
+          "type": "real",
+          "name": "magnetism near falloff range:world units#at what point magnetism reaches full power"
+        },
+        {
+          "type": "angle",
+          "name": "deviation angle:degrees#the maximum angle that a projectile is allowed to deviate from the gun barrel due to autoaim OR network lead vector reconstruction"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14506eea0"
+    },
+    "WeaponAimAssist": {
+      "guid": "ed12dcd6fc4116cd831a3fb8ce3e643d",
+      "size": 164,
+      "size_string": "sizeof(i343::Weapon::AimAssistDefinition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "AimAssistDefinitionFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "RuntimeFlagsAndPad",
+          "definition": 3
+        },
+        {
+          "type": "custom",
+          "name": "autoaim angle#the maximum angle that autoaim works at full strength",
+          "group_tag": "mpai"
+        },
+        {
+          "type": "struct",
+          "name": "autoaim angle#the maximum angle that autoaim works at full strength",
+          "definition": "MalleablePropertyBaseAngleStruct"
+        },
+        {
+          "type": "custom",
+          "name": "prioritization angle#angle used to select model targets based on priority.  0 disables model target prioritization",
+          "group_tag": "mpai"
+        },
+        {
+          "type": "struct",
+          "name": "prioritization angle#angle used to select model targets based on priority.  0 disables model target prioritization",
+          "definition": "MalleablePropertyBaseAngleStruct"
+        },
+        {
+          "type": "custom",
+          "name": "autoaim range#autoaim only has an effect along this distance",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "autoaim range#autoaim only has an effect along this distance",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "autoaim falloff range#at what point the autoaim starts falling off.  Fully falls off at autoaim range.",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "autoaim falloff range#at what point the autoaim starts falling off.  Fully falls off at autoaim range.",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "autoaim near falloff range#at what point the autoaim reaches full power",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "autoaim near falloff range#at what point the autoaim reaches full power",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "magnetism angle#the maximum angle that magnetism works at full strength",
+          "group_tag": "mpai"
+        },
+        {
+          "type": "struct",
+          "name": "magnetism angle#the maximum angle that magnetism works at full strength",
+          "definition": "MalleablePropertyBaseAngleStruct"
+        },
+        {
+          "type": "custom",
+          "name": "magnetism range#magnetism only has an effect along this distance",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "magnetism range#magnetism only has an effect along this distance",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "magnetism falloff range#at what point magnetism starts falling off.  Fully falls off at magnetism range.",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "magnetism falloff range#at what point magnetism starts falling off.  Fully falls off at magnetism range.",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "magnetism near falloff range#at what point magnetism reaches full power",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "magnetism near falloff range#at what point magnetism reaches full power",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "deviation angle#the maximum angle that a projectile is allowed to deviate from the gun barrel due to autoaim OR network lead vector reconstruction",
+          "group_tag": "mpai"
+        },
+        {
+          "type": "struct",
+          "name": "deviation angle#the maximum angle that a projectile is allowed to deviate from the gun barrel due to autoaim OR network lead vector reconstruction",
+          "definition": "MalleablePropertyBaseAngleStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14506f290"
+    },
+    "MalleablePropertyBaseAngleStruct": {
+      "guid": "42d305cefd481529c51dff8b6b913cd1",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::BaseDefinition<float>)",
+      "fields": [
+        {
+          "type": "angle",
+          "name": "Base Value:degrees"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "Value Bounds:degrees"
+        },
+        {
+          "type": "char_enum",
+          "name": "Combiner",
+          "definition": "MalleablePropertyCombiner"
+        },
+        {
+          "type": "pad",
+          "name": "padEnd",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144736ad0"
+    },
+    "target_tracking_parameters_block": {
+      "guid": "a7cd0d5cba44922debe40b94220bd594",
+      "size": 112,
+      "size_string": "sizeof(s_target_tracking_parameters)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "target tracking flags",
+          "definition": "target_tracking_flags"
+        },
+        {
+          "type": "pad",
+          "name": "flagPad",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "tracking types#specify the kinds of targets this tracking system can lock on",
+          "definition": "tracking_type_block"
+        },
+        {
+          "type": "real",
+          "name": "acquire time:s"
+        },
+        {
+          "type": "real",
+          "name": "grace time:s"
+        },
+        {
+          "type": "real",
+          "name": "decay time:s"
+        },
+        {
+          "type": "byte_integer",
+          "name": "max target locks#default value 1"
+        },
+        {
+          "type": "pad",
+          "name": "prototypePad",
+          "definition": 3
+        },
+        {
+          "type": "tag_reference",
+          "name": "tracking sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd",
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "locked sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd",
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d5c20"
+    },
+    "tracking_type_block": {
+      "guid": "d69a361ea043c0885a670aaa502676e3",
+      "size": 4,
+      "size_string": "sizeof(string_id)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "tracking type^"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d5af0"
+    },
+    "weapon_laser_guidance_definition_struct": {
+      "guid": "4fbd3c8667442b5e8758ab86d084f9f9",
+      "size": 1,
+      "size_string": "sizeof(i343::Weapon::LaserGuidanceDefinition)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "laser guidance activation",
+          "definition": "weapon_laser_guidance_activation_enum"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449dd590"
+    },
+    "weapon_interface_struct": {
+      "guid": "39119de1cc4662dcbbdb9c9b7255685d",
+      "size": 576,
+      "size_string": "sizeof(weapon_interface_definition_new)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "interface",
+          "definition": ""
+        },
+        {
+          "type": "byte_flags",
+          "name": "ui flags",
+          "definition": "UIWeaponFlags"
+        },
+        {
+          "type": "pad",
+          "name": "flagsPad",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "first person",
+          "definition": "weapon_first_person_interface_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "hud screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cusc"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "alternate hud screen reference#the parent of the weapon can indicate that this hud should be used instead of the default",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cusc"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "wpf hud screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui hip fire reticle screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui reticle screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui sight front override screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui sight front 1080 screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui sight back override screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui sight back 1080 screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui alt1 screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui alt2 screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui alt3 screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui alt4 screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui alt5 screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui arm screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "UI display info",
+          "definition": "UIItemInfoBlock"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Ammo Ticker Bitmap Reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e1ab0"
+    },
+    "weapon_first_person_interface_block": {
+      "guid": "0ed1473bc24e0cb532eb4ba6865a2f71",
+      "size": 72,
+      "size_string": "sizeof(weapon_first_person_interface_definition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "first person model",
+          "definition": {
+            "flags": 2,
+            "allowed": [
+              "mode"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "first person animations",
+          "definition": {
+            "flags": 2,
+            "allowed": [
+              "jmad"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "first person fov scale#the multiplier by the standard first person FOV to use when this weapon is held"
+        },
+        {
+          "type": "real",
+          "name": "first person dof distance#the distance to apply depth of field to the weapon"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e16b0"
+    },
+    "UIItemInfoBlock_struct": {
+      "guid": "fd73b86b2b47c65277909b90d0074580",
+      "size": 128,
+      "size_string": "sizeof(UIItemInfo)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^#short name for the item"
+        },
+        {
+          "type": "string_id",
+          "name": "display name#friendly name for the item"
+        },
+        {
+          "type": "string_id",
+          "name": "description#general in-universe item description"
+        },
+        {
+          "type": "string_id",
+          "name": "help text#verbose usage info for use during gameplay"
+        },
+        {
+          "type": "string_id",
+          "name": "icon string id#legacy, from when we embedded the sprites into the font to get streaming behaviour"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sprite#bitmap file representing this item",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "sprite index#frame inside the item's image strip which shows this item "
+        },
+        {
+          "type": "tag_reference",
+          "name": "alt sprite#secondary bitmap file representing this item. for detail images, overlays etc.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "alt sprite index#alt sprite's frame"
+        },
+        {
+          "type": "tag_reference",
+          "name": "ui vehicle screen reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14489bef0"
+    },
+    "magazines": {
+      "guid": "a4f9fcb88e4c19a0c564fe8c41c0cfb1",
+      "size": 188,
+      "size_string": "sizeof(weapon_magazine_definition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "magazine_flags"
+        },
+        {
+          "type": "short_integer",
+          "name": "rounds recharged:per second"
+        },
+        {
+          "type": "short_integer",
+          "name": "rounds total initial"
+        },
+        {
+          "type": "short_integer",
+          "name": "rounds total maximum"
+        },
+        {
+          "type": "short_integer",
+          "name": "rounds loaded maximum"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime rounds inventory maximum!"
+        },
+        {
+          "type": "short_integer",
+          "name": "Ammopack rounds total initial#AmmoPack armormod - alternate total_initial value due to AmmoPack"
+        },
+        {
+          "type": "short_integer",
+          "name": "Ammopack rounds total maximum#AmmoPack armormod - alternate total_maximum value due to armor mod AmmoPack"
+        },
+        {
+          "type": "short_enum",
+          "name": "ammo refill type",
+          "definition": "ammoRefillTypeEnum"
+        },
+        {
+          "type": "real",
+          "name": "reload dialogue time:seconds#the length of time we wait before saying the reload dialogue"
+        },
+        {
+          "type": "short_integer",
+          "name": "rounds reloaded"
+        },
+        {
+          "type": "pad",
+          "name": "VJGZW",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "chamber time:seconds - NOT USED!#the length of time it takes to chamber the next round"
+        },
+        {
+          "type": "tag_reference",
+          "name": "reloading effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "reloading damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "chambering effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "chambering damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "magazines",
+          "definition": "magazine_objects"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d6f00"
+    },
+    "magazine_objects": {
+      "guid": "7239f33e514cacc41284b596acd42774",
+      "size": 36,
+      "size_string": "sizeof(weapon_ammunition_object)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "rounds"
+        },
+        {
+          "type": "pad",
+          "name": "DTDPY",
+          "definition": 2
+        },
+        {
+          "type": "tag_reference",
+          "name": "equipment^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "eqip"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d6b70"
+    },
+    "weapon_triggers": {
+      "guid": "94ed8c90da4a13290ae1009666d04e2c",
+      "size": 300,
+      "size_string": "sizeof(TriggerDefinition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "weapon_trigger_definition_flags"
+        },
+        {
+          "type": "short_enum",
+          "name": "input",
+          "definition": "weapon_trigger_inputs"
+        },
+        {
+          "type": "short_enum",
+          "name": "behavior",
+          "definition": "weapon_trigger_behaviors"
+        },
+        {
+          "type": "short_block_index",
+          "name": "primary barrel",
+          "definition": "WeaponBarrels"
+        },
+        {
+          "type": "short_block_index",
+          "name": "secondary barrel",
+          "definition": "WeaponBarrels"
+        },
+        {
+          "type": "short_enum",
+          "name": "prediction",
+          "definition": "trigger_prediction_type_enum"
+        },
+        {
+          "type": "pad",
+          "name": "GNFR",
+          "definition": 2
+        },
+        {
+          "type": "struct",
+          "name": "autofire",
+          "definition": "weapon_trigger_autofire_struct"
+        },
+        {
+          "type": "struct",
+          "name": "charging",
+          "definition": "weapon_trigger_charging_struct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "double latch projectile releasable effect#created once player is able to release the tethered projectile",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "double latch projectile released effect#created when player releases the tethered projectile",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e3510"
+    },
+    "WeaponBarrels_struct": {
+      "guid": "748e515cd44e0cc38317fb985689b2e0",
+      "size": 996,
+      "size_string": "sizeof(BarrelDefinition)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "weapon_barrel_flags"
+        },
+        {
+          "type": "explanation",
+          "name": "firing",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "firing",
+          "definition": "WeaponBarrelFire"
+        },
+        {
+          "type": "short_block_index",
+          "name": "magazine#the magazine from which this trigger draws its ammunition",
+          "definition": "magazines"
+        },
+        {
+          "type": "short_integer",
+          "name": "rounds per shot#the number of rounds expended to create a single firing effect"
+        },
+        {
+          "type": "short_integer",
+          "name": "minimum rounds loaded#the minimum number of rounds necessary to fire the weapon"
+        },
+        {
+          "type": "short_integer",
+          "name": "rounds per burst#if > 0 this will be the ammo consumed at the start of a new burst.  Automatic reloads will wait for burst to finish"
+        },
+        {
+          "type": "short_integer",
+          "name": "rounds between tracers#the number of non-tracer rounds fired between tracers"
+        },
+        {
+          "type": "pad",
+          "name": "roundsPad",
+          "definition": 2
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "optional barrel marker name"
+        },
+        {
+          "type": "struct",
+          "name": "noise",
+          "definition": "WeaponBarrelNoise"
+        },
+        {
+          "type": "explanation",
+          "name": "prediction properties",
+          "definition": "what the behavior of this barrel is in a predicted network game"
+        },
+        {
+          "type": "short_enum",
+          "name": "prediction type",
+          "definition": "barrel_prediction_type_enum"
+        },
+        {
+          "type": "pad",
+          "name": "barrel prediction pad",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "event_synchronized_projectiles_per_second#Valid only for barrels set to prediction type \"continuous\". Controls how many projectiles per second can be individually synchronized (use debug_projectiles to diagnose)."
+        },
+        {
+          "type": "real",
+          "name": "maximum_barrel_error_for_event_synchronization#Valid only for barrels set to prediction type \"continuous\". If the barrel's current error level is over this value (zero to one scale), we will not consider synchronizing projectiles with individual events (use debug_projectiles to diagnose)."
+        },
+        {
+          "type": "struct",
+          "name": "error turn rates",
+          "definition": "WeaponBarrelErrorTurnRates"
+        },
+        {
+          "type": "explanation",
+          "name": "projectile",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "projectile distribution",
+          "definition": "WeaponBarrelDistrubution"
+        },
+        {
+          "type": "struct",
+          "name": "projectile error",
+          "definition": "WeaponBarrelError"
+        },
+        {
+          "type": "struct",
+          "name": "accuracy penalties",
+          "definition": "weapon_barrel_projectile_accuracy_penalty_struct"
+        },
+        {
+          "type": "block",
+          "name": "first person offset",
+          "definition": "weapon_barrel_first_person_offset_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "projectile",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "proj"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "optional secondary projectile",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "proj"
+            ]
+          }
+        },
+        {
+          "type": "struct",
+          "name": "eh",
+          "definition": "weapon_barrel_damage_effect_struct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "crate projectile",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bloc"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "crate projectile speed"
+        },
+        {
+          "type": "explanation",
+          "name": "misc",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "ejection port recovery time#the amount of time (in seconds) it takes for the ejection port to transition from 1.0 (open) to 0.0 (closed) after a shot has been fired"
+        },
+        {
+          "type": "real",
+          "name": "illumination recovery time#the amount of time (in seconds) it takes the illumination function to transition from 1.0 (bright) to 0.0 (dark) after a shot has been fired"
+        },
+        {
+          "type": "real_fraction",
+          "name": "heat generated per round:[0,1]#the amount of heat generated each time the barrel fires. Unlike the name suggests, this amount of heat is NOT applied per projectile created."
+        },
+        {
+          "type": "string_id",
+          "name": "heat generated per round function&heat generated per round#function value sets the amount of heat to add to the weapon each tick the barrel is firing",
+          "group_tag": "sted"
+        },
+        {
+          "type": "real_fraction",
+          "name": "deprecated age generated per round{age generated per round}*!:[0,1]#the amount the weapon ages each time the trigger is fired"
+        },
+        {
+          "type": "real_fraction",
+          "name": "deprecated CAMPAIGN age generated per round{CAMPAIGN age generated per round}*!:[0,1]#the amount the weapon ages each time the trigger is fired"
+        },
+        {
+          "type": "struct",
+          "name": "age generation",
+          "definition": "WeaponBarrelAgeGenerationDefinition"
+        },
+        {
+          "type": "real",
+          "name": "overload time:seconds#the next trigger fires this often while holding down this trigger"
+        },
+        {
+          "type": "real",
+          "name": "runtime illumination recovery rate!"
+        },
+        {
+          "type": "real",
+          "name": "runtime ejection port recovery rate!"
+        },
+        {
+          "type": "block",
+          "name": "firing effects#firing effects determine what happens when this trigger is fired",
+          "definition": "barrel_firing_effect_block"
+        },
+        {
+          "type": "custom",
+          "name": "Recoil",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Recoil view kick acceleration",
+          "definition": "WeaponRecoilViewKickAcceleration"
+        },
+        {
+          "type": "struct",
+          "name": "Recoil gun kick acceleration",
+          "definition": "weapon_recoil_gunkick_acceleration"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "struct",
+          "name": "procedural animation fp fire impulse",
+          "definition": "weapon_procedural_animation_fire_impulse_fp"
+        },
+        {
+          "type": "custom",
+          "name": "Sound",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "fire sound",
+          "definition": "WeaponBarrelFireSound"
+        },
+        {
+          "type": "struct",
+          "name": "automatic fire sound",
+          "definition": "WeaponBarrelAutomaticFireSound"
+        },
+        {
+          "type": "struct",
+          "name": "tail fire sound",
+          "definition": "WeaponBarrelFireTailSound"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d4e50"
+    },
+    "WeaponBarrelFire": {
+      "guid": "9eceafb94b49f88ce687d69c80e5e636",
+      "size": 60,
+      "size_string": "sizeof(i343::Weapon::BarrelFiringDefinition)",
+      "fields": [
+        {
+          "type": "real_bounds",
+          "name": "rounds per second#the number of firing effects created per second.  0 defaults to 60"
+        },
+        {
+          "type": "string_id",
+          "name": "rate of fire acceleration#function value sets the current rate of fire when the barrel is firing",
+          "group_tag": "sted"
+        },
+        {
+          "type": "real",
+          "name": "acceleration time:seconds#the continuous firing time it takes for the weapon to achieve its final rounds per second"
+        },
+        {
+          "type": "string_id",
+          "name": "rate of fire deceleration#function value sets the current rate of fire when the barrel is not firing",
+          "group_tag": "sted"
+        },
+        {
+          "type": "real",
+          "name": "deceleration time:seconds#the continuous idle time it takes for the weapon to return from its final rounds per second to its initial"
+        },
+        {
+          "type": "real",
+          "name": "barrel spin scale#scale the barrel spin speed by this amount"
+        },
+        {
+          "type": "real_fraction",
+          "name": "blurred rate of fire#a percentage between 0 and 1 which controls how soon in its firing animation the weapon blurs"
+        },
+        {
+          "type": "short_bounds",
+          "name": "shots per fire#allows designer caps to the shots you can fire from one firing action"
+        },
+        {
+          "type": "real",
+          "name": "fire recovery time:seconds#how long after a set of shots it takes before the barrel can fire again"
+        },
+        {
+          "type": "real_fraction",
+          "name": "soft recovery fraction#how much of the recovery allows shots to be queued"
+        },
+        {
+          "type": "real",
+          "name": "melee  fire recovery time:seconds#how long after a set of shots it takes before the weapon can melee"
+        },
+        {
+          "type": "real_fraction",
+          "name": "melee soft recovery fraction#how much of the melee recovery allows melee to be queued"
+        },
+        {
+          "type": "real",
+          "name": "runtime rate of fire acceleration rate!"
+        },
+        {
+          "type": "real",
+          "name": "runtime rate of fire deceleration rate!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e7220"
+    },
+    "WeaponBarrelNoise": {
+      "guid": "293af506584f6ea1848371baff9324fc",
+      "size": 4,
+      "size_string": "sizeof(BarrelNoiseDefinition)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "ai noise#how loud this weapon appears to the AI when firing",
+          "definition": "ai_sound_volume_enum"
+        },
+        {
+          "type": "short_enum",
+          "name": "motion tracker noise#how far the weapon can be heard on the motion tracker when firing",
+          "definition": "MotionTrackerNoiseLevelDefinition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d70f0"
+    },
+    "WeaponBarrelErrorTurnRates": {
+      "guid": "3d2db915544f45e5d5813888e3a46d78",
+      "size": 12,
+      "size_string": "sizeof(BarrelErrorTurnRates)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "error turn rates",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "error turn rates",
+          "definition": "full error look pitch rate controlls how fast you can turn \nwith full error, yaw is implied from pitch. 0==130.\nfor reference, profile sensitivities are set to:\n1: 40\n3: 60\n9: 130\n"
+        },
+        {
+          "type": "angle",
+          "name": "min error look pitch rate#yaw rate is doubled"
+        },
+        {
+          "type": "angle",
+          "name": "full error look pitch rate#yaw rate is doubled"
+        },
+        {
+          "type": "real",
+          "name": "look pitch error power#use to soften or sharpen the rate ding"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d4d40"
+    },
+    "WeaponBarrelDistrubution": {
+      "guid": "ee3605aa324772df5c637c925db0ac0b",
+      "size": 64,
+      "size_string": "sizeof(BarrelDistrubutionDefinition)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "distribution function",
+          "definition": "weapon_barrel_distribution_functions"
+        },
+        {
+          "type": "short_integer",
+          "name": "projectiles per shot"
+        },
+        {
+          "type": "block",
+          "name": "direction offset#Custom vectors must be set in distribution function above",
+          "definition": "ProjectileDistributionCustomAngleOffset"
+        },
+        {
+          "type": "block",
+          "name": "position offsets#Custom vectors must be set in distribution function above",
+          "definition": "projectileDistributionCustomVector"
+        },
+        {
+          "type": "real",
+          "name": "distribution angle:degrees#used by distribution function 'horizontal fan' above"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e6c40"
+    },
+    "ProjectileDistributionCustomAngleOffset_struct": {
+      "guid": "5e249ecb284870989b82ffacba57b7b4",
+      "size": 8,
+      "size_string": "sizeof(ProjectileDistributionCustomVector)",
+      "fields": [
+        {
+          "type": "real_euler_angles_2d",
+          "name": "angle offset^:[-90, 90]#yaw +right pitch +up"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e68a0"
+    },
+    "projectileDistributionCustomVector_struct": {
+      "guid": "182eb09deb4f2dcdabbdb7a63c77e884",
+      "size": 8,
+      "size_string": "sizeof(ProjectileDistributionCustomVector)",
+      "fields": [
+        {
+          "type": "real_point_2d",
+          "name": "Point offset^:[-1.1]#x-y offset - +x is right, +y is up"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e6790"
+    },
+    "WeaponBarrelError": {
+      "guid": "e9ec436211454974ee6669af2148162c",
+      "size": 28,
+      "size_string": "sizeof(BarrelErrorDefinition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "deceleration time:seconds#the continuous idle time it would take for a barrel_error of 1.0 to return to its minimum value."
+        },
+        {
+          "type": "real",
+          "name": "runtime error deceleration rate!"
+        },
+        {
+          "type": "angle",
+          "name": "minimum error:degrees#projectile direction is randomly selected between this and max_error_angle below"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "error angle:degrees (max_error_angle)#current barrel_error is linearly interpolated between these to generate max_error_angle"
+        },
+        {
+          "type": "real_bounds",
+          "name": "damage error#the range of angles (in degrees) that a damaged weapon will skew fire"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e6550"
+    },
+    "weapon_barrel_projectile_accuracy_penalty_struct": {
+      "guid": "20588c053a243776586e032d2b97c111",
+      "size": 248,
+      "size_string": "sizeof(BarrelAccuracyPenaltyDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "accuracy penalties",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real",
+          "name": "reload penalty#percentage accuracy lost when reloading"
+        },
+        {
+          "type": "real",
+          "name": "switch penalty#percentage accuracy lost when switching weapons"
+        },
+        {
+          "type": "real",
+          "name": "zoom penalty#percentage accuracy lost when zooming in/out"
+        },
+        {
+          "type": "real",
+          "name": "jump penalty#percentage accuracy lost when jumping"
+        },
+        {
+          "type": "explanation",
+          "name": "barrel_error penalty functions",
+          "definition": "barrel_error = barrel_error + penaltyfunction(barrel_error)\nWhere input value 'X' produces output value 'Y'\n"
+        },
+        {
+          "type": "custom",
+          "name": "single wield penalties",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "single wield penalties",
+          "definition": "weapon_barrel_projectile_accuracy_penalty_function_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "dual wield penalties",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "dual wield penalties",
+          "definition": "weapon_barrel_projectile_accuracy_penalty_function_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449ea5a0"
+    },
+    "weapon_barrel_projectile_accuracy_penalty_function_struct": {
+      "guid": "08a2457d194f30aaf6e67f849132455b",
+      "size": 116,
+      "size_string": "sizeof(BarrelAccuracyPenaltyFunctions)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "firing penalty function#percentage accuracy lost when the barrel has fired",
+          "definition": "weapon_barrel_function_block"
+        },
+        {
+          "type": "block",
+          "name": "firing crouched penalty function#percentage accuracy lost when the barrel has fired from a crouched position",
+          "definition": "weapon_barrel_function_block"
+        },
+        {
+          "type": "block",
+          "name": "moving penalty function#percentage accuracy lost when moving",
+          "definition": "weapon_barrel_function_block"
+        },
+        {
+          "type": "block",
+          "name": "turning penalty function#percentage accuracy lost when turning the camera",
+          "definition": "weapon_barrel_function_block"
+        },
+        {
+          "type": "real",
+          "name": "error angle max rotation#angle which represents the maximum input to the turning penalty function."
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449ea490"
+    },
+    "weapon_barrel_function_block": {
+      "guid": "50bbb07db64a6ddd280968b1c8e10a13",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449ea370"
+    },
+    "scalar_function_named_struct": {
+      "guid": "8992cb721e48760251a36794187c6df5",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738e30"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "weapon_barrel_first_person_offset_block": {
+      "guid": "d83eeb0a7045edcdfd290ba14a10a4cf",
+      "size": 12,
+      "size_string": "sizeof(i343::Float3)",
+      "fields": [
+        {
+          "type": "real_point_3d",
+          "name": "first person offset:world units#+x is forward, +z is up, +y is left"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d42c0"
+    },
+    "weapon_barrel_damage_effect_struct": {
+      "guid": "c100c00cbd4f216c4ff61d8b08b45cc7",
+      "size": 32,
+      "size_string": "sizeof(s_tag_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d43e0"
+    },
+    "WeaponBarrelAgeGenerationDefinition": {
+      "guid": "cb0d52c3e04f7f975db6eb8bac32c509",
+      "size": 8,
+      "size_string": "sizeof(BarrelAgeGeneratedDefinition)",
+      "fields": [
+        {
+          "type": "real_fraction",
+          "name": "age generated per round:[0,1]#the amount the weapon ages each time the trigger is fired"
+        },
+        {
+          "type": "real_fraction",
+          "name": "CAMPAIGN age generated per round:[0,1]#the amount the weapon ages each time the trigger is fired"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e6370"
+    },
+    "barrel_firing_effect_block": {
+      "guid": "00fabb28b0426875d15ce794e6f4e7b8",
+      "size": 484,
+      "size_string": "sizeof(BarrelFiringEffectDefinition)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "shot count lower bound#the minimum number of times this firing effect will be used, once it has been chosen"
+        },
+        {
+          "type": "short_integer",
+          "name": "shot count upper bound#the maximum number of times this firing effect will be used, once it has been chosen"
+        },
+        {
+          "type": "tag_reference",
+          "name": "firing effect^#this effect is used when the weapon is loaded and fired normally",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "critical effect^#this effect is used when the weapon is loaded and will do critical damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "misfire effect#this effect is used when the weapon is loaded but fired while overheated",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "empty effect#this effect is used when the weapon is not loaded",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "optional secondary firing effect#this effect is for later shots of a burst if set",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "firing damage#this effect is used when the weapon is loaded and fired normally",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "critical damage^#this effect is used when the weapon is loaded and will do critical damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "misfire damage#this effect is used when the weapon is loaded but fired while overheated",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "empty damage#this effect is used when the weapon is not loaded",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "optional secondary firing damage#this effect is for later shots of a burst if set",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "firing rider damage#this effect is used when the weapon is loaded and fired normally",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "critical rider damage^#this effect is used when the weapon is loaded and will do critical damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "misfire rider damage#this effect is used when the weapon is loaded but fired while overheated",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "empty rider damage#this effect is used when the weapon is not loaded",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "optional secondary firing rider damage#this effect is for later shots of a burst if set",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e61f0"
+    },
+    "WeaponRecoilViewKickAcceleration": {
+      "guid": "cfd0c7ef7e4c49ab9da2deae097a0bc9",
+      "size": 68,
+      "size_string": "sizeof(RecoilViewKickAcceleration)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "View Kick Acceleration",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "view kick acceleration",
+          "definition": "If you don't specifiy hip settings, these settings will be used for both hip and precision aim.\nYaw: +right Pitch: +up\n\nMin magnitude:\nMin magnitude is only applied when the randomness can be in a positive or negative direction.\nIt guarantees a random number generated will be at least this magnitude.\nRandomness is redistributed in the range of the min magnitude to the largest random bound in that direction\nThe end result is clamped to the random bounds."
+        },
+        {
+          "type": "struct",
+          "name": "acceleration precision aim",
+          "definition": "WeaponRecoilViewKickAccelerationStance"
+        },
+        {
+          "type": "block",
+          "name": "acceleration hip",
+          "definition": "WeaponRecoilViewKickAccelerationStanceBlock"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449de390"
+    },
+    "WeaponRecoilViewKickAccelerationStance": {
+      "guid": "74ec6b76d248db83272163b0dd2e6a39",
+      "size": 40,
+      "size_string": "sizeof(RecoilViewKickAccelerationStance)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Yaw",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "view kick yaw:degrees/s",
+          "definition": "WeaponRecoilViewKickAccelerationDimension"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Pitch",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "view kick pitch:degrees/s",
+          "definition": "WeaponRecoilViewKickAccelerationDimension"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "struct",
+          "name": "view kick recoil scales",
+          "definition": "WeaponRecoilImpulseScales"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449de160"
+    },
+    "WeaponRecoilViewKickAccelerationDimension": {
+      "guid": "5ab76f09704fdad9ee07658fee58dda6",
+      "size": 12,
+      "size_string": "sizeof(RecoilViewKickAccelerationDimension)",
+      "fields": [
+        {
+          "type": "angle_bounds",
+          "name": "view kick random acceleration:degrees/s"
+        },
+        {
+          "type": "angle",
+          "name": "view kick min magnitude:degrees"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449dde30"
+    },
+    "WeaponRecoilImpulseScales": {
+      "guid": "859794640d4a9ebacb2ccf989e07a848",
+      "size": 16,
+      "size_string": "sizeof(RecoilImpulseScales)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "recoil impulse scale ground throttle#0 defaults to 1.  Stick value magnitude when on ground.  Interpolates from 1 to this based off of throttle magnitude."
+        },
+        {
+          "type": "real",
+          "name": "recoil impulse scale crouched#0 defaults to 1.  Interpolates from 1 to this based off of crouch."
+        },
+        {
+          "type": "real",
+          "name": "recoil impulse scale airborne#0 defaults to 1.  Only uses this scale when airborne, but not stabilized"
+        },
+        {
+          "type": "real",
+          "name": "recoil impulse scale stabilized#0 defaults to 1.  Only uses this scale when stabilized"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eaa00"
+    },
+    "WeaponRecoilViewKickAccelerationStanceBlock_struct": {
+      "guid": "9740bb717c470b3bdb80099059573aae",
+      "size": 40,
+      "size_string": "sizeof(RecoilViewKickAccelerationStance)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "Acceleration Stance",
+          "definition": "WeaponRecoilViewKickAccelerationStance"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449de270"
+    },
+    "weapon_recoil_gunkick_acceleration": {
+      "guid": "bfadb966eb43d1f7f5d652960611e783",
+      "size": 68,
+      "size_string": "sizeof(RecoilGunkickAccelerationDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Gunkick",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "Gunkick",
+          "definition": "Min magnitude:\nMin magnitude is only applied when the randomness can be in a positive or negative direction.\nIt guarantees a random number generated will be at least this magnitude.\nRandomness is redistributed in the range of the min magnitude to the largest random bound in that direction\nThe end result is clamped to the random bounds."
+        },
+        {
+          "type": "struct",
+          "name": "gunkick ads settings",
+          "definition": "weapon_recoil_gunkick_acceleration_stance"
+        },
+        {
+          "type": "block",
+          "name": "gunkick hip settings",
+          "definition": "weapon_recoil_gunkick_acceleration_stance_block"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e0090"
+    },
+    "weapon_recoil_gunkick_acceleration_stance": {
+      "guid": "d1ed98c1aa4360f272b92cba45f73914",
+      "size": 40,
+      "size_string": "sizeof(RecoilGunkickAccelerationStanceDefinition)",
+      "fields": [
+        {
+          "type": "angle_bounds",
+          "name": "gunkick yaw acceleration:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "gunkick yaw min magnitude:degrees"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "gunkick pitch acceleration:degrees"
+        },
+        {
+          "type": "angle",
+          "name": "gunkick pitch min magnitude:degrees"
+        },
+        {
+          "type": "struct",
+          "name": "gunkick impulse scales",
+          "definition": "WeaponRecoilImpulseScales"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449dfe60"
+    },
+    "weapon_recoil_gunkick_acceleration_stance_block_struct": {
+      "guid": "fa6c1d9bfb4880d2d00d948174ba2510",
+      "size": 40,
+      "size_string": "sizeof(RecoilGunkickAccelerationStanceDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "gunkick acceleration stance",
+          "definition": "weapon_recoil_gunkick_acceleration_stance"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449dff70"
+    },
+    "weapon_procedural_animation_fire_impulse_fp": {
+      "guid": "c2fbc849fc49744aaa52cfb501fbd94d",
+      "size": 36,
+      "size_string": "sizeof(ProceduralAnimationFirstPersonFireDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "procedural animation fp fire kickback impulse",
+          "definition": "weapon_procedural_animation_fp_fire_impulse"
+        },
+        {
+          "type": "block",
+          "name": "procedural animation fp fire kickback impulse hip#add this to override in hip",
+          "definition": "weapon_procedural_animation_fp_fire_impulse_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e09d0"
+    },
+    "weapon_procedural_animation_fp_fire_impulse": {
+      "guid": "eb9464d8024886d681018eb24b092bee",
+      "size": 8,
+      "size_string": "sizeof(ProceduralAnimationFirstPersonFireImpulseDefinition)",
+      "fields": [
+        {
+          "type": "real_bounds",
+          "name": "procedural animation fp fire kickback impulse:wu per s#random range for fire kickback#velocity added to the procedural fp fire system"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e07a0"
+    },
+    "weapon_procedural_animation_fp_fire_impulse_block_struct": {
+      "guid": "d2f1def9a5452a688a0d6c99e72d990b",
+      "size": 8,
+      "size_string": "sizeof(ProceduralAnimationFirstPersonFireImpulseDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "procedural animation fp fire kickback impulse",
+          "definition": "weapon_procedural_animation_fp_fire_impulse"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e08b0"
+    },
+    "WeaponBarrelFireSound": {
+      "guid": "502df3a9b44b96e205de09b9a246587f",
+      "size": 36,
+      "size_string": "sizeof(BarrelFireSoundDefinition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "WeaponBarrelFireSoundFlags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 3
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e2160"
+    },
+    "WeaponBarrelAutomaticFireSound": {
+      "guid": "76d3b3d6584db0d31ad11d91caf71fea",
+      "size": 60,
+      "size_string": "sizeof(BarrelAutomaticFireSoundDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "firing loop for automatics",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "automatic fire variations",
+          "definition": "AutomaticFireVariationBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e1f30"
+    },
+    "AutomaticFireVariationBlock_struct": {
+      "guid": "ca4e1edff64083a1b2df23a84795ada6",
+      "size": 32,
+      "size_string": "sizeof(AutomaticFireVariationBlockDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "firing loop for automatics",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e1e10"
+    },
+    "WeaponBarrelFireTailSound": {
+      "guid": "da98b02d4b4188d8c36eab885f82b363",
+      "size": 48,
+      "size_string": "sizeof(BarrelFireTailSoundDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "tail sounds",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "stai"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "Tail sounds switch group#this is the switch group this weapon tail class will use"
+        },
+        {
+          "type": "long_integer",
+          "name": "Tail sound switch group hash!"
+        },
+        {
+          "type": "string_id",
+          "name": "Tail sounds switch value#this is the name of the weapon for this weapon tail class"
+        },
+        {
+          "type": "long_integer",
+          "name": "Tail sound switch value hash!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e2050"
+    },
+    "weapon_trigger_autofire_struct": {
+      "guid": "4400882ea245412387c33a806cf24ab2",
+      "size": 12,
+      "size_string": "sizeof(TriggerDefinition::s_autofire)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "AUTOFIRE",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "autofire time"
+        },
+        {
+          "type": "real",
+          "name": "autofire throw"
+        },
+        {
+          "type": "short_enum",
+          "name": "secondary action",
+          "definition": "weapon_trigger_autofire_actions"
+        },
+        {
+          "type": "short_enum",
+          "name": "primary action",
+          "definition": "weapon_trigger_autofire_actions"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e3260"
+    },
+    "weapon_trigger_charging_struct": {
+      "guid": "86d1902add48fdd9fa0390871871893b",
+      "size": 208,
+      "size_string": "sizeof(TriggerChargingDefinition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "CHARGING",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "charging time:seconds#the amount of time it takes for this trigger to become fully charged"
+        },
+        {
+          "type": "real",
+          "name": "charged time:seconds#the amount of time this trigger can be charged before becoming overcharged"
+        },
+        {
+          "type": "char_enum",
+          "name": "overcharged action",
+          "definition": "weapon_trigger_overcharged_actions"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "weapon_trigger_charging_flags"
+        },
+        {
+          "type": "short_integer",
+          "name": "cancelled trigger throw#96 was the constant in code for the pp"
+        },
+        {
+          "type": "real",
+          "name": "charged illumination:[0,1]#the amount of illumination given off when the weapon is fully charged"
+        },
+        {
+          "type": "tag_reference",
+          "name": "charging effect#the charging effect is created once when the trigger begins to charge",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "charging damage effect#the charging effect is created once when the trigger begins to charge",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "charging continuous damage response#plays every tick you're charging or charged, scaled to charging fraction",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "charged drain rate#how much battery to drain per second when charged"
+        },
+        {
+          "type": "tag_reference",
+          "name": "discharge effect#the discharging effect is created once when the trigger releases its charge",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "discharge damage effect#the discharging effect is created once when the trigger releases its charge",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "fire fractions",
+          "definition": "weapon_trigger_charging_fire_fraction"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e7c40"
+    },
+    "weapon_trigger_charging_fire_fraction": {
+      "guid": "5c2a08596e4586899a4b03bf5e0b9b22",
+      "size": 4,
+      "size_string": "sizeof(float)",
+      "fields": [
+        {
+          "type": "real_fraction",
+          "name": "charge fraction^:[0.1]#charging fraction at which the weapon should additionally fire a shot."
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e7940"
+    },
+    "WeaponAnimationBaseProperties": {
+      "guid": "952aae26284be4d072096eaeeb62df6c",
+      "size": 80,
+      "size_string": "sizeof(AnimationBasePropertiesDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "ready playback speed scale#ready weapon animation playback speed, 2.0 is double speed, 0.5 is half speed",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "ready playback speed scale#ready weapon animation playback speed, 2.0 is double speed, 0.5 is half speed",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "ready initial playback speed scale#ready initial weapon animation playback speed, 2.0 is double speed, 0.5 is half speed",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "ready initial playback speed scale#ready initial weapon animation playback speed, 2.0 is double speed, 0.5 is half speed",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "put away playback speed scale#put away weapon animation playback speed, 2.0 is double speed, 0.5 is half speed",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "put away playback speed scale#put away weapon animation playback speed, 2.0 is double speed, 0.5 is half speed",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "reload playback speed scale#reload weapon animation playback speed, 2.0 is double speed, 0.5 is half speed",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "reload playback speed scale#reload weapon animation playback speed, 2.0 is double speed, 0.5 is half speed",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "reload while empty playback speed scale#reload weapon animation playback speed, 2.0 is double speed, 0.5 is half speed",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "reload while empty playback speed scale#reload weapon animation playback speed, 2.0 is double speed, 0.5 is half speed",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e2810"
+    },
+    "weapon_screen_effect_block": {
+      "guid": "475921139c4adbd5e032869d3d51affd",
+      "size": 36,
+      "size_string": "sizeof(s_weapon_screen_effect_definition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "weapon_screen_effect_flags"
+        },
+        {
+          "type": "pad",
+          "name": "LKSZJFSE",
+          "definition": 3
+        },
+        {
+          "type": "tag_reference",
+          "name": "screen effect^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sefc"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144987710"
+    },
+    "SoundRTPCBlock_struct": {
+      "guid": "78fddc6e77414711644d27b8b574d61d",
+      "size": 16,
+      "size_string": "sizeof(SoundRTPCBlockDefinition)",
+      "fields": [
+        {
+          "type": "long_block_index",
+          "name": "Attachment Index#Sound attachment to affect",
+          "definition": "global_object_attachment_block"
+        },
+        {
+          "type": "string_id",
+          "name": "Function#Function to drive the RTPC",
+          "group_tag": "sted"
+        },
+        {
+          "type": "string_id",
+          "name": "RTPC Name#WWise RTPC string name"
+        },
+        {
+          "type": "long_integer",
+          "name": "RTPC name hash value*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144786280"
+    },
+    "global_object_attachment_block": {
+      "guid": "577209119c42754733d975a73f4575ee",
+      "size": 80,
+      "size_string": "sizeof(struct object_attachment_definition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "type^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "ligh",
+              "gldf",
+              "ltvl",
+              "effe",
+              "lsnd",
+              "lens",
+              "cpem",
+              "egfd",
+              "decs"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "override type#this attachment will override the attachment on the object that shares this ",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "ligh",
+              "gldf",
+              "ltvl",
+              "effe",
+              "lsnd",
+              "lens",
+              "cpem",
+              "egfd",
+              "decs"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "marker"
+        },
+        {
+          "type": "char_enum",
+          "name": "change color",
+          "definition": "global_object_change_color_enum"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "object_attachment_flags"
+        },
+        {
+          "type": "pad",
+          "name": "DPKP",
+          "definition": 2
+        },
+        {
+          "type": "string_id",
+          "name": "primary scale",
+          "group_tag": "sted"
+        },
+        {
+          "type": "string_id",
+          "name": "secondary scale",
+          "group_tag": "sted"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144997cd0"
+    },
+    "SoundSweetenerBlock": {
+      "guid": "aa163f442a4b817ade74fb815c3ca2f7",
+      "size": 44,
+      "size_string": "sizeof(SoundSweetenerBlockDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Function#Function to trigger the sweetener",
+          "group_tag": "sted"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "Switch point#value of the function where the sound is triggered"
+        },
+        {
+          "type": "long_integer",
+          "name": "Mode#0 for triggering while function is decreasing, 1 for increasing (more modes to come?)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144785e10"
+    },
+    "WeaponGenericAttachment_struct": {
+      "guid": "3dd1d16dc542c4d17d4101a250bce220",
+      "size": 32,
+      "size_string": "sizeof(i343::Weapon::GenericAttachmentDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weat"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449a0760"
+    },
+    "WeaponUnitBaseProperties": {
+      "guid": "84ff36531d4eb6a8e080d6a7d2d159ec",
+      "size": 48,
+      "size_string": "sizeof(i343::Weapon::UnitBasePropertiesDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "move speed scale#scales the unit's movement speed",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "move speed scale#scales the unit's movement speed",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "turn rate scale#scales the player's turn rate",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "turn rate scale#scales the player's turn rate",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "simulated input scale#scales the player's simulated input",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "simulated input scale#scales the player's simulated input",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e1310"
+    },
+    "WeaponRecoilViewKickSettings": {
+      "guid": "7f76e8ef8541e470a34ffb9712275e44",
+      "size": 56,
+      "size_string": "sizeof(RecoilViewKickDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "View Kick",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "view kick settings",
+          "definition": "Rotates the player camera and gun \nYaw: +right Pitch: +up"
+        },
+        {
+          "type": "char_enum",
+          "name": "view kick system type",
+          "definition": "weapon_recoil_system_type"
+        },
+        {
+          "type": "pad",
+          "name": "typePad",
+          "definition": 3
+        },
+        {
+          "type": "custom",
+          "name": "Yaw",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "view kick yaw",
+          "definition": "WeaponRecoilViewKickSettingsDimension"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Pitch",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "view kick pitch",
+          "definition": "WeaponRecoilViewKickSettingsDimension"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "explanation",
+          "name": "settings",
+          "definition": "If you don't specifiy hip settings, these settings will be used for both hip and precision aim."
+        },
+        {
+          "type": "struct",
+          "name": "view kick precision aim",
+          "definition": "WeaponRecoilViewKickSettingsStance"
+        },
+        {
+          "type": "block",
+          "name": "view kick hip",
+          "definition": "WeaponRecoilViewKickSettingsStanceBlock"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449de910"
+    },
+    "WeaponRecoilViewKickSettingsDimension": {
+      "guid": "ab41261dd44a619696762b824da05b65",
+      "size": 8,
+      "size_string": "sizeof(RecoilViewKickSettingsDimension)",
+      "fields": [
+        {
+          "type": "angle_bounds",
+          "name": "view kick bounds:degrees"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449de4b0"
+    },
+    "WeaponRecoilViewKickSettingsStance": {
+      "guid": "a58b1f4e514fe99d5dbfa9bf79102742",
+      "size": 8,
+      "size_string": "sizeof(RecoilViewKickSettingsStance)",
+      "fields": [
+        {
+          "type": "angle",
+          "name": "view kick deceleration:degrees/s/s#slows down the current kick when moving away from center"
+        },
+        {
+          "type": "angle",
+          "name": "view kick return to center acceleration:degrees/s/s#how fast the current kick falls back to center"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449de5c0"
+    },
+    "WeaponRecoilViewKickSettingsStanceBlock_struct": {
+      "guid": "8d2306179f405996f13e5687dae50c91",
+      "size": 8,
+      "size_string": "sizeof(RecoilViewKickSettingsStance)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "view kick settings stance",
+          "definition": "WeaponRecoilViewKickSettingsStance"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449de6d0"
+    },
+    "weapon_recoil_view_kick_base_properties": {
+      "guid": "71674ca9ff48927e18a8e386a625d7ee",
+      "size": 32,
+      "size_string": "sizeof(RecoilViewKickBasePropertiesDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "view kick return deceleration scale",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "view kick return deceleration scale",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "view kick return return to center scale",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "view kick return return to center scale",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e3d80"
+    },
+    "weapon_recoil_gunkick": {
+      "guid": "aa581adb644a1af72f4818ba330c677b",
+      "size": 52,
+      "size_string": "sizeof(RecoilGunkickDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Gunkick",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "gunkick",
+          "definition": "Gunkick rotates the first person weapon around the camera to offset the gun on screen.  When aimed down sight, this will modify your weapon's firing direction.  Uses a spring damper system to pull the gun back to the center\nleft = +yaw\nup = +pitch"
+        },
+        {
+          "type": "struct",
+          "name": "gunkick ads settings",
+          "definition": "weapon_recoil_gunkick_stance"
+        },
+        {
+          "type": "block",
+          "name": "gunkick hip settings",
+          "definition": "weapon_recoil_gunkick_stance_block"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "gunkick yaw bounds:degrees#0 defaults to -10,10.  Max bounds -10,10"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "gunkick pitch bounds:degrees#0 defaults to -10,10.  Max bounds -10,10"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e03d0"
+    },
+    "weapon_recoil_gunkick_stance": {
+      "guid": "45f7679379405235062b58a8f1501acd",
+      "size": 8,
+      "size_string": "sizeof(RecoilGunkickStanceDefinition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "gunkick spring constant#scales the return acceleration based on distance.applied per axis"
+        },
+        {
+          "type": "real",
+          "name": "gunkick damping ratio#0 would be no damping, 1 is critical damping.  Is used to automatically calculate the damping coefficient"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e01a0"
+    },
+    "weapon_recoil_gunkick_stance_block_struct": {
+      "guid": "7e6c1a1bf7457fca00abdc856686f619",
+      "size": 8,
+      "size_string": "sizeof(RecoilGunkickStanceDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "gunkick stance",
+          "definition": "weapon_recoil_gunkick_stance"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e02b0"
+    },
+    "WeaponRecoilGunkickBaseProperties": {
+      "guid": "0b7782eb3848fe76a47200956e296935",
+      "size": 16,
+      "size_string": "sizeof(RecoilGunkickBasePropertiesDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "gunkick spring constant scale",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "gunkick spring constant scale",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e2ef0"
+    },
+    "weapon_procedural_animation_fp": {
+      "guid": "221e48adf04ff3ce0a6b4a946b039056",
+      "size": 40,
+      "size_string": "sizeof(ProceduralAnimationFirstPersonDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Procedural Animation FP",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "procedural animation fp fire spring",
+          "definition": "weapon_procedural_animation_fp_fire_spring"
+        },
+        {
+          "type": "block",
+          "name": "procedural animation fp fire spring hip#add a block to override fire spring in hip",
+          "definition": "weapon_procedural_animation_fp_fire_spring_block"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e0d10"
+    },
+    "weapon_procedural_animation_fp_fire_spring": {
+      "guid": "ad44d0691644bfcbf1ecdfae1d16e1b7",
+      "size": 12,
+      "size_string": "sizeof(ProceduralAnimationFirstPersonFireSpringDamperDefinition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "procedural animation fp fire spring constant#scales the center spring acceleration based on distance"
+        },
+        {
+          "type": "real",
+          "name": "procedural animation fp fire damping ratio#0 would be no damping, 1 is critical damping.  Is used to automatically calculate the damping coefficient"
+        },
+        {
+          "type": "real",
+          "name": "runtime damping constant!*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e0ae0"
+    },
+    "weapon_procedural_animation_fp_fire_spring_block_struct": {
+      "guid": "b497e284024346c89b41aba6755df71e",
+      "size": 12,
+      "size_string": "sizeof(ProceduralAnimationFirstPersonFireSpringDamperDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "procedural animation fp fire spring",
+          "definition": "weapon_procedural_animation_fp_fire_spring"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e0bf0"
+    },
+    "WeaponProceduralRecoilAnimationSettings": {
+      "guid": "f5604e096e4dbeb32b1a56a7a5d6243f",
+      "size": 172,
+      "size_string": "sizeof(i343::ProceduralAnimation::RecoilSettings)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "duration:seconds#duration of recoil"
+        },
+        {
+          "type": "struct",
+          "name": "kickback",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "pitch",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "yaw",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "roll",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "head#lagging recoil of the head",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "shoulders#lagging recoil of the head",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e2380"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    },
+    "_base_object": {
+      "guid": "6c5aa9947a45fcf55742a488f0943380",
+      "size": 1280,
+      "size_string": "(sizeof(ObjectDefinition) - Tag::SizeInfo<ObjectDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "OBJECT",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime object type!"
+        },
+        {
+          "type": "char_enum",
+          "name": "Nav Mesh Cutting",
+          "definition": "NavMeshCuttingOverrideEnum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Nav Mesh Obstacle",
+          "definition": "BooleanOverrideEnum"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "Nav Mesh Cutting OBB Offset"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "Nav Mesh Cutting OBB Scale"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "object_definition_flags"
+        },
+        {
+          "type": "real",
+          "name": "bounding radius#If you edit this field manually, beware that the render model is no longer respected for radius calculation and that you need to set the bounding offset as well."
+        },
+        {
+          "type": "real_point_3d",
+          "name": "bounding offset"
+        },
+        {
+          "type": "real",
+          "name": "horizontal acceleration scale{acceleration scale}:[0,+inf]"
+        },
+        {
+          "type": "real",
+          "name": "vertical acceleration scale"
+        },
+        {
+          "type": "real",
+          "name": "angular acceleration scale"
+        },
+        {
+          "type": "char_enum",
+          "name": "lightmap shadow mode",
+          "definition": "lightmap_shadow_mode_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "multiple airprobe mode",
+          "definition": "multipleAirprobeSamplingModeEnum"
+        },
+        {
+          "type": "pad",
+          "name": "pad1",
+          "definition": 2
+        },
+        {
+          "type": "struct",
+          "name": "impact audio",
+          "definition": "ImpactAudioDefinitionStruct"
+        },
+        {
+          "type": "char_enum",
+          "name": "water density",
+          "definition": "water_density_type_enum"
+        },
+        {
+          "type": "pad",
+          "name": "pad2",
+          "definition": 3
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime flags!*"
+        },
+        {
+          "type": "block",
+          "name": "source sidecar",
+          "definition": "sidecarBlock"
+        },
+        {
+          "type": "string_id",
+          "name": "default model variant"
+        },
+        {
+          "type": "tag_reference",
+          "name": "model",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hlmt"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "crate object",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bloc"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Damage Source",
+          "definition": "Damage source name for all damage caused by this object. This includes:\n   - collision damage caused by this object\n   - melee damage caused by this object (including melee-like special abilities)\n   - damage caused by projectiles created by this object\n   - damage caused by damage effects created by this object (such as weapon backfiring)\n"
+        },
+        {
+          "type": "struct",
+          "name": "damageSource",
+          "definition": "DamageSourceDefinitionStruct"
+        },
+        {
+          "type": "real",
+          "name": "navpoint vertical offset"
+        },
+        {
+          "type": "explanation",
+          "name": "only set this tag if you want to override the default collision damage values in globals.globals",
+          "definition": ""
+        },
+        {
+          "type": "tag_reference",
+          "name": "collision damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cddf"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "early mover OBB",
+          "definition": "object_early_mover_obb_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "creation effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "material effects",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "foot"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "melee sound#this is the sound that is made when I am meleed.  This overrides the sweetener sound of my material.",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "kill on first contact or damage after time:seconds#grace period before object can be instantly killed by kill on first contact or damage flag"
+        },
+        {
+          "type": "real",
+          "name": "self-destruct time:seconds#if non-zero, any instances of this object will destroy themselves after this many seconds."
+        },
+        {
+          "type": "real",
+          "name": "self-destruct time max:seconds#if non-zero, defines range from which self-destruct time is chosen randomly"
+        },
+        {
+          "type": "block",
+          "name": "ai properties",
+          "definition": "object_ai_properties_block"
+        },
+        {
+          "type": "block",
+          "name": "functions",
+          "definition": "object_function_block"
+        },
+        {
+          "type": "block",
+          "name": "runtime interpolator functions*!",
+          "definition": "object_runtime_interpolator_functions_block"
+        },
+        {
+          "type": "block",
+          "name": "function switches",
+          "definition": "objectFunctionSwitchBlock"
+        },
+        {
+          "type": "word_flags",
+          "name": "Ammo Refill Flags",
+          "definition": "ammoRefillTypeFlags"
+        },
+        {
+          "type": "word_flags",
+          "name": "secondary flags",
+          "definition": "object_definition_secondary_flags"
+        },
+        {
+          "type": "block",
+          "name": "attachments",
+          "definition": "global_object_attachment_block"
+        },
+        {
+          "type": "block",
+          "name": "hull surfaces",
+          "definition": "water_physics_hull_surface_definition_block"
+        },
+        {
+          "type": "block",
+          "name": "jetwash",
+          "definition": "jetwash_definition_block"
+        },
+        {
+          "type": "block",
+          "name": "widgets",
+          "definition": "object_widget_block"
+        },
+        {
+          "type": "block",
+          "name": "change colors",
+          "definition": "object_change_colors"
+        },
+        {
+          "type": "block",
+          "name": "multiplayer object",
+          "definition": "multiplayer_object_block"
+        },
+        {
+          "type": "block",
+          "name": "Forge data",
+          "definition": "ForgeObjectEntryDefinitionBlock"
+        },
+        {
+          "type": "tag_reference",
+          "name": "simulation_interpolation#Set to a specific interpolation definition, or leave blank to inherit the default for the object type (there are defaults for bipeds, vehicles, and crates in multiplayer_globals).  To disable interpolation on a particular object whose type has interpolation by default, set this reference to the special disable_interpolation.simulation_interpolation tag.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "spawn effects",
+          "definition": "object_spawn_effects_block"
+        },
+        {
+          "type": "block",
+          "name": "model dissolve data",
+          "definition": "modelDissolveDataBlock"
+        },
+        {
+          "type": "long_string",
+          "name": "class name"
+        },
+        {
+          "type": "block",
+          "name": "script tagalongs",
+          "definition": "hs_references_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "prototype script!",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hsc*"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Object Abandoment",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "object abandonment",
+          "definition": "object_abandonment_struct"
+        },
+        {
+          "type": "block",
+          "name": "Designer Metadata",
+          "definition": "object_designer_metadata_block"
+        },
+        {
+          "type": "explanation",
+          "name": "Object Function Smoothing",
+          "definition": ""
+        },
+        {
+          "type": "block",
+          "name": "Object function smoothing",
+          "definition": "ComputeFunctionSmoothingBlock"
+        },
+        {
+          "type": "char_enum",
+          "name": "Animated mesh animation type",
+          "definition": "AnimatedMeshAnimationType_EnumSchema"
+        },
+        {
+          "type": "pad",
+          "name": "pad_anmesh",
+          "definition": 3
+        },
+        {
+          "type": "tag_reference",
+          "name": "Core",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "spry",
+              "rscn"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "Trigger volume component info",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "tvcm"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "Tracking Info&Spartan Tracking",
+          "definition": "ObjectDefinitionTagBlock"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144998b30"
+    },
+    "_base_item": {
+      "guid": "e3f7cd213e4494ad8d9680aebfebfb8c",
+      "size": 1600,
+      "size_string": "(sizeof(ItemDefinition) - Tag::SizeInfo<ItemDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "object",
+          "definition": "_base_object"
+        },
+        {
+          "type": "custom",
+          "name": "$$$ ITEM $$$",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "item_definition_flags"
+        },
+        {
+          "type": "short_integer",
+          "name": "OLD message index"
+        },
+        {
+          "type": "short_integer",
+          "name": "sort order"
+        },
+        {
+          "type": "real",
+          "name": "OLD multiplayer on-ground scale"
+        },
+        {
+          "type": "real",
+          "name": "OLD campaign on-ground scale"
+        },
+        {
+          "type": "explanation",
+          "name": "NEW hud messages",
+          "definition": "everything you need to display things"
+        },
+        {
+          "type": "string_id",
+          "name": "pickup message"
+        },
+        {
+          "type": "string_id",
+          "name": "swap message"
+        },
+        {
+          "type": "string_id",
+          "name": "pickup message (dual)"
+        },
+        {
+          "type": "string_id",
+          "name": "swap message (dual)"
+        },
+        {
+          "type": "string_id",
+          "name": "picked up msg"
+        },
+        {
+          "type": "string_id",
+          "name": "switch-to msg"
+        },
+        {
+          "type": "string_id",
+          "name": "switch-to from ai msg"
+        },
+        {
+          "type": "string_id",
+          "name": "notify empty msg"
+        },
+        {
+          "type": "string_id",
+          "name": "notify overheated message"
+        },
+        {
+          "type": "tag_reference",
+          "name": "collision sound",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "predicted bitmaps",
+          "definition": "predicted_bitmaps_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "detonation damage effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "real_bounds",
+          "name": "detonation delay:seconds"
+        },
+        {
+          "type": "tag_reference",
+          "name": "detonating effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "detonation effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Item scale settings",
+          "definition": "because grenades look better as coconuts. 0==1"
+        },
+        {
+          "type": "real",
+          "name": "ground scale"
+        },
+        {
+          "type": "real",
+          "name": "small unit (armed)"
+        },
+        {
+          "type": "real",
+          "name": "small unit (stowed)"
+        },
+        {
+          "type": "real",
+          "name": "medium unit (armed)"
+        },
+        {
+          "type": "real",
+          "name": "medium unit (stowed)"
+        },
+        {
+          "type": "real",
+          "name": "large unit (armed)"
+        },
+        {
+          "type": "real",
+          "name": "large unit (stowed)"
+        },
+        {
+          "type": "real",
+          "name": "huge unit (armed)"
+        },
+        {
+          "type": "real",
+          "name": "huge unit (stowed)"
+        },
+        {
+          "type": "tag_reference",
+          "name": "grounded friction settings#If not present, the default from global.globals is used.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "grfr"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "Tossed Override# Used to override the object tossed when item owner is killed.  Is overridden by tossed weapon override.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "obje"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "pad",
+          "name": "tag_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449aa4e0"
+    }
+  },
+  "enums_flags": {
+    "weapon_definition_flags": {
+      "options": [
+        "gunkick disable roll",
+        "mutually exclusive triggers",
+        "attacks automatically on bump",
+        "must be readied",
+        "doesn't count toward maximum",
+        "aim assists only when zoomed",
+        "prevents grenade throwing",
+        "must be picked up",
+        "holds triggers when dropped",
+        "prevents melee attack",
+        "detonates when dropped",
+        "cannot fire at maximum age",
+        "secondary trigger overrides grenades",
+        "support weapon",
+        "hide FP weapon when in iron sights#for scoped weapons",
+        "AIs use weapon melee damage",
+        "allows binoculars",
+        "loop fp firing animation",
+        "prevents crouching",
+        "cannot fire while boosting",
+        "use empty melee on empty",
+        "uses 3rd person camera",
+        "can be dual wielded",
+        "can only be dual wielded",
+        "melee only",
+        "cant fire if parent dead",
+        "weapon ages with each kill#see 'weapon ages when damage is inflicted', 'per kill or hit aging amount'",
+        "allows unaimed lunge",
+        "cannot be used by player",
+        "hold fp firing animation",
+        "strict deviation angle#deviation angle is allowed to be less than primary autoaim angle - for the rocket launcher",
+        "notifies target units#aiming this weapon at another player can be important to them - for lock-on weapons"
+      ]
+    },
+    "weapon_definition_secondary_flags": {
+      "options": [
+        "magnetizes only when zoomed",
+        "force enable equipment tossing",
+        "non-lunge melee dash disabled#melee-physics dash is disabled on melees that are not lunges",
+        "don't drop on dual wield melee",
+        "is equipment special weapon#when checked, this weapon\r\n-is deleted when dropped\r\n-does not count against maximum inventory\r\n-gets deleted on host migrations\r\n-prevents swapping or switching weapons",
+        "uses ghost reticle",
+        "never overheats",
+        "force tracers to come from weapon barrel#setting this forces effects tracers to come from weapon barrel instead of eye point",
+        "cannot fire during emp",
+        "weapon can headshot",
+        "AI cannot fire tracking projectiles#setting this will remove tracking data from AI-fired projectiles",
+        "force match owner animation#WARNING checking this will make the weapon only usable by AI.  The weapon will either match the owner's animation if a matching animation is found.  Otherwise the weapon goes to idle.",
+        "weapon unzooms on damage#taking damage while wielding this will ping player out of zoom/iron sights",
+        "do not drop on equipment activation#will counteract default support weapon behavior to drop on equipment activation",
+        "weapon can not be dropped#used for CTF magnum, weapon can not be dropped or swapped out",
+        "disable function overlays during reload",
+        "throw weapon on primary fire#Throws weapon when primary fire trigger is pulled",
+        "do not drop 'must be readied' on primary trigger#Allows 'must be readied' weapons to have a primary attack",
+        "delete on drop",
+        "allow melee when using device#Default behavior prevents melee attacks when using device.  Setting this bit allows them.",
+        "do not lower weapon when using device#Default behavior lowers weapon when using device.  Setting this leaves the weapon up.",
+        "cannot fire while zooming",
+        "weapon ages when damage is inflicted#see 'weapon ages with each kill', 'per kill or hit aging amount'",
+        "apply gunner armor mod abilites#Apply weapon's gunner armor mod movement penalty multipliers rather than base multipliers when gunner armor mod is active in _trait_weapons_gunner_armor_modifier",
+        "wielders sprint is unaffected by stopping power{wielders sprint is unaffected by soft ping}#if stopping power is enabled in the sprint ability then this blocks the effect when this weapon is held",
+        "weapon drops further away#Adds velocity to weapon's default drop (useful for weapons with auto-pickup)",
+        "use automatic firing looping sounds!",
+        "do not drop on assassination#Keeps the weapon in your hand while being assassinated or performing an assassination (for must_be_readied or support weapons)",
+        "is part of body#Keeps the weapon from dropping or being hidden at the start of assassinations, and must instead be dropped using the drop weapon keyframe",
+        "suppresses sprint",
+        "hide pickup prompt unless special pickup priority#Used for Oddball that only shows the pickup prompt when megalo script sets pickup priority to special",
+        "weapon ignores player_pickup_allowed trait#Player will always pickup this weapon if requested, Used for CTF that needs to force storm_magnum_ctf onto the player"
+      ]
+    },
+    "weaponDefinitionAnimationFlags": {
+      "options": [
+        "No idle to precision idle transition while evading",
+        "No idle to precision idle transition while firing",
+        "No idle to precision idle transition while reloading",
+        "Firing animations are blocked during ADS transitions"
+      ]
+    },
+    "MalleablePropertyCombiner": {
+      "options": [
+        "sequential#applies the percentages one after another on the base",
+        "total percentage#adds up all of the percentages and applies them to the base",
+        "addition#adds on all of the modifiers to the base",
+        "product#multiplies the values one after another on to the base"
+      ]
+    },
+    "AimAssistDefinitionFlagsDefinition": {
+      "options": [
+        "do not scale for magnification#Disables scaling distances by magnification and inverse scaling angles by magnification.  Aim assist is normally scaled for magnification in order to have the same screen space result regardless of magnification."
+      ]
+    },
+    "target_tracking_flags": {
+      "options": [
+        "only enable when aimed down sight"
+      ]
+    },
+    "weapon_laser_guidance_activation_enum": {
+      "options": [
+        "Ads"
+      ]
+    },
+    "movement_penalty_modes": {
+      "options": [
+        "always",
+        "when zoomed",
+        "when zoomed or reloading"
+      ]
+    },
+    "first_time_pickup_types": {
+      "options": [
+        "unassigned",
+        "bolt pistol",
+        "light rifle",
+        "suppressor",
+        "binary rifle",
+        "scattershot",
+        "incineration cannon"
+      ]
+    },
+    "weapon_types": {
+      "options": [
+        "undefined",
+        "shotgun",
+        "needler",
+        "plasma pistol",
+        "plasma rifle",
+        "rocket launcher",
+        "energy blade",
+        "splaser",
+        "shield",
+        "scarab gun",
+        "wolverine quad",
+        "flak cannon",
+        "plasma launcher",
+        "laser designator",
+        "sticky detonator",
+        "cavalier polearm"
+      ]
+    },
+    "UIWeaponFlags": {
+      "options": [
+        "ignores ammo swapper component#This item should not let the ammo swapper component display it",
+        "displays ammo as percentage of max#as opposed to individual bullet sprites",
+        "hide ammo#hides stored ammo and clip ammo displays"
+      ]
+    },
+    "magazine_flags": {
+      "options": [
+        "wastes rounds when reloaded",
+        "every round must be chambered",
+        "magazine cannot change state while firing#will prevent reload until fire is complete (sticky det)",
+        "allow overheated reload when empty",
+        "bottomless inventory"
+      ]
+    },
+    "ammoRefillTypeEnum": {
+      "options": [
+        "None",
+        "UNSC",
+        "Covenant",
+        "Forerunner"
+      ]
+    },
+    "weapon_trigger_definition_flags": {
+      "options": [
+        "autofire single action only"
+      ]
+    },
+    "weapon_trigger_inputs": {
+      "options": [
+        "right trigger",
+        "left trigger",
+        "melee attack",
+        "ai only secondary"
+      ]
+    },
+    "weapon_trigger_behaviors": {
+      "options": [
+        "spew#fires its primary action barrel whenever the trigger is down",
+        "latch#fires its primary action barrel when the trigger is down and then latches",
+        "latch-autofire#fires its primary action barrel once if pulsed quickly or if not depressed all the way, otherwise does secondary behavior",
+        "latch-tether#tethers projectiles if latched long enough, on release the tethered projectile detonates",
+        "charge#charges the trigger",
+        "latch-zoom#latched; fires its primary action barrel when unzoomed, secondary when zoomed",
+        "spew-charge",
+        "sword-charge",
+        "double-latch-tether#projectile is tethered by 1st latch, 2nd releases and detonates it",
+        "charge-with-magazine#like charge, but pays attention to any magazine and will not charge unless magazine is idle and barrel is actually able to fire"
+      ]
+    },
+    "weapon_barrel_flags": {
+      "options": [
+        "random firing effects#rather than being chosen sequentially, firing effects are picked randomly",
+        "can fire with partial ammo#allows a weapon to be fired as long as there is a non-zero amount of ammunition loaded",
+        "projectiles use weapon origin#instead of coming out of the magic first person camera origin, the projectiles for this weapon actually come out of the gun",
+        "ejects during chamber#this trigger's ejection port is started during the key frame of its chamber animation",
+        "projectile vector cannot be adjusted#projectiles fired by this weapon cannot have their direction adjusted by the AI to hit the target",
+        "projectiles have identical error",
+        "projectiles fire parallel#If there are multiple guns for this trigger, the projectiles emerge in parallel beams (rather than independant aiming)",
+        "cant fire when others firing",
+        "cant fire when others recovering",
+        "don't clear fire bit after recovering",
+        "stagger fire across multiple markers",
+        "can fire at maximum age",
+        "use 1 firing effect per burst",
+        "prevent marker deviation#the barrel will not fire if all markers are pointed further away from the desired aiming vector than the aim assist deviation angle",
+        "error ignores zoom#disables of the barrel error inversely with the zoom magnification",
+        "projectile fires in marker direction#projectiles shoot out the marker direction instead of the player's aim vector",
+        "skip test for object being outside BSP#Prevents projectile origin from changing when object is outside of BSP; Useful for units that can be placed inside physics.",
+        "only reload if all barrels idle",
+        "only switch weapons if barrel idle#the weapon's owner cannot switch weapons unless this barrel is in the idle state",
+        "use automatic fire looping sounds"
+      ]
+    },
+    "ai_sound_volume_enum": {
+      "options": [
+        "silent#ai will not respond to this sound",
+        "quiet",
+        "medium",
+        "shout",
+        "loud#ai can hear this sound at any range"
+      ]
+    },
+    "MotionTrackerNoiseLevelDefinition": {
+      "options": [
+        "edge",
+        "inner",
+        "silent"
+      ]
+    },
+    "barrel_prediction_type_enum": {
+      "options": [
+        "none",
+        "continuous",
+        "instant",
+        "continuous burst"
+      ]
+    },
+    "weapon_barrel_distribution_functions": {
+      "options": [
+        "point",
+        "horizontal fan",
+        "custom directions{custom vectors}",
+        "custom positions"
+      ]
+    },
+    "WeaponBarrelFireSoundFlags": {
+      "options": [
+        "play once per burst"
+      ]
+    },
+    "trigger_prediction_type_enum": {
+      "options": [
+        "none",
+        "spew",
+        "charge"
+      ]
+    },
+    "weapon_trigger_autofire_actions": {
+      "options": [
+        "fire",
+        "charge",
+        "fire other"
+      ]
+    },
+    "weapon_trigger_overcharged_actions": {
+      "options": [
+        "none",
+        "explode",
+        "discharge"
+      ]
+    },
+    "weapon_trigger_charging_flags": {
+      "options": [
+        "can fire spew fraction from partial charge{can fire from partial charge}#discharging a partially charged weapon will spew for the charged fraction of the spew time set below",
+        "limit to current rounds loaded#if magazine present, do not fire more than current rounds loaded (mantis rocket launcher)",
+        "Wont charge unless tracked target is valid#spew-charge triggers only",
+        "disallow fire from partial charge"
+      ]
+    },
+    "weapon_screen_effect_flags": {
+      "options": [
+        "overrides unit and camera screen effects",
+        "unzoomed",
+        "zoom level 1",
+        "zoom level 2"
+      ]
+    },
+    "global_object_change_color_enum": {
+      "options": [
+        "none",
+        "primary",
+        "secondary",
+        "tertiary",
+        "quaternary"
+      ]
+    },
+    "object_attachment_flags": {
+      "options": [
+        "force always on#when this flag is clear we only create the attachment when the function object function is active or set to empty string",
+        "effect size scale from object scale"
+      ]
+    },
+    "weapon_recoil_system_type": {
+      "options": [
+        "acceleration",
+        "acceleration per axis#system solved independently per axis"
+      ]
+    },
+    "CollectibleTutorialEnum": {
+      "options": [
+        "None",
+        "Assassination",
+        "Camera",
+        "Crouch",
+        "Grenade",
+        "Jump",
+        "Melee",
+        "Movement",
+        "Shoot",
+        "Tracking",
+        "Clamber",
+        "GroundPound",
+        "ShoulderBash",
+        "Slide",
+        "Sprint",
+        "Thruster",
+        "Zoom",
+        "BansheeBoost",
+        "BansheeTrick",
+        "BansheeSwitchWeapons",
+        "GhostBoost",
+        "MantisRockets",
+        "MantisStomp",
+        "VTOLAscend",
+        "VTOLDescend",
+        "VTOLEvade",
+        "VTOLSwitchWeapons",
+        "VTOLShoot",
+        "JeepDrive",
+        "JeepHandbrake",
+        "JeepShoot",
+        "WraithBoost",
+        "SeatSwitch",
+        "OrdersGeneral",
+        "OrdersClear",
+        "OrdersEnemy",
+        "OrdersMove",
+        "OrdersRevive",
+        "OrdersVehicle",
+        "OrdersWeapon",
+        "CampaignStarted"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

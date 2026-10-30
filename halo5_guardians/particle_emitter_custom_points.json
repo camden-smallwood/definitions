@@ -1,0 +1,140 @@
+{
+  "name": "particle_emitter_custom_points",
+  "tag": "pecp",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "particle_emitter_custom_points_block",
+  "blocks": {
+    "particle_emitter_custom_points_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "particle_emitter_custom_points_block_struct"
+    },
+    "particle_emitter_custom_point_block": {
+      "max_count": 32768,
+      "max_count_string": "s_particle_emitter_custom_points::k_maximum_points",
+      "struct": "particle_emitter_custom_point_block"
+    }
+  },
+  "structs": {
+    "particle_emitter_custom_points_block_struct": {
+      "guid": "8b0d6eb9cd4980d972b92eb3dbcdbd2f",
+      "size": 104,
+      "size_string": "(sizeof(s_particle_emitter_custom_points) - Tag::SizeInfo<s_particle_emitter_custom_points::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "PARTICLE POINTS",
+          "definition": "Explanation goes here.\nWoo....\n"
+        },
+        {
+          "type": "tag_reference",
+          "name": "source reference!",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "pmdf"
+            ]
+          }
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "compression scale"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "compression offset"
+        },
+        {
+          "type": "block",
+          "name": "points",
+          "definition": "particle_emitter_custom_point_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144715050"
+    },
+    "particle_emitter_custom_point_block": {
+      "guid": "dc9d5d70bc4b861544128a89aebc2584",
+      "size": 10,
+      "size_string": "sizeof(s_particle_emitter_custom_points::s_point)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "position_x"
+        },
+        {
+          "type": "short_integer",
+          "name": "position_y"
+        },
+        {
+          "type": "short_integer",
+          "name": "position_z"
+        },
+        {
+          "type": "char_integer",
+          "name": "normal_x"
+        },
+        {
+          "type": "char_integer",
+          "name": "normal_y"
+        },
+        {
+          "type": "char_integer",
+          "name": "normal_z"
+        },
+        {
+          "type": "byte_integer",
+          "name": "correlation"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144714f30"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

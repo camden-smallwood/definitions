@@ -1,0 +1,354 @@
+{
+  "name": "particle_physics",
+  "tag": "pmov",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "particle_physics_block",
+  "blocks": {
+    "particle_physics_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "particle_physics_block_struct"
+    },
+    "particle_controller": {
+      "max_count": 8,
+      "max_count_string": "c_particle_movement_definition::k_type_count + 2",
+      "struct": "particle_controller"
+    },
+    "particle_controller_parameters": {
+      "max_count": 9,
+      "max_count_string": "c_particle_movement_definition::k_flocking_parameter_count",
+      "struct": "particle_controller_parameters"
+    }
+  },
+  "structs": {
+    "particle_physics_block_struct": {
+      "guid": "d6d26cc84f4a9cebe923c4967028a548",
+      "size": 120,
+      "size_string": "(sizeof(ParticleMovementDefinitionTag) - Tag::SizeInfo<ParticleMovementDefinitionTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "template",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "pmov"
+            ]
+          }
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "particle_movement_flags"
+        },
+        {
+          "type": "char_integer",
+          "name": "collision controller index!"
+        },
+        {
+          "type": "char_integer",
+          "name": "turbulence controller index!"
+        },
+        {
+          "type": "char_integer",
+          "name": "global force controller index!"
+        },
+        {
+          "type": "pad",
+          "name": "pphys",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "movements",
+          "definition": "particle_controller"
+        },
+        {
+          "type": "tag_reference",
+          "name": "turbulence texture",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144716ad0"
+    },
+    "particle_controller": {
+      "guid": "ea1edfff6f4103e07f5ce8bb10fa6aa0",
+      "size": 40,
+      "size_string": "sizeof(c_particle_controller)",
+      "fields": [
+        {
+          "type": "short_enum",
+          "name": "type",
+          "definition": "particle_movement_type"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags!",
+          "definition": "particle_controller_flags"
+        },
+        {
+          "type": "pad",
+          "name": "KNTXOMS",
+          "definition": 1
+        },
+        {
+          "type": "block",
+          "name": "parameters",
+          "definition": "particle_controller_parameters"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime m_constant_parameters!"
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime m_used_particle_states!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144716990"
+    },
+    "particle_controller_parameters": {
+      "guid": "63ed90ace14ccf7f40a1dead957f139c",
+      "size": 44,
+      "size_string": "sizeof(c_particle_controller_parameter)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "parameter id"
+        },
+        {
+          "type": "struct",
+          "name": "property",
+          "definition": "particle_property_scalar_struct_new"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144716860"
+    },
+    "particle_property_scalar_struct_new": {
+      "guid": "52726064374e08e89d4047843c481194",
+      "size": 40,
+      "size_string": "sizeof(c_particle_property)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "Input Variable",
+          "group_tag": "fnin",
+          "definition": "game_state_type_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Range Variable",
+          "group_tag": "fnir",
+          "definition": "game_state_type_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Output Modifier",
+          "group_tag": "fnop",
+          "definition": "output_mod_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Output Modifier Input",
+          "group_tag": "fnom",
+          "definition": "game_state_type_enum"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "Mapping",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "real",
+          "name": "runtime m_constant_value!"
+        },
+        {
+          "type": "word_integer",
+          "name": "runtime m_flags!"
+        },
+        {
+          "type": "byte_flags",
+          "name": "force flags!",
+          "definition": "force_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "DSFDSGLKJ",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144716bf0"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "particle_movement_flags": {
+      "options": [
+        "physics",
+        "collide with structure",
+        "collide with water",
+        "collide with scenery",
+        "collide with vehicles",
+        "collide with bipeds",
+        "always collide every frame",
+        "swarm",
+        "wind",
+        "turbulence",
+        "global force",
+        "disable swarm collision"
+      ]
+    },
+    "particle_movement_type": {
+      "options": [
+        "physics",
+        "collider",
+        "swarm",
+        "wind",
+        "turbulence",
+        "global force"
+      ]
+    },
+    "particle_controller_flags": {
+      "options": [
+        "properties fully indexed"
+      ]
+    },
+    "game_state_type_enum": {
+      "options": [
+        "particle age",
+        "system age{emitter age}",
+        "particle random",
+        "system random{emitter random}",
+        "particle correlation 1{particle random 1}",
+        "particle correlation 2{particle random 2}",
+        "particle correlation 3{particle random 3}",
+        "particle correlation 4{particle random 4}",
+        "system correlation 1{emitter correlation 1}{emitter random 1}",
+        "system correlation 2{emitter correlation 2}{emitter random 2}",
+        "particle emission time{emitter time}{particle emit time}",
+        "location lod{system lod}",
+        "game time",
+        "effect a scale",
+        "effect b scale",
+        "particle rotation{physics rotation}",
+        "location random",
+        "distance from emitter",
+        "particle simulation a",
+        "particle simulation b",
+        "particle velocity",
+        "invalid state --- please set again"
+      ]
+    },
+    "output_mod_enum": {
+      "options": [
+        " ",
+        "Plus",
+        "Times"
+      ]
+    },
+    "force_flags_definition": {
+      "options": [
+        "force constant"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

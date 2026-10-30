@@ -1,0 +1,162 @@
+{
+  "name": "prefab",
+  "tag": "prfb",
+  "version": 1,
+  "flags": 2097154,
+  "parent_tag": "aTag",
+  "block": "prefab_block",
+  "blocks": {
+    "prefab_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "prefab_block_struct"
+    },
+    "prefab_material_overrides_block_schema": {
+      "max_count": 10240,
+      "max_count_string": "MAXIMUM_MATERIALS_PER_GEOMETRY",
+      "struct": "prefab_material_overrides_block_schema"
+    },
+    "prefab_material_override_entries_block_schema": {
+      "max_count": 1023,
+      "max_count_string": "MAXIMUM_PERMUTATIONS_PER_MODEL_REGION",
+      "struct": "prefab_material_override_entries_block_schema"
+    }
+  },
+  "structs": {
+    "prefab_block_struct": {
+      "guid": "9db761e1394890699b68b1bc9ec39771",
+      "size": 80,
+      "size_string": "(sizeof(structure_prefab) - Tag::SizeInfo<structure_prefab::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "bsp reference",
+          "definition": {
+            "flags": 2,
+            "allowed": [
+              "sbsp"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "material overrides",
+          "definition": "prefab_material_overrides_block_schema"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144794970"
+    },
+    "prefab_material_overrides_block_schema": {
+      "guid": "2f4a7d5e84411349032e65b28599a9ab",
+      "size": 32,
+      "size_string": "sizeof(PrefabMaterialOverrideVariant)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "material override variant name"
+        },
+        {
+          "type": "block",
+          "name": "material override entries",
+          "definition": "prefab_material_override_entries_block_schema"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144794860"
+    },
+    "prefab_material_override_entries_block_schema": {
+      "guid": "2e4a7d5e83411349022e65b28499a9ab",
+      "size": 64,
+      "size_string": "sizeof(PrefabMaterialOverrideEntry)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "material override variants",
+          "definition": "prefab_material_override_entry_schema"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144794730"
+    },
+    "prefab_material_override_entry_schema": {
+      "guid": "2d4a7d5e82411349012e65b28399a9ab",
+      "size": 64,
+      "size_string": "sizeof(PrefabMaterialOverrideEntry)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "original material",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mat "
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "override material",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mat "
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144794600"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

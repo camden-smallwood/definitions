@@ -1,0 +1,548 @@
+{
+  "name": "ShoulderBashDefinitionTag",
+  "tag": "sasb",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "ShoulderBashDefinitionTag_block",
+  "blocks": {
+    "ShoulderBashDefinitionTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "ShoulderBashDefinitionTag_block_struct"
+    },
+    "StringIdBlock": {
+      "max_count": 64,
+      "max_count_string": "64",
+      "struct": "StringIdBlock"
+    }
+  },
+  "structs": {
+    "ShoulderBashDefinitionTag_block_struct": {
+      "guid": "5b38a11dbc4e5397f432a48cbc6dabea",
+      "size": 536,
+      "size_string": "(sizeof(ShoulderBashDefinitionTag) - Tag::SizeInfo<ShoulderBashDefinitionTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "data",
+          "definition": "ShoulderBashDefinitionBlock_struct"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c65a0"
+    },
+    "ShoulderBashDefinitionBlock_struct": {
+      "guid": "db0dd5349f4590b744839eb7c3ea85b5",
+      "size": 516,
+      "size_string": "sizeof(ShoulderBashDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "common ability parameters",
+          "definition": "SpartanAbilityCommonParametersStruct"
+        },
+        {
+          "type": "long_flags",
+          "name": "shoulder bash flags",
+          "definition": "ShoulderBashDefinitionTagFlags"
+        },
+        {
+          "type": "real_fraction",
+          "name": "sprint speed fraction threshold#shoulder bash can only be activated once sprint speed fraction clears this threshold"
+        },
+        {
+          "type": "real",
+          "name": "bash speed:world units per second#speed at which the character moves during the shoulder bash"
+        },
+        {
+          "type": "real",
+          "name": "target speed scalar#multiplier on top of 'bash speed' if the player has a target"
+        },
+        {
+          "type": "real",
+          "name": "bash duration:seconds[0.01,+inf]#duration that the bash will last"
+        },
+        {
+          "type": "real",
+          "name": "bash duration with target:seconds[0.01,+inf]#duration that the bash will last if the player has a target"
+        },
+        {
+          "type": "custom",
+          "name": "target range scalar#scales the range at which aim assist picks up a target and puts an additional scale on how fast we bash towards a target",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "target range scalar#scales the range at which aim assist picks up a target and puts an additional scale on how fast we bash towards a target",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "real",
+          "name": "yaw speed scale#scale applied to player's look yaw speed while shoulder bashing"
+        },
+        {
+          "type": "real",
+          "name": "pitch speed scale#scale applied to player's look pitch speed while shoulder bashing"
+        },
+        {
+          "type": "real",
+          "name": "off the ground tolerance#height above which airborne mode should be used (bash direction flattened)"
+        },
+        {
+          "type": "real",
+          "name": "hit sphere offset x:wu#how much in front of the character the hit sphere should be placed"
+        },
+        {
+          "type": "real",
+          "name": "hit sphere offset z:wu#how high the hit sphere should be placed relative to the character origin"
+        },
+        {
+          "type": "real",
+          "name": "hit sphere radius:wu"
+        },
+        {
+          "type": "real",
+          "name": "hit sphere start point offset:wu#how far back from the sphere position to start the moving sphere hit test (should be positive, default = 0.25)"
+        },
+        {
+          "type": "real",
+          "name": "surface adhesion velocity:wu/s#used to stop the character from launching off ramps (default = 0.5)"
+        },
+        {
+          "type": "real",
+          "name": "surface adhesion airborne time limit:seconds#continue to try applying the adhesion velocity for this long after leaving the ground (default = 0.1)"
+        },
+        {
+          "type": "angle",
+          "name": "maximum shoulder bash assist angular velocity:degrees/second#maximum angular velocity that can be introduced by the shoulder bash assist system"
+        },
+        {
+          "type": "angle",
+          "name": "assist pitch angle min:degrees#how much below the bash plane you are allowed to deviate"
+        },
+        {
+          "type": "angle",
+          "name": "assist pitch angle max:degrees#how much above the bash plane you are allowed to deviate"
+        },
+        {
+          "type": "angle",
+          "name": "contact angle threshold for damage:degrees#contact normal for objects hit during bash must be within this angle of bash direction in order for damage to be applied to the object"
+        },
+        {
+          "type": "real",
+          "name": "contact ignore offset#ignore contacts that are below this offset (in z) above the characters' origin"
+        },
+        {
+          "type": "angle",
+          "name": "bash direction pitch offset for damage:degrees#The pitch offset from bash direction to force an upwards lift"
+        },
+        {
+          "type": "custom",
+          "name": "knockback scalar#scales knockback (instantaneous acceleration) effects caused by shoulder bash",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "knockback scalar#scales knockback (instantaneous acceleration) effects caused by shoulder bash",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "camera tilt pitch function",
+          "definition": "Use this curve to define how the camera pitch tilts when the character shoulder bashes. The x axis measures time from the beginning of the bash to the end. Y axis is angle (in degrees) that the camera is pitched in the direction of the bash."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "camera tilt pitch function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "camera forward offset function",
+          "definition": "Use this curve to define how the camera is offset forward when the character shoulder bashes. The x axis measures time from the beginning of the bash to the end. Y axis is distance (in wu) that the camera is offset in the direction of the bash. NOTE: This is necessary because the character's body tilts forward during the shoulder bash. It should be used to match the camera position to that tilt, not to exaggerate the feeling of motion."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "camera forward offset function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "camera FOV delta function",
+          "definition": "Use this curve to define how the camera FOV changes when the character shoulder bashes. The x axis measures time from the beginning of the bash to the end. Y axis is the amount (in degrees) that the FOV is modified at the given time. Negative numbers shrink the FOV, positive numbers grow it."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "camera FOV delta function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "tag_reference",
+          "name": "bash damage effect#damage applied to the thing that gets shoulder bashed",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "bash clang damage effect#damage applied to the thing that gets shoulder bashed",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "bash effect#created on the thing that gets shoulder bashed",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "bash response damage effect#applied to character that performed the bash to generate rumble and other such effects",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "bash response effect#created on the character performed the bash",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": "damage scalar#scales the damage multiplier on damage events caused by shoulder bash",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "damage scalar#scales the damage multiplier on damage events caused by shoulder bash",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "string_id",
+          "name": "shoulder bash animation#the animation played when the shoulder bash is triggered"
+        },
+        {
+          "type": "string_id",
+          "name": "shoulder bash success follow-through#animation played when the character bashes an object that it can damage"
+        },
+        {
+          "type": "real",
+          "name": "shoulder bash success follow-through duration#how long to play the animation (assumes it has loop markers)"
+        },
+        {
+          "type": "real",
+          "name": "shoulder bash success follow-through FP camera restore time#relative to end of duration above"
+        },
+        {
+          "type": "string_id",
+          "name": "shoulder bash success rebound#animation played when the character bashes an object that it can damage and rebounds"
+        },
+        {
+          "type": "real",
+          "name": "shoulder bash success rebound duration#how long to play the animation (assumes it has loop markers)"
+        },
+        {
+          "type": "real",
+          "name": "shoulder bash success rebound FP camera restore time#relative to end of duration above"
+        },
+        {
+          "type": "real",
+          "name": "shoulder bash success rebound speed duration:seconds"
+        },
+        {
+          "type": "real",
+          "name": "shoulder bash success rebound speed:wu/s"
+        },
+        {
+          "type": "explanation",
+          "name": "no rebound surfaces",
+          "definition": "materials listed here will prevent the rebound from occurring."
+        },
+        {
+          "type": "block",
+          "name": "no rebound materials",
+          "definition": "StringIdBlock"
+        },
+        {
+          "type": "string_id",
+          "name": "shoulder bash miss follow-through#animation played when the character hits nothing)"
+        },
+        {
+          "type": "real",
+          "name": "shoulder bash miss follow-through FP camera restore time"
+        },
+        {
+          "type": "real_fraction",
+          "name": "shoulder bash miss follow-through early out fraction#once the animation is more than this percentage through allow an early exit if the player is trying to move"
+        },
+        {
+          "type": "explanation",
+          "name": "Aim Assist",
+          "definition": ""
+        },
+        {
+          "type": "angle",
+          "name": "auto aim angle:degrees#the maximum angle that auto aim works at full strength"
+        },
+        {
+          "type": "real",
+          "name": "auto aim range:world units#the maximum distance that auto aim works at full strength"
+        },
+        {
+          "type": "real",
+          "name": "auto aim falloff range:world units#at what point the auto aim starts falling off"
+        },
+        {
+          "type": "real",
+          "name": "auto aim near falloff range:world units#at what point the auto aim reaches full power"
+        },
+        {
+          "type": "explanation",
+          "name": "AI Response",
+          "definition": ""
+        },
+        {
+          "type": "short_enum",
+          "name": "bash AI sound level#intensity of AI sound notification",
+          "definition": "ai_sound_volume_enum"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c5c60"
+    },
+    "SpartanAbilityCommonParametersStruct": {
+      "guid": "f4efb1a03c4854d9d47df188cdebb4f0",
+      "size": 44,
+      "size_string": "sizeof(SpartanAbilityCommonParameters)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "SpartanAbilityDefinitionTagFlags"
+        },
+        {
+          "type": "real_fraction",
+          "name": "activation energy cost#amount of energy required to activate the ability"
+        },
+        {
+          "type": "real",
+          "name": "active energy consumption:energy/second#amount of energy consumed continuously while the ability is active"
+        },
+        {
+          "type": "tag_reference",
+          "name": "activation effect#effects triggered when player activates ability",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e94d0"
+    },
+    "MalleablePropertyBaseFloatStruct": {
+      "guid": "a1b4d8f8e64063dbbb8cea978b2eae63",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::BaseDefinition<float>)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "Base Value"
+        },
+        {
+          "type": "real_bounds",
+          "name": "Value Bounds"
+        },
+        {
+          "type": "char_enum",
+          "name": "Combiner",
+          "definition": "MalleablePropertyCombiner"
+        },
+        {
+          "type": "pad",
+          "name": "padEnd",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447369c0"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "StringIdBlock": {
+      "guid": "1f9d67d2b240595bdeb3dfad436edf1c",
+      "size": 4,
+      "size_string": "sizeof(StringId)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "material name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c5b50"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "SpartanAbilityDefinitionTagFlags": {
+      "options": [
+        "Use 3rd Person Camera When Active",
+        "Hide Reticle When Active",
+        "Is Motion Tracked (By Enemies) When Active",
+        "One-Shot Activation Effect#Effect kills itself rather than being explicitly killed when the ability deactivates",
+        "Can be activated when weapon state is relaxed",
+        "Does Not Appear In Extended Motion Tracker Range"
+      ]
+    },
+    "ShoulderBashDefinitionTagFlags": {
+      "options": [
+        "Lock Gaze",
+        "Custom Sprint Anim When Ready",
+        "Evading Breaks Aim Assist",
+        "Disable Soft Contacts"
+      ]
+    },
+    "MalleablePropertyCombiner": {
+      "options": [
+        "sequential#applies the percentages one after another on the base",
+        "total percentage#adds up all of the percentages and applies them to the base",
+        "addition#adds on all of the modifiers to the base",
+        "product#multiplies the values one after another on to the base"
+      ]
+    },
+    "ai_sound_volume_enum": {
+      "options": [
+        "silent#ai will not respond to this sound",
+        "quiet",
+        "medium",
+        "shout",
+        "loud#ai can hear this sound at any range"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

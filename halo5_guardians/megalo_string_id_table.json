@@ -1,0 +1,118 @@
+{
+  "name": "megalo_string_id_table",
+  "tag": "msit",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "megalo_string_id_table_block",
+  "blocks": {
+    "megalo_string_id_table_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "megalo_string_id_table_block_struct"
+    },
+    "megalo_string_id_block": {
+      "max_count": 512,
+      "max_count_string": "512",
+      "struct": "megalo_string_id_block"
+    },
+    "megalo_string_id_to_sprite_index_block": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "megalo_string_id_to_sprite_index_block"
+    }
+  },
+  "structs": {
+    "megalo_string_id_table_block_struct": {
+      "guid": "71250fae504ba9f83ddf2383e7b8214d",
+      "size": 72,
+      "size_string": "(sizeof(s_megalo_string_id_table_definition) - Tag::SizeInfo<s_megalo_string_id_table_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "megalo string_ids",
+          "definition": "megalo_string_id_block"
+        },
+        {
+          "type": "block",
+          "name": "megalo string_ids sprite mapping",
+          "definition": "megalo_string_id_to_sprite_index_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481d450"
+    },
+    "megalo_string_id_block": {
+      "guid": "8721786b8d4ec23279e317be962b77eb",
+      "size": 4,
+      "size_string": "sizeof(string_id)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "string_id^"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481d200"
+    },
+    "megalo_string_id_to_sprite_index_block": {
+      "guid": "c97a7dfc4845f8adcbb51980adfdc6c6",
+      "size": 8,
+      "size_string": "sizeof(MegaloStringIdSpriteMappingTableDefinition)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "from megalo string_id"
+        },
+        {
+          "type": "long_integer",
+          "name": "loadout menu sprite frame"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481d330"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

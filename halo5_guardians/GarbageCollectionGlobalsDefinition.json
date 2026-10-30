@@ -1,0 +1,158 @@
+{
+  "name": "GarbageCollectionGlobalsDefinition",
+  "tag": "glga",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "GarbageCollectionGlobalsDefinition_block",
+  "blocks": {
+    "GarbageCollectionGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "GarbageCollectionGlobalsDefinition_block_struct"
+    },
+    "havok_cleanup_resources_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "havok_cleanup_resources_block"
+    },
+    "garbage_collection_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "garbage_collection_block"
+    }
+  },
+  "structs": {
+    "GarbageCollectionGlobalsDefinition_block_struct": {
+      "guid": "512a2fbe704dca5d83301882fbcab8cb",
+      "size": 72,
+      "size_string": "(sizeof(i343::GarbageCollectionGlobals) - Tag::SizeInfo<i343::GarbageCollectionGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "havok cleanup resources",
+          "definition": "havok_cleanup_resources_block"
+        },
+        {
+          "type": "block",
+          "name": "garbage collection",
+          "group_tag": "slap",
+          "definition": "garbage_collection_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14482a430"
+    },
+    "havok_cleanup_resources_block": {
+      "guid": "b8b558115a4dfcfb592286b47beb91cb",
+      "size": 32,
+      "size_string": "sizeof(s_game_globals_havok_cleanup_resources)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "object cleanup effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144803750"
+    },
+    "garbage_collection_block": {
+      "guid": "e047b14947483c86aa4813be7e2dc96b",
+      "size": 36,
+      "size_string": "sizeof(s_garbage_collection_globals)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Garbage Times",
+          "definition": "time before the game considers that following entities as garbage"
+        },
+        {
+          "type": "real",
+          "name": "Dropped item:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Dropped special item:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Dropped item in multiplayer:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Broken constraints:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Dead unit:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Dead player:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Dead MP Player:seconds"
+        },
+        {
+          "type": "real",
+          "name": "Dead MP Player overloaded: seconds"
+        },
+        {
+          "type": "long_integer",
+          "name": "Max dead body count #above this number, overloaded mp time is used to garbage collect dead bodies"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449898b0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

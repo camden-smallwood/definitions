@@ -1,0 +1,329 @@
+{
+  "name": "uiPlacementDefinition",
+  "tag": "uipd",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "uiPlacementDefinition_block",
+  "blocks": {
+    "uiPlacementDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "uiPlacementDefinition_block_struct"
+    },
+    "Default2dTransformMethodDefinition": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "Default2dTransformMethodDefinition"
+    },
+    "ObjectMarker3dTransformMethodDefinition": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "ObjectMarker3dTransformMethodDefinition"
+    },
+    "StructureBSPMarkerTransformMethodDefinition": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "StructureBSPMarkerTransformMethodDefinition"
+    },
+    "CameraOrientedStructureBSPMarkerTransformMethodDefinition": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "CameraOrientedStructureBSPMarkerTransformMethodDefinition"
+    },
+    "Default2dProjectionMethodDefinition": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "Default2dProjectionMethodDefinition"
+    },
+    "PlayerViewProjectionMethodDefinition": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "PlayerViewProjectionMethodDefinition"
+    },
+    "InfinityConsoleInteractionMethodDefinition": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "InfinityConsoleInteractionMethodDefinition"
+    }
+  },
+  "structs": {
+    "uiPlacementDefinition_block_struct": {
+      "guid": "7e74b9cf9c45af92a5368287f353d1e3",
+      "size": 312,
+      "size_string": "(sizeof(UIPlacementDefinition) - Tag::SizeInfo<UIPlacementDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "static data",
+          "definition": "uiPlacementStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144899e10"
+    },
+    "uiPlacementStruct": {
+      "guid": "a0377b882143d9d6e43111b7d18197e6",
+      "size": 296,
+      "size_string": "sizeof(UIPlacementStruct)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "tag_reference",
+          "name": "nodegraph stack reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "ngst"
+            ]
+          }
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "uiPlacementFlags"
+        },
+        {
+          "type": "explanation",
+          "name": "Transform settings",
+          "definition": "Settings for the position of the nodegraph"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "translation"
+        },
+        {
+          "type": "real_quaternion",
+          "name": "rotation"
+        },
+        {
+          "type": "real",
+          "name": "scale"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "worldPosition"
+        },
+        {
+          "type": "real_quaternion",
+          "name": "worldRotation"
+        },
+        {
+          "type": "block",
+          "name": "default2d",
+          "definition": "Default2dTransformMethodDefinition"
+        },
+        {
+          "type": "block",
+          "name": "objectMarker3d",
+          "definition": "ObjectMarker3dTransformMethodDefinition"
+        },
+        {
+          "type": "block",
+          "name": "structureBSPMarker",
+          "definition": "StructureBSPMarkerTransformMethodDefinition"
+        },
+        {
+          "type": "block",
+          "name": "cameraOrientedStructureBSPMarker",
+          "definition": "CameraOrientedStructureBSPMarkerTransformMethodDefinition"
+        },
+        {
+          "type": "explanation",
+          "name": "Projection settings",
+          "definition": "Settings for the projection and camera used to see the nodegraph"
+        },
+        {
+          "type": "block",
+          "name": "default 2d",
+          "definition": "Default2dProjectionMethodDefinition"
+        },
+        {
+          "type": "block",
+          "name": "playerView",
+          "definition": "PlayerViewProjectionMethodDefinition"
+        },
+        {
+          "type": "explanation",
+          "name": "Interaction settings",
+          "definition": "Settings for interacting with the nodegraph"
+        },
+        {
+          "type": "block",
+          "name": "Infinity console",
+          "definition": "InfinityConsoleInteractionMethodDefinition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448994a0"
+    },
+    "Default2dTransformMethodDefinition": {
+      "guid": "7b6017f412483e091f7793b3b9f0f8e0",
+      "size": 1,
+      "size_string": "sizeof(UIPlacementTransform::Default2dTransformMethod)",
+      "fields": [
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448995d0"
+    },
+    "ObjectMarker3dTransformMethodDefinition": {
+      "guid": "974f139ad440ac5dcdf0b7bba209d8d9",
+      "size": 8,
+      "size_string": "sizeof(UIPlacementTransform::ObjectMarker3dTransformMethod)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "object name"
+        },
+        {
+          "type": "string_id",
+          "name": "marker name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144899700"
+    },
+    "StructureBSPMarkerTransformMethodDefinition": {
+      "guid": "a7b108d098447a56836288ad2f07b244",
+      "size": 32,
+      "size_string": "sizeof(UIPlacementTransform::StructureBSPMarkerTransformMethod)",
+      "fields": [
+        {
+          "type": "string",
+          "name": "marker name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144899830"
+    },
+    "CameraOrientedStructureBSPMarkerTransformMethodDefinition": {
+      "guid": "ba3f4dd7a449c43e980d75a64bb60877",
+      "size": 32,
+      "size_string": "sizeof(UIPlacementTransform::CameraOrientedStructureBSPMarkerTransformMethod)",
+      "fields": [
+        {
+          "type": "string",
+          "name": "marker name"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144899960"
+    },
+    "Default2dProjectionMethodDefinition": {
+      "guid": "b930945c224990928a6c12baa65bc402",
+      "size": 1,
+      "size_string": "sizeof(UIPlacementProjection::Default2dProjectionMethod)",
+      "fields": [
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144899a90"
+    },
+    "PlayerViewProjectionMethodDefinition": {
+      "guid": "452cfb8bbb42bf01f62cf0b1599a4677",
+      "size": 1,
+      "size_string": "sizeof(UIPlacementProjection::PlayerViewProjectionMethod)",
+      "fields": [
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 1
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144899bc0"
+    },
+    "InfinityConsoleInteractionMethodDefinition": {
+      "guid": "21acdbd4cb4fb601c3c730998e786307",
+      "size": 4,
+      "size_string": "sizeof(UIPlacementInteraction::InfinityConsoleInteractionMethod)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "distance (metres)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144899cf0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "uiPlacementFlags": {
+      "options": [
+        "instantiate automatically"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

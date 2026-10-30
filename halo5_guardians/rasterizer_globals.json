@@ -1,0 +1,359 @@
+{
+  "name": "rasterizer_globals",
+  "tag": "rasg",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "rasterizer_globals_block",
+  "blocks": {
+    "rasterizer_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "rasterizer_globals_block_struct"
+    },
+    "default_textures_refs_block": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "default_textures_refs_block"
+    },
+    "material_textures_refs_block": {
+      "max_count": 16,
+      "max_count_string": "16",
+      "struct": "material_textures_refs_block"
+    },
+    "explicit_shader_refs_block": {
+      "max_count": 1024,
+      "max_count_string": "k_kilo",
+      "struct": "explicit_shader_refs_block"
+    },
+    "globalMaterialsBlock": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "globalMaterialsBlock"
+    }
+  },
+  "structs": {
+    "rasterizer_globals_block_struct": {
+      "guid": "eae00f1ed548309df7e7869d4a1ca9ca",
+      "size": 416,
+      "size_string": "(sizeof(c_rasterizer_globals) - Tag::SizeInfo<c_rasterizer_globals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "default bitmaps:",
+          "definition": "0:  ............... default 2D texture (white)\n1:  ............... default normal map (no bump)\n2:  ............... default cube map (error pattern)\n3:  ............... color bars\n4:  ............... black 2D texture\n5:  ............... transparent black 2D texture\n6:  ............... gray 2D texture\n7:  ............... auto exposure weight\n8:  ............... auto exposure weight (4x3)\n9:  ............... stencil dither pattern\n10: ............... smooth noise warp\n11: ............... ripple pattern\n12: ............... rain ripple\n13: ............... unsigned noise\n14: ............... MLAA area map\n15: ............... red 2D texture\n16: ............... green 2D texture\n17: ............... blue 2D texture\n18: ............... cyan 2D texture\n19: ............... dxt5 atlas texture\n20: ............... dxn atlas texture\n21: ............... foam texture\n22: ............... extra pc colorgrade for xbone compat\n"
+        },
+        {
+          "type": "block",
+          "name": "default bitmaps",
+          "definition": "default_textures_refs_block"
+        },
+        {
+          "type": "explanation",
+          "name": "material textures:",
+          "definition": "0: ............... lightmap falloff sharpening\n6: ............... Approximate specular curve\n"
+        },
+        {
+          "type": "block",
+          "name": "material textures",
+          "definition": "material_textures_refs_block"
+        },
+        {
+          "type": "explanation",
+          "name": "explicit shaders:",
+          "definition": "0: ............... debug\n1: ............... debug2d\n2: ............... copy w/ scale\n8: ............... debug_mesh\n11: .............. bloom: kernel blur (11 horizontal)\n12: .............. bloom: kernel blur (11 vertical)\n13: .............. cubemap: blur (phi)\n14: .............. cubemap: blur (theta)\n15: .............. cubemap: clamp\n16: .............. cubemap: divide\n17: .............. write depth\n18: .............. final composite\n20: .............. transparent\n22: .............. postprocess hologram\n23: .............. arbitrary gaussian blur\n24: .............. hologram composite\n25: .............. geo fog\n26: .............. particle update\n29: .............. downsample 2x2\n30: .............. rotate 2d\n33: .............. final composite (with DOF)\n34: .............. convolve 5-tap kernel\n36: .............. yuv to rgb\n37: .............. displacement\n39: .............. downsample 4x4 block\n40: .............. depth of field downsample\n45: .............. stencil 4x4 dither pattern\n46: .............. lens flare render\n49: .............. bloom: NEW downsample 4x4 gaussian\n51: .............. copy\n52: .............. shadow geometry\n54: .............. gradient\n55: .............. alpha test\n56: .............. patchy fog\n57: .............. light volume\n58: .............. water ripple\n59: .............. double gradient\n60: .............. sniper scope\n61: .............. shield impact\n63: .............. bloom merge layers\n64: .............. final composite dirt\n67: .............. final composite dof dirt\n69: .............. copy to correct colorspace\n76: .............. shadow apply point\n78: .............. shadow apply fancy\n79: .............. shadow apply faster\n80: .............. bokeh blur\n84: .............. shadow apply variance\n87: .............. shadow apply variance no normal test\n88: .............. Exposure Generate\n91: .............. bloom wide Gaussian blur\n94: .............. Instance Group Cull\n99: .............. aim down sights downsample\n100: ............. final composite aim down sights\n101: ............. downsample depth\n111: ............. animated mesh transformations extensions\n112: ............. animated mesh transformations\n113: ............. wpf common\n114: ............. wpf 3d\n115: ............. wpf common SustainFeb\n116: ............. wpf 3d SustainFeb\n121: ............. deferred reflections\n128: ............. screen space atmosphere fog\n129: ............. debug portals\n132: ............. cui copy\n133: ............. cui change channel\n134: ............. cui linear gradient\n135: ............. cui directional blur\n136: ............. cui overlay mask\n137: ............. cheap particles\n141: ............. cui emblem\n142: ............. planar fog\n146: ............. single pass apply\n147: ............. single pass apply debug\n155: ............. cui debug\n156: ............. rigid world geometry\n157: ............. effects debug wireframe\n158: ............. effects debug heatmap\n159: ............. downsample 2x2 block bloom\n162: ............. poisson shadow\n165: ............. ResolveAndLinearizeDepthMSAA\n166: ............. DownsampleDepth\n167: ............. HBAO_CS\n169: ............. BlurX_CS\n170: ............. BlurY_CS\n171: ............. Blur_Composite\n172: ............. FUI Textured Quads\n173: ............. FUI Text Quads\n174: ............. FUI Radial Textured Quads\n175: ............. FUI Meter Two Tone\n176: ............. FUI Two Tone Gradient\n177: ............. FUI Linear Gradient\n178: ............. FUI Hud Geometry\n179: ............. FUI Array Textured Quads\n180: ............. FUI Chromatic Aberration\n181: ............. midgraph poisson shadow 8\n182: ............. midgraph poisson shadow 6\n183: ............. blend gobo\n184: ............. FUI RGB Offset\n185: ............. FUI Emblem Quads\n189: ............. forge lightmap render sun\n190: ............. forge shadow render\n191: ............. forge lightmap render\n192: ............. forge lightmap decorators\n193: ............. forge lightmap block compress\n194: ............. forge lightmap error\n195: ............. exponential shadow generate\n198: ............. forge lightmap postprocess\n199: ............. cui gamma correct copy\n200: ............. cui gamma correct overlay mask\n204: ............. ausar forge colored geometry\n205: ............. ausar forge line circle\n206: ............. tracer update\n207: ............. polyart render\n208: ............. gamma correct double draw text\n209: ............. volumetric light shafts\n210: ............. Cui: Gamma correct text\n211: ............. FXAA (CS)\n212: ............. FXAA\n213: ............. Hud Meter\n214: ............. Quadrant Gradient\n215: ............. Blend: Overlay\n216: ............. Filter: DropShadow\n217: ............. Filter: OuterGlow\n218: ............. Filter: InnerGlow\n219: ............. Filter: Stroke\n220: ............. Filter: EdgeDetectSetup\n221: ............. Cui: Clip corners\n222: ............. Cui: Chromatic aberration\n223: ............. Cui: Hud Meter Two Tone\n224: ............. Cui: Background blur\n225: ............. Cui: high contrast additive\n226: ............. Cui: double draw additive\n227: ............. Cui: Adjust hsv\n228: ............. Cui: Hud meter radial\n229: ............. Cui: Hud meter color blend\n230: ............. Chud: Damage generate\n231: ............. Chud: Damage apply\n232: ............. Fast Hud Textured Drop Shadow\n233: .............\tFast Hud Text Drop Shadow\n234: ............. Navpoints\n235: ............. Cui: Shearing\n236: ............. Blendshape Geometry Shaders\n237: ............. Forward light clustering compute\n238: ............. Fast Hud Textured Drop Shadow SustainDec\n239: ............. Fast Hud Text\n"
+        },
+        {
+          "type": "block",
+          "name": "explicit shaders",
+          "definition": "explicit_shader_refs_block"
+        },
+        {
+          "type": "explanation",
+          "name": "global materials:",
+          "definition": "0:  ............... deprecated\n1:  ............... invalid\n2:  ............... missing\n3:  ............... hologram\n4:  ............... outline\n5:  ............... phased\n6:  ............... runtimeMissing\n7:  ............... outline_order\n8:  ............... phased object color\n"
+        },
+        {
+          "type": "block",
+          "name": "global materials",
+          "definition": "globalMaterialsBlock"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Active Camo Distortion Texture",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default performance throttles",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "perf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "Logo Texture",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "default scenario render data",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sred"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "Cheap Particle Type Library",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cptl"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Motion blur parameters:",
+          "definition": "max blur:............  max amount to blur, as a percentage of the screen\nblur scale:..........  scales blur for a given velocity\ncenter falloff:....... reduces motion blur around the screen center (larger values give smaller reduction regions...)\nexpected dt:.......... expected time per tick, in seconds (used to correct motion blur in fast/slow frames)\n"
+        },
+        {
+          "type": "real",
+          "name": "max blur{max blur x}:[0 - 0.2]#max amount to blur, as a percentage of the screen"
+        },
+        {
+          "type": "real",
+          "name": "blur scale{blur scale x}:[0 - 0.5]#scales blur for a given velocity"
+        },
+        {
+          "type": "real",
+          "name": "center falloff x:[0 - 20]#larger values make smaller areas of no blur"
+        },
+        {
+          "type": "real",
+          "name": "center falloff y:[0 - 20]#larger values make smaller areas of no blur"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Hologram Camera FX",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cfxs"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "lighting debug parameters:",
+          "definition": ""
+        },
+        {
+          "type": "tag_reference",
+          "name": "airprobe render model",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mode"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "debug lighting value#we will replace the albedo with this value across RGB"
+        },
+        {
+          "type": "real",
+          "name": "albedo clip min#pixels that have an albedo below this value will get colorized blue in the albedo clip debug display"
+        },
+        {
+          "type": "real",
+          "name": "albedo clip max#pixels that have an albedo above this value will get colorized red in the albedo clip debug display"
+        },
+        {
+          "type": "explanation",
+          "name": "Ausar: DX12 Pipeline state objects globals tag",
+          "definition": ""
+        },
+        {
+          "type": "tag_reference",
+          "name": "pso globals",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "gpso"
+            ]
+          }
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14486a9c0"
+    },
+    "default_textures_refs_block": {
+      "guid": "d890077bc8479dd38910728528f1808a",
+      "size": 36,
+      "size_string": "sizeof(s_global_bitmaps)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "options",
+          "definition": "global_bitmap_flags"
+        },
+        {
+          "type": "tag_reference",
+          "name": "default bitmaps",
+          "definition": {
+            "flags": 2,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14486a3e0"
+    },
+    "material_textures_refs_block": {
+      "guid": "44b84d0fcd489ffd47aadcb9d4cc472d",
+      "size": 32,
+      "size_string": "sizeof(s_tag_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "material textures",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14486a510"
+    },
+    "explicit_shader_refs_block": {
+      "guid": "6b04d3d3ab4c92f17b11bc956f84cd3c",
+      "size": 36,
+      "size_string": "sizeof(c_rasterizer_globals::s_explicit_shader)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "tag_reference",
+          "name": "shader{explicit vertex shader}^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mat ",
+              "mats"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14486a770"
+    },
+    "globalMaterialsBlock": {
+      "guid": "7af2fad88e45499e130fe2914beec1d7",
+      "size": 36,
+      "size_string": "sizeof(c_rasterizer_globals::GlobalMaterial)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "tag_reference",
+          "name": "material^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mat "
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14486a8a0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "global_bitmap_flags": {
+      "options": [
+        "don't load bitmap by default"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

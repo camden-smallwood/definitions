@@ -1,0 +1,131 @@
+{
+  "name": "soundbank",
+  "tag": "sbnk",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "soundbank_block",
+  "blocks": {
+    "soundbank_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "soundbank_block_struct"
+    },
+    "SoundBankBlock": {
+      "max_count": 8,
+      "max_count_string": "k_maximumSoundBanksPerTag",
+      "struct": "SoundBankBlock"
+    }
+  },
+  "structs": {
+    "soundbank_block_struct": {
+      "guid": "1b0a44fe1548467a2ef2d5b380332e38",
+      "size": 64,
+      "size_string": "(sizeof(SoundBankDefinition) - Tag::SizeInfo<SoundBankDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "SoundBankDefinitionFlags"
+        },
+        {
+          "type": "long_enum",
+          "name": "sound bank class",
+          "definition": "SoundBankClassEnumDefinition"
+        },
+        {
+          "type": "block",
+          "name": "Sound bank list#List of names of soundbanks. If more than one, one will be randomly chosen at load",
+          "definition": "SoundBankBlock"
+        },
+        {
+          "type": "long_integer",
+          "name": "Bank priority#the importance of this bank over others. 1 is highest priority (ie will bump all others)"
+        },
+        {
+          "type": "long_integer",
+          "name": "Bank unique ID"
+        },
+        {
+          "type": "pad",
+          "name": "VBEZIIDOF",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144785500"
+    },
+    "SoundBankBlock": {
+      "guid": "663a6cbac540b2f20ae0b38db6dc2961",
+      "size": 4,
+      "size_string": "sizeof(SoundBankBlockDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Sound bank name#Name of the main sound bank."
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447853e0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "SoundBankDefinitionFlags": {
+      "options": [
+        "Don't use FP bank in split-screen#don't use the high quality first person bank in split-screen",
+        "Deterministic#Bank contains deterministic sounds (voices)",
+        "Stream off DVD only#Files will not be played off HD, only DVD (for music, etc)",
+        "Can delay start#Can delay start time for a short period waiting for bank to load",
+        "Don't load for player#Use this if there's a special player bank that's loaded by other means (ie weapon, vehicle).",
+        "Ground forces sound bank#Don't load this bank if player is in a vehicle (ie bipeds, footsteps)"
+      ]
+    },
+    "SoundBankClassEnumDefinition": {
+      "options": [
+        "Default#Default main pool",
+        "Weapon",
+        "Character",
+        "Vehicle"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

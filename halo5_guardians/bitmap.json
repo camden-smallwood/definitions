@@ -1,0 +1,996 @@
+{
+  "name": "bitmap",
+  "tag": "bitm",
+  "version": 7,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "bitmap_block",
+  "blocks": {
+    "bitmap_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "bitmap_block_struct"
+    },
+    "bitmap_usage_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "bitmap_usage_block"
+    },
+    "bitmap_group_sequence_block_def": {
+      "max_count": 256,
+      "max_count_string": "MAXIMUM_SEQUENCES_PER_BITMAP_GROUP",
+      "struct": "bitmap_group_sequence_block_def"
+    },
+    "bitmap_group_sprite_block_def": {
+      "max_count": 512,
+      "max_count_string": "MAXIMUM_SPRITES_PER_SEQUENCE",
+      "struct": "bitmap_group_sprite_block_def"
+    },
+    "bitmap_tight_bounds_block_def": {
+      "max_count": 20,
+      "max_count_string": "(4 * k_maxTightBoundsSets)",
+      "struct": "bitmap_tight_bounds_block_def"
+    },
+    "bitmap_data_block_def": {
+      "max_count": 65536,
+      "max_count_string": "MAXIMUM_BITMAPS_PER_BITMAP_GROUP",
+      "struct": "bitmap_data_block_def_struct"
+    },
+    "streaming_data_block": {
+      "max_count": 7,
+      "max_count_string": "Tag::LodInfo::kMaxLods - 1",
+      "struct": "streaming_data_block"
+    }
+  },
+  "structs": {
+    "bitmap_block_struct": {
+      "guid": "52ab352368424ac27d8f729423196dd3",
+      "size": 328,
+      "size_string": "(sizeof(BitmapGroup) - Tag::SizeInfo<BitmapGroup::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "show bitmap",
+          "group_tag": "bshw"
+        },
+        {
+          "type": "explanation",
+          "name": "IMPORT SETTINGS",
+          "definition": "The settings here affect how the bitmap is imported.\nAny changes you make will not take effect until you reimport the bitmap.\n"
+        },
+        {
+          "type": "long_enum",
+          "name": "Usage#choose how you are using this bitmap",
+          "definition": "bitmap_usage_global_enum"
+        },
+        {
+          "type": "long_flags",
+          "name": "Flags",
+          "definition": "bitmap_group_flags_def"
+        },
+        {
+          "type": "short_integer",
+          "name": "sprite spacing#number of pixels between adjacent sprites (0 uses default, negative numbers set no spacing)"
+        },
+        {
+          "type": "pad",
+          "name": "pad_spsp",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "bump map height:repeats#the apparent height of the bump map above the triangle it is textured onto, in texture repeats (i.e., 1.0 would be as high as the texture is wide)"
+        },
+        {
+          "type": "real_fraction",
+          "name": "fade factor:[0,1]#used by detail maps and illum maps.  0 means fade by last mipmap, 1 means fade by first mipmap"
+        },
+        {
+          "type": "real",
+          "name": "blur:pixels#how much to blur the input image"
+        },
+        {
+          "type": "real",
+          "name": "mip map blur:pixels#how much to blur as each mip level is being downsampled"
+        },
+        {
+          "type": "real",
+          "name": "specular power bias#Adjusts sharpness of resulting cubemap"
+        },
+        {
+          "type": "real",
+          "name": "base MIP bias:degrees#Zero indicates that 512x512 is our infinite-detail MIP"
+        },
+        {
+          "type": "char_enum",
+          "name": "curve mode#automatic chooses FAST if your bitmap is bright, and PRETTY if your bitmap has dark bits",
+          "definition": "bitmap_curve_override_enum"
+        },
+        {
+          "type": "char_integer",
+          "name": "max mipmap level#0 = use default defined by usage"
+        },
+        {
+          "type": "short_integer",
+          "name": "max resolution#0 = do not downsample source image"
+        },
+        {
+          "type": "short_integer",
+          "name": "atlas#index into global atlas if the texture is missing its required resources and has been atlased"
+        },
+        {
+          "type": "short_enum",
+          "name": "force bitmap format#overrides the format defined by usage",
+          "definition": "bitmap_usage_format_def"
+        },
+        {
+          "type": "real",
+          "name": "tight bounds threshold:[0.0 - 1.0]#This is the level cutoff for tight bounds.  0.0 is monochrome black, 1.0 is monochrome white"
+        },
+        {
+          "type": "block",
+          "name": "usage override",
+          "definition": "bitmap_usage_block"
+        },
+        {
+          "type": "block",
+          "name": "manual_sequences*",
+          "definition": "bitmap_group_sequence_block_def"
+        },
+        {
+          "type": "explanation",
+          "name": "IMPORT DATA",
+          "definition": "\n\n\n\n\n\n\n\n\n\n\n\n\n***************************************************************************************************************************\n\nEverything below this line is bitmap data.  It is updated when you reimport the bitmap.\n\nAny changes you make below will be lost in the next reimport, and may even cause 'bad things' to happen.\n\n***************************************************************************************************************************\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+        },
+        {
+          "type": "block",
+          "name": "tight bounds",
+          "definition": "bitmap_tight_bounds_block_def"
+        },
+        {
+          "type": "data",
+          "name": "source data*",
+          "definition": "bitmap_group_source_data_def"
+        },
+        {
+          "type": "qword_integer",
+          "name": "source checksum*"
+        },
+        {
+          "type": "data",
+          "name": "processed pixel data*",
+          "definition": "bitmap_group_pixel_data_def"
+        },
+        {
+          "type": "block",
+          "name": "sequences*",
+          "definition": "bitmap_group_sequence_block_def"
+        },
+        {
+          "type": "block",
+          "name": "bitmaps*",
+          "definition": "bitmap_data_block_def"
+        },
+        {
+          "type": "data",
+          "name": "xenon processed pixel data*",
+          "definition": "bitmap_group_xenon_pixel_data_def"
+        },
+        {
+          "type": "block",
+          "name": "xenon bitmaps*",
+          "definition": "bitmap_data_block_def"
+        },
+        {
+          "type": "pad",
+          "name": "alignment",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ea010"
+    },
+    "bitmap_usage_block": {
+      "guid": "90aee009d844f464b5fac0af57bddc0b",
+      "size": 40,
+      "size_string": "sizeof(c_bitmap_usage)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "real",
+          "name": "source gamma:0.0 to use xenon curve (default)"
+        },
+        {
+          "type": "long_enum",
+          "name": "bitmap curve",
+          "definition": "bitmap_curve_enum"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "bitmap_usage_flags_def"
+        },
+        {
+          "type": "char_enum",
+          "name": "slicer",
+          "definition": "bitmap_usage_slicer_def"
+        },
+        {
+          "type": "byte_flags",
+          "name": "dicer flags",
+          "definition": "bitmap_usage_dicer_flags_def"
+        },
+        {
+          "type": "char_enum",
+          "name": "packer",
+          "definition": "bitmap_usage_packer_def"
+        },
+        {
+          "type": "byte_flags",
+          "name": "packer flags",
+          "definition": "bitmap_usage_packer_flags_def"
+        },
+        {
+          "type": "char_enum",
+          "name": "type",
+          "definition": "bitmap_types"
+        },
+        {
+          "type": "char_integer",
+          "name": "mipmap limit"
+        },
+        {
+          "type": "char_enum",
+          "name": "smallest mip",
+          "definition": "bitmap_smallest_mip_def"
+        },
+        {
+          "type": "char_enum",
+          "name": "downsample filter",
+          "definition": "bitmap_usage_downsample_filter_def"
+        },
+        {
+          "type": "char_integer",
+          "name": "filter radius bias"
+        },
+        {
+          "type": "word_flags",
+          "name": "downsample flags",
+          "definition": "bitmap_usage_downsample_flags_def"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "sprite background color"
+        },
+        {
+          "type": "char_enum",
+          "name": "swizzle red",
+          "definition": "bitmap_usage_swizzle_def"
+        },
+        {
+          "type": "char_enum",
+          "name": "swizzle green",
+          "definition": "bitmap_usage_swizzle_def"
+        },
+        {
+          "type": "char_enum",
+          "name": "swizzle blue",
+          "definition": "bitmap_usage_swizzle_def"
+        },
+        {
+          "type": "char_enum",
+          "name": "swizzle alpha",
+          "definition": "bitmap_usage_swizzle_def"
+        },
+        {
+          "type": "long_enum",
+          "name": "bitmap format",
+          "definition": "bitmap_usage_format_def"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446eb9d0"
+    },
+    "bitmap_group_sequence_block_def": {
+      "guid": "32670215ce458b9e9b4953b820937c55",
+      "size": 80,
+      "size_string": "sizeof(struct bitmap_group_sequence)",
+      "fields": [
+        {
+          "type": "string",
+          "name": "name^"
+        },
+        {
+          "type": "short_integer",
+          "name": "first bitmap index*"
+        },
+        {
+          "type": "short_integer",
+          "name": "bitmap count*"
+        },
+        {
+          "type": "pad",
+          "name": "OTXYKQ",
+          "definition": 16
+        },
+        {
+          "type": "block",
+          "name": "sprites*",
+          "definition": "bitmap_group_sprite_block_def"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e9ef0"
+    },
+    "bitmap_group_sprite_block_def": {
+      "guid": "19f8f4bbdc420af02e2031a752979d28",
+      "size": 32,
+      "size_string": "sizeof(struct bitmap_group_sprite)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "bitmap index*"
+        },
+        {
+          "type": "pad",
+          "name": "D",
+          "definition": 2
+        },
+        {
+          "type": "pad",
+          "name": "GMLJPJIMC",
+          "definition": 4
+        },
+        {
+          "type": "real",
+          "name": "left*"
+        },
+        {
+          "type": "real",
+          "name": "right*"
+        },
+        {
+          "type": "real",
+          "name": "top*"
+        },
+        {
+          "type": "real",
+          "name": "bottom*"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "registration point*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e9dc0"
+    },
+    "bitmap_tight_bounds_block_def": {
+      "guid": "df539799194cb58ad3b3edbd0d45832d",
+      "size": 8,
+      "size_string": "sizeof(real_point2d)",
+      "fields": [
+        {
+          "type": "real_point_2d",
+          "name": "uv"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ead20"
+    },
+    "bitmap_data_block_def_struct": {
+      "guid": "6a51b0de98441c02cdc6419969aa94c2",
+      "size": 40,
+      "size_string": "sizeof(bitmap_data)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "width*:pixels#DO NOT CHANGE"
+        },
+        {
+          "type": "short_integer",
+          "name": "height*:pixels#DO NOT CHANGE"
+        },
+        {
+          "type": "char_integer",
+          "name": "depth*:pixels#DO NOT CHANGE"
+        },
+        {
+          "type": "byte_flags",
+          "name": "more flags!",
+          "definition": "bitmap_more_flags_definition"
+        },
+        {
+          "type": "char_enum",
+          "name": "type*#DO NOT CHANGE",
+          "definition": "bitmap_types"
+        },
+        {
+          "type": "char_integer",
+          "name": "four times log2 size*#DO NOT CHANGE"
+        },
+        {
+          "type": "short_enum",
+          "name": "format*#DO NOT CHANGE",
+          "definition": "bitmap_formats"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags*",
+          "definition": "bitmap_flags"
+        },
+        {
+          "type": "char_integer",
+          "name": "exponent bias"
+        },
+        {
+          "type": "point_2d",
+          "name": "registration point#the 'center' of the bitmap - i.e. for particles"
+        },
+        {
+          "type": "char_integer",
+          "name": "mipmap count*#DO NOT CHANGE (not counting the highest resolution)"
+        },
+        {
+          "type": "char_enum",
+          "name": "curve#how to convert from pixel value to linear",
+          "definition": "bitmap_curve_enum"
+        },
+        {
+          "type": "pad",
+          "name": "unused",
+          "definition": 1
+        },
+        {
+          "type": "char_integer",
+          "name": "interleaved texture index"
+        },
+        {
+          "type": "real",
+          "name": "streaming scale"
+        },
+        {
+          "type": "tag_resource",
+          "name": "bitmap resource handle*",
+          "definition": "bitmap_data_resource_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446eab70"
+    },
+    "bitmap_data_resource_definition_struct": {
+      "guid": "2a80eb8a6b410af69c700c974d553623",
+      "size": 88,
+      "size_string": "sizeof(BitmapDataResource)",
+      "fields": [
+        {
+          "type": "data",
+          "name": "pixels*",
+          "definition": "bitmap_pixel_data_definition"
+        },
+        {
+          "type": "long_integer",
+          "name": "hardware format*!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "char_integer",
+          "name": "tileMode"
+        },
+        {
+          "type": "byte_flags",
+          "name": "bitmap data resource flags*",
+          "definition": "bitmap_data_resource_flags_def"
+        },
+        {
+          "type": "char_integer",
+          "name": "alignmentBits*"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 1
+        },
+        {
+          "type": "real",
+          "name": "mipMapLOD"
+        },
+        {
+          "type": "int64_integer",
+          "name": "bitmap data*\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "int64_integer",
+          "name": "virtual address*\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "block",
+          "name": "streamingData*",
+          "definition": "streaming_data_block"
+        },
+        {
+          "type": "real",
+          "name": "mipMapClamp"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446eaa60"
+    },
+    "streaming_data_block": {
+      "guid": "392c20d1dc48fcbd49de2b8193afe8b0",
+      "size": 12,
+      "size_string": "sizeof(StreamingBitmapData)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "memory handle*"
+        },
+        {
+          "type": "long_integer",
+          "name": "gpu memory handle*"
+        },
+        {
+          "type": "short_integer",
+          "name": "num pages*"
+        },
+        {
+          "type": "short_integer",
+          "name": "loaded*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446ea940"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "bitmap_usage_global_enum": {
+      "options": [
+        "Diffuse Map",
+        "Linear Control Map",
+        "Specular Map",
+        "Bump Map (from Height Map)",
+        "Detail Bump Map (from Height Map - fades out)",
+        "Detail Map",
+        "Self-Illum Map",
+        "Change Color Map",
+        "Cube Map (Reflection Map)",
+        "HDR Cube Map",
+        "Sprite (Additive, Black Background)",
+        "Sprite (Blend, White Background)",
+        "Sprite (Double Multiply, Gray Background)",
+        "Interface Bitmap",
+        "Warp Map (EMBM)",
+        "Vector Map",
+        "3D Texture",
+        "Float Map (WARNING: HUGE)",
+        "Half float Map (HALF HUGE)",
+        "Height Map (for Parallax)",
+        "ZBrush Bump Map (from Bump Map)",
+        "Normal Map (aka zbump)",
+        "Detail ZBrush Bump Map",
+        "Detail Normal Map",
+        "Blend Map (linear for terrains)",
+        "Palettized --- effects only",
+        "CHUD related bitmap",
+        "Lightmap Array",
+        "Water Array",
+        "Interface Sprite",
+        "Interface Gradient",
+        "Material Map",
+        "Smoke Warp",
+        "Mux Material Blend Map",
+        "Cubemap Gel",
+        "Lens Flare gamma 2.2 -- effects only",
+        "Signed Noise",
+        "Roughness Map (auto)",
+        "Normal Map (from Standard Orientation of Maya, Modo, Zbrush)",
+        "Color Grading",
+        "Detail Normal Map (from Standard Orientation with distance fade)",
+        "Diffuse Texture Array",
+        "Palettized Texture Array",
+        "Uncompressed palette (no MIPs)",
+        "Gobo",
+        "Flow Map",
+        "Linear Control Map Texture Array",
+        "Bump Map (from Height Map) Texture Array",
+        "Detail Map Texture Array",
+        "Self-Illum Map Texture Array",
+        "Sprite (Additive, Black Background) Texture Array",
+        "Sprite (Blend, White Background) Texture Array",
+        "Sprite (Double Multiply, Gray Background) Texture Array",
+        "Warp Map (EMBM) Texture Array",
+        "Normal Map (aka zbump) Texture Array",
+        "Detail Normal Map Texture Array",
+        "Lens Flare gamma 2.2 -- effects only Texture Array",
+        "Normal Map (from Standard Orientation of Maya, Modo, Zbrush) Texture Array",
+        "Detail Normal Map (from Standard Orientation with distance fade) Texture Array",
+        "Flow Map Texture Array",
+        "Sprite Normal Map"
+      ]
+    },
+    "bitmap_group_flags_def": {
+      "options": [
+        "bitmap is TILED#affects how height maps are converted to bump maps",
+        "use less blurry bump map#uses a sharper (and noisier) method of calculating bump maps from height maps",
+        "dither when compressing#lets the compressor use dithering",
+        "generate random sprites#repopulates the manual sequences with random sprites upon reimport",
+        "using tag_interop and tag_resource!*#FOR INTERNAL USE ONLY - DO NOT MODIFY",
+        "ignore alpha channel#if you have an alpha channel but do not care about it, set this flag",
+        "alpha channel stores TRANSPARENCY#if your alpha channel represents transparency (alpha blend or alpha-test only), set this bit to stop color bleeding on edges",
+        "preserve alpha channel in mipmaps for ALPHA TEST{prefer to use alpha value as a weight to build mipmap}#this will artificially thicken the alpha channel in mip maps, which can keep your bitmap from disappearing in the distance when you are using alpha test",
+        "only use on demand&UI on demand bitmap#this bitmap will always be demand loaded, only supported by UI",
+        "generate tight bounds#generate a polygonal bounding box around the non-empty pixels to save fill rate cost",
+        "tight bounds from alpha channel#unchecked, tight bounds are generated from the color channel",
+        "do not generate required section#bitmap will have data split between medium and low optional sections",
+        "unused",
+        "apply max resolution after slicing#allows use of \"max resolution\" on bitmaps that have multiple frames, but may be buggy...?",
+        "generate black-point tight bounds#generate a set of polygonal bounding boxes for various alpha black points",
+        "Pre-filter cubemaps#Apply cosine power-weighted cone filter to entire cubemap instead of filtering each face as separate 2D image"
+      ]
+    },
+    "bitmap_curve_override_enum": {
+      "options": [
+        "choose best#will choose FAST if your bitmap is bright",
+        "force FAST#forces FAST mode, but causes banding in dark areas",
+        "force PRETTY#chooses the best looking curve, probably slower"
+      ]
+    },
+    "bitmap_usage_format_def": {
+      "options": [
+        "Use Default (defined by usage)",
+        "Best Compressed Color Format",
+        "Best Uncompressed Color Format",
+        "Best Compressed Bump Format",
+        "Best Uncompressed Bump Format",
+        "Best Compressed Monochrome Format",
+        "Best Uncompressed Monochrome Format",
+        "Best Compressed Monochrome Format without alpha",
+        "unused2!",
+        "unused3!",
+        "unused4!",
+        "unused5!",
+        "unused6!",
+        "--- Color and Alpha formats ---",
+        "bc1_unorm [a.k.a. DXT1] (Compressed Color + Color-Key Alpha){DXT1 (Compressed Color + Color-Key Alpha)}",
+        "bc2_unorm [a.k.a. DXT3] (Compressed Color + 4-bit Alpha){DXT3 (Compressed Color + 4-bit Alpha)}",
+        "bc3_unorm [a.k.a. DXT5] (Compressed Color + Compressed 8-bit Alpha){DXT5 (Compressed Color + Compressed 8-bit Alpha)}",
+        "24-bit Color + 8-bit Alpha",
+        "8-bit Monochrome + 8-bit Alpha",
+        "   Channel Mask (3-bit Color + 1-bit Alpha)",
+        "   30-bit Color + 2-bit Alpha",
+        "   48-bit Color + 16-bit Alpha",
+        "   HALF Color + Alpha",
+        "   FLOAT Color + Alpha",
+        "r8_unorm (8-bit Intensity replicated to RGBA){AY8 (8-bit Intensity replicated to ARGB)}",
+        "DEPRECATED DXT3A (4-bit Intensity replicated to ARGB){DXT3A (4-bit Intensity replicated to ARGB)}",
+        "bc4_unorm_rrrr [a.k.a. DXT5A] (Compressed Intensity replicated to ARGB){bc4_unorm_000r [a.k.a. DXT5A] (Compressed Intensity replicated to ARGB)}",
+        "Compressed Monochrome + Alpha",
+        "b4g4r4a4 (12-bit color + 4-bit alpha){A4R4G4B4 (12-bit color + 4-bit alpha)}",
+        "--- Color only formats ---",
+        "8-bit Monochrome",
+        "   Compressed 24-bit Color",
+        "   32-bit Color (R11G11B10)",
+        "   16-bit Monochrome",
+        "   16-bit Red + Green Only",
+        "   16 bit signed RGBA{   16 bit signed ARGB}",
+        "   HALF Red Only",
+        "   FLOAT Red Only",
+        "   HALF Red + Green Only",
+        "   FLOAT Red + Green Only",
+        "   HALF Monochrome",
+        "DEPRECATED Compressed 4-bit Monochrome{Compressed 4-bit Monochrome}",
+        "Compressed Interpolated Monochrome",
+        "bc6h_uf16 (HDR RGB unsigned half-float){DXT5 red}",
+        "bc6h_sf16 (HDR RGB signed half-float){DXT5 green}",
+        "bc7_unorm (High quality bc3){DXT5 blue}",
+        "--- Alpha only formats ---",
+        "DEPRECATED DXT3A (4-bit Alpha){DXT3A (4-bit Alpha)}",
+        "bc4_unorm_000r [a.k.a. DXT5A] (8-bit Compressed Alpha){DXT5A (8-bit Compressed Alpha)}",
+        "8-bit Alpha",
+        "unused13!",
+        "unused14!",
+        "unused15!",
+        "--- Normal map formats ---",
+        "bc5_snorm [a.k.a. DXN] Compressed Normals (better){DXN Compressed Normals (better)}",
+        "DEPRECATED CTX1 Compressed Normals (smaller){CTX1 Compressed Normals (smaller)}",
+        "16-bit Normals",
+        "32-bit Normals",
+        "8-bit 4-channel Vector"
+      ]
+    },
+    "bitmap_curve_enum": {
+      "options": [
+        "unknown",
+        "xRGB (gamma about 2.0){SRGB (gamma 2.2)}",
+        "gamma 2.0",
+        "linear",
+        "offset log",
+        "sRGB (gamma 2.2)",
+        "Rec709 (gamma 2.2)"
+      ]
+    },
+    "bitmap_usage_flags_def": {
+      "options": [
+        "Ignore Curve Override",
+        "Dont Allow Size Optimization",
+        "Swap Axes",
+        "Pre-filter cubemaps"
+      ]
+    },
+    "bitmap_usage_slicer_def": {
+      "options": [
+        "Automatically Determine Slicer",
+        "No Slicing (each source bitmap generates one element)",
+        "Color Plate Slicer",
+        "Cube Map Slicer",
+        "Color Grading Slicer"
+      ]
+    },
+    "bitmap_usage_dicer_flags_def": {
+      "options": [
+        "Convert Plate Color Key to Alpha Channel",
+        "Rotate Cube Map to Match DirectX Format",
+        "Sprites- Shrink Elements to Smallest Non-Zero Alpha Region",
+        "Sprites- Shrink Elements to Smallest Non-Zero Color And Alpha Region",
+        "Unsigned -> Signed Scale and Bias",
+        "Color Grading sRGB Correction",
+        "Color Grading Rec709 Correction"
+      ]
+    },
+    "bitmap_usage_packer_def": {
+      "options": [
+        "No packing",
+        "Sprite Pack (packs elements into as few bitmaps as possible)",
+        "Sprite Pack if needed (packs elements into as few bitmaps as possible)",
+        "3D Pack (packs elements into a 3D bitmap)"
+      ]
+    },
+    "bitmap_usage_packer_flags_def": {
+      "options": [
+        "Shrink Sprite Texture Pages Tightly to Content"
+      ]
+    },
+    "bitmap_types": {
+      "options": [
+        "2D texture",
+        "3D texture",
+        "cube map",
+        "array"
+      ]
+    },
+    "bitmap_smallest_mip_def": {
+      "options": [
+        "1 pixel",
+        "2 pixel",
+        "4 pixel",
+        "8 pixel",
+        "16 pixel",
+        "32 pixel",
+        "64 pixel",
+        "128 pixel",
+        "256 pixel",
+        "512 pixel",
+        "1024 pixel"
+      ]
+    },
+    "bitmap_usage_downsample_filter_def": {
+      "options": [
+        "Point Sampled",
+        "Box Filter",
+        "Blackman Filter",
+        "Lanczos Filter",
+        "Nuttall Filter",
+        "Blackman-Harris Filter",
+        "Blackman-Nuttall Filter",
+        "Flat Top Filter",
+        "Extreme Filter"
+      ]
+    },
+    "bitmap_usage_downsample_flags_def": {
+      "options": [
+        "Sprites - Color Bleed in Zero Alpha Regions",
+        "Pre-Multiply Alpha (before downsampling)",
+        "Post-Divide Alpha (after downsampling)",
+        "Height Map - Convert to Bump Map",
+        "Detail Map - Fade to Gray",
+        "Signed -> Unsigned Scale and Bias",
+        "Illum Map - Fade to Black",
+        "ZBump - Scale by height and renormalize",
+        "Cubemap - Fix seams",
+        "Calculate specular power",
+        "Downsample Bumps in Angular Space",
+        "Standard Orientation of Normals in Angular Space and Renormalize",
+        "Generate RGB luminance into alpha channel"
+      ]
+    },
+    "bitmap_usage_swizzle_def": {
+      "options": [
+        "Default",
+        "Source Red Channel",
+        "Source Green Channel",
+        "Source Blue Channel",
+        "Source Alpha Channel",
+        "Set to 1.0",
+        "Set to 0.0",
+        "Set to 0.5",
+        "Random"
+      ]
+    },
+    "bitmap_more_flags_definition": {
+      "options": [
+        "xbox360 medium resolution offset is valid!*#DO NOT CHANGE",
+        "xbox360 pitch (memory spacing)!*#DO NOT CHANGE",
+        "xbox360 byte order!*#DO NOT CHANGE",
+        "xbox360 tiled texture!*#DO NOT CHANGE",
+        "xbox360 created correctly (hack for bumpmaps)!*#DO NOT CHANGE",
+        "xbox360 high resolution offset is valid!*#DO NOT CHANGE",
+        "xbox360 use interleaved textures!*#DO NOT CHANGE",
+        "xbox360 use on demand only!*#DO NOT CHANGE"
+      ]
+    },
+    "bitmap_formats": {
+      "options": [
+        "a8_unorm (000A){a8}",
+        "r8_unorm_rrr1 (RRR1){y8}",
+        "r8_unorm_rrrr (RRRR){ay8}",
+        "r8g8_unorm_rrrg (RRRG){r8g8_unorm_gggr (GGGR)}",
+        "unused1",
+        "unused2",
+        "b5g6r5_unorm{r5g6b5}",
+        "unused3",
+        "b5g6r5a1_unorm{a1r5g5b5}",
+        "b4g4r4a4_unorm{a4r4g4b4}",
+        "b8g8r8x8_unorm{x8r8g8b8}",
+        "b8g8r8a8_unorm{a8r8g8b8}",
+        "unused4",
+        "DEPRECATED_dxt5_bias_alpha{dxt5_bias_alpha}",
+        "bc1_unorm (dxt1){dxt1}",
+        "bc2_unorm (dxt3){dxt3}",
+        "bc3_unorm (dxt5){dxt5}",
+        "DEPRECATED_a4r4g4b4_font{a4r4g4b4 font}",
+        "unused7",
+        "unused8",
+        "DEPRECATED_SOFTWARE_rgbfp32{software rgbfp32}",
+        "unused9",
+        "r8g8_snorm (v8u8){v8u8}",
+        "DEPRECATED_g8b8{g8b8}",
+        "r32g32b32a32_float (abgrfp32){abgrfp32}",
+        "r16g16b16a16_float (abgrfp16){abgrfp16}",
+        "r16_float_rrr1 (16f_mono){16f_mono}",
+        "r16_float_r000 (16f_red){16f_red}",
+        "r8g8b8a8_snorm (q8w8v8u8){q8w8v8u8}",
+        "r10g10b10a2_unorm (a2r10g10b10){a2r10g10b10}",
+        "r16g16b16a16_unorm (a16b16g16r16){a16b16g16r16}",
+        "r16g16_snorm (v16u16){v16u16}",
+        "r16_unorm_rrr0 (L16){l16}",
+        "r16g16_unorm (r16g16){r16g16}",
+        "r16g16b16a16_snorm (signedr16g16b16a16){signedr16g16b16a16}",
+        "DEPRECATED_dxt3a{dxt3a}",
+        "bc4_unorm_rrrr (dxt5a){bc4_unorm (dxt5a)}",
+        "bc4_snorm_rrrr",
+        "DEPRECATED_dxt3a_1111{dxt3a_1111}",
+        "bc5_snorm (dxn){dxn}",
+        "DEPRECATED_ctx1{ctx1}",
+        "DEPRECATED_dxt3a_alpha_only{dxt3a_alpha}",
+        "DEPRECATED_dxt3a_monochrome_only{dxt3a_mono}",
+        "bc4_unorm_000r (dxt5a_alpha){dxt5a_alpha}",
+        "bc4_unorm_rrr1 (dxt5a_mono){dxt5a_mono}",
+        "bc5_unorm_rrrg (dxn_mono_alpha){dxn_mono_alpha}",
+        "bc5_snorm_rrrg (dxn_mono_alpha signed)",
+        "bc6h_uf16 {dxt5_red}",
+        "bc6h_sf16 {dxt5_green}",
+        "bc7_unorm {dxt5_blue}",
+        "d24_unorm_s8_uint (depth 24){depth 24}",
+        "r11g11b10_float"
+      ]
+    },
+    "bitmap_flags": {
+      "options": [
+        "power of two dimensions*#DO NOT CHANGE",
+        "compressed*#DO NOT CHANGE",
+        "swap axes*#DO NOT CHANGE",
+        "mutable at runtime#eg for forge lightmapper or other runtime processes that edit bitmaps"
+      ]
+    },
+    "bitmap_data_resource_flags_def": {
+      "options": [
+        "Indicates that the bitmap data resource contains a 3D texture",
+        "This bitmap has been tiled for use on Durango"
+      ]
+    }
+  },
+  "datas": {
+    "bitmap_group_source_data_def": {
+      "alignment": 65,
+      "flags": 0,
+      "max_size": 1073741824,
+      "max_size_string": "MAXIMUM_BITMAP_PIXELS_SIZE"
+    },
+    "bitmap_group_pixel_data_def": {
+      "alignment": 104,
+      "flags": 12,
+      "max_size": 1073741824,
+      "max_size_string": "MAXIMUM_BITMAP_PIXELS_SIZE"
+    },
+    "bitmap_pixel_data_definition": {
+      "alignment": 4200,
+      "flags": 3,
+      "max_size": 1073741824,
+      "max_size_string": "MAXIMUM_BITMAP_PIXELS_SIZE"
+    },
+    "bitmap_group_xenon_pixel_data_def": {
+      "alignment": 88,
+      "flags": 12,
+      "max_size": 1073741824,
+      "max_size_string": "MAXIMUM_BITMAP_PIXELS_SIZE"
+    }
+  },
+  "resources": {
+    "bitmap_data_resource_definition": {
+      "flags": 0,
+      "struct": "bitmap_data_resource_definition_struct"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

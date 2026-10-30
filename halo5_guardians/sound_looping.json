@@ -1,0 +1,239 @@
+{
+  "name": "sound_looping",
+  "tag": "lsnd",
+  "version": 3,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "sound_looping_block",
+  "blocks": {
+    "sound_looping_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_looping_block_struct"
+    }
+  },
+  "structs": {
+    "sound_looping_block_struct": {
+      "guid": "8ee392d4c343ec64ecc48a8fb90d4ee0",
+      "size": 136,
+      "size_string": "(sizeof(looping_sound_definition) - Tag::SizeInfo<looping_sound_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "looping_sound_flags"
+        },
+        {
+          "type": "string_id",
+          "name": "Start Event."
+        },
+        {
+          "type": "string_id",
+          "name": "Stop Event."
+        },
+        {
+          "type": "string_id",
+          "name": "Player Start Event."
+        },
+        {
+          "type": "string_id",
+          "name": "Player Stop Event."
+        },
+        {
+          "type": "string_id",
+          "name": "Fallback Start Event."
+        },
+        {
+          "type": "string_id",
+          "name": "Fallback Stop Event."
+        },
+        {
+          "type": "string_id",
+          "name": "Fallback Player Start Event."
+        },
+        {
+          "type": "string_id",
+          "name": "Fallback Player Stop Event."
+        },
+        {
+          "type": "tag_reference",
+          "name": "Sound bank#Reference to the sound bank tag this event is in. Can be empty.",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "sbnk"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "Player sound bank#Reference to the player sound bank tag this event is in. Can be empty.",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "sbnk"
+            ]
+          }
+        },
+        {
+          "type": "real_bounds",
+          "name": "runtime distance bounds!"
+        },
+        {
+          "type": "real",
+          "name": "maximum flyby range distance"
+        },
+        {
+          "type": "short_enum",
+          "name": "runtime sound class!",
+          "definition": "sound_class_enum"
+        },
+        {
+          "type": "pad",
+          "name": "asdf",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "maximum radius"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144785ac0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "looping_sound_flags": {
+      "options": [
+        "deafening to AIs#when used as a background stereo track, causes nearby AIs to be unable to hear",
+        "not a loop#this is a collection of permutations strung together that should play once then stop.",
+        "stops music#all other music loops will stop when this one starts.",
+        "always spatialize#always play as 3d sound, even in first person",
+        "synchronize with owner{synchronize playback}#synchronizes playback with other looping sounds attached to the owner of this sound",
+        "synchronize tracks",
+        "fake spatialization with distance",
+        "combine all 3d playback",
+        "persistent flyby#like a laser blast",
+        "don't apply random spatialization to details",
+        "allow marker stitching#you need to reimport the sound_looping for this to take effect",
+        "don't delay retries!#don't delay retrying the looping sound, in case the bank is loaded now",
+        "Use vehicle parent for playerness#Look to the parent of the vehicle. Only works on vehicles. Duh",
+        "Implicit speed RPTC#looping_sound_speed",
+        "has optional player sound",
+        "don't occlude",
+        "negate radius-based focus#Use the opposite of the decision for whether to apply focus feature based on whether the sound is 2D or 3D"
+      ]
+    },
+    "sound_class_enum": {
+      "options": [
+        "projectile_impact",
+        "projectile_detonation",
+        "projectile_flyby",
+        "projectile_detonation_lod",
+        "weapon_fire",
+        "weapon_ready",
+        "weapon_reload",
+        "weapon_empty",
+        "weapon_charge",
+        "weapon_overheat",
+        "weapon_idle",
+        "weapon_melee",
+        "weapon_animation",
+        "object_impacts",
+        "particle_impacts",
+        "weapon_fire_lod",
+        "water_transitions",
+        "lowpass_effects",
+        "unit_footsteps",
+        "unit_dialog",
+        "unit_animation",
+        "unit_unused!",
+        "vehicle_collision",
+        "vehicle_engine",
+        "vehicle_animation",
+        "vehicle_engine_lod",
+        "device_door",
+        "device_unused0!",
+        "device_machinery",
+        "device_stationary",
+        "device_unused1!",
+        "device_unused2!",
+        "music",
+        "ambient_nature",
+        "ambient_machinery",
+        "ambient_stationary",
+        "huge_ass",
+        "object_looping",
+        "cinematic_music",
+        "unknown_unused0!",
+        "unknown_unused1!",
+        "ambient_flock",
+        "no_pad",
+        "no_pad_stationary",
+        "equipment_effect",
+        "mission_dialog",
+        "cinematic_dialog",
+        "scripted_cinematic_foley",
+        "game_event",
+        "ui",
+        "test",
+        "multiplayer_dialog",
+        "ambient_nature_details",
+        "ambient_machinery_details",
+        "inside_surround_tail",
+        "outside_surround_tail",
+        "vehicle_detonation",
+        "ambient_detonation",
+        "first_person_inside",
+        "first_person_outside",
+        "first_person_anywhere",
+        "space_projectile_detonation",
+        "space_projectile_flyby",
+        "space_vehicle_engine",
+        "space_weapon_fire",
+        "player_voice_team",
+        "player_voice_proxy",
+        "projectile_impact_postpone",
+        "unit_footsteps_postpone",
+        "weapon_ready_third_person",
+        "ui_music"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

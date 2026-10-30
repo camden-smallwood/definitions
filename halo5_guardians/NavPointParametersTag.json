@@ -1,0 +1,601 @@
+{
+  "name": "NavPointParametersTag",
+  "tag": "navp",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "NavPointParametersTag_block",
+  "blocks": {
+    "NavPointParametersTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "NavPointParametersTag_block_struct"
+    }
+  },
+  "structs": {
+    "NavPointParametersTag_block_struct": {
+      "guid": "1e44d7f4434028003822f187fd14df42",
+      "size": 408,
+      "size_string": "(sizeof(NavPointParametersTagDefinition) - Tag::SizeInfo<NavPointParametersTagDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "navpoint tag",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "navp"
+            ]
+          }
+        },
+        {
+          "type": "long_flags",
+          "name": "navpoint flags",
+          "definition": "datumFlags"
+        },
+        {
+          "type": "explanation",
+          "name": "center sprite bg",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "center sprite bg",
+          "definition": "SpriteParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "center sprite fg",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "center sprite fg",
+          "definition": "SpriteParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "center radial progress bar",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "center radial progress bar",
+          "definition": "RadialProgressBarParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "top sprite",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "top sprite",
+          "definition": "SpriteParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "top label",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "top label",
+          "definition": "LabelParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right progress bar",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right progress bar",
+          "definition": "ProgressBarParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right progress bar 2",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right progress bar 2",
+          "definition": "ProgressBarParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right label",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right label",
+          "definition": "LabelParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right timer",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right timer",
+          "definition": "NumericParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "left timer",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "left timer",
+          "definition": "NumericParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "yaw sprite",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "yaw sprite",
+          "definition": "RotatedSpriteParametersTagStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "animation",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "animation",
+          "definition": "AnimationParametersTagStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144896970"
+    },
+    "SpriteParametersTagStruct": {
+      "guid": "9b746737d147d171038c8da2c502cd2a",
+      "size": 32,
+      "size_string": "sizeof(SpriteParametersTag)",
+      "fields": [
+        {
+          "type": "real_argb_color",
+          "name": "color"
+        },
+        {
+          "type": "long_enum",
+          "name": "sequence index",
+          "definition": "tagSpriteAndFlipbookSequence"
+        },
+        {
+          "type": "long_enum",
+          "name": "flipbook loop type",
+          "definition": "tagLooping"
+        },
+        {
+          "type": "real",
+          "name": "flipbook delay before looping"
+        },
+        {
+          "type": "long_flags",
+          "name": "drawing flags",
+          "definition": "drawWhenFlags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448961c0"
+    },
+    "RadialProgressBarParametersTagStruct": {
+      "guid": "56d1473e4b422d6d9ce040b9a838b915",
+      "size": 44,
+      "size_string": "sizeof(RadialProgressBarParametersTag)",
+      "fields": [
+        {
+          "type": "real_argb_color",
+          "name": "left color"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "right color"
+        },
+        {
+          "type": "long_enum",
+          "name": "sequenceIndex",
+          "definition": "tagSpriteSequence"
+        },
+        {
+          "type": "real",
+          "name": "fraction"
+        },
+        {
+          "type": "long_flags",
+          "name": "drawing flags",
+          "definition": "drawWhenFlags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144896510"
+    },
+    "LabelParametersTagStruct": {
+      "guid": "25349335024d0ba8136e60bcacce1553",
+      "size": 24,
+      "size_string": "sizeof(LabelParametersTag)",
+      "fields": [
+        {
+          "type": "real_argb_color",
+          "name": "color"
+        },
+        {
+          "type": "string_id",
+          "name": "label"
+        },
+        {
+          "type": "long_flags",
+          "name": "drawing flags",
+          "definition": "drawWhenFlags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144896620"
+    },
+    "ProgressBarParametersTagStruct": {
+      "guid": "5b1e216a904fe56d0192dcb3c8afa0e8",
+      "size": 40,
+      "size_string": "sizeof(ProgressBarParametersTag)",
+      "fields": [
+        {
+          "type": "real_argb_color",
+          "name": "left color"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "right color"
+        },
+        {
+          "type": "real",
+          "name": "fraction"
+        },
+        {
+          "type": "long_flags",
+          "name": "drawing flags",
+          "definition": "drawWhenFlags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448963f0"
+    },
+    "NumericParametersTagStruct": {
+      "guid": "90705e18244b379d95f1b0b58bb4fd35",
+      "size": 28,
+      "size_string": "sizeof(NumericParametersTag)",
+      "fields": [
+        {
+          "type": "real_argb_color",
+          "name": "color"
+        },
+        {
+          "type": "long_enum",
+          "name": "number format",
+          "definition": "numberFormat"
+        },
+        {
+          "type": "real",
+          "name": "number"
+        },
+        {
+          "type": "long_flags",
+          "name": "drawing flags",
+          "definition": "drawWhenFlags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144896740"
+    },
+    "RotatedSpriteParametersTagStruct": {
+      "guid": "f9e95f340c4b8db09274dea49b48ccb0",
+      "size": 24,
+      "size_string": "sizeof(RotatedSpriteParametersTag)",
+      "fields": [
+        {
+          "type": "real_argb_color",
+          "name": "color"
+        },
+        {
+          "type": "long_enum",
+          "name": "sequence index",
+          "definition": "tagSpriteSequence"
+        },
+        {
+          "type": "long_flags",
+          "name": "drawing flags",
+          "definition": "drawWhenFlags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448962e0"
+    },
+    "AnimationParametersTagStruct": {
+      "guid": "fb14a9d7b34b3f0d130777a66d020d41",
+      "size": 8,
+      "size_string": "sizeof(AnimationParametersTag)",
+      "fields": [
+        {
+          "type": "long_enum",
+          "name": "animation type",
+          "definition": "animation"
+        },
+        {
+          "type": "long_flags",
+          "name": "drawing flags",
+          "definition": "drawWhenFlags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144896850"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "datumFlags": {
+      "options": [
+        "Draw clamped to gutter if offscreen"
+      ]
+    },
+    "tagSpriteAndFlipbookSequence": {
+      "options": [
+        "TacticalObjective",
+        "SubObjective",
+        "MainObjective",
+        "SupplyCache",
+        "MoveToIndicator",
+        "ChatterIndicator",
+        "AttackCommandFg",
+        "ReviveFg",
+        "ReviveBg",
+        "BleedoutTimerStroke",
+        "ReviveCommand",
+        "ReviveHelpPulse",
+        "WzBossFg",
+        "WzBossBg",
+        "WzReqFg",
+        "WzHomeBaseFg",
+        "AttackFg",
+        "DefendFg",
+        "CircleBg",
+        "DiamondBg",
+        "SquareBg",
+        "HexBg",
+        "CircleStroke",
+        "DiamondStroke",
+        "SquareStroke",
+        "HexStroke",
+        "ExclamationFg",
+        "DeadIndicator",
+        "SpeakingIndicator",
+        "WeaponPadFg",
+        "CubeFg",
+        "FlagFg",
+        "LetterAFg",
+        "LetterBFg",
+        "LetterCFg",
+        "BombFg",
+        "CrownFg",
+        "SmallOffscreenArrow",
+        "FriendlyArrow",
+        "EnemyArrow",
+        "SeekIndicator",
+        "LockOnIndicator",
+        "ReqBg",
+        "Num0Fg",
+        "Num1Fg",
+        "Num2Fg",
+        "Num3Fg",
+        "Num4Fg",
+        "Num5Fg",
+        "Num6Fg",
+        "Num7Fg",
+        "Num8Fg",
+        "Num9Fg",
+        "Flipbook1",
+        "Flipbook2",
+        "Flipbook3",
+        "Flipbook4",
+        "Flipbook5",
+        "Flipbook6",
+        "Flipbook7",
+        "Flipbook8",
+        "Flipbook9",
+        "Flipbook10",
+        "Flipbook11",
+        "Flipbook12",
+        "Flipbook13",
+        "Flipbook14",
+        "Flipbook15",
+        "Flipbook16",
+        "Flipbook17",
+        "Flipbook18",
+        "Flipbook19",
+        "Flipbook20",
+        "Flipbook21",
+        "Flipbook22",
+        "Flipbook23",
+        "Flipbook24"
+      ]
+    },
+    "tagLooping": {
+      "options": [
+        "LoopForward",
+        "LoopReversed",
+        "LoopForwardThenReversed",
+        "PlayOnceThenHold",
+        "PlayOnceReversedThenHold"
+      ]
+    },
+    "drawWhenFlags": {
+      "options": [
+        "Draw when onscreen",
+        "Draw when offscreen",
+        "Draw when under reticule"
+      ]
+    },
+    "tagSpriteSequence": {
+      "options": [
+        "TacticalObjective",
+        "SubObjective",
+        "MainObjective",
+        "SupplyCache",
+        "MoveToIndicator",
+        "ChatterIndicator",
+        "AttackCommandFg",
+        "ReviveFg",
+        "ReviveBg",
+        "BleedoutTimerStroke",
+        "ReviveCommand",
+        "ReviveHelpPulse",
+        "WzBossFg",
+        "WzBossBg",
+        "WzReqFg",
+        "WzHomeBaseFg",
+        "AttackFg",
+        "DefendFg",
+        "CircleBg",
+        "DiamondBg",
+        "SquareBg",
+        "HexBg",
+        "CircleStroke",
+        "DiamondStroke",
+        "SquareStroke",
+        "HexStroke",
+        "ExclamationFg",
+        "DeadIndicator",
+        "SpeakingIndicator",
+        "WeaponPadFg",
+        "CubeFg",
+        "FlagFg",
+        "LetterAFg",
+        "LetterBFg",
+        "LetterCFg",
+        "BombFg",
+        "CrownFg",
+        "SmallOffscreenArrow",
+        "FriendlyArrow",
+        "EnemyArrow",
+        "SeekIndicator",
+        "LockOnIndicator",
+        "ReqBg",
+        "Num0Fg",
+        "Num1Fg",
+        "Num2Fg",
+        "Num3Fg",
+        "Num4Fg",
+        "Num5Fg",
+        "Num6Fg",
+        "Num7Fg",
+        "Num8Fg",
+        "Num9Fg"
+      ]
+    },
+    "numberFormat": {
+      "options": [
+        "Timer",
+        "Distance"
+      ]
+    },
+    "animation": {
+      "options": [
+        "PlayerFiring",
+        "PlayerDamaged",
+        "ReviveIdle",
+        "RevivePulsing",
+        "Flashing",
+        "HomeBaseVulnerableAlternatingIcon",
+        "FlashTimer",
+        "Animation8",
+        "Animation9",
+        "Animation10",
+        "Animation11",
+        "Animation12",
+        "Animation13",
+        "Animation14",
+        "Animation15",
+        "Animation16",
+        "Animation17",
+        "Animation18",
+        "Animation19",
+        "Animation20",
+        "Animation21",
+        "Animation22",
+        "Animation23",
+        "Animation24",
+        "Animation25",
+        "Animation26",
+        "Animation27",
+        "Animation28",
+        "Animation29",
+        "Animation30",
+        "Animation31",
+        "Animation32"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

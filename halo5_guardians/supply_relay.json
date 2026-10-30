@@ -1,0 +1,76 @@
+{
+  "name": "supply_relay",
+  "tag": "spry",
+  "version": 0,
+  "flags": 3,
+  "parent_tag": "aTag",
+  "block": "supply_relay_block",
+  "blocks": {
+    "supply_relay_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "supply_relay_block_struct"
+    }
+  },
+  "structs": {
+    "supply_relay_block_struct": {
+      "guid": "c814b4d3d3423d1d60b3519cc8ebe4cd",
+      "size": 24,
+      "size_string": "(sizeof(mcp::SupplyRelayDefinition) - Tag::SizeInfo<mcp::SupplyRelayDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "Supply Relay",
+          "definition": "World object that extracts a resource and transfers it to the closest HQ by way of other relays."
+        },
+        {
+          "type": "real",
+          "name": "Initial Health: Starting health of crate object."
+        },
+        {
+          "type": "pad",
+          "name": "pad_sr_4",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c0480"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

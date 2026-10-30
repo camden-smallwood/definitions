@@ -1,0 +1,118 @@
+{
+  "name": "firefight_globals",
+  "tag": "ffgd",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "firefight_globals_block",
+  "blocks": {
+    "firefight_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "firefight_globals_block_struct"
+    },
+    "firefightWaveTemplatesBlock": {
+      "max_count": 128,
+      "max_count_string": "FirefightWaveTemplateDefinition::k_maximumAIWaveTemplates",
+      "struct": "firefightWaveTemplatesBlock_struct"
+    }
+  },
+  "structs": {
+    "firefight_globals_block_struct": {
+      "guid": "b86331ea5b4423a315221494dd68a89c",
+      "size": 80,
+      "size_string": "(sizeof(FirefightGlobalsDefinition) - Tag::SizeInfo<FirefightGlobalsDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "wave templates",
+          "definition": "firefightWaveTemplatesBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "PLAYER SPAWN INFLUENCERS",
+          "definition": "These are the default spawn influencer settings which can be overridden by scenario tags"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Influencer default spawn settings",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "ssdf"
+            ]
+          }
+        },
+        {
+          "type": "pad",
+          "name": "tag_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144825370"
+    },
+    "firefightWaveTemplatesBlock_struct": {
+      "guid": "fa22990b2f4581180340d2b463440b5c",
+      "size": 36,
+      "size_string": "sizeof(FirefightWaveTemplateDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "tag_reference",
+          "name": "wave template",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wave"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144825250"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

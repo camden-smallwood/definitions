@@ -1,0 +1,436 @@
+{
+  "name": "NavPointAnimationDefinition",
+  "tag": "nava",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "NavPointAnimationDefinition_block",
+  "blocks": {
+    "NavPointAnimationDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "NavPointAnimationDefinition_block_struct"
+    }
+  },
+  "structs": {
+    "NavPointAnimationDefinition_block_struct": {
+      "guid": "a391db9c754a066e83292d93da22985e",
+      "size": 416,
+      "size_string": "(sizeof(NavPointAnimationDefinition) - Tag::SizeInfo<NavPointAnimationDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_enum",
+          "name": "loop type",
+          "definition": "tagLooping"
+        },
+        {
+          "type": "real",
+          "name": "total time animation runs for"
+        },
+        {
+          "type": "real",
+          "name": "delay before looping"
+        },
+        {
+          "type": "struct",
+          "name": "progress-time function#Defines the progress % as a function of time",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "center sprite bg",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "center sprite bg",
+          "definition": "SpriteKeyframeStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "center sprite fg",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "center sprite fg",
+          "definition": "SpriteKeyframeStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "center radial progress bar",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "center radial progress bar",
+          "definition": "TwoColorKeyframeStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "top sprite",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "top sprite",
+          "definition": "SpriteKeyframeStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "top label",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "top label",
+          "definition": "KeyframeStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right progress bar",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right progress bar",
+          "definition": "TwoColorKeyframeStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right progress bar 2",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right progress bar 2",
+          "definition": "TwoColorKeyframeStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right label",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right label",
+          "definition": "KeyframeStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "right timer",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "right timer",
+          "definition": "KeyframeStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "left timer",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "left timer",
+          "definition": "KeyframeStruct"
+        },
+        {
+          "type": "explanation",
+          "name": "yaw sprite",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "yaw sprite",
+          "definition": "SpriteKeyframeStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448960a0"
+    },
+    "scalar_function_named_struct": {
+      "guid": "8992cb721e48760251a36794187c6df5",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738e30"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "SpriteKeyframeStruct": {
+      "guid": "5b9f2db7d94c882a60918c8e323f8f1b",
+      "size": 32,
+      "size_string": "sizeof(SpriteKeyframe)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "tagSpriteKeyframeFlags"
+        },
+        {
+          "type": "long_enum",
+          "name": "sequenceIndex",
+          "definition": "tagSpriteSequence"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "width and height"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "color"
+        },
+        {
+          "type": "real",
+          "name": "alpha"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144895e70"
+    },
+    "TwoColorKeyframeStruct": {
+      "guid": "49d63604664ed64a9833b891c1168085",
+      "size": 40,
+      "size_string": "sizeof(TwoColorKeyframe)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "tagTwoColorKeyframeFlags"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "width and height"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "left color"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "right color"
+        },
+        {
+          "type": "real",
+          "name": "alpha"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144895f90"
+    },
+    "KeyframeStruct": {
+      "guid": "1d902a9b154ec9427aa4ba8349b02ad3",
+      "size": 28,
+      "size_string": "sizeof(Keyframe)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "tagKeyframeFlags"
+        },
+        {
+          "type": "real_point_2d",
+          "name": "width and height"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "color"
+        },
+        {
+          "type": "real",
+          "name": "alpha"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144895d60"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "tagLooping": {
+      "options": [
+        "LoopForward",
+        "LoopReversed",
+        "LoopForwardThenReversed",
+        "PlayOnceThenHold",
+        "PlayOnceReversedThenHold"
+      ]
+    },
+    "tagSpriteKeyframeFlags": {
+      "options": [
+        "SequenceIndexValid",
+        "WidthValid",
+        "HeightValid",
+        "ColorValid",
+        "AlphaValid"
+      ]
+    },
+    "tagSpriteSequence": {
+      "options": [
+        "TacticalObjective",
+        "SubObjective",
+        "MainObjective",
+        "SupplyCache",
+        "MoveToIndicator",
+        "ChatterIndicator",
+        "AttackCommandFg",
+        "ReviveFg",
+        "ReviveBg",
+        "BleedoutTimerStroke",
+        "ReviveCommand",
+        "ReviveHelpPulse",
+        "WzBossFg",
+        "WzBossBg",
+        "WzReqFg",
+        "WzHomeBaseFg",
+        "AttackFg",
+        "DefendFg",
+        "CircleBg",
+        "DiamondBg",
+        "SquareBg",
+        "HexBg",
+        "CircleStroke",
+        "DiamondStroke",
+        "SquareStroke",
+        "HexStroke",
+        "ExclamationFg",
+        "DeadIndicator",
+        "SpeakingIndicator",
+        "WeaponPadFg",
+        "CubeFg",
+        "FlagFg",
+        "LetterAFg",
+        "LetterBFg",
+        "LetterCFg",
+        "BombFg",
+        "CrownFg",
+        "SmallOffscreenArrow",
+        "FriendlyArrow",
+        "EnemyArrow",
+        "SeekIndicator",
+        "LockOnIndicator",
+        "ReqBg",
+        "Num0Fg",
+        "Num1Fg",
+        "Num2Fg",
+        "Num3Fg",
+        "Num4Fg",
+        "Num5Fg",
+        "Num6Fg",
+        "Num7Fg",
+        "Num8Fg",
+        "Num9Fg"
+      ]
+    },
+    "tagTwoColorKeyframeFlags": {
+      "options": [
+        "WidthValid",
+        "HeightValid",
+        "LeftColorValid",
+        "RightColorValid",
+        "AlphaValid"
+      ]
+    },
+    "tagKeyframeFlags": {
+      "options": [
+        "WidthValid",
+        "HeightValid",
+        "ColorValid",
+        "AlphaValid"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

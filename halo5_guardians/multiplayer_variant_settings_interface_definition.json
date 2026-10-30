@@ -1,0 +1,345 @@
+{
+  "name": "multiplayer_variant_settings_interface_definition",
+  "tag": "goof",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "multiplayer_variant_settings_interface_definition_block",
+  "blocks": {
+    "multiplayer_variant_settings_interface_definition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "multiplayer_variant_settings_interface_definition_block_struct"
+    },
+    "variant_setting_edit_reference_block": {
+      "max_count": 152,
+      "max_count_string": "k_maximum_game_setting_blocks",
+      "struct": "variant_setting_edit_reference_block"
+    },
+    "variant_option_block": {
+      "max_count": 16,
+      "max_count_string": "k_maximum_variant_category_blocks",
+      "struct": "variant_option_block"
+    }
+  },
+  "structs": {
+    "multiplayer_variant_settings_interface_definition_block_struct": {
+      "guid": "44bfd907744d04a83fc1099cb77b07f5",
+      "size": 48,
+      "size_string": "(sizeof(s_multiplayer_variant_settings_interface_definition) - Tag::SizeInfo<s_multiplayer_variant_settings_interface_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "string_id",
+          "name": "name (unused)"
+        },
+        {
+          "type": "block",
+          "name": "game engine settings",
+          "definition": "variant_setting_edit_reference_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d4200"
+    },
+    "variant_setting_edit_reference_block": {
+      "guid": "e9a06473f8437c96b95e278c6f8c48af",
+      "size": 36,
+      "size_string": "sizeof(s_variant_setting_edit_reference)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "long_enum",
+          "name": "setting category^",
+          "definition": "game_engine_settings"
+        },
+        {
+          "type": "block",
+          "name": "options",
+          "definition": "variant_option_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d40e0"
+    },
+    "variant_option_block": {
+      "guid": "4e8874e17f47ad6946c679b8a6193002",
+      "size": 108,
+      "size_string": "sizeof(s_game_variant_category_block)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "SUB-CATEGORY",
+          "definition": "If this entry leads to a sub-category of UI, the tag reference to that chain of UI goes here"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sub-category",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "goof"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "PLAYER TRAIT",
+          "definition": "If this entry leads to player-trait UI, you can use a tag reference to player trait template UI and the player trait category here"
+        },
+        {
+          "type": "tag_reference",
+          "name": "player trait ui",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "goof"
+            ]
+          }
+        },
+        {
+          "type": "long_enum",
+          "name": "player trait category",
+          "definition": "game_engine_settings"
+        },
+        {
+          "type": "explanation",
+          "name": "CATEGORY NAME",
+          "definition": "string_id name used for the category labelling (used for both sub-category and player-trait references)"
+        },
+        {
+          "type": "string_id",
+          "name": "category name"
+        },
+        {
+          "type": "explanation",
+          "name": "CATEGORY DESCRIPTION",
+          "definition": "string_id description used for the category description (used for both sub-category and player-trait references)"
+        },
+        {
+          "type": "string_id",
+          "name": "category description"
+        },
+        {
+          "type": "explanation",
+          "name": "VALUE-PAIRS",
+          "definition": "If this entry leads to parameter value editing UI, the tag reference to those text-value pairs goes here"
+        },
+        {
+          "type": "tag_reference",
+          "name": "value pairs",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sily"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d3fb0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "game_engine_settings": {
+      "options": [
+        "game base misc",
+        "game base respawn",
+        "game base social",
+        "game base map",
+        "game base prototype",
+        "powerup duration",
+        "ctf top level options",
+        "slayer top level options",
+        "oddball top level options",
+        "king top level options",
+        "sandbox top level options",
+        "sandbox in-forge options",
+        "juggernaut top level options",
+        "territories top level options",
+        "assault top level options",
+        "infection top level options",
+        "vip top level options",
+        "training top level options",
+        "mosh top level options",
+        "custom top level options",
+        "map override advanced options",
+        "respawn advanced options",
+        "respawn modifiers",
+        "slayer primary options",
+        "slayer advanced options",
+        "slayer scoring options",
+        "oddball primary options",
+        "oddball advanced options",
+        "assault primary options",
+        "assault advanced options",
+        "ctf primary options",
+        "ctf advanced options",
+        "juggernaut primary options",
+        "juggernaut advanced options",
+        "king primary options",
+        "king advanced options",
+        "infection primary options",
+        "infection advanced options",
+        "infection scoring options",
+        "target training primary options",
+        "training advanced options",
+        "target 1 setup",
+        "target 2 setup",
+        "target 3 setup",
+        "target 4 setup",
+        "target 5 setup",
+        "target 6 setup",
+        "target 7 setup",
+        "target 8 setup",
+        "target 9 setup",
+        "target 10 setup",
+        "vip primary options",
+        "vip advanced options",
+        "territories primary options",
+        "territories advanced options",
+        "ai template traits",
+        "campaign top level options",
+        "firefight top level options",
+        "megalo options submenu trigger",
+        "red_skull_ai_traits traits",
+        "red_skull_ai_traits templated",
+        "yellow_skull_ai_traits traits",
+        "yellow_skull_ai_traits templated",
+        "blue_skull_ai_traits traits",
+        "blue_skull_ai_traits templated",
+        "spartan loadouts",
+        "spartan_loadouts_tier1",
+        "spartan_loadouts_tier1_loadout0",
+        "spartan_loadouts_tier1_loadout1",
+        "spartan_loadouts_tier1_loadout2",
+        "spartan_loadouts_tier1_loadout3",
+        "spartan_loadouts_tier1_loadout4",
+        "spartan_loadouts_tier2",
+        "spartan_loadouts_tier2_loadout0",
+        "spartan_loadouts_tier2_loadout1",
+        "spartan_loadouts_tier2_loadout2",
+        "spartan_loadouts_tier2_loadout3",
+        "spartan_loadouts_tier2_loadout4",
+        "spartan_loadouts_tier3",
+        "spartan_loadouts_tier3_loadout0",
+        "spartan_loadouts_tier3_loadout1",
+        "spartan_loadouts_tier3_loadout2",
+        "spartan_loadouts_tier3_loadout3",
+        "spartan_loadouts_tier3_loadout4",
+        "elite loadouts",
+        "elite_loadouts_tier1",
+        "elite_loadouts_tier1_loadout0",
+        "elite_loadouts_tier1_loadout1",
+        "elite_loadouts_tier1_loadout2",
+        "elite_loadouts_tier1_loadout3",
+        "elite_loadouts_tier1_loadout4",
+        "elite_loadouts_tier2",
+        "elite_loadouts_tier2_loadout0",
+        "elite_loadouts_tier2_loadout1",
+        "elite_loadouts_tier2_loadout2",
+        "elite_loadouts_tier2_loadout3",
+        "elite_loadouts_tier2_loadout4",
+        "elite_loadouts_tier3",
+        "elite_loadouts_tier3_loadout0",
+        "elite_loadouts_tier3_loadout1",
+        "elite_loadouts_tier3_loadout2",
+        "elite_loadouts_tier3_loadout3",
+        "elite_loadouts_tier3_loadout4",
+        "infinity settings",
+        "red powerup",
+        "yellow powerup",
+        "blue powerup",
+        "traits",
+        "kill rewards",
+        "player traits base player",
+        "player traits respawn",
+        "player traits red powerup primary",
+        "player traits blue powerup primary",
+        "player traits yellow powerup primary",
+        "player traits custom powerup primary",
+        "player traits elite respawn",
+        "player traits red skull spartan",
+        "player traits red skull elite",
+        "player traits yellow skull spartan",
+        "player traits yellow skull elite",
+        "player traits blue skull spartan",
+        "player traits blue skull elite",
+        "player traits sandbox editor",
+        "player traits red powerup secondary",
+        "player traits blue powerup secondary",
+        "player traits yellow powerup secondary",
+        "player traits custom powerup secondary",
+        "trait zone alpha player traits",
+        "trait zone bravo player traits",
+        "trait zone charlie player traits",
+        "trait zone delta player traits",
+        "player template traits",
+        "player template traits shields",
+        "player template traits weapons",
+        "player template traits movement",
+        "player template traits sensors",
+        "player template traits appearance",
+        "player template traits abilities",
+        "editor template traits",
+        "editor template traits shields",
+        "editor template traits weapons",
+        "editor template traits movement",
+        "editor template traits sensors",
+        "editor template traits appearance",
+        "editor template traits abilities",
+        "run-time template traits",
+        "run-time template traits shields",
+        "run-time template traits weapons",
+        "run-time template traits movement",
+        "run-time template traits sensors",
+        "run-time template traits appearance",
+        "run-time template traits abilities"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

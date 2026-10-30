@@ -1,0 +1,724 @@
+{
+  "name": "device_terminal",
+  "tag": "term",
+  "version": 1,
+  "flags": 3,
+  "parent_tag": "devi",
+  "block": "device_terminal_block",
+  "blocks": {
+    "device_terminal_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "device_terminal_block_struct"
+    },
+    "terminal_page_block_definition": {
+      "max_count": 32,
+      "max_count_string": "_terminal_definition::k_max_page_count",
+      "struct": "terminal_page_block_definition"
+    }
+  },
+  "structs": {
+    "device_terminal_block_struct": {
+      "guid": "503d049982415a59fe310ebce7eed1f8",
+      "size": 1752,
+      "size_string": "(sizeof(terminal_definition) - Tag::SizeInfo<terminal_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "device",
+          "definition": "_base_device"
+        },
+        {
+          "type": "explanation",
+          "name": "$$$ TERMINAL $$$",
+          "definition": ""
+        },
+        {
+          "type": "long_integer",
+          "name": "bah bah"
+        },
+        {
+          "type": "string_id",
+          "name": "action string"
+        },
+        {
+          "type": "string_id",
+          "name": "name#text pulled from strings tag above"
+        },
+        {
+          "type": "tag_reference",
+          "name": "activation sound",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "strings",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "pages",
+          "definition": "terminal_page_block_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449b8a60"
+    },
+    "terminal_page_block_definition": {
+      "guid": "c8300f6cc243e613da3ce38cf0284751",
+      "size": 8,
+      "size_string": "sizeof(s_terminal_page_definition)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "bitmap sequence index"
+        },
+        {
+          "type": "short_integer",
+          "name": "bitmap sprite index"
+        },
+        {
+          "type": "string_id",
+          "name": "text"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449b8940"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    },
+    "_base_object": {
+      "guid": "6c5aa9947a45fcf55742a488f0943380",
+      "size": 1280,
+      "size_string": "(sizeof(ObjectDefinition) - Tag::SizeInfo<ObjectDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "OBJECT",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime object type!"
+        },
+        {
+          "type": "char_enum",
+          "name": "Nav Mesh Cutting",
+          "definition": "NavMeshCuttingOverrideEnum"
+        },
+        {
+          "type": "char_enum",
+          "name": "Nav Mesh Obstacle",
+          "definition": "BooleanOverrideEnum"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "Nav Mesh Cutting OBB Offset"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "Nav Mesh Cutting OBB Scale"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "object_definition_flags"
+        },
+        {
+          "type": "real",
+          "name": "bounding radius#If you edit this field manually, beware that the render model is no longer respected for radius calculation and that you need to set the bounding offset as well."
+        },
+        {
+          "type": "real_point_3d",
+          "name": "bounding offset"
+        },
+        {
+          "type": "real",
+          "name": "horizontal acceleration scale{acceleration scale}:[0,+inf]"
+        },
+        {
+          "type": "real",
+          "name": "vertical acceleration scale"
+        },
+        {
+          "type": "real",
+          "name": "angular acceleration scale"
+        },
+        {
+          "type": "char_enum",
+          "name": "lightmap shadow mode",
+          "definition": "lightmap_shadow_mode_enum"
+        },
+        {
+          "type": "char_enum",
+          "name": "multiple airprobe mode",
+          "definition": "multipleAirprobeSamplingModeEnum"
+        },
+        {
+          "type": "pad",
+          "name": "pad1",
+          "definition": 2
+        },
+        {
+          "type": "struct",
+          "name": "impact audio",
+          "definition": "ImpactAudioDefinitionStruct"
+        },
+        {
+          "type": "char_enum",
+          "name": "water density",
+          "definition": "water_density_type_enum"
+        },
+        {
+          "type": "pad",
+          "name": "pad2",
+          "definition": 3
+        },
+        {
+          "type": "long_integer",
+          "name": "runtime flags!*"
+        },
+        {
+          "type": "block",
+          "name": "source sidecar",
+          "definition": "sidecarBlock"
+        },
+        {
+          "type": "string_id",
+          "name": "default model variant"
+        },
+        {
+          "type": "tag_reference",
+          "name": "model",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hlmt"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "crate object",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bloc"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Damage Source",
+          "definition": "Damage source name for all damage caused by this object. This includes:\n   - collision damage caused by this object\n   - melee damage caused by this object (including melee-like special abilities)\n   - damage caused by projectiles created by this object\n   - damage caused by damage effects created by this object (such as weapon backfiring)\n"
+        },
+        {
+          "type": "struct",
+          "name": "damageSource",
+          "definition": "DamageSourceDefinitionStruct"
+        },
+        {
+          "type": "real",
+          "name": "navpoint vertical offset"
+        },
+        {
+          "type": "explanation",
+          "name": "only set this tag if you want to override the default collision damage values in globals.globals",
+          "definition": ""
+        },
+        {
+          "type": "tag_reference",
+          "name": "collision damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "cddf"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "early mover OBB",
+          "definition": "object_early_mover_obb_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "creation effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "material effects",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "foot"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "melee sound#this is the sound that is made when I am meleed.  This overrides the sweetener sound of my material.",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "kill on first contact or damage after time:seconds#grace period before object can be instantly killed by kill on first contact or damage flag"
+        },
+        {
+          "type": "real",
+          "name": "self-destruct time:seconds#if non-zero, any instances of this object will destroy themselves after this many seconds."
+        },
+        {
+          "type": "real",
+          "name": "self-destruct time max:seconds#if non-zero, defines range from which self-destruct time is chosen randomly"
+        },
+        {
+          "type": "block",
+          "name": "ai properties",
+          "definition": "object_ai_properties_block"
+        },
+        {
+          "type": "block",
+          "name": "functions",
+          "definition": "object_function_block"
+        },
+        {
+          "type": "block",
+          "name": "runtime interpolator functions*!",
+          "definition": "object_runtime_interpolator_functions_block"
+        },
+        {
+          "type": "block",
+          "name": "function switches",
+          "definition": "objectFunctionSwitchBlock"
+        },
+        {
+          "type": "word_flags",
+          "name": "Ammo Refill Flags",
+          "definition": "ammoRefillTypeFlags"
+        },
+        {
+          "type": "word_flags",
+          "name": "secondary flags",
+          "definition": "object_definition_secondary_flags"
+        },
+        {
+          "type": "block",
+          "name": "attachments",
+          "definition": "global_object_attachment_block"
+        },
+        {
+          "type": "block",
+          "name": "hull surfaces",
+          "definition": "water_physics_hull_surface_definition_block"
+        },
+        {
+          "type": "block",
+          "name": "jetwash",
+          "definition": "jetwash_definition_block"
+        },
+        {
+          "type": "block",
+          "name": "widgets",
+          "definition": "object_widget_block"
+        },
+        {
+          "type": "block",
+          "name": "change colors",
+          "definition": "object_change_colors"
+        },
+        {
+          "type": "block",
+          "name": "multiplayer object",
+          "definition": "multiplayer_object_block"
+        },
+        {
+          "type": "block",
+          "name": "Forge data",
+          "definition": "ForgeObjectEntryDefinitionBlock"
+        },
+        {
+          "type": "tag_reference",
+          "name": "simulation_interpolation#Set to a specific interpolation definition, or leave blank to inherit the default for the object type (there are defaults for bipeds, vehicles, and crates in multiplayer_globals).  To disable interpolation on a particular object whose type has interpolation by default, set this reference to the special disable_interpolation.simulation_interpolation tag.",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "siin"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "spawn effects",
+          "definition": "object_spawn_effects_block"
+        },
+        {
+          "type": "block",
+          "name": "model dissolve data",
+          "definition": "modelDissolveDataBlock"
+        },
+        {
+          "type": "long_string",
+          "name": "class name"
+        },
+        {
+          "type": "block",
+          "name": "script tagalongs",
+          "definition": "hs_references_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "prototype script!",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hsc*"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Object Abandoment",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "object abandonment",
+          "definition": "object_abandonment_struct"
+        },
+        {
+          "type": "block",
+          "name": "Designer Metadata",
+          "definition": "object_designer_metadata_block"
+        },
+        {
+          "type": "explanation",
+          "name": "Object Function Smoothing",
+          "definition": ""
+        },
+        {
+          "type": "block",
+          "name": "Object function smoothing",
+          "definition": "ComputeFunctionSmoothingBlock"
+        },
+        {
+          "type": "char_enum",
+          "name": "Animated mesh animation type",
+          "definition": "AnimatedMeshAnimationType_EnumSchema"
+        },
+        {
+          "type": "pad",
+          "name": "pad_anmesh",
+          "definition": 3
+        },
+        {
+          "type": "tag_reference",
+          "name": "Core",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "spry",
+              "rscn"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "Trigger volume component info",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "tvcm"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "Tracking Info&Spartan Tracking",
+          "definition": "ObjectDefinitionTagBlock"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144998b30"
+    },
+    "_base_device": {
+      "guid": "4e94feb29045cf74ed0ce39f946bbfb1",
+      "size": 1616,
+      "size_string": "(sizeof(device_definition) - Tag::SizeInfo<device_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "object",
+          "definition": "_base_object"
+        },
+        {
+          "type": "custom",
+          "name": "$$$ DEVICE $$$",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "device_definition_flags"
+        },
+        {
+          "type": "real",
+          "name": "power transition time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "power acceleration time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "position transition time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "position acceleration time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "depowered position transition time:seconds"
+        },
+        {
+          "type": "real",
+          "name": "depowered position acceleration time:seconds"
+        },
+        {
+          "type": "word_flags",
+          "name": "lightmap flags",
+          "definition": "device_lightmap_flags"
+        },
+        {
+          "type": "pad",
+          "name": "ZHBMT",
+          "definition": 2
+        },
+        {
+          "type": "tag_reference",
+          "name": "open (up)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "close (down)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "opened",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "closed",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "depowered",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "repowered",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "delay time:seconds"
+        },
+        {
+          "type": "tag_reference",
+          "name": "delay effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "automatic activation radius:world units"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "amkr"
+        },
+        {
+          "type": "string_id",
+          "name": "marker name"
+        },
+        {
+          "type": "real",
+          "name": "marker radius min#min distance between the unit and the marker"
+        },
+        {
+          "type": "real",
+          "name": "marker radius#max distance between the unit and the marker"
+        },
+        {
+          "type": "angle",
+          "name": "marker cone angle#angle from marker forward the unit must be"
+        },
+        {
+          "type": "angle",
+          "name": "marker facing angle#angle from unit facing the marker must be"
+        },
+        {
+          "type": "real",
+          "name": "min targetable position threshold#MP ONLY - above this value and below the max, object becomes targetable (ie. Aim Assist kicks in, nothing else isaffected by this variable).  Also, the 'is targetable' flag above must be checked for these values to take effect."
+        },
+        {
+          "type": "real",
+          "name": "max targetable position threshold#MP ONLY - below this value and above the min, object becomes targetable (ie. Aim Assist kicks in, nothing else isaffected by this variable).  Also, the 'is targetable' flag above must be checked for these values to take effect."
+        },
+        {
+          "type": "real_fraction",
+          "name": "initial animation position:[0,1]"
+        },
+        {
+          "type": "pad",
+          "name": "initialAnimationPositionPad",
+          "definition": 4
+        },
+        {
+          "type": "struct",
+          "name": "device components",
+          "definition": "device_component_list"
+        },
+        {
+          "type": "pad",
+          "name": "Pad",
+          "definition": 4
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449b8110"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

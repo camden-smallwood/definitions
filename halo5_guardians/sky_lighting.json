@@ -1,0 +1,156 @@
+{
+  "name": "sky_lighting",
+  "tag": "sklt",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "sky_lighting_block",
+  "blocks": {
+    "sky_lighting_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sky_lighting_block_struct"
+    }
+  },
+  "structs": {
+    "sky_lighting_block_struct": {
+      "guid": "90bc37a8dfeacb38db38d8cbd81b0493",
+      "size": 144,
+      "size_string": "(sizeof(SkyLighting) - Tag::SizeInfo<SkyLighting::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "Sky Lighting",
+          "group_tag": "skyl"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "Sky Color{Uniform Color}"
+        },
+        {
+          "type": "real",
+          "name": "Sky Color Intensity{Uniform Intensity}"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "Ground Color"
+        },
+        {
+          "type": "real",
+          "name": "Ground Color Intensity"
+        },
+        {
+          "type": "real",
+          "name": "Horizon Angle"
+        },
+        {
+          "type": "real",
+          "name": "Horizon Width"
+        },
+        {
+          "type": "real",
+          "name": "Direction 1"
+        },
+        {
+          "type": "real",
+          "name": "Front-Back 1"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "Color 1"
+        },
+        {
+          "type": "real",
+          "name": "Intensity 1"
+        },
+        {
+          "type": "real",
+          "name": "Width 1"
+        },
+        {
+          "type": "real",
+          "name": "Direction 2"
+        },
+        {
+          "type": "real",
+          "name": "Front-Back 2"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "Color 2"
+        },
+        {
+          "type": "real",
+          "name": "Intensity 2"
+        },
+        {
+          "type": "real",
+          "name": "Width 2"
+        },
+        {
+          "type": "real",
+          "name": "Direction 3"
+        },
+        {
+          "type": "real",
+          "name": "Front-Back 3"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "Color 3"
+        },
+        {
+          "type": "real",
+          "name": "Intensity 3"
+        },
+        {
+          "type": "real",
+          "name": "Width 3"
+        },
+        {
+          "type": "pad",
+          "name": "pad_sky_lighting_0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144752e10"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

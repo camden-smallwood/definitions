@@ -1,0 +1,111 @@
+{
+  "name": "NarrativeGlobals",
+  "tag": "narg",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "NarrativeGlobals_block",
+  "blocks": {
+    "NarrativeGlobals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "NarrativeGlobals_block_struct"
+    },
+    "NarrativeFlagDefinitionBlock": {
+      "max_count": 64,
+      "max_count_string": "64",
+      "struct": "NarrativeFlagDefinitionBlock"
+    }
+  },
+  "structs": {
+    "NarrativeGlobals_block_struct": {
+      "guid": "abda1f0f954aa01e23466c956c35deed",
+      "size": 48,
+      "size_string": "(sizeof(NarrativeGlobals) - Tag::SizeInfo<NarrativeGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "Narrative Flag Definitions",
+          "definition": "NarrativeFlagDefinitionBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144820c50"
+    },
+    "NarrativeFlagDefinitionBlock": {
+      "guid": "fc8132b468425e4c804ee38495dd6a24",
+      "size": 8,
+      "size_string": "sizeof(NarrativeFlagDefinition)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "Index"
+        },
+        {
+          "type": "char_enum",
+          "name": "Type",
+          "definition": "NarrativeFlagTypeEnum"
+        },
+        {
+          "type": "pad",
+          "name": "fsarewrsda",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144820b30"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "NarrativeFlagTypeEnum": {
+      "options": [
+        "Unknown",
+        "Terminal"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

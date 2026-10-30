@@ -1,0 +1,147 @@
+{
+  "name": "wpf_font_set",
+  "tag": "fnts",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "wpf_font_set_block",
+  "blocks": {
+    "wpf_font_set_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "wpf_font_set_block_struct"
+    },
+    "WPFFontSetReferencesBlock": {
+      "max_count": 512,
+      "max_count_string": "512",
+      "struct": "WPFFontSetReferencesBlock"
+    }
+  },
+  "structs": {
+    "wpf_font_set_block_struct": {
+      "guid": "26e84b95e940b52fef788d968edfe42e",
+      "size": 48,
+      "size_string": "(sizeof(WPFFontSetDefinition) - Tag::SizeInfo<WPFFontSetDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "font references",
+          "definition": "WPFFontSetReferencesBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488fcc0"
+    },
+    "WPFFontSetReferencesBlock": {
+      "guid": "c4c7cebf8341c3bf241d7894be04e860",
+      "size": 48,
+      "size_string": "sizeof(WPFFontSetReferencesDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "font",
+          "definition": {
+            "flags": 64,
+            "allowed": [
+              "font"
+            ]
+          }
+        },
+        {
+          "type": "long_flags",
+          "name": "WPF All Languages",
+          "definition": "font_set_all_languages"
+        },
+        {
+          "type": "long_flags",
+          "name": "WPF Flags",
+          "definition": "font_set_language_flags_definition"
+        },
+        {
+          "type": "long_flags",
+          "name": "FastHud All Languages",
+          "definition": "font_set_all_languages"
+        },
+        {
+          "type": "long_flags",
+          "name": "FastHud Flags",
+          "definition": "font_set_language_flags_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488fbb0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "font_set_all_languages": {
+      "options": [
+        "All"
+      ]
+    },
+    "font_set_language_flags_definition": {
+      "options": [
+        "English",
+        "Japanese",
+        "German",
+        "French",
+        "Spanish",
+        "Mexican-Spanish",
+        "Italian",
+        "Korean",
+        "Traditional-Chinese",
+        "Simplified-Chinese",
+        "Portuguese",
+        "Polish",
+        "Russian",
+        "Danish",
+        "Finnish",
+        "Dutch",
+        "Norwegian"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

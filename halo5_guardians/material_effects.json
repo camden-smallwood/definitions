@@ -1,0 +1,172 @@
+{
+  "name": "material_effects",
+  "tag": "foot",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "material_effects_block",
+  "blocks": {
+    "material_effects_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "material_effects_block_struct"
+    },
+    "material_effect_block_v2": {
+      "max_count": 30,
+      "max_count_string": "k_material_effect_type_count",
+      "struct": "material_effect_block_v2"
+    },
+    "material_effect_material_block": {
+      "max_count": 500,
+      "max_count_string": "k_maximum_material_effect_blocks",
+      "struct": "material_effect_material_block"
+    }
+  },
+  "structs": {
+    "material_effects_block_struct": {
+      "guid": "9fa1361bce4b675f554fd5977a7bf0e0",
+      "size": 48,
+      "size_string": "(sizeof(s_material_effects_definition) - Tag::SizeInfo<s_material_effects_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "effects",
+          "definition": "material_effect_block_v2"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447109e0"
+    },
+    "material_effect_block_v2": {
+      "guid": "672d03b0b8411d82ac373fae16fdc06c",
+      "size": 56,
+      "size_string": "sizeof(s_material_effect)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "sounds",
+          "definition": "material_effect_material_block"
+        },
+        {
+          "type": "block",
+          "name": "effects",
+          "definition": "material_effect_material_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447108c0"
+    },
+    "material_effect_material_block": {
+      "guid": "6567ce8f5c435c9433de419287d88edc",
+      "size": 76,
+      "size_string": "sizeof(s_material_effect_material)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "tag (effect or sound)",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd",
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "secondary tag (effect or sound)",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd",
+              "snd!",
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "material name^",
+          "group_tag": "sted"
+        },
+        {
+          "type": "short_integer",
+          "name": "runtime material index!"
+        },
+        {
+          "type": "char_enum",
+          "name": "sweetener mode",
+          "definition": "sweeneter_mode_enum"
+        },
+        {
+          "type": "pad",
+          "name": "L",
+          "definition": 1
+        },
+        {
+          "type": "real",
+          "name": "max_visibility_distance#manual override for the max distance this effect can be from the camera and still be rendered (not valid for sounds)."
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144710790"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "sweeneter_mode_enum": {
+      "options": [
+        "sweetener default",
+        "sweetener enabled",
+        "sweetener disabled"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

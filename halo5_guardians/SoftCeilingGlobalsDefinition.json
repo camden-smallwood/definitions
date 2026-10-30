@@ -1,0 +1,117 @@
+{
+  "name": "SoftCeilingGlobalsDefinition",
+  "tag": "glso",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "SoftCeilingGlobalsDefinition_block",
+  "blocks": {
+    "SoftCeilingGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "SoftCeilingGlobalsDefinition_block_struct"
+    },
+    "soft_ceiling_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "soft_ceiling_globals_block"
+    }
+  },
+  "structs": {
+    "SoftCeilingGlobalsDefinition_block_struct": {
+      "guid": "09d3629ceb434d9a3afb76ae02c7e64b",
+      "size": 48,
+      "size_string": "(sizeof(i343::SoftCeilingGlobals) - Tag::SizeInfo<i343::SoftCeilingGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "soft ceilings",
+          "definition": "soft_ceiling_globals_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14482e130"
+    },
+    "soft_ceiling_globals_block": {
+      "guid": "5679e564a74b733677cfb683edea4fda",
+      "size": 28,
+      "size_string": "sizeof(s_game_globals_soft_ceiling)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "biped spring constant"
+        },
+        {
+          "type": "real",
+          "name": "biped normal damping"
+        },
+        {
+          "type": "real",
+          "name": "biped tangent damping"
+        },
+        {
+          "type": "real",
+          "name": "biped min tangent damp velocity"
+        },
+        {
+          "type": "real",
+          "name": "vehicle spring constant"
+        },
+        {
+          "type": "real",
+          "name": "vehicle normal damping"
+        },
+        {
+          "type": "real",
+          "name": "vehicle tangent damping"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144803ae0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

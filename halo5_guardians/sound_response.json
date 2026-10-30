@@ -1,0 +1,232 @@
+{
+  "name": "sound_response",
+  "tag": "sgrp",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "sound_response_block",
+  "blocks": {
+    "sound_response_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_response_block_struct"
+    },
+    "sound_response_data_block": {
+      "max_count": 10,
+      "max_count_string": "10",
+      "struct": "sound_response_data_block_struct"
+    },
+    "sound_response_permutation_block": {
+      "max_count": 10,
+      "max_count_string": "10",
+      "struct": "sound_response_permutation_block"
+    },
+    "sound_combine_response_block": {
+      "max_count": 10,
+      "max_count_string": "10",
+      "struct": "sound_combine_response_block"
+    }
+  },
+  "structs": {
+    "sound_response_block_struct": {
+      "guid": "358e8f04a74d776c4b2240a4ab3b122e",
+      "size": 48,
+      "size_string": "(sizeof(SoundResponseGroupDefinition) - Tag::SizeInfo<SoundResponseGroupDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "responses",
+          "definition": "sound_response_data_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481ffd0"
+    },
+    "sound_response_data_block_struct": {
+      "guid": "d1d759fe1049348bf19ca591a0622b93",
+      "size": 88,
+      "size_string": "sizeof(SoundResponseDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "string_id",
+          "name": "channel"
+        },
+        {
+          "type": "string_id",
+          "name": "category"
+        },
+        {
+          "type": "long_integer",
+          "name": "category priority"
+        },
+        {
+          "type": "real",
+          "name": "queue timeout"
+        },
+        {
+          "type": "real",
+          "name": "consideration time"
+        },
+        {
+          "type": "real",
+          "name": "gap after sound"
+        },
+        {
+          "type": "byte_flags",
+          "name": "queue behavior",
+          "definition": "sound_response_queue_flags"
+        },
+        {
+          "type": "pad",
+          "name": "SRBQXEK",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "potential responses",
+          "definition": "sound_response_permutation_block"
+        },
+        {
+          "type": "block",
+          "name": "combiners",
+          "definition": "sound_combine_response_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481feb0"
+    },
+    "sound_response_permutation_block": {
+      "guid": "9114ff4efb46fd3f66bab2bcd52ad832",
+      "size": 64,
+      "size_string": "sizeof(SoundResponsePermutationDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "sound",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "music",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "musc"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481fc70"
+    },
+    "sound_combine_response_block": {
+      "guid": "480447790f47270ef3fb4c9795cac28e",
+      "size": 40,
+      "size_string": "sizeof(SoundCombineResponseDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "byte_flags",
+          "name": "response behavior",
+          "definition": "sound_combine_response_flags"
+        },
+        {
+          "type": "pad",
+          "name": "SRBQXEK",
+          "definition": 3
+        },
+        {
+          "type": "tag_reference",
+          "name": "response",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sgrp"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481fda0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "sound_response_queue_flags": {
+      "options": [
+        "bypass queue",
+        "clear queue",
+        "stop active sound",
+        "do not track"
+      ]
+    },
+    "sound_combine_response_flags": {
+      "options": [
+        "cancel queued",
+        "cancel active",
+        "cancel new"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

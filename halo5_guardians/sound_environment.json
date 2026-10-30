@@ -1,0 +1,224 @@
+{
+  "name": "sound_environment",
+  "tag": "snde",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "sound_environment_block",
+  "blocks": {
+    "sound_environment_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_environment_block_struct"
+    }
+  },
+  "structs": {
+    "sound_environment_block_struct": {
+      "guid": "f2b8b49aec4b5264ba144f9da4236d2a",
+      "size": 48,
+      "size_string": "(sizeof(sound_environment) - Tag::SizeInfo<sound_environment::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "Reverb Settings",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "reverb settings",
+          "definition": "global_sound_reverb_block"
+        },
+        {
+          "type": "explanation",
+          "name": "Forced Lowpass",
+          "definition": "This will override obstruction and occlusion if you set the cutoff frequency to a non-zero value. Use the individual classes' \"forced lowpass wet mix\" value to alter the mix."
+        },
+        {
+          "type": "struct",
+          "name": "lowpass settings",
+          "definition": "global_sound_lowpass_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144789190"
+    },
+    "global_sound_reverb_block": {
+      "guid": "1d1eb3e4514ca7c56cd802ae068b3f2b",
+      "size": 20,
+      "size_string": "sizeof(s_sound_reverb_settings)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "WWise Environment",
+          "definition": "Use these values for WWise reverb."
+        },
+        {
+          "type": "string_id",
+          "name": "Environment name#Name of the environment from WWise. This will be a DSP effect with Environmental Effect checked."
+        },
+        {
+          "type": "string_id",
+          "name": "Environment name player#Name of the environment from WWise. This will be a DSP effect with Environmental Effect checked."
+        },
+        {
+          "type": "custom",
+          "name": "Dry mix value#0 to 1 with 0 being none, and 1 being full.",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
+        },
+        {
+          "type": "real",
+          "name": "Dry mix value#0 to 1 with 0 being none, and 1 being full.",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
+        },
+        {
+          "type": "custom",
+          "name": "Wet mix value#0 to 1 with 0 being none, and 1 being full.",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
+        },
+        {
+          "type": "real",
+          "name": "Wet mix value#0 to 1 with 0 being none, and 1 being full.",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
+        },
+        {
+          "type": "custom",
+          "name": "Player wet mix value#0 to 1 with 0 being none, and 1 being full.",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
+        },
+        {
+          "type": "real",
+          "name": "Player wet mix value#0 to 1 with 0 being none, and 1 being full.",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 1.0,
+            "step": 0.01
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144786d20"
+    },
+    "global_sound_lowpass_block": {
+      "guid": "d9058ff3334fbbf9fed7ea95258f5861",
+      "size": 8,
+      "size_string": "sizeof(s_sound_lowpass_settings)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "cutoff frequency:Hz",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 20000.0,
+            "step": 1.0
+          }
+        },
+        {
+          "type": "real",
+          "name": "cutoff frequency:Hz",
+          "group_tag": "sled",
+          "definition": {
+            "min": 0.0,
+            "max": 20000.0,
+            "step": 1.0
+          }
+        },
+        {
+          "type": "custom",
+          "name": "output gain:dB",
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
+        },
+        {
+          "type": "real",
+          "name": "output gain:dB",
+          "group_tag": "sled",
+          "definition": {
+            "min": -64.0,
+            "max": 12.0,
+            "step": 0.005
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144786e30"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

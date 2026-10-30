@@ -1,0 +1,239 @@
+{
+  "name": "zoneset_baked_pvs",
+  "tag": "pvsb",
+  "version": 1,
+  "flags": 2048,
+  "parent_tag": "aTag",
+  "block": "zoneset_baked_pvs_block",
+  "blocks": {
+    "zoneset_baked_pvs_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "zoneset_baked_pvs_block_struct"
+    },
+    "ScenarioZoneSetBakedPVSSubregionLongBlock": {
+      "max_count": 65535,
+      "max_count_string": "UNSIGNED_SHORT_MAX",
+      "struct": "ScenarioZoneSetBakedPVSSubregionLongBlock"
+    },
+    "ScenarioZoneSetBakedPVSPerBSPDataBlock": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "ScenarioZoneSetBakedPVSPerBSPDataBlock"
+    },
+    "ScenarioZoneSetBakedPVSSubregionBlock": {
+      "max_count": 65535,
+      "max_count_string": "UNSIGNED_SHORT_MAX",
+      "struct": "ScenarioZoneSetBakedPVSSubregionBlock"
+    },
+    "ScenarioZoneSetBakedPVSSubregionDWORDBlock": {
+      "max_count": 65535,
+      "max_count_string": "UNSIGNED_SHORT_MAX",
+      "struct": "ScenarioZoneSetBakedPVSSubregionDWORDBlock"
+    }
+  },
+  "structs": {
+    "zoneset_baked_pvs_block_struct": {
+      "guid": "1a94a19f234b812a3c1d46a265cab95e",
+      "size": 88,
+      "size_string": "(sizeof(ScenarioZoneSetBakedPVS) - Tag::SizeInfo<ScenarioZoneSetBakedPVS::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "BSP index map",
+          "definition": "ScenarioZoneSetBakedPVSSubregionLongBlock"
+        },
+        {
+          "type": "block",
+          "name": "Per BSP data",
+          "definition": "ScenarioZoneSetBakedPVSPerBSPDataBlock"
+        },
+        {
+          "type": "tag_resource",
+          "name": "resource data",
+          "definition": "ScenarioZoneSetBakedPVSResource_schema"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474eff0"
+    },
+    "ScenarioZoneSetBakedPVSSubregionLongBlock": {
+      "guid": "ff84cb10414e57d9488770a494251e82",
+      "size": 4,
+      "size_string": "sizeof(long)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "Value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474eb50"
+    },
+    "ScenarioZoneSetBakedPVSPerBSPDataBlock": {
+      "guid": "2c1e4010e64bd96b19675daafa6a56d5",
+      "size": 88,
+      "size_string": "sizeof(ScenarioZoneSetBakedPVSPerBSPData)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "Subregion array",
+          "definition": "ScenarioZoneSetBakedPVSSubregionBlock"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "AABB min"
+        },
+        {
+          "type": "real_point_3d",
+          "name": "AABB max"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "Block Size"
+        },
+        {
+          "type": "long_integer",
+          "name": "Instance count"
+        },
+        {
+          "type": "long_integer",
+          "name": "Block count X"
+        },
+        {
+          "type": "long_integer",
+          "name": "Block count Y"
+        },
+        {
+          "type": "long_integer",
+          "name": "BSP index"
+        },
+        {
+          "type": "int64_integer",
+          "name": "Instance Postprocess Checksum!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474edb0"
+    },
+    "ScenarioZoneSetBakedPVSSubregionBlock": {
+      "guid": "e334748f164eeb9633e946979c991c9a",
+      "size": 40,
+      "size_string": "sizeof(ScenarioZoneSetBakedPVSSubregion)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "Visibility array",
+          "definition": "ScenarioZoneSetBakedPVSSubregionDWORDBlock"
+        },
+        {
+          "type": "word_integer",
+          "name": "sx"
+        },
+        {
+          "type": "word_integer",
+          "name": "sy"
+        },
+        {
+          "type": "real",
+          "name": "z min"
+        },
+        {
+          "type": "real",
+          "name": "z max"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474ec80"
+    },
+    "ScenarioZoneSetBakedPVSSubregionDWORDBlock": {
+      "guid": "de41aa1dc64ee9de8e799b9ef7f6e834",
+      "size": 4,
+      "size_string": "sizeof(dword)",
+      "fields": [
+        {
+          "type": "dword_integer",
+          "name": "Value"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474ea20"
+    },
+    "ScenarioZoneSetBakedPVSResource_schema_struct": {
+      "guid": "8799d23e5945319611cda7935ece9c98",
+      "size": 56,
+      "size_string": "sizeof(ScenarioZoneSetBakedPVSResource)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "BSP index map",
+          "definition": "ScenarioZoneSetBakedPVSSubregionLongBlock"
+        },
+        {
+          "type": "block",
+          "name": "Per BSP data",
+          "definition": "ScenarioZoneSetBakedPVSPerBSPDataBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474eed0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "resources": {
+    "ScenarioZoneSetBakedPVSResource_schema": {
+      "flags": 0,
+      "struct": "ScenarioZoneSetBakedPVSResource_schema_struct"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

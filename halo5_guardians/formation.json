@@ -1,0 +1,170 @@
+{
+  "name": "formation",
+  "tag": "form",
+  "version": 1,
+  "flags": 3,
+  "parent_tag": "aTag",
+  "block": "formation_block",
+  "blocks": {
+    "formation_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "formation_block_struct"
+    },
+    "formation_primitive_definition": {
+      "max_count": 4,
+      "max_count_string": "k_max_primitives_per_formation",
+      "struct": "formation_primitive_definition"
+    },
+    "formation_point_definition": {
+      "max_count": 8,
+      "max_count_string": "k_max_points_per_primitive",
+      "struct": "formation_point_definition"
+    }
+  },
+  "structs": {
+    "formation_block_struct": {
+      "guid": "703d815dc84d0f9064c3679110a32b5a",
+      "size": 48,
+      "size_string": "(sizeof(s_formation_definition) - Tag::SizeInfo<s_formation_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "block",
+          "name": "primitives",
+          "definition": "formation_primitive_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447d0660"
+    },
+    "formation_primitive_definition": {
+      "guid": "08d7a08f884ff3b9228145853321cacc",
+      "size": 52,
+      "size_string": "sizeof(struct s_formation_primitive)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "",
+          "definition": ""
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "formation_primitive_flags"
+        },
+        {
+          "type": "short_integer",
+          "name": "priority"
+        },
+        {
+          "type": "short_integer",
+          "name": "capacity*!"
+        },
+        {
+          "type": "pad",
+          "name": "post-capacity-pad",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "dist forwards"
+        },
+        {
+          "type": "real",
+          "name": "dist backwards"
+        },
+        {
+          "type": "real",
+          "name": "rank spacing"
+        },
+        {
+          "type": "real",
+          "name": "file spacing"
+        },
+        {
+          "type": "block",
+          "name": "points",
+          "definition": "formation_point_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447d0550"
+    },
+    "formation_point_definition": {
+      "guid": "b1aaab237e4004a542a82ea083647b82",
+      "size": 8,
+      "size_string": "sizeof(struct s_formation_point)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "",
+          "definition": ""
+        },
+        {
+          "type": "angle",
+          "name": "angle"
+        },
+        {
+          "type": "real",
+          "name": "offset"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447d0420"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "formation_primitive_flags": {
+      "options": [
+        "radial",
+        "leader"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

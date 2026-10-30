@@ -1,0 +1,194 @@
+{
+  "name": "weapon_globals",
+  "tag": "wgbl",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "weapon_globals_block",
+  "blocks": {
+    "weapon_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weapon_globals_block_struct"
+    },
+    "WeaponAdsReticleMovementThresholds": {
+      "max_count": 8,
+      "max_count_string": "k_maxDebugAdsReticleMovementThresholds",
+      "struct": "WeaponAdsReticleMovementThresholds_struct"
+    }
+  },
+  "structs": {
+    "weapon_globals_block_struct": {
+      "guid": "cfc64bbd1b48d5fa24c2fc8641505692",
+      "size": 208,
+      "size_string": "(sizeof(i343::Weapon::WeaponGlobalsDefinition) - Tag::SizeInfo<i343::Weapon::WeaponGlobalsDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "gunkick yaw mapping bounds:degrees#applies the curve during the range.  Values outside the range get moved to the closest side of the curve"
+        },
+        {
+          "type": "struct",
+          "name": "gunkick yaw to roll",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "viewkick yaw mapping bounds{gunkick pitch mapping bounds}:degrees#applies the curve during the range.  Values outside the range get moved to the closest side of the curve"
+        },
+        {
+          "type": "struct",
+          "name": "viewkick yaw to roll",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "real",
+          "name": "max player additive velocity for flag throw#This is used to scale the players velocity between 0 and 1 to apply to the throw velocity curve."
+        },
+        {
+          "type": "struct",
+          "name": "flag throw forward additive velocity ",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "flag throw backward additive velocity ",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "flag throw pitch#The z axis additive value depending on the players aim vector z value",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "block",
+          "name": "ads reticle movement thresholds",
+          "definition": "WeaponAdsReticleMovementThresholds"
+        },
+        {
+          "type": "pad",
+          "name": "endPad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449a7e50"
+    },
+    "scalar_function_named_struct": {
+      "guid": "8992cb721e48760251a36794187c6df5",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738e30"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "WeaponAdsReticleMovementThresholds_struct": {
+      "guid": "30496183f64de42b3789aaae9bd34cd3",
+      "size": 48,
+      "size_string": "sizeof(DebugAdsReticleMovmementThreshold)",
+      "fields": [
+        {
+          "type": "string",
+          "name": "ads reticle movement threshold name^"
+        },
+        {
+          "type": "angle",
+          "name": "ads reticle movement threshold angle:degrees"
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "ads reticle movement threshold color"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449a7d30"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

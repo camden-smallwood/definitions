@@ -1,0 +1,163 @@
+{
+  "name": "CollectibleGlobalsDefinition",
+  "tag": "clct",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "CollectibleGlobalsDefinition_block",
+  "blocks": {
+    "CollectibleGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "CollectibleGlobalsDefinition_block_struct"
+    },
+    "CollectibleBlock": {
+      "max_count": 128,
+      "max_count_string": "k_maxCollectiblesPerType",
+      "struct": "CollectibleBlock"
+    }
+  },
+  "structs": {
+    "CollectibleGlobalsDefinition_block_struct": {
+      "guid": "de5efd56f045972a9e946e8f64ba30b7",
+      "size": 72,
+      "size_string": "(sizeof(i343::CollectibleGlobals) - Tag::SizeInfo<i343::CollectibleGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "skulls",
+          "definition": "CollectibleBlock"
+        },
+        {
+          "type": "block",
+          "name": "audio logs",
+          "definition": "CollectibleBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448069e0"
+    },
+    "CollectibleBlock": {
+      "guid": "f340aa53d4410b2a8d73f3aff7784d50",
+      "size": 52,
+      "size_string": "sizeof(Collectible)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "collectible race",
+          "definition": "CollectibleRaceEnum"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 1
+        },
+        {
+          "type": "short_enum",
+          "name": "collectible mission",
+          "definition": "CollectibleMissionEnum"
+        },
+        {
+          "type": "string_id",
+          "name": "name#used by scripts and code to reference this"
+        },
+        {
+          "type": "string_id",
+          "name": "title#localized title in the UI"
+        },
+        {
+          "type": "string_id",
+          "name": "description#localized description in the UI"
+        },
+        {
+          "type": "tag_reference",
+          "name": "audio#audio associated with the collectible e.g. audio log",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "char_integer",
+          "name": "game variant index#the index for this collectible in GameOptions"
+        },
+        {
+          "type": "pad",
+          "name": "pad[3]",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448068d0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "CollectibleRaceEnum": {
+      "options": [
+        "Forerunner",
+        "Human",
+        "Covenant"
+      ]
+    },
+    "CollectibleMissionEnum": {
+      "options": [
+        "Halsey",
+        "Assault",
+        "Meridian",
+        "MeridianHub",
+        "UnconfirmedReports",
+        "Evacuation",
+        "Builder",
+        "Grotto",
+        "SangheliosHub1",
+        "Plateau",
+        "SangheliosHub2",
+        "TsunamiStation",
+        "Arrival",
+        "Trials",
+        "Sentinels"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

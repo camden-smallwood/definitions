@@ -1,0 +1,481 @@
+{
+  "name": "sound",
+  "tag": "snd!",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "sound_block",
+  "blocks": {
+    "sound_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "sound_block_struct"
+    },
+    "soundVOEventBlock": {
+      "max_count": 32,
+      "max_count_string": "MAXIMUM_PERMUTATIONS_PER_PITCH_RANGE",
+      "struct": "soundVOEventBlock_struct"
+    },
+    "narrativeReferenceBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "narrativeReferenceBlock_struct"
+    },
+    "aiDialogueEventBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "aiDialogueEventBlock_struct"
+    },
+    "facial_animation_language_block": {
+      "max_count": 17,
+      "max_count_string": "k_language_count",
+      "struct": "facial_animation_language_block_struct"
+    },
+    "facial_animation_permutation_block": {
+      "max_count": 544,
+      "max_count_string": "MAXIMUM_PITCH_RANGES_PER_SOUND*MAXIMUM_PERMUTATIONS_PER_PITCH_RANGE",
+      "struct": "facial_animation_permutation_block_struct"
+    },
+    "facial_animation_curve_block": {
+      "max_count": 34,
+      "max_count_string": "k_facial_animation_track_count",
+      "struct": "facial_animation_curve_block_struct"
+    }
+  },
+  "structs": {
+    "sound_block_struct": {
+      "guid": "90cf729fed4644e6df8033827cc26797",
+      "size": 144,
+      "size_string": "(sizeof(SoundEventDefinition) - Tag::SizeInfo<SoundEventDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "SoundEventDefinitionFlags"
+        },
+        {
+          "type": "string_id",
+          "name": "SFX Event Name#Sound event name."
+        },
+        {
+          "type": "string_id",
+          "name": "SFX Player Event Name#Optional sound event name for player only."
+        },
+        {
+          "type": "string_id",
+          "name": "SFX Fallback Event Name#Fallback sound event if the others don't play - should be in a guaranteed bank."
+        },
+        {
+          "type": "string_id",
+          "name": "SFX Player Fallback Event Name#Fallback player-only sound event if the others don't play - should be in a guaranteed bank."
+        },
+        {
+          "type": "real",
+          "name": "Max Radius"
+        },
+        {
+          "type": "real",
+          "name": "Max Duration#Max duration of this event. Enter manually for now - will auto-fill later."
+        },
+        {
+          "type": "real",
+          "name": "Don't play time.#Time the event will not retrigger for (global)"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Sound bank#Reference to the sound bank tag this event is in. Can be empty.",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "sbnk"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "Player sound bank#Will only load if there is a player event set above. Reference to the player sound bank tag this event is in. Can be empty.",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "sbnk"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "VO Event Info",
+          "definition": "soundVOEventBlock"
+        },
+        {
+          "type": "long_integer",
+          "name": "deterministic flag index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144784fa0"
+    },
+    "soundVOEventBlock_struct": {
+      "guid": "dd34010eba4bfe628d85d982d8072ee7",
+      "size": 100,
+      "size_string": "sizeof(soundVOEventInfo)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Event Name*"
+        },
+        {
+          "type": "string_id",
+          "name": "Subtitle Name*"
+        },
+        {
+          "type": "real",
+          "name": "Event duration*"
+        },
+        {
+          "type": "real",
+          "name": "Event max radius"
+        },
+        {
+          "type": "block",
+          "name": "Narrative Reference",
+          "definition": "narrativeReferenceBlock"
+        },
+        {
+          "type": "block",
+          "name": "AI Dialogue Info",
+          "definition": "aiDialogueEventBlock"
+        },
+        {
+          "type": "block",
+          "name": "facial animation resource languages",
+          "definition": "facial_animation_language_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144784b50"
+    },
+    "narrativeReferenceBlock_struct": {
+      "guid": "92c408117d49f210f70da3891d824d0e",
+      "size": 364,
+      "size_string": "sizeof(narrativeReferenceInfo)",
+      "fields": [
+        {
+          "type": "string",
+          "name": "Character name*"
+        },
+        {
+          "type": "long_string",
+          "name": "Dialogue*"
+        },
+        {
+          "type": "string",
+          "name": "WWise effect*"
+        },
+        {
+          "type": "string",
+          "name": "Narrative Wwise Effect Recommendation"
+        },
+        {
+          "type": "long_enum",
+          "name": "Wwise 2D/3D*",
+          "definition": "sound_2d3d_enum_definition"
+        },
+        {
+          "type": "long_enum",
+          "name": "Narrative 2D/3D Recommendation",
+          "definition": "sound_2d3d_enum_definition"
+        },
+        {
+          "type": "real",
+          "name": "WWise Attenuation*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144784920"
+    },
+    "aiDialogueEventBlock_struct": {
+      "guid": "ed042cb6944152f86fcc8f9e4549b7a9",
+      "size": 8,
+      "size_string": "sizeof(aiDialogueEventInfo)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "SpeechEventInfoFlags"
+        },
+        {
+          "type": "real",
+          "name": "skip fraction#Percent this file will be skipped when picked. 0 is always, 0.99 is almost never"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144784a30"
+    },
+    "facial_animation_language_block_struct": {
+      "guid": "a0f08052454a80a2452d51b6b42f3132",
+      "size": 20,
+      "size_string": "sizeof(s_facial_animation_language)",
+      "fields": [
+        {
+          "type": "tag_resource",
+          "name": "facial animation resource",
+          "definition": "facial_animation_resource_definition"
+        },
+        {
+          "type": "long_enum",
+          "name": "language",
+          "definition": "sound_language_enum_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144784650"
+    },
+    "facial_animation_resource_definition_struct": {
+      "guid": "9e468c26d84387d6f7c98c89e70205c6",
+      "size": 56,
+      "size_string": "sizeof(s_facial_animation)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "facial animation permutations",
+          "definition": "facial_animation_permutation_block"
+        },
+        {
+          "type": "data",
+          "name": "compressed facial animation curve data",
+          "definition": "compressed_facial_animation_curve_data"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144784540"
+    },
+    "facial_animation_permutation_block_struct": {
+      "guid": "990ffe0e7148ec36a51479a861ce5165",
+      "size": 44,
+      "size_string": "sizeof(struct s_facial_animation_permutation)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "start time"
+        },
+        {
+          "type": "real",
+          "name": "end time"
+        },
+        {
+          "type": "real",
+          "name": "blend in"
+        },
+        {
+          "type": "real",
+          "name": "blend out"
+        },
+        {
+          "type": "block",
+          "name": "facial animation curves",
+          "definition": "facial_animation_curve_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144784410"
+    },
+    "facial_animation_curve_block_struct": {
+      "guid": "3b4966a59f403194b2f9e0abc8b5d519",
+      "size": 12,
+      "size_string": "sizeof(struct s_facial_animation_curve)",
+      "fields": [
+        {
+          "type": "long_enum",
+          "name": "facial animation track",
+          "definition": "facial_animation_track_enum_definition"
+        },
+        {
+          "type": "long_integer",
+          "name": "facial animation curve data offset"
+        },
+        {
+          "type": "long_integer",
+          "name": "facial animation curve data size"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144784300"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "SoundEventDefinitionFlags": {
+      "options": [
+        "never obstruct#disable occlusion/obstruction for this sound",
+        "use huge sound transmission",
+        "link count to owner unit",
+        "don't use lipsync data",
+        "instant sound propagation",
+        "optional player sound event!*",
+        "fallback sound event!*",
+        "has lipsync data",
+        "is deterministic",
+        "is external source",
+        "override external source event",
+        "use don't play time!",
+        "delay start if sound bank not loaded",
+        "use fallback only for DVD",
+        "has subtitle!*",
+        "ignore node transform#use this if you're getting wacky spatialization (such as scorpion cannon)",
+        "radio combo voice",
+        "cinematic allow tails to play out",
+        "negate radius-based focus#Use the opposite of the decision for whether to apply focus feature based on whether the sound is 2D or 3D"
+      ]
+    },
+    "sound_2d3d_enum_definition": {
+      "options": [
+        "2D",
+        "3D",
+        "Combo"
+      ]
+    },
+    "SpeechEventInfoFlags": {
+      "options": [
+        "Campaign Only",
+        "Exclude from certain missions",
+        "Exclude from M10",
+        "Exclude from M20",
+        "Exclude from M30",
+        "Exclude from M40",
+        "Exclude from M60",
+        "Exclude from M70",
+        "Exclude from M80",
+        "Exclude from M90"
+      ]
+    },
+    "facial_animation_track_enum_definition": {
+      "options": [
+        "Silence",
+        "Eat",
+        "Earth",
+        "If",
+        "Ox",
+        "Oat",
+        "Wet",
+        "Size",
+        "Church",
+        "Fave",
+        "Though",
+        "Told",
+        "Bump",
+        "New",
+        "Roar",
+        "Cage",
+        "Eyebrow_Raise",
+        "Blink",
+        "Orientation_Head_Pitch",
+        "Orientation_Head_Roll",
+        "Orientation_Head_Yaw",
+        "Emphasis_Head_Pitch",
+        "Emphasis_Head_Roll",
+        "Emphasis_Head_Yaw",
+        "Gaze_Eye_Pitch",
+        "Gaze_Eye_Yaw",
+        "happy",
+        "sad",
+        "angry",
+        "disgusted",
+        "scared",
+        "surprised",
+        "pain",
+        "shout"
+      ]
+    },
+    "sound_language_enum_definition": {
+      "options": [
+        "english",
+        "japanese",
+        "german",
+        "french",
+        "spanish",
+        "mexican spanish",
+        "italian",
+        "korean",
+        "chinese-traditional",
+        "chinese-simplified",
+        "portuguese",
+        "polish",
+        "russian",
+        "danish",
+        "finnish",
+        "dutch",
+        "norwegian"
+      ]
+    }
+  },
+  "datas": {
+    "compressed_facial_animation_curve_data": {
+      "alignment": 0,
+      "flags": 2,
+      "max_size": 18939904,
+      "max_size_string": "k_max_compressed_facial_animation_data_per_track*k_facial_animation_track_count*MAXIMUM_PITCH_RANGES_PER_SOUND*MAXIMUM_PERMUTATIONS_PER_PITCH_RANGE"
+    }
+  },
+  "resources": {
+    "facial_animation_resource_definition": {
+      "flags": 0,
+      "struct": "facial_animation_resource_definition_struct"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

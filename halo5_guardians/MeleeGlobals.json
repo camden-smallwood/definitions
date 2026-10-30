@@ -1,0 +1,397 @@
+{
+  "name": "MeleeGlobals",
+  "tag": "mglb",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "MeleeGlobals_block",
+  "blocks": {
+    "MeleeGlobals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "MeleeGlobals_block_struct"
+    },
+    "melee_damage_parameters_block": {
+      "max_count": 2,
+      "max_count_string": "k_melee_damage_class_count",
+      "struct": "melee_damage_parameters_block"
+    }
+  },
+  "structs": {
+    "MeleeGlobals_block_struct": {
+      "guid": "2556657d2a4880c91f4894972e722798",
+      "size": 136,
+      "size_string": "(sizeof(MeleeGlobalsDefinition) - Tag::SizeInfo<MeleeGlobalsDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "melee_globals_definition_flags"
+        },
+        {
+          "type": "real",
+          "name": "melee death acceleration#acceleration applied to a biped when killed by a melee.  0 defaults to 1.6"
+        },
+        {
+          "type": "real",
+          "name": "uber melee death acceleration#acceleration applied to a biped when killed by an uber melee.  0 defaults to 4"
+        },
+        {
+          "type": "custom",
+          "name": "clang",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "explanation",
+          "name": "clang",
+          "definition": "This occurs when one person does melee damage to another unit performing a melee that could hit the other unit\nand either unit has no vitality remaining\n\ncase both units have no vitality remaining:\nif the abolute value of the difference between the units vitality is less than \"simultaneous death vitality threshold\", then both will die\notherwise whoever has more health will be saved (brought down to near 0 vitality) and the other will get killed\n\ncase only 1 unit has no vitality remaining:\nthe unit with no vitality is killed, and the other unit's vitality isn't modified from the clang"
+        },
+        {
+          "type": "explanation",
+          "name": "Network sensitive fields",
+          "definition": "WARNING these affects how melees over network.\nDon't modify without consulting weapon or network engineer.\nThese are hidden by default and must be modified in expert mode."
+        },
+        {
+          "type": "real",
+          "name": "clang simultaneous death vitality threshold!#Defaults to 0.59.  Halo 3 had a value of 0.59 (the average of damage caused by 4 BR and 4 AR bullets worth of damage which is roughly 26.5 damage out of a body health of 45).  Reach had 1.1 so they both would die if both had no shields since there was no bleed through."
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "real",
+          "name": "input hold time#length of time that separates early release melee actions, e.g. melee vs ground pound when in the air (defaults to 0.25)"
+        },
+        {
+          "type": "struct",
+          "name": "targeting",
+          "definition": "MeleeTargetingDefinition"
+        },
+        {
+          "type": "struct",
+          "name": "physics",
+          "definition": "MeleePhysicsDefinition"
+        },
+        {
+          "type": "custom",
+          "name": "default melee damage",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "block",
+          "name": "default damage",
+          "definition": "melee_damage_parameters_block"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449ca4c0"
+    },
+    "MeleeTargetingDefinition": {
+      "guid": "8ac8e35a0e43ff8caec263b3ab63cab9",
+      "size": 56,
+      "size_string": "sizeof(TargetingDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "targeting",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "yaw angles:degrees#default[20, 50]  Interpolates from low to high as you get closer to the target.  Low is used at maximum distance away"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "yaw angles lunging:degrees#default[60, 60]  Interpolates from low to high as you get closer to the target.  Low is used at maximum distance away"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "pitch angles:degrees#default[40, 40]  Interpolates from low to high as you get closer to the target.  Low is used at maximum distance away"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "pitch angles lunging:degrees#default[80, 80] Interpolates from low to high as you get closer to the target.  Low is used at maximum distance away"
+        },
+        {
+          "type": "angle",
+          "name": "ground pitch down max:degrees/s#default[30]  How far your target can be below you when on the ground"
+        },
+        {
+          "type": "explanation",
+          "name": "aim bending",
+          "definition": "This allows your aim to snap to the melee target."
+        },
+        {
+          "type": "angle",
+          "name": "aim bend yaw max speed:degrees#default[540]"
+        },
+        {
+          "type": "angle",
+          "name": "aim bend yaw max:degrees#default[50]"
+        },
+        {
+          "type": "angle",
+          "name": "aim bend yaw pitch speed:degrees/s#default[540]"
+        },
+        {
+          "type": "angle",
+          "name": "aim bend yaw pitch up max:degrees#default[25]"
+        },
+        {
+          "type": "angle",
+          "name": "aim bend yaw pitch down max:degrees#default[15]"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449ca290"
+    },
+    "MeleePhysicsDefinition": {
+      "guid": "5702d760cd4bb372c09aa7894ceca101",
+      "size": 16,
+      "size_string": "sizeof(PhysicsDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "physics",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real",
+          "name": "lunge maximum speed:wu/s#default[12]"
+        },
+        {
+          "type": "real",
+          "name": "uber lunge maximum speed:wu/s#default[12]"
+        },
+        {
+          "type": "real",
+          "name": "lunge acceleration time:seconds#default[0.1]"
+        },
+        {
+          "type": "real",
+          "name": "lunge deceleration time:seconds#default[0.1]"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449ca3a0"
+    },
+    "melee_damage_parameters_block": {
+      "guid": "2ea0ebb96ca795e874ea8baba5c19c40",
+      "size": 376,
+      "size_string": "sizeof(s_melee_damage_parameters)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "melee damage parameters",
+          "definition": "damage pyramid angles: defines the frustum from the camera that the melee-attack uses to find targets\ndamage pyramid depth: how far the melee attack searches for a target"
+        },
+        {
+          "type": "real_euler_angles_2d",
+          "name": "damage pyramid angles"
+        },
+        {
+          "type": "real",
+          "name": "damage pyramid depth:wu#0 defaults to k_default_player_melee_distance"
+        },
+        {
+          "type": "real",
+          "name": "maximum lunge range:wu#0 defaults to k_default_player_melee_lunge_distance"
+        },
+        {
+          "type": "real",
+          "name": "damage lunge explosive depth:wu#the distance out from the pyramid center to spawn explosive effects.  This value will be clamped to the damage pyramid depth. 0 defaults to the damage pyramid depth"
+        },
+        {
+          "type": "real",
+          "name": "runtime damage lunge explosive fraction*!"
+        },
+        {
+          "type": "tag_reference",
+          "name": "melee damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "melee response",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "lunge melee damage#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "lunge melee response#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "empty melee damage#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "empty melee response#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "clang melee damage#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "clang melee response#this is only important for the energy sword",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "clang melee against melee weapon damage#e.g. used by AR to damage sword guy when clanging sword attack",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "clang melee against melee weapon damage response#e.g. used by AR to damage sword guy when clanging sword attack",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jpt!",
+              "drdf"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "lunge melee explosive damage",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449d9e20"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "melee_globals_definition_flags": {
+      "options": [
+        "clang save both if both died"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

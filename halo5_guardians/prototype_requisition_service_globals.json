@@ -1,0 +1,151 @@
+{
+  "name": "prototype_requisition_service_globals",
+  "tag": "rpsg",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "prototype_requisition_service_globals_block",
+  "blocks": {
+    "prototype_requisition_service_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "prototype_requisition_service_globals_block_struct"
+    },
+    "prototype_requisition_globals_pack_entry": {
+      "max_count": 512,
+      "max_count_string": "512",
+      "struct": "prototype_requisition_globals_pack_entry_struct"
+    },
+    "prototype_requisition_terminal_category_ui_data": {
+      "max_count": 16,
+      "max_count_string": "16",
+      "struct": "prototype_requisition_terminal_category_ui_data_struct"
+    }
+  },
+  "structs": {
+    "prototype_requisition_service_globals_block_struct": {
+      "guid": "3d2aa1bc0d4f8333e78ae3bed8577bbd",
+      "size": 88,
+      "size_string": "(sizeof(PrototypeRequisitionServiceGlobals) - Tag::SizeInfo<PrototypeRequisitionServiceGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "packs",
+          "definition": "prototype_requisition_globals_pack_entry"
+        },
+        {
+          "type": "long_integer",
+          "name": "starting credits"
+        },
+        {
+          "type": "long_integer",
+          "name": "starting currency"
+        },
+        {
+          "type": "long_integer",
+          "name": "credits to grant on match complete"
+        },
+        {
+          "type": "block",
+          "name": "in game terminal category UI data",
+          "definition": "prototype_requisition_terminal_category_ui_data"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144749660"
+    },
+    "prototype_requisition_globals_pack_entry_struct": {
+      "guid": "76e487873b4c897edf33a0a1cce3dfe0",
+      "size": 32,
+      "size_string": "sizeof(Tag::Reference<PrototypeRequisitionPackDefinition>)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "pack^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "rppd"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144749420"
+    },
+    "prototype_requisition_terminal_category_ui_data_struct": {
+      "guid": "63334ee70245080e3fcf7b805523519f",
+      "size": 68,
+      "size_string": "sizeof(PrototypeRequisitionTerminalCategoryUIData)",
+      "fields": [
+        {
+          "type": "string",
+          "name": "name"
+        },
+        {
+          "type": "tag_reference",
+          "name": "icon bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "icon sprite index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144749540"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

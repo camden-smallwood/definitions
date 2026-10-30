@@ -1,0 +1,151 @@
+{
+  "name": "game_performance_throttle",
+  "tag": "gptd",
+  "version": 1,
+  "flags": 6,
+  "parent_tag": "aTag",
+  "block": "game_performance_throttle_block",
+  "blocks": {
+    "game_performance_throttle_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_performance_throttle_block_struct"
+    },
+    "game_performance_throttle_entries_block": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "game_performance_throttle_entries_block"
+    }
+  },
+  "structs": {
+    "game_performance_throttle_block_struct": {
+      "guid": "e0ab7310bb47143dfcb4e089b163bdb0",
+      "size": 48,
+      "size_string": "(sizeof(s_game_performance_throttle_definitions) - Tag::SizeInfo<s_game_performance_throttle_definitions::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "entries",
+          "definition": "game_performance_throttle_entries_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480b2b0"
+    },
+    "game_performance_throttle_entries_block": {
+      "guid": "03a99571a549be695e30cdc5dc8f8657",
+      "size": 28,
+      "size_string": "sizeof(s_game_performance_throttle_entry)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "filter",
+          "definition": "game_performance_throttle_filter_struct"
+        },
+        {
+          "type": "struct",
+          "name": "profile",
+          "definition": "game_performance_throttle_profile_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480b190"
+    },
+    "game_performance_throttle_filter_struct": {
+      "guid": "05cfa4aa59494308920dc3c00e07ab12",
+      "size": 4,
+      "size_string": "sizeof(s_game_performance_throttle_filter)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "minimum player count"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480af50"
+    },
+    "game_performance_throttle_profile_struct": {
+      "guid": "05cfa4a959494388920dc3b00e07ab16",
+      "size": 24,
+      "size_string": "sizeof(s_game_performance_throttle_profile)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "maximum havok proxy count"
+        },
+        {
+          "type": "long_integer",
+          "name": "maximum impact count"
+        },
+        {
+          "type": "long_integer",
+          "name": "vehicle suspension update frequency"
+        },
+        {
+          "type": "long_integer",
+          "name": "Actor LOD, AI actors to update fully each frame"
+        },
+        {
+          "type": "long_integer",
+          "name": "Actor LOD, Number of frames to tick LODed AI"
+        },
+        {
+          "type": "long_integer",
+          "name": "Actor LOD, Number of concurrent LOD actors to tick"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480b060"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

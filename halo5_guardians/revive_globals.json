@@ -1,0 +1,350 @@
+{
+  "name": "revive_globals",
+  "tag": "revi",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "revive_globals_block",
+  "blocks": {
+    "revive_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "revive_globals_block_struct"
+    }
+  },
+  "structs": {
+    "revive_globals_block_struct": {
+      "guid": "d92d486ad6473d33332b3facb402b02d",
+      "size": 728,
+      "size_string": "(sizeof(ReviveGlobals) - Tag::SizeInfo<ReviveGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "Audio",
+          "definition": ""
+        },
+        {
+          "type": "tag_reference",
+          "name": "on downed sound#one shot when downed state is entered",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "on stunned sound#one shot when stunned state is entered",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "target revive completed#one shot when downed teammate is revived",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "source revive completed#one shot when player completes reviving a downed teammate",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "entire team is downed#2d one shot when final teammate enters downed state",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "on dead sound#one shot when dead after stunned too many times, or after bleed out",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "on revive requested#confirmation sounds for press X for revive",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "snd!"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "reviving#loop target plays while being revived",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "lsnd"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Effects",
+          "definition": ""
+        },
+        {
+          "type": "tag_reference",
+          "name": "downed",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "downed loop",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "stunned",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "stunned loop",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "bleed out",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "revive#player being revived",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "revive success#player being revived",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "revive interrupted#player being revived",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "reviver#player performing revive",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "reviver success#player performing revive",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "reviver interrupted#player performing revive",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "reward overshield#applied to both players",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "pugm"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "Tuning",
+          "definition": ""
+        },
+        {
+          "type": "real",
+          "name": "cancel revive damage threshold#amount of damage taken that will cancel revive"
+        },
+        {
+          "type": "real",
+          "name": "revive action duration#time the act of reviving takes"
+        },
+        {
+          "type": "real",
+          "name": "Revive bleedout Time Normal"
+        },
+        {
+          "type": "real",
+          "name": "Revive bleedout Time Heroic"
+        },
+        {
+          "type": "real",
+          "name": "Revive bleedout Time Legendary"
+        },
+        {
+          "type": "real",
+          "name": "Revive bleedout Time Unreachable"
+        },
+        {
+          "type": "real",
+          "name": "Musketeer bleedout scale"
+        },
+        {
+          "type": "real",
+          "name": "All humans dead bleedout scale"
+        },
+        {
+          "type": "real",
+          "name": "help me audio timer# wait this many seconds between asking for revive help"
+        },
+        {
+          "type": "real",
+          "name": "cool down for pulse for help#Wait this many second between pulsing for help"
+        },
+        {
+          "type": "real",
+          "name": "Revive Powerup"
+        },
+        {
+          "type": "real",
+          "name": "Revive Move Speed Death# move more than this speed after you're downed and you die"
+        },
+        {
+          "type": "long_integer",
+          "name": "Respawn Delay Normal"
+        },
+        {
+          "type": "long_integer",
+          "name": "Respawn Delay Heroic"
+        },
+        {
+          "type": "long_integer",
+          "name": "Respawn Delay Legendary"
+        },
+        {
+          "type": "real",
+          "name": "Musketeer Respawn Delay Scale"
+        },
+        {
+          "type": "long_integer",
+          "name": "Out of combat respawn timer"
+        },
+        {
+          "type": "pad",
+          "name": "endPad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14480bfb0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

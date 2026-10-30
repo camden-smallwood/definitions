@@ -1,0 +1,329 @@
+{
+  "name": "SpeechGrammarGroup",
+  "tag": "sggg",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "SpeechGrammarGroup_block",
+  "blocks": {
+    "SpeechGrammarGroup_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "SpeechGrammarGroup_block_struct"
+    },
+    "SpottedObjectBlock": {
+      "max_count": 8,
+      "max_count_string": "k_maxSpottedObjects",
+      "struct": "SpottedObjectBlock"
+    },
+    "SpeechGrammarBlock": {
+      "max_count": 256,
+      "max_count_string": "k_maxGrammars",
+      "struct": "SpeechGrammarBlock"
+    },
+    "SpeechGrammarPhraseBlock": {
+      "max_count": 256,
+      "max_count_string": "k_maxGrammarPhrasesPerLevel",
+      "struct": "SpeechGrammarPhraseBlock"
+    },
+    "SpeechGrammarNodeBlock": {
+      "max_count": 256,
+      "max_count_string": "k_maxGrammarPhrasesPerLevel",
+      "struct": "SpeechGrammarNodeBlock"
+    }
+  },
+  "structs": {
+    "SpeechGrammarGroup_block_struct": {
+      "guid": "67741fe078449dc2c92662b5a82c5c3b",
+      "size": 400,
+      "size_string": "(sizeof(SpeechGrammarGroup) - Tag::SizeInfo<SpeechGrammarGroup::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "SpeechGrammarFlagsNames"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp1",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "spotted objects load#Only load if one of these objects are found (when flag above checked)",
+          "definition": "SpottedObjectBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "load grammar condition: this condition can force of the grammar if it is defined",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "script condition",
+          "definition": "SpeechScriptBlock"
+        },
+        {
+          "type": "byte_flags",
+          "name": "run time flags!",
+          "definition": "SpeechGrammarFlagsRuntime"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp3",
+          "definition": 1
+        },
+        {
+          "type": "short_integer",
+          "name": "absolute dynamic grammar index!"
+        },
+        {
+          "type": "block",
+          "name": "lync'ed grammars#when this grammar is loaded load these grammars too",
+          "definition": "SpeechGrammarBlock"
+        },
+        {
+          "type": "block",
+          "name": "Speech Phrases",
+          "definition": "SpeechGrammarPhraseBlock"
+        },
+        {
+          "type": "block",
+          "name": "Speech Nodes",
+          "definition": "SpeechGrammarNodeBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447290c0"
+    },
+    "SpottedObjectBlock": {
+      "guid": "a10205ff4e40562c4050ada0dbbadbd0",
+      "size": 32,
+      "size_string": "sizeof(SpottedObjectBlock)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "Spotted Object",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "obje"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144728fb0"
+    },
+    "SpeechScriptBlock": {
+      "guid": "8efe842259451c4784cead91db94b507",
+      "size": 260,
+      "size_string": "sizeof(SpeechScript)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "script name!~"
+        },
+        {
+          "type": "long_string",
+          "name": "script source",
+          "group_tag": "maeo"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144728af0"
+    },
+    "SpeechGrammarBlock": {
+      "guid": "f68a82fc084e6e8009d06184b486f845",
+      "size": 32,
+      "size_string": "sizeof(SpeechGrammarBlock)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "Speech Grammar",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sggg"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144728e80"
+    },
+    "SpeechGrammarPhraseBlock": {
+      "guid": "c5106e97174c839b8d18fb9e87bd52e8",
+      "size": 564,
+      "size_string": "sizeof(SpeechGrammarPhraseBlock)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "VUI ID# this is a string ID it is used to reference the localized display name in said list.  It is also used to reference the phrases that link to this VUI element in the phrases list"
+        },
+        {
+          "type": "explanation",
+          "name": "Script Action",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "Script Action",
+          "definition": "SpeechScriptBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Script Condition",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "Script Condition",
+          "definition": "SpeechScriptBlock"
+        },
+        {
+          "type": "data",
+          "name": "Command{ }",
+          "definition": "custom_command_tree_data"
+        },
+        {
+          "type": "real",
+          "name": "weight"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "SpeechGrammarPhraseFlagsNames"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp1",
+          "definition": 3
+        },
+        {
+          "type": "short_integer",
+          "name": "user level"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp2",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144728c20"
+    },
+    "SpeechGrammarNodeBlock": {
+      "guid": "25dc4087ca46db486f7f4b8e82fc005c",
+      "size": 288,
+      "size_string": "sizeof(SpeechGrammarNodeBlock)",
+      "fields": [
+        {
+          "type": "data",
+          "name": "Command{ }",
+          "definition": "custom_command_tree_data"
+        },
+        {
+          "type": "explanation",
+          "name": "Script Condition~",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "Script Condition",
+          "definition": "SpeechScriptBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144728d50"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "SpeechGrammarFlagsNames": {
+      "options": [
+        "starts active",
+        "starts when object spotted",
+        "disabled when weapon down",
+        "temporarily disable",
+        "grammar disabled in campaign",
+        "grammar disabled in multiplayer",
+        "grammar disabled in ui shell"
+      ]
+    },
+    "SpeechGrammarFlagsRuntime": {
+      "options": [
+        "runtime load",
+        "callBack script contion result",
+        "forced off by flags"
+      ]
+    },
+    "SpeechGrammarPhraseFlagsNames": {
+      "options": [
+        "starts inactive"
+      ]
+    }
+  },
+  "datas": {
+    "custom_command_tree_data": {
+      "alignment": 2,
+      "flags": 0,
+      "max_size": 1024,
+      "max_size_string": "k_maxCommandTreeCharacters"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

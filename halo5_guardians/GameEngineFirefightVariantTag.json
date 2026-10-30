@@ -1,0 +1,986 @@
+{
+  "name": "GameEngineFirefightVariantTag",
+  "tag": "ffgt",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "GameEngineFirefightVariantTag_block",
+  "blocks": {
+    "GameEngineFirefightVariantTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "GameEngineFirefightVariantTag_block_struct"
+    },
+    "game_engine_miscellaneous_options_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_engine_miscellaneous_options_block"
+    },
+    "game_engine_prototype_options_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_engine_prototype_options_block"
+    },
+    "game_engine_respawn_options_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_engine_respawn_options_block"
+    },
+    "game_engine_social_options_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_engine_social_options_block"
+    },
+    "game_engine_map_override_options_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_engine_map_override_options_block"
+    },
+    "game_engine_team_options_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_engine_team_options_block"
+    },
+    "game_engine_loadout_options_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "game_engine_loadout_options_block"
+    },
+    "GameEngineEventScriptBlock": {
+      "max_count": 32,
+      "max_count_string": "32",
+      "struct": "GameEngineEventScriptBlock"
+    },
+    "GameEngineFirefightPlayerGoalPropertiesBlock": {
+      "max_count": 15,
+      "max_count_string": "k_firefightMaxPlayerGoals",
+      "struct": "GameEngineFirefightPlayerGoalPropertiesBlock"
+    },
+    "GameEngineFirefightWavePropertiesBlock": {
+      "max_count": 30,
+      "max_count_string": "k_firefightWavesPerGoal",
+      "struct": "GameEngineFirefightWavePropertiesBlock"
+    }
+  },
+  "structs": {
+    "GameEngineFirefightVariantTag_block_struct": {
+      "guid": "4e0395b64c4af1b0820d5ea7a4f4a7e5",
+      "size": 344,
+      "size_string": "(sizeof(GameEngineFirefightVariantDefinition) - Tag::SizeInfo<GameEngineFirefightVariantDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "variant",
+          "definition": "gameEngineFirefightVariantDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "padding",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448130c0"
+    },
+    "gameEngineFirefightVariantDefinition": {
+      "guid": "37e1cb6c9643765fe22c18b51ca0b2a6",
+      "size": 324,
+      "size_string": "sizeof(s_game_engine_firefight_variant_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "localizable name^"
+        },
+        {
+          "type": "string_id",
+          "name": "localizable description"
+        },
+        {
+          "type": "block",
+          "name": "miscellaneous options",
+          "definition": "game_engine_miscellaneous_options_block"
+        },
+        {
+          "type": "block",
+          "name": "prototype options",
+          "definition": "game_engine_prototype_options_block"
+        },
+        {
+          "type": "block",
+          "name": "respawn options",
+          "definition": "game_engine_respawn_options_block"
+        },
+        {
+          "type": "block",
+          "name": "social options",
+          "definition": "game_engine_social_options_block"
+        },
+        {
+          "type": "block",
+          "name": "map override options",
+          "definition": "game_engine_map_override_options_block"
+        },
+        {
+          "type": "block",
+          "name": "team options",
+          "definition": "game_engine_team_options_block"
+        },
+        {
+          "type": "block",
+          "name": "loadout options",
+          "definition": "game_engine_loadout_options_block"
+        },
+        {
+          "type": "block",
+          "name": "event scripts",
+          "definition": "GameEngineEventScriptBlock"
+        },
+        {
+          "type": "long_integer",
+          "name": "mission_id"
+        },
+        {
+          "type": "long_enum",
+          "name": "game difficulty",
+          "definition": "global_campaign_difficulty_enum"
+        },
+        {
+          "type": "byte_flags",
+          "name": "firefight variant flags",
+          "definition": "GameEngineFirefightVariantFlags"
+        },
+        {
+          "type": "pad",
+          "name": "pad1",
+          "definition": 1
+        },
+        {
+          "type": "short_integer",
+          "name": "shared team life count"
+        },
+        {
+          "type": "short_integer",
+          "name": "maximum lives"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 1"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 2"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 3"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 4"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 5"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 6"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 7"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 8"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 9"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 10"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 11"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 12"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 13"
+        },
+        {
+          "type": "char_integer",
+          "name": "Starting Crate 14"
+        },
+        {
+          "type": "string",
+          "name": "Variant Event#This event is always set for script"
+        },
+        {
+          "type": "block",
+          "name": "Midnight Player Goal Properties",
+          "definition": "GameEngineFirefightPlayerGoalPropertiesBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad2",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144812fa0"
+    },
+    "game_engine_miscellaneous_options_block": {
+      "guid": "2040184ee9449b9ffad8539b84649360",
+      "size": 8,
+      "size_string": "sizeof(s_game_engine_miscellaneous_options_definition)",
+      "fields": [
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "game_engine_miscellaneous_options_flags"
+        },
+        {
+          "type": "char_integer",
+          "name": "early victory win count"
+        },
+        {
+          "type": "char_integer",
+          "name": "round time limit:minutes"
+        },
+        {
+          "type": "char_integer",
+          "name": "number of rounds"
+        },
+        {
+          "type": "byte_integer",
+          "name": "overshield deplete time"
+        },
+        {
+          "type": "pad",
+          "name": "RXXH",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144812290"
+    },
+    "game_engine_prototype_options_block": {
+      "guid": "11097f1e8a4598fde5dcdf85ae8adf8c",
+      "size": 7,
+      "size_string": "sizeof(s_game_engine_prototype_options_definition)",
+      "fields": [
+        {
+          "type": "char_integer",
+          "name": "prototype mode"
+        },
+        {
+          "type": "char_integer",
+          "name": "promethean energy kill percent"
+        },
+        {
+          "type": "char_integer",
+          "name": "promethean energy time percent"
+        },
+        {
+          "type": "char_integer",
+          "name": "promethean energy medal percent"
+        },
+        {
+          "type": "char_integer",
+          "name": "promethean duration"
+        },
+        {
+          "type": "char_integer",
+          "name": "class color override"
+        },
+        {
+          "type": "char_integer",
+          "name": "disable warzone initial assault"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448123c0"
+    },
+    "game_engine_respawn_options_block": {
+      "guid": "d19d90ae064c186a0ca850a890fb5661",
+      "size": 20,
+      "size_string": "sizeof(s_game_engine_respawn_options_definition)",
+      "fields": [
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "game_engine_respawn_options_flags"
+        },
+        {
+          "type": "char_integer",
+          "name": "lives per round"
+        },
+        {
+          "type": "char_integer",
+          "name": "team lives per round"
+        },
+        {
+          "type": "char_integer",
+          "name": "min respawn time:seconds"
+        },
+        {
+          "type": "char_integer",
+          "name": "respawn time:seconds"
+        },
+        {
+          "type": "char_integer",
+          "name": "suicide penalty:seconds"
+        },
+        {
+          "type": "char_integer",
+          "name": "betrayal penalty:seconds"
+        },
+        {
+          "type": "char_integer",
+          "name": "respawn growth:seconds"
+        },
+        {
+          "type": "pad",
+          "name": "EOTOTRXV",
+          "definition": 3
+        },
+        {
+          "type": "string_id",
+          "name": "respawn player traits name"
+        },
+        {
+          "type": "char_integer",
+          "name": "respawn player traits duration:seconds"
+        },
+        {
+          "type": "pad",
+          "name": "woman bound for glory, why you leaving me again?",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448124f0"
+    },
+    "game_engine_social_options_block": {
+      "guid": "9d6c18eab94049c01b4af4b8df26834e",
+      "size": 2,
+      "size_string": "sizeof(s_game_engine_social_options_definition)",
+      "fields": [
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "game_engine_social_options_flags"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144812620"
+    },
+    "game_engine_map_override_options_block": {
+      "guid": "6dd981e8794688bb6403cc9a7086d6e9",
+      "size": 56,
+      "size_string": "sizeof(s_game_engine_map_override_options_definition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "player traits name"
+        },
+        {
+          "type": "string_id",
+          "name": "weapon set name"
+        },
+        {
+          "type": "string_id",
+          "name": "vehicle set name"
+        },
+        {
+          "type": "string_id",
+          "name": "equipment set name"
+        },
+        {
+          "type": "string_id",
+          "name": "red powerup traits name"
+        },
+        {
+          "type": "string_id",
+          "name": "blue powerup traits name"
+        },
+        {
+          "type": "string_id",
+          "name": "yellow powerup traits name"
+        },
+        {
+          "type": "string_id",
+          "name": "custom powerup traits name"
+        },
+        {
+          "type": "char_integer",
+          "name": "red powerup duration:seconds"
+        },
+        {
+          "type": "char_integer",
+          "name": "blue powerup duration:seconds"
+        },
+        {
+          "type": "char_integer",
+          "name": "yellow powerup duration:seconds"
+        },
+        {
+          "type": "char_integer",
+          "name": "custom powerup duration:seconds"
+        },
+        {
+          "type": "string_id",
+          "name": "red powerup secondary traits name"
+        },
+        {
+          "type": "string_id",
+          "name": "blue powerup secondary traits name"
+        },
+        {
+          "type": "string_id",
+          "name": "yellow powerup secondary traits name"
+        },
+        {
+          "type": "string_id",
+          "name": "custom powerup secondary traits name"
+        },
+        {
+          "type": "char_integer",
+          "name": "red powerup secondary duration:seconds"
+        },
+        {
+          "type": "char_integer",
+          "name": "blue powerup secondary duration:seconds"
+        },
+        {
+          "type": "char_integer",
+          "name": "yellow powerup secondary duration:seconds"
+        },
+        {
+          "type": "char_integer",
+          "name": "custom powerup secondary duration:seconds"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144812750"
+    },
+    "game_engine_team_options_block": {
+      "guid": "814d1f57d54c3c0045060c95a06f6a5b",
+      "size": 196,
+      "size_string": "sizeof(s_game_engine_team_options_definition)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "model override type",
+          "definition": "game_engine_team_options_model_override_type"
+        },
+        {
+          "type": "char_enum",
+          "name": "designator switch type",
+          "definition": "game_engine_team_options_designator_switch_type"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 2
+        },
+        {
+          "type": "array",
+          "name": "teams",
+          "definition": "game_engine_team_options_team_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448129b0"
+    },
+    "game_engine_team_options_team_block": {
+      "guid": "83f503334047184290936a98e1fefc90",
+      "size": 24,
+      "size_string": "sizeof(s_game_engine_team_options_team_definition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "game_engine_team_options_team_flags"
+        },
+        {
+          "type": "char_enum",
+          "name": "initial team designator",
+          "definition": "global_multiplayer_team_designator_enum_definition"
+        },
+        {
+          "type": "char_enum",
+          "name": "model override",
+          "definition": "game_engine_team_options_player_model_choice"
+        },
+        {
+          "type": "byte_integer",
+          "name": "number of fireteams"
+        },
+        {
+          "type": "string_id",
+          "name": "description"
+        },
+        {
+          "type": "rgb_color",
+          "name": "primary color override{color override}"
+        },
+        {
+          "type": "rgb_color",
+          "name": "secondary color override"
+        },
+        {
+          "type": "argb_color",
+          "name": "ui text tint color override"
+        },
+        {
+          "type": "argb_color",
+          "name": "ui bitmap tint color override"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144812880"
+    },
+    "game_engine_loadout_options_block": {
+      "guid": "2658f82d2b4a4c42b4f7e6ad920b783b",
+      "size": 4,
+      "size_string": "sizeof(s_game_engine_loadout_definition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "loadout_flags_definition"
+        },
+        {
+          "type": "pad",
+          "name": "DLVKJSER",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481a4e0"
+    },
+    "GameEngineEventScriptBlock": {
+      "guid": "0054112f064f77c975283f80eb2db7a3",
+      "size": 36,
+      "size_string": "sizeof(GameEngineEventScriptDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "script file^",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hsc*"
+            ]
+          }
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "GameEngineEventScriptFlagsDefinition"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144812ae0"
+    },
+    "GameEngineFirefightPlayerGoalPropertiesBlock": {
+      "guid": "6e4536f6f541b0cbab0e12942eccb404",
+      "size": 120,
+      "size_string": "sizeof(GameEngineFirefightPlayerGoalDefinition)",
+      "fields": [
+        {
+          "type": "char_enum",
+          "name": "Player Goal",
+          "definition": "FirefightGoal"
+        },
+        {
+          "type": "char_integer",
+          "name": "Lives"
+        },
+        {
+          "type": "char_integer",
+          "name": "Time Limit#minutes"
+        },
+        {
+          "type": "byte_flags",
+          "name": "Wave Difficulty",
+          "definition": "FirefightWaveDifficulty"
+        },
+        {
+          "type": "block",
+          "name": "Firefight Waves",
+          "definition": "GameEngineFirefightWavePropertiesBlock"
+        },
+        {
+          "type": "long_flags",
+          "name": "Player Goal Flags",
+          "definition": "GameEnginePlayerGoalFlags"
+        },
+        {
+          "type": "string_id",
+          "name": "spartan player traits"
+        },
+        {
+          "type": "string_id",
+          "name": "ai traits"
+        },
+        {
+          "type": "string",
+          "name": "Start Event"
+        },
+        {
+          "type": "string",
+          "name": "End Event"
+        },
+        {
+          "type": "long_flags",
+          "name": "skulls^{primary skulls}",
+          "definition": "skull_flags"
+        },
+        {
+          "type": "char_integer",
+          "name": "objective 1"
+        },
+        {
+          "type": "char_integer",
+          "name": "objective 2"
+        },
+        {
+          "type": "char_integer",
+          "name": "objective 3"
+        },
+        {
+          "type": "char_integer",
+          "name": "objective 4"
+        },
+        {
+          "type": "char_integer",
+          "name": "User Data"
+        },
+        {
+          "type": "char_integer",
+          "name": "start location folder"
+        },
+        {
+          "type": "pad",
+          "name": "BLAH",
+          "definition": 2
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144812e90"
+    },
+    "GameEngineFirefightWavePropertiesBlock": {
+      "guid": "b424cfa5a947a0ef39e4d8b302dedfcd",
+      "size": 76,
+      "size_string": "sizeof(GameEngineFirefightWaveDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "squad type^#survival_mode_get_wave_squad"
+        },
+        {
+          "type": "char_enum",
+          "name": "Delivery type",
+          "definition": "FirefightWaveDeliveryMethod"
+        },
+        {
+          "type": "char_integer",
+          "name": "AI allowed before next wave spawns"
+        },
+        {
+          "type": "char_integer",
+          "name": "Enemies Left Before HUD Marking"
+        },
+        {
+          "type": "char_integer",
+          "name": "Wave Type"
+        },
+        {
+          "type": "char_integer",
+          "name": "Weapon to drop"
+        },
+        {
+          "type": "char_integer",
+          "name": "Vehicle to drop"
+        },
+        {
+          "type": "char_integer",
+          "name": "Squad 1"
+        },
+        {
+          "type": "char_integer",
+          "name": "Squad 2"
+        },
+        {
+          "type": "string",
+          "name": "Start Event"
+        },
+        {
+          "type": "string",
+          "name": "End Event"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144812d60"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "arrays": {
+    "game_engine_team_options_team_block": {
+      "count": 8,
+      "count_string": "k_multiplayer_team_game_team_count",
+      "struct": "game_engine_team_options_team_block"
+    }
+  },
+  "enums_flags": {
+    "game_engine_miscellaneous_options_flags": {
+      "options": [
+        "teams enabled",
+        "__deprecated__perfection enabled",
+        "__deprecated__mosh",
+        "__deprecated__drop weapons on death",
+        "killcam enabled",
+        "final killcam enabled",
+        "__deprecated__asymmetric round scoring",
+        "__deprecated__silent assist",
+        "medal score accumulator enabled",
+        "requisition enabled",
+        "active spartan tracking enabled",
+        "passive spartan tracking enabled",
+        "machinima controls enabled"
+      ]
+    },
+    "game_engine_respawn_options_flags": {
+      "options": [
+        "inherit respawn time",
+        "__deprecated__respawn with teammate",
+        "__deprecated__respawn at location",
+        "respawn on kills",
+        "early respawn allowed",
+        "join in progress wait for next round to spawn",
+        "bypass line of sight check for allowing player spawn",
+        "bypass all influencer checks"
+      ]
+    },
+    "game_engine_social_options_flags": {
+      "options": [
+        "observers enabled",
+        "team changing enabled",
+        "team changing balancing only",
+        "friendly fire enabled",
+        "betrayal booting enabled",
+        "enemy voice enabled",
+        "open channel voice enabled",
+        "dead player voice enabled",
+        "suiciding booting enabled",
+        "idle booting enabled"
+      ]
+    },
+    "game_engine_team_options_model_override_type": {
+      "options": [
+        "none (player choice)",
+        "force spartan",
+        "set by team",
+        "set by designator"
+      ]
+    },
+    "game_engine_team_options_designator_switch_type": {
+      "options": [
+        "none",
+        "random",
+        "rotate"
+      ]
+    },
+    "game_engine_team_options_team_flags": {
+      "options": [
+        "enabled",
+        "primary override color",
+        "secondary override color",
+        "override ui text tint color",
+        "override ui bitmap tint color",
+        "override emblem"
+      ]
+    },
+    "global_multiplayer_team_designator_enum_definition": {
+      "options": [
+        "defender",
+        "attacker",
+        "third party",
+        "fourth party",
+        "fifth party",
+        "sixth party",
+        "seventh party",
+        "eighth party{eigth party}",
+        "neutral"
+      ]
+    },
+    "game_engine_team_options_player_model_choice": {
+      "options": [
+        "spartan"
+      ]
+    },
+    "loadout_flags_definition": {
+      "options": [
+        "custom loadouts enabled"
+      ]
+    },
+    "GameEngineEventScriptFlagsDefinition": {
+      "options": [
+        "RunForVariant",
+        "RunForGame"
+      ]
+    },
+    "global_campaign_difficulty_enum": {
+      "options": [
+        "easy",
+        "normal",
+        "heroic",
+        "legendary"
+      ]
+    },
+    "GameEngineFirefightVariantFlags": {
+      "options": [
+        "Use Ammo Crates",
+        "Players Respawn on Wave"
+      ]
+    },
+    "FirefightGoal": {
+      "options": [
+        "Object Destruction",
+        "Object Delivery",
+        "Location Arrival",
+        "Time Passed",
+        "No More Waves",
+        "Kill Boss",
+        "Defense",
+        "Other"
+      ]
+    },
+    "FirefightWaveDifficulty": {
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard"
+      ]
+    },
+    "FirefightWaveDeliveryMethod": {
+      "options": [
+        "Dropship",
+        "Monster Closet",
+        "Drop Pod",
+        "Test Spawn"
+      ]
+    },
+    "GameEnginePlayerGoalFlags": {
+      "options": [
+        "Looping",
+        "Random Waves"
+      ]
+    },
+    "skull_flags": {
+      "options": [
+        "skull_iron",
+        "skull_black_eye",
+        "skull_tough_luck",
+        "skull_catch",
+        "skull_fog",
+        "skull_famine",
+        "skull_thunderstorm",
+        "skull_tilt",
+        "skull_mythic",
+        "skull_blind",
+        "skull_superman",
+        "skull_birthday_party",
+        "skull_daddy",
+        "skull_red",
+        "skull_yellow",
+        "skull_blue"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "name": "flinch_system",
+  "tag": "flns",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "flinch_system_block",
+  "blocks": {
+    "flinch_system_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "flinch_system_block_struct"
+    },
+    "flinch_recoil_block": {
+      "max_count": 2,
+      "max_count_string": "k_flinchSystemSupportedBlockCount",
+      "struct": "flinch_recoil_block_struct"
+    },
+    "flinch_spring_damper_block": {
+      "max_count": 2,
+      "max_count_string": "k_flinchSystemSupportedBlockCount",
+      "struct": "flinch_spring_damper_block_struct"
+    }
+  },
+  "structs": {
+    "flinch_system_block_struct": {
+      "guid": "8b1d5451ee47ebb8f6dd64affcb058ea",
+      "size": 160,
+      "size_string": "(sizeof(i343::Flinch::FlinchSystemDefinition) - Tag::SizeInfo<i343::Flinch::FlinchSystemDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "flinch system",
+          "definition": "flinch_system_internal"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447247b0"
+    },
+    "flinch_system_internal": {
+      "guid": "855e2ebab143c47e36acfe9cc168dc01",
+      "size": 144,
+      "size_string": "sizeof(FlinchSystemInternalDefinition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Gun Flinch",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "gun flinch",
+          "definition": "flinch_system_settings"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "View Flinch",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "view flinch",
+          "definition": "flinch_system_settings"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144724690"
+    },
+    "flinch_system_settings": {
+      "guid": "d0d62ecdf7499e8cff52c683522accf4",
+      "size": 72,
+      "size_string": "sizeof(FlinchSystemSettings)",
+      "fields": [
+        {
+          "type": "angle_bounds",
+          "name": "yaw bounds:degrees#define min and max angles the flinch can move"
+        },
+        {
+          "type": "angle_bounds",
+          "name": "pitch bounds:degrees#define min and max angles the flinch can move"
+        },
+        {
+          "type": "block",
+          "name": "recoil",
+          "definition": "flinch_recoil_block"
+        },
+        {
+          "type": "block",
+          "name": "spring damper",
+          "definition": "flinch_spring_damper_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144724580"
+    },
+    "flinch_recoil_block_struct": {
+      "guid": "690fb45ff64c3160def630adca3db93b",
+      "size": 8,
+      "size_string": "sizeof(i343::ProceduralMotion::RecoilAngularDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "recoil return",
+          "definition": "procedual_motion_recoil_angular"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447242c0"
+    },
+    "procedual_motion_recoil_angular": {
+      "guid": "76818ed58941019e04b247b5efd445d7",
+      "size": 8,
+      "size_string": "sizeof(i343::ProceduralMotion::RecoilAngularDefinition)",
+      "fields": [
+        {
+          "type": "angle",
+          "name": "deceleration away from center:degrees#acceleration only applied when moving away from center"
+        },
+        {
+          "type": "angle",
+          "name": "acceleration to center:degrees#acceleration only applied when moving to center"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144745350"
+    },
+    "flinch_spring_damper_block_struct": {
+      "guid": "ea9ecc43314b374db6658ba4647fa9fb",
+      "size": 12,
+      "size_string": "sizeof(i343::ProceduralMotion::SpringDamperAngularDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "spring damper",
+          "definition": "procedual_motion_spring_damper_angular"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144724420"
+    },
+    "procedual_motion_spring_damper_angular": {
+      "guid": "b6a9c1b5e0405c1186e5c9ae407a7231",
+      "size": 12,
+      "size_string": "sizeof(SpringDamperAngularDefinition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "spring constant#scales the center spring acceleration based on distance"
+        },
+        {
+          "type": "real",
+          "name": "damping ratio##0 would be no damping, 1 is critical damping.  Is used to automatically calculate the damping coefficient"
+        },
+        {
+          "type": "real",
+          "name": "runtime damping constant!*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144745500"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

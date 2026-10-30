@@ -1,0 +1,166 @@
+{
+  "name": "scenario_sound_constants",
+  "tag": "sssc",
+  "version": 1,
+  "flags": 6,
+  "parent_tag": "aTag",
+  "block": "scenario_sound_constants_block",
+  "blocks": {
+    "scenario_sound_constants_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "scenario_sound_constants_block_struct"
+    },
+    "soundBankLoadBlock": {
+      "max_count": 52,
+      "max_count_string": "k_maxNumberScenarioBanks",
+      "struct": "soundBankLoadBlock_struct"
+    },
+    "g_stateGroupReferenceBlock": {
+      "max_count": 256,
+      "max_count_string": "256",
+      "struct": "g_stateGroupReferenceBlock"
+    }
+  },
+  "structs": {
+    "scenario_sound_constants_block_struct": {
+      "guid": "2886b7491f4a02c8a4e6599fc5f1b77a",
+      "size": 104,
+      "size_string": "(sizeof(SoundScenarioConstantsDefinition) - Tag::SizeInfo<SoundScenarioConstantsDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "ScenarioSoundConstantsFlags"
+        },
+        {
+          "type": "block",
+          "name": "Scenario sound bank list",
+          "definition": "soundBankLoadBlock"
+        },
+        {
+          "type": "string_id",
+          "name": "Inside reverb name#This reverb will be used for inside areas when the listener is outside."
+        },
+        {
+          "type": "long_integer",
+          "name": "Inside reverb hash ID!"
+        },
+        {
+          "type": "long_integer",
+          "name": "sound permutation mission id"
+        },
+        {
+          "type": "real",
+          "name": "attenuation adjustment factor#1 is no change, 0.5 is half, etc"
+        },
+        {
+          "type": "real",
+          "name": "enemy rtpc distance#max distance an enemy can be to be counted in our enemy-related rtpcs"
+        },
+        {
+          "type": "real",
+          "name": "kill count frequency time period:seconds#the amount of time to consider a kill relevant for the kill count frequency"
+        },
+        {
+          "type": "real",
+          "name": "combat intensity RTPCs timer#number of seconds between each time the combat intensity RTPCs are set"
+        },
+        {
+          "type": "block",
+          "name": "State Groups#State groups we care enough about to have saved and loaded, as well as inherited during campaign player-teleportation",
+          "definition": "g_stateGroupReferenceBlock"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144783e50"
+    },
+    "soundBankLoadBlock_struct": {
+      "guid": "4687e90c3b47dad36762d2ae37dd8acd",
+      "size": 32,
+      "size_string": "sizeof(soundBankLoadInfoBlock)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "Sound bank",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "sbnk"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144783d30"
+    },
+    "g_stateGroupReferenceBlock": {
+      "guid": "684ada35c04d484184318dbc75986ffc",
+      "size": 32,
+      "size_string": "sizeof(Tag::Reference<SoundStateGroup>)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "State-group reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "ssgp"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144783800"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "ScenarioSoundConstantsFlags": {
+      "options": [
+        "Use Environment Acoustics"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

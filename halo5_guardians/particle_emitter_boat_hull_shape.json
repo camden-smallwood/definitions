@@ -1,0 +1,106 @@
+{
+  "name": "particle_emitter_boat_hull_shape",
+  "tag": "ebhd",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "particle_emitter_boat_hull_shape_block",
+  "blocks": {
+    "particle_emitter_boat_hull_shape_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "particle_emitter_boat_hull_shape_block_struct"
+    },
+    "particle_emitter_boat_hull_group_block": {
+      "max_count": 16,
+      "max_count_string": "s_particle_emitter_boat_hull_shape_data::k_max_groups_per_hull_shape",
+      "struct": "particle_emitter_boat_hull_group_block"
+    }
+  },
+  "structs": {
+    "particle_emitter_boat_hull_shape_block_struct": {
+      "guid": "1db70ad3904d97a776b6478583261e63",
+      "size": 48,
+      "size_string": "(sizeof(s_particle_emitter_boat_hull_shape_data) - Tag::SizeInfo<s_particle_emitter_boat_hull_shape_data::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "char_enum",
+          "name": "distribution#heuristic used to determine where to spawn particles",
+          "definition": "particle_emitter_boat_hull_distribution_type"
+        },
+        {
+          "type": "pad",
+          "name": "PEBHSP1",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "markers",
+          "definition": "particle_emitter_boat_hull_group_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144714550"
+    },
+    "particle_emitter_boat_hull_group_block": {
+      "guid": "2b4b5bc2b9492c667527a4aa79e09cae",
+      "size": 4,
+      "size_string": "sizeof(s_particle_emitter_boat_hull_shape_data::s_marker_group)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "marker group^"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144714430"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "particle_emitter_boat_hull_distribution_type": {
+      "options": [
+        "connect the dots#project hull surface locations onto the water and spawn particles along the resulting path.",
+        "along hull surface only#spawn particles on the hull surface where it intersects with the water."
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

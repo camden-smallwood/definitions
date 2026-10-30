@@ -1,0 +1,403 @@
+{
+  "name": "GameplayObjectGlobalsDefinition",
+  "tag": "glgo",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "GameplayObjectGlobalsDefinition_block",
+  "blocks": {
+    "GameplayObjectGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "GameplayObjectGlobalsDefinition_block_struct"
+    },
+    "hologramLightingGlobalsBlock": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "hologramLightingGlobalsBlock"
+    },
+    "active_camo_globals_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "active_camo_globals_block"
+    },
+    "active_camo_level_definition_block": {
+      "max_count": 5,
+      "max_count_string": "static_cast<int>(eActiveCamoBySpeedFunctionIndex::count)",
+      "struct": "active_camo_level_definition_block"
+    },
+    "shield_boost_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "shield_boost_block"
+    }
+  },
+  "structs": {
+    "GameplayObjectGlobalsDefinition_block_struct": {
+      "guid": "bd62c63561404e25eaa20e8cb1de0415",
+      "size": 104,
+      "size_string": "(sizeof(i343::GameplayObjectGlobals) - Tag::SizeInfo<i343::GameplayObjectGlobals::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "Hologram Lighting",
+          "definition": "hologramLightingGlobalsBlock"
+        },
+        {
+          "type": "block",
+          "name": "active camo",
+          "definition": "active_camo_globals_block"
+        },
+        {
+          "type": "block",
+          "name": "shield boost",
+          "definition": "shield_boost_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144829c30"
+    },
+    "hologramLightingGlobalsBlock": {
+      "guid": "3b4b268e4547d19f8ed7bc83ac73bb9f",
+      "size": 52,
+      "size_string": "sizeof(HologramLightingGlobals)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "HOLOGRAM FUNCTIONS",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "string_id",
+          "name": "Intensity"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "KEY LIGHT FUNCTIONS",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Key Light Functions",
+          "definition": "hologramLightFunctions"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "FILL LIGHT FUNCTIONS",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Fill Light Functions",
+          "definition": "hologramLightFunctions"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "RIM LIGHT FUNCTIONS",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "struct",
+          "name": "Rim Light Functions",
+          "definition": "hologramLightFunctions"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144980a10"
+    },
+    "hologramLightFunctions": {
+      "guid": "7692258aa44255aa52b42789b1be500a",
+      "size": 16,
+      "size_string": "sizeof(HologramLightFunctions)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Intensity"
+        },
+        {
+          "type": "string_id",
+          "name": "Forward"
+        },
+        {
+          "type": "string_id",
+          "name": "Right"
+        },
+        {
+          "type": "string_id",
+          "name": "Up"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449808e0"
+    },
+    "active_camo_globals_block": {
+      "guid": "5eff34402d4cd839fba46c91bc83790c",
+      "size": 240,
+      "size_string": "sizeof(s_active_camo_globals)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "biped speed reference:wu/s#for bipeds, the speed at which you are on the far right of the 'speed to max camo' graph"
+        },
+        {
+          "type": "real",
+          "name": "active camo ground vertical speed scalar#0 means no vertical speed is used for active camo reduction, and 1 means it is fully used while on the ground"
+        },
+        {
+          "type": "real",
+          "name": "active camo airborne vertical speed scalar#0 means no vertical speed is used for active camo reduction, and 1 means it is fully used while airborne"
+        },
+        {
+          "type": "real",
+          "name": "vehicle speed reference:wu/s#for vehicles, the speed at which you are on the far right of the 'speed to max camo' graph"
+        },
+        {
+          "type": "real_fraction",
+          "name": "camo value for game name#minimum active camo percentage at which a player's game name will start becoming visible"
+        },
+        {
+          "type": "struct",
+          "name": "camo value to distortion",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "camo value to transparency#maps active-camo percentage to alpha for THIRD PERSON rendering",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "camo value to fp transparency#maps active-camo percentage to alpha for FIRST PERSON rendering",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "struct",
+          "name": "camo distortion texture strength",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "real_vector_2d",
+          "name": "camo distortion scale"
+        },
+        {
+          "type": "real_vector_2d",
+          "name": "camo distortion translate speed"
+        },
+        {
+          "type": "tag_reference",
+          "name": "camo distortion texture",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "camo depth bias max distance#This is used to deal with ugly rendering artifacts when camo is not fully on"
+        },
+        {
+          "type": "struct",
+          "name": "camo depth bias function#This is used to deal with ugly rendering artifacts when camo is not fully on",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "block",
+          "name": "camo levels",
+          "definition": "active_camo_level_definition_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144837400"
+    },
+    "scalar_function_named_struct": {
+      "guid": "8992cb721e48760251a36794187c6df5",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738e30"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "active_camo_level_definition_block": {
+      "guid": "aade83e2ff467bd169f6028077e386f1",
+      "size": 44,
+      "size_string": "sizeof(s_active_camo_level_definition)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "grenade throw penalty:0..1!*#reduces camo value by this much when throwing a grenade"
+        },
+        {
+          "type": "real",
+          "name": "melee penalty:0..1!*#reduces camo by this much when meleeing"
+        },
+        {
+          "type": "real",
+          "name": "minimum dinged value!*#when taking damage or doing other actions that reduce camo, we will never drop below this value"
+        },
+        {
+          "type": "real",
+          "name": "interpolation time:s!*#time it takes to interpolate from 0.0 to 1.0"
+        },
+        {
+          "type": "struct",
+          "name": "speed to maximum camo",
+          "definition": "scalar_function_named_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448372d0"
+    },
+    "shield_boost_block": {
+      "guid": "0ed4a4c8e4490f83712296907c8fdc1f",
+      "size": 12,
+      "size_string": "sizeof(s_game_globals_shield_boost)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "shield boosting",
+          "definition": "This feature was implemented for the engineer character in atlas. Shield dynamics overrides for when shields are being 'boosted' by an external source"
+        },
+        {
+          "type": "real",
+          "name": "shield boost decay#amount of shield-boost to decay per second"
+        },
+        {
+          "type": "real",
+          "name": "shield boost recharge time#time to recharge full shields when getting boosted"
+        },
+        {
+          "type": "real",
+          "name": "shield boost stun time#stun time when getting boosted"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144834eb0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

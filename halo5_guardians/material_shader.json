@@ -1,0 +1,560 @@
+{
+  "name": "material_shader",
+  "tag": "mats",
+  "version": 1,
+  "flags": 16777218,
+  "parent_tag": "aTag",
+  "block": "material_shader_block",
+  "blocks": {
+    "material_shader_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "material_shader_block_struct"
+    },
+    "compiled_effects_block": {
+      "max_count": 3,
+      "max_count_string": "k_number_of_shader_and_maya_platforms",
+      "struct": "compiled_effects_block"
+    },
+    "effect_object_block": {
+      "max_count": 2,
+      "max_count_string": "k_number_of_platforms",
+      "struct": "effect_object_block"
+    },
+    "shader_technique_block": {
+      "max_count": 1024,
+      "max_count_string": "k_kilo",
+      "struct": "shader_technique_block_struct"
+    },
+    "shader_pass_block": {
+      "max_count": 1024,
+      "max_count_string": "k_kilo",
+      "struct": "shader_pass_block_struct"
+    },
+    "shader_bank_reference_block": {
+      "max_count": 1024,
+      "max_count_string": "k_kilo",
+      "struct": "shader_bank_reference_block_struct"
+    },
+    "material_shader_parameter_block": {
+      "max_count": 267,
+      "max_count_string": "s_material_shader_parameter::k_max_material_shader_parameters",
+      "struct": "material_shader_parameter_block"
+    },
+    "material_shader_function_parameter_block": {
+      "max_count": 267,
+      "max_count_string": "s_material_shader_parameter::k_max_material_shader_parameters",
+      "struct": "material_shader_function_parameter_block"
+    }
+  },
+  "structs": {
+    "material_shader_block_struct": {
+      "guid": "c431051d8f4dbcbf31f45c9418b76775",
+      "size": 168,
+      "size_string": "(sizeof(c_material_shader) - Tag::SizeInfo<c_material_shader::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_flags",
+          "name": "flags!",
+          "definition": "material_shader_flags"
+        },
+        {
+          "type": "block",
+          "name": "compiled effects!",
+          "definition": "compiled_effects_block"
+        },
+        {
+          "type": "block",
+          "name": "precompiled effect objects!",
+          "definition": "effect_object_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "shader bank",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mtsb"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "shader references*",
+          "definition": "shader_technique_block"
+        },
+        {
+          "type": "block",
+          "name": "material parameters*",
+          "definition": "material_shader_parameter_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448644b0"
+    },
+    "compiled_effects_block": {
+      "guid": "0ff335199e4ebf65c49cec8f0745119e",
+      "size": 16,
+      "size_string": "sizeof(CompiledEffectData)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "shader hash 0"
+        },
+        {
+          "type": "int64_integer",
+          "name": "shader hash 1"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448643a0"
+    },
+    "effect_object_block": {
+      "guid": "0b700dd8214ab0761d3ecca58ddec1d6",
+      "size": 28,
+      "size_string": "sizeof(struct s_tag_data)",
+      "fields": [
+        {
+          "type": "data",
+          "name": "effect object data",
+          "definition": "compiled_effect_data"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144864270"
+    },
+    "shader_technique_block_struct": {
+      "guid": "35b80a364d4e87a0ed6d2196bbba7fb5",
+      "size": 32,
+      "size_string": "sizeof(MaterialShaderTechniqueBlock)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "shader passes*",
+          "definition": "shader_pass_block"
+        },
+        {
+          "type": "long_integer",
+          "name": "lightingEntryPointIndex*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144864130"
+    },
+    "shader_pass_block_struct": {
+      "guid": "ef191beb2845e665a3219088f5458bc3",
+      "size": 36,
+      "size_string": "sizeof(MaterialShaderPassBlock)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "shader references*",
+          "definition": "shader_bank_reference_block"
+        },
+        {
+          "type": "array",
+          "name": "vdecl handles ~*!",
+          "definition": "vdeclarray"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144864020"
+    },
+    "shader_bank_reference_block_struct": {
+      "guid": "84a4ddb66c45fe3b03f0bba4de6498b0",
+      "size": 8,
+      "size_string": "sizeof(ShaderBankReference)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "ShaderHash*"
+        },
+        {
+          "type": "long_integer",
+          "name": "XBOne Shader Hash*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144863dd0"
+    },
+    "vdeclarray": {
+      "guid": "f4254abfcc4f10c4c55a578e6b212289",
+      "size": 4,
+      "size_string": "sizeof(UINT)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "vdecl handles"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144863f10"
+    },
+    "material_shader_parameter_block": {
+      "guid": "063e4b5e3647a8183f96cfbe9dd6ca42",
+      "size": 232,
+      "size_string": "sizeof(s_material_shader_parameter)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "parameter name^*"
+        },
+        {
+          "type": "long_enum",
+          "name": "parameter type*",
+          "definition": "material_shader_parameter_type_enum"
+        },
+        {
+          "type": "long_integer",
+          "name": "parameter index*!"
+        },
+        {
+          "type": "tag_reference",
+          "name": "bitmap",
+          "definition": {
+            "flags": 18,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "bitmap path"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "color"
+        },
+        {
+          "type": "real",
+          "name": "real"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "vector"
+        },
+        {
+          "type": "long_integer",
+          "name": "int/bool"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap flags"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap filter mode"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap address mode"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap address mode x"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap address mode y"
+        },
+        {
+          "type": "word_integer",
+          "name": "bitmap sharpen mode"
+        },
+        {
+          "type": "byte_integer",
+          "name": "bitmap extern mode"
+        },
+        {
+          "type": "byte_integer",
+          "name": "bitmap min mipmap"
+        },
+        {
+          "type": "byte_integer",
+          "name": "bitmap max mipmap"
+        },
+        {
+          "type": "byte_integer",
+          "name": "parameter flags!"
+        },
+        {
+          "type": "dword_integer",
+          "name": "render phases used"
+        },
+        {
+          "type": "dword_integer",
+          "name": "shader types used"
+        },
+        {
+          "type": "block",
+          "name": "function parameters",
+          "definition": "material_shader_function_parameter_block"
+        },
+        {
+          "type": "data",
+          "name": "display name*",
+          "definition": "help_text_block"
+        },
+        {
+          "type": "data",
+          "name": "display group*",
+          "definition": "help_text_block"
+        },
+        {
+          "type": "data",
+          "name": "display help text*",
+          "definition": "help_text_block"
+        },
+        {
+          "type": "real",
+          "name": "display minimum"
+        },
+        {
+          "type": "real",
+          "name": "display maximum"
+        },
+        {
+          "type": "word_integer",
+          "name": "register offset*!"
+        },
+        {
+          "type": "word_integer",
+          "name": "register size*!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448875a0"
+    },
+    "material_shader_function_parameter_block": {
+      "guid": "e3f0715472444df516a555aded7b009a",
+      "size": 52,
+      "size_string": "sizeof(s_material_shader_function_parameter)",
+      "fields": [
+        {
+          "type": "long_enum",
+          "name": "type^",
+          "definition": "material_animated_parameter_type_enum"
+        },
+        {
+          "type": "string_id",
+          "name": "input name",
+          "group_tag": "fnin"
+        },
+        {
+          "type": "string_id",
+          "name": "range name",
+          "group_tag": "fnir"
+        },
+        {
+          "type": "char_enum",
+          "name": "Output Modifier!",
+          "group_tag": "fnop",
+          "definition": "materialFunctionOutputModEnum"
+        },
+        {
+          "type": "pad",
+          "name": "BVCG",
+          "definition": 3
+        },
+        {
+          "type": "string_id",
+          "name": "Output Modifier Input!",
+          "group_tag": "fnom"
+        },
+        {
+          "type": "real",
+          "name": "time period:seconds",
+          "group_tag": "fn**"
+        },
+        {
+          "type": "explanation",
+          "name": "FUNCTION",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144887470"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "arrays": {
+    "vdeclarray": {
+      "count": 2,
+      "count_string": "eVVT_count",
+      "struct": "vdeclarray"
+    }
+  },
+  "enums_flags": {
+    "material_shader_flags": {
+      "options": [
+        "is_distortion",
+        "is_decal",
+        "blended_materials",
+        "no_physics_material",
+        "is_volume_fog",
+        "is_water",
+        "is_hologram",
+        "is_blended_hologram",
+        "is_emblem",
+        "blended_materials_2",
+        "blended_materials_3",
+        "is_alpha_clip",
+        "shader_compile_failed",
+        "is_explicit_shader",
+        "uses_fade_time",
+        "is_hologram_lofi",
+        "split_lighting",
+        "deferred_reflection",
+        "order_independent_transparency",
+        "disable_decorator_stipple_fade",
+        "custom_deformer"
+      ]
+    },
+    "material_shader_parameter_type_enum": {
+      "options": [
+        "bitmap",
+        "real",
+        "int",
+        "bool",
+        "color"
+      ]
+    },
+    "material_animated_parameter_type_enum": {
+      "options": [
+        "value",
+        "color",
+        "scale uniform",
+        "scale u",
+        "scale v",
+        "offset u",
+        "offset v",
+        "frame index",
+        "alpha"
+      ]
+    },
+    "materialFunctionOutputModEnum": {
+      "options": [
+        " ",
+        "Add",
+        "Multiply"
+      ]
+    }
+  },
+  "datas": {
+    "compiled_effect_data": {
+      "alignment": 8,
+      "flags": 0,
+      "max_size": 104857600,
+      "max_size_string": "100 * k_meg"
+    },
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    },
+    "help_text_block": {
+      "alignment": 10,
+      "flags": 0,
+      "max_size": 65535,
+      "max_size_string": "UNSIGNED_SHORT_MAX"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

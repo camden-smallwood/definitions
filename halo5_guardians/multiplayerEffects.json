@@ -1,0 +1,103 @@
+{
+  "name": "multiplayerEffects",
+  "tag": "mgee",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "multiplayerEffects_block",
+  "blocks": {
+    "multiplayerEffects_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "multiplayerEffects_block_struct"
+    },
+    "multiplayerEffectsBlock": {
+      "max_count": 2048,
+      "max_count_string": "k_multiplayer_effect_maximum_count",
+      "struct": "multiplayerEffectsBlock"
+    }
+  },
+  "structs": {
+    "multiplayerEffects_block_struct": {
+      "guid": "ff3fc93252436b6c53fa6fb861ffdf76",
+      "size": 48,
+      "size_string": "(sizeof(s_megalogamengine_effect_group) - Tag::SizeInfo<s_megalogamengine_effect_group::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "effects",
+          "definition": "multiplayerEffectsBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481e860"
+    },
+    "multiplayerEffectsBlock": {
+      "guid": "19b7e8f6134deec19c944aaadc8c4c28",
+      "size": 36,
+      "size_string": "sizeof(s_multiplayer_effect)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect",
+          "definition": {
+            "flags": 8,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14481e740"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

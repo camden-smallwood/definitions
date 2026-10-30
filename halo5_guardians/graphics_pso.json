@@ -1,0 +1,213 @@
+{
+  "name": "graphics_pso",
+  "tag": "psog",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "graphics_pso_block",
+  "blocks": {
+    "graphics_pso_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "graphics_pso_block_struct"
+    }
+  },
+  "structs": {
+    "graphics_pso_block_struct": {
+      "guid": "14e3a5105cd72d6bd7ddf2bfd36d3eca",
+      "size": 4584,
+      "size_string": "(sizeof(GraphicsPipelineStateTag) - Tag::SizeInfo<GraphicsPipelineStateTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "Shader references",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Shader bank",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mtsb"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "Vertex shader"
+        },
+        {
+          "type": "long_integer",
+          "name": "Pixel shader"
+        },
+        {
+          "type": "long_integer",
+          "name": "Geometry shader"
+        },
+        {
+          "type": "long_integer",
+          "name": "Domain shader"
+        },
+        {
+          "type": "long_integer",
+          "name": "Hull shader"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Input layout",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Input element count"
+        },
+        {
+          "type": "array",
+          "name": "Input elements",
+          "definition": "InputLayoutElements_array"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "data",
+          "name": "PSO descriptor",
+          "definition": "GraphicsPSODefinition_DescriptorDataRef"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14486be90"
+    },
+    "InputLayoutElements_array": {
+      "guid": "1739b26ad56a575d6e62e1818d017f97",
+      "size": 280,
+      "size_string": "sizeof(FixedInputElement)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "Input element",
+          "definition": "InputLayoutElement_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14486bd80"
+    },
+    "InputLayoutElement_struct": {
+      "guid": "89926e61f55f49395a0e02f140e80e9d",
+      "size": 280,
+      "size_string": "sizeof(FixedInputElement)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": "Input element",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "long_string",
+          "name": "Semantic name"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Semantic index"
+        },
+        {
+          "type": "dword_integer",
+          "name": "DXGI Format"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Input slot"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Aligned offset"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Input slot class"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Instance data step rate"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14486bc50"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "arrays": {
+    "InputLayoutElements_array": {
+      "count": 16,
+      "count_string": "16",
+      "struct": "InputLayoutElements_array"
+    }
+  },
+  "datas": {
+    "GraphicsPSODefinition_DescriptorDataRef": {
+      "alignment": 0,
+      "flags": 0,
+      "max_size": 1024,
+      "max_size_string": "1024"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

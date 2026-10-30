@@ -1,0 +1,525 @@
+{
+  "name": "pca_animation",
+  "tag": "pcaa",
+  "version": 1,
+  "flags": 3,
+  "parent_tag": "aTag",
+  "block": "pca_animation_block",
+  "blocks": {
+    "pca_animation_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "pca_animation_block_struct"
+    },
+    "PCAImportedFrameDatablock": {
+      "max_count": 67108864,
+      "max_count_string": "64 * k_meg",
+      "struct": "PCAImportedFrameDatablock"
+    },
+    "PCAImportedMeshDataBlock": {
+      "max_count": 8191,
+      "max_count_string": "(8*1024-1)",
+      "struct": "PCAImportedMeshDataBlock"
+    },
+    "PCAImportedAnimationDataBlock": {
+      "max_count": 4096,
+      "max_count_string": "k_max_animations_per_graph",
+      "struct": "PCAImportedAnimationDataBlock"
+    },
+    "raw_blendshape_block": {
+      "max_count": 16777216,
+      "max_count_string": "MAXIMUM_PCA_VERTS_PER_MESH",
+      "struct": "raw_blendshape_block"
+    },
+    "vertex_buffers_block": {
+      "max_count": 65535,
+      "max_count_string": "UNSIGNED_SHORT_MAX",
+      "struct": "vertex_buffers_block_struct"
+    },
+    "index_buffers_block": {
+      "max_count": 8191,
+      "max_count_string": "(8*1024-1)",
+      "struct": "index_buffers_block_struct"
+    }
+  },
+  "structs": {
+    "pca_animation_block_struct": {
+      "guid": "a2dedb7c3141a489fdd5748ba3fa1dd3",
+      "size": 168,
+      "size_string": "(sizeof(PcaAnimationTag) - Tag::SizeInfo<PcaAnimationTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "explanation",
+          "name": "Links",
+          "definition": "links to the tags this data is associated with. These will be set by the importer, you don't need to do it manually"
+        },
+        {
+          "type": "tag_reference",
+          "name": "RenderModel*",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "mode"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "AnimationGraph*",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "jmad"
+            ]
+          }
+        },
+        {
+          "type": "long_flags",
+          "name": "pcaFlags*",
+          "definition": "pca_animation_tag_flags"
+        },
+        {
+          "type": "long_integer",
+          "name": "PCA Animation Count*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "PCA Checksum*!"
+        },
+        {
+          "type": "explanation",
+          "name": "Imported Data",
+          "definition": "imported data"
+        },
+        {
+          "type": "block",
+          "name": "frame data*",
+          "definition": "PCAImportedFrameDatablock"
+        },
+        {
+          "type": "block",
+          "name": "mesh data*",
+          "definition": "PCAImportedMeshDataBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Resource Data",
+          "definition": "vertex buffers"
+        },
+        {
+          "type": "tag_resource",
+          "name": "api resource*",
+          "definition": "render_geometry_api_resource_definition"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e3f90"
+    },
+    "PCAImportedFrameDatablock": {
+      "guid": "343433e5484f5506f8f61a82b5b36f55",
+      "size": 28,
+      "size_string": "sizeof(PCAImportedFrameData)",
+      "fields": [
+        {
+          "type": "data",
+          "name": "Coefficients",
+          "definition": "PCACoefficientsDefinition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e3b10"
+    },
+    "PCAImportedMeshDataBlock": {
+      "guid": "d0007a3f2a44e31f34fed7ae47055926",
+      "size": 132,
+      "size_string": "sizeof(PCAImportedMeshData)",
+      "fields": [
+        {
+          "type": "long_integer",
+          "name": "render mesh index*"
+        },
+        {
+          "type": "long_integer",
+          "name": "vertices per shape*"
+        },
+        {
+          "type": "long_integer",
+          "name": "vertex buffer index*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "position scale*"
+        },
+        {
+          "type": "real",
+          "name": "tension scale*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "position offset*"
+        },
+        {
+          "type": "real",
+          "name": "tension offset*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "normal scale*"
+        },
+        {
+          "type": "real",
+          "name": "stretch scale*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "normal offset*"
+        },
+        {
+          "type": "real",
+          "name": "stretch offset*"
+        },
+        {
+          "type": "explanation",
+          "name": "Animations",
+          "definition": "all imported animations for this mesh"
+        },
+        {
+          "type": "block",
+          "name": "animations*",
+          "definition": "PCAImportedAnimationDataBlock"
+        },
+        {
+          "type": "explanation",
+          "name": "Vertices",
+          "definition": "all imported blend shape vertices for this mesh"
+        },
+        {
+          "type": "block",
+          "name": "raw blendshape verts*",
+          "definition": "raw_blendshape_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e3e70"
+    },
+    "PCAImportedAnimationDataBlock": {
+      "guid": "f8d29f959642c1bb1c7dcdad1c568a12",
+      "size": 36,
+      "size_string": "sizeof(PCAImportedAnimationData)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "Name^*"
+        },
+        {
+          "type": "long_integer",
+          "name": "Offset*"
+        },
+        {
+          "type": "long_integer",
+          "name": "Count*"
+        },
+        {
+          "type": "long_integer",
+          "name": "PCA Shape Offset*!"
+        },
+        {
+          "type": "long_integer",
+          "name": "PCA coefficient Count*!"
+        },
+        {
+          "type": "explanation",
+          "name": "Resource Data",
+          "definition": "coefficients"
+        },
+        {
+          "type": "tag_resource",
+          "name": "CoefficientResource*",
+          "definition": "pca_coefficients_resource_definition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e3d40"
+    },
+    "pca_coefficients_resource_definition_struct": {
+      "guid": "e8a5ea53194ad727132e7eb358f922a0",
+      "size": 28,
+      "size_string": "sizeof(PCAImportedFrameData)",
+      "fields": [
+        {
+          "type": "data",
+          "name": "Coefficients",
+          "definition": "PCACoefficientsDefinition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e39e0"
+    },
+    "raw_blendshape_block": {
+      "guid": "93555e7db94d7ef900bc978ee95cec72",
+      "size": 40,
+      "size_string": "sizeof(struct RawBlendshapeVertex)",
+      "fields": [
+        {
+          "type": "real_vector_3d",
+          "name": "position*"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "normal*"
+        },
+        {
+          "type": "real_argb_color",
+          "name": "tension and ambient occlusion*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14472f9c0"
+    },
+    "render_geometry_api_resource_definition_struct": {
+      "guid": "2180eb8a64410af691700c9745553623",
+      "size": 56,
+      "size_string": "sizeof(s_render_geometry_api_resource)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "pc vertex buffers*",
+          "definition": "vertex_buffers_block"
+        },
+        {
+          "type": "block",
+          "name": "pc index buffers*",
+          "definition": "index_buffers_block"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144732040"
+    },
+    "vertex_buffers_block_struct": {
+      "guid": "2973dd1080487fe09ab78bbcee273225",
+      "size": 80,
+      "size_string": "sizeof(c_rasterizer_vertex_buffer)",
+      "fields": [
+        {
+          "type": "byte_integer",
+          "name": "declaration type*"
+        },
+        {
+          "type": "byte_integer",
+          "name": "stride*"
+        },
+        {
+          "type": "pad",
+          "name": "vertex buffer pad",
+          "definition": 2
+        },
+        {
+          "type": "dword_integer",
+          "name": "count*"
+        },
+        {
+          "type": "struct",
+          "name": "d3dbuffer*",
+          "definition": "d3dBufferDataDefinition"
+        },
+        {
+          "type": "int64_integer",
+          "name": "ptr d3d*\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "int64_integer",
+          "name": "ptr d3d SRV*\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "int64_integer",
+          "name": "ptr d3d cpu copy*\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144731a70"
+    },
+    "d3dBufferDataDefinition": {
+      "guid": "94b88c296e4ee0e31619968e711718b1",
+      "size": 48,
+      "size_string": "sizeof(D3DBufferData)",
+      "fields": [
+        {
+          "type": "dword_integer",
+          "name": "byte width*"
+        },
+        {
+          "type": "dword_integer",
+          "name": "bind flags*"
+        },
+        {
+          "type": "dword_integer",
+          "name": "misc flags*"
+        },
+        {
+          "type": "dword_integer",
+          "name": "stride*"
+        },
+        {
+          "type": "data",
+          "name": "d3d buffer*",
+          "definition": "d3dBufferDefinition"
+        },
+        {
+          "type": "word_integer",
+          "name": "usage*"
+        },
+        {
+          "type": "word_integer",
+          "name": "cpu flags*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144731960"
+    },
+    "index_buffers_block_struct": {
+      "guid": "9ec247c73b48d18815ec369309dd0bf0",
+      "size": 72,
+      "size_string": "sizeof(c_rasterizer_index_buffer)",
+      "fields": [
+        {
+          "type": "byte_integer",
+          "name": "declaration type*"
+        },
+        {
+          "type": "byte_integer",
+          "name": "stride*"
+        },
+        {
+          "type": "pad",
+          "name": "vertex buffer pad",
+          "definition": 2
+        },
+        {
+          "type": "dword_integer",
+          "name": "count*"
+        },
+        {
+          "type": "struct",
+          "name": "d3dbuffer*",
+          "definition": "d3dBufferDataDefinition"
+        },
+        {
+          "type": "int64_integer",
+          "name": "ptr d3d*\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "int64_integer",
+          "name": "ptr d3d cpu copy*\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144731b80"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "pca_animation_tag_flags": {
+      "options": [
+        "lookup table ready",
+        "resources generated",
+        "resources committed"
+      ]
+    }
+  },
+  "datas": {
+    "PCACoefficientsDefinition": {
+      "alignment": 0,
+      "flags": 0,
+      "max_size": 67108864,
+      "max_size_string": "64 * k_meg"
+    },
+    "d3dBufferDefinition": {
+      "alignment": 4096,
+      "flags": 4,
+      "max_size": 1073741824,
+      "max_size_string": "1024 * MEG"
+    }
+  },
+  "resources": {
+    "pca_coefficients_resource_definition": {
+      "flags": 0,
+      "struct": "pca_coefficients_resource_definition_struct"
+    },
+    "render_geometry_api_resource_definition": {
+      "flags": 0,
+      "struct": "render_geometry_api_resource_definition_struct"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

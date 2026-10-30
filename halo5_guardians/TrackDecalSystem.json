@@ -1,0 +1,134 @@
+{
+  "name": "TrackDecalSystem",
+  "tag": "trds",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "TrackDecalSystem_block",
+  "blocks": {
+    "TrackDecalSystem_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "TrackDecalSystem_block_struct"
+    }
+  },
+  "structs": {
+    "TrackDecalSystem_block_struct": {
+      "guid": "d88cbff38342d081b095f4a921b3049a",
+      "size": 80,
+      "size_string": "(sizeof(TrackDecalSystemDefinition) - Tag::SizeInfo<TrackDecalSystemDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "Decal system",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "decs"
+            ]
+          }
+        },
+        {
+          "type": "custom",
+          "name": "Distance Between Vertices",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real",
+          "name": "Min distance:world units#the minimum distance before a decal is generated."
+        },
+        {
+          "type": "real",
+          "name": "Max distance:world units#the maximum distance before a decal is generated."
+        },
+        {
+          "type": "real",
+          "name": "Distance velocity scale#the amount to scale the velocity while calculating the distance between verts"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Velocity-based Offset",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real",
+          "name": "Max offset:world units#the maximum distance from the contact point to generate quads. This can be used to hide some of the poping"
+        },
+        {
+          "type": "real",
+          "name": "Offset velocity scale#the amount to scale the velocity while calculating the velocity-based offset"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "custom",
+          "name": "Contact Patch",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real",
+          "name": "Contact patch width:world units#the width of the tire"
+        },
+        {
+          "type": "real",
+          "name": "Contact patch length:world units#the amount of the tire that contacts the surface from front to back. This length is used when the tire is sliding sideways instead of the width"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "real",
+          "name": "Texture U repeat length:world units#the length of tire track before the texture repeats in the U direction"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447210a0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

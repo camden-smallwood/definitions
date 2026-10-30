@@ -1,0 +1,163 @@
+{
+  "name": "lua",
+  "tag": "hsc*",
+  "version": 1,
+  "flags": 6146,
+  "parent_tag": "aTag",
+  "block": "SCRIPT_FILE_EXTENSION_RAW_block",
+  "blocks": {
+    "SCRIPT_FILE_EXTENSION_RAW_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "SCRIPT_FILE_EXTENSION_RAW_block_struct"
+    },
+    "hs_references_block": {
+      "max_count": 1024,
+      "max_count_string": "k_maximum_hs_references_per_context",
+      "struct": "hs_references_block"
+    },
+    "hs_name_hashes_block": {
+      "max_count": 1024,
+      "max_count_string": "k_maximum_hs_references_per_context",
+      "struct": "hs_name_hashes_block"
+    }
+  },
+  "structs": {
+    "SCRIPT_FILE_EXTENSION_RAW_block_struct": {
+      "guid": "359c8bd4614ec9a507c777b4a7738ca8",
+      "size": 136,
+      "size_string": "(sizeof(HsSourceFileTag) - Tag::SizeInfo<HsSourceFileTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "source file",
+          "definition": "hs_source_files_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144774a50"
+    },
+    "hs_source_files_struct": {
+      "guid": "831506cb30418c07c3da1da23213725c",
+      "size": 120,
+      "size_string": "sizeof(hs_source_file)",
+      "fields": [
+        {
+          "type": "data",
+          "name": "source*",
+          "definition": "hs_source_data_definition"
+        },
+        {
+          "type": "block",
+          "name": "references*",
+          "definition": "hs_references_block"
+        },
+        {
+          "type": "block",
+          "name": "name hashes*",
+          "definition": "hs_name_hashes_block"
+        },
+        {
+          "type": "tag_reference",
+          "name": "prototype script*",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "hsc*"
+            ]
+          }
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447330a0"
+    },
+    "hs_references_block": {
+      "guid": "5a1a08d5b049aeaa215cdda38b1a4c98",
+      "size": 32,
+      "size_string": "sizeof(s_tag_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "reference*^",
+          "definition": {
+            "flags": 0,
+            "allowed": []
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144732e50"
+    },
+    "hs_name_hashes_block": {
+      "guid": "12627474424067bb4741c0befe85efc6",
+      "size": 8,
+      "size_string": "sizeof(uint64)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "hash*"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144732f80"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "datas": {
+    "hs_source_data_definition": {
+      "alignment": 2,
+      "flags": 0,
+      "max_size": 1048576,
+      "max_size_string": "k_maximum_hs_source_data_per_file"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

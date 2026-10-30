@@ -1,0 +1,134 @@
+{
+  "name": "weapon_depth_of_field",
+  "tag": "wdof",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "weapon_depth_of_field_block",
+  "blocks": {
+    "weapon_depth_of_field_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weapon_depth_of_field_block_struct"
+    }
+  },
+  "structs": {
+    "weapon_depth_of_field_block_struct": {
+      "guid": "18dcb6abd14afb3082f16d8b6469130b",
+      "size": 64,
+      "size_string": "(sizeof(i343::Weapon::DepthOfFieldDefinition) - Tag::SizeInfo<i343::Weapon::DepthOfFieldDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "dof",
+          "definition": "weapon_depth_of_field_internal"
+        },
+        {
+          "type": "pad",
+          "name": "endPad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449a7380"
+    },
+    "weapon_depth_of_field_internal": {
+      "guid": "fb657507e8473cc7176643b3e1e10026",
+      "size": 44,
+      "size_string": "sizeof(DepthOfFieldInternalDefinition)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "depth of field",
+          "definition": "We do not apply any blur past the focus distance.  We use two different depth of fields: one for the world and one for the first person weapon."
+        },
+        {
+          "type": "real",
+          "name": "world blur aperture#Aperture is size of camera pinhole.  The larger the aperture the shallower the depth of field.  0 defaults to 0.7"
+        },
+        {
+          "type": "real",
+          "name": "world blur focus max distance:wu#Maximum allowable focus distance (everything past the focus distance is always in focus anyway)"
+        },
+        {
+          "type": "real_fraction",
+          "name": "World blur focus smoothing value: 0-1# 1 is unsmoothed, lower values are heavier smoothing"
+        },
+        {
+          "type": "real_fraction",
+          "name": "World blur trend smoothing value: 0-1# 1 is unsmoothed, lower values are heavier smoothing"
+        },
+        {
+          "type": "real_fraction",
+          "name": "world blur half width ratio:0-1#The wider the half width, the bigger the range of distances that are in focus"
+        },
+        {
+          "type": "real",
+          "name": "weapon blur aperture#Aperture is size of camera pinhole.  The larger the aperture the narrower the depth of field.  0 defaults to 0.7"
+        },
+        {
+          "type": "real",
+          "name": "weapon blur focus distance:wu#where dof focus is for the weapon (dof for weapon different than world)"
+        },
+        {
+          "type": "real",
+          "name": "weapon blur half width:wu#wider the width, the bigger the range of distances that are in focus (dof for weapon different than world)"
+        },
+        {
+          "type": "explanation",
+          "name": "vignette",
+          "definition": ""
+        },
+        {
+          "type": "fraction_bounds",
+          "name": "vignette radius bounds:0-1#Everything inside the min radius is clear, everything outside the max radius is fully darkened (to the intensity specified), interpolate between them"
+        },
+        {
+          "type": "real_fraction",
+          "name": "vignette intensity:0-1#0 is no vignetting 1 maximum darkness"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449a7270"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

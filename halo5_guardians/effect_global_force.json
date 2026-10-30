@@ -1,0 +1,142 @@
+{
+  "name": "effect_global_force",
+  "tag": "egfd",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "effect_global_force_block",
+  "blocks": {
+    "effect_global_force_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "effect_global_force_block_struct"
+    }
+  },
+  "structs": {
+    "effect_global_force_block_struct": {
+      "guid": "e11f720dbb48b175519d018b67e8dc0c",
+      "size": 56,
+      "size_string": "(sizeof(EffectGlobalForceDefinitionTag) - Tag::SizeInfo<EffectGlobalForceDefinitionTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "force",
+          "definition": "effectGlobalForceStruct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447071a0"
+    },
+    "effectGlobalForceStruct": {
+      "guid": "aedd5e39024b9f762b0835bfe1c7581d",
+      "size": 40,
+      "size_string": "sizeof(EffectGlobalForceDefinition)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "globalForceFlags"
+        },
+        {
+          "type": "char_enum",
+          "name": "shape",
+          "definition": "globalForceShape"
+        },
+        {
+          "type": "byte_integer",
+          "name": "version!"
+        },
+        {
+          "type": "pad",
+          "name": "grog",
+          "definition": 1
+        },
+        {
+          "type": "real",
+          "name": "normal force strength#force strength perpendicular to shape surface, positive pushes out, negative pulls in{force strength}"
+        },
+        {
+          "type": "real",
+          "name": "tangent force strength#force strength tangent to shape surface and aligned to particle velocity"
+        },
+        {
+          "type": "real",
+          "name": "binormal force strength#force strength binormal to shape surface and perpendicular to particle velocity"
+        },
+        {
+          "type": "real",
+          "name": "falloff begin:wus{sphere falloff begin}"
+        },
+        {
+          "type": "real",
+          "name": "falloff end:wus{sphere falloff end}"
+        },
+        {
+          "type": "real",
+          "name": "max speed#maximum speed from attached object that optionally gets normalized and multiplied with the force"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "direction override"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144707090"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "globalForceFlags": {
+      "options": [
+        "is infinitely long cylinder!",
+        "multiply force by attached object speed",
+        "override force direction"
+      ]
+    },
+    "globalForceShape": {
+      "options": [
+        "sphere",
+        "cylinder",
+        "plane"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

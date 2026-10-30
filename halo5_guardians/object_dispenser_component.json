@@ -1,0 +1,235 @@
+{
+  "name": "object_dispenser_component",
+  "tag": "odis",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "object_dispenser_component_block",
+  "blocks": {
+    "object_dispenser_component_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "object_dispenser_component_block_struct"
+    },
+    "dispense_slot": {
+      "max_count": 2,
+      "max_count_string": "k_maxSlotCount",
+      "struct": "dispense_slot_struct"
+    }
+  },
+  "structs": {
+    "object_dispenser_component_block_struct": {
+      "guid": "7c8648e749499f586ff804b06f212fa8",
+      "size": 168,
+      "size_string": "(sizeof(DispenserComponentDefinition) - Tag::SizeInfo<DispenserComponentDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "object dispenser component",
+          "definition": "object_dispenser_component_internal"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449b9e00"
+    },
+    "object_dispenser_component_internal": {
+      "guid": "2a5a01f56841e7ae300620bebbf04ec9",
+      "size": 152,
+      "size_string": "sizeof(DispenserComponentInternalDefinition)",
+      "fields": [
+        {
+          "type": "block",
+          "name": "dispense slots",
+          "definition": "dispense_slot"
+        },
+        {
+          "type": "tag_reference",
+          "name": "incoming creation effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ready effect",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "string_id",
+          "name": "action string incoming"
+        },
+        {
+          "type": "char_enum",
+          "name": "respawn type",
+          "definition": "ObjectDispenserRespawnType"
+        },
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "ObjectDispenserFlags"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "respawn time#set to > 0 to enable automatic spawning and respawning"
+        },
+        {
+          "type": "real",
+          "name": "incoming time mark#shows that the object is incoming when the respawn time remaining is this value"
+        },
+        {
+          "type": "real",
+          "name": "constructing time mark#shows that the object is constructing when the respawn time remaining is this value"
+        },
+        {
+          "type": "real",
+          "name": "damage acceleration scale horizontal"
+        },
+        {
+          "type": "real",
+          "name": "damage acceleration scale vertical"
+        },
+        {
+          "type": "real",
+          "name": "damage acceleration min horizontal:wu/s#applied after all scales"
+        },
+        {
+          "type": "real",
+          "name": "damage acceleration min vertical:wu/s#applied after all scales"
+        },
+        {
+          "type": "string_id",
+          "name": "incoming navpoint UI screen"
+        },
+        {
+          "type": "real",
+          "name": "navpoint visibility distance#distance that the navpoint is visibile from (<= 0 is infinite)"
+        },
+        {
+          "type": "custom",
+          "name": "Terminal",
+          "group_tag": "fgrb"
+        },
+        {
+          "type": "real",
+          "name": "interaction radius:world units#radius that player is able to interact with this object"
+        },
+        {
+          "type": "long_flags",
+          "name": "Requisition Card Dispensable Types",
+          "definition": "CardTypeFlagsDefinition"
+        },
+        {
+          "type": "string_id",
+          "name": "terminal navpoint UI screen"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "fgre"
+        },
+        {
+          "type": "pad",
+          "name": "pad1",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449b9ce0"
+    },
+    "dispense_slot_struct": {
+      "guid": "2b03d32d2b4e22f0dd817d93ac1686a1",
+      "size": 8,
+      "size_string": "sizeof(DispenseSlotDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "slot name"
+        },
+        {
+          "type": "string_id",
+          "name": "slot marker"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449b9bc0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "ObjectDispenserRespawnType": {
+      "options": [
+        "frequency#respawns ever x seconds",
+        "on object removed",
+        "script controlled#game script will reset the respawn time"
+      ]
+    },
+    "ObjectDispenserFlags": {
+      "options": [
+        "disable collision for readied objects"
+      ]
+    },
+    "CardTypeFlagsDefinition": {
+      "options": [
+        "Boost",
+        "Prototype",
+        "Power-up",
+        "Vehicle",
+        "Weapon"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

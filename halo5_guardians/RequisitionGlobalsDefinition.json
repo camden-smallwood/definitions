@@ -1,0 +1,177 @@
+{
+  "name": "RequisitionGlobalsDefinition",
+  "tag": "rqgs",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "RequisitionGlobalsDefinition_block",
+  "blocks": {
+    "RequisitionGlobalsDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "RequisitionGlobalsDefinition_block_struct"
+    },
+    "LevelByXPBlock": {
+      "max_count": 100,
+      "max_count_string": "k_levelBlockCountMax",
+      "struct": "LevelByXPBlock_struct"
+    },
+    "requisition_terminal_category_ui_data": {
+      "max_count": 16,
+      "max_count_string": "16",
+      "struct": "requisition_terminal_category_ui_data_struct"
+    }
+  },
+  "structs": {
+    "RequisitionGlobalsDefinition_block_struct": {
+      "guid": "99d3ea62fa4dce261b9425a3ea9f4c3c",
+      "size": 200,
+      "size_string": "(sizeof(RequisitionGlobalsDefinition) - Tag::SizeInfo<RequisitionGlobalsDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "levels by xp block",
+          "definition": "LevelByXPBlock"
+        },
+        {
+          "type": "tag_reference",
+          "name": "prototype service globals",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "rpsg"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "tag checksum list",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "rtcl"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "user interface required resources",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "sdzg"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "gameplay required resources",
+          "definition": {
+            "flags": 1,
+            "allowed": [
+              "sdzg"
+            ]
+          }
+        },
+        {
+          "type": "block",
+          "name": "in game terminal category UI data",
+          "definition": "requisition_terminal_category_ui_data"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474c3e0"
+    },
+    "LevelByXPBlock_struct": {
+      "guid": "c65bfd72474d17a32cacafa37a1c6613",
+      "size": 8,
+      "size_string": "sizeof(LevelByXP)",
+      "fields": [
+        {
+          "type": "short_integer",
+          "name": "level#level achieved when the xp is gained"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 2
+        },
+        {
+          "type": "long_integer",
+          "name": "xp#xp at which the level is bumped"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474c1a0"
+    },
+    "requisition_terminal_category_ui_data_struct": {
+      "guid": "6f853487ec423464acfdedb6da3a509b",
+      "size": 40,
+      "size_string": "sizeof(RequisitionTerminalCategoryUIData)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "tag_reference",
+          "name": "icon bitmap",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": "icon sprite index"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14474c2c0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

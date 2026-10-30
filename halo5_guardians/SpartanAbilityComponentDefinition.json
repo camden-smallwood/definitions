@@ -1,0 +1,247 @@
+{
+  "name": "SpartanAbilityComponentDefinition",
+  "tag": "spab",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "SpartanAbilityComponentDefinition_block",
+  "blocks": {
+    "SpartanAbilityComponentDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "SpartanAbilityComponentDefinition_block_struct"
+    }
+  },
+  "structs": {
+    "SpartanAbilityComponentDefinition_block_struct": {
+      "guid": "4061b9d111496d7c9456e6b253b78bef",
+      "size": 344,
+      "size_string": "(sizeof(SpartanAbilityComponentDefinition) - Tag::SizeInfo<SpartanAbilityComponentDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "real",
+          "name": "recharge duration:seconds#amount of time it takes to fully charge energy from empty"
+        },
+        {
+          "type": "real",
+          "name": "recharge delay:seconds#time that elapses after last ability use before recharging begins"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "custom",
+          "name": "recharge base duration:seconds#amount of time it takes to fully charge energy from empty",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "recharge base duration:seconds#amount of time it takes to fully charge energy from empty",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "recharge base delay:seconds#time that elapses after last ability use before recharging begins",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "recharge base delay:seconds#time that elapses after last ability use before recharging begins",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "custom",
+          "name": "activation energy cost scalar#scales how much energy activating any ability that requires energy to activate consumes",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "activation energy cost scalar#scales how much energy activating any ability that requires energy to activate consumes",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "tag_reference",
+          "name": "ability activation failure effect#effect played when an ability wants to activate but fails to do so (usually due to inadequate energy)",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "overheat effect#effects triggered when thrusters overheat",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "cooldown effect#effects triggered when thrusters cooldown",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "energy bar row#the screen is divided up into a grid like structure such that if you use integral numbers for the row and column you can easily space multiple energy bars."
+        },
+        {
+          "type": "real",
+          "name": "energy bar column#the screen is divided up into a grid like structure such that if you use integral numbers for the row and column you can easily space multiple energy bars."
+        },
+        {
+          "type": "real_fraction",
+          "name": "energy bar warning pct:[0,1]#energy bar pct at which we notify player they can't perform action."
+        },
+        {
+          "type": "tag_reference",
+          "name": "evade ref",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "saev"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "stabilizer ref",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sast"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "shoulder bash ref",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sasb"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "ground pound ref",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sagp"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sprint ref",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sasp"
+            ]
+          }
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c2a90"
+    },
+    "MalleablePropertyBaseFloatStruct": {
+      "guid": "a1b4d8f8e64063dbbb8cea978b2eae63",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::BaseDefinition<float>)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "Base Value"
+        },
+        {
+          "type": "real_bounds",
+          "name": "Value Bounds"
+        },
+        {
+          "type": "char_enum",
+          "name": "Combiner",
+          "definition": "MalleablePropertyCombiner"
+        },
+        {
+          "type": "pad",
+          "name": "padEnd",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447369c0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "MalleablePropertyCombiner": {
+      "options": [
+        "sequential#applies the percentages one after another on the base",
+        "total percentage#adds up all of the percentages and applies them to the base",
+        "addition#adds on all of the modifiers to the base",
+        "product#multiplies the values one after another on to the base"
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "name": "wpf_screen",
+  "tag": "wpfs",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "wpf_screen_block",
+  "blocks": {
+    "wpf_screen_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "wpf_screen_block_struct"
+    },
+    "WPFScreenTemplateInstantiationBlock": {
+      "max_count": 512,
+      "max_count_string": "512",
+      "struct": "WPFScreenTemplateInstantiationBlock"
+    },
+    "WPFBitmapGroupReferencesBlock": {
+      "max_count": 512,
+      "max_count_string": "512",
+      "struct": "WPFBitmapGroupReferencesBlock"
+    },
+    "string_file_references": {
+      "max_count": 64,
+      "max_count_string": "64",
+      "struct": "string_file_references"
+    },
+    "WPFSoundGroupReferencesDefinition": {
+      "max_count": 512,
+      "max_count_string": "512",
+      "struct": "WPFSoundGroupReferencesDefinition"
+    },
+    "WPFObjReferencesDefinition": {
+      "max_count": 512,
+      "max_count_string": "512",
+      "struct": "WPFObjReferencesDefinition"
+    }
+  },
+  "structs": {
+    "wpf_screen_block_struct": {
+      "guid": "742c9b5d48408dc2b67fd4a623ade6dd",
+      "size": 224,
+      "size_string": "(sizeof(WPFScreenDefinition) - Tag::SizeInfo<WPFScreenDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": "import - directory",
+          "group_tag": "tcwd"
+        },
+        {
+          "type": "custom",
+          "name": "import - single file",
+          "group_tag": "ctcd"
+        },
+        {
+          "type": "string_id",
+          "name": "xamlName"
+        },
+        {
+          "type": "block",
+          "name": "xamlReferences",
+          "definition": "WPFScreenTemplateInstantiationBlock"
+        },
+        {
+          "type": "block",
+          "name": "imageListReferences",
+          "definition": "WPFBitmapGroupReferencesBlock"
+        },
+        {
+          "type": "block",
+          "name": "string references",
+          "definition": "string_file_references"
+        },
+        {
+          "type": "block",
+          "name": "sound references",
+          "definition": "WPFSoundGroupReferencesDefinition"
+        },
+        {
+          "type": "block",
+          "name": "obj references",
+          "definition": "WPFObjReferencesDefinition"
+        },
+        {
+          "type": "data",
+          "name": "xamlfiledata*",
+          "definition": "XamlFileDataDef"
+        },
+        {
+          "type": "tag_reference",
+          "name": "LuaScriptReference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "luas"
+            ]
+          }
+        },
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "WpfScreenFlagsDefinition"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488f5f0"
+    },
+    "WPFScreenTemplateInstantiationBlock": {
+      "guid": "112aec51624203d06e6d47a35f7adeaf",
+      "size": 32,
+      "size_string": "sizeof(WPFScreenTemplateInstantiationDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "xaml reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpfs"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488eeb0"
+    },
+    "WPFBitmapGroupReferencesBlock": {
+      "guid": "5b1e88c9684201423d15eb9e774ccd3d",
+      "size": 32,
+      "size_string": "sizeof(WPFBitmapGroupReferencesDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "asset reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488efe0"
+    },
+    "string_file_references": {
+      "guid": "a6a85bf3ec4ca54c2270709422e51721",
+      "size": 32,
+      "size_string": "sizeof(s_tag_reference)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "string list",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "unic"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448db1f0"
+    },
+    "WPFSoundGroupReferencesDefinition": {
+      "guid": "6765ace2c74c4856574121b0999d1785",
+      "size": 32,
+      "size_string": "sizeof(WPFSoundGroupReferencesDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "asset reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "snd!",
+              "lsnd",
+              "musc"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488f130"
+    },
+    "WPFObjReferencesDefinition": {
+      "guid": "0ecd4e2cf74e4c4f83c2688cf26ae077",
+      "size": 32,
+      "size_string": "sizeof(WPFObjReferencesDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "asset reference",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wpat"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14488f260"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "WpfScreenFlagsDefinition": {
+      "options": [
+        "converted to 1080p"
+      ]
+    }
+  },
+  "datas": {
+    "XamlFileDataDef": {
+      "alignment": 104,
+      "flags": 0,
+      "max_size": 5242880,
+      "max_size_string": "MAXIMUM_XAML_FILE_SIZE"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

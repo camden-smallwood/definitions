@@ -1,0 +1,350 @@
+{
+  "name": "text_value_pair_definition",
+  "tag": "sily",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "text_value_pair_definition_block",
+  "blocks": {
+    "text_value_pair_definition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "text_value_pair_definition_block_struct"
+    },
+    "text_value_pair_reference_block": {
+      "max_count": 100,
+      "max_count_string": "k_maximum_text_value_pairs_per_block",
+      "struct": "text_value_pair_reference_block"
+    }
+  },
+  "structs": {
+    "text_value_pair_definition_block_struct": {
+      "guid": "27a2a0df10463ab8d152f38d78b41a39",
+      "size": 64,
+      "size_string": "(sizeof(s_text_value_pair_definition) - Tag::SizeInfo<s_text_value_pair_definition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "long_enum",
+          "name": "parameter",
+          "definition": "game_variant_parameters"
+        },
+        {
+          "type": "string_id",
+          "name": "name"
+        },
+        {
+          "type": "string_id",
+          "name": "description text"
+        },
+        {
+          "type": "char_enum",
+          "name": "parameter_type",
+          "definition": "text_value_pair_parameter_type"
+        },
+        {
+          "type": "pad",
+          "name": "shrug",
+          "definition": 3
+        },
+        {
+          "type": "block",
+          "name": "text value pairs",
+          "definition": "text_value_pair_reference_block"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d3e80"
+    },
+    "text_value_pair_reference_block": {
+      "guid": "b982aef7494da5ce9f2fc0ab191eb05a",
+      "size": 24,
+      "size_string": "sizeof(s_text_value_pair)",
+      "fields": [
+        {
+          "type": "byte_flags",
+          "name": "flags",
+          "definition": "text_value_pair_flags"
+        },
+        {
+          "type": "pad",
+          "name": "grug",
+          "definition": 3
+        },
+        {
+          "type": "long_integer",
+          "name": "enumerated value"
+        },
+        {
+          "type": "real",
+          "name": "real value"
+        },
+        {
+          "type": "string_id",
+          "name": "string_id value"
+        },
+        {
+          "type": "string_id",
+          "name": "label string id"
+        },
+        {
+          "type": "string_id",
+          "name": "description string id"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1448d3d60"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "game_variant_parameters": {
+      "options": [
+        "game misc score to win round",
+        "game misc teams",
+        "game misc mosh",
+        "game misc mosh difficulty",
+        "game misc drop weapons on death",
+        "game misc round reset map",
+        "game misc round time limit",
+        "game misc perfection enabled",
+        "game misc round limit",
+        "game misc early win count",
+        "game misc killcam enabled",
+        "game misc final killcam enabled",
+        "game misc medal scoring enabled",
+        "game misc defenders use last round score",
+        "game misc overshield deplete time",
+        "game misc show medal points enabled",
+        "game misc requisition enabled",
+        "game prototype mode",
+        "game prototype promethean kill mult.",
+        "game prototype promethean time mult.",
+        "game prototype promethean medal mult.",
+        "game prototype promethean duration",
+        "game prototype class color override",
+        "game respawn inherit timer",
+        "game respawn with teammate",
+        "game respawn at location",
+        "game respawn on kill",
+        "game respawn early spawn allowed",
+        "game respawn lives per round",
+        "game respawn team lives per round",
+        "game respawn min respawn time",
+        "game respawn respawn time",
+        "game respawn suicide penalty",
+        "game respawn betrayal penalty",
+        "game respawn growth",
+        "game respawn initial loadout selection time",
+        "game respawn traits duration",
+        "game social observers",
+        "game social team changing",
+        "game social friendly fire",
+        "game social betrayal booting",
+        "game social enemy voice",
+        "game social open channel voice",
+        "game social dead player voice",
+        "game map grenades",
+        "game map equipment",
+        "game map turrets",
+        "game map shortcuts",
+        "game map powerups",
+        "game map indestructible vehicles",
+        "game map red powerup primary duration",
+        "game map blue powerup primary duration",
+        "game map yellow powerup primary duration",
+        "game map custom powerup primary duration",
+        "game map red powerup secondary duration",
+        "game map blue powerup secondary duration",
+        "game map yellow powerup secondary duration",
+        "game map custom powerup secondary duration",
+        "sandbox open voice channel",
+        "sandbox enter editor mode",
+        "sandbox respawn time",
+        "template vision",
+        "template hearing",
+        "template luck",
+        "template weapon",
+        "template grenades",
+        "template equipment drop",
+        "template ai assassination immunity",
+        "template ai headshot immunity",
+        "template ai damage resistance",
+        "template ai damage modifier",
+        "red_skull_ai_traits vision",
+        "red_skull_ai_traits hearing",
+        "red_skull_ai_traits luck",
+        "red_skull_ai_traits weapon",
+        "red_skull_ai_traits grenades",
+        "red_skull_ai_traits equipment drop",
+        "red_skull_ai_traits ai assassination immunity",
+        "red_skull_ai_traits ai headshot immunity",
+        "red_skull_ai_traits ai damage resistance",
+        "red_skull_ai_traits ai damage modifier",
+        "yellow_skull_ai_traits vision",
+        "yellow_skull_ai_traits hearing",
+        "yellow_skull_ai_traits luck",
+        "yellow_skull_ai_traits weapon",
+        "yellow_skull_ai_traits grenades",
+        "yellow_skull_ai_traits equipment drop",
+        "yellow_skull_ai_traits ai assassination immunity",
+        "yellow_skull_ai_traits ai headshot immunity",
+        "yellow_skull_ai_traits ai damage resistance",
+        "yellow_skull_ai_traits ai damage modifier",
+        "blue_skull_ai_traits vision",
+        "blue_skull_ai_traits hearing",
+        "blue_skull_ai_traits luck",
+        "blue_skull_ai_traits weapon",
+        "blue_skull_ai_traits grenades",
+        "blue_skull_ai_traits equipment drop",
+        "blue_skull_ai_traits ai assassination immunity",
+        "blue_skull_ai_traits ai headshot immunity",
+        "blue_skull_ai_traits ai damage resistance",
+        "blue_skull_ai_traits ai damage modifier",
+        "custom loadouts enabled",
+        "map loadouts enabled",
+        "template player trait damage resistance",
+        "template player trait shield multiplier",
+        "template player trait body multiplier",
+        "template player trait shield stun duration",
+        "template player trait shield recharge rate",
+        "template player trait body recharge rate",
+        "template player trait overshield recharge rate",
+        "template player trait vampirism percent",
+        "template player trait explosive damage resistance",
+        "template player trait wheelman armor vehicle stun time modifier",
+        "template player trait wheelman armor vehicle recharge time modifier",
+        "template player trait wheelman armor vehicle emp disabled time modifier",
+        "template player trait fall damage multiplier",
+        "template player trait headshot immunity",
+        "template player trait assassination immunity",
+        "template player trait deathless",
+        "template player trait fast track armor",
+        "template player trait powerup cancellation",
+        "template player trait damage multiplier",
+        "template player trait melee damage multiplier",
+        "template player trait grenade damage multiplier",
+        "template player trait grenade recharge seconds frag",
+        "template player trait grenade recharge seconds plasma",
+        "template player trait grenade recharge seconds spike",
+        "template player trait hero equipment energy use rate modifier",
+        "template player trait hero equipment energy recharge delay modifier",
+        "template player trait hero equipment energy recharge rate modifier",
+        "template player trait hero equipment initial energy modifier",
+        "template player trait equipment energy use rate modifier",
+        "template player trait equipment energy recharge delay modifier",
+        "template player trait equipment energy use recharge rate modifier",
+        "template player trait equipment energy initial energy modifier",
+        "template player trait switch speed modifier",
+        "template player trait reload speed modifier",
+        "template player trait explosive area of effect radius modifier",
+        "template player trait gunner armor modifier",
+        "template player trait stability armor modifier",
+        "template player trait drop recon warning seconds",
+        "template player trait assassination speed modifier",
+        "template player trait weapon pickup allowed",
+        "template player trait initial grenade count",
+        "template player trait infinite ammo",
+        "template player trait equipment usage",
+        "template player trait equipment usage excepting auto turret",
+        "template player trait equipment drop",
+        "template player trait infinite equipment",
+        "template player trait initial primary weapon",
+        "template player trait initial secondary weapon",
+        "template player trait initial equipment",
+        "template player trait weapons ammopack",
+        "template player trait weapons grenadier",
+        "template player trait weapons explode on death armormod",
+        "template player trait weapons well equipped",
+        "template player trait speed",
+        "template player trait gravity multiplier",
+        "template player trait jump multiplier",
+        "template player trait turn speed multiplier",
+        "template player trait vehicle usage",
+        "template player trait double jump",
+        "template player trait sprint usage",
+        "template player trait automatic momentum usage",
+        "template player trait vaulting enabled",
+        "template player trait stealthy",
+        "template player trait clamber enabled",
+        "template player trait thrusters enabled",
+        "template player trait stabilizer enabled",
+        "template player trait player scale",
+        "template player trait active camo",
+        "template player trait waypoint",
+        "template player trait gamertag visible",
+        "template player trait aura",
+        "template player trait primary color",
+        "template player trait secondary color",
+        "template player trait model variant",
+        "template player trait death effect",
+        "template player trait looping effect",
+        "template player trait shield hud",
+        "motion tracker range",
+        "template player trait motion tracker",
+        "template player trait motion tracker while zoomed",
+        "template player trait directional damage indicator",
+        "template player trait vision mode",
+        "template player trait battle awareness",
+        "template player trait threat view",
+        "template player trait aural enhancement"
+      ]
+    },
+    "text_value_pair_parameter_type": {
+      "options": [
+        "integer",
+        "string id",
+        "real range",
+        "real"
+      ]
+    },
+    "text_value_pair_flags": {
+      "options": [
+        "default setting",
+        "real value \"unchanged\""
+      ]
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

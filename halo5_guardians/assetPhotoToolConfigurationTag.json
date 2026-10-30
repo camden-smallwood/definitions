@@ -1,0 +1,101 @@
+{
+  "name": "assetPhotoToolConfigurationTag",
+  "tag": "apct",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "assetPhotoToolConfigurationTag_block",
+  "blocks": {
+    "assetPhotoToolConfigurationTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "assetPhotoToolConfigurationTag_block_struct"
+    }
+  },
+  "structs": {
+    "assetPhotoToolConfigurationTag_block_struct": {
+      "guid": "db9f51f8064efab95401d08e99944017",
+      "size": 120,
+      "size_string": "(sizeof(ConfigurationTag) - Tag::SizeInfo<ConfigurationTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "tag_reference",
+          "name": "asset specs",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "apab"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "photo specs",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "appb"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "lighting specs",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "aplt"
+            ]
+          }
+        },
+        {
+          "type": "long_integer",
+          "name": " photo up res factor"
+        },
+        {
+          "type": "pad",
+          "name": "pad0",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1446e7e80"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

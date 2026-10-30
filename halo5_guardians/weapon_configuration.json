@@ -1,0 +1,222 @@
+{
+  "name": "weapon_configuration",
+  "tag": "wcfg",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "ocfg",
+  "block": "weapon_configuration_block",
+  "blocks": {
+    "weapon_configuration_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "weapon_configuration_block_struct"
+    },
+    "WeaponGenericAttachment": {
+      "max_count": 2,
+      "max_count_string": "i343::Weapon::k_maxGenericAttachments",
+      "struct": "WeaponGenericAttachment_struct"
+    }
+  },
+  "structs": {
+    "weapon_configuration_block_struct": {
+      "guid": "605a2fa10f4086f0c32157a20cd34e88",
+      "size": 312,
+      "size_string": "(sizeof(i343::Weapon::WeaponConfigurationDefinition) - Tag::SizeInfo<i343::Weapon::WeaponConfigurationDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "object_configuration",
+          "definition": "_base_object_configuration"
+        },
+        {
+          "type": "struct",
+          "name": "weapon",
+          "definition": "weapon_configuration_internal"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449a68c0"
+    },
+    "weapon_configuration_internal": {
+      "guid": "81db1bd7294b27748628da9b90718539",
+      "size": 288,
+      "size_string": "sizeof(i343::Weapon::WeaponConfigurationDefinitionInternal)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "variant name#variant name will get propagated to all attachments"
+        },
+        {
+          "type": "block",
+          "name": "generic attachments",
+          "definition": "WeaponGenericAttachment"
+        },
+        {
+          "type": "tag_reference",
+          "name": "barrel attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weab"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "magazine attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weam"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "melee attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weme"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "sight attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "west"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "target tracking attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wett"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "trigger attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "wetr"
+            ]
+          }
+        },
+        {
+          "type": "explanation",
+          "name": "WARNING",
+          "definition": "\"unit modifier set\" This has unresponsive networking.  Only exposed for special/rare weapons.  Do not use in standard tuning of a weapon"
+        },
+        {
+          "type": "tag_reference",
+          "name": "unit modifier set",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "gmpm"
+            ]
+          }
+        },
+        {
+          "type": "tag_reference",
+          "name": "UI Display Info",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "uiwi"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449a67b0"
+    },
+    "WeaponGenericAttachment_struct": {
+      "guid": "3dd1d16dc542c4d17d4101a250bce220",
+      "size": 32,
+      "size_string": "sizeof(i343::Weapon::GenericAttachmentDefinition)",
+      "fields": [
+        {
+          "type": "tag_reference",
+          "name": "attachment",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "weat"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449a0760"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    },
+    "_base_object_configuration": {
+      "guid": "200b57140e481a715073629ecb620960",
+      "size": 24,
+      "size_string": "(sizeof(i343::Objects::ObjectConfigurationDefinition) - Tag::SizeInfo<i343::Objects::ObjectConfigurationDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "pad",
+          "name": "pad",
+          "definition": 8
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144999b50"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

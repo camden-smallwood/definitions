@@ -1,0 +1,1063 @@
+{
+  "name": "camera_fx_settings",
+  "tag": "cfxs",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "camera_fx_settings_block",
+  "blocks": {
+    "camera_fx_settings_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "camera_fx_settings_block_struct"
+    }
+  },
+  "structs": {
+    "camera_fx_settings_block_struct": {
+      "guid": "d82c12c745491303dae3b3aafe70bebf",
+      "size": 568,
+      "size_string": "(sizeof(c_camera_fx_settings) - Tag::SizeInfo<c_camera_fx_settings::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "ifp+"
+        },
+        {
+          "type": "struct",
+          "name": "exposure!",
+          "definition": "camera_fx_exposure_struct"
+        },
+        {
+          "type": "struct",
+          "name": "auto_exposure_sensitivity",
+          "definition": "camera_fx_exposure_sensitivity_struct"
+        },
+        {
+          "type": "struct",
+          "name": "exposure pitch influence",
+          "definition": "camera_fx_exposure_pitch_influence_struct"
+        },
+        {
+          "type": "struct",
+          "name": "exposure compensation",
+          "definition": "camera_fx_exposure_compensation_struct"
+        },
+        {
+          "type": "struct",
+          "name": "bloom_highlight{bloom_point}",
+          "definition": "camera_fx_bloom_highlight_struct"
+        },
+        {
+          "type": "struct",
+          "name": "bloom_inherent",
+          "definition": "camera_fx_bloom_inherent_struct"
+        },
+        {
+          "type": "struct",
+          "name": "bloom_intensity",
+          "definition": "camera_fx_bloom_intensity_struct"
+        },
+        {
+          "type": "struct",
+          "name": "bloom_layer_intensity!",
+          "definition": "camera_fx_bloom_layer_intensity_struct"
+        },
+        {
+          "type": "struct",
+          "name": "bloom_tint_color",
+          "definition": "camera_fx_bloom_tint_color_struct"
+        },
+        {
+          "type": "struct",
+          "name": "self_illum_exposure_settings",
+          "definition": "camera_fx_self_illum_exposure_settings_struct"
+        },
+        {
+          "type": "struct",
+          "name": "self_illum_scale",
+          "definition": "camera_fx_self_illum_scale_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "SELF ILLUM MATERIAL SHADER FUNCTION PARAMETER - (UNSC)",
+          "definition": "A value that can be used as an input to the material\nsi_intensity function to compensate for scene brightness\n"
+        },
+        {
+          "type": "struct",
+          "name": "self_illum_scale_unsc",
+          "definition": "camera_fx_self_illum_scale_per_race_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "SELF ILLUM MATERIAL SHADER FUNCTION PARAMETER - (Covenant)",
+          "definition": "A value that can be used as an input to the material\nsi_intensity function to compensate for scene brightness\n"
+        },
+        {
+          "type": "struct",
+          "name": "self_illum_scale_covenant",
+          "definition": "camera_fx_self_illum_scale_per_race_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "SELF ILLUM MATERIAL SHADER FUNCTION PARAMETER - (Forerunner)",
+          "definition": "A value that can be used as an input to the material\nsi_intensity function to compensate for scene brightness\n"
+        },
+        {
+          "type": "struct",
+          "name": "self_illum_scale_forerunner",
+          "definition": "camera_fx_self_illum_scale_per_race_struct"
+        },
+        {
+          "type": "struct",
+          "name": "deferred_reflection_intensity",
+          "definition": "deferred_reflection_intensity_struct"
+        },
+        {
+          "type": "struct",
+          "name": "deferred_reflection_min_sort_distance",
+          "definition": "deferred_reflection_min_sort_distance_struct"
+        },
+        {
+          "type": "explanation",
+          "name": "EFFECT EXPOSURE OVERRIDE",
+          "definition": "Optional reference to a .effect_exposure override that only applies to effects"
+        },
+        {
+          "type": "tag_reference",
+          "name": "effect exposure override",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "efex"
+            ]
+          }
+        },
+        {
+          "type": "struct",
+          "name": "color_grading",
+          "definition": "camera_fx_color_grading_struct"
+        },
+        {
+          "type": "struct",
+          "name": "filmic_tone_curve",
+          "definition": "camera_fx_filmic_tone_curve_struct"
+        },
+        {
+          "type": "struct",
+          "name": "ssao_settings",
+          "definition": "camera_fx_ssao_settings_struct"
+        },
+        {
+          "type": "struct",
+          "name": "camera lens dirt",
+          "definition": "camera_lens_dirt_struct"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "ifp-"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485bc20"
+    },
+    "camera_fx_exposure_struct": {
+      "guid": "29ccbe1f704bc738479813af7bd65f3c",
+      "size": 32,
+      "size_string": "sizeof(c_camera_fx_settings::s_real_exposure_parameter)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "ifp+"
+        },
+        {
+          "type": "explanation",
+          "name": "EXPOSURE",
+          "definition": "Controls the brightness of the scene, like exposure time on your camera.\nThe actual exposure always blends towards the target exposure.\nWith auto-exposure on, the target exposure is calculated relative to the brightness of what is on screen.\n"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "MKRGRF",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "exposure:stops#the target exposure (ONLY USED WHEN AUTO-EXPOSURE IS OFF)"
+        },
+        {
+          "type": "real",
+          "name": "maximum change:stops#the maximum allowed change in exposure between frames"
+        },
+        {
+          "type": "real",
+          "name": "blend speed (0-1):percent per frame#1 is instantaneous, 0.01 is a good speed, 0.001 is slower"
+        },
+        {
+          "type": "real",
+          "name": "minimum:stops#the absolute target exposure is clamped to this range"
+        },
+        {
+          "type": "real",
+          "name": "maximum:stops#the absolute target exposure is clamped to this range"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "ifp-"
+        },
+        {
+          "type": "real",
+          "name": "auto-exposure screen brightness:[0.0001-1]#how bright you want the screen to be - auto-exposure will make it happen"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "ifp+"
+        },
+        {
+          "type": "real",
+          "name": "auto-exposure delay:[0.1-1]seconds#how long to wait before auto-exposure kicks in to adjust the exposure"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "ifp-"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144859e90"
+    },
+    "camera_fx_exposure_sensitivity_struct": {
+      "guid": "8b5d28b28545e580de6d11a4b5162a5a",
+      "size": 8,
+      "size_string": "sizeof(c_camera_fx_settings::s_real_instant_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "AUTO EXPOSURE SENSITIVITY",
+          "definition": "How sensitive auto exposure is to small bright patches on the screen (like the sun)"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "MAKAMAKAHEY",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "sensitivity (0-1)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144859fb0"
+    },
+    "camera_fx_exposure_pitch_influence_struct": {
+      "guid": "c9e57129cc44c04db7b9fd9bace74812",
+      "size": 32,
+      "size_string": "sizeof(c_camera_fx_settings::s_function_instant_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "EXPOSURE PITCH INFLUENCE",
+          "definition": "Influence of ground/horizon/sky in exposure intensity"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "MAKAMAKAHEY",
+          "definition": 2
+        },
+        {
+          "type": "explanation",
+          "name": "INFLUENCE FUNCTION (GROUND -> HORIZON -> SKY)",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485a0c0"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "camera_fx_exposure_compensation_struct": {
+      "guid": "31a2fbfc274f6ec6ca5fa4ab94b3fb6d",
+      "size": 32,
+      "size_string": "sizeof(c_camera_fx_settings::s_function_instant_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "EXPOSURE COMPENSATION",
+          "definition": "Exposure compensation across exposure range"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "MAKAMAKAHEY",
+          "definition": 2
+        },
+        {
+          "type": "explanation",
+          "name": "COMPENSATION FUNCTION (EXPOSURE MIN -> EXPOSURE MAX)",
+          "definition": ""
+        },
+        {
+          "type": "struct",
+          "name": "function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485a1d0"
+    },
+    "camera_fx_bloom_highlight_struct": {
+      "guid": "b2bd285c3641a77a4d2ed095ea817747",
+      "size": 16,
+      "size_string": "sizeof(c_camera_fx_settings::s_real_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "HIGHLIGHT BLOOM",
+          "definition": "These parameters control bloom off the highlights (really bright stuff)"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "LOTPRER",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "highlight bloom{bloom point}"
+        },
+        {
+          "type": "real",
+          "name": "maximum change"
+        },
+        {
+          "type": "real",
+          "name": "blend speed (0-1)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485a2f0"
+    },
+    "camera_fx_bloom_inherent_struct": {
+      "guid": "32c98918c8486da5d4d7b3b0f7d5dc01",
+      "size": 16,
+      "size_string": "sizeof(c_camera_fx_settings::s_real_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "AMBIENT BLOOM{INHERENT BLOOM}",
+          "definition": "These parameters control bloom off everything (bright and dark)"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "ERIRLE",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "ambient bloom{inherent bloom}"
+        },
+        {
+          "type": "real",
+          "name": "maximum change"
+        },
+        {
+          "type": "real",
+          "name": "blend speed (0-1)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485a410"
+    },
+    "camera_fx_bloom_intensity_struct": {
+      "guid": "d26377a8f340b2f5b02425a219d7dff5",
+      "size": 16,
+      "size_string": "sizeof(c_camera_fx_settings::s_real_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "BLOOM INTENSITY",
+          "definition": "These parameters control how bright the bloom is, relative to the underlying scene"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "SEMIFMD",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "bloom intensity"
+        },
+        {
+          "type": "real",
+          "name": "maximum change"
+        },
+        {
+          "type": "real",
+          "name": "blend speed (0-1)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485a870"
+    },
+    "camera_fx_bloom_layer_intensity_struct": {
+      "guid": "d36377a8f440b2f5b12425a21ad7dff5",
+      "size": 24,
+      "size_string": "sizeof(c_camera_fx_settings::Vector3dParameter)",
+      "fields": [
+        {
+          "type": "word_flags",
+          "name": "flags!",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "SEMIFMD",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "large layer intensity!#affects largest layer (least color bleed when applied)"
+        },
+        {
+          "type": "real",
+          "name": "medium layer intensity!"
+        },
+        {
+          "type": "real",
+          "name": "small layer intensity!#affects smallest layer (most color bleed when applied)"
+        },
+        {
+          "type": "real",
+          "name": "maximum change!"
+        },
+        {
+          "type": "real",
+          "name": "blend speed (0-1)!"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485a980"
+    },
+    "camera_fx_bloom_tint_color_struct": {
+      "guid": "f0d91833d54cec021795e8adb5b69202",
+      "size": 16,
+      "size_string": "sizeof(c_camera_fx_settings::s_color_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "BLOOM TINT COLOR{BLOOM LARGE COLOR}",
+          "definition": "These parameters control the color of the overall bloom tint"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "KKROFI",
+          "definition": 2
+        },
+        {
+          "type": "real_rgb_color",
+          "name": "tint color{large color}"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485aaa0"
+    },
+    "camera_fx_self_illum_exposure_settings_struct": {
+      "guid": "74ad84e6234dd5c6c63660991b9111c0",
+      "size": 16,
+      "size_string": "sizeof(c_camera_fx_settings::s_real_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "SELF ILLUM EXPOSURE",
+          "definition": "These parameters control the self-illumination exposure\npreferred is the preferred exposure, and scale controls\nhow much it varies from the preferred exposure"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "JJFJFJKE",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "preferred exposure:stops#the preferred exposure for self illum"
+        },
+        {
+          "type": "real",
+          "name": "maximum change"
+        },
+        {
+          "type": "real",
+          "name": "blend speed (0-1)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485b130"
+    },
+    "camera_fx_self_illum_scale_struct": {
+      "guid": "00c74545e44f6222e7e3fdb97bb89616",
+      "size": 16,
+      "size_string": "sizeof(c_camera_fx_settings::s_real_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "SELF ILLUM CHANGE",
+          "definition": "How much self illum exposure is allowed to change\n0 means no change at all, 1 means it will\nequal the normal exposure"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "WOOGATCHOU",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "exposure change:[0-1]#how much the self illum is allowed to change, as a percentage of the normal exposure change"
+        },
+        {
+          "type": "real",
+          "name": "maximum change"
+        },
+        {
+          "type": "real",
+          "name": "blend speed (0-1)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485b240"
+    },
+    "camera_fx_self_illum_scale_per_race_struct": {
+      "guid": "c1d6f2ba794cd1c5122395af481bb807",
+      "size": 16,
+      "size_string": "sizeof(c_camera_fx_settings::s_real_parameter)",
+      "fields": [
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "WOOGATCHOU",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "parameter value:#value of the self illum emissive parameter that can be used as an input for the material si_intensity to compensate for scene brightness"
+        },
+        {
+          "type": "real",
+          "name": "maximum change"
+        },
+        {
+          "type": "real",
+          "name": "blend speed (0-1)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485b360"
+    },
+    "deferred_reflection_intensity_struct": {
+      "guid": "2dd36bd1034cdfaf38d3a9b3f4e073fa",
+      "size": 16,
+      "size_string": "sizeof(c_camera_fx_settings::s_real_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "DEFERRED REFLECTION INTENSITY",
+          "definition": "These parameters scale the global intensity of deferred reflections"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "ERIRLE",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "deferred reflection intensity"
+        },
+        {
+          "type": "real",
+          "name": "maximum change"
+        },
+        {
+          "type": "real",
+          "name": "blend speed (0-1)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485a520"
+    },
+    "deferred_reflection_min_sort_distance_struct": {
+      "guid": "2c2731412940358cef37b581713199ce",
+      "size": 16,
+      "size_string": "sizeof(c_camera_fx_settings::s_real_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "DEFERRED REFLECTION MINIMUM SORT DISTANCE",
+          "definition": "These parameters set the minimum \"apply distance\" of deferred reflections"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "ERIRLE",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "deferred reflection minimum sort distance"
+        },
+        {
+          "type": "real",
+          "name": "maximum change"
+        },
+        {
+          "type": "real",
+          "name": "blend speed (0-1)"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485a640"
+    },
+    "camera_fx_color_grading_struct": {
+      "guid": "23ebd7200346c088f8feb7be65851742",
+      "size": 40,
+      "size_string": "sizeof(c_camera_fx_settings::s_color_grading_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Color Grading",
+          "definition": "set the color grading texture"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_no_auto_adjust"
+        },
+        {
+          "type": "pad",
+          "name": "SKHFDNV",
+          "definition": 2
+        },
+        {
+          "type": "tag_reference",
+          "name": "color grading texture",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "real",
+          "name": "blend time:seconds"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485b590"
+    },
+    "camera_fx_filmic_tone_curve_struct": {
+      "guid": "0a8b70988641b9538d56839a5da1eba2",
+      "size": 88,
+      "size_string": "sizeof(c_camera_fx_settings::s_filmic_tone_curve_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Filmic Tone Curve",
+          "definition": "set the values for the filmic tone curve"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_enabled"
+        },
+        {
+          "type": "pad",
+          "name": "MKRGRF",
+          "definition": 2
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "shoulder strength!#How intense the shoulder is"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "linear strength!#How intense the linear portion is"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "linear angle!#Angle of linear portion of curve"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "toe strength!#How intense the toe is"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "toe numerator!#Numerator of toe slope"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "toe denominator!#Denominator of toe slope"
+        },
+        {
+          "type": "real_vector_3d",
+          "name": "linear white point!#The white point in linear space"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485b7c0"
+    },
+    "camera_fx_ssao_settings_struct": {
+      "guid": "9b317708cfc144a4dd4f7d616e0ce4be",
+      "size": 44,
+      "size_string": "sizeof(c_camera_fx_settings::s_ssao_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "SSAO settings",
+          "definition": "set the values for SSAO"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_enabled"
+        },
+        {
+          "type": "pad",
+          "name": "agfth",
+          "definition": 2
+        },
+        {
+          "type": "word_flags",
+          "name": "ssao flags",
+          "definition": "camera_fx_ssao_flags"
+        },
+        {
+          "type": "pad",
+          "name": "dsadfgs",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "Radius"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Step size"
+        },
+        {
+          "type": "real",
+          "name": "Angle bias"
+        },
+        {
+          "type": "real",
+          "name": "Strength"
+        },
+        {
+          "type": "real",
+          "name": "Power exponent"
+        },
+        {
+          "type": "dword_integer",
+          "name": "Blur radius"
+        },
+        {
+          "type": "real",
+          "name": "Blur sharpness"
+        },
+        {
+          "type": "real",
+          "name": "Decorator apply darkening scaler#zero is no darkening"
+        },
+        {
+          "type": "real",
+          "name": "Hemi rejection falloff"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485b8d0"
+    },
+    "camera_lens_dirt_struct": {
+      "guid": "e1fba2078aabe57c203fbce52b282df4",
+      "size": 44,
+      "size_string": "sizeof(c_camera_fx_settings::s_camera_lens_dirt_parameter)",
+      "fields": [
+        {
+          "type": "explanation",
+          "name": "Camera Lens Dirt Settings",
+          "definition": "set the values for camera lens dirt"
+        },
+        {
+          "type": "word_flags",
+          "name": "flags",
+          "definition": "camera_fx_parameter_flags_enabled"
+        },
+        {
+          "type": "pad",
+          "name": "agfth",
+          "definition": 2
+        },
+        {
+          "type": "real",
+          "name": "Intensity"
+        },
+        {
+          "type": "tag_reference",
+          "name": "dirt texture",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "bitm"
+            ]
+          }
+        },
+        {
+          "type": "char_enum",
+          "name": "Dirt Type",
+          "definition": "dirtTypeEnum"
+        },
+        {
+          "type": "pad",
+          "name": "clds_pad_1",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x14485b9f0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "camera_fx_parameter_flags_auto_adjust": {
+      "options": [
+        "use default (ignore these values)",
+        "maximum change is relative",
+        "auto-adjust target",
+        "bit3!",
+        "fixed!",
+        "(unused2)!",
+        "fixed2!"
+      ]
+    },
+    "camera_fx_parameter_flags_no_auto_adjust": {
+      "options": [
+        "use default (ignore these values)",
+        "maximum change is relative",
+        "(unused)!",
+        "bit3!",
+        "fixed!",
+        "(unused2)!",
+        "fixed2!"
+      ]
+    },
+    "camera_fx_parameter_flags_enabled": {
+      "options": [
+        "use default (ignore these values)",
+        "maximum change is relative",
+        "(unused)!",
+        "bit3!",
+        "fixed!",
+        "enabled",
+        "fixed2!"
+      ]
+    },
+    "camera_fx_ssao_flags": {
+      "options": [
+        "SSAO enabled"
+      ]
+    },
+    "dirtTypeEnum": {
+      "options": [
+        "Apply at bloom res",
+        "Apply at full res"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

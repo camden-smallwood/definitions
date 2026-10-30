@@ -1,0 +1,394 @@
+{
+  "name": "EvadeDefinitionTag",
+  "tag": "saev",
+  "version": 0,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "EvadeDefinitionTag_block",
+  "blocks": {
+    "EvadeDefinitionTag_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "EvadeDefinitionTag_block_struct"
+    }
+  },
+  "structs": {
+    "EvadeDefinitionTag_block_struct": {
+      "guid": "837a28bcf8478257e9ef2396c596e251",
+      "size": 360,
+      "size_string": "(sizeof(EvadeDefinitionTag) - Tag::SizeInfo<EvadeDefinitionTag::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "struct",
+          "name": "data",
+          "definition": "EvadeDefinitionBlock_struct"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c3bf0"
+    },
+    "EvadeDefinitionBlock_struct": {
+      "guid": "2e00d987c34adf37559646b66b28bf87",
+      "size": 344,
+      "size_string": "sizeof(EvadeDefinition)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "common ability parameters",
+          "definition": "SpartanAbilityCommonParametersStruct"
+        },
+        {
+          "type": "long_flags",
+          "name": "evade flags",
+          "definition": "EvadeDefinitionTagFlags"
+        },
+        {
+          "type": "real_fraction",
+          "name": "throttle dead zone#stick must be pressed at least this much in any direction to consider non-forward Evade"
+        },
+        {
+          "type": "string_id",
+          "name": "evade left animation"
+        },
+        {
+          "type": "string_id",
+          "name": "evade right animation"
+        },
+        {
+          "type": "string_id",
+          "name": "evade forward animation"
+        },
+        {
+          "type": "string_id",
+          "name": "evade backward animation"
+        },
+        {
+          "type": "real",
+          "name": "evade duration:seconds#the amount of time that elapses from the beginning of the evade to the end"
+        },
+        {
+          "type": "real_fraction",
+          "name": "evade exit sprint fraction:[0,1]#Player will exit the Evade action at this sprint fraction"
+        },
+        {
+          "type": "real_fraction",
+          "name": "evade melee interrupt fraction:[0,1]#Player will be able to interrupt to perform a melee at this fraction through the evade"
+        },
+        {
+          "type": "explanation",
+          "name": "speed function",
+          "definition": "Use this curve to define the character's speed over the course of an evade performed while the character is on the ground. The x axis measures time from the beginning of the evade to the end. Y axis is the speed of the character (wu/s) in the evade direction at the given time."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "speed function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "speed function scalar",
+          "definition": "malleable property scale applied to the result of the speed function"
+        },
+        {
+          "type": "custom",
+          "name": "speed function scalar#scale applied to the result of the speed function",
+          "group_tag": "mpfi"
+        },
+        {
+          "type": "struct",
+          "name": "speed function scalar#scale applied to the result of the speed function",
+          "definition": "MalleablePropertyBaseFloatStruct"
+        },
+        {
+          "type": "pad",
+          "name": "FCOEFALIGN",
+          "definition": 4
+        },
+        {
+          "type": "real",
+          "name": "forward speed modifier:percentage#used to define additional boost for evading forward (1.0 = normal speed, 2.0 = double speed, etc...)"
+        },
+        {
+          "type": "real_bounds",
+          "name": "speed modifier values:wu/s#Used to map values onto ground and air speed modifier functions below."
+        },
+        {
+          "type": "explanation",
+          "name": "ground speed modifier function",
+          "definition": "Use this curve to define a modifier on the 'speed function' above when evading on the ground. The x axis measures the players entry speed in direction of the evade, clamped to the floor/ceiling defined above. Y axis is the percent of 'speed function' to use."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "ground speed modifier function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "air speed modifier function",
+          "definition": "Use this curve to define a speed modifier on the 'speed function' above when evading in the air. The x axis measures the players entry speed in direction of the evade, clamped to the floor/ceiling defined above. Y axis is the percent of 'speed function' to use."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "air speed modifier function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "horizontal camera offset function",
+          "definition": "Use this curve to define how the camera moves horizontally while the character is evading left or right. The x axis measures time from the beginning of the evade to the end. Y axis is the distance that the camera is offset horizontally from the center of the pill at the given time."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "horizontal camera offset function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "camera tilt ROLL function",
+          "definition": "Use these curves to define how the camera tilts when the character evades left/right. The x axis measures time from the beginning of the evade to the end. Y axis is angle (in degrees) that the camera is tilted in the direction of the evade at the given time"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "camera tilt ROLL function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "camera tilt PITCH function",
+          "definition": "Use these curves to define how the camera tilts when the character evades forward/backward. The x axis measures time from the beginning of the evade to the end. Y axis is angle (in degrees) that the camera is tilted in the direction of the evade at the given time"
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "camera tilt PITCH function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "FOV delta function",
+          "definition": "Use this curve to define how the FOV is modified while the character is evading forward or backward. The x axis measures time from the beginning of the evade to the end. Y axis is the amount (in degrees) that the FOV is modified at the given time. Remember that you want a negative number to shrink the FOV."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "FOV delta function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "explanation",
+          "name": "overlay animation function",
+          "definition": "Use this curve to define the blend weight of the evade overlay animation over the course of the evade. The x axis measures time from the beginning of the evade to the end. The Y axis measures the blend weight of the overlay animation at the given time."
+        },
+        {
+          "type": "custom",
+          "name": null
+        },
+        {
+          "type": "struct",
+          "name": "overlay animation function",
+          "definition": "mapping_function"
+        },
+        {
+          "type": "real",
+          "name": "maximum vertical impulse:world units/second# applied when evade is triggered while airborne - applied upwards if moving upwards at time activation, downwards if moving downwards at time of activation."
+        },
+        {
+          "type": "real",
+          "name": "maximum vertical impulse speed threshold:world units/second#Threshold speed used to scale vertical impulse; max impulse is applied at or above this speed."
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449c3570"
+    },
+    "SpartanAbilityCommonParametersStruct": {
+      "guid": "f4efb1a03c4854d9d47df188cdebb4f0",
+      "size": 44,
+      "size_string": "sizeof(SpartanAbilityCommonParameters)",
+      "fields": [
+        {
+          "type": "long_flags",
+          "name": "flags",
+          "definition": "SpartanAbilityDefinitionTagFlags"
+        },
+        {
+          "type": "real_fraction",
+          "name": "activation energy cost#amount of energy required to activate the ability"
+        },
+        {
+          "type": "real",
+          "name": "active energy consumption:energy/second#amount of energy consumed continuously while the ability is active"
+        },
+        {
+          "type": "tag_reference",
+          "name": "activation effect#effects triggered when player activates ability",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "effe"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449e94d0"
+    },
+    "mapping_function": {
+      "guid": "8fa9145a8444fa53d46810809e45f10a",
+      "size": 28,
+      "size_string": "sizeof(c_function_definition)",
+      "fields": [
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "hide"
+        },
+        {
+          "type": "data",
+          "name": "data",
+          "definition": "function_definition_data"
+        },
+        {
+          "type": "custom",
+          "name": null,
+          "group_tag": "edih"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144738b10"
+    },
+    "MalleablePropertyBaseFloatStruct": {
+      "guid": "a1b4d8f8e64063dbbb8cea978b2eae63",
+      "size": 16,
+      "size_string": "sizeof(i343::MalleableProperty::BaseDefinition<float>)",
+      "fields": [
+        {
+          "type": "real",
+          "name": "Base Value"
+        },
+        {
+          "type": "real_bounds",
+          "name": "Value Bounds"
+        },
+        {
+          "type": "char_enum",
+          "name": "Combiner",
+          "definition": "MalleablePropertyCombiner"
+        },
+        {
+          "type": "pad",
+          "name": "padEnd",
+          "definition": 3
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1447369c0"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "enums_flags": {
+    "SpartanAbilityDefinitionTagFlags": {
+      "options": [
+        "Use 3rd Person Camera When Active",
+        "Hide Reticle When Active",
+        "Is Motion Tracked (By Enemies) When Active",
+        "One-Shot Activation Effect#Effect kills itself rather than being explicitly killed when the ability deactivates",
+        "Can be activated when weapon state is relaxed",
+        "Does Not Appear In Extended Motion Tracker Range"
+      ]
+    },
+    "EvadeDefinitionTagFlags": {
+      "options": [
+        "Can cancel when using charge up"
+      ]
+    },
+    "MalleablePropertyCombiner": {
+      "options": [
+        "sequential#applies the percentages one after another on the base",
+        "total percentage#adds up all of the percentages and applies them to the base",
+        "addition#adds on all of the modifiers to the base",
+        "product#multiplies the values one after another on to the base"
+      ]
+    }
+  },
+  "datas": {
+    "function_definition_data": {
+      "alignment": 4,
+      "flags": 2,
+      "max_size": 872,
+      "max_size_string": "k_max_function_size"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

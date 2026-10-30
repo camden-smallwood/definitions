@@ -1,0 +1,107 @@
+{
+  "name": "ForgeSoundListDefinition",
+  "tag": "fsld",
+  "version": 1,
+  "flags": 2,
+  "parent_tag": "aTag",
+  "block": "ForgeSoundListDefinition_block",
+  "blocks": {
+    "ForgeSoundListDefinition_block": {
+      "max_count": 1,
+      "max_count_string": "1",
+      "struct": "ForgeSoundListDefinition_block_struct"
+    },
+    "ForgeSoundEventDefinitionBlock": {
+      "max_count": 256,
+      "max_count_string": "k_maxForgeSoundEvents",
+      "struct": "ForgeSoundEventDefinitionBlock"
+    }
+  },
+  "structs": {
+    "ForgeSoundListDefinition_block_struct": {
+      "guid": "ec525662514d4cf798a73aac06c73326",
+      "size": 48,
+      "size_string": "(sizeof(ForgeSoundListDefinition) - Tag::SizeInfo<ForgeSoundListDefinition::ParentType>::k_tagSize)",
+      "fields": [
+        {
+          "type": "struct",
+          "name": "AnyTag",
+          "definition": "_base_AnyTag"
+        },
+        {
+          "type": "block",
+          "name": "entries",
+          "definition": "ForgeSoundEventDefinitionBlock"
+        },
+        {
+          "type": "pad",
+          "name": "pad_tp",
+          "definition": 4
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144824980"
+    },
+    "ForgeSoundEventDefinitionBlock": {
+      "guid": "c6590772b241d84a4a8a019e548790b7",
+      "size": 40,
+      "size_string": "sizeof(ForgeSoundEventDefinition)",
+      "fields": [
+        {
+          "type": "string_id",
+          "name": "name^"
+        },
+        {
+          "type": "string_id",
+          "name": "sound category"
+        },
+        {
+          "type": "tag_reference",
+          "name": "sound response",
+          "definition": {
+            "flags": 0,
+            "allowed": [
+              "sgrp"
+            ]
+          }
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x144824860"
+    },
+    "_base_AnyTag": {
+      "guid": "e5ba8c9d3e4a63a931e5dcac24456ec0",
+      "size": 16,
+      "size_string": "sizeof(AnyTag)",
+      "fields": [
+        {
+          "type": "int64_integer",
+          "name": "vtable space*~!\u0001",
+          "group_tag": "nuke"
+        },
+        {
+          "type": "struct",
+          "name": "internal struct",
+          "definition": "s_anyTagGuts"
+        },
+        {
+          "type": "terminator",
+          "name": null
+        }
+      ],
+      "__addr": "0x1449eb470"
+    }
+  },
+  "field_type_sizes": {
+    "block": 28,
+    "data": 28,
+    "tag reference": 32,
+    "pageable resource": 16
+  }
+}

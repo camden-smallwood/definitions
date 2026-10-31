@@ -15,7 +15,8 @@ loaded table for dropdown choices and index repair after structural edits.
 ```
 
 - `path` is root-relative. Add `"base": "holder"` to start in the struct
-  containing the referencing field instead.
+  containing the referencing field instead; leading `../` steps then climb
+  enclosing entries, as in `{ "path": "../Actors", "base": "holder" }`.
 - `selector` is relative to that holder. Each leading `../` climbs one
   enclosing struct or block entry. Resolve the selector's own index target,
   select its current entry, then find the `child` block in that entry.

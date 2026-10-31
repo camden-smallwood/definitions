@@ -175,7 +175,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "Actor"
+          "name": "Actor",
+          "index_target": {"path": "../Actors", "base": "holder"}
         },
         {
           "type": "word_flags",
@@ -277,11 +278,13 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "point"
+          "name": "point",
+          "index_target": {"selector": "../../Point set", "child": "points"}
         },
         {
           "type": "custom_short_block_index",
-          "name": "actor"
+          "name": "actor",
+          "index_target": {"path": "../../Actors", "base": "holder"}
         },
         {
           "type": "string_id",
@@ -357,7 +360,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "attach to point"
+          "name": "attach to point",
+          "index_target": {"selector": "../../Point set", "child": "points"}
         },
         {
           "type": "word_flags",
@@ -382,7 +386,8 @@
       "fields": [
         {
           "type": "custom_short_block_index",
-          "name": "Actor type"
+          "name": "Actor type",
+          "index_target": {"path": "character palette"}
         },
         {
           "type": "pad",
@@ -483,7 +488,8 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "attach to point"
+          "name": "attach to point",
+          "index_target": {"selector": "../../Point set", "child": "points"}
         },
         {
           "type": "pad",

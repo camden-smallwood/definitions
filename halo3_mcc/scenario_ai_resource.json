@@ -724,11 +724,13 @@
         },
         {
           "type": "custom_short_block_index",
-          "name": "object_type!"
+          "name": "object_type!",
+          "definition": "void"
         },
         {
           "type": "custom_short_block_index",
-          "name": "scenario_datum_index!"
+          "name": "scenario_datum_index!",
+          "definition": "scenario_object_name_search"
         },
         {
           "type": "terminator",
@@ -1223,6 +1225,7 @@
         {
           "type": "custom_short_block_index",
           "name": "initial task",
+          "definition": "custom_task_block_index_definition",
           "index_target": {"selector": "initial objective", "child": "tasks"}
         },
         {
@@ -1340,6 +1343,7 @@
         {
           "type": "custom_short_block_index",
           "name": "point set",
+          "definition": "custom_point_set_block_index_definition",
           "index_target": {"path": "scripting data[0]/point sets"}
         },
         {
@@ -1470,6 +1474,7 @@
         {
           "type": "custom_short_block_index",
           "name": "point^",
+          "definition": "custom_patrol_point_block_index_definition",
           "index_target": {"selector": "../point set", "child": "points"}
         },
         {
@@ -1671,6 +1676,7 @@
         {
           "type": "custom_short_block_index",
           "name": "point set",
+          "definition": "custom_point_set_block_index_definition",
           "index_target": {"path": "scripting data[0]/point sets"}
         },
         {
@@ -2495,6 +2501,7 @@
         {
           "type": "custom_short_block_index",
           "name": "area^",
+          "definition": "custom_area_block_index_definition",
           "index_target": {"selector": "zone", "child": "areas"}
         },
         {
@@ -2802,6 +2809,7 @@
         {
           "type": "custom_short_block_index",
           "name": "area^",
+          "definition": "custom_area_block_index_definition",
           "index_target": {"selector": "zone", "child": "areas"}
         },
         {
